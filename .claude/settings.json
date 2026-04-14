@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:/Users/rjain/.claude/plugins/cache/anthropic-agent-skills/document-skills/1ed29a03dc85/skills/docx/scripts/office/soffice.py\" --headless --convert-to pdf \"TALY - Response to Robert Evans - Detailed Evidence.docx\")",
+      "Read(//c/Program Files/LibreOffice/program/**)",
+      "Read(//c/Program Files \\(x86\\)/LibreOffice/program/**)",
+      "Bash(pandoc \"c:/VSCode/annual-client-review/annual-client-review-1/clients/taly/2025/TALY - Response to Robert Evans - Detailed Evidence.docx\" -t plain -o /tmp/taly_check.txt)",
+      "Read(//tmp/**)",
+      "Bash(pandoc \"c:/VSCode/annual-client-review/annual-client-review-1/clients/taly/2025/TALY - Response to Robert Evans - Detailed Evidence.docx\" -t plain)"
+    ]
+  }
+}
