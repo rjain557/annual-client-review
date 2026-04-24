@@ -1,0 +1,7 @@
+# PCAP 2026 — Tech Time-Entry Outlier Review
+
+**Entries scanned:** 75  
+**Hours:** 122.71  
+**Flagged entries:** 0 (0.0%)  
+**Flagged hours:** 0.00 (0.0%)  
+
