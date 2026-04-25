@@ -19,6 +19,7 @@ rules as _flag-outliers.py, and writes:
 Usage: python _audit-all-clients.py [YEAR]  (default 2026)
 """
 import csv
+import importlib.util
 import re
 import sys
 from collections import defaultdict
@@ -28,6 +29,12 @@ from pathlib import Path
 csv.field_size_limit(10_000_000)
 
 SCRIPTS = Path(__file__).resolve().parent
+
+# Coaching templates
+_coach_spec = importlib.util.spec_from_file_location("coaching", SCRIPTS / "_coaching.py")
+_coach_mod = importlib.util.module_from_spec(_coach_spec)
+_coach_spec.loader.exec_module(_coach_mod)
+build_coaching = _coach_mod.build_coaching
 REPO = SCRIPTS.parent.parent.parent
 YEAR = sys.argv[1] if len(sys.argv) > 1 else "2026"
 OUT_ROOT = REPO / "technijian" / "tech-training" / YEAR
@@ -354,15 +361,20 @@ def write_tech_artifacts(tech: str, tech_entries: list, all_flagged_for_tech: li
     out = OUT_BYTECH / slug
     out.mkdir(parents=True, exist_ok=True)
 
-    # all flagged for this tech (across clients)
+    # all flagged for this tech (across clients) — with coaching columns
     with (out / "flagged-entries.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["Client", "Date", "Title", "Category", "Hours", "CategoryCap",
-                    "DailyTotal", "Flags", "Reasons"])
+                    "DailyTotal", "Flags", "Reasons",
+                    "Why_Flagged", "Title_Must_Include",
+                    "Good_Title_At_Cap", "Good_Title_To_Justify_Your_Hours"])
         for e in sorted(all_flagged_for_tech, key=lambda x: (-x["Hours"], x["Date"])):
+            coach = build_coaching(e["Title"], e["Category"], e["Hours"])
             w.writerow([e["Client"].upper(), e["Date"], e["Title"], e["Category"],
                         round(e["Hours"], 2), e["Cap"], e["DailyTotal"],
-                        e["FlagCodes"], e["FlagReasons"]])
+                        e["FlagCodes"], e["FlagReasons"],
+                        coach["WhyFlagged"], coach["MustInclude"],
+                        coach["GoodExample_AtCap"], coach["GoodExample_Justified"]])
 
     # aggregates
     total_h = sum(e["Hours"] for e in tech_entries)
@@ -418,6 +430,25 @@ def write_tech_artifacts(tech: str, tech_entries: list, all_flagged_for_tech: li
             t = e["Title"].replace("|", "\\|")[:60]
             r = e["FlagReasons"].replace("|", "\\|")[:80]
             f.write(f"| {e['Client'].upper()} | {e['Date']} | {e['Hours']:.2f} | {e['Cap']} | {t} | {r} |\n")
+
+        # Coaching: per-entry rewrite suggestions
+        f.write("\n## Coaching — what your titles should look like\n\n")
+        f.write("For each of your top flagged entries below, you'll see what you wrote, "
+                "the expected normal time for that work, what the title should have included, "
+                "and two model rewrites: one that fits within the cap and one that justifies "
+                "the higher hours you actually logged.\n\n")
+        for e in sorted(all_flagged_for_tech, key=lambda x: -x["Hours"])[:8]:
+            coach = build_coaching(e["Title"], e["Category"], e["Hours"])
+            f.write(f"### {e['Client'].upper()} {e['Date']} — {e['Hours']:.2f}h logged on \"{e['Title'][:80]}\"\n\n")
+            f.write(f"- **Category:** {e['Category']}  \n")
+            f.write(f"- **Expected time for this category:** ≤ {coach['ExpectedHours']:.1f} hours  \n")
+            f.write(f"- **Why flagged:** {coach['WhyFlagged']}  \n")
+            f.write(f"- **A good title must include:** {coach['MustInclude']}\n\n")
+            f.write(f"**You wrote:** _{coach['BadExample']}_  \n\n")
+            f.write(f"**Model title within {coach['ExpectedHours']:.1f}h:**  \n")
+            f.write(f"> {coach['GoodExample_AtCap']}\n\n")
+            f.write(f"**Model title to justify {e['Hours']:.2f}h:**  \n")
+            f.write(f"> {coach['GoodExample_Justified']}\n\n")
 
         f.write("\n## Personalized training focus\n\n")
         # pick the TOP flag-type for this tech and write targeted advice

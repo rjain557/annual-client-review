@@ -30,6 +30,26 @@
 |---|---|---:|---:|---|---|
 | ALG | 2026-02-18 | 1.05 | 1.0 | My remote latest version updated on  ALG-HQ-LPT-03, ALG-HQ-L | routine > 1.0h cap (ScreenConnect / MyRemote updates) |
 
+## Coaching — what your titles should look like
+
+For each of your top flagged entries below, you'll see what you wrote, the expected normal time for that work, what the title should have included, and two model rewrites: one that fits within the cap and one that justifies the higher hours you actually logged.
+
+### ALG 2026-02-18 — 1.05h logged on "My remote latest version updated on  ALG-HQ-LPT-03, ALG-HQ-LPT-13, ALG-HQ-LPT-16"
+
+- **Category:** Routine: ScreenConnect / MyRemote updates  
+- **Expected time for this category:** ≤ 1.0 hours  
+- **Why flagged:** Your 1.05h is above the 1.0h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count and any failed deployments
+
+**You wrote:** _My remote latest version updated on  ALG-HQ-LPT-03, ALG-HQ-LPT-13, ALG-HQ-LPT-16, HAILEY with 25.9.9.9533_  
+
+**Model title within 1.0h:**  
+> ScreenConnect 24.5 push — 14 endpoints, all current
+
+**Model title to justify 1.05h:**  
+> ScreenConnect 24.5 push — 22 endpoints; 4 required service-stop and manual reinstall after upgrade hang; verified version on dashboard (~2h)
+
+
 ## Personalized training focus
 
 **Your most common issue is over-claiming time on routine work.** For patch-management alerts, agent version updates (CrowdStrike, ScreenConnect, MyRMM), CPU/memory/disk threshold alerts, and similar auto-generated monitoring tickets, the expected resolution time is 0.25–1.0 hours. If an alert genuinely takes longer, your title must explain why (e.g. "Critical CPU — investigated runaway SQL process" instead of just "Critical - CPU Utilization").

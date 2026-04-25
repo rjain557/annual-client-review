@@ -52,6 +52,131 @@
 | VAF | 2026-03-12 | 2.25 | 1.5 | Device Non-Compliant Due to Missing Patches- VAF-DC-OPSPRB,  | routine > 1.5h cap (Patch management / Windows Update) |
 | VG | 2026-03-17 | 2.25 | 1.5 | Update 3cx version 20 to the latest release update. | routine > 1.5h cap (Phone / Voice / Teams) |
 
+## Coaching — what your titles should look like
+
+For each of your top flagged entries below, you'll see what you wrote, the expected normal time for that work, what the title should have included, and two model rewrites: one that fits within the cap and one that justifies the higher hours you actually logged.
+
+### ORX 2026-01-28 — 2.50h logged on "TRYING TO OBTAIN VOICEMAIL FROM PHONE"
+
+- **Category:** Routine: Phone / Voice / Teams  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.50h is well above the 1.5h normal — title MUST justify the extra time.  
+- **A good title must include:** platform (RingCentral / Teams / 3CX), action (extension move, DID provision, license)
+
+**You wrote:** _TRYING TO OBTAIN VOICEMAIL FROM PHONE_  
+
+**Model title within 1.5h:**  
+> RingCentral extension move for new hire, voicemail verified
+
+**Model title to justify 2.50h:**  
+> RingCentral migration for 3 users — re-provisioned extensions, ported DIDs, configured call queue, end-user training session (~3h)
+
+### ANI 2026-03-08 — 2.25h logged on "Device Non-Compliant Due to Missing Patches-  ANI-HQ-OPSPRB-01, ANI-HQ-VBR-02, A"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches-  ANI-HQ-OPSPRB-01, ANI-HQ-VBR-02, ANI-HQ-VONE, VMANIDC02, VMANIFS-01, VMANIFS-02._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### BST 2026-02-22 — 2.25h logged on "Device Non-Compliant Due to Missing Patches- BST-HQ-AD-01, BST-HQ-AD-02, BST-HQ-"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches- BST-HQ-AD-01, BST-HQ-AD-02, BST-HQ-FS-01, BST-HQ-FS-02, BST-HQ-VBR-01._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### ORX 2026-03-15 — 2.25h logged on "Device Non-Compliant Due to Missing Patches-  ORX-DC-3CX-01, ORX-DC-AD-03, ORX-D"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches-  ORX-DC-3CX-01, ORX-DC-AD-03, ORX-DC-AD-04, ORX-DC-APP-01, ORX-DC-APP-04, ORX-DC-FS-01._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### ORX 2026-03-29 — 2.25h logged on "Device Non-Compliant Due to Missing Patches-  ORX-DC-3CX-01, ORX-DC-AD-03, ORX-D"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches-  ORX-DC-3CX-01, ORX-DC-AD-03, ORX-DC-AD-04, ORX-DC-APP-01._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### ORX 2026-03-30 — 2.25h logged on "Device Non-Compliant Due to Missing Patches-  ORX-DC-SFTP-01, ORX-DC-SQL-01, ORX"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches-  ORX-DC-SFTP-01, ORX-DC-SQL-01, ORX-DC-SQL-02, ORX-DC-SQL-03, ORX-DC-TS-03._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### ORX 2026-04-05 — 2.25h logged on "Device Non-Compliant Due to Missing Patches-  ORX-DC-AD-03, ORX-DC-AD-04, ORX-DC"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches-  ORX-DC-AD-03, ORX-DC-AD-04, ORX-DC-FS-01, ORX-DC-IIS2, ORX-DC-OPSPRB._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+### VAF 2026-03-11 — 2.25h logged on "Device Non-Compliant Due to Missing Patches- VAF-DC-3CX-01, VAF-DC-AD-01, VAF-DC"
+
+- **Category:** Routine: Patch management / Windows Update  
+- **Expected time for this category:** ≤ 1.5 hours  
+- **Why flagged:** Your 2.25h is above the 1.5h normal cap for this category — title needs more detail.  
+- **A good title must include:** machine count, which patches failed, manual reinstall steps
+
+**You wrote:** _Device Non-Compliant Due to Missing Patches- VAF-DC-3CX-01, VAF-DC-AD-01, VAF-DC-FS-01, VAF-DC-FS-02._  
+
+**Model title within 1.5h:**  
+> Monthly patch run — 28 endpoints all green, no manual intervention needed
+
+**Model title to justify 2.25h:**  
+> Patched 42 machines — 6 required manual WU service restart and reinstall of KB5034441; verified compliance in N-able dashboard before close (~2.5h)
+
+
 ## Personalized training focus
 
 **Your most common issue is over-claiming time on routine work.** For patch-management alerts, agent version updates (CrowdStrike, ScreenConnect, MyRMM), CPU/memory/disk threshold alerts, and similar auto-generated monitoring tickets, the expected resolution time is 0.25–1.0 hours. If an alert genuinely takes longer, your title must explain why (e.g. "Critical CPU — investigated runaway SQL process" instead of just "Critical - CPU Utilization").

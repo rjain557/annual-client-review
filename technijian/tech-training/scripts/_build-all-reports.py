@@ -9,6 +9,7 @@ Produces:
 Usage: python _build-all-reports.py [YEAR]
 """
 import csv
+import importlib.util
 import re
 import sys
 from pathlib import Path
@@ -33,6 +34,12 @@ REPO = SCRIPTS.parent.parent.parent
 YEAR = sys.argv[1] if len(sys.argv) > 1 else "2026"
 ROOT = REPO / "technijian" / "tech-training" / YEAR
 LOGO = Path(r"C:\VSCode\tech-branding\tech-branding\assets\logos\png\technijian-logo-full-color-600x125.png")
+
+# Coaching templates
+_coach_spec = importlib.util.spec_from_file_location("coaching", SCRIPTS / "_coaching.py")
+_coach_mod = importlib.util.module_from_spec(_coach_spec)
+_coach_spec.loader.exec_module(_coach_mod)
+build_coaching = _coach_mod.build_coaching
 
 # --- brand ---
 CORE_BLUE = "006DB6"
@@ -636,6 +643,77 @@ def build_tech_docx(slug: str, base: Path):
                      ["Client", "Date", "Hours", "Cap", "Title", "Reason"],
                      rs, col_widths=[0.7, 0.85, 0.55, 0.45, 2.6, 2.2],
                      hrs_col=2, cap_col=3)
+
+    # ===== Coaching: per-entry rewrite suggestions =====
+    add_page_break(doc)
+    add_section_header(doc, "Coaching — what your titles should look like", "orange")
+    doc.add_paragraph()
+    add_body(doc,
+             "For each of your top flagged entries below, you'll see what you wrote, the expected "
+             "normal time for that work, what the title should have included, and two model rewrites: "
+             "one that fits within the cap and one that justifies the higher hours you actually logged.",
+             color=DARK_CHARCOAL_R)
+    doc.add_paragraph()
+
+    coach_top = sorted(rows, key=lambda r: -float(r[hrs_idx]))[:8]
+    title_idx = hdr.index("Title")
+    for r in coach_top:
+        actual_title = r[title_idx]
+        actual_hours = float(r[hrs_idx])
+        coach = build_coaching(actual_title, r[cat_idx], actual_hours)
+        # Heading line
+        p = doc.add_paragraph()
+        p.paragraph_format.space_before = Pt(10)
+        p.paragraph_format.space_after = Pt(4)
+        add_run(p, f"{r[client_idx]} {r[0]}  —  {actual_hours:.2f}h logged",
+                bold=True, size=12, color=CORE_BLUE_R)
+        # Sub-line: title quoted
+        p = doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(4)
+        add_run(p, "You wrote:  ", bold=True, size=10, color=DARK_CHARCOAL_R)
+        add_run(p, f"“{actual_title[:120]}”", italic=True, size=10, color=BRAND_GREY_R)
+        # Category + expected
+        p = doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(4)
+        add_run(p, "Category: ", bold=True, size=10, color=DARK_CHARCOAL_R)
+        add_run(p, f"{r[cat_idx]}   ", size=10, color=BRAND_GREY_R)
+        add_run(p, "Expected: ", bold=True, size=10, color=DARK_CHARCOAL_R)
+        add_run(p, f"≤ {coach['ExpectedHours']:.1f} hours", size=10, color=BRAND_GREY_R)
+        # Why flagged
+        p = doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(4)
+        add_run(p, "Why flagged: ", bold=True, size=10, color=DARK_CHARCOAL_R)
+        add_run(p, coach["WhyFlagged"], size=10, color=CORE_ORANGE_R)
+        # Must include
+        p = doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(4)
+        add_run(p, "Title must include: ", bold=True, size=10, color=DARK_CHARCOAL_R)
+        add_run(p, coach["MustInclude"], size=10, color=BRAND_GREY_R)
+        # Model rewrites — render as a small 2-row table
+        t = doc.add_table(rows=2, cols=2)
+        t.autofit = False
+        set_col_widths(t, [2.0, 4.5])
+        labels = [
+            (f"Model title within {coach['ExpectedHours']:.1f}h", coach["GoodExample_AtCap"], "1EAAC8"),
+            (f"Model title to justify {actual_hours:.2f}h", coach["GoodExample_Justified"], "F67D4B"),
+        ]
+        for i, (label, body, color_hex) in enumerate(labels):
+            lbl, val = t.rows[i].cells
+            shade(lbl, OFF_WHITE)
+            cell_border(lbl)
+            shade(val, "FFFFFF")
+            cell_border(val)
+            lp = lbl.paragraphs[0]
+            lp.paragraph_format.space_before = Pt(3)
+            lp.paragraph_format.space_after = Pt(3)
+            add_run(lp, label, bold=True, size=9.5,
+                    color=RGBColor(int(color_hex[0:2], 16),
+                                   int(color_hex[2:4], 16),
+                                   int(color_hex[4:6], 16)))
+            vp = val.paragraphs[0]
+            vp.paragraph_format.space_before = Pt(3)
+            vp.paragraph_format.space_after = Pt(3)
+            add_run(vp, body, size=9.5, color=DARK_CHARCOAL_R)
 
     # Personalized advice
     add_page_break(doc)

@@ -31,6 +31,41 @@
 | CSS | 2026-04-02 | 2.00 | 1.0 | CSS Monthly Meeting With Mimi Johan and All Team | routine > 1.0h cap (Admin / meetings / approvals) |
 | CSS | 2026-04-11 | 1.25 | 1.0 | CSS Monthly Meeting With Mimi Johan and All Team | routine > 1.0h cap (Admin / meetings / approvals) |
 
+## Coaching — what your titles should look like
+
+For each of your top flagged entries below, you'll see what you wrote, the expected normal time for that work, what the title should have included, and two model rewrites: one that fits within the cap and one that justifies the higher hours you actually logged.
+
+### CSS 2026-04-02 — 2.00h logged on "CSS Monthly Meeting With Mimi Johan and All Team"
+
+- **Category:** Routine: Admin / meetings / approvals  
+- **Expected time for this category:** ≤ 1.0 hours  
+- **Why flagged:** Your 2.00h is well above the 1.0h normal — title MUST justify the extra time.  
+- **A good title must include:** meeting subject, decisions made, action items assigned
+
+**You wrote:** _CSS Monthly Meeting With Mimi Johan and All Team_  
+
+**Model title within 1.0h:**  
+> Weekly client standup with K. Stickel — 30 min, agenda + action items
+
+**Model title to justify 2.00h:**  
+> Quarterly review — ran agenda, captured 8 decisions, drafted next-quarter plan (~2h)
+
+### CSS 2026-04-11 — 1.25h logged on "CSS Monthly Meeting With Mimi Johan and All Team"
+
+- **Category:** Routine: Admin / meetings / approvals  
+- **Expected time for this category:** ≤ 1.0 hours  
+- **Why flagged:** Your 1.25h is above the 1.0h normal cap for this category — title needs more detail.  
+- **A good title must include:** meeting subject, decisions made, action items assigned
+
+**You wrote:** _CSS Monthly Meeting With Mimi Johan and All Team_  
+
+**Model title within 1.0h:**  
+> Weekly client standup with K. Stickel — 30 min, agenda + action items
+
+**Model title to justify 1.25h:**  
+> Quarterly review — ran agenda, captured 8 decisions, drafted next-quarter plan (~2h)
+
+
 ## Personalized training focus
 
 **Your most common issue is over-claiming time on routine work.** For patch-management alerts, agent version updates (CrowdStrike, ScreenConnect, MyRMM), CPU/memory/disk threshold alerts, and similar auto-generated monitoring tickets, the expected resolution time is 0.25–1.0 hours. If an alert genuinely takes longer, your title must explain why (e.g. "Critical CPU — investigated runaway SQL process" instead of just "Critical - CPU Utilization").
