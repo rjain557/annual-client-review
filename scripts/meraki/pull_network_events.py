@@ -27,9 +27,7 @@ from pathlib import Path
 import meraki_api as m
 
 
-DEFAULT_OUTPUT_ROOT = Path(
-    r"c:/VSCode/annual-client-review/annual-client-review-1/clients"
-)
+DEFAULT_OUTPUT_ROOT = Path(__file__).resolve().parents[2] / "clients"
 
 
 def iso_utc(dt: datetime) -> str:
