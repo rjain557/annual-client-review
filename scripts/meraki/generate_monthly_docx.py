@@ -224,14 +224,40 @@ def section_executive_summary(doc, payload: dict) -> None:
     cfg = payload["configuration"]
     sec = payload["security_events"]
     net = payload["network_events"]
+
+    # Top-of-page metric strip (3+ cells -> recognized as metric cards)
+    metric_cards(doc, [
+        ("Networks",         fmt_int(cfg.get("network_count", 0))),
+        ("Devices",          fmt_int(cfg.get("device_count", 0))),
+        ("IDS/IPS events",   fmt_int(sec.get("total", 0))),
+        ("Activity events",  fmt_int(net.get("total", 0))),
+    ])
+
+    # Status callout (single-cell table)
+    blocked = (sec.get("by_blocked") or {}).get("blocked", 0)
+    alerted = (sec.get("by_blocked") or {}).get("alerted", 0)
+    if sec.get("total", 0) == 0:
+        status = ("All clear", "No IDS/IPS or AMP events were recorded across "
+                  "the reporting period. Continue normal monitoring.")
+    elif blocked >= alerted:
+        status = ("Active prevention", f"{fmt_int(blocked)} threats were blocked "
+                  f"and {fmt_int(alerted)} alerted. The intrusion-prevention "
+                  "engine is actively dropping malicious traffic.")
+    else:
+        status = ("Detect-mode activity", f"{fmt_int(alerted)} alerts were "
+                  f"recorded with {fmt_int(blocked)} blocks. Review whether the "
+                  "appliance should be moved from detect to prevention mode for "
+                  "high-priority signatures.")
+    callout_box(doc, status[0], status[1])
+
     pairs = [
-        ("Reporting period",            payload["month"]),
-        ("Networks under management",   cfg.get("network_count", 0)),
-        ("Devices under management",    cfg.get("device_count", 0)),
-        ("Total IDS/IPS / AMP events",  fmt_int(sec.get("total", 0))),
-        ("Days with security events",   sec.get("days_with_events", 0)),
-        ("Total firewall activity events", fmt_int(net.get("total", 0))),
-        ("Networks with activity",      net.get("networks_with_events", 0)),
+        ("Reporting period",                payload["month"]),
+        ("Networks under management",       fmt_int(cfg.get("network_count", 0))),
+        ("Devices under management",        fmt_int(cfg.get("device_count", 0))),
+        ("Total IDS/IPS / AMP events",      fmt_int(sec.get("total", 0))),
+        ("Days with security events",       fmt_int(sec.get("days_with_events", 0))),
+        ("Total firewall activity events",  fmt_int(net.get("total", 0))),
+        ("Networks with activity",          fmt_int(net.get("networks_with_events", 0))),
     ]
     kv_table(doc, pairs)
 
@@ -388,13 +414,35 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+def run_proofreader(generated: list[Path]) -> int:
+    """Invoke the shared proofread_docx.py against every generated report.
+    Exits non-zero if any fails. The proofread-report skill describes the
+    7 scored checks + 2 warning checks performed."""
+    if not generated:
+        return 0
+    if not PROOFREADER.exists():
+        print(f"\n[proofread] WARNING: proofreader missing at {PROOFREADER} — skipping.")
+        return 0
+    sections_csv = ",".join(EXPECTED_SECTIONS)
+    cmd = [sys.executable, str(PROOFREADER), "--sections", sections_csv]
+    cmd += [str(p) for p in generated if p.exists()]
+    print("\n=== Proofreading reports ===")
+    sys.stdout.flush()
+    rc = subprocess.run(cmd).returncode
+    if rc != 0:
+        print(f"\n[proofread] FAILED — one or more reports did not pass the gate (rc={rc}).")
+    else:
+        print(f"[proofread] OK — {len(generated)} report(s) passed all checks.")
+    return rc
+
+
 def main() -> int:
     args = parse_args()
     root = Path(args.root)
     only = {s.strip().lower() for s in (args.only or "").split(",") if s.strip()}
     skip = {s.strip().lower() for s in (args.skip or "").split(",") if s.strip()}
 
-    n_built = 0
+    generated: list[Path] = []
     for org_dir in sorted([d for d in root.iterdir() if d.is_dir() and not d.name.startswith("_")]):
         if only and org_dir.name not in only:
             continue
@@ -416,10 +464,12 @@ def main() -> int:
             safe_label = "".join(c if c.isalnum() or c in " -_" else "_" for c in org_label)
             out = org_dir / "reports" / f"{safe_label} - Meraki Monthly Activity - {month}.docx"
             build_report(payload, out)
-            n_built += 1
+            generated.append(out)
             print(f"  [{org_dir.name}] {month} -> {out.relative_to(root)}")
-    print(f"\nGenerated {n_built} Word report(s)")
-    return 0
+    print(f"\nGenerated {len(generated)} Word report(s)")
+
+    rc = run_proofreader(generated)
+    return rc
 
 
 if __name__ == "__main__":
