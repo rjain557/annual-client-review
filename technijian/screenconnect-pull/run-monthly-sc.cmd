@@ -3,7 +3,9 @@ REM Monthly ScreenConnect recording pipeline
 REM Launches GUI transcoder, starts background watcher, logs output.
 REM REQUIRES interactive logged-in session (GUI tool will not run as SYSTEM).
 
-set REPO=c:\vscode\annual-client-review\annual-client-review
+pushd "%~dp0..\.."
+set REPO=%CD%
+popd
 set SCRIPTS=%REPO%\technijian\screenconnect-pull\scripts
 set BIN=%REPO%\technijian\screenconnect-pull\bin\SessionCaptureProcessor
 set AUTOMATE=%SCRIPTS%\sc_automate.ps1

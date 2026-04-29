@@ -58,7 +58,7 @@ Or run the PowerShell script directly:
 powershell -ExecutionPolicy Bypass -File technijian\screenconnect-pull\scripts\sc_automate.ps1
 ```
 
-`sc_automate.ps1` (kept in `c:\tmp\` — generated at runtime, not committed) will:
+`sc_automate.ps1` (committed at `technijian\screenconnect-pull\scripts\sc_automate.ps1`) will:
 
 1. Find the running `ScreenConnectSessionCaptureProcessor.exe` window
 2. Check the **"Transcode after download"** box
@@ -174,14 +174,21 @@ with the option "Run only when user is logged on".
 
 ### Register as a monthly Task Scheduler job
 
+Replace `REPO_PATH` with the actual clone location on this workstation:
+
 ```cmd
+set REPO_PATH=C:\path\to\annual-client-review
+
 schtasks /create ^
   /tn "Technijian-MonthlyScreenConnectPull" ^
-  /tr "\"c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\run-monthly-sc.cmd\"" ^
+  /tr "\"%REPO_PATH%\technijian\screenconnect-pull\run-monthly-sc.cmd\"" ^
   /sc MONTHLY /d 28 /st 20:00 ^
   /ru "%USERNAME%" ^
   /f
 ```
+
+The `.cmd` file is self-locating — it derives all paths from its own location, so
+the only hardcoded value is the path to the `.cmd` itself.
 
 Runs on the **28th of each month at 8 PM** — before the 30-day purge would remove
 recordings from the beginning of the month.
