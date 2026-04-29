@@ -57,9 +57,7 @@ DARK_BLUE_HEX = "1F4E79"
 ALT_ROW_HEX   = "F2F7FB"
 WHITE_HEX     = "FFFFFF"
 
-DEFAULT_ROOT = Path(
-    r"c:/VSCode/annual-client-review/annual-client-review-1/clients/_meraki"
-)
+DEFAULT_ROOT = Path(__file__).resolve().parents[2] / "clients" / "_meraki"
 
 L = WD_ALIGN_PARAGRAPH.LEFT
 R = WD_ALIGN_PARAGRAPH.RIGHT
@@ -147,6 +145,43 @@ def kv_table(doc, pairs):
     """Two-column key/value table — used for at-a-glance summaries."""
     rows = [[k, str(v)] for k, v in pairs]
     make_table(doc, ["Field", "Value"], rows, [L, R])
+
+
+def callout_box(doc, title: str, text: str) -> None:
+    """Single-cell shaded callout box. The proofreader expects at least one
+    of these per report (warns otherwise)."""
+    t = doc.add_table(rows=1, cols=1)
+    t.autofit = True
+    cell = t.rows[0].cells[0]
+    shade(cell, ALT_ROW_HEX)
+    cell.text = ""
+    p = cell.paragraphs[0]
+    run = p.add_run(title)
+    run.bold = True
+    run.font.size = Pt(11)
+    run.font.color.rgb = DARK_BLUE
+    sub = cell.add_paragraph()
+    r2 = sub.add_run(text)
+    r2.font.size = Pt(10)
+    r2.font.color.rgb = BLACK
+
+
+def metric_cards(doc, metrics: list[tuple[str, str]]) -> None:
+    """Multi-column header-style metric row (3+ cells). The proofreader
+    expects this in the first half of the document (warns otherwise)."""
+    if len(metrics) < 3:
+        # pad to at least 3 columns so the row is recognized as a metric strip
+        while len(metrics) < 3:
+            metrics.append(("", ""))
+    t = doc.add_table(rows=2, cols=len(metrics))
+    t.autofit = True
+    for i, (label, value) in enumerate(metrics):
+        head = t.rows[0].cells[i]
+        shade(head, DARK_BLUE_HEX)
+        set_text(head, label, bold=True, size=Pt(9), color=WHITE, align=C)
+        val = t.rows[1].cells[i]
+        shade(val, ALT_ROW_HEX)
+        set_text(val, value, bold=True, size=Pt(14), color=DARK_BLUE, align=C)
 
 
 # ---------------------------------------------------------------------------
