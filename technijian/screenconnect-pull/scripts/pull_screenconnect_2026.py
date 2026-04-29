@@ -34,7 +34,8 @@ from pathlib import Path
 
 # ── paths ──────────────────────────────────────────────────────────────────────
 REMOTE_DB   = r'\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Session.db'
-REMOTE_RECS = r'\\10.100.14.10\E$\Myremote Recording'
+REMOTE_RECS = r'R:\\'          # mapped via: net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes
+REMOTE_RECS_UNC = r'\\10.100.14.10\E$\Myremote Recording'   # fallback if R: not mapped
 LOCAL_DB_COPY = Path(r'C:\tmp\sc_db\Session.db')
 
 # ── regex ──────────────────────────────────────────────────────────────────────
@@ -85,12 +86,24 @@ def build_session_map(db: Path) -> dict[str, dict]:
     return result
 
 
+def _recordings_dir(override: str | None = None) -> Path:
+    """Return the best available recordings directory (mapped drive preferred)."""
+    if override:
+        return Path(override)
+    mapped = Path(REMOTE_RECS)
+    if mapped.exists():
+        return mapped
+    return Path(REMOTE_RECS_UNC)
+
+
 def scan_recordings(session_map: dict,
                     client_filter: str | None = None,
-                    year_filter: str = '2026') -> list[dict]:
+                    year_filter: str = '2026',
+                    recordings_dir: str | None = None) -> list[dict]:
     """Return list of recording dicts ready for conversion/upload."""
     recs = []
-    rec_dir = Path(REMOTE_RECS)
+    rec_dir = _recordings_dir(recordings_dir)
+    print(f"  Recordings dir: {rec_dir}")
     for f in rec_dir.iterdir():
         m = REC_RE.match(f.name)
         if not m:
@@ -131,11 +144,12 @@ def scan_recordings(session_map: dict,
 
 
 def _resolve_converter() -> Path | None:
-    env = Path(r'\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\Bin\ScreenConnect.RecordingConverter.exe')
-    if env.exists():
-        return env
-    # fallback: local copy
-    local = Path(r'C:\tools\ScreenConnect.RecordingConverter.exe')
+    # Repo-bundled copy (preferred — works on any workstation after git clone)
+    repo_bin = Path(__file__).resolve().parents[2] / 'bin' / 'SessionCaptureProcessor' / 'ScreenConnectSessionCaptureProcessor.exe'
+    if repo_bin.exists():
+        return repo_bin
+    # Fallback: local install
+    local = Path(r'C:\tools\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe')
     if local.exists():
         return local
     return None
@@ -255,6 +269,119 @@ def upload_recording(rec: dict, *, dry_run: bool = False) -> dict:
     return rec
 
 
+def process_avi_dir(avi_dir: Path, session_map: dict,
+                    out_dir: Path, ffmpeg: str,
+                    client_filter: str | None = None,
+                    year_filter: str = '2026',
+                    crf: int = 28, preset: str = 'slow',
+                    dry_run: bool = False) -> list[dict]:
+    """Process a directory of pre-downloaded AVI files (from SessionCaptureProcessor GUI).
+
+    Tries to parse filenames using the standard SC recording regex.  Falls back to
+    scanning for any UUID that matches a session in session_map.
+    """
+    import subprocess
+    # UUID pattern for fallback matching
+    _UUID_PAT = re.compile(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', re.I)
+
+    recs = []
+    avi_files = sorted(avi_dir.glob('*.avi'))
+    print(f"  Found {len(avi_files)} AVI files in {avi_dir}")
+
+    for f in avi_files:
+        stem = f.stem
+        # Try full SC filename pattern first (same as CRV but with .avi extension)
+        m = REC_RE.match(stem)
+        if m:
+            session_id    = m.group(1)
+            connection_id = m.group(2)
+            year, month, day = m.group(3), m.group(4), m.group(5)
+            hour, minute, second = m.group(6), m.group(7), m.group(8)
+        else:
+            # Fallback: find any UUID in filename that matches a known session
+            uuids = _UUID_PAT.findall(stem)
+            session_id = next((u.lower() for u in uuids if u.lower() in session_map), None)
+            if not session_id:
+                continue
+            connection_id = uuids[1].lower() if len(uuids) > 1 else '00000000-0000-0000-0000-000000000000'
+            # Extract date from filename digits if present
+            digits = re.findall(r'\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}', stem)
+            if digits:
+                parts = digits[0].split('-')
+                year, month, day = parts[0], parts[1], parts[2]
+                hour, minute, second = parts[3], parts[4], parts[5]
+            else:
+                year, month, day = year_filter, '01', '01'
+                hour, minute, second = '00', '00', '00'
+
+        if year != year_filter:
+            continue
+
+        info   = session_map.get(session_id, {})
+        client = info.get('client', '')
+        if not client:
+            continue
+        if client_filter and client.upper() != client_filter.upper():
+            continue
+
+        dest_dir = out_dir / f"{client}-{year}-{month}"
+        if not dry_run:
+            dest_dir.mkdir(parents=True, exist_ok=True)
+
+        date_str = f"{year}{month}{day}"
+        mp4_stem = f"{date_str}_{client}_{session_id[:8]}_{connection_id[:8]}"
+        mp4_path = dest_dir / f"{mp4_stem}.mp4"
+
+        rec = {
+            'src_path':       str(f),
+            'filename':       f.name,
+            'session_id':     session_id,
+            'connection_id':  connection_id,
+            'client':         client,
+            'machine':        info.get('machine', ''),
+            'session_name':   info.get('name', ''),
+            'session_type':   info.get('type', ''),
+            'year':           year,
+            'month':          month,
+            'day':            day,
+            'start_dt':       f"{year}-{month}-{day}T{hour}:{minute}:{second}Z",
+            'size_bytes':     f.stat().st_size,
+            'mp4_path':       str(mp4_path),
+        }
+
+        if dry_run:
+            rec['dry_run'] = True
+            recs.append(rec)
+            continue
+
+        if mp4_path.exists():
+            rec['skipped'] = True
+            recs.append(rec)
+            continue
+
+        import time
+        t0 = time.time()
+        try:
+            result = subprocess.run([
+                ffmpeg, '-y', '-i', str(f),
+                '-c:v', 'libx264', '-crf', str(crf), '-preset', preset,
+                '-c:a', 'aac', '-b:a', '128k',
+                '-movflags', '+faststart',
+                str(mp4_path)
+            ], capture_output=True, timeout=1800)
+            if result.returncode != 0:
+                rec['error'] = f"FFmpeg exit {result.returncode}: {result.stderr[-300:].decode('utf-8', 'replace')}"
+            else:
+                rec['mp4_size_bytes']   = mp4_path.stat().st_size
+                rec['elapsed_seconds']  = round(time.time() - t0, 1)
+        except Exception as e:
+            rec['error'] = f"FFmpeg error: {e}"
+
+        recs.append(rec)
+
+    return recs
+
+
 def write_audit_log(recs: list[dict], out_path: Path) -> None:
     """Write audit_log.json and audit_log.csv from processed recording records."""
     import csv
@@ -278,13 +405,15 @@ def write_audit_log(recs: list[dict], out_path: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument('--dry-run',     action='store_true', help='Plan only, no conversion or upload')
-    ap.add_argument('--audit-only',  action='store_true', help='Only write audit log, skip conversion/upload')
-    ap.add_argument('--client',      default=None,        help='Filter to one client code e.g. BWH')
-    ap.add_argument('--year',        default='2026',      help='Only process recordings from this year (default: 2026)')
-    ap.add_argument('--output-dir',  default=r'C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet', help='Local output dir for MP4 files (OneDrive syncs automatically)')
-    ap.add_argument('--upload',      action='store_true', help='Upload to Teams via Graph API (default: save locally, OneDrive syncs)')
+    ap.add_argument('--dry-run',       action='store_true', help='Plan only, no conversion or upload')
+    ap.add_argument('--audit-only',    action='store_true', help='Only write audit log, skip conversion/upload')
+    ap.add_argument('--client',        default=None,        help='Filter to one client code e.g. BWH')
+    ap.add_argument('--year',          default='2026',      help='Only process recordings from this year (default: 2026)')
+    ap.add_argument('--output-dir',    default=r'C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet', help='Local output dir for MP4 files (OneDrive syncs automatically)')
+    ap.add_argument('--upload',        action='store_true', help='Upload to Teams via Graph API (default: save locally, OneDrive syncs)')
     ap.add_argument('--no-refresh-db', action='store_true', help='Use existing local DB copy (skip copy step)')
+    ap.add_argument('--recordings-dir', default=None,       help='Override recordings source dir (default: R:\\ then UNC fallback)')
+    ap.add_argument('--from-avi-dir',  default=None,        help='Skip CRV step: compress pre-downloaded AVIs from this dir to MP4')
     args = ap.parse_args()
 
     out_dir = Path(args.output_dir)
@@ -293,13 +422,38 @@ def main() -> None:
     if not args.no_refresh_db:
         refresh_local_db()
 
-    # Step 2: build session map + scan recordings
+    # Step 2: build session map
     print("Building session map ...")
     session_map = build_session_map(LOCAL_DB_COPY)
     print(f"  {len(session_map)} sessions in DB")
 
+    # ── AVI-first path (SessionCaptureProcessor GUI already transcoded) ──────
+    if args.from_avi_dir:
+        avi_dir = Path(args.from_avi_dir)
+        if not avi_dir.is_dir():
+            print(f"ERROR: --from-avi-dir {avi_dir} is not a directory")
+            sys.exit(1)
+        ffmpeg = _resolve_ffmpeg()
+        if not ffmpeg:
+            print("ERROR: ffmpeg not found on PATH.  Install: winget install --id Gyan.FFmpeg -e")
+            sys.exit(2)
+        print(f"\nProcessing pre-downloaded AVIs from {avi_dir} ...")
+        recs = process_avi_dir(
+            avi_dir, session_map, out_dir, ffmpeg,
+            client_filter=args.client, year_filter=args.year,
+            dry_run=args.dry_run,
+        )
+        ok      = sum(1 for r in recs if 'mp4_path' in r and not r.get('error') and not r.get('skipped') and not r.get('dry_run'))
+        skipped = sum(1 for r in recs if r.get('skipped'))
+        errors  = sum(1 for r in recs if r.get('error'))
+        print(f"\n{'DRY RUN ' if args.dry_run else ''}Done: {ok} ok  {skipped} skipped  {errors} errors")
+        write_audit_log(recs, out_dir / '_audit' / 'audit_log.json')
+        return
+
+    # ── Normal CRV path ───────────────────────────────────────────────────────
     print("Scanning recordings ...")
-    recs = scan_recordings(session_map, client_filter=args.client, year_filter=args.year)
+    recs = scan_recordings(session_map, client_filter=args.client,
+                           year_filter=args.year, recordings_dir=args.recordings_dir)
     print(f"  {len(recs)} recordings matched")
 
     # Summarize

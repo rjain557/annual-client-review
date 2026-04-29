@@ -263,6 +263,84 @@ def _switch_via_dropdown(page, org_id: int) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Delete an existing API key by name (for --force-recreate)
+# ---------------------------------------------------------------------------
+def delete_existing_key(page, key_name: str = KEY_NAME) -> bool:
+    """
+    Find a key named key_name in the current API keys list and delete it.
+    Returns True if deleted, False if not found.
+    """
+    page.screenshot(path=str(SHOTS / f"pre-delete-{int(time.time())}.png"))
+    page_text = page.evaluate("() => document.body.innerText")
+    if key_name not in page_text:
+        return False  # nothing to delete
+
+    # Each key row has a chevron/expand button on the far right.
+    # Try to find a button associated with the key_name row.
+    deleted = page.evaluate(f"""() => {{
+        // Find the row that contains the key name
+        const rows = [...document.querySelectorAll('tr, li, [class*="row"], [class*="item"]')]
+            .filter(el => el.innerText && el.innerText.includes('{key_name}') && el.offsetParent);
+        for (const row of rows) {{
+            // Look for a button or icon inside the row (delete, expand, options)
+            const btns = [...row.querySelectorAll('button, [role="button"], [class*="delete"], [class*="remove"]')];
+            if (btns.length > 0) {{
+                btns[btns.length - 1].click();  // click last button (usually options/delete)
+                return 'clicked-row-button';
+            }}
+        }}
+        return null;
+    }}""")
+    print(f"  [delete] row action: {deleted}")
+    time.sleep(1)
+    page.screenshot(path=str(SHOTS / f"delete-menu-{int(time.time())}.png"))
+
+    # Look for a "Delete" option in a dropdown/menu
+    for sel in [
+        "button >> text=Delete",
+        "a >> text=Delete",
+        "[role='menuitem'] >> text=Delete",
+        "button >> text='Delete Key'",
+        "li >> text=Delete",
+    ]:
+        try:
+            el = page.query_selector(sel)
+            if el and el.is_visible():
+                el.click()
+                print(f"  [delete] clicked delete menu item ({sel})")
+                time.sleep(1)
+                break
+        except Exception:
+            pass
+
+    # Confirm deletion dialog if it appears
+    page.screenshot(path=str(SHOTS / f"delete-confirm-{int(time.time())}.png"))
+    for sel in [
+        "button >> text=Delete",
+        "button >> text=Confirm",
+        "button >> text=Yes",
+        "button >> text='Delete Key'",
+        "button >> text='Yes, Delete'",
+    ]:
+        try:
+            el = page.query_selector(sel)
+            if el and el.is_visible():
+                el.click()
+                print(f"  [delete] confirmed ({sel})")
+                time.sleep(2)
+                break
+        except Exception:
+            pass
+
+    # Verify it's gone
+    time.sleep(1)
+    page_text = page.evaluate("() => document.body.innerText")
+    deleted_ok = key_name not in page_text
+    print(f"  [delete] key removed: {deleted_ok}")
+    return deleted_ok
+
+
+# ---------------------------------------------------------------------------
 # Find the Add/Create API Key button
 # ---------------------------------------------------------------------------
 def find_and_click_add_button(page) -> str:
@@ -325,6 +403,8 @@ def find_and_click_add_button(page) -> str:
 # ---------------------------------------------------------------------------
 def fill_create_form(page) -> None:
     time.sleep(1.5)
+    page.evaluate("() => window.scrollTo(0, 0)")
+    time.sleep(0.5)
     page.screenshot(path=str(SHOTS / f"create-form-{int(time.time())}.png"))
 
     # ---- API Key Name field ----
@@ -389,60 +469,90 @@ def fill_create_form(page) -> None:
             pass
 
     if not select_all_clicked:
+        # Scope checkboxes are hidden <input type="checkbox"> behind CSS-styled spans.
+        # Use check(force=True) to bypass visibility and fire the React change event.
         checkboxes = page.query_selector_all("input[type='checkbox']")
         checked_count = 0
         for cb in checkboxes:
             try:
-                if cb.is_visible() and not cb.is_checked():
-                    cb.click()
-                    checked_count += 1
-                    time.sleep(0.15)
+                cb.check(force=True)
+                checked_count += 1
+                time.sleep(0.1)
             except Exception:
                 pass
-        print(f"  [form] checked {checked_count} scope checkboxes")
+        print(f"  [form] force-checked {checked_count} scope checkboxes")
+        time.sleep(0.5)
+        page.screenshot(path=str(SHOTS / f"scopes-after-check-{int(time.time())}.png"))
 
     page.screenshot(path=str(SHOTS / f"create-form-filled-{int(time.time())}.png"))
 
 
 # ---------------------------------------------------------------------------
-# Capture key+secret from the post-creation modal
+# Capture key+secret from the post-creation success page
 # ---------------------------------------------------------------------------
+def _looks_like_key(v: str) -> bool:
+    """Return True if v looks like a real API key/secret (not plain English)."""
+    if not v or len(v) < 16:
+        return False
+    if " " in v.strip():          # plain English has spaces
+        return False
+    # Must be mostly alphanumeric/dash/underscore
+    alnum = sum(1 for c in v if c.isalnum() or c in "-_")
+    return alnum / len(v) >= 0.85
+
 def capture_credentials(page) -> tuple[str, str]:
-    time.sleep(2)
+    # Wait for the success state to render (form submission takes a moment)
+    time.sleep(3)
     page.screenshot(path=str(SHOTS / f"key-modal-{int(time.time())}.png"))
 
-    # Strategy 1: input fields inside a modal
-    for container in ["dialog", "[role='dialog']", ".modal", "[class*='modal']",
-                      "[class*='dialog']", "main"]:
-        el = page.query_selector(container)
-        if not el:
-            continue
-        inputs = el.query_selector_all("input[readonly], input[type='text'], input[value]")
-        values = []
-        for inp in inputs:
+    # Save page HTML for debugging failed captures
+    html_path = SHOTS / f"key-modal-{int(time.time())}.html"
+    html_path.write_text(page.content(), encoding="utf-8")
+
+    # Strategy 1: readonly inputs anywhere on the page
+    all_inputs = page.query_selector_all("input[readonly], input[type='text']")
+    candidates = []
+    for inp in all_inputs:
+        try:
             v = (inp.get_attribute("value") or inp.input_value() or "").strip()
-            if len(v) > 8:
-                values.append(v)
-        if len(values) >= 2:
-            return values[0], values[1]
+            if _looks_like_key(v):
+                candidates.append(v)
+        except Exception:
+            pass
+    if len(candidates) >= 2:
+        return candidates[0], candidates[1]
 
-    # Strategy 2: code/pre/span elements with long hex-like values
-    body = page.evaluate("""() => {
-        const els = [...document.querySelectorAll('code,pre,span,[class*=token],[class*=key],[class*=secret],[class*=value]')];
-        return els.map(e => (e.textContent||'').trim()).filter(v => v.length >= 16 && /[a-f0-9]/i.test(v));
+    # Strategy 2: code/pre/span elements (Umbrella might show key in a code block)
+    creds = page.evaluate("""() => {
+        const els = [...document.querySelectorAll(
+            'code, pre, [class*="key"], [class*="secret"], [class*="token"], [class*="credential"]'
+        )];
+        return els
+            .map(e => (e.textContent || '').trim())
+            .filter(v => v.length >= 16 && !/\\s/.test(v) && /[a-zA-Z0-9]/.test(v));
     }""")
-    if len(body) >= 2:
-        return body[0], body[1]
+    if len(creds) >= 2:
+        k, s = creds[0], creds[1]
+        if _looks_like_key(k) and _looks_like_key(s):
+            return k, s
 
-    # Strategy 3: regex on full page text
+    # Strategy 3: regex on full page innerText — 32-char hex OR UUID patterns
     text = page.evaluate("() => document.body.innerText")
-    tokens = re.findall(r"[0-9a-f]{32}", text.lower())
+    tokens = re.findall(r"[0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", text.lower())
+    tokens = [t for t in tokens if _looks_like_key(t)]
     if len(tokens) >= 2:
         return tokens[0], tokens[1]
 
+    # Check if we're still on the Add form (means 0 scopes — form didn't submit)
+    if "Add New API Key" in text and "0 selected" in text:
+        raise RuntimeError(
+            "Form still open after submit — scopes were not selected. "
+            "Check create-form-filled screenshot."
+        )
+
     raise RuntimeError(
-        "Could not extract key/secret from modal. "
-        f"Screenshot saved to {SHOTS}. Add manually to state file."
+        "Could not extract key/secret from success page. "
+        f"HTML saved to {html_path.name}. Add manually to state file."
     )
 
 
@@ -456,13 +566,15 @@ def submit_create_form(page) -> None:
     page.screenshot(path=str(SHOTS / f"create-form-scrolled-{int(time.time())}.png"))
 
     # Form is full-page (not inside a dialog), so no dialog-scoped selectors.
+    # The actual submit button text is "CREATE KEY" (all-caps teal button, bottom right).
+    # Do NOT use "button >> text=Add" — that hits the IP-Restrictions "ADD" button.
     for sel in [
+        "button >> text='CREATE KEY'",
+        "button >> text='Create Key'",
+        "button >> text='Create key'",
+        "button >> text=CREATE",
         "button[type='submit']",
-        "button >> text=Create",
-        "button >> text=Save",
-        "button >> text=Generate",
         "button >> text='Create API Key'",
-        "button >> text=Add",
         "[data-testid='submit']",
         "button.btn-primary",
         "button.primary",
@@ -525,11 +637,12 @@ def verify_key(code: str, entry: dict) -> bool:
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only",        help="Comma-separated codes")
-    parser.add_argument("--skip",        help="Comma-separated codes to skip")
-    parser.add_argument("--resume",      action="store_true", help="Skip already in state")
-    parser.add_argument("--dry-run",     action="store_true")
-    parser.add_argument("--verify-only", action="store_true")
+    parser.add_argument("--only",           help="Comma-separated codes")
+    parser.add_argument("--skip",           help="Comma-separated codes to skip")
+    parser.add_argument("--resume",         action="store_true", help="Skip already in state")
+    parser.add_argument("--force-recreate", action="store_true", help="Delete existing ClaudeCode key and recreate")
+    parser.add_argument("--dry-run",        action="store_true")
+    parser.add_argument("--verify-only",    action="store_true")
     args = parser.parse_args()
 
     only_set = {c.strip().upper() for c in args.only.split(",")} if args.only else None
@@ -597,8 +710,17 @@ def main():
                 # Check if key already exists
                 page_text = page.evaluate("() => document.body.innerText")
                 if KEY_NAME in page_text:
-                    raise RuntimeError(
-                        f"Key '{KEY_NAME}' already exists — delete it first or use --skip {code}")
+                    if args.force_recreate:
+                        print(f"  [{code}] deleting existing '{KEY_NAME}' key...")
+                        deleted = delete_existing_key(page)
+                        if not deleted:
+                            raise RuntimeError(f"Could not delete existing '{KEY_NAME}' key")
+                        print(f"  [{code}] deleted — recreating...")
+                        # Refresh API keys page after deletion
+                        go_to_apikeys(page, org_id)
+                    else:
+                        raise RuntimeError(
+                            f"Key '{KEY_NAME}' already exists — delete it first or use --skip {code}")
 
                 # Click Add / Create
                 add_sel = find_and_click_add_button(page)
@@ -631,11 +753,65 @@ def main():
                 page.screenshot(path=str(SHOTS / f"error-{code}-{int(time.time())}.png"))
                 time.sleep(2)
 
-        # Summary
+        # Auto-retry "already exists" errors within the same browser session
+        retry_codes = [
+            c for c, m in errors.items()
+            if "already exists" in m
+        ]
+        if retry_codes and not args.force_recreate:
+            print(f"\n{'='*55}")
+            print(f"Auto-retry {len(retry_codes)} orgs with --force-recreate: {retry_codes}")
+            print(f"{'='*55}")
+            retry_errors = {}
+            for code in retry_codes:
+                org_id = next(o for c, o in CUSTOMERS if c == code)
+                print(f"\n--- {code} (force-recreate) ---")
+                try:
+                    ok = go_to_apikeys(page, org_id)
+                    if not ok:
+                        raise RuntimeError(f"Could not navigate to org {org_id}")
+
+                    page_text = page.evaluate("() => document.body.innerText")
+                    if KEY_NAME in page_text:
+                        print(f"  [{code}] deleting existing '{KEY_NAME}' key...")
+                        deleted = delete_existing_key(page)
+                        if not deleted:
+                            raise RuntimeError(f"Could not delete existing '{KEY_NAME}' key")
+                        go_to_apikeys(page, org_id)
+
+                    add_sel = find_and_click_add_button(page)
+                    print(f"  [add] clicked ({add_sel})")
+                    time.sleep(1)
+                    fill_create_form(page)
+                    submit_create_form(page)
+                    api_key, api_secret = capture_credentials(page)
+                    dismiss_modal(page)
+
+                    entry = {
+                        "code": code, "org_id": org_id,
+                        "api_key": api_key, "api_secret": api_secret,
+                        "created_at": datetime.now(timezone.utc).isoformat(),
+                    }
+                    entry["verified"] = verify_key(code, entry)
+                    state[code] = entry
+                    save_state(state)
+                    # Remove from errors if succeeded
+                    errors.pop(code, None)
+                    print(f"  [{code}] SAVED  key={api_key[:8]}...  verified={entry['verified']}")
+
+                except Exception as exc:
+                    print(f"  [{code}] RETRY ERROR: {exc}")
+                    retry_errors[code] = str(exc)
+                    page.screenshot(path=str(SHOTS / f"retry-error-{code}-{int(time.time())}.png"))
+                    time.sleep(2)
+
+            errors.update(retry_errors)
+
+        # Final summary
         print(f"\n{'='*55}")
-        succeeded = [c for c,_ in targets if state.get(c, {}).get("api_key")]
+        succeeded = [c for c, _ in CUSTOMERS if state.get(c, {}).get("verified")]
         failed    = list(errors.keys())
-        print(f"Created:  {len(succeeded)}  {succeeded}")
+        print(f"Verified: {len(succeeded)}/{len(CUSTOMERS)}  {succeeded}")
         print(f"Failed:   {len(failed)}  {failed}")
         if errors:
             for c, m in errors.items():

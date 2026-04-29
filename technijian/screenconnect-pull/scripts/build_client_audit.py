@@ -28,9 +28,10 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 # ── paths ──────────────────────────────────────────────────────────────────────
-REMOTE_DB   = r'\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Session.db'
-REMOTE_RECS = r'\\10.100.14.10\E$\Myremote Recording'
-LOCAL_DB    = Path(r'C:\tmp\sc_db\Session.db')
+REMOTE_DB        = r'\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Session.db'
+REMOTE_RECS      = r'R:\\'           # mapped via: net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes
+REMOTE_RECS_UNC  = r'\\10.100.14.10\E$\Myremote Recording'
+LOCAL_DB         = Path(r'C:\tmp\sc_db\Session.db')
 REPO_ROOT   = Path(__file__).resolve().parents[3]  # annual-client-review root
 
 # ── datetime conversion (.NET Ticks) ──────────────────────────────────────────
@@ -107,10 +108,15 @@ def load_tech_events(db: Path, session_map: dict) -> dict:
     return dict(result)
 
 
+def _recordings_dir() -> Path:
+    p = Path(REMOTE_RECS)
+    return p if p.exists() else Path(REMOTE_RECS_UNC)
+
+
 def scan_recordings_for_client(client: str, session_map: dict, year: str) -> list[dict]:
     """Scan the recordings directory and return records for this client/year."""
     records = []
-    for f in Path(REMOTE_RECS).iterdir():
+    for f in _recordings_dir().iterdir():
         m = REC_RE.match(f.name)
         if not m:
             continue

@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -602,6 +603,23 @@ def main() -> int:
 
     print()
     print(f"[{datetime.now():%H:%M:%S}] DONE — generated {len(results)} report(s)")
+
+    # Proofread every generated report
+    if results:
+        proofreader = REPO / "technijian" / "shared" / "scripts" / "proofread_docx.py"
+        if proofreader.exists():
+            sections = (
+                "Executive Summary,Endpoint Protection,Threat Activity This Month,"
+                "What Technijian Did For You,Recommendations,About This Report"
+            )
+            rc = subprocess.run(
+                [sys.executable, str(proofreader), "--sections", sections, "--quiet"]
+                + [r["out_path"] for r in results if Path(r["out_path"]).exists()]
+            ).returncode
+            if rc != 0:
+                print("[proofread] WARNING: one or more reports failed proofreading.")
+                return rc
+
     return 0
 
 

@@ -440,6 +440,7 @@ def main():
     only_set = set(args.only.upper().split(",")) if args.only else None
 
     print(f"Building compliance reports for {args.date}...")
+    generated = []
     for code, info in sorted(clients.items()):
         if only_set and code not in only_set:
             continue
@@ -458,8 +459,37 @@ def main():
             pull_date=pull_date,
             out_path=out_path,
         )
+        generated.append(out_path)
 
     print(f"\nDone. Reports in {pull_dir / 'reports'}/")
+    sys.stdout.flush()
+
+    # Proofread every generated report
+    _proofread_reports(generated)
+
+
+def _proofread_reports(paths):
+    """Run structural proofreader on generated DOCX files."""
+    proofreader = REPO_ROOT / "technijian" / "shared" / "scripts" / "proofread_docx.py"
+    if not proofreader.exists():
+        print("[proofread] Skipped — proofread_docx.py not found")
+        return
+    import subprocess
+    file_args = [str(p) for p in paths if p.exists()]
+    if not file_args:
+        return
+    sections = (
+        "Executive Summary,Endpoint Monitoring Coverage,DLP Policy Status,"
+        "Activity Summary,Insider-Threat Risk Assessment,"
+        "What Technijian Did For You,Recommendations,About This Report"
+    )
+    result = subprocess.run(
+        [sys.executable, str(proofreader), "--sections", sections] + file_args,
+        capture_output=False,
+    )
+    if result.returncode != 0:
+        print("\n[proofread] WARNING: one or more reports failed proofreading above.")
+        sys.exit(result.returncode)
 
 
 if __name__ == "__main__":
