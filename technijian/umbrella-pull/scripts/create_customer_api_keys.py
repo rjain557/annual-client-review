@@ -313,14 +313,32 @@ def delete_existing_key(page, key_name: str = KEY_NAME) -> bool:
         except Exception:
             pass
 
-    # Confirm deletion dialog if it appears
+    # Confirm deletion dialog if it appears (wait a bit for dialog to mount)
+    time.sleep(1.5)
     page.screenshot(path=str(SHOTS / f"delete-confirm-{int(time.time())}.png"))
+
+    # Some orgs show a mandatory "Are you sure?" checkbox before DELETE activates.
+    try:
+        for ccb in page.query_selector_all("input[type='checkbox']"):
+            try:
+                if ccb.is_visible() and not ccb.is_checked():
+                    ccb.click()
+                    print("  [delete] checked confirmation checkbox")
+                    time.sleep(0.5)
+                    break
+            except Exception:
+                pass
+    except Exception:
+        pass
+
     for sel in [
+        "button >> text=DELETE",
         "button >> text=Delete",
         "button >> text=Confirm",
         "button >> text=Yes",
         "button >> text='Delete Key'",
         "button >> text='Yes, Delete'",
+        "button >> text='DELETE KEY'",
     ]:
         try:
             el = page.query_selector(sel)
@@ -332,10 +350,21 @@ def delete_existing_key(page, key_name: str = KEY_NAME) -> bool:
         except Exception:
             pass
 
-    # Verify it's gone
-    time.sleep(1)
+    # React SPA needs time to reflect the deletion — reload the page before checking
+    time.sleep(2)
+    current_url = page.url
+    page.goto(current_url, wait_until="domcontentloaded")
+    time.sleep(4)
+
     page_text = page.evaluate("() => document.body.innerText")
     deleted_ok = key_name not in page_text
+
+    # One more try: wait another 3s if still showing (eventual consistency)
+    if not deleted_ok:
+        time.sleep(3)
+        page_text = page.evaluate("() => document.body.innerText")
+        deleted_ok = key_name not in page_text
+
     print(f"  [delete] key removed: {deleted_ok}")
     return deleted_ok
 
@@ -482,6 +511,35 @@ def fill_create_form(page) -> None:
                 pass
         print(f"  [form] force-checked {checked_count} scope checkboxes")
         time.sleep(0.5)
+
+        # Some scopes (Investigate) auto-add to the right panel but leave the
+        # access-level dropdown as "Select..." instead of defaulting to Read/Write.
+        # Find any visible selects still at blank/Select and set them to Read/Write
+        # (or Read-Only if that's the only read option available).
+        changed = page.evaluate("""() => {
+            const selects = [...document.querySelectorAll('select')]
+                .filter(s => s.offsetParent !== null);
+            let n = 0;
+            selects.forEach(sel => {
+                const cur = sel.options[sel.selectedIndex];
+                if (!sel.value || !cur || /^select/i.test(cur.text.trim())) {
+                    const rw  = [...sel.options].find(o => /read.+write/i.test(o.text));
+                    const ro  = [...sel.options].find(o => /read.only/i.test(o.text));
+                    const r   = [...sel.options].find(o => /^read$/i.test(o.text.trim()));
+                    const pick = rw || ro || r || sel.options[1] || sel.options[0];
+                    if (pick) {
+                        sel.value = pick.value;
+                        sel.dispatchEvent(new Event('change', {bubbles: true}));
+                        n++;
+                    }
+                }
+            });
+            return n;
+        }""")
+        if changed:
+            print(f"  [form] fixed {changed} unset scope dropdowns → Read/Write")
+            time.sleep(0.3)
+
         page.screenshot(path=str(SHOTS / f"scopes-after-check-{int(time.time())}.png"))
 
     page.screenshot(path=str(SHOTS / f"create-form-filled-{int(time.time())}.png"))

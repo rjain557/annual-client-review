@@ -1,397 +1,251 @@
-# Workstation setup - ScreenConnect recording converter + Teams uploader
+# Workstation Setup — ScreenConnect Recording Pipeline
 
-This skill takes ScreenConnect (`.crv`) session recordings and produces
-web-friendly `.mp4` files, then uploads them to a Microsoft Teams channel.
-Conversion runs on a workstation that can reach the SC server's recordings
-share. **Do not install on the development laptop** unless you are doing
-local testing against a sample `.crv`.
+Converts all ScreenConnect session recordings to MP4, organises them into
+`OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet\{CLIENT}-{YEAR}-{MONTH}\`,
+then regenerates per-client audit CSVs with the OneDrive video link in every row.
 
-Two scripts live under `technijian/screenconnect-pull/scripts/`:
+Run this **once per month** (before the 30-day SC session purge closes the window).
+The pipeline is designed to run on any domain-joined workstation that can reach
+`\\10.100.14.10` — it does not need to be the SC server itself.
 
-1. `convert_recording.py` - takes a `.crv` (or a directory of them) and
-   writes `.mp4` next to the source or into a `--output-dir`.
-2. `upload_to_teams.py` - takes one or more `.mp4` files (or a manifest from
-   step 1) and uploads them to the Teams channel configured in
-   `state/teams-destination.json`.
+---
 
 ## Prerequisites
 
-1. **Python 3.14** at `C:\Python314\python.exe` (matches `huntress-pull`,
-   `umbrella-pull`, `crowdstrike-pull`).
-2. **ScreenConnect.RecordingConverter.exe** on this host. Auto-detected at:
-   - `C:\Program Files (x86)\ScreenConnect\ScreenConnect.RecordingConverter.exe`
-   - `C:\Program Files\ScreenConnect\ScreenConnect.RecordingConverter.exe`
-   - `C:\ProgramData\ScreenConnect\ScreenConnect.RecordingConverter.exe`
+| Component | Version | Notes |
+| --- | --- | --- |
+| Python | 3.11+ | Tested on 3.14.3 at `C:\Python314\python.exe` |
+| FFmpeg | any modern | `winget install --id Gyan.FFmpeg -e` then verify: `ffmpeg -version` |
+| OneDrive (Technijian tenant) | signed in | Syncs FileCabinet folder; keyfiles at `%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\` |
+| Network access to 10.100.14.10 | on-LAN or VPN | SC server (TE-DC-MYRMT-01) must be reachable |
 
-   Override with `--converter <path>` or env var `SC_CONVERTER`. If the
-   workstation is not the SC server itself, copy the `.exe` from the SC
-   server's install dir — it is self-contained and does not need a running
-   SC service.
-3. **FFmpeg** on PATH:
-   ```powershell
-   winget install --id Gyan.FFmpeg -e
-   ```
-   Verify: `ffmpeg -version`
-4. **Access to the `.crv` recordings.** Either run on the SC server, or
-   mount its `App_Data\Session Recordings` folder as a UNC share accessible
-   to the workstation user (read-only is fine).
-5. **OneDrive sync active** so the M365 keyfile resolves:
-   `%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\m365-graph.md`
-6. **App registration permissions** (admin-consented application perms):
-   - `Files.ReadWrite.All` - write to the Teams channel's SharePoint folder
-   - `Group.Read.All` - resolve `/teams/{id}/channels/{id}/filesFolder`
-
-## Confirmed server paths (TE-DC-MYRMT-01 — 10.100.14.10)
-
-Access via admin share with Administrator credentials (stored in `screenconnect-web.md`):
-
-```powershell
-net use \\10.100.14.10\IPC$ /user:Administrator "T3chn!j2n92618!!"
-```
-
-| What | UNC Path |
-| --- | --- |
-| SQLite DB | `\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Session.db` |
-| Recordings | `\\10.100.14.10\E$\Myremote Recording\` (flat, no file extension) |
-| SC install | `\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\` |
-| Security DB | `\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Security.db` |
-
-Recording filenames follow the pattern:
-`{SessionID(UUID)}-{ConnectionID(UUID)}-{YYYY}-{MM}-{DD}-{HH}-{mm}-{ss}-{YYYY}-{MM}-{DD}-{HH}-{mm}-{ss}`
-
-Session IDs in the SQLite DB are stored as 16-byte BLOBs in **.NET mixed-endian** byte order.
-Use `uuid.UUID(bytes_le=raw_bytes)` to convert to string for matching against recording filenames.
-
-**Scope as of 2026-04-29:** 2758 recordings, ~19 GB raw, across 22 clients. All in April 2026
-(the maintenance plan purges sessions >30 days old, so older session→client mappings are gone).
-
-## Get the RecordingConverter
-
-The recording files use ScreenConnect's proprietary Extended Auditing format. You need
-`ScreenConnect.RecordingConverter.exe` to convert them to `.avi` first.
-
-**Option A — Download from your SC admin panel (fastest):**
-
-```
-https://myremote.technijian.com → Administration → Downloads
-→ "ConnectWise Control Recording Converter"
-```
-
-**Option B — ConnectWise partner portal:**
-
-[https://home.connectwise.com](https://home.connectwise.com) → Software → ConnectWise Control
-→ download v26.1 installer zip → extract `ScreenConnect.RecordingConverter.exe`
-
-**Install location for scripts:**
+The `SessionCaptureProcessor.exe` converter is **bundled in the repo** — no separate
+download needed:
 
 ```text
-C:\tools\ScreenConnect.RecordingConverter.exe
+technijian\screenconnect-pull\bin\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe
 ```
 
-`pull_screenconnect_2026.py` auto-detects this path. Override with `SC_CONVERTER` env var.
+---
 
-## 2026 batch pull (convert + upload + audit log)
+## Step 1 — Map the recordings share
 
-`pull_screenconnect_2026.py` does everything end-to-end from the server:
+Run once per session (or make persistent with `/persistent:yes`):
+
+```cmd
+net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes
+```
+
+Verify: `dir R:\ | find /c ""` should show ~2800+ files.
+
+---
+
+## Step 2 — Transcode CRV → AVI (GUI, one-time or monthly)
+
+The SessionCaptureProcessor converts ScreenConnect's proprietary `.crv` format
+to `.avi`. It is a GUI tool; use the automation script to drive it hands-free.
+
+### Option A — fully automated (recommended for scheduled / remote runs)
+
+```powershell
+# From an elevated PowerShell
+Start-Process python -ArgumentList "technijian\screenconnect-pull\scripts\sc_automate.ps1" -WindowStyle Normal
+```
+
+Or run the PowerShell script directly:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File technijian\screenconnect-pull\scripts\sc_automate.ps1
+```
+
+`sc_automate.ps1` (kept in `c:\tmp\` — generated at runtime, not committed) will:
+
+1. Find the running `ScreenConnectSessionCaptureProcessor.exe` window
+2. Check the **"Transcode after download"** box
+3. Click **"Choose Capture Files to Transcode"**
+4. Navigate to `R:\` and select all files (Ctrl+A)
+5. Click **Open** to start transcoding
+
+The GUI must be open before running the script. Launch it from the repo:
+
+```cmd
+start "" "c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\bin\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe"
+```
+
+Wait ~2 seconds for it to fully load, then run the automation script.
+
+### Option B — manual
+
+1. Open `technijian\screenconnect-pull\bin\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe`
+2. **Check "Transcode after download"**
+3. Click **"Choose Capture Files to Transcode"**
+4. In the file picker: navigate to `R:\`, press **Ctrl+A**, click **Open**
+5. Leave the window open — do not close it while transcoding
+
+**Output location:** AVIs are written alongside the source files on `R:\` (same
+directory), with `.avi` appended to the original filename. The "Download Directory"
+field (`C:\tmp\sc_avis`) applies only to the server-download workflow, not local
+transcoding.
+
+**Time estimate:** ~8 hours for 2,800 files. Run overnight.
+
+---
+
+## Step 3 — Watch + auto-convert (background, hands-free)
+
+Start the watcher immediately after launching the GUI transcoding. It polls every
+5 minutes and automatically triggers Steps 4 and 5 when the AVI count stabilises.
+
+```powershell
+Start-Process python -ArgumentList "technijian\screenconnect-pull\scripts\sc_watch_and_convert.py" -WindowStyle Hidden `
+    -RedirectStandardOutput "c:\tmp\sc_watch_stdout.txt" `
+    -RedirectStandardError  "c:\tmp\sc_watch_stderr.txt"
+```
+
+Monitor progress anytime:
+
+```powershell
+Get-Content "c:\tmp\sc_watch.log" -Tail 20
+```
+
+---
+
+## Step 4 — Compress AVI → MP4 into OneDrive FileCabinet
+
+> Handled automatically by the watcher — only run manually if watcher was not started.
 
 ```cmd
 cd /d c:\vscode\annual-client-review\annual-client-review
 
-REM Step 1: audit only (no conversion) — verify scope, generates audit_log.csv
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\pull_screenconnect_2026.py ^
-    --audit-only --output-dir C:\converted\sc-2026
-
-REM Step 2: dry run (plan without converting)
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\pull_screenconnect_2026.py ^
-    --dry-run --output-dir C:\converted\sc-2026
-
-REM Step 3: one client first (BWH) as a pilot
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\pull_screenconnect_2026.py ^
-    --client BWH --output-dir C:\converted\sc-2026
-
-REM Step 4: full 2026 batch (all clients)
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\pull_screenconnect_2026.py ^
-    --output-dir C:\converted\sc-2026
+python technijian\screenconnect-pull\scripts\pull_screenconnect_2026.py ^
+    --from-avi-dir R:\ --no-refresh-db
 ```
 
-Output per run:
+Output per client:
 
-| File | Contents |
+```text
+C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet\
+  {CLIENT}-{YEAR}-{MONTH}\
+    {YYYYMMDD}_{CLIENT}_{session8}_{conn8}.mp4
+  _audit\
+    audit_log.json
+    audit_log.csv
+```
+
+OneDrive desktop sync auto-uploads everything in that folder to Teams.
+
+---
+
+## Step 5 — Regenerate per-client audit CSVs
+
+> Handled automatically by the watcher — only run manually if watcher was not started.
+
+```cmd
+python technijian\screenconnect-pull\scripts\build_client_audit.py ^
+    --all --year 2026 --no-refresh-db
+```
+
+Output per client:
+
+```text
+clients\{client}\screenconnect\2026\
+  {CLIENT}-SC-Audit-2026.csv    (recording_start, tech_name, machine, teams_url, ...)
+  {CLIENT}-SC-Audit-2026.json
+```
+
+---
+
+## Monthly wrapper (all steps combined)
+
+```cmd
+c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\run-monthly-sc.cmd
+```
+
+This wrapper:
+
+1. Launches the SessionCaptureProcessor GUI
+2. Runs `sc_automate.ps1` to start GUI transcoding
+3. Starts `sc_watch_and_convert.py` in the background
+4. Logs to `technijian\screenconnect-pull\state\run-YYYY-MM-DD.log`
+
+**The wrapper requires an interactive logged-in user session** (the GUI tool will
+not run as SYSTEM or in a non-interactive session). Schedule it via Task Scheduler
+with the option "Run only when user is logged on".
+
+### Register as a monthly Task Scheduler job
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-MonthlyScreenConnectPull" ^
+  /tr "\"c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\run-monthly-sc.cmd\"" ^
+  /sc MONTHLY /d 28 /st 20:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Runs on the **28th of each month at 8 PM** — before the 30-day purge would remove
+recordings from the beginning of the month.
+
+Verify:
+
+```cmd
+schtasks /query /tn "Technijian-MonthlyScreenConnectPull" /v /fo LIST
+```
+
+Run on demand:
+
+```cmd
+schtasks /run /tn "Technijian-MonthlyScreenConnectPull"
+```
+
+---
+
+## Server paths (TE-DC-MYRMT-01 — 10.100.14.10)
+
+| What | Path |
 | --- | --- |
-| `C:\converted\sc-2026\audit_log.json` | All recording records with session metadata + Teams `webUrl` (OneDrive link) |
-| `C:\converted\sc-2026\audit_log.csv` | Same data as CSV for Excel |
-| `C:\converted\sc-2026\{client}\{YYYY-MM}\{date}_{client}_{session}_{conn}.mp4` | Converted MP4s |
+| SQLite DB | `\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\App_Data\Session.db` |
+| Raw recordings (CRV) | `\\10.100.14.10\E$\Myremote Recording\` (no file extension) |
+| Mapped drive | `R:\` → `\\10.100.14.10\E$\Myremote Recording` |
+| SC install | `\\10.100.14.10\C$\Program Files (x86)\ScreenConnect\` |
+| Converter (bundled) | `technijian\screenconnect-pull\bin\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe` |
 
-The `teams_url` column in the audit log is the direct OneDrive share link for each recording, so every session event can be linked to its video.
+**SC API key** (for SessionCaptureProcessor GUI): stored in SC admin panel at
+`https://myremote2.technijian.com → Administration → Extensions → Session Capture
+Processor → Edit Settings → Custom ApiKey`. Current key: `TechSCCapture2026!`
+(stored in `%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\screenconnect-web.md`).
 
-**Flags:**
+Recording filename pattern:
 
-| Flag | Effect |
-| --- | --- |
-| `--audit-only` | Skip conversion entirely; just write the audit log manifest |
-| `--dry-run` | Plan everything, convert nothing |
-| `--client CODE` | Process one client only |
-| `--no-upload` | Convert to MP4 but skip Teams upload |
-| `--no-refresh-db` | Reuse the cached local DB copy (skip the copy-from-server step) |
-
-## Smoke test (single .crv)
-
-```cmd
-cd /d c:\vscode\annual-client-review\annual-client-review
-
-REM dry-run first - prints plan without executing
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\convert_recording.py ^
-    "<full path to a sample .crv>" --output-dir C:\temp\sc-test --dry-run
-
-REM real conversion
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\convert_recording.py ^
-    "<full path to a sample .crv>" --output-dir C:\temp\sc-test
+```text
+{SessionID}-{ConnectionID}-{YYYY}-{MM}-{DD}-{HH}-{mm}-{ss}-{YYYY}-{MM}-{DD}-{HH}-{mm}-{ss}
 ```
 
-Open `C:\temp\sc-test\<sessionid>.mp4` in your default player. It should
-play in any browser, Teams (inline), VLC, Quicktime, or Windows Media.
+Session IDs in the SQLite DB are 16-byte .NET mixed-endian BLOBs.
+Use `uuid.UUID(bytes_le=raw)` to match against recording filenames.
 
-Typical sizes for a 1-hour single-monitor session:
+**30-day purge:** SC purges session events older than 30 days. As of 2026-04-29
+only April 2026 events exist. Run before the 28th of each month to capture the
+full previous month.
 
-| Stage | Size | Codec |
-|---|---|---|
-| .crv | 80-300 MB | proprietary |
-| .avi | 2-8 GB | MJPEG (intermediate, deleted after) |
-| .mp4 | 100-400 MB | H.264 + AAC, faststart |
+---
 
-The `.avi` is huge but transient. Ensure `--output-dir` has ~10x the source
-`.crv` size free during conversion.
+## Scope (2026-04-29 snapshot)
 
-## Encode tuning
+- 2,838 recordings across 22 clients, ~19.2 GB raw
+- Largest: JDH (1,016 recs / 14 GB), Technijian (696 / 1.9 GB), ORX (348 / 902 MB)
+- Tech name coverage gaps: where SessionEvent purged before 30-day window
 
-| Flag | Default | Effect |
-|---|---|---|
-| `--crf <n>` | 23 | Lower = bigger+higher quality. 18 = near-lossless, 28 = small/grainy. |
-| `--preset <s>` | medium | `ultrafast` ~3x speed at ~1.3x size; `slow` ~0.7x speed at ~0.9x size. |
-| `--keep-intermediate` | off | Keep `.avi` for debugging a corrupt MP4. |
-| `--overwrite` | off | Re-encode an MP4 that already exists. |
-| `--dry-run` | off | Print plan, run nothing. |
-| `--manifest <path>` | none | Write a JSON manifest (consumed by `upload_to_teams.py --from-manifest`). |
-
-Batch conversion of a whole month:
-```cmd
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\convert_recording.py ^
-    "\\<sc-server>\recordings$\2026\04" ^
-    --output-dir "C:\converted\2026-04" ^
-    --manifest "C:\converted\2026-04\manifest.json"
-```
-
-## Configure the Teams destination
-
-1. Get the team and channel IDs. Easiest: open Teams web, navigate to the
-   channel, click **...** -> **Get link to channel**. The link contains
-   `groupId=<team-guid>` and `channel/<urlencoded-id>`. URL-decode the
-   channel id — it looks like `19:abcdef...@thread.tacv2`.
-
-2. Copy the template and fill it in (the live config file is gitignored):
-   ```cmd
-   copy technijian\screenconnect-pull\state\teams-destination.json.template ^
-        technijian\screenconnect-pull\state\teams-destination.json
-   notepad technijian\screenconnect-pull\state\teams-destination.json
-   ```
-   Fields:
-   - `team_id` - the group GUID from the Teams link
-   - `channel_id` - the `19:...@thread.tacv2` id
-   - `subfolder` - folder path to create inside the channel, supports tokens
-     `{client_code}`, `{year}`, `{month}`, `{date}`. Default: `{client_code}/{year}-{month}`
-   - `rename` - output filename pattern. Default: `{date}_{client_code}_{session_id}.mp4`
-
-3. Verify resolution (dry-run, no upload):
-   ```cmd
-   C:\Python314\python.exe technijian\screenconnect-pull\scripts\upload_to_teams.py ^
-       "C:\temp\sc-test\<one>.mp4" ^
-       --vars client_code=TEST date=2026-04-29 session_id=smoketest --dry-run
-   ```
-
-4. Real upload:
-   ```cmd
-   C:\Python314\python.exe technijian\screenconnect-pull\scripts\upload_to_teams.py ^
-       "C:\temp\sc-test\<one>.mp4" ^
-       --vars client_code=BWH date=2026-04-29 session_id=abc123
-   ```
-   Check the Teams channel **Files** tab — the MP4 should be in the
-   `{client_code}/{year}-{month}` subfolder and play inline in Teams.
-
-## Upload from a conversion manifest (batch workflow)
-
-```cmd
-REM step 1: convert a directory and write a manifest
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\convert_recording.py ^
-    "\\<sc-server>\recordings$\2026\04\<session>.crv" ^
-    --output-dir "C:\converted\2026-04" --manifest "C:\converted\2026-04\manifest.json"
-
-REM step 2: upload everything the manifest marks as ok=true
-C:\Python314\python.exe technijian\screenconnect-pull\scripts\upload_to_teams.py ^
-    --from-manifest "C:\converted\2026-04\manifest.json" ^
-    --vars client_code=BWH year=2026 month=04
-```
+---
 
 ## Triage
 
-- `ScreenConnect.RecordingConverter.exe not found` - SC isn't at any
-  auto-detected path. Copy the `.exe` from the SC server or pass
-  `--converter <path>`.
-- `ffmpeg not found on PATH` - run `winget install Gyan.FFmpeg -e`, restart
-  shell.
-- `RecordingConverter exit <n>` - source `.crv` is corrupt or still being
-  written (session in progress). Skip and retry later.
-- `ffmpeg exit <n>` - usually a malformed `.avi`. Re-run with
-  `--keep-intermediate` and inspect the `.avi` in VLC.
-- `Teams destination config missing` - `state/teams-destination.json`
-  doesn't exist or has placeholder values. See "Configure the Teams
-  destination" above.
-- `HTTP 403 Authorization_RequestDenied` on filesFolder - app registration
-  missing `Group.Read.All` admin consent. Add in Entra ID -> Enterprise
-  apps -> **Teams-Connector** -> API permissions -> grant admin consent.
-- `HTTP 401` mid-upload - token expired during a large batch. Re-run the
-  uploader; it skips already-uploaded files if you use the manifest and the
-  file exists in Teams (Graph returns `409 nameAlreadyExists` with
-  `conflictBehavior: fail`; switch to `replace` in the source if needed).
-
-## SQLite MCP server (direct DB access from Claude Code)
-
-ScreenConnect stores all its data in a **SQLite** file, not SQL Server.
-The database lives on TE-DC-MYRMT-01 at a path like:
-
-```text
-C:\Program Files (x86)\ScreenConnect\App_Data\ScreenConnect.db
-```
-
-The `@modelcontextprotocol/server-sqlite` npm package gives Claude Code live
-read access to that file via MCP tools (list tables, run a SELECT, etc.).
-This is what powers the daily pull pipeline — Claude can query `Session`,
-`SessionRecording`, `Audit`, etc. directly.
-
-The config lives in `.mcp.json` at the repo root. **`.mcp.json` is gitignored**
-so the file path is never committed.
-
-### Step 1 — install Node.js (if not already on the workstation)
-
-```powershell
-winget install --id OpenJS.NodeJS.LTS -e
-```
-
-Verify: `node --version` and `npx --version`.
-
-### Step 2 — share the ScreenConnect.db file (on TE-DC-MYRMT-01)
-
-The MCP server needs a reachable path to `ScreenConnect.db`. Options:
-
-**Option A — run Claude Code on TE-DC-MYRMT-01 itself**
-Use the local path directly, e.g.:
-`C:\Program Files (x86)\ScreenConnect\App_Data\ScreenConnect.db`
-
-**Option B — map a UNC share from the workstation**
-On TE-DC-MYRMT-01, share the `App_Data` folder (read-only, workstation
-computer account or a service account). Then the path from the workstation is:
-`\\10.100.14.10\SCAppData\ScreenConnect.db`
-
-Also store the local path in the OneDrive key vault for Python scripts:
-
-```text
-%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\screenconnect-sql.md
-```
-
-Format:
-
-```markdown
-# ScreenConnect Database
-**DB Path:** \\10.100.14.10\SCAppData\ScreenConnect.db
-```
-
-`_sc_secrets.py:get_sc_db_path()` reads this for any Python script that
-needs direct SQLite access.
-
-### Step 3 — create .mcp.json from the template
-
-```cmd
-cd /d c:\vscode\annual-client-review\annual-client-review
-copy .mcp.json.template .mcp.json
-notepad .mcp.json
-```
-
-Replace `\\10.100.14.10\<share>\App_Data\ScreenConnect.db` with the actual
-path from Step 2.
-
-### Step 4 — allow the MCP server in Claude Code
-
-Open Claude Code in this repo. You will see a one-time prompt:
-> "Allow MCP server 'screenconnect-db' from .mcp.json?"
-
-Click **Allow**. The `mcp__screenconnect_db__*` tools will become available
-(tools like `read_query`, `list_tables`, `describe_table`).
-
-To pre-approve without the prompt (optional, for the production workstation):
-
-```json
-// add to .claude/settings.json (project)
-"enabledMcpjsonServers": ["screenconnect-db"]
-```
-
-### Step 5 — verify
-
-In a Claude Code session in this repo, ask:
-> "Use the screenconnect-db MCP server to list all tables."
-
-You should see tables like: `Session`, `SessionEvent`, `SessionRecording`,
-`Audit`, `User`, `Permission`, `SessionGroup`, `SecuritySetting`, etc.
-
-### Note on write access
-
-ScreenConnect holds a write lock on `ScreenConnect.db` while the service is
-running. The SQLite MCP server is read-only by default — which is what we
-want. Never write to the live database file.
-
-## MyRMM / ManageEngine SQL Server MCP (TE-DC-MYRMM-SQL)
-
-ManageEngine Endpoint Central Plus and MyRMM use a **SQL Server** instance on
-TE-DC-MYRMM-SQL (10.100.13.11). The `myrmm-sql` entry in `.mcp.json` gives
-Claude Code read access to that database.
-
-### Setup
-
-1. Create `.mcp.json` from the template (see above) and fill in the `myrmm-sql`
-   connection string:
-
-   | Placeholder | Replace with |
-   | --- | --- |
-   | `<sql-user>` | SQL login with `db_datareader` on the ManageEngine database |
-   | `<sql-password>` | Password for that login |
-
-   Store the connection string in the OneDrive key vault:
-
-   ```text
-   %USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\myrmm-sql.md
-   ```
-
-   Format:
-
-   ```markdown
-   # MyRMM SQL Server
-   **Connection String:** Server=10.100.13.11,1433;Database=ManageEngine;User Id=<user>;Password=<pass>;TrustServerCertificate=true;Encrypt=true;
-   ```
-
-2. Allow the `myrmm-sql` MCP server in Claude Code (one-time prompt on next
-   session start after creating `.mcp.json`).
-
-3. Verify:
-   > "Use the myrmm-sql MCP server to list all tables."
-
-## What is NOT in this build yet
-
-- **Daily pull pipeline.** The SQL query (`SessionRecording` table) -> per-
-  client routing -> convert -> upload chain is a separate script that waits
-  on two decisions: (a) the per-client routing key in this CW Control
-  instance (session group? hostname prefix? custom property?); (b) the
-  workstation that runs it. Schedule wiring will follow the same
-  `Register-ScheduledTask` pattern as `umbrella-pull/workstation.md`.
-- **Transcript / chat / command-history pull.** SQL-side data, separate
-  pipeline.
-- **Retention/cleanup.** The SC server keeps `.crv` files indefinitely.
-  If you want auto-deletion of `.crv` after confirmed upload, that belongs
-  in a separate gated pipeline (recommend-only first).
+| Symptom | Fix |
+| --- | --- |
+| `R:\` not accessible | Run `net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes` |
+| `ffmpeg not found` | `winget install --id Gyan.FFmpeg -e`, restart shell |
+| GUI "Unable to read beyond the end of the stream" | Normal on startup; only appears when using the API query path, not "Choose Capture Files to Transcode" |
+| 0-byte AVI file on R:\ | Source recording is empty or was in-progress; script skips it |
+| Watcher log stuck at 0% | Check `c:\tmp\sc_watch_stdout.txt` for errors; verify GUI is showing "Transcoding..." in status bar |
+| `mp4_path` missing from audit CSV | Watcher hasn't finished yet; re-run `build_client_audit.py --all` after watcher completes |
+| SC session purged (no client in DB) | Expected for older sessions; recording skipped automatically |

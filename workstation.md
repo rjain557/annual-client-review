@@ -658,3 +658,94 @@ Update `CUBE_NAMES` in `teramind_api.py` when new modules are activated.
 | `SSL certificate verify failed` | On-premise self-signed cert | `teramind_api.py` already disables SSL verification for self-signed certs -- no action needed. |
 | Zero activity rows but agents and computers show up | No monitoring agents have reported data yet | Normal for a newly enrolled system; data flows once agents are installed on client computers. |
 | Scheduled task ran but output dir is absent | Task ran as `SYSTEM` (no OneDrive sync for keyfile path) | Run the task as the workstation user, not SYSTEM. |
+
+---
+
+## 26. ScreenConnect recording pipeline
+
+Converts all monthly ScreenConnect session recordings to MP4 and drops them into
+`OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet\{CLIENT}-{YEAR}-{MONTH}\`
+(OneDrive auto-syncs to Teams). Also generates per-client audit CSVs
+(`clients\{code}\screenconnect\{year}\{CLIENT}-SC-Audit-{year}.csv`) with
+tech name, machine, duration, and Teams video link for every session.
+
+**Run monthly on the 28th** — before the 30-day SC session purge closes the window.
+
+Full setup details: `technijian\screenconnect-pull\workstation.md`
+
+### Prerequisites
+
+| Component | Notes |
+| --- | --- |
+| Python 3.11+ | Same as other pipelines |
+| FFmpeg on PATH | `winget install --id Gyan.FFmpeg -e` |
+| OneDrive signed in | FileCabinet folder must be syncing |
+| Network access to 10.100.14.10 | TE-DC-MYRMT-01 (SC server) |
+| R:\ mapped | `net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes` |
+
+The converter EXE is bundled in the repo — no separate download:
+
+```text
+technijian\screenconnect-pull\bin\SessionCaptureProcessor\ScreenConnectSessionCaptureProcessor.exe
+```
+
+### Run the monthly pipeline
+
+```cmd
+c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\run-monthly-sc.cmd
+```
+
+This script:
+
+1. Maps `R:\` to the recordings share
+2. Launches `SessionCaptureProcessor.exe` (GUI)
+3. Runs `c:\tmp\sc_automate.ps1` to select all `R:\` files and start transcoding
+4. Starts `c:\tmp\sc_watch_and_convert.py` in the background — monitors progress,
+   then auto-runs FFmpeg compression (CRV AVI → MP4) and audit CSV regeneration
+
+Monitor progress anytime:
+
+```powershell
+Get-Content c:\tmp\sc_watch.log -Tail 20
+```
+
+**Requires interactive session** — the GUI tool will not run as SYSTEM.
+Schedule with "Run only when user is logged on".
+
+### Register as monthly Task Scheduler job
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-MonthlyScreenConnectPull" ^
+  /tr "\"c:\vscode\annual-client-review\annual-client-review\technijian\screenconnect-pull\run-monthly-sc.cmd\"" ^
+  /sc MONTHLY /d 28 /st 20:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-MonthlyScreenConnectPull" /v /fo LIST
+schtasks /run   /tn "Technijian-MonthlyScreenConnectPull"
+```
+
+### Output locations
+
+| Output | Path |
+| --- | --- |
+| MP4 videos | `C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet\{CLIENT}-{YEAR}-{MONTH}\` |
+| Audit log | `...FileCabinet\_audit\audit_log.json` |
+| Per-client CSV | `clients\{code}\screenconnect\{year}\{CLIENT}-SC-Audit-{year}.csv` |
+
+## 27. Troubleshooting (ScreenConnect pipeline)
+
+| Symptom | Fix |
+| --- | --- |
+| `R:\` not accessible | `net use R: "\\10.100.14.10\E$\Myremote Recording" /persistent:yes` |
+| `ffmpeg not found` | `winget install --id Gyan.FFmpeg -e`, restart shell |
+| GUI does not open | Check that the EXE exists at `technijian\screenconnect-pull\bin\SessionCaptureProcessor\` |
+| `sc_automate.ps1` can't find window | Wait 5 seconds after GUI launches, then re-run the script manually |
+| Watcher shows 0% progress after 10 min | GUI status bar should show "Transcoding..."; if blank, manually click "Choose Capture Files to Transcode", navigate to `R:\`, Ctrl+A, Open |
+| 0-byte AVI on R:\ | Source file empty or in-progress — skipped automatically |
+| `teams_url` empty in audit CSV | Watcher hasn't completed yet; re-run `build_client_audit.py --all --no-refresh-db` after watcher finishes |
