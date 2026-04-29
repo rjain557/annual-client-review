@@ -170,6 +170,15 @@ def get_all_contracts() -> list[dict]:
     return sp_rows(r)
 
 
+def get_all_dir() -> list[dict]:
+    """stp_Get_All_Dir -> all directory entries (users, clients, orgs).
+    Each entry has DirID, First_Name, Last_Name, EMail_Primary, Phone_Cell,
+    Phone_Office, Title, DirectoryType, IsActive, LocationTopFilter, etc.
+    """
+    r = execute_sp("dir", "dbo", "stp_Get_All_Dir", {})
+    return sp_rows(r)
+
+
 def find_active_signed_contract(contracts: list[dict], dir_id: int) -> Optional[dict]:
     """Return the currently-active signed contract for a client (by DirID).
     Matches on Client_LocationsID and ContractStatusTxt in {Active, ACTIVE}.
@@ -260,6 +269,7 @@ __all__ = [
     "sp_xml_out",
     "get_active_clients",
     "get_all_contracts",
+    "get_all_dir",
     "find_active_signed_contract",
     "get_time_entries_xml",
     "get_invoices_xml",

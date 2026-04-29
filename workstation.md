@@ -533,3 +533,128 @@ hostname/tag-prefix bucketing scheme. Define prefixes in
 | One client has `errors[]` in its `pull_summary.json` but the rest succeeded | Partial endpoint failure | Re-run `python pull_crowdstrike_daily.py --only <CODE>`. |
 | Wrong region (api.crowdstrike.com instead of api.us-2.crowdstrike.com) | Tenant migrated, env vars stale | Edit `**Base URL:**` in `crowdstrike.md` (auto-loaded into env by cs_api) or `setx CROWDSTRIKE_BASE_URL`. |
 | Scheduled task ran but per-client folders are absent | Task ran as `SYSTEM` (no OneDrive sync) | Run the task as the workstation user, not SYSTEM. |
+
+---
+
+## 21. Teramind API credentials
+
+Teramind on-premise server lives at `https://myaudit2.technijian.com`.
+Auth uses an opaque access token sent via `X-Access-Token` header.
+
+Keyfile: `%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\teramind.md`
+
+Required fields in the keyfile (already populated — verify before first run):
+
+```markdown
+**Base URL:** `https://myaudit2.technijian.com`
+**Access Token:** `<40-char hex token>`
+```
+
+To regenerate the token if a 401 appears: log into the Teramind web portal
+at `https://myaudit2.technijian.com` as `support@technijian.com`, go to
+Settings -> Access Tokens, generate a new token, and paste the value back
+into the keyfile.
+
+Env-var override (headless / CI):
+
+```cmd
+setx TERAMIND_HOST        "https://myaudit2.technijian.com"
+setx TERAMIND_ACCESS_TOKEN "2fd3b7a08c6cd..."
+```
+
+## 22. Teramind pull smoke test
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+
+REM Dry run -- no API calls
+python technijian\teramind-pull\scripts\pull_teramind_daily.py --dry-run
+
+REM Live run (today's 24 h window)
+python technijian\teramind-pull\scripts\pull_teramind_daily.py
+```
+
+Expected output:
+
+```text
+Teramind daily pull
+  Window : 2026-04-28T19:00:00+00:00 -> 2026-04-29T19:00:00+00:00
+  Output : ...teramind-pull\2026-04-29
+  Dry run: False
+
+Pulling account info...
+Pulling agents...
+  5 active agent(s)
+Pulling computers...
+  2 active computer(s)
+...
+Done. 5 agents, 2 computers, 4 activity rows, 0 error(s)
+```
+
+Output files land in `technijian\teramind-pull\YYYY-MM-DD\` plus a run
+log at `technijian\teramind-pull\state\YYYY-MM-DD.json`.
+
+## 23. Schedule the daily Teramind pull (recommended)
+
+Run this **once on the production workstation** (not the dev laptop).
+Scheduled to 04:00 AM PT: 1 AM = Huntress, 2 AM = Umbrella, 3 AM = CrowdStrike.
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-DailyTeramindPull" ^
+  /sc DAILY /st 04:00 ^
+  /tr "c:\vscode\annual-client-review\annual-client-review\technijian\teramind-pull\run-daily-teramind.cmd" ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Verify registration:
+
+```cmd
+schtasks /query /tn "Technijian-DailyTeramindPull" /fo LIST /v
+```
+
+Run manually:
+
+```cmd
+schtasks /run /tn "Technijian-DailyTeramindPull"
+```
+
+## 24. What the Teramind pull writes
+
+```text
+technijian/teramind-pull/YYYY-MM-DD/
+  account.json              account settings (name, timezone, currency)
+  agents.json + .csv        monitored employees (email, department, role)
+  computers.json + .csv     monitored endpoints (name, fqdn, OS, IP, status)
+  departments.json          department list
+  behavior_groups.json      DLP rule group definitions
+  behavior_policies.json    individual DLP policies (25 sample rules)
+  activity.json             general app/productivity activity cube (24 h)
+  keystrokes.json           keystroke log cube (24 h)
+  web_search.json           web search query cube (24 h)
+  social_media.json         social media activity cube (24 h)
+  risk_scores.json          per-agent insider-threat score + percentile
+  agent_details.json        per-agent activity detail (insider-threat API)
+  last_devices.json         per-agent last-used devices
+  run_log.json              pull summary: counts, window, errors
+
+technijian/teramind-pull/state/YYYY-MM-DD.json    copy of run_log for state tracking
+```
+
+**Valid cubes on this installation (verified 2026-04-29):** `activity`,
+`keystrokes`, `web_search`, `social_media`. Other cube names from Teramind
+SaaS docs (`sessions`, `alerts`, `file_transfers`, `emails`, `cli`,
+`printing`) return "unknown cube" on this server -- likely not licensed yet.
+Update `CUBE_NAMES` in `teramind_api.py` when new modules are activated.
+
+## 25. Troubleshooting (Teramind pull)
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| `keyfile: **Base URL:** not found` | Keyfile missing `**Base URL:** \`https://...\`` line | Verify `keys/teramind.md` format matches section 21. |
+| `HTTP 401: {"error":"Unauthorized"}` | Access token revoked or expired | Regenerate token in Teramind portal -> Settings -> Access Tokens; update keyfile. |
+| `HTTP 500: Cube name provided '...' is unknown` | Cube not licensed on this server | Expected for non-activated modules; remove from `CUBE_NAMES` in `teramind_api.py`. |
+| `SSL certificate verify failed` | On-premise self-signed cert | `teramind_api.py` already disables SSL verification for self-signed certs -- no action needed. |
+| Zero activity rows but agents and computers show up | No monitoring agents have reported data yet | Normal for a newly enrolled system; data flows once agents are installed on client computers. |
+| Scheduled task ran but output dir is absent | Task ran as `SYSTEM` (no OneDrive sync for keyfile path) | Run the task as the workstation user, not SYSTEM. |

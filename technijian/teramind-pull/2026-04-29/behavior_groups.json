@@ -1,0 +1,2109 @@
+[
+  {
+    "behavior_group_id": 1,
+    "entity_group_id": 1,
+    "name": "Sample Rules",
+    "created": "2019-02-26T16:23:32.410Z",
+    "deleted": false,
+    "active": true,
+    "order": 1,
+    "policies": [
+      {
+        "behavior_policy_id": 2,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Outbound email w/attachment to a different domain",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users email an attachment outside of this domain"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "andnot": [
+                      {
+                        "id": 7,
+                        "comp": 1,
+                        "value": [
+                          "@my-domain.com"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 44
+                  },
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.413Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 7,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Anonymous browser usage",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users launch an anonymous browser, like TOR"
+          },
+          "activity": {
+            "application": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 0,
+                    "value": [
+                      "tor.exe"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.485Z",
+        "deleted": false,
+        "active": true,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 8,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "File sharing / peer-to-peer (P2P) apps",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users use file sharing / p2p apps BitTorrent and others"
+          },
+          "activity": {
+            "application": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 1,
+                    "value": [
+                      "torrent",
+                      "gnutella",
+                      "edonkey",
+                      "limewire",
+                      "napster",
+                      "kazaa"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.487Z",
+        "deleted": false,
+        "active": true,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 10,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Job search websites",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Users spending time on job search websites"
+          },
+          "activity": {
+            "webpage": [
+              {
+                "and": [
+                  {
+                    "id": 4,
+                    "comp": 1,
+                    "value": [
+                      "glassdoor",
+                      "careerbuilder",
+                      "monster.com",
+                      "indeed.com",
+                      "theladders.com",
+                      "dice.com"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.490Z",
+        "deleted": false,
+        "active": true,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 9,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Social media sites: 50+ minutes",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users spend > 50 minutes a day on sites on the Social media"
+          },
+          "activity": {
+            "webpage": [
+              {
+                "and": [
+                  {
+                    "id": 4,
+                    "comp": 1,
+                    "value": [
+                      "facebook.com/"
+                    ]
+                  },
+                  {
+                    "id": 37,
+                    "comp": 6,
+                    "value": [
+                      3000
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.488Z",
+        "deleted": false,
+        "active": true,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 22,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "RDP attempt to forbidden hosts",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User tried to RDP into a host on a forbidden subnet"
+          },
+          "activity": {
+            "network": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 0,
+                    "value": [
+                      "mstsc.exe"
+                    ]
+                  },
+                  {
+                    "andnot": [
+                      {
+                        "id": 47,
+                        "comp": 9,
+                        "value": [
+                          "10.120.150.0/24"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  1,
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.672Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 13,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Large print job",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User has printed a 60+ page document"
+          },
+          "activity": {
+            "print": [
+              {
+                "and": [
+                  {
+                    "id": 39,
+                    "comp": 6,
+                    "value": [
+                      "60"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.570Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 1,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Incoming email from known competitors",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users receive an email from a domain that's on the known competitors shared list"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 6,
+                    "comp": 1,
+                    "value": [
+                      "@my-competitor.com"
+                    ]
+                  },
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      1
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.411Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 23,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Teamviewer launch attempt",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User tried to launch teamviewer"
+          },
+          "activity": {
+            "application": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 1,
+                    "value": [
+                      "teamviewer"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.674Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 21,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Remote desktop access applications",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User is running a program that gives people remote access to their desktops"
+          },
+          "activity": {
+            "application": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 1,
+                    "value": [
+                      "teamviewer",
+                      "gotomeeting",
+                      "vnc",
+                      "logmein"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.671Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 15,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Email contains SSN",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User sent an email with a social security number in the body or attachment"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "or": [
+              {
+                "id": 89,
+                "ui": 1,
+                "uiX": 4,
+                "comp": 6,
+                "value": [
+                  1
+                ],
+                "params": {
+                  "evalconf": "ssn",
+                  "evalname": "phi_data"
+                }
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.574Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 16,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Email contains content downloaded from Sharepoint",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User sent an email outside of the domain with content that came from our sharepoint"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "and": [
+              {
+                "id": 50,
+                "comp": 1,
+                "value": [
+                  "sharepoint.our-domain.com"
+                ],
+                "uiX": 6,
+                "set": 1
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.576Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 17,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Email contains credit card content downloaded from sharepoint",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User sent an email with a CC# that came from sharepoint in the body or attachment"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "and": [
+              {
+                "id": 50,
+                "comp": 1,
+                "value": [
+                  "sharepoint.our-domain.com"
+                ],
+                "uiX": 8,
+                "set": 1
+              },
+              {
+                "id": 89,
+                "ui": 1,
+                "uiX": 10,
+                "comp": 6,
+                "value": [
+                  1
+                ],
+                "params": {
+                  "evalconf": "cc_all",
+                  "evalname": "pci_data"
+                }
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.579Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 18,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Email or IM with accusative statements",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User sent an IM or email with accusative sentiment"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ],
+            "im": [
+              {
+                "and": [
+                  {
+                    "id": 29
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "or": [
+              {
+                "id": 89,
+                "comp": 12,
+                "value": [
+                  ".*not made aware.*",
+                  ".*you were not authorized.*",
+                  ".*you (messed|screwed) up.*",
+                  ".*(you)? (won.?t|will not) get away with this.*",
+                  ".*(misrepresent|misrepresented|misrepresenting|misrepresents).*",
+                  ".*you didn.?t follow my (instructions|wishes|plans|objectives).*",
+                  ".*you didn.?t (tell me|say) that.*",
+                  ".*you never (told me|said) that.*",
+                  ".*you were not up front.*",
+                  ".*(done|did this) without (calling|emailing|contacting) (me|us|anyone).*",
+                  ".*didn.?t authorize.*",
+                  ".*(didn.?t|did not) explain to (me|us).*",
+                  ".*against my (expressed)? wishes.*",
+                  ".*(your|these) (behavior|actions) are .* (unacceptable|not acceptable).*",
+                  ".*this is not fair.*",
+                  ".*taken advantage of.*",
+                  ".*I didn.?t (authorize|agree).*",
+                  ".*how could this happen (again)?.*"
+                ],
+                "uiX": 2,
+                "set": 1
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.665Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 19,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Clipboard copy sensitive data & paste outside domain",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User copied sensitive data into the clipboard and pasted to a website outside of our domain"
+          },
+          "activity": {
+            "clipboard": [
+              {
+                "and": [
+                  {
+                    "andnot": [
+                      {
+                        "id": 4,
+                        "comp": 1,
+                        "value": [
+                          "our-domain.com"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "and": [
+              {
+                "id": 97,
+                "comp": 1,
+                "value": [
+                  "sharepoint.our-domain.com"
+                ],
+                "params": {
+                  "type": "web"
+                }
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.667Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 24,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Email contains offensive content",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "User sent an email with offensive or angry sentiment"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "or": [
+              {
+                "id": 89,
+                "comp": 12,
+                "value": [
+                  ".*don.?t you fucking understand.*",
+                  ".*(mad|angry|frustrated) as (hell|fuck).*",
+                  ".*way too fucking much.*",
+                  ".*(screws?|fucks?) it up.*",
+                  ".*what i fucking said.*",
+                  ".*what the (fuck|hell|heck) (happened|is going on|is happening).*",
+                  ".*where the (fuck|hell) are you.*",
+                  ".*who the (fuck|hell|heck) said you could.*",
+                  ".*who the (heck|fuck|hell) do you think you are.*",
+                  ".*you (fucked|messed|screwed) up.*",
+                  ".*where the (fuck|hell|heck) have you been.*",
+                  ".*piece of shit.*"
+                ],
+                "uiX": 6,
+                "set": 1
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:32.715Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 11,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Screenshot / Snipping tool",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User took a screenshot with a hotkey combination, or launched the snipping tool"
+          },
+          "activity": {
+            "application": [
+              {
+                "and": [
+                  {
+                    "id": 3,
+                    "comp": 1,
+                    "value": [
+                      "snippingtool.exe"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keystrokes": [
+              {
+                "and": [
+                  {
+                    "id": 12,
+                    "comp": 1,
+                    "value": [
+                      "<PrtSc>",
+                      "<Shift+PrtSc>"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.492Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 27,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Save a file to removable media",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Alert when users save files to USB keys or other external media"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 1112,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "write"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4,
+                  7
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ],
+                "message": "You've saved a file to external media."
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.415Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 28,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Running software from external media or cloud drives",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Prevent running programs from cloud drives, USB keys, and other external media"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 1112,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 1120,
+                    "comp": 0,
+                    "value": [
+                      "exe",
+                      "bat",
+                      "com",
+                      "msi",
+                      "ps1"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "access"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "or": [
+                      {
+                        "id": 1120,
+                        "comp": 1,
+                        "value": [
+                          "exe"
+                        ]
+                      },
+                      {
+                        "id": 1120,
+                        "comp": 0,
+                        "value": [
+                          "msi",
+                          "bat",
+                          "ps1",
+                          "com"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 1116,
+                    "comp": 0,
+                    "value": [
+                      "%DROPBOX%",
+                      "%GOOGLEDRIVE%",
+                      "%ONEDRIVE%",
+                      "%BOX%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "access"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  1,
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.418Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 29,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Block external drives",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Completely block all access to USB keys and other external media"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 1112,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "access",
+                      "rename",
+                      "write",
+                      "delete",
+                      "folder_create",
+                      "folder_rename",
+                      "folder_delete",
+                      "folder_access"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1111,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "copy"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  1,
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.424Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 32,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "PII: Social Security Number + Name",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 2,
+            "description": "Detect leaking of SSN & Name via email, IM, copy / paste, and file upload / write / copy to forbidden destinations"
+          },
+          "activity": {
+            "clipboard": [
+              {
+                "and": [
+                  {
+                    "andnot": [
+                      {
+                        "id": 3,
+                        "comp": 1,
+                        "value": [
+                          "our-crm-app.exe"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "andnot": [
+                      {
+                        "id": 4,
+                        "comp": 1,
+                        "value": [
+                          "our-domain.com"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "upload"
+                    ]
+                  },
+                  {
+                    "andnot": [
+                      {
+                        "id": 34,
+                        "comp": 1,
+                        "value": [
+                          "our-domain.com"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1112,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "write"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1111,
+                    "comp": 0,
+                    "value": [
+                      "%EXTERNALDRIVES%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "copy"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1116,
+                    "comp": 0,
+                    "value": [
+                      "%DROPBOX%",
+                      "%GOOGLEDRIVE%",
+                      "%ONEDRIVE%",
+                      "%BOX%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "write"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1115,
+                    "comp": 0,
+                    "value": [
+                      "%DROPBOX%",
+                      "%GOOGLEDRIVE%",
+                      "%ONEDRIVE%",
+                      "%BOX%"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "copy"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "email": [
+              {
+                "and": [
+                  {
+                    "andnot": [
+                      {
+                        "id": 7,
+                        "comp": 1,
+                        "value": [
+                          "@our-domain.com"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ],
+            "im": [
+              {
+                "and": [
+                  {
+                    "id": 29
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          },
+          "content": {
+            "and": [
+              {
+                "id": 89,
+                "ui": 1,
+                "uiX": 12,
+                "comp": 6,
+                "value": [
+                  1
+                ],
+                "params": {
+                  "evalconf": "names",
+                  "evalname": "phi_data"
+                }
+              },
+              {
+                "id": 89,
+                "ui": 1,
+                "uiX": 13,
+                "comp": 6,
+                "value": [
+                  1
+                ],
+                "params": {
+                  "evalconf": "ssn",
+                  "evalname": "phi_data"
+                }
+              }
+            ]
+          }
+        },
+        "created": "2019-02-26T16:23:33.908Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 2,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 31,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "System hosts file edited",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User edited / updated the system's hosts file"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 1118,
+                    "comp": 0,
+                    "value": [
+                      "c:\\windows\\system32\\drivers\\etc\\hosts"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "write"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.669Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 6,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Upload to cloud drive",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "Notify when users upload any files to Google Drive, OneDrive, Box, or DropBox"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "upload"
+                    ]
+                  },
+                  {
+                    "or": [
+                      {
+                        "id": 34,
+                        "comp": 1,
+                        "value": [
+                          "dropbox.com",
+                          "box.com",
+                          "onedrive.live.com"
+                        ]
+                      },
+                      {
+                        "id": 34,
+                        "comp": 12,
+                        "value": [
+                          "google.[a-z]+\\/upload\\/drive"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.483Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 14,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "Outgoing email contains a resume",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User sent an email with an attachment, where the attachment name contains cv or resume"
+          },
+          "activity": {
+            "email": [
+              {
+                "and": [
+                  {
+                    "id": 44
+                  },
+                  {
+                    "id": 45,
+                    "comp": 1,
+                    "value": [
+                      "resume"
+                    ]
+                  },
+                  {
+                    "id": 54,
+                    "comp": 4,
+                    "value": [
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.572Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      },
+      {
+        "behavior_policy_id": 30,
+        "behavior_group_id": 1,
+        "entity_group_id": 0,
+        "name": "System driver tampering",
+        "params": {
+          "ui": {
+            "actionsMode": "simple",
+            "category": 3,
+            "description": "User has tampered with files in the Windows drivers folder"
+          },
+          "activity": {
+            "file": [
+              {
+                "and": [
+                  {
+                    "id": 1118,
+                    "comp": 0,
+                    "value": [
+                      "c:\\windows\\system32\\drivers"
+                    ]
+                  },
+                  {
+                    "id": 1120,
+                    "comp": 0,
+                    "value": [
+                      "sys"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "write",
+                      "delete"
+                    ]
+                  }
+                ]
+              },
+              {
+                "and": [
+                  {
+                    "id": 1117,
+                    "comp": 0,
+                    "value": [
+                      "c:\\windows\\system32\\drivers"
+                    ]
+                  },
+                  {
+                    "id": 1119,
+                    "comp": 0,
+                    "value": [
+                      "sys"
+                    ]
+                  },
+                  {
+                    "id": 19,
+                    "comp": 0,
+                    "value": [
+                      "copy"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "time": {
+            "enabled": true,
+            "periods": [
+              {
+                "start": 0,
+                "end": 86400
+              }
+            ]
+          },
+          "actions": {
+            "period": "daily",
+            "reactions": {
+              "0": {
+                "actions": [
+                  4
+                ],
+                "emails": [
+                  {
+                    "agent_id": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "created": "2019-02-26T16:23:32.494Z",
+        "deleted": false,
+        "active": false,
+        "draft": false,
+        "type": 3,
+        "hash": null,
+        "version": 1,
+        "assignments": [],
+        "tags": []
+      }
+    ],
+    "assignments": [
+      {
+        "entity_group_id": 1,
+        "assignment_type": 4,
+        "assignment_id": 0,
+        "exclude": false
+      }
+    ]
+  }
+]

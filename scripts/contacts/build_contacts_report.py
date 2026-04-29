@@ -49,6 +49,56 @@ from data_signals import prior_month, signals_for_month  # noqa: E402
 import cp_api  # noqa: E402
 
 
+def _contract_signer_email(
+    client_dir_id: int | None,
+    contracts: list[dict],
+    dir_map: dict[int, dict],
+) -> tuple[str, str] | None:
+    """Return (name, email) for the signer of the most-recent active contract.
+
+    Falls back to the most-recent signed contract of any status when no active
+    one has a Signed_DirID. Returns None if nothing can be resolved.
+    """
+    if not client_dir_id:
+        return None
+    cid = int(client_dir_id)
+    cands = [
+        c for c in contracts
+        if c.get("Client_LocationsID") == cid and c.get("Signed_DirID")
+    ]
+    if not cands:
+        return None
+    # Prefer active contracts, then most-recently signed
+    cands.sort(
+        key=lambda c: (
+            0 if (c.get("ContractStatusTxt") or "").strip().lower() == "active" else 1,
+            -(len(c.get("DateSigned") or "")),
+            c.get("DateSigned") or "",
+        ),
+        reverse=False,
+    )
+    for c in cands:
+        try:
+            did = int(c["Signed_DirID"])
+        except (TypeError, ValueError):
+            continue
+        entry = dir_map.get(did)
+        if not entry:
+            continue
+        email = (entry.get("EMail_Primary") or "").strip()
+        if not email or "@" not in email:
+            continue
+        # Skip Technijian internal staff — they signed as the service provider,
+        # not as the client contact we'd send reports to.
+        if email.lower().endswith("@technijian.com"):
+            continue
+        first = (entry.get("First_Name") or "").strip()
+        last = (entry.get("Last_Name") or "").strip()
+        name = f"{first} {last}".strip() or "Unknown"
+        return name, email
+    return None
+
+
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tech-legal", default=str(DEFAULT_TECH_LEGAL_ROOT),
@@ -71,10 +121,18 @@ def main() -> int:
 
     if args.no_cp:
         active = []
+        all_contracts: list[dict] = []
+        dir_map: dict[int, dict] = {}
     else:
         print(f"[{datetime.now():%H:%M:%S}] fetching active CP clients...")
         active = cp_api.get_active_clients()
         print(f"  got {len(active)} active clients")
+        print(f"[{datetime.now():%H:%M:%S}] fetching contracts + directory (for contract-signer fallback)...")
+        all_contracts = cp_api.get_all_contracts()
+        all_dir = cp_api.get_all_dir()
+        dir_map = {int(d["DirID"]): d for d in all_dir if d.get("DirID")}
+        signed = sum(1 for c in all_contracts if c.get("Signed_DirID"))
+        print(f"  {len(all_contracts)} contracts ({signed} with Signed_DirID), {len(dir_map)} directory entries")
 
     matches = cross_reference(tech_legal, active) if active else []
     stales = stale_legal(tech_legal, active) if active else []
@@ -116,7 +174,8 @@ def main() -> int:
                     "Active", "CP_Only", "Data_Signals", "Time_Entries_This_Month",
                     "Has_Legal_File", "Has_Designated_Recipient",
                     "Contract_Signer", "Invoice_Recipient", "Primary_Contact",
-                    "Total_Active_Users", "Recipient_Emails", "Send_Ready"])
+                    "Total_Active_Users", "Recipient_Emails", "Send_Ready",
+                    "Recipient_Source"])
         for m in matches:
             sig = signals.get(m.code)
             active = bool(sig and sig.active)
@@ -132,12 +191,18 @@ def main() -> int:
                 missing_legal.append(m)
                 w.writerow([m.code, m.cp_name, m.cp_dir_id,
                             active, cp_only, data_signals_str, te_count,
-                            False, False, "", "", "", 0, "", False])
+                            False, False, "", "", "", 0, "", False, ""])
                 continue
             recipients = report_recipients(m.legal)
-            # only count "needs designation" for clients that ARE active here
+            recipient_source = "portal_designation" if recipients else ""
+            # Contract-signer fallback for active clients with no portal designation
             if not recipients and active:
-                no_designated.append(m)
+                signer = _contract_signer_email(m.cp_dir_id, all_contracts, dir_map)
+                if signer:
+                    recipients = [signer[1]]
+                    recipient_source = "contract_signer"
+                else:
+                    no_designated.append(m)
             user_count = len(m.legal.users)
             send_ready = bool(recipients)
             w.writerow([
@@ -150,6 +215,7 @@ def main() -> int:
                 user_count,
                 "; ".join(recipients),
                 send_ready,
+                recipient_source,
             ])
             # send_list = active for this repo AND send-ready
             if active and send_ready:
@@ -160,6 +226,7 @@ def main() -> int:
                     "Data_Signals": data_signals_str,
                     "Time_Entries_This_Month": te_count,
                     "Recipient_Emails": "; ".join(recipients),
+                    "Recipient_Source": recipient_source,
                 })
     print(f"  wrote {rec_path}")
 
@@ -177,12 +244,15 @@ def main() -> int:
     send_list_path = OUT_DIR / f"send_list_{target_month}.csv"
     with send_list_path.open("w", encoding="utf-8", newline="") as f:
         cols = ["LocationCode", "Client_Name", "DirID", "Data_Signals",
-                "Time_Entries_This_Month", "Recipient_Emails"]
+                "Time_Entries_This_Month", "Recipient_Emails", "Recipient_Source"]
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         for row in sorted(send_list_rows, key=lambda r: r["LocationCode"]):
             w.writerow(row)
-    print(f"  wrote {send_list_path}  ({len(send_list_rows)} clients in send list)")
+    n_contract_signer = sum(1 for r in send_list_rows if r.get("Recipient_Source") == "contract_signer")
+    print(f"  wrote {send_list_path}  ({len(send_list_rows)} clients: "
+          f"{len(send_list_rows) - n_contract_signer} portal-designated, "
+          f"{n_contract_signer} via contract signer)")
 
     # ---------- missing-legal list ----------
     miss_path = OUT_DIR / "missing_legal.csv"
@@ -236,13 +306,17 @@ def main() -> int:
         f.write(f"**Generated:** {datetime.now().isoformat(timespec='seconds')}  \n")
         f.write(f"**Source:** `tech-legal/clients/<CODE>/CONTACTS.md` (read-only)\n\n")
         f.write(f"## Resolution policy\n\n")
-        f.write(f"Recipients are **only** the emails parsed from the portal-designated "
+        f.write(f"**Layer 1 (portal designation):** emails parsed from the portal-designated "
                 f"`Primary Contact`, `Invoice Recipient`, or `Contract Signer` sections of "
-                f"each client's `CONTACTS.md`. The C1/C2/C3 roles in the user list are portal "
-                f"user types, **not** authority to sign contracts/proposals/estimates - they "
-                f"are NOT used as a fallback. If no designation is set in the portal, the "
-                f"client appears in `needs_designation_set.csv` with suggested signer "
-                f"candidates rather than getting auto-CC'd to the whole directory.\n\n")
+                f"each client's `CONTACTS.md`. This is the authoritative source.\n\n"
+                f"**Layer 2 (contract signer fallback):** when no portal designation is set, "
+                f"the email of the person who signed the most-recent active contract is used, "
+                f"resolved via `GetAllContracts.Signed_DirID` → `stp_Get_All_Dir`. "
+                f"Technijian-internal emails (`@technijian.com`) are excluded — those are "
+                f"Technijian staff who signed as the service provider, not the client contact.\n\n"
+                f"**Not used:** C1/C2/C3 portal roles. These are portal user types, not signing "
+                f"authority. If neither layer resolves a recipient, the client appears in "
+                f"`needs_designation_set.csv` with suggested signer candidates for a portal admin to designate.\n\n")
         f.write(f"## Active-client definition\n\n")
         f.write(f"This repo is for **managed-IT clients** - those with endpoint or DNS "
                 f"security tooling rolled out (Huntress, CrowdStrike, or Umbrella). A "
@@ -262,20 +336,24 @@ def main() -> int:
                 f"(see `cp_only_{target_month}.csv`)\n")
         if matches:
             n_with_legal = sum(1 for m in matches if m.legal)
-            n_send_list = sum(1 for m in matches if m.legal and report_recipients(m.legal)
-                                and signals.get(m.code) and signals[m.code].active)
+            n_send_list = len(send_list_rows)
+            n_portal = sum(1 for r in send_list_rows if r.get("Recipient_Source") == "portal_designation")
+            n_contract = sum(1 for r in send_list_rows if r.get("Recipient_Source") == "contract_signer")
             f.write(f"- Active clients with a tech-legal file: **{n_with_legal} / {len(matches)}**\n")
             f.write(f"- **Operational send list ({target_month})**: managed-IT-active AND "
                     f"send-ready = **{n_send_list}** clients "
+                    f"({n_portal} portal-designated, {n_contract} via contract signer) "
                     f"(see `send_list_{target_month}.csv`)\n")
-            f.write(f"- Active but not send-ready (need portal designation): "
-                    f"**{n_active_total - n_send_list}** "
+            f.write(f"- Active but still not send-ready (no designation + no signed contract): "
+                    f"**{len(no_designated)}** "
                     f"(see `needs_designation_set.csv`)\n")
             f.write(f"- Active clients with NO tech-legal file: **{len(missing_legal)}** "
                     f"(see `missing_legal.csv`)\n")
         f.write(f"- tech-legal entries with no active CP match: **{len(stales)}** "
                 f"(see `stale_legal.csv` - likely terminated)\n\n")
 
+        send_list_codes = {r["LocationCode"] for r in send_list_rows}
+        send_list_source = {r["LocationCode"]: r.get("Recipient_Source", "") for r in send_list_rows}
         f.write("## Match table\n\n")
         f.write(f"| Code | Client | DirID | Status ({target_month}) | Send-ready | "
                 f"Designated | Users |\n")
@@ -290,7 +368,11 @@ def main() -> int:
                 status = "**none**"
             if m.legal:
                 designated = "yes" if m.legal.has_designated_recipient else "—"
-                send_ready = "yes" if report_recipients(m.legal) else "**no**"
+                src = send_list_source.get(m.code, "")
+                if m.code in send_list_codes:
+                    send_ready = "yes" if src == "portal_designation" else "yes (contract)"
+                else:
+                    send_ready = "**no**"
                 users = len(m.legal.users)
             else:
                 designated = "—"

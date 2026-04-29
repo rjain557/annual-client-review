@@ -22,6 +22,9 @@ technijian/huntress-pull/state/[0-9]*.json
 # Huntress backfill — large per-month run logs are reproducible from the API; keep the per-client artifacts under clients/<code>/huntress/monthly/ committed
 technijian/huntress-pull/backfill/backfill-log-*.json
 
+# .mcp.json contains SQL Server connection strings — gitignored; copy from .mcp.json.template and fill in locally
+.mcp.json
+
 # ScreenConnect recordings — never commit raw .crv, intermediate .avi, or converted .mp4 (large binaries; live on Teams / file share, not in git)
 *.crv
 *.avi
@@ -31,3 +34,15 @@ technijian/screenconnect-pull/state/teams-destination.json
 # ScreenConnect run logs / state
 technijian/screenconnect-pull/state/*.log
 technijian/screenconnect-pull/state/[0-9]*.json
+
+# Teramind run logs / state — reproducible from the API
+technijian/teramind-pull/state/*.log
+technijian/teramind-pull/state/[0-9]*.json
+
+# Umbrella — customer API keys (contains live credentials), debug screenshots, backfill run logs
+technijian/umbrella-pull/state/customer-api-keys.json
+technijian/umbrella-pull/state/backfill-*.json
+technijian/umbrella-pull/debug-screenshots/
+
+# ScreenConnect Gemini analysis state — reproducible by re-running analyze_sessions_gemini.py
+technijian/screenconnect-pull/state/gemini_analysis_state.json

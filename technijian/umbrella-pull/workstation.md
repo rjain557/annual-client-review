@@ -221,3 +221,108 @@ significant fleet change.
   (creating policies, updating destination lists, etc.) without explicit
   re-approval - policy changes belong in the Umbrella Dashboard or a
   separate change-managed pipeline, not the data-capture layer.
+
+---
+
+## Playwright: Create Per-Customer OAuth2 API Keys (one-time)
+
+Cisco Umbrella requires per-customer OAuth2 keys to pull reporting data (DNS
+activity, blocked threats, top identities) for each of the 29 MSP child orgs.
+These keys cannot be created via the Management API — they must be created from
+within each customer's own Umbrella dashboard. The Playwright script automates
+this across all 29 orgs using your existing logged-in Edge session.
+
+### Playwright prerequisites
+
+Playwright is already installed (`playwright` package present in Python 3.14
+venv). The Edge WebDriver binaries must also be installed once:
+
+```cmd
+C:\Python314\python.exe -m playwright install msedge
+```
+
+If that fails (channel not found), install Chromium instead:
+
+```cmd
+C:\Python314\python.exe -m playwright install chromium
+```
+
+### Option A — Reuse existing Edge profile (Edge must be closed)
+
+Close all Edge windows first, then run:
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+C:\Python314\python.exe technijian\umbrella-pull\scripts\create_customer_api_keys.py
+```
+
+Edge will launch using your saved profile (login cookies intact). The browser
+window stays open so you can watch each step.
+
+### Option B — Connect to already-running Edge (via remote debugging)
+
+If you want to keep your existing Edge session open:
+
+1. Close Edge completely, then relaunch it with the remote debugging port:
+
+```cmd
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\rjain\AppData\Local\Microsoft\Edge\User Data"
+```
+
+2. Log in to Umbrella if needed, then run the script with `--cdp`:
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+C:\Python314\python.exe technijian\umbrella-pull\scripts\create_customer_api_keys.py --cdp
+```
+
+### Subset and resume
+
+```cmd
+REM Create keys for just two orgs first (test run)
+C:\Python314\python.exe technijian\umbrella-pull\scripts\create_customer_api_keys.py --only VAF,BWH
+
+REM Resume after an interruption (skips orgs already saved in state)
+C:\Python314\python.exe technijian\umbrella-pull\scripts\create_customer_api_keys.py --resume
+
+REM Verify keys already captured without launching browser
+C:\Python314\python.exe technijian\umbrella-pull\scripts\create_customer_api_keys.py --verify-only
+```
+
+### What the script does per org
+
+1. Opens `https://dashboard.umbrella.com/o/{org_id}/#/admin/apikeys`
+2. Clicks "Add API Key" (or "+" button)
+3. Fills key name = "ClaudeCode" and selects all scopes
+4. Submits and captures the key+secret from the one-time confirmation modal
+5. Immediately writes to state file (survives interruption)
+6. Tests the key via `POST api.umbrella.com/auth/v2/token`
+
+### Output
+
+| Artifact | Path |
+|---|---|
+| State (JSON, resumable) | `technijian/umbrella-pull/state/customer-api-keys.json` |
+| Keyfile section | `%USERPROFILE%\OneDrive...\cisco-umbrella.md` → "Per-Customer OAuth2 Keys" |
+
+### After key creation
+
+Once all 29 keys are captured, rebuild the per-client reporting pipeline:
+
+1. Update `umbrella_api.py` to accept `org_id` + per-org key credentials
+2. Run backfill for each org: `backfill_umbrella.py --all-orgs`
+3. Regenerate monthly reports: `build_umbrella_monthly_report.py --all`
+
+### Troubleshooting
+
+- **Redirected to login mid-run**: The Edge session timed out. Log back in
+  manually in the browser window, then re-run with `--resume`.
+- **"Key named ClaudeCode already exists"**: Delete it from the customer's
+  Admin → API Keys page, then re-run `--only <CODE>`.
+- **Script can't find the Add button**: Umbrella's React UI may have changed
+  its selectors. In that case, manually create the key for that one org and
+  enter the credentials directly into `state/customer-api-keys.json`:
+  ```json
+  { "VAF": { "code": "VAF", "org_id": 8182659, "api_key": "...", "api_secret": "..." } }
+  ```
+  Then re-run `--verify-only` to test it.

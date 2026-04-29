@@ -1,0 +1,23 @@
+{
+  "_doc": "Copy this to .mcp.json (gitignored). Fill in the myrmm-sql placeholders. The screenconnect-db path is pre-filled with the confirmed UNC path to Session.db on TE-DC-MYRMT-01.",
+  "mcpServers": {
+    "screenconnect-db": {
+      "_doc": "ScreenConnect (My Remote) — SQLite Session.db on TE-DC-MYRMT-01 (10.100.14.10). Accessible via admin share C$.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sqlite",
+        "--db-path",
+        "\\\\10.100.14.10\\C$\\Program Files (x86)\\ScreenConnect\\App_Data\\Session.db"
+      ]
+    },
+    "myrmm-sql": {
+      "_doc": "ManageEngine Endpoint Central Plus + MyRMM — SQL Server on TE-DC-MYRMM-SQL (10.100.13.11). Fill in sql-user and sql-password.",
+      "command": "npx",
+      "args": ["-y", "mssql-mcp-server"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "Server=10.100.13.11,1433;Database=ManageEngine;User Id=<sql-user>;Password=<sql-password>;TrustServerCertificate=true;Encrypt=true;"
+      }
+    }
+  }
+}

@@ -52,11 +52,10 @@ from urllib.error import HTTPError
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
-# Re-use the existing M365 secrets helper from tech-training
 SCRIPTS_DIR = Path(__file__).resolve().parent
 REPO = SCRIPTS_DIR.parent.parent.parent
-sys.path.insert(0, str(REPO / "technijian" / "tech-training" / "scripts"))
-from _secrets import get_m365_credentials  # noqa: E402
+sys.path.insert(0, str(SCRIPTS_DIR))
+from _sc_secrets import get_teams_credentials  # noqa: E402
 
 GRAPH = "https://graph.microsoft.com/v1.0"
 DESTINATION_CONFIG = SCRIPTS_DIR.parent / "state" / "teams-destination.json"
@@ -70,7 +69,7 @@ SMALL_FILE_THRESHOLD = 4 * 1024 * 1024  # 4 MiB - Graph small-upload limit
 # ---------------------------------------------------------------------------
 
 def get_token() -> str:
-    tenant, cid, sec, _ = get_m365_credentials()
+    tenant, cid, sec = get_teams_credentials()
     body = urlencode({
         "client_id": cid,
         "client_secret": sec,
