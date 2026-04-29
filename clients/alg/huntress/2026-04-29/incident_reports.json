@@ -1,0 +1,676 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 2072135,
+      "account_id": 31342,
+      "agent_id": 13185008,
+      "body": "\n\nHost: ALG-HQ-LPT-08 - https://technijian.huntress.io/org/451094/agents/13185008\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/2072135\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-04-09 15:24:05 UTC\nStart Time: 2026-04-09 15:17:58 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 3b96ecb2-3427-11f1-90b3-3c0af33ec9b8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/2072135#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-04-10T10:04:15Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-04-10T10:04:15Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "updated_at": "2026-04-10T10:04:15Z"
+    },
+    {
+      "id": 1990101,
+      "account_id": 31342,
+      "agent_id": 13185008,
+      "body": "\n\nHost: ALG-HQ-LPT-08 - https://technijian.huntress.io/org/451094/agents/13185008\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1990101\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Desktop\\Rochdi PL\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-03-03 22:29:30 UTC\nStart Time: 2026-03-03 22:28:34 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Desktop\\Rochdi PL\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c43df4a8-174d-11f1-909b-3c0af33ec9b8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1990101#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-03-04T10:03:56Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-03-04T10:03:56Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "updated_at": "2026-03-04T10:03:56Z"
+    },
+    {
+      "id": 1939467,
+      "account_id": 31342,
+      "agent_id": 13299827,
+      "body": "\n\nHost: ALG-HQ-LPT-10 - https://technijian.huntress.io/org/451094/agents/13299827\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1939467\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: alicia\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\nUser: alicia\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-02-06 17:15:34 UTC\nStart Time: 2026-02-06 17:07:35 UTC\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\nExecutable: C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\nProcess ID: 2faf4532-037a-11f1-905e-3c0af33e9316\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: alicia\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1939467#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 3,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-02-07T10:03:03Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-02-07T10:03:03Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "updated_at": "2026-02-09T06:30:40Z"
+    },
+    {
+      "id": 1878451,
+      "account_id": 31342,
+      "agent_id": 13185008,
+      "body": "\n\nHost: ALG-HQ-LPT-08 - https://technijian.huntress.io/org/451094/agents/13185008\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1878451\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-08 19:37:01 UTC\nStart Time: 2026-01-08 19:32:09 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 0efd9b4d-ecc8-11f0-9071-3c0af33ec9b8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1878451#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-09T10:05:25Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-01-09T10:05:25Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "updated_at": "2026-01-09T10:05:25Z"
+    },
+    {
+      "id": 1857541,
+      "account_id": 31342,
+      "agent_id": 12014218,
+      "body": "\n\nHost: DESKTOP-UH62LRR - https://technijian.huntress.io/org/451094/agents/12014218\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1857541\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: yajan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-26 16:56:49 UTC\nStart Time: 2025-12-26 16:50:25 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 70a4f3bd-e27a-11f0-be64-44fa667bf2be\nParent Process: C:\\Windows\\Explorer.EXE\nUser: yajan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1857541#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-27T10:02:01Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-12-27T10:02:01Z",
+      "subject": "LOW - Incident on DESKTOP-UH62LRR (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-UH62LRR (ALG - Algro International)",
+      "updated_at": "2025-12-27T10:02:01Z"
+    },
+    {
+      "id": 1850935,
+      "account_id": 31342,
+      "agent_id": 13299827,
+      "body": "\n\nHost: ALG-HQ-LPT-10 - https://technijian.huntress.io/org/451094/agents/13299827\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1850935\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: alicia\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-18 19:03:48 UTC\nStart Time: 2025-12-18 18:55:39 UTC\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\nExecutable: C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\nProcess ID: adbc8d98-dc41-11f0-904e-3c0af33e9316\nParent Process: C:\\Windows\\explorer.exe\nUser: alicia\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1850935#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-19T10:08:08Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-12-19T10:08:08Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "updated_at": "2025-12-19T10:08:08Z"
+    },
+    {
+      "id": 1816115,
+      "account_id": 31342,
+      "agent_id": 12014218,
+      "body": "\n\nHost: DESKTOP-UH62LRR - https://technijian.huntress.io/org/451094/agents/12014218\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1816115\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: yajan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-11-25 18:36:12 UTC\nStart Time: 2025-11-25 18:33:15 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 6ddee180-ca2a-11f0-be5f-44a92c585f18\nParent Process: C:\\Windows\\Explorer.EXE\nUser: yajan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1816115#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-11-26T12:18:34Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-11-26T12:18:34Z",
+      "subject": "LOW - Incident on DESKTOP-UH62LRR (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-UH62LRR (ALG - Algro International)",
+      "updated_at": "2025-11-26T12:18:34Z"
+    },
+    {
+      "id": 1770368,
+      "account_id": 31342,
+      "agent_id": 13185008,
+      "body": "\n\nHost: ALG-HQ-LPT-08 - https://technijian.huntress.io/org/451094/agents/13185008\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1770368\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-10-27 16:32:50 UTC\nStart Time: 2025-10-27 16:29:35 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 137719c0-b350-11f0-9041-3c0af33ec9b8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1770368#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-10-28T10:52:52Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-10-28T10:52:52Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "updated_at": "2025-10-28T10:52:52Z"
+    },
+    {
+      "id": 1765241,
+      "account_id": 31342,
+      "agent_id": 12014218,
+      "body": "\n\nHost: DESKTOP-UH62LRR - https://technijian.huntress.io/org/451094/agents/12014218\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1765241\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: yajan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-10-23 21:16:07 UTC\nStart Time: 2025-10-23 21:07:56 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 9832610c-b051-11f0-be5d-44a92c594e48\nParent Process: C:\\Windows\\Explorer.EXE\nUser: yajan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1765241#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-10-24T10:28:19Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-10-24T10:28:19Z",
+      "subject": "LOW - Incident on DESKTOP-UH62LRR (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-UH62LRR (ALG - Algro International)",
+      "updated_at": "2025-10-24T10:28:19Z"
+    },
+    {
+      "id": 1707028,
+      "account_id": 31342,
+      "agent_id": 13185008,
+      "body": "\n\nHost: ALG-HQ-LPT-08 - https://technijian.huntress.io/org/451094/agents/13185008\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1707028\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-18 15:07:48 UTC\nStart Time: 2025-09-18 15:00:52 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: a6ab2519-949f-11f0-902f-3c0af33ec9b8\nParent Process: C:\\Windows\\explorer.exe\nUser: Najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1707028#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-19T10:14:16Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-09-19T10:14:16Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-08 (ALG - Algro International)",
+      "updated_at": "2025-09-19T10:14:16Z"
+    },
+    {
+      "id": 1704503,
+      "account_id": 31342,
+      "agent_id": 12001013,
+      "body": "\n\nHost: DESKTOP-3DIHK2E - https://technijian.huntress.io/org/451094/agents/12001013\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1704503\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nUser: najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-17 16:21:22 UTC\nStart Time: 2025-09-17 16:14:50 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 6a3c4de5-93e1-11f0-96ad-1cce5195bd27\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1704503#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-12-01T09:31:06Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-18T10:08:57Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-12-01T09:31:06Z",
+      "subject": "LOW - Incident on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "updated_at": "2025-12-01T09:31:06Z"
+    },
+    {
+      "id": 1702306,
+      "account_id": 31342,
+      "agent_id": 12520802,
+      "body": "\n\nHost: DESKTOP-0JAP2P2 - https://technijian.huntress.io/org/451094/agents/12520802\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1702306\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: algro\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\algro\\OneDrive - algrointernational.com\\Passwords!!!.docx\" /o \"\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-17 04:56:49 UTC\nStart Time: 2025-09-17 04:47:49 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\algro\\OneDrive - algrointernational.com\\Passwords!!!.docx\" /o \"\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\nProcess ID: 5eddd469-9380-11f0-af47-44a92c585ec6\nParent Process: C:\\Windows\\explorer.exe\nUser: algro\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1702306#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-17T10:11:44Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-09-17T10:11:44Z",
+      "subject": "LOW - Incident on DESKTOP-0JAP2P2 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-0JAP2P2 (ALG - Algro International)",
+      "updated_at": "2025-09-17T10:11:44Z"
+    },
+    {
+      "id": 1662980,
+      "account_id": 31342,
+      "agent_id": 13299827,
+      "body": "\n\nHost: ALG-HQ-LPT-10 - https://technijian.huntress.io/org/451094/agents/13299827\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1662980\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: alicia\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2506.35.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-08-23 19:24:06 UTC\nStart Time: 2025-08-23 19:16:21 UTC\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2506.35.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\alicia\\Desktop\\Password.txt\"\nExecutable: C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2506.35.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\nProcess ID: 607b359b-8053-11f0-9027-3c0af33e9316\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: alicia\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1662980#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-08-24T10:01:11Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-08-24T10:01:11Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-10 (ALG - Algro International)",
+      "updated_at": "2025-08-24T10:01:12Z"
+    },
+    {
+      "id": 1630953,
+      "account_id": 31342,
+      "agent_id": 12014218,
+      "body": "\n\nHost: DESKTOP-UH62LRR - https://technijian.huntress.io/org/451094/agents/12014218\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1630953\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: yajan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-08-05 14:41:28 UTC\nStart Time: 2025-08-04 19:33:12 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: f2b46799-7168-11f0-be51-44fa667bf2be\nParent Process: C:\\Windows\\Explorer.EXE\nUser: yajan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1630953#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-08-06T10:06:09Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-08-06T10:06:09Z",
+      "subject": "LOW - Incident on DESKTOP-UH62LRR (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-UH62LRR (ALG - Algro International)",
+      "updated_at": "2025-08-06T10:06:09Z"
+    },
+    {
+      "id": 1619832,
+      "account_id": 31342,
+      "agent_id": 12482845,
+      "body": "\n\nHost: ALG-HQ-LPT-04 - https://technijian.huntress.io/org/451094/agents/12482845\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: CrowdStrike (CSFalconService), Windows Defender\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1619832\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Diana\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\Diana\\OneDrive - algrointernational.com\\Algro Company Files\\QA\\Dekstop files\\Passwords.docx\" /o \"\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-28 17:54:36 UTC\nStart Time: 2025-07-28 17:45:21 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\Diana\\OneDrive - algrointernational.com\\Algro Company Files\\QA\\Dekstop files\\Passwords.docx\" /o \"\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\nProcess ID: 8fc7690b-6bda-11f0-aa4a-901057a5e58c\nParent Process: C:\\Windows\\Explorer.EXE\nUser: Diana\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1619832#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-29T10:13:04Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-07-29T10:13:04Z",
+      "subject": "LOW - Incident on ALG-HQ-LPT-04 (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ALG-HQ-LPT-04 (ALG - Algro International)",
+      "updated_at": "2025-07-29T10:13:04Z"
+    },
+    {
+      "id": 1548490,
+      "account_id": 31342,
+      "agent_id": 12001013,
+      "body": "\nHost: DESKTOP-3DIHK2E - https://technijian.huntress.io/org/451094/agents/12001013\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: McAfee, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1548490\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-06-04 20:44:41 UTC\nStart Time: 2025-06-04 20:43:19 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 60d268ff-4182-11f0-96a4-1cce5195bd27\nParent Process: C:\\Windows\\explorer.exe\nUser: najmeh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1548490#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-06-28T01:20:01Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-06-05T10:13:13Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-06-28T01:20:01Z",
+      "subject": "LOW - Incident on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "updated_at": "2025-06-28T01:20:01Z"
+    },
+    {
+      "id": 1533797,
+      "account_id": 31342,
+      "agent_id": 12014218,
+      "body": "\nHost: DESKTOP-UH62LRR - https://technijian.huntress.io/org/451094/agents/12014218\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1533797\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: yajan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-05-23 16:16:09 UTC\nStart Time: 2025-05-23 16:09:41 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\yajan\\OneDrive - algrointernational.com\\Documents\\Accounting Passwords Algro International.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 29b2c849-37f0-11f0-be44-44a92c5952f4\nParent Process: C:\\Windows\\Explorer.EXE\nUser: yajan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1533797#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-06-28T01:20:01Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-24T10:10:39Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-06-28T01:20:01Z",
+      "subject": "LOW - Incident on DESKTOP-UH62LRR (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-UH62LRR (ALG - Algro International)",
+      "updated_at": "2025-06-28T01:20:01Z"
+    },
+    {
+      "id": 1530496,
+      "account_id": 31342,
+      "agent_id": 12001017,
+      "body": "\nHost: Diana - https://technijian.huntress.io/org/451094/agents/12001017\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1530496\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: DianaChiekoTrujillo\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\DianaChiekoTrujillo\\OneDrive - algrointernational.com\\Passwords.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-05-21 18:39:00 UTC\nStart Time: 2025-05-21 18:18:55 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\DianaChiekoTrujillo\\OneDrive - algrointernational.com\\Passwords.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: ec8f6c66-366f-11f0-abc4-e0d045d82d94\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: DianaChiekoTrujillo\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/451094/infection_reports/1530496#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-06-28T01:20:01Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-22T10:15:06Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-06-28T01:20:01Z",
+      "subject": "LOW - Incident on Diana (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on Diana (ALG - Algro International)",
+      "updated_at": "2025-06-28T01:20:01Z"
+    },
+    {
+      "id": 1502857,
+      "account_id": 31342,
+      "agent_id": 12001013,
+      "body": "\nHost: DESKTOP-3DIHK2E - https://technijian.huntress.io/org/451094/agents/12001013\nOrganization: ALG - Algro International\nTags: None\nSecurity Products: McAfee, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/451094/infection_reports/1502857\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: najmeh\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-04-30 13:56:48 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\najmeh\\OneDrive - algrointernational.com\\Najmeh\\Mypasswords-Najmeh.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 26ea0d30-25ca-11f0-969c-1cce5195bd27\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: najmeh\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-05-02T10:16:08Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 451094,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-01T10:17:18Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-05-02T10:16:08Z",
+      "subject": "LOW - Incident on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on DESKTOP-3DIHK2E (ALG - Algro International)",
+      "updated_at": "2025-05-02T10:16:08Z"
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 1436864,
+      "account_id": 31342,
+      "agent_id": 11632838,
+      "body": "*** The Huntress Agent has already remediated this incident. ***\n\nHost: WINDCHILLVIZ - https://technijian.huntress.io/org/429248/agents/11632838\nOrganization: ANI - Andersen Industries, Inc.\nTags: None\nSecurity Products: CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/429248/infection_reports/1436864\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress has detected persistence artifacts on host 'WINDCHILLVIZ'. These were installed on the host before Huntress was deployed.\n\nPlease see the remediation section for next steps.\n\nThe Huntress SOC identified the Malware Family as TrickBot.\n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete Service - name: qzngptsdfy\n- Delete Registry Key - key: HKLM\\SYSTEM\\CurrentControlSet\\Services\\qzngptsdfy\n\nAll remediations provided can be found in the Huntress Platform: Incident Report: https://technijian.huntress.io/org/429248/infection_reports/1436864#remediations-tab\n\nLead Signal Information\n-----------------------\nSignal Name: Trickbot\nDetected At: 2025-03-05 22:56:48 UTC\nService Display Name: ServiceHTechno\nService Name: qzngptsdfy\nCommand: %SystemRoot%\\system32\\mswvc.exe\nFile Path: \n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429248/infection_reports/1436864#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-03-05T23:08:18Z",
+      "indicator_counts": {
+        "footholds": 1,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429248,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 2,
+        "has_more": false,
+        "items": [
+          {
+            "id": 6306119,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "qzngptsdfy"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:08:14Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:08:18Z"
+          },
+          {
+            "id": 6306120,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\qzngptsdfy"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:08:14Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:08:18Z"
+          }
+        ]
+      },
+      "sent_at": "2025-03-05T23:08:18Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-03-05T23:08:18Z",
+      "subject": "LOW - Incident on WINDCHILLVIZ (ANI - Andersen Industries, Inc.)",
+      "summary": null,
+      "updated_at": "2025-03-05T23:08:18Z"
+    },
+    {
+      "id": 1436859,
+      "account_id": 31342,
+      "agent_id": 11632838,
+      "body": "*** The Huntress Agent has already remediated this incident. ***\n\nHost: WINDCHILLVIZ - https://technijian.huntress.io/org/429248/agents/11632838\nOrganization: ANI - Andersen Industries, Inc.\nTags: None\nSecurity Products: CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/429248/infection_reports/1436859\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress has detected persistence artifacts on host 'WINDCHILLVIZ'. These were installed on the host before Huntress was deployed.\n\nPlease see the remediation section for next steps.\n\nThe Huntress SOC identified the Malware Family as TrickBot.\n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete Service - name: ttgimbtzkp\n- Delete Service - name: jkwpwexhio\n- Delete Service - name: huzsrwzkut\n- Delete Scheduled Task - name: Sysnetsf\n- Delete Registry Key - key: HKLM\\SYSTEM\\CurrentControlSet\\Services\\ttgimbtzkp\n- Delete Registry Key - key: HKLM\\SYSTEM\\CurrentControlSet\\Services\\jkwpwexhio\n- Delete Registry Key - key: HKLM\\SYSTEM\\CurrentControlSet\\Services\\huzsrwzkut\n- Delete File - path: c:\\windows\\system32\\tasks\\Sysnetsf\n- Reboot the Host - remediation: A reboot is required to complete the remediation plan\n\nAll remediations provided can be found in the Huntress Platform: Incident Report: https://technijian.huntress.io/org/429248/infection_reports/1436859#remediations-tab\n\nLead Signal Information\n-----------------------\nSignal Name: Trickbot\nDetected At: 2025-03-05 22:56:48 UTC\nService Display Name: Service-Techno1\nService Name: ttgimbtzkp\nCommand: %SystemRoot%\\system32\\mswvc.exe\nFile Path: \n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429248/infection_reports/1436859#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-03-05T23:04:08Z",
+      "indicator_counts": {
+        "footholds": 4,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429248,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 9,
+        "has_more": false,
+        "items": [
+          {
+            "id": 6306091,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "ttgimbtzkp"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:02Z"
+          },
+          {
+            "id": 6306092,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "jkwpwexhio"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:03Z"
+          },
+          {
+            "id": 6306093,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "huzsrwzkut"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:03Z"
+          },
+          {
+            "id": 6306094,
+            "type": "assisted",
+            "action": "Delete Scheduled Task",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "Sysnetsf"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:04Z"
+          },
+          {
+            "id": 6306095,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\ttgimbtzkp"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:05Z"
+          },
+          {
+            "id": 6306096,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\jkwpwexhio"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:05Z"
+          },
+          {
+            "id": 6306097,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\huzsrwzkut"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:06Z"
+          },
+          {
+            "id": 6306098,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\windows\\system32\\tasks\\Sysnetsf"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-03-05T23:03:52Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-03-05T23:04:08Z"
+          },
+          {
+            "id": 6306105,
+            "type": "assisted",
+            "action": "Reboot the Host",
+            "parameters": [
+              {
+                "name": "remediation",
+                "description": "A reboot is required to complete the remediation plan"
+              },
+              {
+                "name": "name",
+                "description": ""
+              },
+              {
+                "name": "parameters",
+                "description": ""
+              }
+            ],
+            "status": "unapproved",
+            "approved_at": null,
+            "approved_by": null,
+            "completed_at": null
+          }
+        ]
+      },
+      "sent_at": "2025-03-05T23:04:08Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-03-05T23:04:08Z",
+      "subject": "LOW - Incident on WINDCHILLVIZ (ANI - Andersen Industries, Inc.)",
+      "summary": null,
+      "updated_at": "2025-03-05T23:04:08Z"
+    },
+    {
+      "id": 1428836,
+      "account_id": 31342,
+      "agent_id": 11556938,
+      "body": "*** The Huntress Agent has already remediated this incident. ***\n\nHost: WS-AI-31 - https://technijian.huntress.io/org/429248/agents/11556938\nOrganization: ANI - Andersen Industries, Inc.\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor, Windows Defender\n\nIncident Report: https://technijian.huntress.io/org/429248/infection_reports/1428836\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected the following Malware Artifacts on this host:\n- TrickBot : This banking trojan is capable of automatically propagating throughout a network and often used to install other malware.\n\nConsidering the low risk posed, you can follow the below remediation guidance at your convenience.\n\n* Note: If you continue to receive new malware artifact reports for this host, it is an indication there may be an active infection on the network. See here for more details: https://support.huntress.io/hc/en-us/articles/4404012696467-Remediating-Emotet-Trickbot\n\nThe Huntress SOC identified the Malware Family as TrickBot.\n\nRemediation Instructions\n------------------------\nTo remediate, run the following commands from an administrative command prompt (cmd.exe) and perform the actions below:\n- sc.exe stop \"tnnorwzgui\"\n- sc.exe delete \"tnnorwzgui\"\n- sc.exe stop \"mtwxceuiyu\"\n- sc.exe delete \"mtwxceuiyu\"\n- sc.exe stop \"msgwvxdimq\"\n- sc.exe delete \"msgwvxdimq\"\n- sc.exe stop \"igjtzkpaeb\"\n- sc.exe delete \"igjtzkpaeb\"\n\n- Remove the \"c:\\mswvc.exe\" file and ensure it is not recreated.\n\nFootholds\n---------\nFoothold 1 - https://technijian.huntress.io/org/429248/autoruns/35673876\nService Display Name: TechnoServices3\nService Name: msgwvxdimq\nCommand: %SystemDrive%\\mswvc.exe\nFile Path: c:\\mswvc.exe\n\nFoothold 2 - https://technijian.huntress.io/org/429248/autoruns/35673877\nService Display Name: ServiceTechno4\nService Name: mtwxceuiyu\nCommand: %SystemDrive%\\mswvc.exe\nFile Path: c:\\mswvc.exe\n\nFoothold 3 - https://technijian.huntress.io/org/429248/autoruns/35673878\nService Display Name: Technics-service3\nService Name: tnnorwzgui\nCommand: %SystemDrive%\\mswvc.exe\nFile Path: c:\\mswvc.exe\n\nFoothold 4 - https://technijian.huntress.io/org/429248/autoruns/35673875\nService Display Name: Service_Techno4\nService Name: igjtzkpaeb\nCommand: %SystemDrive%\\mswvc.exe\nFile Path: c:\\mswvc.exe\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-02-26T20:04:14Z",
+      "indicator_counts": {
+        "footholds": 4,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429248,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 9,
+        "has_more": false,
+        "items": [
+          {
+            "id": 6273009,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "tnnorwzgui"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:39Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:00Z"
+          },
+          {
+            "id": 6273010,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "mtwxceuiyu"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:01Z"
+          },
+          {
+            "id": 6273011,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "msgwvxdimq"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:01Z"
+          },
+          {
+            "id": 6273012,
+            "type": "assisted",
+            "action": "Delete Service",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "igjtzkpaeb"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:02Z"
+          },
+          {
+            "id": 6273013,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\tnnorwzgui"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:03Z"
+          },
+          {
+            "id": 6273014,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\mtwxceuiyu"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:03Z"
+          },
+          {
+            "id": 6273015,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\msgwvxdimq"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:04Z"
+          },
+          {
+            "id": 6273016,
+            "type": "assisted",
+            "action": "Delete Registry Key",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\igjtzkpaeb"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:04Z"
+          },
+          {
+            "id": 6273017,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\mswvc.exe"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-26T20:03:40Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-02-26T20:04:14Z"
+          }
+        ]
+      },
+      "sent_at": "2025-02-26T20:04:14Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-02-26T20:04:14Z",
+      "subject": "LOW - Incident on WS-AI-31 (ANI - Andersen Industries, Inc.)",
+      "summary": null,
+      "updated_at": "2025-02-26T20:04:14Z"
+    }
+  ]
+}

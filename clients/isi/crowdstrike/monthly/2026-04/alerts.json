@@ -1,0 +1,3063 @@
+[
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:145dc0af70284d23b215457b290c6fd2:2014994747036"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\Windows\\system32\\lsass.exe",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014351581254-54-583952",
+    "context_timestamp": "2026-04-19T07:45:32.366Z",
+    "crawled_timestamp": "2026-04-19T08:45:36.397013812Z",
+    "created_timestamp": "2026-04-19T07:46:36.399337936Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "Signed DLL with untrusted root authority loaded by LSASS process",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "LsassLoadModuleUntrusted",
+    "dns_requests": [
+      {
+        "domain_name": "ForestDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "e2fa46da-c738-4bd2-845c-ef6129458463._msdcs.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "CNAME"
+      },
+      {
+        "domain_name": "_gc._tcp.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kerberos._udp.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kerberos._tcp.Default-First-Site-Name._sites.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_ldap._tcp.DomainDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kerberos._tcp.dc._msdcs.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_ldap._tcp.ForestDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_gc._tcp.Default-First-Site-Name._sites.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      }
+    ],
+    "event_correlation_id": "900f3a93-c33b-f111-8a59-000c29f950fd",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014351581254-54-583952?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "lsass.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\lsass.exe",
+    "global_prevalence": "common",
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-54-583952",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-54-583952",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "unique",
+    "local_process_id": "932",
+    "logon_domain": "ISI",
+    "md5": "2a33233d5d42d0c98e7dea3e712acf90",
+    "mitre_attack": [
+      {
+        "pattern_id": 54,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "PWDump2.Untrusted",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776584275",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "58953",
+        "protocol": "UDP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "389"
+      },
+      {
+        "access_timestamp": "1776584288",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "61494",
+        "protocol": "UDP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "53"
+      },
+      {
+        "access_timestamp": "1776585143",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "56335",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "135"
+      }
+    ],
+    "objective": "Gain Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\wininit.exe",
+      "local_process_id": "792",
+      "md5": "7f45b62396ed2780fb25445bb2ca51a0",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014348385016",
+      "process_id": "2014348385016",
+      "sha256": "2cb9763db0f39371a80999430eab7664b08e650acd2af59e8be8bdc5afa97bec",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014348385016",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 54,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCjnGurDV0wwlkZFNTT1sgJAAATiFi0rq7vG0qX3ki4Js7p9K_tCCWqJZ8XsCCFJy3xKKngw==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "2014351581254",
+    "process_start_time": "1776584205",
+    "product": "automated-lead-context",
+    "scenario": "credential_theft",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha256": "af5950ff85d9a8b8934292654671a64f79c8f777bd37a89f4fb74973f0a520be",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Credential Access",
+    "tactic_id": "TA0006",
+    "technique": "OS Credential Dumping",
+    "technique_id": "T1003",
+    "timestamp": "2026-04-19T07:45:32.809Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014351581254",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:45:36.397006202Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2011474157102-337-20637200",
+    "context_timestamp": "2026-04-19T07:24:18.645Z",
+    "crawled_timestamp": "2026-04-19T08:24:22.773300248Z",
+    "created_timestamp": "2026-04-19T07:25:22.710205566Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "The command line of this process was modified from its original form prior to finalizing process creation. This might be related to command line stomping attacks. Investigate the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T07:53:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T07:56:01Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "CommandLineStomping",
+    "event_correlation_id": "2545461d-c03b-f111-8a58-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2011474157102-337-20637200?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "$$DeleteMe.conhost.exe.01dccfcd0149bf55.0021",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\WinSxS\\Temp\\PendingDeletes\\$$DeleteMe.conhost.exe.01dccfcd0149bf55.0021",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_DistributionServer\\bin\\dcdsservice.exe\"",
+      "filename": "dcdsservice.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ManageEngine\\UEMS_DistributionServer\\bin\\dcdsservice.exe",
+      "local_process_id": "3592",
+      "md5": "e27e39ece1c30a89c671a200336d8b1e",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:1881280924258",
+      "process_id": "1881280924258",
+      "sha256": "db0783118d31fb839c396c1b745f76bef3440e67413825512bbd3e37ff780969",
+      "timestamp": "2026-04-14T23:10:31.385Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2011474157102-337-20637200",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2011474157102-337-20637200",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "common",
+    "local_process_id": "6856",
+    "logon_domain": "ISI",
+    "md5": "c15e2496b1eca76f4b09b109dab10fc3",
+    "mitre_attack": [
+      {
+        "pattern_id": 337,
+        "tactic_id": "TA0005",
+        "technique_id": "T1055",
+        "tactic": "Defense Evasion",
+        "technique": "Process Injection"
+      }
+    ],
+    "name": "CommandLineStomping",
+    "objective": "Keep Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "dsstatusupdate.exe SendDSSyncUpdate 101",
+      "filename": "dsstatusupdate.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ManageEngine\\UEMS_DistributionServer\\bin\\dsstatusupdate.exe",
+      "local_process_id": "14012",
+      "md5": "099de03547686ec395186af2b944caa9",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2011473739094",
+      "process_id": "2011473739094",
+      "sha256": "ef515b86bb436e6a405cb8aa7ddf41278f39b9691257a95d8c85488443531df5",
+      "timestamp": "2026-04-19T07:26:38Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2011473739094",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 337,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCiBWYIxhRzwmd_2bSsFehIAAATiFZPUc-J0L85bjHkiZqbZkeGHTJVnZT5RcZKJ1Olg4SKQ==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776583596",
+    "process_id": "2011474157102",
+    "process_start_time": "1776583458",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "ac68880b09834f3f1b12eea5966f42ad695711e04c34a577596c1578997f90e8",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Process Injection",
+    "technique_id": "T1055",
+    "timestamp": "2026-04-19T07:24:19.242Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2011474157102",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:24:22.773277508Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:145dc0af70284d23b215457b290c6fd2:2014702698430",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014712611374",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014716578500",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014721163960",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014725489992",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014722498772",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014728479424",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014729686800",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014741522760",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014738938970",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014740710852",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014731344076",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014732686158",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014732896794",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014747355396",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014745989960",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014755953320",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014754817018",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014755188652",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014757937574",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014762364476",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014760263732",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014761691692",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014758219314",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014777301608",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014772398286",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014776827732",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014773949794",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014773482798",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014778443542",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014765343182",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014775816812",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014793047352",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014792241080",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014790796878",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014790014852",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014786554802",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014793914474",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014816736262",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014801951708",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014804619356",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014815330184",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014812411280",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014802526250",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014799884384",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014807902614",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014828262078",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014809690402",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014828406058",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014813188518"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\NetworkDetective\\DataCollector\\bin\\collectors\\ndc\\nddc.exe\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014702222912-474-876816",
+    "context_timestamp": "2026-04-19T07:46:13.332Z",
+    "crawled_timestamp": "2026-04-19T08:46:16.859834288Z",
+    "created_timestamp": "2026-04-19T07:47:16.86065969Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process made a suspiciously high volume of outbound network requests.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "Parallel port scanning",
+    "dns_requests": [
+      {
+        "domain_name": "_ldap._tcp.Default-First-Site-Name._sites.ISI-HQ-AD-01.",
+        "interface_index": "0",
+        "load_time": "1776584753",
+        "request_type": "SRV"
+      },
+      {
+        "domain_name": "_ldap._tcp.ISI-HQ-AD-01.",
+        "interface_index": "0",
+        "load_time": "1776584753",
+        "request_type": "SRV"
+      },
+      {
+        "domain_name": "WKISI5-PC.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ISI-HQ-DB-01.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "WKISIFDI02.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ISI-HQ-VONE.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ISI-HQ-AD-01.isi.local",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "WKISI6.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ISI-HQ-APP-01.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "VMISI1.ISI.LOCAL",
+        "interface_index": "0",
+        "load_time": "1776584754",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "c0143a93-c33b-f111-8a59-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014702222912-474-876816?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "nddc.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\NetworkDetective\\DataCollector\\bin\\collectors\\ndc\\nddc.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\services.exe",
+      "local_process_id": "912",
+      "md5": "0d464c4bf9d85412d6ef15eea3a91e72",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014350399084",
+      "process_id": "2014350399084",
+      "sha256": "243e370c279b3b8062e5dd81d8df539705397cc68472168251ed54134b13d70b",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014702222912-474-876816",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014702222912-474-876816",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "unique",
+    "local_process_id": "3436",
+    "logon_domain": "ISI",
+    "md5": "f671e2c1425ae5512d9291784b198548",
+    "mitre_attack": [
+      {
+        "pattern_id": 474,
+        "tactic_id": "TA0007",
+        "technique_id": "T1046",
+        "tactic": "Discovery",
+        "technique": "Network Service Discovery"
+      }
+    ],
+    "name": "ParallelPortScanning",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776584753",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49879",
+        "protocol": "TCP",
+        "remote_address": "69.147.88.8",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1776584753",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49877",
+        "protocol": "TCP",
+        "remote_address": "142.251.154.119",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49888",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.15",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49892",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49894",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.76",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49886",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.14",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49915",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.14",
+        "remote_port": "61609"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49887",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.13",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49898",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.16",
+        "remote_port": "135"
+      },
+      {
+        "access_timestamp": "1776584755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49881",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.94",
+        "remote_port": "135"
+      }
+    ],
+    "objective": "Explore",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\NetworkDetective\\DataCollector\\bin\\ndrdc.exe\"",
+      "filename": "ndrdc.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\NetworkDetective\\DataCollector\\bin\\ndrdc.exe",
+      "local_process_id": "3620",
+      "md5": "42c5fb4b45510a26849a7204d96d46cb",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014419749728",
+      "process_id": "2014419749728",
+      "sha256": "6c45b5358a6a64be0005cc43df384832d289d0e51c99004048d844791c081d70",
+      "timestamp": "2026-04-19T07:37:44Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014419749728",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 474,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kC0LWUc6lKPuiMNz_hIUXyzQAATiHDvYPIfqiGvD5k6rZgk7Ob4okDCB1-RY6L30uxjAND0g==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776586573",
+    "process_id": "2014702222912",
+    "process_start_time": "1776584730",
+    "product": "automated-lead-context",
+    "scenario": "attacker_methodology",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "d466044f99649e2ae8374f538c533c256c35aebd273e672389ada7c743f2ed62",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "Network Service Discovery",
+    "technique_id": "T1046",
+    "timestamp": "2026-04-19T07:46:14Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014702222912",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:46:16.859812356Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe\" \"RunRole\" \"9ef16e15-5852-49c6-9a00-852cbd1d61ee\" \"System\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2010561819753-459-19518224",
+    "context_timestamp": "2026-04-19T02:30:54.089Z",
+    "crawled_timestamp": "2026-04-19T08:24:22.677510002Z",
+    "created_timestamp": "2026-04-19T07:25:22.723278662Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T07:53:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T07:56:01Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "UmppcBypassSuspected",
+    "event_correlation_id": "1991b417-943b-f111-8a58-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2010561819753-459-19518224?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "ScreenConnect.WindowsClient.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\services.exe",
+      "local_process_id": "908",
+      "md5": "0d464c4bf9d85412d6ef15eea3a91e72",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:1881207066408",
+      "process_id": "1881207066408",
+      "sha256": "243e370c279b3b8062e5dd81d8df539705397cc68472168251ed54134b13d70b",
+      "timestamp": "2026-04-14T23:10:31.131Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2010561819753-459-19518224",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2010561819753-459-19518224",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "common",
+    "local_process_id": "12524",
+    "logon_domain": "ISI",
+    "md5": "80d8ce7fb4bfbb0396bd19ffa44ca552",
+    "mitre_attack": [
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      }
+    ],
+    "name": "UmppcBypassSuspected",
+    "objective": "Keep Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe\" \"?e=Access&y=Guest&h=myremote2.technijian.com&p=8041&s=f2c2f83b-d16f-46d0-8c0c-4e33846408ed&k=BgIAAACkAABSU0ExAAgAAAEAAQDxJ3HZU2kmSU2L%2fwvXw%2b5vOHXgem7vXCvSaQ3VjZQiy1GNzt2zIYpFQwBCyTSj1EJjgFfvKXEvBJfLUoE9kfQ040ry1i0JIuxjiAvoNQeQU4oGqSmcsjJ%2fn8Rtfz17hsGXOpkG2RKeBfTofpZGY6odnNvRERmV%2fWVUmyHJ%2ff7IXVuzCzkEKLV4t2svZaVORF2hS%2bFtVvLd3lidSn8IobpDHp%2b28wnpvrWmLnBC2EJ7O44SEwD7bEpDckq%2f%2fwm%2fOiEv5rUKiGphIhTqGrp5pRm%2fAqrvm4d7rA1jvao8o9z41QxVr8hKGLSQ0H5t83zLtonIEOEX4logOUH9Dr8iqADF&v=AQAAANCMnd8BFdERjHoAwE%2fCl%2bsBAAAAu16LSQP%2bRUSAwaLy268opAAAAAACAAAAAAAQZgAAAAEAACAAAACqBDKh88PKNtn9YbX1FIyZ4TxzEieTvSyp50mQuPYpqgAAAAAOgAAAAAIAACAAAABzgMRZluuscJtzByM74upAc%2bmznNCSerfH%2fnFcEreD2KAEAADQ3NNSO%2fmKogKmdQkBwUx9QvxBV3vIrykCnBI8j8JSavi106MCXP2tIHNiGIQudAlVOI8meaU0cDzw4STTv7DUoHcbbgfH%2fR7%2bnldVcRM5j1NdFAMCDtBjLnnbWjIg%2bdBKCgOpvgmHd42tq7RibxVYNHBLfqcJtxjN753bpqgFUe%2bQhXX79L3OPwqf955NNpblJFaLqhBvh6%2fI1by%2bqDh5RN85DqgzBJSmdKYPvSiaTlNNo%2f2dLGHFaO1QcM1bVgJ%2fNxy5lq6KijvKlvNU87qhbYTvci8ld3%2bWYSpP%2bkAhez1OscLiH8yyqYjFOD0hj6cp6hepDLPIMOGiSjRd9neNLnVYG4Aex%2fuChlBN5W0ZjLssuF64AzpGrD3IBdBbw5kXb8RKwEYBM7B75ALv8nbsiMm0YUR8j85l1e7iLYvFRk0if5VLZjDv4Cb4lPfDcXkuAFfHU6CYdLNM0p1zCYk3WXCXYccqHsM0sTaq57SCN4hyQphNuXuLcUGMD8nlkmXX1V%2b60iF2QJukaLdb8GboBXkSB1ASVTy22HZjzCwMk5PnPWtATf1hOFm1a%2bgFAZfSuneIgGgm01O7Hcb%2f1t5UmbrGWSd4h6VNoIOuE7h83xiYNRunwti87%2biA71ZOBOeacxncGnhnF834moIIQsoNzap6GCv1NpZBvgDyOf%2fPCwGMJF%2flJR1WuFxJoXf06HmyctL7gFv%2fu4Rsk9c8zP6Nqq8PqzOzsCIPfMcEiHmUSKsJ0BwI6EpnXZqIWYd2dnydeXH1jMnHgc8pRC5XXrzQpjYheGEAkZfeiKUGEATrjzZhuGXvDMl6i6m7qmGEvrL0ztbOT0aNqwbFO1qdOcM87%2bVFn6lh8iEfwEoCCHfWFY70a%2fBUCVJgMPEMhGMqS%2bYR%2bH3jdY0gcjZTzzWjZAWYTwW8P7bRmuwVLBNInDNxaLzntiPCsNO7QhzLGDj9lWmbydEsT8KMqkeNGNEskpVBZH2gpNSu2%2bnZkJHe40JLR4V62OSV9tAAEoHzmKfVB7I%2bByeP%2fB0ZHfXM4roIaGVryVypdb3V2u68xE1PifKNoWKwmxdPFOc5cfXbUyQEFNqZqU4G5phWucDZp5HpNrosfbdqfwrBLzh7idF2Ihdldx3%2bqj2oEtuIlrU5MWee6mLZtiZsorp3p59sqPpwYFS%2fa%2fmht0eWUL9y7MOMtIXL7lEPtSQ027Ii%2fgI3%2bEnqSSyaL%2bOG1UFyXGOr3fgZU0q6vI3DP2eiYk3VSyGvvFjLg9ilraM27qaoV3hYDM1MIVCqaSS9WW1vktFGiD5zwD%2bzb110cgeUV%2bpuVWlc0rCQmsEUtgTyRnDYdVRj8Kufuie5swj0WWM0sLvF14UGT5KasBsObsdpzB267Rvc8DGncLma%2bdyFLXBPL2HZ7XQmiVS6%2bqtssVxbfVGlACzWDGi4zOcr2ZFa1IGN3tikBMHgA9JyFR4OBEP1%2bXCp%2f3HBQflxHOywgm5k9kS3O%2fCmY0fy%2f%2fg0NruXUXt6eW0oWsPqEAyUTOZ0fqcAmWopFWNkxszXO5KQJ7zhBQo8n%2f9DXfwhL2%2bSTO%2bWqPauMQAiRcBKrEAAAAB1p40YjnZ754ho0Ih6OKkic5ERWE2hOqamUu0%2bm7KPXCLWZXDdDfZU8xfYovJVkqzTp%2fMfhfJar6yomaSM%2f%2bej&c=ISI&c=&c=&c=&c=&c=&c=&c=\"",
+      "filename": "ScreenConnect.ClientService.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe",
+      "local_process_id": "8492",
+      "md5": "0d464c4bf9d85412d6ef15eea3a91e72",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:1977544677075",
+      "process_id": "1977544677075",
+      "sha256": "f603cf8fe05911f40778cf7bf9225b8967383b0f693014399074a50743a6a0cd",
+      "timestamp": "2026-04-14T23:10:32.690Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "1977544677075",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 459,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kC3bXl_intHtmysOUQO5c6fQAATiEA8H8_ydeN0EqKrFrECW4AlxA2RvBZEllmopHEnQEDKg==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776565852",
+    "process_id": "2010561819753",
+    "process_start_time": "1776565826",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "4cc8e2e708a2a3a4e7e385861ea1e20ff0ca674ba8829579d0a5ea255c76aa13",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Impair Defenses",
+    "technique_id": "T1562",
+    "timestamp": "2026-04-19T02:30:55.927Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2010561819753",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:24:22.677479927Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:automated-lead:eddb1cad1adc4c4a854b00f0a823b902:779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "crawled_timestamp": "2026-04-22T07:24:22.298114377Z",
+    "created_timestamp": "2026-04-19T07:24:22.423875017Z",
+    "device": {
+      "device_id": "145dc0af70284d23b215457b290c6fd2"
+    },
+    "display_name": "ISI-HQ-AD-01 at 2026-04-19T02:30:55Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:automated-lead:eddb1cad1adc4c4a854b00f0a823b902:779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "id": "automated-lead:eddb1cad1adc4c4a854b00f0a823b902:779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "is_closed": true,
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      },
+      {
+        "pattern_id": 337,
+        "tactic_id": "TA0005",
+        "technique_id": "T1055",
+        "tactic": "Defense Evasion",
+        "technique": "Process Injection"
+      },
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      },
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      },
+      {
+        "pattern_id": 54,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      },
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      },
+      {
+        "pattern_id": 474,
+        "tactic_id": "TA0007",
+        "technique_id": "T1046",
+        "tactic": "Discovery",
+        "technique": "Network Service Discovery"
+      },
+      {
+        "pattern_id": 412,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "ISI-HQ-AD-01 at 2026-04-19T02:30:55Z",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "pattern_id": 185000,
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCuJGHxHDID7dyZRLpULf9XgAATiEP32eE4FQq2MkbfAvjiHoWAO6mWbun4RJ3oVV20X-o8Q==",
+    "product": "automated-lead",
+    "score": 43,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-04-19T07:52:27Z",
+    "signal_start_timestamp": "2026-04-19T02:30:55Z",
+    "signal_updated_timestamp": "2026-04-22T07:24:19Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+        "display_name": "UmppcBypassSuspected",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2010561819753-459-19518224",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 459,
+        "process_id": "2010561819753",
+        "signal_association_timestamp": "2026-04-19T02:30:55Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "The command line of this process was modified from its original form prior to finalizing process creation. This might be related to command line stomping attacks. Investigate the process tree.",
+        "display_name": "CommandLineStomping",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2011474157102-337-20637200",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 337,
+        "process_id": "2011474157102",
+        "signal_association_timestamp": "2026-04-19T07:24:19Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+        "display_name": "SuspiciousRMMUsage",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014421514772-10100-93712",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10100,
+        "process_id": "2014421514772",
+        "signal_association_timestamp": "2026-04-19T07:37:44Z",
+        "template_instance_id": 24842
+      },
+      {
+        "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+        "display_name": "PowershellExecution",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014617243764-10320-462608",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10320,
+        "process_id": "2014617243764",
+        "signal_association_timestamp": "2026-04-19T07:40:40Z",
+        "template_instance_id": 1661
+      },
+      {
+        "description": "Signed DLL with untrusted root authority loaded by LSASS process",
+        "display_name": "LsassLoadModuleUntrusted",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-54-583952",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 54,
+        "process_id": "2014351581254",
+        "signal_association_timestamp": "2026-04-19T07:45:32Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+        "display_name": "HashDumpSAMUntrusted",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014447314102-56-603664",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 56,
+        "process_id": "2014447314102",
+        "signal_association_timestamp": "2026-04-19T07:45:36Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process made a suspiciously high volume of outbound network requests.",
+        "display_name": "Parallel port scanning",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014702222912-474-876816",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 474,
+        "process_id": "2014702222912",
+        "signal_association_timestamp": "2026-04-19T07:46:14Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "Directory Services changes were replicated. If the source host is not a Domain Controller, this could represent a malicious attempt to dump credentials. Review the source host and user.",
+        "display_name": "DCSyncAttempted",
+        "host_id": "145dc0af70284d23b215457b290c6fd2",
+        "hostname": "ISI-HQ-AD-01",
+        "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-412-1620752",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 412,
+        "process_id": "2014351581254",
+        "signal_association_timestamp": "2026-04-19T07:52:27Z",
+        "template_instance_id": 0
+      }
+    ],
+    "timestamp": "2026-04-22T07:24:21Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-04-22T07:24:22.298099338Z"
+  },
+  {
+    "agent_id": "17d03fcfc03e40628191d71d6ca05bf4",
+    "aggregate_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:17d03fcfc03e40628191d71d6ca05bf4:59313156970"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "net  session ",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:59312432868-10336-5052944",
+    "context_timestamp": "2026-04-22T11:49:10.798Z",
+    "crawled_timestamp": "2026-04-22T12:49:15.268348536Z",
+    "created_timestamp": "2026-04-22T11:50:14.74237347Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-15T14:08:27.101Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "A20",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "17d03fcfc03e40628191d71d6ca05bf4",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2026-01-06T00:48:52Z",
+      "groups": [
+        "909dd0a344a9443ca17ea84d8c66ecae"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "ISI Computers",
+          "ISI Computers\\ISI"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "WKISI6",
+      "last_seen": "2026-04-22T12:10:51Z",
+      "local_ip": "192.168.1.105",
+      "mac_address": "64-00-6a-07-fd-fb",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-22T12:12:31Z",
+      "os_version": "Windows 10",
+      "ou": [
+        "ISI Computers",
+        "ISI"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 3020"
+    },
+    "display_name": "SystemNetworkConfigDiscovery",
+    "event_correlation_id": "b285ebb0-403e-f111-8e41-64006a07fdfb",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:59312432868-10336-5052944?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "net.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\SysWOW64\\net.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "15052",
+      "md5": "88140eedf20b91205c635ad66210ee90",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59308208027",
+      "process_id": "59308208027",
+      "sha256": "02a6687cc2848bf1175f9328d419091e9dcb0305aa97644722f530ee449e5b7c",
+      "timestamp": "2026-04-22T11:49:36Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59312432868-10336-5052944",
+    "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59312432868-10336-5052944",
+    "ioc_context": [],
+    "lead_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "local_prevalence": "common",
+    "local_process_id": "13148",
+    "logon_domain": "ISI",
+    "md5": "31890a7de89936f922d44d677f681a7f",
+    "mitre_attack": [
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      }
+    ],
+    "name": "GenericSystemNetworkConfigDiscovery",
+    "objective": "Explore",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\scripts\\setAppPermission_Internal.bat\" \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\logs\"\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "6716",
+      "md5": "d966dba31d7b62cad2decae92c5a8d12",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59308969797",
+      "process_id": "59308969797",
+      "sha256": "36fffab256a48c6fb76a4d1199193195e7707e9019414ac87572c3dbc810bc6c",
+      "timestamp": "2026-04-22T11:49:15Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "parent_process_id": "59308969797",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10336,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCLKxBZNDOjXp6dBW3DaN08AAATiEHU9q7n3GcmNB3-IfRuMSLDfnol6DgbIHwRU6B-ZPZUw==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776858551",
+    "process_id": "59312432868",
+    "process_start_time": "1776858550",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "7c4c7725e266f12aba8c50fd1598d4001201bca0e7aca901508307e365afff42",
+    "show_in_ui": true,
+    "source_hosts": [
+      "WKISI6"
+    ],
+    "source_ips": [
+      "192.168.1.105"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Network Configuration Discovery",
+    "technique_id": "T1016",
+    "template_instance_id": "1629",
+    "timestamp": "2026-04-22T11:49:11.253Z",
+    "triggering_process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59312432868",
+    "type": "signal",
+    "updated_timestamp": "2026-04-22T12:49:15.26833868Z",
+    "user_id": "S-1-5-18",
+    "user_name": "WKISI6$",
+    "user_names": [
+      "WKISI6$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:145dc0af70284d23b215457b290c6fd2:2014448379640"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014447314102-56-603664",
+    "context_timestamp": "2026-04-19T07:45:35.238Z",
+    "crawled_timestamp": "2026-04-19T08:45:39.494625884Z",
+    "created_timestamp": "2026-04-19T07:46:39.711704725Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "HashDumpSAMUntrusted",
+    "dns_requests": [
+      {
+        "domain_name": "sessions.bugsnag.com",
+        "interface_index": "0",
+        "load_time": "1776584297",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "agent.huntress.io",
+        "interface_index": "0",
+        "load_time": "1776587957",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "huntress-rio.s3.amazonaws.com",
+        "interface_index": "0",
+        "load_time": "1776587958",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "ac0f3a93-c33b-f111-8a59-000c29f950fd",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014447314102-56-603664?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "Rio.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\Rio\\Rio.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\services.exe",
+      "local_process_id": "912",
+      "md5": "0d464c4bf9d85412d6ef15eea3a91e72",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014350399084",
+      "process_id": "2014350399084",
+      "sha256": "243e370c279b3b8062e5dd81d8df539705397cc68472168251ed54134b13d70b",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014447314102-56-603664",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014447314102-56-603664",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "common",
+    "local_process_id": "4760",
+    "logon_domain": "ISI",
+    "md5": "257773dd1b01506a86fcbd68164578e8",
+    "mitre_attack": [
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "SAMHashDump.Untrusted",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776584296",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49713",
+        "protocol": "TCP",
+        "remote_address": "35.190.88.7",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776584304",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49733",
+        "protocol": "TCP",
+        "remote_address": "52.1.126.239",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776584951",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "53635",
+        "protocol": "TCP",
+        "remote_address": "52.216.39.9",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776585552",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "60650",
+        "protocol": "TCP",
+        "remote_address": "16.182.71.25",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776585552",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "60648",
+        "protocol": "TCP",
+        "remote_address": "100.29.253.106",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776586153",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49618",
+        "protocol": "TCP",
+        "remote_address": "98.85.113.195",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776586153",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49621",
+        "protocol": "TCP",
+        "remote_address": "16.15.253.177",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776586754",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "51174",
+        "protocol": "TCP",
+        "remote_address": "100.49.158.203",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776586755",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "51175",
+        "protocol": "TCP",
+        "remote_address": "16.15.228.123",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776587355",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "51231",
+        "protocol": "TCP",
+        "remote_address": "16.182.98.17",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Gain Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+      "filename": "Rio.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\Rio\\Rio.exe",
+      "local_process_id": "3784",
+      "md5": "257773dd1b01506a86fcbd68164578e8",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014431033308",
+      "process_id": "2014431033308",
+      "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+      "timestamp": "2026-04-19T07:37:44Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014431033308",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 56,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kC7BbVtM3d-aJYYVumuIJcQgAATiFKLY1FKiJe-IT1cpvkCmPibIkJwUTzO9PlounBbLSm8g==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "2014447314102",
+    "process_start_time": "1776584263",
+    "product": "automated-lead-context",
+    "scenario": "credential_theft",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Credential Access",
+    "tactic_id": "TA0006",
+    "technique": "OS Credential Dumping",
+    "technique_id": "T1003",
+    "timestamp": "2026-04-19T07:45:36.084Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014447314102",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:45:39.494611962Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"Get-CimInstance -ClassName win32_operatingsystem | select lastbootuptime | ConvertTo-Json -Compress\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014617243764-10320-462608",
+    "context_timestamp": "2026-04-19T07:40:40.168Z",
+    "crawled_timestamp": "2026-04-19T08:40:43.997951792Z",
+    "created_timestamp": "2026-04-19T07:41:43.988956999Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "PowershellExecution",
+    "event_correlation_id": "2c34ef52-c23b-f111-8a59-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014617243764-10320-462608?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "powershell.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "3056",
+      "md5": "f2827a212c47ebf28bf3ec8b97cbff9d",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014588681802",
+      "process_id": "2014588681802",
+      "sha256": "d5865cb053c339c6a092245b7c5e1681745365cc5f863ccc991184ef815fab2a",
+      "timestamp": "2026-04-19T07:40:32Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014617243764-10320-462608",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014617243764-10320-462608",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "common",
+    "local_process_id": "6648",
+    "logon_domain": "ISI",
+    "md5": "7353f60b1739074eb17c5f4dddefe239",
+    "mitre_attack": [
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      }
+    ],
+    "name": "GenericPowershellExecution",
+    "objective": "Follow Through",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "5440",
+      "md5": "f2827a212c47ebf28bf3ec8b97cbff9d",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014589527378",
+      "process_id": "2014589527378",
+      "sha256": "d5865cb053c339c6a092245b7c5e1681745365cc5f863ccc991184ef815fab2a",
+      "timestamp": "2026-04-19T07:40:32Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014589527378",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10320,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCDruLMcdKJ0b-cRj_GexNZwAATiFxnVSHs9sdP5y-kwx_nWJskhfQ_kryzztOan82mOev7g==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776584454",
+    "process_id": "2014617243764",
+    "process_start_time": "1776584440",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "de96a6e69944335375dc1ac238336066889d9ffc7d73628ef4fe1b1b160ab32c",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Execution",
+    "tactic_id": "TA0002",
+    "technique": "PowerShell",
+    "technique_id": "T1059.001",
+    "template_instance_id": "1661",
+    "template_instance_version": "1",
+    "timestamp": "2026-04-19T07:40:40.868Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014617243764",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:40:43.997932376Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "17d03fcfc03e40628191d71d6ca05bf4",
+    "aggregate_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "alleged_filetype": "exe",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "systeminfo.exe  ",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:59328715074-10335-5131280",
+    "context_timestamp": "2026-04-22T11:49:25.989Z",
+    "crawled_timestamp": "2026-04-22T12:49:30.732311741Z",
+    "created_timestamp": "2026-04-22T11:50:30.746571458Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-15T14:08:27.101Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "A20",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "17d03fcfc03e40628191d71d6ca05bf4",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2026-01-06T00:48:52Z",
+      "groups": [
+        "909dd0a344a9443ca17ea84d8c66ecae"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "ISI Computers",
+          "ISI Computers\\ISI"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "WKISI6",
+      "last_seen": "2026-04-22T12:10:51Z",
+      "local_ip": "192.168.1.105",
+      "mac_address": "64-00-6a-07-fd-fb",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-22T12:12:31Z",
+      "os_version": "Windows 10",
+      "ou": [
+        "ISI Computers",
+        "ISI"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 3020"
+    },
+    "display_name": "SystemInfoDiscovery",
+    "event_correlation_id": "988aebb0-403e-f111-8e41-64006a07fdfb",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:59328715074-10335-5131280?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "systeminfo.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\SysWOW64\\systeminfo.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "15052",
+      "md5": "88140eedf20b91205c635ad66210ee90",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59308208027",
+      "process_id": "59308208027",
+      "sha256": "02a6687cc2848bf1175f9328d419091e9dcb0305aa97644722f530ee449e5b7c",
+      "timestamp": "2026-04-22T11:49:36Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59328715074-10335-5131280",
+    "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59328715074-10335-5131280",
+    "ioc_context": [],
+    "lead_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "local_prevalence": "common",
+    "local_process_id": "8512",
+    "logon_domain": "ISI",
+    "md5": "36ccb1ffafd651f64a22b5da0a1ea5c5",
+    "mitre_attack": [
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "GenericSystemInfoDiscovery",
+    "objective": "Explore",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "C:\\Windows\\system32\\cmd.exe /C systeminfo.exe > \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\\\logs\\systeminfo.log\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "3596",
+      "md5": "d966dba31d7b62cad2decae92c5a8d12",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59326366531",
+      "process_id": "59326366531",
+      "sha256": "36fffab256a48c6fb76a4d1199193195e7707e9019414ac87572c3dbc810bc6c",
+      "timestamp": "2026-04-22T11:49:31Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "parent_process_id": "59326366531",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10335,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCdkSzt1tx8cA-O1gWD7YZdwAATiFpyiqm-p_dLx4cB7l4UCZWedIzIdXop9E_zt-AA5V4ug==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776858569",
+    "process_id": "59328715074",
+    "process_start_time": "1776858565",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "f1e43f167059ff746e200b21ddc55326cd8b3acd7d6bd9c541230db6f8bc63d1",
+    "show_in_ui": true,
+    "source_hosts": [
+      "WKISI6"
+    ],
+    "source_ips": [
+      "192.168.1.105"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Information Discovery",
+    "technique_id": "T1082",
+    "template_instance_id": "2636",
+    "timestamp": "2026-04-22T11:49:26.904Z",
+    "triggering_process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:59328715074",
+    "type": "signal",
+    "updated_timestamp": "2026-04-22T12:49:30.732294547Z",
+    "user_id": "S-1-5-18",
+    "user_name": "WKISI6$",
+    "user_names": [
+      "WKISI6$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:145dc0af70284d23b215457b290c6fd2:2014994747036"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\Windows\\system32\\lsass.exe",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014351581254-412-1620752",
+    "context_timestamp": "2026-04-19T07:52:27.119Z",
+    "crawled_timestamp": "2026-04-19T08:52:31.852109379Z",
+    "created_timestamp": "2026-04-19T07:53:30.91542581Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "Directory Services changes were replicated. If the source host is not a Domain Controller, this could represent a malicious attempt to dump credentials. Review the source host and user.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "DCSyncAttempted",
+    "dns_requests": [
+      {
+        "domain_name": "_kerberos._udp.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_gc._tcp.Default-First-Site-Name._sites.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kpasswd._udp.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_ldap._tcp.DomainDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kerberos._tcp.Default-First-Site-Name._sites.dc._msdcs.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_kpasswd._tcp.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "DomainDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "ForestDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "_ldap._tcp.ForestDnsZones.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "SOA"
+      },
+      {
+        "domain_name": "e2fa46da-c738-4bd2-845c-ef6129458463._msdcs.isi.local.",
+        "interface_index": "0",
+        "load_time": "1776584301",
+        "request_type": "CNAME"
+      }
+    ],
+    "event_correlation_id": "4e1c3a93-c33b-f111-8a59-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014351581254-412-1620752?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "lsass.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\lsass.exe",
+    "global_prevalence": "common",
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-412-1620752",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014351581254-412-1620752",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "unique",
+    "local_process_id": "932",
+    "logon_domain": "ISI",
+    "md5": "2a33233d5d42d0c98e7dea3e712acf90",
+    "mitre_attack": [
+      {
+        "pattern_id": 412,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "DCSyncAttempted",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776584275",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "58953",
+        "protocol": "UDP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "389"
+      },
+      {
+        "access_timestamp": "1776584288",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "61494",
+        "protocol": "UDP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "53"
+      },
+      {
+        "access_timestamp": "1776585143",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "56335",
+        "protocol": "TCP",
+        "remote_address": "192.168.1.11",
+        "remote_port": "135"
+      }
+    ],
+    "objective": "Gain Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\wininit.exe",
+      "local_process_id": "792",
+      "md5": "7f45b62396ed2780fb25445bb2ca51a0",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014348385016",
+      "process_id": "2014348385016",
+      "sha256": "2cb9763db0f39371a80999430eab7664b08e650acd2af59e8be8bdc5afa97bec",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014348385016",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 412,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kC9CBSrzTGJB0FOuuo9NN2SQAATiHJayvX_kr_DHrHVOjWnix3pyg9lfGm5uqSPGugGaonqA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "2014351581254",
+    "process_start_time": "1776584205",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha256": "af5950ff85d9a8b8934292654671a64f79c8f777bd37a89f4fb74973f0a520be",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Credential Access",
+    "tactic_id": "TA0006",
+    "technique": "OS Credential Dumping",
+    "technique_id": "T1003",
+    "timestamp": "2026-04-19T07:52:27.868Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014351581254",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:52:31.852095846Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "145dc0af70284d23b215457b290c6fd2",
+    "aggregate_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:145dc0af70284d23b215457b290c6fd2:2014513862042",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014661603086",
+      "pid:145dc0af70284d23b215457b290c6fd2:2014677621320",
+      "pid:145dc0af70284d23b215457b290c6fd2:2015424240574",
+      "pid:145dc0af70284d23b215457b290c6fd2:2016527576798"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe\" \"?e=Access&y=Guest&h=myremote2.technijian.com&p=8041&s=f2c2f83b-d16f-46d0-8c0c-4e33846408ed&k=BgIAAACkAABSU0ExAAgAAAEAAQDxJ3HZU2kmSU2L%2fwvXw%2b5vOHXgem7vXCvSaQ3VjZQiy1GNzt2zIYpFQwBCyTSj1EJjgFfvKXEvBJfLUoE9kfQ040ry1i0JIuxjiAvoNQeQU4oGqSmcsjJ%2fn8Rtfz17hsGXOpkG2RKeBfTofpZGY6odnNvRERmV%2fWVUmyHJ%2ff7IXVuzCzkEKLV4t2svZaVORF2hS%2bFtVvLd3lidSn8IobpDHp%2b28wnpvrWmLnBC2EJ7O44SEwD7bEpDckq%2f%2fwm%2fOiEv5rUKiGphIhTqGrp5pRm%2fAqrvm4d7rA1jvao8o9z41QxVr8hKGLSQ0H5t83zLtonIEOEX4logOUH9Dr8iqADF&v=AQAAANCMnd8BFdERjHoAwE%2fCl%2bsBAAAAu16LSQP%2bRUSAwaLy268opAAAAAACAAAAAAAQZgAAAAEAACAAAACqBDKh88PKNtn9YbX1FIyZ4TxzEieTvSyp50mQuPYpqgAAAAAOgAAAAAIAACAAAABzgMRZluuscJtzByM74upAc%2bmznNCSerfH%2fnFcEreD2KAEAADQ3NNSO%2fmKogKmdQkBwUx9QvxBV3vIrykCnBI8j8JSavi106MCXP2tIHNiGIQudAlVOI8meaU0cDzw4STTv7DUoHcbbgfH%2fR7%2bnldVcRM5j1NdFAMCDtBjLnnbWjIg%2bdBKCgOpvgmHd42tq7RibxVYNHBLfqcJtxjN753bpqgFUe%2bQhXX79L3OPwqf955NNpblJFaLqhBvh6%2fI1by%2bqDh5RN85DqgzBJSmdKYPvSiaTlNNo%2f2dLGHFaO1QcM1bVgJ%2fNxy5lq6KijvKlvNU87qhbYTvci8ld3%2bWYSpP%2bkAhez1OscLiH8yyqYjFOD0hj6cp6hepDLPIMOGiSjRd9neNLnVYG4Aex%2fuChlBN5W0ZjLssuF64AzpGrD3IBdBbw5kXb8RKwEYBM7B75ALv8nbsiMm0YUR8j85l1e7iLYvFRk0if5VLZjDv4Cb4lPfDcXkuAFfHU6CYdLNM0p1zCYk3WXCXYccqHsM0sTaq57SCN4hyQphNuXuLcUGMD8nlkmXX1V%2b60iF2QJukaLdb8GboBXkSB1ASVTy22HZjzCwMk5PnPWtATf1hOFm1a%2bgFAZfSuneIgGgm01O7Hcb%2f1t5UmbrGWSd4h6VNoIOuE7h83xiYNRunwti87%2biA71ZOBOeacxncGnhnF834moIIQsoNzap6GCv1NpZBvgDyOf%2fPCwGMJF%2flJR1WuFxJoXf06HmyctL7gFv%2fu4Rsk9c8zP6Nqq8PqzOzsCIPfMcEiHmUSKsJ0BwI6EpnXZqIWYd2dnydeXH1jMnHgc8pRC5XXrzQpjYheGEAkZfeiKUGEATrjzZhuGXvDMl6i6m7qmGEvrL0ztbOT0aNqwbFO1qdOcM87%2bVFn6lh8iEfwEoCCHfWFY70a%2fBUCVJgMPEMhGMqS%2bYR%2bH3jdY0gcjZTzzWjZAWYTwW8P7bRmuwVLBNInDNxaLzntiPCsNO7QhzLGDj9lWmbydEsT8KMqkeNGNEskpVBZH2gpNSu2%2bnZkJHe40JLR4V62OSV9tAAEoHzmKfVB7I%2bByeP%2fB0ZHfXM4roIaGVryVypdb3V2u68xE1PifKNoWKwmxdPFOc5cfXbUyQEFNqZqU4G5phWucDZp5HpNrosfbdqfwrBLzh7idF2Ihdldx3%2bqj2oEtuIlrU5MWee6mLZtiZsorp3p59sqPpwYFS%2fa%2fmht0eWUL9y7MOMtIXL7lEPtSQ027Ii%2fgI3%2bEnqSSyaL%2bOG1UFyXGOr3fgZU0q6vI3DP2eiYk3VSyGvvFjLg9ilraM27qaoV3hYDM1MIVCqaSS9WW1vktFGiD5zwD%2bzb110cgeUV%2bpuVWlc0rCQmsEUtgTyRnDYdVRj8Kufuie5swj0WWM0sLvF14UGT5KasBsObsdpzB267Rvc8DGncLma%2bdyFLXBPL2HZ7XQmiVS6%2bqtssVxbfVGlACzWDGi4zOcr2ZFa1IGN3tikBMHgA9JyFR4OBEP1%2bXCp%2f3HBQflxHOywgm5k9kS3O%2fCmY0fy%2f%2fg0NruXUXt6eW0oWsPqEAyUTOZ0fqcAmWopFWNkxszXO5KQJ7zhBQo8n%2f9DXfwhL2%2bSTO%2bWqPauMQAiRcBKrEAAAAB1p40YjnZ754ho0Ih6OKkic5ERWE2hOqamUu0%2bm7KPXCLWZXDdDfZU8xfYovJVkqzTp%2fMfhfJar6yomaSM%2f%2bej&c=ISI&c=&c=&c=&c=&c=&c=&c=\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014421514772-10100-93712",
+    "context_timestamp": "2026-04-19T07:37:41.338Z",
+    "crawled_timestamp": "2026-04-19T08:37:47.967889124Z",
+    "created_timestamp": "2026-04-19T07:38:47.940008449Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-19T00:37:13.606Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Phoenix Technologies LTD",
+      "bios_version": "6.00",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "145dc0af70284d23b215457b290c6fd2",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2025-03-06T07:31:06Z",
+      "groups": [
+        "8769e67195974663ab69635c6cf69e93"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "Domain Controllers"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "ISI-HQ-AD-01",
+      "last_seen": "2026-04-19T08:25:44Z",
+      "local_ip": "192.168.1.27",
+      "mac_address": "00-0c-29-f9-50-fd",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-19T08:27:35Z",
+      "os_version": "Windows Server 2019",
+      "ou": [
+        "Domain Controllers"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "2",
+      "product_type_desc": "Domain Controller",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware Virtual Platform"
+    },
+    "display_name": "SuspiciousRMMUsage",
+    "dns_requests": [
+      {
+        "domain_name": "myremote2.technijian.com",
+        "interface_index": "0",
+        "load_time": "1776584297",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "5722ef52-c23b-f111-8a59-000c29f950fd",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:145dc0af70284d23b215457b290c6fd2:2014421514772-10100-93712?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "ScreenConnect.ClientService.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\wininit.exe",
+      "local_process_id": "792",
+      "md5": "7f45b62396ed2780fb25445bb2ca51a0",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014348385016",
+      "process_id": "2014348385016",
+      "sha256": "2cb9763db0f39371a80999430eab7664b08e650acd2af59e8be8bdc5afa97bec",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "id": "ind:145dc0af70284d23b215457b290c6fd2:2014421514772-10100-93712",
+    "indicator_id": "ind:145dc0af70284d23b215457b290c6fd2:2014421514772-10100-93712",
+    "ioc_context": [],
+    "lead_id": "779372b954c7b18d883a83c072ab1e485ded84de4bed253b98b4777c7401902c",
+    "local_prevalence": "common",
+    "local_process_id": "3636",
+    "logon_domain": "ISI",
+    "md5": "0d0f702f513525211398d6611e31f9c8",
+    "mitre_attack": [
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      }
+    ],
+    "name": "SuspiciousRMMUsage",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776584297",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.27",
+        "local_port": "49717",
+        "protocol": "TCP",
+        "remote_address": "66.81.19.105",
+        "remote_port": "8041"
+      }
+    ],
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\services.exe",
+      "local_process_id": "912",
+      "md5": "0d464c4bf9d85412d6ef15eea3a91e72",
+      "process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014350399084",
+      "process_id": "2014350399084",
+      "sha256": "243e370c279b3b8062e5dd81d8df539705397cc68472168251ed54134b13d70b",
+      "timestamp": "2026-04-19T07:37:32.229Z",
+      "user_graph_id": "uid:145dc0af70284d23b215457b290c6fd2:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "ISI-HQ-AD-01$"
+    },
+    "parent_process_id": "2014350399084",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10100,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kC18oe8mhLq8-e3zwE2CB-kQAATiHNRSEPXIFPgK3AVWbKePDyWGo4bHcKRzAb4USDMPoFwg==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "2014421514772",
+    "process_start_time": "1776584255",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "f603cf8fe05911f40778cf7bf9225b8967383b0f693014399074a50743a6a0cd",
+    "show_in_ui": true,
+    "source_hosts": [
+      "ISI-HQ-AD-01"
+    ],
+    "source_ips": [
+      "192.168.1.27"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Remote Access Tools",
+    "technique_id": "T1219",
+    "template_instance_id": "24842",
+    "timestamp": "2026-04-19T07:37:44.885Z",
+    "triggering_process_graph_id": "pid:145dc0af70284d23b215457b290c6fd2:2014421514772",
+    "type": "signal",
+    "updated_timestamp": "2026-04-19T08:37:47.967875319Z",
+    "user_id": "S-1-5-18",
+    "user_name": "ISI-HQ-AD-01$",
+    "user_names": [
+      "ISI-HQ-AD-01$"
+    ]
+  },
+  {
+    "agent_id": "17d03fcfc03e40628191d71d6ca05bf4",
+    "aggregate_id": "",
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:automated-lead:eddb1cad1adc4c4a854b00f0a823b902:0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "crawled_timestamp": "2026-04-25T11:49:29.733773479Z",
+    "created_timestamp": "2026-04-22T11:49:13.639089506Z",
+    "device": {
+      "device_id": "17d03fcfc03e40628191d71d6ca05bf4"
+    },
+    "display_name": "WKISI6 at 2026-04-22T11:42:24Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:automated-lead:eddb1cad1adc4c4a854b00f0a823b902:0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "id": "automated-lead:eddb1cad1adc4c4a854b00f0a823b902:0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "is_closed": true,
+    "lead_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      },
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      },
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "WKISI6 at 2026-04-22T11:42:24Z",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "pattern_id": 185000,
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCeH6V_cedTcWFwXxfzzft1AAATiFZVYevfZvBdOB-qs26D52x1vk2pNsHp4MM4a8k-yRCSA==",
+    "product": "automated-lead",
+    "score": 33,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-04-22T11:49:26Z",
+    "signal_start_timestamp": "2026-04-22T11:42:24Z",
+    "signal_updated_timestamp": "2026-04-25T11:49:26Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+        "display_name": "HashDumpSAMUntrusted",
+        "host_id": "17d03fcfc03e40628191d71d6ca05bf4",
+        "hostname": "WKISI6",
+        "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:46519982420-56-4882960",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 56,
+        "process_id": "46519982420",
+        "signal_association_timestamp": "2026-04-22T11:42:24Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+        "display_name": "SystemNetworkConfigDiscovery",
+        "host_id": "17d03fcfc03e40628191d71d6ca05bf4",
+        "hostname": "WKISI6",
+        "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59312432868-10336-5052944",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10336,
+        "process_id": "59312432868",
+        "signal_association_timestamp": "2026-04-22T11:49:11Z",
+        "template_instance_id": 1629
+      },
+      {
+        "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+        "display_name": "SystemInfoDiscovery",
+        "host_id": "17d03fcfc03e40628191d71d6ca05bf4",
+        "hostname": "WKISI6",
+        "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:59328715074-10335-5131280",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10335,
+        "process_id": "59328715074",
+        "signal_association_timestamp": "2026-04-22T11:49:26Z",
+        "template_instance_id": 2636
+      }
+    ],
+    "timestamp": "2026-04-25T11:49:29Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-04-25T11:49:29.733737375Z"
+  },
+  {
+    "agent_id": "17d03fcfc03e40628191d71d6ca05bf4",
+    "aggregate_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:17d03fcfc03e40628191d71d6ca05bf4:46520296612"
+    ],
+    "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+    "composite_id": "eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:46519982420-56-4882960",
+    "context_timestamp": "2026-04-22T11:42:24.538Z",
+    "crawled_timestamp": "2026-04-22T12:49:15.255120048Z",
+    "created_timestamp": "2026-04-22T11:50:14.733081301Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-15T14:08:27.101Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "A20",
+      "cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "17d03fcfc03e40628191d71d6ca05bf4",
+      "external_ip": "104.173.200.37",
+      "first_seen": "2026-01-06T00:48:52Z",
+      "groups": [
+        "909dd0a344a9443ca17ea84d8c66ecae"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "ISI Computers",
+          "ISI Computers\\ISI"
+        ],
+        "domain": "isi.local"
+      },
+      "hostname": "WKISI6",
+      "last_seen": "2026-04-22T12:10:51Z",
+      "local_ip": "192.168.1.105",
+      "mac_address": "64-00-6a-07-fd-fb",
+      "machine_domain": "isi.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-22T12:12:31Z",
+      "os_version": "Windows 10",
+      "ou": [
+        "ISI Computers",
+        "ISI"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 3020"
+    },
+    "display_name": "HashDumpSAMUntrusted",
+    "dns_requests": [
+      {
+        "domain_name": "agent.huntress.io",
+        "interface_index": "0",
+        "load_time": "1776860058",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "huntress-rio.s3.amazonaws.com",
+        "interface_index": "0",
+        "load_time": "1776860058",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "54e7609b-3f3e-f111-8e41-64006a07fdfb",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/eddb1cad1adc4c4a854b00f0a823b902:ind:17d03fcfc03e40628191d71d6ca05bf4:46519982420-56-4882960?_cid=g04000yjuvpycxgbddvjqdnjyrbfj27u",
+    "filename": "Rio.exe",
+    "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\Rio\\Rio.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Windows\\System32\\services.exe",
+      "local_process_id": "1016",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:12895990697",
+      "process_id": "12895990697",
+      "sha256": "4a912dc98c977788131aad0ae468d86792211ed225f80b2c344a3690b4437428",
+      "timestamp": "2026-04-15T21:08:41.836Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "id": "ind:17d03fcfc03e40628191d71d6ca05bf4:46519982420-56-4882960",
+    "indicator_id": "ind:17d03fcfc03e40628191d71d6ca05bf4:46519982420-56-4882960",
+    "ioc_context": [],
+    "lead_id": "0e52703ddaafd2022933b60efa6398b7dc501973ba28046c7860efa2b2fa62f2",
+    "local_prevalence": "common",
+    "local_process_id": "2840",
+    "logon_domain": "ISI",
+    "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+    "mitre_attack": [
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "SAMHashDump.Untrusted",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776283045",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "49723",
+        "protocol": "TCP",
+        "remote_address": "16.15.207.73",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776283045",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "49722",
+        "protocol": "TCP",
+        "remote_address": "44.218.48.195",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776283045",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "49727",
+        "protocol": "TCP",
+        "remote_address": "16.15.183.125",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776283597",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "50703",
+        "protocol": "TCP",
+        "remote_address": "52.1.126.239",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776283598",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "50704",
+        "protocol": "TCP",
+        "remote_address": "16.15.244.207",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776284199",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "50930",
+        "protocol": "TCP",
+        "remote_address": "16.15.252.244",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776284199",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "50929",
+        "protocol": "TCP",
+        "remote_address": "44.220.228.190",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776284800",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "51011",
+        "protocol": "TCP",
+        "remote_address": "98.85.113.195",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776284800",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "51012",
+        "protocol": "TCP",
+        "remote_address": "52.216.207.59",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776285401",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.1.105",
+        "local_port": "51056",
+        "protocol": "TCP",
+        "remote_address": "54.231.231.1",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Gain Access",
+    "origin_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+      "filename": "Rio.exe",
+      "filepath": "\\Device\\HarddiskVolume2\\Program Files\\Huntress\\Rio\\Rio.exe",
+      "local_process_id": "3832",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:46517637006",
+      "process_id": "46517637006",
+      "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+      "timestamp": "2026-04-15T21:08:42.514Z",
+      "user_graph_id": "uid:17d03fcfc03e40628191d71d6ca05bf4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "WKISI6$"
+    },
+    "parent_process_id": "46517637006",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 56,
+    "platform": "Windows",
+    "poly_id": "AADt2xytGtxMSoVLAPCoI7kCuXlbLl_QZ6LvRMTTNcDxTAAATiF1a_fvzk6MUAXPRwVKaU3DRmlUNxtzbzA3LNS1-GI7Tg==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "46519982420",
+    "process_start_time": "1775001570",
+    "product": "automated-lead-context",
+    "scenario": "credential_theft",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+    "show_in_ui": true,
+    "source_hosts": [
+      "WKISI6"
+    ],
+    "source_ips": [
+      "192.168.1.105"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Credential Access",
+    "tactic_id": "TA0006",
+    "technique": "OS Credential Dumping",
+    "technique_id": "T1003",
+    "timestamp": "2026-04-22T11:42:24.995Z",
+    "triggering_process_graph_id": "pid:17d03fcfc03e40628191d71d6ca05bf4:46519982420",
+    "type": "signal",
+    "updated_timestamp": "2026-04-22T12:49:15.255107805Z",
+    "user_id": "S-1-5-18",
+    "user_name": "WKISI6$",
+    "user_names": [
+      "WKISI6$"
+    ]
+  }
+]

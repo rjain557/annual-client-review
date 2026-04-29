@@ -1,0 +1,943 @@
+{
+  "month": "2026-04",
+  "window_start": "2026-04-01T00:00:00Z",
+  "window_end": "2026-05-01T00:00:00Z",
+  "clients_pulled": 29,
+  "totals": {
+    "alerts_in_window": 1110,
+    "incidents_in_window": 0,
+    "behaviors_in_window": 0
+  },
+  "errors": [
+    {
+      "client": "ANI",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "BST",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "VAF",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "AAVA",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "B2I",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "ORX",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "AOC",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "BWH",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "CCC",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "ACU",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "HHOC",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "ISI",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "MAX",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "CBL",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "KSS",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "NOR",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "JDH",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "TALY",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "VG",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "RSPMD",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "SAS",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "CBI",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "RMG",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "SGC",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "ALG",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "KES",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "DTS",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "EBRMD",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    },
+    {
+      "client": "AFFG",
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "member_cid": "5ebd3a406f614a12bfd29a4be8326ad3",
+      "child_name": "Andersen Industries, Inc.",
+      "LocationCode": "ANI",
+      "Location_Name": "Andersen Industries, Inc.",
+      "DirID": 13,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 20,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "7d54af1e38314f6ab7b127dc298d7a59",
+      "child_name": "Boston Group Waste",
+      "LocationCode": "BST",
+      "Location_Name": "Boston Group",
+      "DirID": 6247,
+      "match_source": "manual",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 105,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "870fe959e937460d9dc0025f2173c178",
+      "child_name": "Via Auto Finance",
+      "LocationCode": "VAF",
+      "Location_Name": "Via Auto Finance",
+      "DirID": 5941,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 30,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "09c3db88732948b198eadb0e76d57cc4",
+      "child_name": "Aventine at Aliso Viejo Apartments",
+      "LocationCode": "AAVA",
+      "Location_Name": "Aventine at Aliso Viejo Apartments",
+      "DirID": 6989,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 46,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "389d9a8550454b1493fc6bb59be51961",
+      "child_name": "B2 Insurance",
+      "LocationCode": "B2I",
+      "Location_Name": "B2 Insurance",
+      "DirID": 19,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 72,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "cc440d90701544d887936110da007c42",
+      "child_name": "OrthoXpress",
+      "LocationCode": "ORX",
+      "Location_Name": "Ortho Xpress",
+      "DirID": 108,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 163,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "9dcb10b632b44a47b25b7d2d48df1e39",
+      "child_name": "Apartment Association of Orange County",
+      "LocationCode": "AOC",
+      "Location_Name": "Apartment Association of Orange County",
+      "DirID": 6270,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 58,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "2fabdd9e870a4132bde8c46df9f8825d",
+      "child_name": "Brandywine Homes",
+      "LocationCode": "BWH",
+      "Location_Name": "Brandywine Homes",
+      "DirID": 6245,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 97,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "42d8bd9ba62c42d6a4f4a5be2188b2f5",
+      "child_name": "Culp Construction Company",
+      "LocationCode": "CCC",
+      "Location_Name": "Culp Construction Company",
+      "DirID": 5914,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 29,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "3d07c1ef7a5341ed9c0202d74f778880",
+      "child_name": "Acuity Advisors",
+      "LocationCode": "ACU",
+      "Location_Name": "Acuity Advisors",
+      "DirID": 7139,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 44,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "child_name": "Housing for Health OC",
+      "LocationCode": "HHOC",
+      "Location_Name": "Housing for Health OC",
+      "DirID": 7280,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 15,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "eddb1cad1adc4c4a854b00f0a823b902",
+      "child_name": "International Sportsmedicine Institute",
+      "LocationCode": "ISI",
+      "Location_Name": "International Sportsmedicine Institute",
+      "DirID": 76,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 13,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "b83e2e1f050c4662a93b9ae942219205",
+      "child_name": "Max Pro Leasing",
+      "LocationCode": "MAX",
+      "Location_Name": "Max Pro Leasing",
+      "DirID": 5768,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 0,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "7875e1f612964202b90204eab2cd1d9c",
+      "child_name": "Chris Bank Law",
+      "LocationCode": "CBL",
+      "Location_Name": "Chris Bank Law",
+      "DirID": 5664,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 19,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "237b442088df4c0e95fb97685869289d",
+      "child_name": "Kabuki Springs and Spa",
+      "LocationCode": "KSS",
+      "Location_Name": "Kabuki Springs and Spa",
+      "DirID": 5110,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 24,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "c519931c93474621b503759983bcd482",
+      "child_name": "Hotel Normandie",
+      "LocationCode": "NOR",
+      "Location_Name": "Hotel Normandie",
+      "DirID": 2868,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 12,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "67042d38f41f47e88860b83405b0b87a",
+      "child_name": "JDH Pacific",
+      "LocationCode": "JDH",
+      "Location_Name": "JDH Pacific",
+      "DirID": 5887,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 177,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "3248cf29bfd24486a0b54c4fc2f64e77",
+      "child_name": "Talley & Associates",
+      "LocationCode": "TALY",
+      "Location_Name": "Talley & Associates",
+      "DirID": 7728,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 5,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "7e2cfe2639424979a7b695864805c988",
+      "child_name": "Vintage Group",
+      "LocationCode": "VG",
+      "Location_Name": "Vintage Group",
+      "DirID": 5839,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 0,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "10af42eb08b74be5bbb2f7d7d4ca0c71",
+      "child_name": "Rosalina See - Prats M.D.",
+      "LocationCode": "RSPMD",
+      "Location_Name": "Rosalina See - Prats M.D.",
+      "DirID": 129,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 29,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "1a4f7981cd494ba1b64d31312dd8724c",
+      "child_name": "Strategic Air Services",
+      "LocationCode": "SAS",
+      "Location_Name": "Strategic Air Services",
+      "DirID": 5985,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 5,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "29d8faf1fd244182a696c7542b7133b9",
+      "child_name": "Christian Brothers Interiors",
+      "LocationCode": "CBI",
+      "Location_Name": "Christian Brothers Interiors",
+      "DirID": 7826,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 64,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "65b2fdd0a8a248f7a6c1608c190f96fb",
+      "child_name": "Roddel Marketing Group",
+      "LocationCode": "RMG",
+      "Location_Name": "Roddel Marketing Group, Inc",
+      "DirID": 5779,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 4,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "3014adb2cf444df49bbb15bb957be3f7",
+      "child_name": "Siege Consulting",
+      "LocationCode": "SGC",
+      "Location_Name": "Siege Consulting",
+      "DirID": 7946,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 3,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "673bb9bbc811452b80c519893169e8f1",
+      "child_name": "Algro International",
+      "LocationCode": "ALG",
+      "Location_Name": "Algro International",
+      "DirID": 7923,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 32,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "ff3779440de54f2c8465312dbb8ce0aa",
+      "child_name": "KES Homes",
+      "LocationCode": "KES",
+      "Location_Name": "KES Homes",
+      "DirID": 7930,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 20,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "7bf276d772dc461da31351bd77b0f9ea",
+      "child_name": "Disruptix Talent Solutions",
+      "LocationCode": "DTS",
+      "Location_Name": "Disruptix Talent Solutions",
+      "DirID": 8052,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 14,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "13679be7b16a400d93e7feddf96d6d26",
+      "child_name": "Ernest B Robinson, MD",
+      "LocationCode": "EBRMD",
+      "Location_Name": "Ernest B Robinson, MD, PC",
+      "DirID": 8027,
+      "match_source": "manual",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 5,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    },
+    {
+      "member_cid": "f7aef439a58747059caf2d97a5cc0e32",
+      "child_name": "American Fundstars Financial Group LLC",
+      "LocationCode": "AFFG",
+      "Location_Name": "American Fundstars Financial Group LLC",
+      "DirID": 8141,
+      "match_source": "name_exact",
+      "month": "2026-04",
+      "window_start": "2026-04-01T00:00:00Z",
+      "window_end": "2026-05-01T00:00:00Z",
+      "alerts_in_window": 5,
+      "incidents_in_window": 0,
+      "behaviors_in_window": 0,
+      "errors": [
+        {
+          "step": "incidents",
+          "err": "CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}",
+          "tb": "Traceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 191, in _http\n    with urlrequest.urlopen(req, timeout=timeout) as resp:\n         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 493, in open\n    response = meth(req, response)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"C:\\Python314\\Lib\\urllib\\request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\backfill_crowdstrike.py\", line 161, in fetch_month_parent_level\n    incident_ids = cs_api.list_all_ids(\n        \"/incidents/queries/incidents/v1\",\n    ...<3 lines>...\n        },\n    )\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 259, in list_all_ids\n    payload = _http(\"GET\", query_path, params=p)\n  File \"C:\\vscode\\annual-client-review\\annual-client-review\\technijian\\crowdstrike-pull\\scripts\\cs_api.py\", line 215, in _http\n    raise RuntimeError(\n        f\"CrowdStrike {method} {path} -> HTTP {e.code}: {body_text}\") from e\nRuntimeError: CrowdStrike GET /incidents/queries/incidents/v1 -> HTTP 500: {\"meta\":{\"trace_id\":\"ab8296cd-a3be-4a69-9732-d70ec0d27431\"},\"errors\":[{\"code\":500,\"message\":\"Internal Server Error: Please provide trace-id='ab8296cd-a3be-4a69-9732-d70ec0d27431' to support\"}]}\n"
+        }
+      ],
+      "run_at": "2026-04-29T17:01:22+00:00"
+    }
+  ]
+}

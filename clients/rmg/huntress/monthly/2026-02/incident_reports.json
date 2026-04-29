@@ -1,0 +1,120 @@
+{
+  "window": [
+    {
+      "id": 1929313,
+      "account_id": 31342,
+      "agent_id": 11774957,
+      "body": "*** Active remediations are in process to address this threat, review any remaining remediations (such as reboots) before marking this incident as resolved in the Huntress Platform. ***\n\n*** The Huntress Agent has been tasked to isolate this host from the rest of the network in order to prevent the incident from spreading to other hosts. ***\n\nIf you have an urgent request for support, please go to the link below to place a request a callback from SOC Support.\nhttps://technijian.huntress.io/org/449055/infection_reports/1929313/soc_callback_requests/new\n\nHost: RMG-LPT-TOM - https://technijian.huntress.io/org/449055/agents/11774957\nOrganization: Roddel Marketing Group, Inc.\nTags: None\nSecurity Products: CrowdStrike (CSFalconService), Windows Defender\n\nIncident Report: https://technijian.huntress.io/org/449055/infection_reports/1929313\nSeverity: Critical\n\nInvestigative Summary:\n----------------------\nAt 2026-02-03 21:31:35 UTC, Huntress detected malicious activity on host \"RMG-LPT-TOM\" involving user \"Technijian\". The user executed a malicious file named \"eStmt_2026-1-2658714100.exe\" from the Downloads folder, which was spawned by Microsoft Edge (\"msedge.exe\"). This file is a renamed SimpleHelp remote access tool, disguised as a tax-themed document, consistent with a phishing campaign targeting users with fake Social Security Administration statements.\n\nThe malicious executable was launched directly from the user's Downloads folder at 2026-02-03 21:31:35 UTC. The file, signed by \"SimpleHelp Ltd\" but with an invalid signature, was executed by the user after being downloaded through the Microsoft Edge browser. The filename \"eStmt_2026-1-2658714100.exe\" mimics a legitimate tax statement, a common social engineering tactic. The process terminated shortly after execution at 2026-02-03 21:31:35 UTC with an abnormal exit code, indicating the initial execution may have failed or was interrupted. However, the presence of this file and the execution attempt indicate the user fell victim to a phishing attack designed to install unauthorized remote access software.\n\nThe primary risk is unauthorized remote access to the affected host. Even though the process terminated, the malicious file remains on disk and may have established persistence or could be re-executed. Huntress recommends using Assisted Remediation to remove the malicious file from the Downloads folder. Additionally, review the user's browser history to identify the phishing domain and check for any persistence mechanisms such as registry run keys or scheduled tasks. Provide security awareness training to the user regarding phishing tactics, particularly those involving fake tax documents. Failure to remediate may result in unauthorized access, data theft, or deployment of additional malware.\n\nUser Account\nUser Account: RMG-LPT-TOM\\Technijian (SID: S-1-5-21-3431483238-1952811798-1897033814-1001)\n\nFile System\nFile Path: C:\\Users\\Technijian\\Downloads\\eStmt_2026-1-2658714100.exe\nSHA256: 3e22929618216e03230e991854140bef0e0298c76e21f711d2a21685183f422a\nMD5: 4aac5507aee93b3b5a6b06fd2882a5d7\nSHA1: 2dd50d8246b5727be73c39fd577c42dfdb6af61e\n\nHost\nHostname: RMG-LPT-TOM\nOperating System: Windows 11 Home\n\nThreat Descriptions:\n--------------------\nMalicious Remote Management Tool: A legitimate remote management tool has been misused by a threat actor to gain unauthorized access and control of the reported endpoint. Threat actors do this to hide their presence, maintain persistence and further exploit the network.\n\nRogue Simplehelp: Huntress has been tracking a number of malicious threat actors convincing users via email into running malicious Simplehelp installers that give the threat actor remote access to the host.\n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete File - path: C:\\Users\\Technijian\\Downloads\\eStmt_2026-1-2658714100.exe + sha256: 3e22929618216e03230e991854140bef0e0298c76e21f711d2a21685183f422a\n- Reboot the Host - remediation: A reboot is required to complete the remediation plan\n\nManual Remediations provided by the Huntress SOC are highly recommended remediation actions to be conducted by your team before resolving the incident in the Huntress Platform:\n- Enroll the user in a security awareness training session to reinforce safe practices in the corporate environment.\n- Audit affected directories/files for additional suspicious files and remove those found. \n\nAll remediations provided can be found in the Huntress Platform: Incident Report: https://technijian.huntress.io/org/449055/infection_reports/1929313#remediations-tab\n\nLead Signal Information:\n------------------------\nSignal Name: Web Browser Process Spawning Tax Themed Rmm\nDetected At: 2026-02-03 15:41:14 -0600\nStart Time: 2026-02-03 21:31:35 UTC\nCommand: \"C:\\Users\\Technijian\\Downloads\\eStmt_2026-1-2658714100.exe\"\nExecutable: C:\\Users\\Technijian\\Downloads\\eStmt_2026-1-2658714100.exe\nProcess ID: f84c723e-0145-11f1-b5a0-201e88d0a290\nParent Process: C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\nUser: Technijian\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/449055/infection_reports/1929313#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 4,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 449055,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 5,
+        "has_more": false,
+        "items": [
+          {
+            "id": 7935235,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "C:\\Users\\Technijian\\Downloads\\eStmt_2026-1-2658714100.exe"
+              },
+              {
+                "name": "sha256",
+                "description": "3e22929618216e03230e991854140bef0e0298c76e21f711d2a21685183f422a"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-02-03T22:25:45Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-02-03T22:26:21Z"
+          },
+          {
+            "id": 7935225,
+            "type": "manual",
+            "action": "Enroll the user in a security awareness training session to reinforce safe practices in the corporate environment.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-02-03T22:25:45Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7935227,
+            "type": "containment",
+            "action": "Isolate Host",
+            "parameters": "RMG-LPT-TOM",
+            "status": "completed",
+            "approved_at": "2026-02-03T22:25:45Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-02-03T22:26:58Z"
+          },
+          {
+            "id": 7935224,
+            "type": "manual",
+            "action": "A reboot is required to complete the remediation plan",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-02-04T18:09:59Z",
+            "approved_by": {
+              "id": 100661,
+              "email": "skumar@technijian.com",
+              "name": "Sanjeev Kumar"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7935226,
+            "type": "manual",
+            "action": "Audit affected directories/files for additional suspicious files and remove those found. ",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-02-03T22:25:45Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          }
+        ]
+      },
+      "sent_at": "2026-02-03T22:25:45Z",
+      "severity": "critical",
+      "status": "sent",
+      "status_updated_at": "2026-02-03T22:25:45Z",
+      "subject": "CRITICAL - ISOLATED - Incident on RMG-LPT-TOM (Roddel Marketing Group, Inc.)",
+      "summary": null,
+      "updated_at": "2026-02-03T22:25:45Z"
+    }
+  ]
+}

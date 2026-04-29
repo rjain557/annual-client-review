@@ -1,0 +1,74 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 1461958,
+      "account_id": 31342,
+      "agent_id": 11801533,
+      "body": "*** The Huntress Agent has already remediated this incident. ***\n\nHost: Carol - https://technijian.huntress.io/org/450115/agents/11801533\nOrganization: SGC-Siege Consulting\nTags: None\nSecurity Products: Windows Defender, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/450115/infection_reports/1461958\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected the following Malware Artifacts on this host:\n- An artifact from persistent malware. The executable file has been removed, but the persistence mechanism used to start it is still present.\n\nConsidering the low risk posed, you can follow the below remediation guidance at your convenience.\n\nRemediation Instructions\n------------------------\nTo remediate, perform the actions below:\n- Audit the \"c:\\users\\cmagg\\appdata\\roaming\\microsoft\\windows\\start menu\\roaming\\wv_advanced_test\" directory for other suspicious files; remove the directory if not required.\n- Remove the \"c:\\users\\cmagg\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\remotecheck_v4.lnk\" file and ensure it is not recreated.\n\nFootholds\n---------\nFoothold 1 - https://technijian.huntress.io/org/450115/autoruns/36095807\nStartup Path: c:\\users\\cmagg\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\remotecheck_v4.lnk\nCommand: c:\\users\\cmagg\\appdata\\roaming\\microsoft\\windows\\start menu\\Roaming\\Wv_Advanced_test\\ABRequestDlg.exe \nFile Path: \n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-04-01T10:17:49Z",
+      "indicator_counts": {
+        "footholds": 1,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 450115,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 2,
+        "has_more": false,
+        "items": [
+          {
+            "id": 6419594,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\users\\cmagg\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\remotecheck_v4.lnk"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-04-01T08:46:01Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2025-04-01T10:17:49Z"
+          },
+          {
+            "id": 6419593,
+            "type": "assisted",
+            "action": "Reboot the Host",
+            "parameters": [
+              {
+                "name": "remediation",
+                "description": "A reboot is required to complete the remediation plan"
+              }
+            ],
+            "status": "unapproved",
+            "approved_at": null,
+            "approved_by": null,
+            "completed_at": null
+          }
+        ]
+      },
+      "sent_at": "2025-04-01T10:17:49Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-04-01T10:17:49Z",
+      "subject": "LOW - Incident on Carol (SGC-Siege Consulting)",
+      "summary": null,
+      "updated_at": "2025-04-01T10:17:49Z"
+    }
+  ]
+}

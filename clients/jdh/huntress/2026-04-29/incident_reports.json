@@ -1,0 +1,325 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 1946260,
+      "account_id": 31342,
+      "agent_id": 11359368,
+      "body": "*** Huntress is performing Assisted Remediations. An update will be provided upon completion. Please review any Manual Remediations below. ***\n\nHost: JDH-DC - https://technijian.huntress.io/org/429259/agents/11359368\nOrganization: JDH - JDH Pacific\nTags: None\nSecurity Products: Trend Micro (ntrtscan)\n\nIncident Report: https://technijian.huntress.io/org/429259/infection_reports/1946260\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nAt 2026-02-11 04:51:47 UTC, Huntress detected malicious persistence on host \"JDH-DC\" under the user account \"JDH\\johne\". A registry Run key entry named \"Windows Logon Process\" was configured to execute \"winlgn.exe\" from a non-standard directory, masquerading as a legitimate Windows component. This persistence mechanism ensures the malicious executable will launch automatically at user logon.\n\nThe investigation revealed that the executable \"winlgn.exe\" was located in \"C:\\Users\\johne\\AppData\\Roaming\\Update\\\", a directory commonly abused by malware to evade detection. The file name \"winlgn.exe\" is designed to mimic the legitimate Windows Logon process, a common obfuscation technique. The persistence was established via a User Run key in the registry at \"HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\". While the binary is no longer present on the system, the registry entry remains active.\n\nThe primary risk is that this persistence mechanism was configured to maintain unauthorised access or execute malicious payloads at each user logon. Huntress recommends manually removing the registry Run key entry named \"Windows Logon Process\" from the affected user's registry hive. Additionally, reset the password for the user account \"JDH\\johne\" and conduct a thorough review of the host for any additional indicators of compromise. Failure to remediate may allow reinfection or continued unauthorised access.\n\nUser Account\nUser Account: \"JDH\\johne\" (SID: S-1-5-21-2000478354-1214440339-682003330-1678)\n\nFile System\nFile Path: \"C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\"\nSHA256: Not available\n\nPersistence\nName: \"Windows Logon Process\"\nType: \"User Run Key\"\nService Path: \"C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\"\nPrivilege Level: \"User\"\nRegistry Location: \"HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\n\nHost\nHostname: \"JDH-DC\"\nOperating System: \"Windows Server 2008 R2 Standard\"\n\nThreat Descriptions:\n--------------------\nMalware Artifact: A Malware Artifact is a piece of evidence left behind by malware on a computer system. It could be a file, registry entry, or network connection that indicates the presence of malicious activity.\n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete Registry Value - key: HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run + value: Windows Logon Process\n\nAll provided remediations and recommendations can be found in the Huntress Platform: https://technijian.huntress.io/org/429259/infection_reports/1946260#remediations-tab\n\nLead Signal Information:\n------------------------\nSignal Name: Autorun Inheritance Malicious\nDetected At: 2026-02-11 04:49:26 UTC\nRegistry Key: HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\nRegistry Value: Windows Logon Process\nRegistry Data: C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\nFile Path: \n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429259/infection_reports/1946260#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-02-11T05:46:34Z",
+      "indicator_counts": {
+        "footholds": 1,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429259,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 1,
+        "has_more": false,
+        "items": [
+          {
+            "id": 7985061,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "Windows Logon Process"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-02-11T05:20:04Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-02-11T05:20:22Z"
+          }
+        ]
+      },
+      "sent_at": "2026-02-11T05:20:05Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-02-11T05:46:34Z",
+      "subject": "LOW - Incident on JDH-DC (JDH - JDH Pacific)",
+      "summary": null,
+      "updated_at": "2026-02-11T05:46:34Z"
+    },
+    {
+      "id": 1802192,
+      "account_id": 31342,
+      "agent_id": 11588786,
+      "body": "\n\nHost: Donald-WS-Home - https://technijian.huntress.io/org/429259/agents/11588786\nOrganization: JDH - JDH Pacific\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor, McAfee\n\nIncident Report: https://technijian.huntress.io/org/429259/infection_reports/1802192\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: donaldh\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\donaldh\\OneDrive - JDH Pacific\\Desktop\\VPN PASSWORD.txt\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-11-17 01:35:13 UTC\nStart Time: 2025-11-17 01:27:47 UTC\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\donaldh\\OneDrive - JDH Pacific\\Desktop\\VPN PASSWORD.txt\"\nExecutable: C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2508.38.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\nProcess ID: 88941aaa-c354-11f0-86ea-f44efce4c1d3\nParent Process: C:\\Windows\\explorer.exe\nUser: donaldh\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429259/infection_reports/1802192#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429259,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-11-17T10:29:54Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-11-17T10:29:54Z",
+      "subject": "LOW - Incident on Donald-WS-Home (JDH - JDH Pacific)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on Donald-WS-Home (JDH - JDH Pacific)",
+      "updated_at": "2025-11-17T10:29:54Z"
+    },
+    {
+      "id": 1406481,
+      "account_id": 31342,
+      "agent_id": 11359374,
+      "body": "*** The Huntress SOC disabled Active Remediations for this incident. Please read below to understand why. ***\n\n\nHost: JDH-HQ-PC-10 - https://technijian.huntress.io/org/429259/agents/11359374\nOrganization: JDH Pacific\nTags: None\nSecurity Products: Trend Micro Security Agent, Malwarebytes, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/429259/infection_reports/1406481\nSeverity: High\n\nInvestigative Summary\n---------------------\n[WARNING]\nPlease review this incident report to understand what was identified before remediating. There may be unknown malicious processes, files, or other changes made to the host that remain undetected. Restoring from a known good backup or clean OS install is the only way to ensure a complete host-level remediation. While the Assisted Remediation service is an option, it will only remove specific items documented in this report.\n\nHuntress detected the following on this host:\n- Dridex : This malware is known to distribute ransomware, banking trojans, and other types of malware.\n\n\nThe Huntress SOC identified the Malware Family as Dridex.\n\n\nRemediation Instructions\n------------------------\n* Dridex uses legitimate Windows files which normally are located in c:\\windows\\system32 and creates a copy of the file in new directory. A malicious DLL file is then placed within the new directory. When the executable is launched it loads the malicious DLL.\n\nTo remediate, run the following commands from an administrative command prompt (cmd.exe) and perform the actions below:\n- schtasks.exe /End /TN \"Ennqzgxhbzpfpa\"\n- schtasks.exe /Delete /TN \"Ennqzgxhbzpfpa\" /F\n- schtasks.exe /End /TN \"Dkmehsdndstha\"\n- schtasks.exe /Delete /TN \"Dkmehsdndstha\" /F\n\n- Remove the \"c:\\windows\\system32\\xexrk\\gamepanel.exe\" file and ensure it is not recreated.\n- Audit the \"c:\\windows\\system32\\xexrk\" directory for other suspicious files; remove the directory if not required.\n- Remove the \"c:\\windows\\system32\\rc98\\wextract.exe\" file and ensure it is not recreated.\n- Audit the \"c:\\windows\\system32\\rc98\" directory for other suspicious files; remove the directory if not required.\n- Remove the \"c:\\users\\account.jdh\\appdata\\roaming\\xbyn\\cloudstoragewizard.exe\" file and ensure it is not recreated.\n- Audit the \"c:\\users\\account.jdh\\appdata\\roaming\\xbyn\" directory for other suspicious files; remove the directory if not required.\n- Remove the \"c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\mgqmxvoje.lnk\" file and ensure it is not recreated.\n- Remove the \"c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\amzvfk.lnk\" file and ensure it is not recreated.\n- Remove the \"c:\\users\\account.jdh\\appdata\\roaming\\hjzsc\\mblctr.exe\" file and ensure it is not recreated.\n- Audit the \"c:\\users\\account.jdh\\appdata\\roaming\\hjzsc\" directory for other suspicious files; remove the directory if not required.\n\n* You can also use the Task Scheduler GUI to remove the tasks if you prefer:\nStart Menu > Control Panel > System and Security > Administrative Tools > Task Scheduler\nRemove the following tasks:\n- \"Ennqzgxhbzpfpa\"\n- \"Dkmehsdndstha\"\n\nFootholds\n---------\nFoothold 1 - https://technijian.huntress.io/org/429259/autoruns/35380428\nName: Dkmehsdndstha\nTask File: C:\\WINDOWS\\System32\\Tasks\\Dkmehsdndstha\nCommand: C:\\WINDOWS\\system32\\xEXrK\\GamePanel.exe\nUsername: S-1-5-21-2000478354-1214440339-682003330-2167\nFile Path: c:\\windows\\system32\\xexrk\\gamepanel.exe\n\nFoothold 2 - https://technijian.huntress.io/org/429259/autoruns/35380429\nName: Ennqzgxhbzpfpa\nTask File: C:\\WINDOWS\\System32\\Tasks\\Ennqzgxhbzpfpa\nCommand: C:\\WINDOWS\\system32\\RC98\\wextract.exe\nUsername: S-1-5-21-2000478354-1214440339-682003330-2167\nFile Path: c:\\windows\\system32\\rc98\\wextract.exe\n\nFoothold 3 - https://technijian.huntress.io/org/429259/autoruns/35380426\nStartup Path: c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\amzvfk.lnk\nCommand: C:\\Users\\account.JDH\\AppData\\Roaming\\xBYn\\CloudStorageWizard.exe \nFile Path: c:\\users\\account.jdh\\appdata\\roaming\\xbyn\\cloudstoragewizard.exe\n\nFoothold 4 - https://technijian.huntress.io/org/429259/autoruns/35380427\nStartup Path: c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\mgqmxvoje.lnk\nCommand: C:\\Users\\account.JDH\\AppData\\Roaming\\hjzSC\\mblctr.exe \nFile Path: c:\\users\\account.jdh\\appdata\\roaming\\hjzsc\\mblctr.exe\n\n\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-02-07T10:39:25Z",
+      "indicator_counts": {
+        "footholds": 4,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429259,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 10,
+        "has_more": false,
+        "items": [
+          {
+            "id": 6165223,
+            "type": "assisted",
+            "action": "Delete Scheduled Task",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "Ennqzgxhbzpfpa"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:10Z"
+          },
+          {
+            "id": 6165224,
+            "type": "assisted",
+            "action": "Delete Scheduled Task",
+            "parameters": [
+              {
+                "name": "name",
+                "description": "Dkmehsdndstha"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:11Z"
+          },
+          {
+            "id": 6165225,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\windows\\system32\\tasks\\Ennqzgxhbzpfpa"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:12Z"
+          },
+          {
+            "id": 6165226,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\windows\\system32\\tasks\\Dkmehsdndstha"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:13Z"
+          },
+          {
+            "id": 6165227,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\windows\\system32\\xexrk\\gamepanel.exe"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:14Z"
+          },
+          {
+            "id": 6165228,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\windows\\system32\\rc98\\wextract.exe"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:15Z"
+          },
+          {
+            "id": 6165229,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\users\\account.jdh\\appdata\\roaming\\xbyn\\cloudstoragewizard.exe"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:15Z"
+          },
+          {
+            "id": 6165230,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\mgqmxvoje.lnk"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:16Z"
+          },
+          {
+            "id": 6165231,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\users\\account.jdh\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\amzvfk.lnk"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:16Z"
+          },
+          {
+            "id": 6165232,
+            "type": "assisted",
+            "action": "Delete File",
+            "parameters": [
+              {
+                "name": "path",
+                "description": "c:\\users\\account.jdh\\appdata\\roaming\\hjzsc\\mblctr.exe"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2025-02-07T10:15:51Z",
+            "approved_by": {
+              "id": 100650,
+              "email": "skoshal@technijian.com",
+              "name": "Shiveni Koshal"
+            },
+            "completed_at": "2025-02-07T10:16:17Z"
+          }
+        ]
+      },
+      "sent_at": "2025-02-07T08:01:12Z",
+      "severity": "high",
+      "status": "closed",
+      "status_updated_at": "2025-02-07T10:39:25Z",
+      "subject": "HIGH - Incident on JDH-HQ-PC-10 (JDH Pacific)",
+      "summary": null,
+      "updated_at": "2025-02-07T10:39:25Z"
+    }
+  ]
+}

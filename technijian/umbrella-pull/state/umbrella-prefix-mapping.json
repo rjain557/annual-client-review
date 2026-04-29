@@ -1,0 +1,9 @@
+{
+  "_doc": "Manual override file for the daily Cisco Umbrella pull. The pull script first tries to match each Umbrella roaming-computer hostname prefix to an active Client Portal LocationCode by exact equality (uppercased). Add an entry here only when that fails - e.g. when a client's hostnames use a different prefix than its CP LocationCode (BWHFD- vs BWH, MCN- vs MCC). Run `python pull_umbrella_daily.py --map-only` to see what is currently unmapped. The 'ignore' list is for hostname prefixes (DESKTOP-* default Windows names, lab tenants, decommissioned clients) that should never produce a per-client folder.",
+  "manual": {
+  },
+  "ignore": [
+    "DESKTOP",
+    "WIN"
+  ]
+}

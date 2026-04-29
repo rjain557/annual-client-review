@@ -1,0 +1,3253 @@
+[
+  {
+    "agent_id": "55e00a82c3144c10a828a800a3f5660a",
+    "aggregate_id": "aggind:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+        "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934"
+      }
+    ],
+    "child_process_ids": [
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830079586086",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830082824509",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830086059125",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830088211912"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8035856",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:30:17.600Z",
+    "control_graph_id": "ctg:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "crawled_timestamp": "2026-01-31T08:30:20.291066953Z",
+    "created_timestamp": "2026-01-31T07:31:20.275381861Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T22:12:13.400Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "55e00a82c3144c10a828a800a3f5660a",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-02-28T08:55:19Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-05",
+      "last_seen": "2026-01-31T08:16:16Z",
+      "local_ip": "10.0.0.128",
+      "mac_address": "c4-5a-b1-fa-af-ee",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:18:08Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769844618",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "7954a69d-76fe-f011-832d-586d6730ff42",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8035856?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "1B2C28A0B7DC65B47144FBC2004CDEC37685D6C9.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "7E619D4C7BCA971ECBD74989AD1CE8CE50A0609A.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "DE3665D283666B87E0F5C96EB722EC9C8F2BDF01.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "F0DBD5AF5A025D0ECCC778963586C398CF5BCF17.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "9608BA8A62A4A0C2D54D359DF355DCAB44A2BAEB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "252F42AE846A6BA13696BDF1BC22E44B8859EBD4.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "C4344A7FEDB84F24E252307C036EDB2C579DC3A8.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "1E6B7DB7DF9F34A70D64221EDBE190F737A69331.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "ED438548C2F637D1A9384B63251B1491DBF976CE.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "97D6549C3EC7B21353BD9A7C310BB823DB071ADB.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "316A331CCF9196B0BF17CBA9432A6345CA4DCC05.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "47535B05DC81DA626613089E38F1A7B891AB84A6.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "291523E9355427F391F7A9E45BABE2A058A5815C.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "23CE0D7D4C7608F869393E5DC63226293725E29D.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1480",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829663630598",
+      "process_id": "1829663630598",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T06:12:15.229Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-05"
+    ],
+    "id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8035856",
+    "indicator_id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8035856",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+        "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+    "local_prevalence": "low",
+    "local_process_id": "3016",
+    "logon_domain": "JDH",
+    "md5": "a1537521b352a1f1cb3061772dd6a4b1",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769844618",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.128",
+        "local_port": "50065",
+        "protocol": "TCP",
+        "remote_address": "23.62.134.88",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1604",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829666728730",
+      "process_id": "1829666728730",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T06:12:15.234Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "parent_process_id": "1829666728730",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6rLqqTdMUHs_F1PeH2lCVzQAATiG02mZ3A9m4WnwjrKmmxQkTMchknD1FIKYcO6k6iAnVRA==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1829965620844",
+    "process_start_time": "1769840069",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\CarolC\\Downloads\\UPDPSWin_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-05"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:30:18.358Z",
+    "tree_id": "502511660920",
+    "tree_root": "1829965620844",
+    "triggering_process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829965620844",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:30:20.291052993Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-05$",
+    "user_principal": "JDH-HQ-PC-05$@jdh.com"
+  },
+  {
+    "agent_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+    "aggregate_id": "aggind:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26"
+      }
+    ],
+    "child_process_ids": [
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190116791598",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190126326525",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190122154467",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190128035544"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10802192",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:07:33.397Z",
+    "control_graph_id": "ctg:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "crawled_timestamp": "2026-01-31T08:07:35.932114309Z",
+    "created_timestamp": "2026-01-31T07:08:35.961099778Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T21:44:09.281Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-03-28T17:16:01Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-03",
+      "last_seen": "2026-01-31T08:02:13Z",
+      "local_ip": "10.0.0.129",
+      "mac_address": "c4-5a-b1-fa-a3-36",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:03:12Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "tm-sdk.platinumai.net",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "b4d95973-73fe-f011-b27a-586d672fed6e",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10802192?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "69E92602DEB7D26E2F548CFA1DAC497DABF96CCF.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "1AC397BE63211F2027F85C2FE7BAB5F6851EDAE1.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "4431D2A2855189C08741043035566E4AAE7C7C6E.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "D332A0BA4AE6C453CA9BF04F81ADE9C782183BFB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "2A4FFDC2F4CD06045909010F9E62C4FEA8AB64C7.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "208BF67E7EC1436DF60378D990B3A3776C7D08E0.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "14B3713644AA4ED67BBFC5968D57D5BED25F4EA5.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "012FE8F832ABA9CF238F58261AABFDDA3D7C3E8D.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "441BCDCB8D0749C92E55EBF7BDB54C5115EE1A03.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "2D7360FD51943CC9E02DF2A65D06F23CD13C2CE3.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "1725C7FE4B961F8D179378AC1ABA43D679F6F9FC.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "23CE0D7D4C7608F869393E5DC63226293725E29D.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "291523E9355427F391F7A9E45BABE2A058A5815C.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843256"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1476",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189714016995",
+      "process_id": "1189714016995",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-03"
+    ],
+    "id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10802192",
+    "indicator_id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10802192",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+        "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+    "local_prevalence": "low",
+    "local_process_id": "14508",
+    "logon_domain": "JDH",
+    "md5": "69be015b7f9cd153fc229ad0b3a1bbd4",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769843253",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.129",
+        "local_port": "49980",
+        "protocol": "TCP",
+        "remote_address": "23.213.45.217",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1600",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189717261531",
+      "process_id": "1189717261531",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "parent_process_id": "1189717261531",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6MMfXU7oD9F0fialzlWN7RwAATiGp82S8RhAY0MSOt3MqK9wWD1VxEQ-09vxamDAYhd43iw==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1190017111987",
+    "process_start_time": "1769838394",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\AimeeA\\Downloads\\UPDPCL6Win_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-03"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:07:33.905Z",
+    "tree_id": "352187980164",
+    "tree_root": "1190017111987",
+    "triggering_process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:07:35.93210383Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-03$",
+    "user_principal": "JDH-HQ-PC-03$@jdh.com"
+  },
+  {
+    "agent_id": "55e00a82c3144c10a828a800a3f5660a",
+    "aggregate_id": "aggind:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26"
+      }
+    ],
+    "child_process_ids": [
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830088211912",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830079586086",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830082824509",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830086059125"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8037904",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:30:17.791Z",
+    "control_graph_id": "ctg:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "crawled_timestamp": "2026-01-31T08:30:20.310992221Z",
+    "created_timestamp": "2026-01-31T07:31:20.293472373Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T22:12:13.400Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "55e00a82c3144c10a828a800a3f5660a",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-02-28T08:55:19Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-05",
+      "last_seen": "2026-01-31T08:16:16Z",
+      "local_ip": "10.0.0.128",
+      "mac_address": "c4-5a-b1-fa-af-ee",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:18:08Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769844618",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "8754a69d-76fe-f011-832d-586d6730ff42",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8037904?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "F0DBD5AF5A025D0ECCC778963586C398CF5BCF17.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "C4344A7FEDB84F24E252307C036EDB2C579DC3A8.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "07E997E5E0D05A5F6C5FE6ACC53AA5A64F291C56.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "252F42AE846A6BA13696BDF1BC22E44B8859EBD4.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "97D6549C3EC7B21353BD9A7C310BB823DB071ADB.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "ED438548C2F637D1A9384B63251B1491DBF976CE.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "BF5287743889CA7601CF57FD48107DD47E9FF611.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "9608BA8A62A4A0C2D54D359DF355DCAB44A2BAEB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "DE3665D283666B87E0F5C96EB722EC9C8F2BDF01.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "1B2C28A0B7DC65B47144FBC2004CDEC37685D6C9.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "47535B05DC81DA626613089E38F1A7B891AB84A6.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "316A331CCF9196B0BF17CBA9432A6345CA4DCC05.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "291523E9355427F391F7A9E45BABE2A058A5815C.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "1725C7FE4B961F8D179378AC1ABA43D679F6F9FC.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1480",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829663630598",
+      "process_id": "1829663630598",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T06:12:15.229Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-05"
+    ],
+    "id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8037904",
+    "indicator_id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8037904",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+        "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+    "local_prevalence": "low",
+    "local_process_id": "3016",
+    "logon_domain": "JDH",
+    "md5": "a1537521b352a1f1cb3061772dd6a4b1",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769844618",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.128",
+        "local_port": "50065",
+        "protocol": "TCP",
+        "remote_address": "23.62.134.88",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1604",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829666728730",
+      "process_id": "1829666728730",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T06:12:15.234Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "parent_process_id": "1829666728730",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6m7BcGEP98Qza7pYHnrvW9QAATiGyumf_XY2kvn1KPEPy0GeKLDHAUvtjDa3mwQ2A7FjGeQ==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1829965620844",
+    "process_start_time": "1769840069",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\CarolC\\Downloads\\UPDPSWin_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "2dcfd4c07d2e72649d561ef086a7d23fb7055dd6c73cb347cf1faa18f9ce3c26",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-05"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:30:18.391Z",
+    "tree_id": "502511660920",
+    "tree_root": "1829965620844",
+    "triggering_process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829965620844",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:30:20.310974017Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-05$",
+    "user_principal": "JDH-HQ-PC-05$@jdh.com"
+  },
+  {
+    "agent_id": "ba04a1853dfb4bf98454735adbd55169",
+    "aggregate_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "alleged_filetype": "exe",
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe\" \"RunRole\" \"65abcbc5-3c43-4ac9-a64f-76610b22a650\" \"System\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:720369528710-10100-4183824",
+    "confidence": 50,
+    "context_timestamp": "2026-01-30T23:47:40.029Z",
+    "crawled_timestamp": "2026-01-31T09:00:46.378168357Z",
+    "created_timestamp": "2026-01-31T08:01:46.393911458Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-01-22T11:20:11.391Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.36.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "ba04a1853dfb4bf98454735adbd55169",
+      "external_ip": "12.244.255.254",
+      "first_seen": "2025-02-28T15:11:50Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-WHOFFICE",
+      "last_seen": "2026-01-31T08:56:36Z",
+      "local_ip": "192.168.5.11",
+      "mac_address": "e0-d4-64-ce-c1-65",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:58:21Z",
+      "os_version": "Windows 10",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 7080"
+    },
+    "display_name": "SuspiciousRMMUsage",
+    "event_correlation_id": "0945ac0c-36fe-f011-87c4-70b5e8432d58",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:720369528710-10100-4183824?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "ScreenConnect.WindowsClient.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1532",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704384799610",
+      "process_id": "704384799610",
+      "sha256": "4a912dc98c977788131aad0ae468d86792211ed225f80b2c344a3690b4437428",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "id": "ind:ba04a1853dfb4bf98454735adbd55169:720369528710-10100-4183824",
+    "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:720369528710-10100-4183824",
+    "ioc_context": [],
+    "lead_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "local_prevalence": "common",
+    "local_process_id": "35716",
+    "logon_domain": "JDH",
+    "md5": "f4f235efd9873261762b4d940972d756",
+    "mitre_attack": [
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      }
+    ],
+    "name": "SuspiciousRMMUsage",
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe\" \"?e=Access&y=Guest&h=myremote2.technijian.com&p=8041&s=8dc6cb74-7375-40b3-9376-d94542493d78&k=BgIAAACkAABSU0ExAAgAAAEAAQDxJ3HZU2kmSU2L%2fwvXw%2b5vOHXgem7vXCvSaQ3VjZQiy1GNzt2zIYpFQwBCyTSj1EJjgFfvKXEvBJfLUoE9kfQ040ry1i0JIuxjiAvoNQeQU4oGqSmcsjJ%2fn8Rtfz17hsGXOpkG2RKeBfTofpZGY6odnNvRERmV%2fWVUmyHJ%2ff7IXVuzCzkEKLV4t2svZaVORF2hS%2bFtVvLd3lidSn8IobpDHp%2b28wnpvrWmLnBC2EJ7O44SEwD7bEpDckq%2f%2fwm%2fOiEv5rUKiGphIhTqGrp5pRm%2fAqrvm4d7rA1jvao8o9z41QxVr8hKGLSQ0H5t83zLtonIEOEX4logOUH9Dr8iqADF&v=AQAAANCMnd8BFdERjHoAwE%2fCl%2bsBAAAAHcEOcbvdY0Wy6PeoARVUdAAAAAACAAAAAAAQZgAAAAEAACAAAADWEBoo7HZmb%2f4NZ4AiEeWllRrsTNCfsLX%2f0PKuPCJ7RAAAAAAOgAAAAAIAACAAAADuKoCYWgBjrQwSu3mMOagEuVJkBKZ3KUWMHKO%2bZQoA3qAEAACbChn5KMF302BCN9jfGUaWcFUJFgGwbIToHw1AW7xP4DUSS1rKjn3eLHXMFTY8%2fSc%2fo13DTTsB%2fe4ifYHviS2Z2CW7P8jDq6%2bKWDHJ6S1iWgckJMIAC%2b%2fTQLxrfiDvuQhbOHNH1M9ta6FY53zYn8S92scXBPNcr2eiRl7lX6DKGjC4yZjsVLdey1sJsGEy%2fwGTaXGMd362Vg5pr4iA2pp91J68RStI8wSlHfewUXMkvL6jtvEPdC9TJ3yVpRocVXVrQKsoJEn5GpID12UElfvr4Dg0t847wJwK1j8u%2fUrJMVK%2fPSDhbRcJXFFKY0kFOteioSpVGvKWChoc%2fyoCJpTMRl%2fF3hfbNG6caPYoTZJeDXL5sY8AGp3znEY91QvFJ5GwE5kXWXYENwLPIiMianHuxMgeDqoiUphSYREl6LE9Wy%2ffGJFL7%2fxY6eG%2bTtPmEupcXRs%2bo%2bmv%2bH4z%2bsZ1uWhNm1EkmZhZXcxELkdGdnVj5UcQLYxkGO00OTMx6KTMKRs2q5PtGkYXFfFgNWDSgIFzKH5M0hwsSPYiVeDopzLDK7iVTPUMxZZjXFs7Udt9V9NfHiPc9M1u%2fnneYNEPOMmTctT0kbOL98ssSYTnMyGJaMLoaYdEFUqkim3Pxrz3z7GYAXPoLeWxo6LuxyXkixmBK2U6%2buUAzb9QhEPi9P%2fbhnAyhO3miG9voWq1ZM1Uk7lPK02ca72XMXUqj2Ih7JMBIZD5mN2x7n%2flEL77XcSqYVK6p2Ic9Cn%2fG4i55zxD6YYiAd73ZF10XXPSuttd4OjWEcXIBjozIQOMM97TvwnMf5afjKwM2cbuCfrJudesskaZeuD6WkXTxqcOOl%2f81fLAeimhgOB32tZBH%2f3DlJgLSYgqlgNPlbACEhm4voprRdqlp871z%2bgQ7yFtzIIVFUvm0GtE6L4W3hX9T3PaGJL4yIEwF8OBuVrzcqzlAF85KYD1NR6y9RA7kWq1%2bApXhXYUj0qX42p9uMUJqZh4YAlKW57qU6whAAfJkb9uvacUCHkQLdnSISUDE0iMMYm2jzVj95P6nLhytPy%2btlMQ5ndmGkZvLBlpWHFARHy5APLEVqEOTm63YOYJl4Xr%2f1k5fiKOAvKkhBdY0l4Tz5H6uixwzpk16AeWsN%2bRkdXwkwIqkC3kMzJ92cAZPqL2fqrHTjhhRk8kVvIMG8VBHpU2f12w2amTCWOfzKbhY%2fi8duqH8Y%2bJyfYgVXNLdk%2b%2b9q96Woj0wme1umxpve4lUYrL6qTDkVRHvhulncaM7dsRf7Vak2AQAvNShspmT%2f3voZM6rGO9dG5zHS%2fN08JFKG4bVrRYFXGAWpvUb5Be3PZLqhl8j1aT1pGOuyFBv2w7Jm%2b%2bNaaIUm2yPtGMAWYHWf1ZVMPhJv3ZkjgS0nTH2ro1skUaHl0dx05qJD%2f%2f4BvPJtSgZp2qnxMkEzv%2bQ0Liuc1htaIOH0qEdTdKlnu%2fA7BHvfzHK%2bNjLhJuwfpGkk5MEk5lTK2gg7IHLjsBp8Ess9c7BUfjCTQh7EDcRWpsWiEzH3BPzjSBJrzbRyrgl5SUVptBnb3XvDKcVTMjT2y4Cz2XtK4g%2b0AAAADawHqzGQrUxzFruvS003UHQDkCmCIaVPOKBwtc49ZA%2fVSTyRwKQFL8nHiSTdZ32RNHm4iL1GzKza6TvUDBRw%2b5&c=JDH&c=&c=&c=&c=&c=&c=&c=\"",
+      "filename": "ScreenConnect.ClientService.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe",
+      "local_process_id": "5012",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704473066831",
+      "process_id": "704473066831",
+      "sha256": "ecd5ed16975d556d1d17bc980f248f8a5262bed11df9d9cf999efd9c273c11df",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "parent_process_id": "704473066831",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10100,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6k4kF5-6G5hRVlWCakFuIXwAATiFP1XQ4NbbJ_9KKzsVIsh5KlpAV3yZShdQSmPX2kKtcig==",
+    "process_end_time": "1769816870",
+    "process_id": "720369528710",
+    "process_start_time": "1769816860",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 50,
+    "severity_name": "Medium",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "7cd74f5e0fb8b9cdf3275a03ac29f25c88a2adea7afa1a1a0e719a54be9d9e2b",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Remote Access Tools",
+    "technique_id": "T1219",
+    "template_instance_id": "24842",
+    "timestamp": "2026-01-30T23:48:40.781Z",
+    "triggering_process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:720369528710",
+    "type": "signal",
+    "updated_timestamp": "2026-01-31T09:00:46.378145175Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-WHOFFICE$",
+    "user_principal": "JDH-WHOFFICE$@jdh.com"
+  },
+  {
+    "agent_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+    "aggregate_id": "aggind:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+        "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096"
+      }
+    ],
+    "child_process_ids": [
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190126326525",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190116791598",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190122154467",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190128035544"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10800144",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:07:32.875Z",
+    "control_graph_id": "ctg:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "crawled_timestamp": "2026-01-31T08:07:34.7003768Z",
+    "created_timestamp": "2026-01-31T07:08:34.721086626Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T21:44:09.281Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-03-28T17:16:01Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-03",
+      "last_seen": "2026-01-31T08:02:13Z",
+      "local_ip": "10.0.0.129",
+      "mac_address": "c4-5a-b1-fa-a3-36",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:03:12Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "tm-sdk.platinumai.net",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "8ed95973-73fe-f011-b27a-586d672fed6e",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10800144?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "D332A0BA4AE6C453CA9BF04F81ADE9C782183BFB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "1AC397BE63211F2027F85C2FE7BAB5F6851EDAE1.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "4431D2A2855189C08741043035566E4AAE7C7C6E.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "2A4FFDC2F4CD06045909010F9E62C4FEA8AB64C7.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "69E92602DEB7D26E2F548CFA1DAC497DABF96CCF.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "2D7360FD51943CC9E02DF2A65D06F23CD13C2CE3.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "441BCDCB8D0749C92E55EBF7BDB54C5115EE1A03.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "012FE8F832ABA9CF238F58261AABFDDA3D7C3E8D.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "1212D5D2FF53541CDC93D44EA4B2A45091D2CBAD.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "D4724D8A742CB2604EA0D9DF33069E9CBAA3AC2D.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "1725C7FE4B961F8D179378AC1ABA43D679F6F9FC.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "23CE0D7D4C7608F869393E5DC63226293725E29D.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "291523E9355427F391F7A9E45BABE2A058A5815C.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843256"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1476",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189714016995",
+      "process_id": "1189714016995",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-03"
+    ],
+    "id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10800144",
+    "indicator_id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10800144",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+        "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+    "local_process_id": "14508",
+    "logon_domain": "JDH",
+    "md5": "69be015b7f9cd153fc229ad0b3a1bbd4",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769843253",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.129",
+        "local_port": "49980",
+        "protocol": "TCP",
+        "remote_address": "23.213.45.217",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1600",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189717261531",
+      "process_id": "1189717261531",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "parent_process_id": "1189717261531",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6k05lOUlfK3EMIrLlk8-d-AAATiFSGFE48JMXVFxcHLVT5ELNFFB97UWQ9kAzxyUOO1ICZw==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1190017111987",
+    "process_start_time": "1769838394",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\AimeeA\\Downloads\\UPDPCL6Win_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-03"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:07:32.947Z",
+    "tree_id": "352187980164",
+    "tree_root": "1190017111987",
+    "triggering_process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:07:34.700363412Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-03$",
+    "user_principal": "JDH-HQ-PC-03$@jdh.com"
+  },
+  {
+    "agent_id": "ba04a1853dfb4bf98454735adbd55169",
+    "aggregate_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:ba04a1853dfb4bf98454735adbd55169:724043999421"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\TeamViewer\\TeamViewer_Service.exe\" -uninstall",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:724043774654-10100-9672976",
+    "confidence": 50,
+    "context_timestamp": "2026-01-31T05:39:57.907Z",
+    "crawled_timestamp": "2026-01-31T09:00:46.357848803Z",
+    "created_timestamp": "2026-01-31T08:01:46.359177039Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-01-22T11:20:11.391Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.36.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "ba04a1853dfb4bf98454735adbd55169",
+      "external_ip": "12.244.255.254",
+      "first_seen": "2025-02-28T15:11:50Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-WHOFFICE",
+      "last_seen": "2026-01-31T08:56:36Z",
+      "local_ip": "192.168.5.11",
+      "mac_address": "e0-d4-64-ce-c1-65",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:58:21Z",
+      "os_version": "Windows 10",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 7080"
+    },
+    "display_name": "SuspiciousRMMUsage",
+    "event_correlation_id": "e2baecd2-66fe-f011-87c4-70b5e8432d58",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:724043774654-10100-9672976?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "TeamViewer_Service.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\TeamViewer\\TeamViewer_Service.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "355409-TeamViewer_Setup_15.74.3.exe /S",
+      "filename": "355409-TeamViewer_Setup_15.74.3.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\patches\\355409-TeamViewer_Setup_15.74.3.exe",
+      "local_process_id": "53196",
+      "md5": "0145bc0dc083a33d53ab2f69700ad8e7",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:724039309385",
+      "process_id": "724039309385",
+      "sha256": "4d02b7c7e645456fc2e1c40a92f7587e3c1a265c71ec914574df9042db32f717",
+      "timestamp": "2026-01-31T05:40:12Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "id": "ind:ba04a1853dfb4bf98454735adbd55169:724043774654-10100-9672976",
+    "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:724043774654-10100-9672976",
+    "ioc_context": [],
+    "lead_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "local_prevalence": "unique",
+    "local_process_id": "33056",
+    "logon_domain": "JDH",
+    "md5": "c72f250bdc21a0f81ecb0d625727064c",
+    "mitre_attack": [
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      }
+    ],
+    "name": "SuspiciousRMMUsage",
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "\"C:\\Windows\\TEMP\\nso7AF5.tmp\\nsz7B35\\TeamViewer_.exe\" /S ",
+      "filename": "TeamViewer_.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\Temp\\nso7AF5.tmp\\nsz7B35\\TeamViewer_.exe",
+      "local_process_id": "11880",
+      "md5": "ecb0fc07eea063d1642e9297ded9db15",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:724040538746",
+      "process_id": "724040538746",
+      "sha256": "c8c0c2f004447f1d1963701c6ea46bd4cb9e1f327b576fb4d6a1ab4dabca61d9",
+      "timestamp": "2026-01-31T05:40:12Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "parent_process_id": "724040538746",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10100,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6Xd0s_Q_gMomy9AkD67cCFAAATiHB4r5WNI9CwHyQoUKZLcW4VIHNiFPGoiVlkALork9Pkw==",
+    "process_end_time": "1769837998",
+    "process_id": "724043774654",
+    "process_start_time": "1769837997",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 50,
+    "severity_name": "Medium",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "7fe842bf311337e1b7029c476bebea096653c8369abca7b4549044d95be2f94f",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Remote Access Tools",
+    "technique_id": "T1219",
+    "template_instance_id": "24864",
+    "timestamp": "2026-01-31T05:39:54.146Z",
+    "triggering_process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:724043774654",
+    "type": "signal",
+    "updated_timestamp": "2026-01-31T09:00:46.357825598Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-WHOFFICE$",
+    "user_principal": "JDH-WHOFFICE$@jdh.com"
+  },
+  {
+    "agent_id": "55e00a82c3144c10a828a800a3f5660a",
+    "aggregate_id": "aggind:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+        "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096"
+      }
+    ],
+    "child_process_ids": [
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830079586086",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830088211912",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830082824509",
+      "pid:55e00a82c3144c10a828a800a3f5660a:1830086059125"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8039184",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:30:17.950Z",
+    "control_graph_id": "ctg:55e00a82c3144c10a828a800a3f5660a:502511660920",
+    "crawled_timestamp": "2026-01-31T08:30:20.288900285Z",
+    "created_timestamp": "2026-01-31T07:31:20.291863032Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T22:12:13.400Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "55e00a82c3144c10a828a800a3f5660a",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-02-28T08:55:19Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-05",
+      "last_seen": "2026-01-31T08:16:16Z",
+      "local_ip": "10.0.0.128",
+      "mac_address": "c4-5a-b1-fa-af-ee",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:18:08Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769844618",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "9954a69d-76fe-f011-832d-586d6730ff42",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8039184?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "252F42AE846A6BA13696BDF1BC22E44B8859EBD4.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "C4344A7FEDB84F24E252307C036EDB2C579DC3A8.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "7E619D4C7BCA971ECBD74989AD1CE8CE50A0609A.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "1B2C28A0B7DC65B47144FBC2004CDEC37685D6C9.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "9608BA8A62A4A0C2D54D359DF355DCAB44A2BAEB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "97D6549C3EC7B21353BD9A7C310BB823DB071ADB.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "EF96A4E9CD68457F3510164BFA6119F9843A3F26.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "ED438548C2F637D1A9384B63251B1491DBF976CE.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "07E997E5E0D05A5F6C5FE6ACC53AA5A64F291C56.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      },
+      {
+        "filename": "1E6B7DB7DF9F34A70D64221EDBE190F737A69331.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844626"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "47535B05DC81DA626613089E38F1A7B891AB84A6.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "316A331CCF9196B0BF17CBA9432A6345CA4DCC05.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844618"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844619"
+      },
+      {
+        "filename": "23CE0D7D4C7608F869393E5DC63226293725E29D.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "1725C7FE4B961F8D179378AC1ABA43D679F6F9FC.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769844620"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1480",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829663630598",
+      "process_id": "1829663630598",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T06:12:15.229Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-05"
+    ],
+    "id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8039184",
+    "indicator_id": "ind:55e00a82c3144c10a828a800a3f5660a:1829965620844-4746-8039184",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+        "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\76A5D635BF8503A7F4B3127BAD5FA36F97C40C2B.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+    "local_prevalence": "low",
+    "local_process_id": "3016",
+    "logon_domain": "JDH",
+    "md5": "a1537521b352a1f1cb3061772dd6a4b1",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769844618",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.128",
+        "local_port": "50065",
+        "protocol": "TCP",
+        "remote_address": "23.62.134.88",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1604",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829666728730",
+      "process_id": "1829666728730",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T06:12:15.234Z",
+      "user_graph_id": "uid:55e00a82c3144c10a828a800a3f5660a:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-05$"
+    },
+    "parent_process_id": "1829666728730",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6iLk3CSDNZBgsaMwZS-UP4gAATiGiPbPjYxJkj1Qalr2LuMgohQyAo2rOpjuovVmloyg85Q==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1829965620844",
+    "process_start_time": "1769840069",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\CarolC\\Downloads\\UPDPSWin_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "241e8a95acbc9a8412d3afcb2efce229a6f4e636fdd7f293782bd9edf71c7096",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-05"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:30:18.503Z",
+    "tree_id": "502511660920",
+    "tree_root": "1829965620844",
+    "triggering_process_graph_id": "pid:55e00a82c3144c10a828a800a3f5660a:1829965620844",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:30:20.288883985Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-05$",
+    "user_principal": "JDH-HQ-PC-05$@jdh.com"
+  },
+  {
+    "agent_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+    "aggregate_id": "aggind:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "alleged_filetype": "exe",
+    "associated_files": [
+      {
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+        "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934"
+      }
+    ],
+    "child_process_ids": [
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190116791598",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190122154467",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190126326525",
+      "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190128035544"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10798352",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T07:07:32.506Z",
+    "control_graph_id": "ctg:a8f6ad6e891b46afb64b535a89e5af5c:352187980164",
+    "crawled_timestamp": "2026-01-31T08:07:34.695763615Z",
+    "created_timestamp": "2026-01-31T07:08:34.685828971Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file written to the file-system surpassed a low-confidence adware detection threshold.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-30T21:44:09.281Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.31.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "a8f6ad6e891b46afb64b535a89e5af5c",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-03-28T17:16:01Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-HQ-PC-03",
+      "last_seen": "2026-01-31T08:02:13Z",
+      "local_ip": "10.0.0.129",
+      "mac_address": "c4-5a-b1-fa-a3-36",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:03:12Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex Micro Plus 7010"
+    },
+    "display_name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "dns_requests": [
+      {
+        "domain_name": "tm-sdk.platinumai.net",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dellupdater.dell.com",
+        "interface_index": "0",
+        "load_time": "1769843253",
+        "request_type": "AAAA"
+      }
+    ],
+    "email_sent": true,
+    "event_correlation_id": "58d95973-73fe-f011-b27a-586d672fed6e",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/activity-v2/detections/67042d38f41f47e88860b83405b0b87a:ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10798352?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "DellSupportAssistRemedationService.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Dell\\SARemediation\\agent\\DellSupportAssistRemedationService.exe",
+    "files_accessed": [
+      {
+        "filename": "69E92602DEB7D26E2F548CFA1DAC497DABF96CCF.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "1AC397BE63211F2027F85C2FE7BAB5F6851EDAE1.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "D332A0BA4AE6C453CA9BF04F81ADE9C782183BFB.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "4431D2A2855189C08741043035566E4AAE7C7C6E.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "2A4FFDC2F4CD06045909010F9E62C4FEA8AB64C7.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843260"
+      },
+      {
+        "filename": "1212D5D2FF53541CDC93D44EA4B2A45091D2CBAD.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "441BCDCB8D0749C92E55EBF7BDB54C5115EE1A03.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "14B3713644AA4ED67BBFC5968D57D5BED25F4EA5.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "012FE8F832ABA9CF238F58261AABFDDA3D7C3E8D.txt",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      },
+      {
+        "filename": "74BC78C774D0EAF67A0FEE6B7B57620EC1856B0C.xml",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843261"
+      }
+    ],
+    "files_written": [
+      {
+        "filename": "6752C1536BB4B5BAB01FD37285C00A6C354EEA21.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "42E780CDD342BCBDCC646E5330DA2C1DBD5436A2.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843252"
+      },
+      {
+        "filename": "92C0CFC07F428BEA5AA4184B973469F2290C7D6B.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "F11347C1F7029CA4351DD7D0597D2AF7A9A63C81.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "9F4F8F1592C2286FD7DB43CEC2C1FA1023AD199A.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843253"
+      },
+      {
+        "filename": "7A6AF43106B9D88BF389623168580D9A8C1715B7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "4AD1A2BEE43E7E8CC400EA8A1D141F4AC05D76A7.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "1725C7FE4B961F8D179378AC1ABA43D679F6F9FC.msi",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "23CE0D7D4C7608F869393E5DC63226293725E29D.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843254"
+      },
+      {
+        "filename": "291523E9355427F391F7A9E45BABE2A058A5815C.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup",
+        "timestamp": "1769843256"
+      }
+    ],
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1476",
+      "md5": "7f823ed168f86c4b5be7b3811aa4b862",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189714016995",
+      "process_id": "1189714016995",
+      "sha256": "4a4b7d38e8c02b8291e9761dbe018f5b4c27a04933bd576edf96877004630684",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "host_names": [
+      "JDH-HQ-PC-03"
+    ],
+    "id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10798352",
+    "indicator_id": "ind:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987-4746-10798352",
+    "ioc_context": [
+      {
+        "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+        "ioc_source": "file_write",
+        "ioc_type": "hash_sha256",
+        "ioc_value": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+        "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+        "type": "module"
+      }
+    ],
+    "ioc_description": "\\Device\\HarddiskVolume3\\ProgramData\\Dell\\SARemediation\\SystemRepair\\Snapshots\\Backup\\9FF52E185F674A0B7FF4B19813CD415EC86AE68F.exe",
+    "ioc_source": "file_write",
+    "ioc_type": "hash_sha256",
+    "ioc_value": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+    "local_prevalence": "low",
+    "local_process_id": "14508",
+    "logon_domain": "JDH",
+    "md5": "69be015b7f9cd153fc229ad0b3a1bbd4",
+    "mitre_attack": [
+      {
+        "pattern_id": 4746,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0006",
+        "tactic": "Machine Learning",
+        "technique": "Adware/PUP"
+      }
+    ],
+    "name": "OnWrite-PrewittPupAdwareSensorDetect-Low",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769843253",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.0.0.129",
+        "local_port": "49980",
+        "protocol": "TCP",
+        "remote_address": "23.213.45.217",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1600",
+      "md5": "891c3537dab6cf1fb075ab6d24a097e1",
+      "process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1189717261531",
+      "process_id": "1189717261531",
+      "sha256": "f5b47a22c636c6c1d0bc6c02635cd0144926ad9d3a75d25b4726a60769530354",
+      "timestamp": "2026-01-31T05:44:11.205Z",
+      "user_graph_id": "uid:a8f6ad6e891b46afb64b535a89e5af5c:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-HQ-PC-03$"
+    },
+    "parent_process_id": "1189717261531",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4746,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6ioguVDnR6qG_O9LU2SRfuQAATiF7HRVK7Ip3i1Jb4-8GNgBsOz5953CBRYyEHwlcnanVvw==",
+    "priority_details": {
+      "raw_value": 50
+    },
+    "priority_explanation": [
+      "[MOD] The severity of the detection"
+    ],
+    "priority_value": 50,
+    "process_id": "1190017111987",
+    "process_start_time": "1769838394",
+    "product": "epp",
+    "referrer_url": "C:\\Users\\AimeeA\\Downloads\\UPDPCL6Win_397370MU.zip",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "41f43f5f5c4cd5d5761bd34c243a8c5a154f926a332bbd938715e5f3a368b934",
+    "show_in_ui": true,
+    "source_hosts": [
+      "JDH-HQ-PC-03"
+    ],
+    "source_products": [
+      "Falcon Insight"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Adware/PUP",
+    "technique_id": "CST0006",
+    "timestamp": "2026-01-31T07:07:32.743Z",
+    "tree_id": "352187980164",
+    "tree_root": "1190017111987",
+    "triggering_process_graph_id": "pid:a8f6ad6e891b46afb64b535a89e5af5c:1190017111987",
+    "type": "ldt",
+    "updated_timestamp": "2026-01-31T08:07:34.695744027Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-HQ-PC-03$",
+    "user_principal": "JDH-HQ-PC-03$@jdh.com"
+  },
+  {
+    "agent_id": "ba04a1853dfb4bf98454735adbd55169",
+    "aggregate_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:ba04a1853dfb4bf98454735adbd55169:718629423885",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720542730284",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720547449493",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720582980347",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720585287238",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720588048716",
+      "pid:ba04a1853dfb4bf98454735adbd55169:720589089782",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721184225543",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721185461151",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721328325555",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721329150032",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721550618336",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721552655320",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721796527788",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721798040345",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721857955639",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721860196663",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721935115096",
+      "pid:ba04a1853dfb4bf98454735adbd55169:721936190065",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722020768949",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722022177695",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722085746636",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722087330315",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722190330609",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722192306922",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722353352185",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722355448270",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722410723273",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722412331396",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722520614133",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722524220526",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722761227230",
+      "pid:ba04a1853dfb4bf98454735adbd55169:722763112316",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724094118681",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724095548834",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724217866420",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724219584148",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724284481749",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724286655442",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724396928959",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724398672962",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724446299571",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724447680805",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724516077486",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724518171183",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724587751893",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724589611488",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724702138055",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724704025719",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724776769503"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:718628593550-10517-4889360",
+    "confidence": 80,
+    "context_timestamp": "2026-01-30T23:52:56.289Z",
+    "crawled_timestamp": "2026-01-31T09:00:46.379577162Z",
+    "created_timestamp": "2026-01-31T08:01:46.366187943Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process has opened a handle to a Falcon process with excessive permissions requested. If this is unexpected, review the process tree and surrounding events.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-01-22T11:20:11.391Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.36.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "ba04a1853dfb4bf98454735adbd55169",
+      "external_ip": "12.244.255.254",
+      "first_seen": "2025-02-28T15:11:50Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-WHOFFICE",
+      "last_seen": "2026-01-31T08:56:36Z",
+      "local_ip": "192.168.5.11",
+      "mac_address": "e0-d4-64-ce-c1-65",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:58:21Z",
+      "os_version": "Windows 10",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 7080"
+    },
+    "display_name": "SensorHandleOpenedLow",
+    "dns_requests": [
+      {
+        "domain_name": "googl.com",
+        "interface_index": "0",
+        "load_time": "1769817172",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "huntress-survey-results.s3.amazonaws.com",
+        "interface_index": "0",
+        "load_time": "1769838131",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "huntress.io",
+        "interface_index": "0",
+        "load_time": "1769849742",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "eetee.huntress.io",
+        "interface_index": "0",
+        "load_time": "1769849999",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "ac957a75-36fe-f011-87c4-70b5e8432d58",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:718628593550-10517-4889360?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "HuntressAgent.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1532",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704384799610",
+      "process_id": "704384799610",
+      "sha256": "4a912dc98c977788131aad0ae468d86792211ed225f80b2c344a3690b4437428",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "id": "ind:ba04a1853dfb4bf98454735adbd55169:718628593550-10517-4889360",
+    "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:718628593550-10517-4889360",
+    "ioc_context": [],
+    "lead_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "local_prevalence": "common",
+    "local_process_id": "17716",
+    "logon_domain": "JDH",
+    "md5": "7017a290cf352b3efacb846ef6670b6f",
+    "mitre_attack": [
+      {
+        "pattern_id": 10517,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      }
+    ],
+    "name": "SensorHandleOpenedLow",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58136",
+        "protocol": "TCP",
+        "remote_address": "52.5.160.94",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58550",
+        "protocol": "TCP",
+        "remote_address": "3.228.58.12",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58318",
+        "protocol": "TCP",
+        "remote_address": "52.20.0.75",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58631",
+        "protocol": "TCP",
+        "remote_address": "1.1.1.1",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58271",
+        "protocol": "TCP",
+        "remote_address": "54.173.221.186",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "169.254.139.113",
+        "local_port": "55481",
+        "protocol": "UDP",
+        "remote_address": "1.1.1.1",
+        "remote_port": "53"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58606",
+        "protocol": "TCP",
+        "remote_address": "100.48.203.5",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58378",
+        "protocol": "TCP",
+        "remote_address": "100.50.150.125",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817172",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58441",
+        "protocol": "TCP",
+        "remote_address": "44.212.165.206",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769817175",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "58642",
+        "protocol": "TCP",
+        "remote_address": "34.203.19.218",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "56648",
+      "md5": "7017a290cf352b3efacb846ef6670b6f",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:718625040933",
+      "process_id": "718625040933",
+      "sha256": "53c678339ad77f178e38c87da7966162f42587d4187fbd7853eb5c51d50ae69a",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "parent_process_id": "718625040933",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10517,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6r9ARBMCww0YevZSCP5JkQwAATiG4Qo9MEVTUUpHkJwGuIZ4Z-yaQcJ595rIvKbN6oQnRuQ==",
+    "process_id": "718628593550",
+    "process_start_time": "1769181914",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 20,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "53c678339ad77f178e38c87da7966162f42587d4187fbd7853eb5c51d50ae69a",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Impair Defenses",
+    "technique_id": "T1562",
+    "template_instance_id": "20587",
+    "timestamp": "2026-01-30T23:52:52.354Z",
+    "triggering_process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:718628593550",
+    "type": "signal",
+    "updated_timestamp": "2026-01-31T09:00:46.379563869Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-WHOFFICE$",
+    "user_principal": "JDH-WHOFFICE$@jdh.com"
+  },
+  {
+    "agent_id": "ba04a1853dfb4bf98454735adbd55169",
+    "aggregate_id": "",
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:automated-lead:67042d38f41f47e88860b83405b0b87a:4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "crawled_timestamp": "2026-02-01T11:33:43.026948558Z",
+    "created_timestamp": "2026-01-31T08:00:45.293216847Z",
+    "device": {
+      "device_id": "ba04a1853dfb4bf98454735adbd55169"
+    },
+    "display_name": "JDH-WHOFFICE at 2026-01-30T23:48:40Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:automated-lead:67042d38f41f47e88860b83405b0b87a:4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "id": "automated-lead:67042d38f41f47e88860b83405b0b87a:4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "is_closed": true,
+    "lead_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      },
+      {
+        "pattern_id": 10517,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      },
+      {
+        "pattern_id": 177,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      }
+    ],
+    "name": "JDH-WHOFFICE at 2026-01-30T23:48:40Z",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "pattern_id": 185000,
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6DaG3-TmrSk7R_3lD3opFFAAATiEBvPvpkq7AfW1IYkN3y6UHNntyYgHF7CHEQ0HTBuh_EQ==",
+    "product": "automated-lead",
+    "score": 19,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-01-31T08:00:42Z",
+    "signal_start_timestamp": "2026-01-30T23:48:40Z",
+    "signal_updated_timestamp": "2026-02-01T11:33:39Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+        "display_name": "SuspiciousRMMUsage",
+        "host_id": "ba04a1853dfb4bf98454735adbd55169",
+        "hostname": "JDH-WHOFFICE",
+        "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:720369528710-10100-4183824",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10100,
+        "process_id": "720369528710",
+        "severity": 50,
+        "signal_association_timestamp": "2026-01-30T23:48:40Z",
+        "template_instance_id": 24842
+      },
+      {
+        "description": "A process has opened a handle to a Falcon process with excessive permissions requested. If this is unexpected, review the process tree and surrounding events.",
+        "display_name": "SensorHandleOpenedLow",
+        "host_id": "ba04a1853dfb4bf98454735adbd55169",
+        "hostname": "JDH-WHOFFICE",
+        "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:718628593550-10517-4889360",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10517,
+        "process_id": "718628593550",
+        "severity": 20,
+        "signal_association_timestamp": "2026-01-30T23:52:52Z",
+        "template_instance_id": 20587
+      },
+      {
+        "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+        "display_name": "SuspiciousRMMUsage",
+        "host_id": "ba04a1853dfb4bf98454735adbd55169",
+        "hostname": "JDH-WHOFFICE",
+        "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:724043774654-10100-9672976",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10100,
+        "process_id": "724043774654",
+        "severity": 50,
+        "signal_association_timestamp": "2026-01-31T05:39:54Z",
+        "template_instance_id": 24864
+      },
+      {
+        "description": "A file with a known ransomware extension was created.",
+        "display_name": "HighConfidenceRansomwareEncryptingFileInformational",
+        "host_id": "ba04a1853dfb4bf98454735adbd55169",
+        "hostname": "JDH-WHOFFICE",
+        "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:704479390699-177-10167056",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 177,
+        "process_id": "704479390699",
+        "severity": 70,
+        "signal_association_timestamp": "2026-01-31T08:00:42Z",
+        "template_instance_id": 0
+      }
+    ],
+    "timestamp": "2026-02-01T11:33:42Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-02-01T11:33:43.026934371Z"
+  },
+  {
+    "agent_id": "ba04a1853dfb4bf98454735adbd55169",
+    "aggregate_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:ba04a1853dfb4bf98454735adbd55169:724559756449",
+      "pid:ba04a1853dfb4bf98454735adbd55169:724565616619"
+    ],
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\Trend Micro\\Security Agent\\ntrtscan.exe\"",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:704479390699-177-10167056",
+    "confidence": 30,
+    "context_timestamp": "2026-01-31T08:00:46.233Z",
+    "crawled_timestamp": "2026-01-31T09:00:46.361502087Z",
+    "created_timestamp": "2026-01-31T08:01:46.377678189Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file with a known ransomware extension was created.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-01-22T11:20:11.391Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.36.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "ba04a1853dfb4bf98454735adbd55169",
+      "external_ip": "12.244.255.254",
+      "first_seen": "2025-02-28T15:11:50Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "JDH-WHOFFICE",
+      "last_seen": "2026-01-31T08:56:36Z",
+      "local_ip": "192.168.5.11",
+      "mac_address": "e0-d4-64-ce-c1-65",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-31T08:58:21Z",
+      "os_version": "Windows 10",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "OptiPlex 7080"
+    },
+    "display_name": "HighConfidenceRansomwareEncryptingFileInformational",
+    "event_correlation_id": "6bbe50fe-78fe-f011-87c4-70b5e8432d58",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:ind:ba04a1853dfb4bf98454735adbd55169:704479390699-177-10167056?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "NTRTScan.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\Trend Micro\\Security Agent\\NTRTScan.exe",
+    "files_written": [
+      {
+        "filename": "Tmp85C4.tmp",
+        "filepath": "\\Device\\HarddiskVolume3\\Windows\\Temp",
+        "timestamp": "1769816925"
+      },
+      {
+        "filename": "Tmp2D92.tmp",
+        "filepath": "\\Device\\HarddiskVolume3\\Windows\\Temp",
+        "timestamp": "1769845796"
+      },
+      {
+        "filename": "Tmp944.tmp",
+        "filepath": "\\Device\\HarddiskVolume3\\Windows\\Temp",
+        "timestamp": "1769849456"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "wininit.exe",
+      "filename": "wininit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\wininit.exe",
+      "local_process_id": "1460",
+      "md5": "0774f3ce67b739aa9511254686259324",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704382273662",
+      "process_id": "704382273662",
+      "sha256": "ba26910be549b8700c08fbe2f160952288864470a30dd35c3c6b7782f7dbf857",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "id": "ind:ba04a1853dfb4bf98454735adbd55169:704479390699-177-10167056",
+    "indicator_id": "ind:ba04a1853dfb4bf98454735adbd55169:704479390699-177-10167056",
+    "ioc_context": [],
+    "lead_id": "4efe58b074a6c3c21faf4f087817516e564cf55949521b8e8b4222b0dbc55116",
+    "local_prevalence": "common",
+    "local_process_id": "5068",
+    "logon_domain": "JDH",
+    "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+    "mitre_attack": [
+      {
+        "pattern_id": 177,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      }
+    ],
+    "name": "HighConfidenceRansomwareEncryptingFileIndicator",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769846442",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "60044",
+        "protocol": "TCP",
+        "remote_address": "23.62.177.11",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1769846442",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.5.11",
+        "local_port": "59086",
+        "protocol": "TCP",
+        "remote_address": "23.61.210.167",
+        "remote_port": "80"
+      }
+    ],
+    "objective": "Follow Through",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1532",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704384799610",
+      "process_id": "704384799610",
+      "sha256": "4a912dc98c977788131aad0ae468d86792211ed225f80b2c344a3690b4437428",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:ba04a1853dfb4bf98454735adbd55169:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "JDH-WHOFFICE$"
+    },
+    "parent_process_id": "704384799610",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 177,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6NNBP33j4HdCOeRfM0mAYIgAATiHBsBD4W7nyMrpRQCbiuKp7SEU29XYo7JrjPqsTlly0yw==",
+    "process_id": "704479390699",
+    "process_start_time": "1768489606",
+    "product": "automated-lead-context",
+    "scenario": "ransomware",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 70,
+    "severity_name": "High",
+    "sha256": "c32f9f262f312e0d0c81d30e35bd707e3b0ba1fd476dd6d3a6c9d6b0ab411b29",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Impact",
+    "tactic_id": "TA0040",
+    "technique": "Data Encrypted for Impact",
+    "technique_id": "T1486",
+    "timestamp": "2026-01-31T08:00:42.588Z",
+    "triggering_process_graph_id": "pid:ba04a1853dfb4bf98454735adbd55169:704479390699",
+    "type": "signal",
+    "updated_timestamp": "2026-01-31T09:00:46.361468195Z",
+    "user_id": "S-1-5-18",
+    "user_name": "JDH-WHOFFICE$",
+    "user_principal": "JDH-WHOFFICE$@jdh.com"
+  },
+  {
+    "agent_id": "366ea857842445788af21a4ae187dbe4",
+    "aggregate_id": "e5e6d40338d20089aa2fff197017859f201d454699cad886b8e0bddde8a8c84c",
+    "alleged_filetype": "exe",
+    "cid": "67042d38f41f47e88860b83405b0b87a",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsStore_22512.1401.6.0_x64__8wekyb3d8bbwe\\StoreDesktopExtension.exe\" -Embedding",
+    "composite_id": "67042d38f41f47e88860b83405b0b87a:ind:366ea857842445788af21a4ae187dbe4:1510065090799-5768-24048144",
+    "confidence": 10,
+    "context_timestamp": "2026-01-30T04:47:14.224Z",
+    "crawled_timestamp": "2026-01-30T05:47:18.871597341Z",
+    "created_timestamp": "2026-01-30T04:48:19.610066628Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A file meets the cloud-based machine learning lowest confidence threshold for malicious files. Detection is based on a high degree of entropy, packing, anti-malware evasion, or other similarity to known malware.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-25T01:53:12.009Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "3.21.0",
+      "cid": "67042d38f41f47e88860b83405b0b87a",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "366ea857842445788af21a4ae187dbe4",
+      "external_ip": "12.231.12.100",
+      "first_seen": "2025-02-28T07:50:03Z",
+      "groups": [
+        "c79b5647ad934b1fa9c6ee039121c320"
+      ],
+      "hostinfo": {
+        "domain": "jdh.com"
+      },
+      "hostname": "DESKTOP-9SRRKTH",
+      "last_seen": "2026-01-30T05:35:06Z",
+      "local_ip": "10.0.0.138",
+      "mac_address": "c4-5a-b1-d3-8f-64",
+      "machine_domain": "jdh.com",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-30T05:36:38Z",
+      "os_version": "Windows 10",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "Precision 3460"
+    },
+    "display_name": "Machine Learning Identified Lowest Confidence Malicious File",
+    "event_correlation_id": "21c686b4-92fd-f011-9f56-c45ab1d38f64",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/67042d38f41f47e88860b83405b0b87a:ind:366ea857842445788af21a4ae187dbe4:1510065090799-5768-24048144?_cid=g04000cshn5ovnzvdgzauyqhj4sexhja",
+    "filename": "StoreDesktopExtension.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\WindowsApps\\Microsoft.WindowsStore_22512.1401.6.0_x64__8wekyb3d8bbwe\\StoreDesktopExtension.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1116",
+      "md5": "852ee5587d6cb0b8b17e981fe84a31d4",
+      "process_graph_id": "pid:366ea857842445788af21a4ae187dbe4:1490363325678",
+      "process_id": "1490363325678",
+      "sha256": "4a912dc98c977788131aad0ae468d86792211ed225f80b2c344a3690b4437428",
+      "timestamp": "2026-01-25T09:53:13.506Z",
+      "user_graph_id": "uid:366ea857842445788af21a4ae187dbe4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "DESKTOP-9SRRKTH$"
+    },
+    "id": "ind:366ea857842445788af21a4ae187dbe4:1510065090799-5768-24048144",
+    "indicator_id": "ind:366ea857842445788af21a4ae187dbe4:1510065090799-5768-24048144",
+    "ioc_context": [],
+    "lead_id": "e5e6d40338d20089aa2fff197017859f201d454699cad886b8e0bddde8a8c84c",
+    "local_prevalence": "low",
+    "local_process_id": "34636",
+    "logon_domain": "JDH",
+    "md5": "4ace968441819b2361c213fa9c3aa94c",
+    "mitre_attack": [
+      {
+        "pattern_id": 5768,
+        "tactic_id": "CSTA0004",
+        "technique_id": "CST0008",
+        "tactic": "Machine Learning",
+        "technique": "Cloud-based ML"
+      }
+    ],
+    "name": "LowestConfidenceMalware",
+    "objective": "Falcon Detection Method",
+    "origin_cid": "67042d38f41f47e88860b83405b0b87a",
+    "parent_details": {
+      "cmdline": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
+      "filename": "svchost.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\svchost.exe",
+      "local_process_id": "1276",
+      "md5": "3d1034d6ed3daed60816a25c561e8c83",
+      "process_graph_id": "pid:366ea857842445788af21a4ae187dbe4:1490365832839",
+      "process_id": "1490365832839",
+      "sha256": "b0b36bff7ae4057f687d839cd4b3d81159ab646f1ee1b22106a927e93decbb61",
+      "timestamp": "2026-01-25T09:53:13.522Z",
+      "user_graph_id": "uid:366ea857842445788af21a4ae187dbe4:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "DESKTOP-9SRRKTH$"
+    },
+    "parent_process_id": "1490365832839",
+    "pattern_id": 5768,
+    "platform": "Windows",
+    "poly_id": "AABnBC049B9H6IhguDQFsLh6GcUN0zvNwL7izMbn0wcHmQAATiFd7a7OYk1ulwwYQ6Hr9cn0EiNJRujUUL_fKV8w8ybR0Q==",
+    "process_end_time": "1769748494",
+    "process_id": "1510065090799",
+    "process_start_time": "1769748434",
+    "product": "automated-lead-context",
+    "scenario": "NGAV",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 10,
+    "severity_name": "Informational",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "a3e37cd38e51383f9dde04b12d424522d0c30c6896ca803fb47cf54238cdda25",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Machine Learning",
+    "tactic_id": "CSTA0004",
+    "technique": "Cloud-based ML",
+    "technique_id": "CST0008",
+    "timestamp": "2026-01-30T04:47:14.916Z",
+    "triggering_process_graph_id": "pid:366ea857842445788af21a4ae187dbe4:1510065090799",
+    "type": "signal",
+    "updated_timestamp": "2026-01-30T05:47:18.871574988Z",
+    "user_id": "S-1-5-21-2000478354-1214440339-682003330-1199",
+    "user_name": "Henrys"
+  }
+]

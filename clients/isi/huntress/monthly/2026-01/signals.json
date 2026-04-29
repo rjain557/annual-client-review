@@ -1,0 +1,52 @@
+[
+  {
+    "id": 87073305,
+    "created_at": "2026-01-02T21:45:56Z",
+    "details": {
+      "rule_name": "ThreatOps Hunting",
+      "foothold_name": "GoToMeeting",
+      "persistence_mechanism_id": 3024,
+      "binary_path": "\"C:\\Program Files (x86)\\GoToMeeting\\19950\\g2mstart.exe\" \"/Trigger RunAtLogon\""
+    },
+    "entity": {
+      "id": 11407683,
+      "name": "WKISI6",
+      "type": "agent"
+    },
+    "investigated_at": "2026-01-02T21:55:23Z",
+    "investigation_context": "Benign True Positive",
+    "name": "ThreatOps Hunting",
+    "organization": {
+      "id": 429258,
+      "name": "ISI - International Sportsmedicine Institute"
+    },
+    "status": "reported",
+    "type": "Footholds",
+    "updated_at": "2026-01-02T22:25:44Z"
+  },
+  {
+    "id": 87069934,
+    "created_at": "2026-01-02T21:16:28Z",
+    "details": {
+      "rule_name": "Regsvr32DllWithinAppdata",
+      "foothold_name": "GawUjxu",
+      "persistence_mechanism_id": 23788296,
+      "binary_path": "regsvr32.exe \"C:\\Users\\administrator\\AppData\\Roaming\\Kafew\\Qogavj.dll\""
+    },
+    "entity": {
+      "id": 11407683,
+      "name": "WKISI6",
+      "type": "agent"
+    },
+    "investigated_at": "2026-01-02T22:24:21Z",
+    "investigation_context": "",
+    "name": "Regsvr32DllWithinAppdata",
+    "organization": {
+      "id": 429258,
+      "name": "ISI - International Sportsmedicine Institute"
+    },
+    "status": "reported",
+    "type": "Footholds",
+    "updated_at": "2026-01-02T22:25:44Z"
+  }
+]

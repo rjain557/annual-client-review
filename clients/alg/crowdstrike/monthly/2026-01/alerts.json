@@ -1,0 +1,364 @@
+[
+  {
+    "agent_id": "d96d2ecd1c6d4375bbe56d44e489ad48",
+    "aggregate_id": "59c14c16cac3b40826304246d00fe387c80d8c15e935f68efcbd12b524b2252d",
+    "alleged_filetype": "EXE",
+    "child_process_ids": [
+      "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1369452573644",
+      "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1369456800918",
+      "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1369465306509"
+    ],
+    "cid": "673bb9bbc811452b80c519893169e8f1",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" ",
+    "composite_id": "673bb9bbc811452b80c519893169e8f1:ind:d96d2ecd1c6d4375bbe56d44e489ad48:1369441601838-10351-8862224",
+    "confidence": 80,
+    "context_timestamp": "2026-01-29T04:42:16.445Z",
+    "crawled_timestamp": "2026-01-29T05:42:20.357114484Z",
+    "created_timestamp": "2026-01-29T04:43:20.363555573Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process attempted to establish an unusual connection over a commonly used port, possibly to a command and control server. Adversaries can use this to bypass firewalls and evade detection. Review the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-01-28T08:57:40.519Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "Dell Inc.",
+      "bios_version": "1.5.1",
+      "cid": "673bb9bbc811452b80c519893169e8f1",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "d96d2ecd1c6d4375bbe56d44e489ad48",
+      "external_ip": "97.111.11.226",
+      "first_seen": "2025-06-17T16:49:58Z",
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "DESKTOP-8S6IF2G",
+      "last_seen": "2026-01-29T04:40:29Z",
+      "local_ip": "10.167.26.178",
+      "mac_address": "70-b5-e8-4f-98-32",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-01-29T04:40:43Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "Dell Inc.",
+      "system_product_name": "Inspiron 3880"
+    },
+    "display_name": "CommonlyUsedPortC2",
+    "dns_requests": [
+      {
+        "domain_name": "relcomms-prod-dagnegedescbeefs.b02.azurefd.net",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "augloop.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "titles.prod.mos.microsoft.com",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "roaming.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "metadata.templates.cdn.office.net",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "cdn.create.microsoft.com",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "westus-pa00.augloop.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "substrate.office.com",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "editor.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "graph.microsoft.com",
+        "interface_index": "0",
+        "load_time": "1769661736",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "9b29edcf-ccfc-f011-aa75-646ee05b107f",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/673bb9bbc811452b80c519893169e8f1:ind:d96d2ecd1c6d4375bbe56d44e489ad48:1369441601838-10351-8862224?_cid=g04000vqw6pq2abzhnbky42wj6rgenii",
+    "filename": "WINWORD.EXE",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+    "files_written": [
+      {
+        "filename": "Downloads.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\Jyoti Bansal\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1769660331"
+      },
+      {
+        "filename": "Bauddhik.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\Jyoti Bansal\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1769660331"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Windows\\system32\\userinit.exe",
+      "filename": "userinit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\userinit.exe",
+      "local_process_id": "15056",
+      "md5": "a47f5ff895a5ed0e4bbde3ed33ebbe6d",
+      "process_graph_id": "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1357559948721",
+      "process_id": "1357559948721",
+      "sha256": "f2f812ac4ccfa966acfb41ed279e92129eb0750151a8dc0fccffa1acf93ae278",
+      "timestamp": "2026-01-28T16:59:03Z",
+      "user_graph_id": "uid:d96d2ecd1c6d4375bbe56d44e489ad48:S-1-5-21-3341553137-3240648360-410670835-1004",
+      "user_id": "S-1-5-21-3341553137-3240648360-410670835-1004",
+      "user_name": "Jyoti Bansal"
+    },
+    "id": "ind:d96d2ecd1c6d4375bbe56d44e489ad48:1369441601838-10351-8862224",
+    "indicator_id": "ind:d96d2ecd1c6d4375bbe56d44e489ad48:1369441601838-10351-8862224",
+    "ioc_context": [],
+    "lead_id": "59c14c16cac3b40826304246d00fe387c80d8c15e935f68efcbd12b524b2252d",
+    "local_prevalence": "unique",
+    "local_process_id": "26968",
+    "logon_domain": "DESKTOP-8S6IF2G",
+    "md5": "06646bc1c57130fa4cba8393b47f7ee0",
+    "mitre_attack": [
+      {
+        "pattern_id": 10351,
+        "tactic_id": "TA0011",
+        "technique_id": "T1071",
+        "tactic": "Command and Control",
+        "technique": "Application Layer Protocol"
+      }
+    ],
+    "name": "GenericCommonlyUsedPortC2",
+    "network_accesses": [
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "63236",
+        "protocol": "TCP",
+        "remote_address": "13.107.136.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "54275",
+        "protocol": "TCP",
+        "remote_address": "23.222.17.235",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "63233",
+        "protocol": "TCP",
+        "remote_address": "52.96.164.242",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "54268",
+        "protocol": "TCP",
+        "remote_address": "52.110.2.12",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "63242",
+        "protocol": "TCP",
+        "remote_address": "40.126.26.161",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "52675",
+        "protocol": "TCP",
+        "remote_address": "52.96.164.210",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "63257",
+        "protocol": "TCP",
+        "remote_address": "52.110.2.82",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "54267",
+        "protocol": "TCP",
+        "remote_address": "52.123.129.14",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "52626",
+        "protocol": "TCP",
+        "remote_address": "72.136.240.80",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1769661736",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.167.26.178",
+        "local_port": "51792",
+        "protocol": "TCP",
+        "remote_address": "172.178.201.108",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "673bb9bbc811452b80c519893169e8f1",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "15172",
+      "md5": "30420cf0f96c4313e058343b4c301f96",
+      "process_graph_id": "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1357561094231",
+      "process_id": "1357561094231",
+      "sha256": "11aef65ef73c2d8fdf6688fbbd16f60c1b58641c46405a1b0fb0f9c2c5b35402",
+      "timestamp": "2026-01-29T05:04:46Z",
+      "user_graph_id": "uid:d96d2ecd1c6d4375bbe56d44e489ad48:S-1-5-21-3341553137-3240648360-410670835-1004",
+      "user_id": "S-1-5-21-3341553137-3240648360-410670835-1004",
+      "user_name": "Jyoti Bansal"
+    },
+    "parent_process_id": "1357561094231",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10351,
+    "platform": "Windows",
+    "poly_id": "AABnO7m7yBFFK4DFGYkxaejxc_dsNa3WL3a9HmO8-dyaSgAATiHN4KAR8Xeh9Bl0f-WHcuuZdInLlYnqSj2gxh2IXwPMVQ==",
+    "process_end_time": "1769661738",
+    "process_id": "1369441601838",
+    "process_start_time": "1769657820",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 70,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "b1db8fe7ba2d303ea1bdf09cd88fc1ac7fd84b72a5faf6b544c84a9a58c3f2f6",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Application Layer Protocol",
+    "technique_id": "T1071",
+    "template_instance_id": "9167",
+    "timestamp": "2026-01-29T04:42:16.743Z",
+    "triggering_process_graph_id": "pid:d96d2ecd1c6d4375bbe56d44e489ad48:1369441601838",
+    "type": "signal",
+    "updated_timestamp": "2026-01-29T05:42:20.357096838Z",
+    "user_id": "S-1-5-21-3341553137-3240648360-410670835-1004",
+    "user_name": "Jyoti Bansal"
+  }
+]

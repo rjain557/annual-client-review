@@ -1,0 +1,110 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 1909201,
+      "account_id": 31342,
+      "agent_id": 11336121,
+      "body": "\n\nHost: BWH-HQ-DT-01 - https://technijian.huntress.io/org/429252/agents/11336121\nOrganization: BWH - Brandywine Homes\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429252/infection_reports/1909201\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: jkwon\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\joon\\OneDrive - BrandyWine Homes\\General - Accounting\\Accounting\\01-BRANDYWINE HOMES\\Tax Returns\\2024\\HEARTHSTONE K-1\\Password - HEARTHSTONE2024.txt\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-23 21:12:00 UTC\nStart Time: 2026-01-23 21:06:44 UTC\nCommand: \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\" \"C:\\Users\\joon\\OneDrive - BrandyWine Homes\\General - Accounting\\Accounting\\01-BRANDYWINE HOMES\\Tax Returns\\2024\\HEARTHSTONE K-1\\Password - HEARTHSTONE2024.txt\"\nExecutable: C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2510.14.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe\nProcess ID: d488234e-f89d-11f0-8180-f8e4e39f71ac\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: jkwon\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429252/infection_reports/1909201#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429252,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-24T10:02:39Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-01-24T10:02:39Z",
+      "subject": "LOW - Incident on BWH-HQ-DT-01 (BWH - Brandywine Homes)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on BWH-HQ-DT-01 (BWH - Brandywine Homes)",
+      "updated_at": "2026-01-24T10:02:39Z"
+    },
+    {
+      "id": 1746205,
+      "account_id": 31342,
+      "agent_id": 11774075,
+      "body": "\n\nHost: BrandywineMyle - https://technijian.huntress.io/org/429252/agents/11774075\nOrganization: BWH - Brandywine Homes\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429252/infection_reports/1746205\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: myle\nCommand: \"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"D:\\1 Tax for 2024\\Income & RE Transaction\\Myle Phan - W2 - password 1234.pdf\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-10-13 16:23:50 UTC\nStart Time: 2025-10-13 16:15:41 UTC\nCommand: \"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"D:\\1 Tax for 2024\\Income & RE Transaction\\Myle Phan - W2 - password 1234.pdf\"\nExecutable: C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\nProcess ID: bd6053a2-a84f-11f0-9699-b831b58091fb\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: myle\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429252/infection_reports/1746205#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-10-15T17:51:20Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429252,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-10-14T10:10:33Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-10-15T17:51:20Z",
+      "subject": "LOW - Incident on BrandywineMyle (BWH - Brandywine Homes)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on BrandywineMyle (BWH - Brandywine Homes)",
+      "updated_at": "2025-10-15T17:51:20Z"
+    },
+    {
+      "id": 1653420,
+      "account_id": 31342,
+      "agent_id": 12764182,
+      "body": "\n\nHost: BWH-HQ-LT-01 - https://technijian.huntress.io/org/429252/agents/12764182\nOrganization: BWH - Brandywine Homes\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429252/infection_reports/1653420\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Pon\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Pon\\OneDrive - BrandyWine Homes\\General - Accounting\\Accounts Payable\\Pon Manithip\\Chrome Passwords.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-08-18 20:26:53 UTC\nStart Time: 2025-08-18 20:18:45 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Pon\\OneDrive - BrandyWine Homes\\General - Accounting\\Accounts Payable\\Pon Manithip\\Chrome Passwords.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: abbd44b0-7c6f-11f0-b1eb-349971e4402a\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Pon\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429252/infection_reports/1653420#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429252,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-08-19T10:13:46Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-08-19T10:13:46Z",
+      "subject": "LOW - Incident on BWH-HQ-LT-01 (BWH - Brandywine Homes)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on BWH-HQ-LT-01 (BWH - Brandywine Homes)",
+      "updated_at": "2025-08-19T10:13:46Z"
+    }
+  ]
+}

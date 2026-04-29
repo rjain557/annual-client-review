@@ -1,0 +1,2943 @@
+[
+  {
+    "agent_id": "81a78f3fcd9e44f28c850ea61b00751b",
+    "aggregate_id": "0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452494851310",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452501479494",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452504127124",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452504715560",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452492148135",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452511293027",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452509549138",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452516365367",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452514865196",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452530929774"
+    ],
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"D:\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Olk\\Attachments\\ooa-8fdeeb59-5073-4d1e-b38c-6cdc97348b6f\\29f305c1fb59f28a831b3a1ce137219003e8fbb5adabc0638e5aca9cad004b13\\PayNet Credit History Report - 144397762.pdf\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-4-35227664",
+    "confidence": 50,
+    "context_timestamp": "2026-02-24T15:17:02.673Z",
+    "control_graph_id": "ctg:81a78f3fcd9e44f28c850ea61b00751b:120259380318",
+    "crawled_timestamp": "2026-02-24T16:17:08.326815701Z",
+    "created_timestamp": "2026-02-24T15:18:08.574530359Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "Productivity app or one of its children wrote a registry key used for persistence",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-13T21:50:25.497Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.21100432.B64.2301110304",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "81a78f3fcd9e44f28c850ea61b00751b",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:24:39Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-002",
+      "last_seen": "2026-02-24T16:10:04Z",
+      "local_ip": "10.100.101.53",
+      "mac_address": "00-50-56-93-9e-59",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-24T16:11:49Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "ProductivityAppAsepWrite",
+    "dns_requests": [
+      {
+        "domain_name": "cc-api-data.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946225",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "lcs-cops.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "d1swly8pgrbhu5.cloudfront.net",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "p13n.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ims-prod06.adobelogin.com",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ocsp.rootg2.amazontrust.com",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "o.ss2.us",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api-v2.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "api.na4.documents.adobe.com",
+        "interface_index": "0",
+        "load_time": "1771946230",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "9c6182dc-9311-f111-803b-005056939e59",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-4-35227664?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "Acrobat.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+    "files_accessed": [
+      {
+        "filename": "{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x000000000000000c.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251106214900Z-4138.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-260112225025Z-615.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251107183244Z-2315402.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251105193406Z-716.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "cversions.1.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-260224151704Z-373.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251106220107Z-6219.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "CC_Acrobat_25.001.21223_0.db-journal",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\CRLogs\\AdobeCRCommon\\Logs",
+        "timestamp": "1771946227"
+      },
+      {
+        "filename": "acroNGLLog.txt",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Local\\Temp\\acrobat_sbx",
+        "timestamp": "1771946227"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "12516",
+      "md5": "2f705f63c0de46307e811d1e0083d210",
+      "process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:434348494770",
+      "process_id": "434348494770",
+      "sha256": "d640e51752086b25f9afa1b181091cd0d4d30c98ba2c10e165d000a678b07a93",
+      "timestamp": "2026-02-17T20:26:47Z",
+      "user_graph_id": "uid:81a78f3fcd9e44f28c850ea61b00751b:S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_name": "wes"
+    },
+    "id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-4-35227664",
+    "indicator_id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-4-35227664",
+    "ioc_context": [],
+    "lead_id": "0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "local_prevalence": "unique",
+    "local_process_id": "1796",
+    "logon_domain": "MAXPRO",
+    "md5": "dc8aeefca4b021b3f2a55b06f345648e",
+    "mitre_attack": [
+      {
+        "pattern_id": 4,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "SpearPhish4",
+    "network_accesses": [
+      {
+        "access_timestamp": "1771946224",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64914",
+        "protocol": "TCP",
+        "remote_address": "162.159.142.9",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771946224",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64915",
+        "protocol": "TCP",
+        "remote_address": "34.233.49.149",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946225",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64917",
+        "protocol": "TCP",
+        "remote_address": "172.66.0.163",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946226",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64921",
+        "protocol": "TCP",
+        "remote_address": "52.13.231.217",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946226",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64920",
+        "protocol": "TCP",
+        "remote_address": "44.198.86.118",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64923",
+        "protocol": "TCP",
+        "remote_address": "107.22.247.231",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64925",
+        "protocol": "TCP",
+        "remote_address": "18.235.168.50",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64926",
+        "protocol": "TCP",
+        "remote_address": "13.32.253.168",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64924",
+        "protocol": "TCP",
+        "remote_address": "13.249.185.227",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946228",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64927",
+        "protocol": "TCP",
+        "remote_address": "3.169.250.145",
+        "remote_port": "80"
+      }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.203.300_x64__8wekyb3d8bbwe\\olk.exe\" ",
+      "filename": "olk.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.203.300_x64__8wekyb3d8bbwe\\olk.exe",
+      "local_process_id": "14056",
+      "md5": "3cbf1f5e212475f367ffb9993b6c3d09",
+      "process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:434451028732",
+      "process_id": "434451028732",
+      "sha256": "5b3cce065cb207887db52c508452f17f83e686b2da8d6091886d10d1053a59ab",
+      "timestamp": "2026-02-24T15:28:17Z",
+      "user_graph_id": "uid:81a78f3fcd9e44f28c850ea61b00751b:S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_name": "wes"
+    },
+    "parent_process_id": "434451028732",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFFp2itBU3lSyg9Y3WuRuqPgAATiGU8TGLmGIyRQYPFME16VbifieXLazpn8ZQNZevh4jPbQ==",
+    "process_end_time": "1771946613",
+    "process_id": "452491855103",
+    "process_start_time": "1771946210",
+    "product": "automated-lead-context",
+    "scenario": "malicious_document",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "6a77c2e3d81e895ed7e9f4ccf80654668b1775fe27433f5f5f098aaf62acdfc0",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Persistence",
+    "tactic_id": "TA0003",
+    "technique": "Registry Run Keys / Startup Folder",
+    "technique_id": "T1547.001",
+    "timestamp": "2026-02-24T15:17:04.31Z",
+    "tree_id": "120259380318",
+    "tree_root": "452491855103",
+    "triggering_process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:452491855103",
+    "type": "signal",
+    "updated_timestamp": "2026-02-24T16:17:08.326802322Z",
+    "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+    "user_name": "wes",
+    "user_principal": "wes@maxproleasing.local"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391726728160",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391729295778",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391740406942",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391741128056",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391742020389",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391754893121",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391756182330",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391764461099"
+    ],
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"P:\\LESSEE\\2024\\Matsma #9- DFS\\Vendor\\Matsma Consulting Inv 114024009_DFS.pdf\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-103-20295184",
+    "confidence": 70,
+    "context_timestamp": "2026-02-20T18:36:42.843Z",
+    "control_graph_id": "ctg:838bbcc4fd3745b3acebe0efa22824ef:124555039463",
+    "crawled_timestamp": "2026-02-20T19:36:47.091056182Z",
+    "created_timestamp": "2026-02-20T18:37:47.033981931Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A productivity application or its child modified a registry key for persistence, which does not match its expected behavior.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-13T21:47:21.632Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.18227214.B64.2106252220",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:11:45Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-001",
+      "last_seen": "2026-02-20T19:12:27Z",
+      "local_ip": "10.100.101.54",
+      "mac_address": "00-50-56-93-59-b5",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-20T19:13:15Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "ProductivityAppWroteAsep",
+    "dns_requests": [
+      {
+        "domain_name": "cc-api-data.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612603",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "p13n.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ims-prod06.adobelogin.com",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "lcs-cops.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612610",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api-v2.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612622",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "abp-profile-service.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "acroipm2.adobe.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "api.na4.documents.adobe.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "files.acrobat.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "6ac7a30c-8b0e-f111-803c-0050569359b5",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-103-20295184?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "Acrobat.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+    "files_accessed": [
+      {
+        "filename": "{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000004.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771612606"
+      },
+      {
+        "filename": "cversions.1.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771612606"
+      },
+      {
+        "filename": "1C0064A4655EDCA00A495FCC@1f71509f655edca0495e7e.e_138.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Adobe\\Acrobat\\DC\\UserImageAcrbt",
+        "timestamp": "1771612608"
+      },
+      {
+        "filename": "acroNGLLog.txt",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Temp\\acrobat_sbx",
+        "timestamp": "1771612608"
+      },
+      {
+        "filename": "acroNGLLog.txt",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Temp\\acrobat_sbx",
+        "timestamp": "1771612609"
+      },
+      {
+        "filename": "icon-251106202935Z-1203.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-251111225105Z-579.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-260220183700Z-852.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "sonar_policy.xml",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Roaming\\Adobe\\Sonar\\SonarCC",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-260107175435Z-497.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\userinit.exe",
+      "filename": "userinit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\userinit.exe",
+      "local_process_id": "13592",
+      "md5": "29c96ff8ef9c76f422538e37d91721a3",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391599401361",
+      "process_id": "391599401361",
+      "sha256": "38652a6c804206d36e512961487bf5ee619b5dc094d9bd94a1e786c0a39c9521",
+      "timestamp": "2026-02-20T18:35:57Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_name": "greg"
+    },
+    "id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-103-20295184",
+    "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-103-20295184",
+    "ioc_context": [],
+    "lead_id": "6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "local_prevalence": "low",
+    "local_process_id": "18380",
+    "logon_domain": "MAXPRO",
+    "md5": "bb42d44374ed2f853846dc40c32d8b39",
+    "mitre_attack": [
+      {
+        "pattern_id": 103,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "MaliciousAsepWriteFromProductivityApp",
+    "network_accesses": [
+      {
+        "access_timestamp": "1771612603",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62734",
+        "protocol": "TCP",
+        "remote_address": "52.73.45.44",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612603",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62735",
+        "protocol": "TCP",
+        "remote_address": "172.66.2.5",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771612607",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62740",
+        "protocol": "TCP",
+        "remote_address": "162.159.140.165",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62744",
+        "protocol": "TCP",
+        "remote_address": "44.198.86.118",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62742",
+        "protocol": "TCP",
+        "remote_address": "52.88.177.51",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62743",
+        "protocol": "TCP",
+        "remote_address": "54.227.187.23",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62789",
+        "protocol": "TCP",
+        "remote_address": "23.35.26.245",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62793",
+        "protocol": "TCP",
+        "remote_address": "52.35.253.85",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62792",
+        "protocol": "TCP",
+        "remote_address": "172.66.0.163",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612623",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62806",
+        "protocol": "TCP",
+        "remote_address": "18.235.168.50",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "13728",
+      "md5": "2f705f63c0de46307e811d1e0083d210",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391601653186",
+      "process_id": "391601653186",
+      "sha256": "d640e51752086b25f9afa1b181091cd0d4d30c98ba2c10e165d000a678b07a93",
+      "timestamp": "2026-02-20T18:35:02Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_name": "greg"
+    },
+    "parent_process_id": "391601653186",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 103,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFtcox_Gk_T2c9MbdptYR-zQAATiHi7CTVg4cy-P32Hm5Q9ZpRCHdhEA9m1L0BuEkeE4KEYQ==",
+    "process_id": "391725296107",
+    "process_start_time": "1771612591",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 60,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "f25a40b6ff15cabe62dc38a8c610292c17de642fb0d0a31f93b48bf592719dda",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Persistence",
+    "tactic_id": "TA0003",
+    "technique": "Registry Run Keys / Startup Folder",
+    "technique_id": "T1547.001",
+    "timestamp": "2026-02-20T18:36:43.814Z",
+    "tree_id": "124555039463",
+    "tree_root": "391725296107",
+    "triggering_process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391725296107",
+    "type": "signal",
+    "updated_timestamp": "2026-02-20T19:36:47.091044177Z",
+    "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+    "user_name": "greg",
+    "user_principal": "greg@maxproleasing.local"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391729295778",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391726728160",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391740406942",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391742020389",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391741128056",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391754893121",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391756182330",
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:391764461099"
+    ],
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"P:\\LESSEE\\2024\\Matsma #9- DFS\\Vendor\\Matsma Consulting Inv 114024009_DFS.pdf\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-4-20296464",
+    "confidence": 50,
+    "context_timestamp": "2026-02-20T18:36:42.981Z",
+    "control_graph_id": "ctg:838bbcc4fd3745b3acebe0efa22824ef:124555039463",
+    "crawled_timestamp": "2026-02-20T19:36:47.050250465Z",
+    "created_timestamp": "2026-02-20T18:37:47.016518757Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "Productivity app or one of its children wrote a registry key used for persistence",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-13T21:47:21.632Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.18227214.B64.2106252220",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:11:45Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-001",
+      "last_seen": "2026-02-20T19:12:27Z",
+      "local_ip": "10.100.101.54",
+      "mac_address": "00-50-56-93-59-b5",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-20T19:13:15Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "ProductivityAppAsepWrite",
+    "dns_requests": [
+      {
+        "domain_name": "cc-api-data.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612603",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "p13n.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ims-prod06.adobelogin.com",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "lcs-cops.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612608",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612610",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api-v2.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612622",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "abp-profile-service.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "api.na4.documents.adobe.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "acroipm2.adobe.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "files.acrobat.com",
+        "interface_index": "0",
+        "load_time": "1771612623",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "6dc7a30c-8b0e-f111-803c-0050569359b5",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-4-20296464?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "Acrobat.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+    "files_accessed": [
+      {
+        "filename": "{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000004.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771612606"
+      },
+      {
+        "filename": "cversions.1.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771612606"
+      },
+      {
+        "filename": "acroNGLLog.txt",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Temp\\acrobat_sbx",
+        "timestamp": "1771612608"
+      },
+      {
+        "filename": "1C0064A4655EDCA00A495FCC@1f71509f655edca0495e7e.e_138.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Adobe\\Acrobat\\DC\\UserImageAcrbt",
+        "timestamp": "1771612608"
+      },
+      {
+        "filename": "acroNGLLog.txt",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Local\\Temp\\acrobat_sbx",
+        "timestamp": "1771612609"
+      },
+      {
+        "filename": "icon-251106202935Z-1203.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-260220183700Z-852.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "sonar_policy.xml",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\Roaming\\Adobe\\Sonar\\SonarCC",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-260107175435Z-497.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      },
+      {
+        "filename": "icon-251111225105Z-579.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\Greg\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771612621"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\userinit.exe",
+      "filename": "userinit.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\userinit.exe",
+      "local_process_id": "13592",
+      "md5": "29c96ff8ef9c76f422538e37d91721a3",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391599401361",
+      "process_id": "391599401361",
+      "sha256": "38652a6c804206d36e512961487bf5ee619b5dc094d9bd94a1e786c0a39c9521",
+      "timestamp": "2026-02-20T18:35:57Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_name": "greg"
+    },
+    "id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-4-20296464",
+    "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-4-20296464",
+    "ioc_context": [],
+    "lead_id": "6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "local_prevalence": "low",
+    "local_process_id": "18380",
+    "logon_domain": "MAXPRO",
+    "md5": "bb42d44374ed2f853846dc40c32d8b39",
+    "mitre_attack": [
+      {
+        "pattern_id": 4,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "SpearPhish4",
+    "network_accesses": [
+      {
+        "access_timestamp": "1771612603",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62734",
+        "protocol": "TCP",
+        "remote_address": "52.73.45.44",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612603",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62735",
+        "protocol": "TCP",
+        "remote_address": "172.66.2.5",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771612607",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62740",
+        "protocol": "TCP",
+        "remote_address": "162.159.140.165",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62743",
+        "protocol": "TCP",
+        "remote_address": "54.227.187.23",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62744",
+        "protocol": "TCP",
+        "remote_address": "44.198.86.118",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62742",
+        "protocol": "TCP",
+        "remote_address": "52.88.177.51",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62793",
+        "protocol": "TCP",
+        "remote_address": "52.35.253.85",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62792",
+        "protocol": "TCP",
+        "remote_address": "172.66.0.163",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612622",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62789",
+        "protocol": "TCP",
+        "remote_address": "23.35.26.245",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771612623",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.54",
+        "local_port": "62800",
+        "protocol": "TCP",
+        "remote_address": "52.6.228.48",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "13728",
+      "md5": "2f705f63c0de46307e811d1e0083d210",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391601653186",
+      "process_id": "391601653186",
+      "sha256": "d640e51752086b25f9afa1b181091cd0d4d30c98ba2c10e165d000a678b07a93",
+      "timestamp": "2026-02-20T18:35:02Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+      "user_name": "greg"
+    },
+    "parent_process_id": "391601653186",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 4,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFPxUuhJ_6rmvjhJR4k_VL9gAATiEYwd3thOibSRQHaGM7VHvNDm4StUAv66-iwITSN7RlWg==",
+    "process_id": "391725296107",
+    "process_start_time": "1771612591",
+    "product": "automated-lead-context",
+    "scenario": "malicious_document",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 30,
+    "severity_name": "Low",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "f25a40b6ff15cabe62dc38a8c610292c17de642fb0d0a31f93b48bf592719dda",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Persistence",
+    "tactic_id": "TA0003",
+    "technique": "Registry Run Keys / Startup Folder",
+    "technique_id": "T1547.001",
+    "timestamp": "2026-02-20T18:36:43.814Z",
+    "tree_id": "124555039463",
+    "tree_root": "391725296107",
+    "triggering_process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:391725296107",
+    "type": "signal",
+    "updated_timestamp": "2026-02-20T19:36:47.050230747Z",
+    "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1109",
+    "user_name": "greg",
+    "user_principal": "greg@maxproleasing.local"
+  },
+  {
+    "agent_id": "81a78f3fcd9e44f28c850ea61b00751b",
+    "aggregate_id": "",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "crawled_timestamp": "2026-02-28T03:57:12.113867544Z",
+    "created_timestamp": "2026-02-24T15:17:07.645073182Z",
+    "device": {
+      "device_id": "81a78f3fcd9e44f28c850ea61b00751b"
+    },
+    "display_name": "MAX-DC-VDI-002 at 2026-02-24T15:17:04Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "id": "automated-lead:b83e2e1f050c4662a93b9ae942219205:0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "is_closed": true,
+    "lead_id": "0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 4,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      },
+      {
+        "pattern_id": 103,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "MAX-DC-VDI-002 at 2026-02-24T15:17:04Z",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "pattern_id": 185000,
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFc2QRAOEt_kJJhVWe5G_zNAAATiGohqo9aiKEJl-zuDhfHsFwzbF1IH1d5b7r5JeuLofkBQ==",
+    "product": "automated-lead",
+    "score": 14,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-02-24T15:17:04Z",
+    "signal_start_timestamp": "2026-02-24T15:17:04Z",
+    "signal_updated_timestamp": "2026-02-28T03:57:08Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "Productivity app or one of its children wrote a registry key used for persistence",
+        "display_name": "ProductivityAppAsepWrite",
+        "host_id": "81a78f3fcd9e44f28c850ea61b00751b",
+        "hostname": "MAX-DC-VDI-002",
+        "indicator_id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-4-35227664",
+        "indicator_type": "AssociateTreeIdWithRoot",
+        "pattern_disposition": 0,
+        "pattern_id": 4,
+        "process_id": "452491855103",
+        "severity": 30,
+        "signal_association_timestamp": "2026-02-24T15:17:04Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A productivity application or its child modified a registry key for persistence, which does not match its expected behavior.",
+        "display_name": "ProductivityAppWroteAsep",
+        "host_id": "81a78f3fcd9e44f28c850ea61b00751b",
+        "hostname": "MAX-DC-VDI-002",
+        "indicator_id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-103-35231248",
+        "indicator_type": "AssociateTreeIdWithRoot",
+        "pattern_disposition": 0,
+        "pattern_id": 103,
+        "process_id": "452491855103",
+        "severity": 60,
+        "signal_association_timestamp": "2026-02-24T15:17:04Z",
+        "template_instance_id": 0
+      }
+    ],
+    "timestamp": "2026-02-28T03:57:11Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-02-28T03:57:12.113860154Z"
+  },
+  {
+    "agent_id": "755d47112e904d4798576bc21dfcda62",
+    "aggregate_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "alleged_filetype": "exe",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"Get-CimInstance -ClassName win32_operatingsystem | select lastbootuptime | ConvertTo-Json -Compress\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:756728040043-10320-1276432",
+    "confidence": 80,
+    "context_timestamp": "2026-02-28T06:20:07.805Z",
+    "crawled_timestamp": "2026-02-28T07:25:22.033705635Z",
+    "created_timestamp": "2026-02-28T06:26:23.170747101Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-27T22:21:13.435Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.21100432.B64.2301110304",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "755d47112e904d4798576bc21dfcda62",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-17T23:30:08Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-GI",
+      "last_seen": "2026-02-28T07:14:41Z",
+      "local_ip": "10.100.101.52",
+      "mac_address": "00-50-56-93-de-2c",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-28T07:15:44Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "PowershellExecution",
+    "event_correlation_id": "4359917f-6d14-f111-8038-00505693de2c",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:756728040043-10320-1276432?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "powershell.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "8880",
+      "md5": "7017a290cf352b3efacb846ef6670b6f",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:756718976154",
+      "process_id": "756718976154",
+      "sha256": "53c678339ad77f178e38c87da7966162f42587d4187fbd7853eb5c51d50ae69a",
+      "timestamp": "2026-02-28T06:25:55Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "id": "ind:755d47112e904d4798576bc21dfcda62:756728040043-10320-1276432",
+    "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:756728040043-10320-1276432",
+    "ioc_context": [],
+    "lead_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "local_prevalence": "low",
+    "local_process_id": "10652",
+    "logon_domain": "MAXPRO",
+    "md5": "a97e6573b97b44c96122bfa543a82ea1",
+    "mitre_attack": [
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      }
+    ],
+    "name": "GenericPowershellExecution",
+    "objective": "Follow Through",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "10380",
+      "md5": "7017a290cf352b3efacb846ef6670b6f",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:756719705035",
+      "process_id": "756719705035",
+      "sha256": "53c678339ad77f178e38c87da7966162f42587d4187fbd7853eb5c51d50ae69a",
+      "timestamp": "2026-02-28T06:25:55Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "parent_process_id": "756719705035",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10320,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIF8kRHK2RgEbMpCqtQBrrKpwAATiGzDzEiXNtvb57Hik-Oj9k6alkbm4O7ZliuOP7ZTPf0QQ==",
+    "process_end_time": "1772259617",
+    "process_id": "756728040043",
+    "process_start_time": "1772259607",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 70,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "0ff6f2c94bc7e2833a5f7e16de1622e5dba70396f31c7d5f56381870317e8c46",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Execution",
+    "tactic_id": "TA0002",
+    "technique": "PowerShell",
+    "technique_id": "T1059.001",
+    "template_instance_id": "1661",
+    "template_instance_version": "1",
+    "timestamp": "2026-02-28T06:25:19.734Z",
+    "triggering_process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:756728040043",
+    "type": "signal",
+    "updated_timestamp": "2026-02-28T07:25:22.033685158Z",
+    "user_id": "S-1-5-18",
+    "user_name": "MAX-DC-VDI-GI$",
+    "user_principal": "MAX-DC-VDI-GI$@maxproleasing.local"
+  },
+  {
+    "agent_id": "755d47112e904d4798576bc21dfcda62",
+    "aggregate_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "alleged_filetype": "exe",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:754383036511-337-72749072",
+    "confidence": 50,
+    "context_timestamp": "2026-02-28T06:15:11.680Z",
+    "crawled_timestamp": "2026-02-28T07:25:22.033295345Z",
+    "created_timestamp": "2026-02-28T06:26:23.092642557Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "The command line of this process was modified from its original form prior to finalizing process creation. This might be related to command line stomping attacks. Investigate the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-27T22:21:13.435Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.21100432.B64.2301110304",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "755d47112e904d4798576bc21dfcda62",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-17T23:30:08Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-GI",
+      "last_seen": "2026-02-28T07:14:41Z",
+      "local_ip": "10.100.101.52",
+      "mac_address": "00-50-56-93-de-2c",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-28T07:15:44Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "CommandLineStomping",
+    "event_correlation_id": "894450dd-6b14-f111-8037-00505693de2c",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:754383036511-337-72749072?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "conhost.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\WinSxS\\amd64_microsoft-onecore-console-host-core_31bf3856ad364e35_10.0.26100.7920_none_09241f0cd4627c84\\conhost.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentservice.exe\"",
+      "filename": "dcagentservice.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentservice.exe",
+      "local_process_id": "4348",
+      "md5": "a5ec5e276b0f30c0b0ca2556ab7160ee",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:657230943714",
+      "process_id": "657230943714",
+      "sha256": "d2e8841aeac75827348a598ffb4a10caca43e2c8076802733d474466ae9f6d38",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "id": "ind:755d47112e904d4798576bc21dfcda62:754383036511-337-72749072",
+    "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:754383036511-337-72749072",
+    "ioc_context": [],
+    "lead_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "local_prevalence": "low",
+    "local_process_id": "6800",
+    "logon_domain": "MAXPRO",
+    "md5": "1f670868b8c33f5936caa219191a851e",
+    "mitre_attack": [
+      {
+        "pattern_id": 337,
+        "tactic_id": "TA0005",
+        "technique_id": "T1055",
+        "tactic": "Defense Evasion",
+        "technique": "Process Injection"
+      }
+    ],
+    "name": "CommandLineStomping",
+    "objective": "Keep Access",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "-UnregisterCRU",
+      "filename": "CRU_Reporter.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\CRU_Reporter.exe",
+      "local_process_id": "16632",
+      "md5": "449b8037981951b377d41df45dd75146",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:754377896011",
+      "process_id": "754377896011",
+      "sha256": "cd23244b2ced507a2f144f32ce05887b87cb307ea5cacbd937ef3d607be3d4bf",
+      "timestamp": "2026-02-28T06:20:26Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "parent_process_id": "754377896011",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 337,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFQFK4RSrTyK8l1NSFu11mVgAATiE9tYQCeqDAzE6SY_2rPxuhKQJQXVQbOP2YC6l8LizyHQ==",
+    "process_end_time": "1772259312",
+    "process_id": "754383036511",
+    "process_start_time": "1772259311",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 50,
+    "severity_name": "Medium",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "2b335de3c724ddb63a4d14e57c8f5a742a87c1d07a41be0ebaac4e32a693d153",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Process Injection",
+    "technique_id": "T1055",
+    "timestamp": "2026-02-28T06:20:23.553Z",
+    "triggering_process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:754383036511",
+    "type": "signal",
+    "updated_timestamp": "2026-02-28T07:25:22.033280997Z",
+    "user_id": "S-1-5-18",
+    "user_name": "MAX-DC-VDI-GI$",
+    "user_principal": "MAX-DC-VDI-GI$@maxproleasing.local"
+  },
+  {
+    "agent_id": "755d47112e904d4798576bc21dfcda62",
+    "aggregate_id": "",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "crawled_timestamp": "2026-03-04T15:29:42.41044536Z",
+    "created_timestamp": "2026-02-28T06:25:21.456823097Z",
+    "device": {
+      "device_id": "755d47112e904d4798576bc21dfcda62"
+    },
+    "display_name": "MAX-DC-VDI-GI at 2026-02-28T06:20:23Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "id": "automated-lead:b83e2e1f050c4662a93b9ae942219205:50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "is_closed": true,
+    "lead_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 337,
+        "tactic_id": "TA0005",
+        "technique_id": "T1055",
+        "tactic": "Defense Evasion",
+        "technique": "Process Injection"
+      },
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      },
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      }
+    ],
+    "name": "MAX-DC-VDI-GI at 2026-02-28T06:20:23Z",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "pattern_id": 185000,
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFXWdqARkbO-65PmB9S-MkHQAATiG9IAssV5ZEbLxofMZQ-1K6E6-qc__P2YW-cZyph4tq6w==",
+    "product": "automated-lead",
+    "score": 18,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-02-28T06:27:42Z",
+    "signal_start_timestamp": "2026-02-28T06:20:23Z",
+    "signal_updated_timestamp": "2026-03-04T15:29:39Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "The command line of this process was modified from its original form prior to finalizing process creation. This might be related to command line stomping attacks. Investigate the process tree.",
+        "display_name": "CommandLineStomping",
+        "host_id": "755d47112e904d4798576bc21dfcda62",
+        "hostname": "MAX-DC-VDI-GI",
+        "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:754383036511-337-72749072",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 337,
+        "process_id": "754383036511",
+        "severity": 50,
+        "signal_association_timestamp": "2026-02-28T06:20:23Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+        "display_name": "PowershellExecution",
+        "host_id": "755d47112e904d4798576bc21dfcda62",
+        "hostname": "MAX-DC-VDI-GI",
+        "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:756728040043-10320-1276432",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10320,
+        "process_id": "756728040043",
+        "severity": 70,
+        "signal_association_timestamp": "2026-02-28T06:25:19Z",
+        "template_instance_id": 1661
+      },
+      {
+        "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+        "display_name": "SuspiciousRMMUsage",
+        "host_id": "755d47112e904d4798576bc21dfcda62",
+        "hostname": "MAX-DC-VDI-GI",
+        "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:760499670556-10100-611600",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10100,
+        "process_id": "760499670556",
+        "severity": 50,
+        "signal_association_timestamp": "2026-02-28T06:27:42Z",
+        "template_instance_id": 24842
+      }
+    ],
+    "timestamp": "2026-03-04T15:29:41Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-03-04T15:29:42.410432123Z"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "crawled_timestamp": "2026-02-24T02:58:47.343558749Z",
+    "created_timestamp": "2026-02-20T18:36:46.231392604Z",
+    "device": {
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef"
+    },
+    "display_name": "MAX-DC-VDI-001 at 2026-02-20T18:36:43Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "id": "automated-lead:b83e2e1f050c4662a93b9ae942219205:6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "is_closed": true,
+    "lead_id": "6ba6a7fcbd47de8d94cb43d48f789c85457c28a3424c8500d43e42e016219c8e",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 103,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      },
+      {
+        "pattern_id": 4,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "MAX-DC-VDI-001 at 2026-02-20T18:36:43Z",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "pattern_id": 185000,
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFHIxm68I9bZsa0uuxewRjugAATiFeBNggxWqTXvi2x5xFE9vS8nYBGxUv0tvX4KF3Vn9nlg==",
+    "product": "automated-lead",
+    "score": 26,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-02-20T18:36:43Z",
+    "signal_start_timestamp": "2026-02-20T18:36:43Z",
+    "signal_updated_timestamp": "2026-02-24T02:58:44Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A productivity application or its child modified a registry key for persistence, which does not match its expected behavior.",
+        "display_name": "ProductivityAppWroteAsep",
+        "host_id": "838bbcc4fd3745b3acebe0efa22824ef",
+        "hostname": "MAX-DC-VDI-001",
+        "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-103-20295184",
+        "indicator_type": "AssociateTreeIdWithRoot",
+        "pattern_disposition": 0,
+        "pattern_id": 103,
+        "process_id": "391725296107",
+        "severity": 60,
+        "signal_association_timestamp": "2026-02-20T18:36:43Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "Productivity app or one of its children wrote a registry key used for persistence",
+        "display_name": "ProductivityAppAsepWrite",
+        "host_id": "838bbcc4fd3745b3acebe0efa22824ef",
+        "hostname": "MAX-DC-VDI-001",
+        "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:391725296107-4-20296464",
+        "indicator_type": "AssociateTreeIdWithRoot",
+        "pattern_disposition": 0,
+        "pattern_id": 4,
+        "process_id": "391725296107",
+        "severity": 30,
+        "signal_association_timestamp": "2026-02-20T18:36:43Z",
+        "template_instance_id": 0
+      }
+    ],
+    "timestamp": "2026-02-24T02:58:47Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-02-24T02:58:47.343541922Z"
+  },
+  {
+    "agent_id": "81a78f3fcd9e44f28c850ea61b00751b",
+    "aggregate_id": "0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452504715560",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452501479494",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452494851310",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452504127124",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452492148135",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452511293027",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452509549138",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452514865196",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452516365367",
+      "pid:81a78f3fcd9e44f28c850ea61b00751b:452530929774"
+    ],
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe\" \"D:\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Olk\\Attachments\\ooa-8fdeeb59-5073-4d1e-b38c-6cdc97348b6f\\29f305c1fb59f28a831b3a1ce137219003e8fbb5adabc0638e5aca9cad004b13\\PayNet Credit History Report - 144397762.pdf\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-103-35231248",
+    "confidence": 70,
+    "context_timestamp": "2026-02-24T15:17:02.666Z",
+    "control_graph_id": "ctg:81a78f3fcd9e44f28c850ea61b00751b:120259380318",
+    "crawled_timestamp": "2026-02-24T16:17:08.335580061Z",
+    "created_timestamp": "2026-02-24T15:18:08.57716911Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A productivity application or its child modified a registry key for persistence, which does not match its expected behavior.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-13T21:50:25.497Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.21100432.B64.2301110304",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "81a78f3fcd9e44f28c850ea61b00751b",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:24:39Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-002",
+      "last_seen": "2026-02-24T16:10:04Z",
+      "local_ip": "10.100.101.53",
+      "mac_address": "00-50-56-93-9e-59",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-24T16:11:49Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "ProductivityAppWroteAsep",
+    "dns_requests": [
+      {
+        "domain_name": "cc-api-data.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946225",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "lcs-cops.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "p13n.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ims-prod06.adobelogin.com",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "d1swly8pgrbhu5.cloudfront.net",
+        "interface_index": "0",
+        "load_time": "1771946227",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "ocsp.rootg2.amazontrust.com",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "dc-api-v2.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "o.ss2.us",
+        "interface_index": "0",
+        "load_time": "1771946229",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "abp-profile-service.adobe.io",
+        "interface_index": "0",
+        "load_time": "1771946230",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "986182dc-9311-f111-803b-005056939e59",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-103-35231248?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "Acrobat.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+    "files_accessed": [
+      {
+        "filename": "icon-260112225025Z-615.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "cversions.1.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251106220107Z-6219.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251106214900Z-4138.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251107183244Z-2315402.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-260224151704Z-373.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x000000000000000c.db",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "icon-251105193406Z-716.bmp",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\Acrobat\\DC\\ConnectorIcons",
+        "timestamp": "1771946225"
+      },
+      {
+        "filename": "CC_Acrobat_25.001.21223_0.db-journal",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\LocalLow\\Adobe\\CRLogs\\AdobeCRCommon\\Logs",
+        "timestamp": "1771946227"
+      },
+      {
+        "filename": "feedback_policy.xml",
+        "filepath": "\\Device\\HarddiskVolume6\\UserProfile\\wes\\AppData\\Roaming\\com.adobe.dunamis\\feedback\\v1",
+        "timestamp": "1771946227"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "12516",
+      "md5": "2f705f63c0de46307e811d1e0083d210",
+      "process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:434348494770",
+      "process_id": "434348494770",
+      "sha256": "d640e51752086b25f9afa1b181091cd0d4d30c98ba2c10e165d000a678b07a93",
+      "timestamp": "2026-02-17T20:26:47Z",
+      "user_graph_id": "uid:81a78f3fcd9e44f28c850ea61b00751b:S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_name": "wes"
+    },
+    "id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-103-35231248",
+    "indicator_id": "ind:81a78f3fcd9e44f28c850ea61b00751b:452491855103-103-35231248",
+    "ioc_context": [],
+    "lead_id": "0c8481e7597a2156bd855f083b1a295fe88a35711c5d6eb1e8847a1f6e665afd",
+    "local_prevalence": "unique",
+    "local_process_id": "1796",
+    "logon_domain": "MAXPRO",
+    "md5": "dc8aeefca4b021b3f2a55b06f345648e",
+    "mitre_attack": [
+      {
+        "pattern_id": 103,
+        "tactic_id": "TA0003",
+        "technique_id": "T1547.001",
+        "tactic": "Persistence",
+        "technique": "Registry Run Keys / Startup Folder"
+      }
+    ],
+    "name": "MaliciousAsepWriteFromProductivityApp",
+    "network_accesses": [
+      {
+        "access_timestamp": "1771946224",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64914",
+        "protocol": "TCP",
+        "remote_address": "162.159.142.9",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771946224",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64915",
+        "protocol": "TCP",
+        "remote_address": "34.233.49.149",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946225",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64917",
+        "protocol": "TCP",
+        "remote_address": "172.66.0.163",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946226",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64921",
+        "protocol": "TCP",
+        "remote_address": "52.13.231.217",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946226",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64920",
+        "protocol": "TCP",
+        "remote_address": "44.198.86.118",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64923",
+        "protocol": "TCP",
+        "remote_address": "107.22.247.231",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64924",
+        "protocol": "TCP",
+        "remote_address": "13.249.185.227",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64926",
+        "protocol": "TCP",
+        "remote_address": "13.32.253.168",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1771946227",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64925",
+        "protocol": "TCP",
+        "remote_address": "18.235.168.50",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1771946228",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "10.100.101.53",
+        "local_port": "64927",
+        "protocol": "TCP",
+        "remote_address": "3.169.250.145",
+        "remote_port": "80"
+      }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.203.300_x64__8wekyb3d8bbwe\\olk.exe\" ",
+      "filename": "olk.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.203.300_x64__8wekyb3d8bbwe\\olk.exe",
+      "local_process_id": "14056",
+      "md5": "3cbf1f5e212475f367ffb9993b6c3d09",
+      "process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:434451028732",
+      "process_id": "434451028732",
+      "sha256": "5b3cce065cb207887db52c508452f17f83e686b2da8d6091886d10d1053a59ab",
+      "timestamp": "2026-02-24T15:28:17Z",
+      "user_graph_id": "uid:81a78f3fcd9e44f28c850ea61b00751b:S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+      "user_name": "wes"
+    },
+    "parent_process_id": "434451028732",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 103,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFzScOZ8CvwDRwVp8sec2sGwAATiGASu8TZXDffOf0BKO_h6S0Ps9H_kMg88Su8TxZtqdelQ==",
+    "process_end_time": "1771946613",
+    "process_id": "452491855103",
+    "process_start_time": "1771946210",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 60,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "6a77c2e3d81e895ed7e9f4ccf80654668b1775fe27433f5f5f098aaf62acdfc0",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Persistence",
+    "tactic_id": "TA0003",
+    "technique": "Registry Run Keys / Startup Folder",
+    "technique_id": "T1547.001",
+    "timestamp": "2026-02-24T15:17:04.339Z",
+    "tree_id": "120259380318",
+    "tree_root": "452491855103",
+    "triggering_process_graph_id": "pid:81a78f3fcd9e44f28c850ea61b00751b:452491855103",
+    "type": "signal",
+    "updated_timestamp": "2026-02-24T16:17:08.335567168Z",
+    "user_id": "S-1-5-21-1548642298-1004750635-3163321586-1108",
+    "user_name": "wes",
+    "user_principal": "wes@maxproleasing.local"
+  },
+  {
+    "agent_id": "755d47112e904d4798576bc21dfcda62",
+    "aggregate_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "alleged_filetype": "exe",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe\" \"RunRole\" \"00bccce5-8c77-44b4-b681-46e730d413b5\" \"System\"",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:760499670556-10100-611600",
+    "confidence": 50,
+    "context_timestamp": "2026-02-28T06:22:30.976Z",
+    "crawled_timestamp": "2026-02-28T07:27:46.143650346Z",
+    "created_timestamp": "2026-02-28T06:28:46.115713203Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be using a Remote Monitoring and Management (RMM) application in a suspicious manner. This may be an attempt to gather information, gain access, or drop other malicious payloads. Investigate the process tree and the detected process.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-27T22:21:13.435Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.21100432.B64.2301110304",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "755d47112e904d4798576bc21dfcda62",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-17T23:30:08Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-GI",
+      "last_seen": "2026-02-28T07:14:41Z",
+      "local_ip": "10.100.101.52",
+      "mac_address": "00-50-56-93-de-2c",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-28T07:15:44Z",
+      "os_version": "Windows 11",
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "SuspiciousRMMUsage",
+    "event_correlation_id": "09ad32a5-6d14-f111-8039-00505693de2c",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:755d47112e904d4798576bc21dfcda62:760499670556-10100-611600?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "ScreenConnect.WindowsClient.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.WindowsClient.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "856",
+      "md5": "b5b476ee8bdc2b1a269bdb0c9facc738",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:760219723637",
+      "process_id": "760219723637",
+      "sha256": "f08f9a65a69c1033391097824d3e7109c5e4a26ed4d96ddf2bfc20d0e769829d",
+      "timestamp": "2026-02-28T06:21:26.309Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "id": "ind:755d47112e904d4798576bc21dfcda62:760499670556-10100-611600",
+    "indicator_id": "ind:755d47112e904d4798576bc21dfcda62:760499670556-10100-611600",
+    "ioc_context": [],
+    "lead_id": "50f4b8e6045e1f75ee961bee820240687008165820bbc6c6949463c67add20be",
+    "local_prevalence": "common",
+    "local_process_id": "1856",
+    "logon_domain": "MAXPRO",
+    "md5": "d4b14aef70f13fa88c21885749053e89",
+    "mitre_attack": [
+      {
+        "pattern_id": 10100,
+        "tactic_id": "TA0011",
+        "technique_id": "T1219",
+        "tactic": "Command and Control",
+        "technique": "Remote Access Tools"
+      }
+    ],
+    "name": "SuspiciousRMMUsage",
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe\" \"?e=Access&y=Guest&h=myremote2.technijian.com&p=8041&s=122c83f1-a7e0-49f7-a745-31b7b0e24b91&k=BgIAAACkAABSU0ExAAgAAAEAAQDxJ3HZU2kmSU2L%2fwvXw%2b5vOHXgem7vXCvSaQ3VjZQiy1GNzt2zIYpFQwBCyTSj1EJjgFfvKXEvBJfLUoE9kfQ040ry1i0JIuxjiAvoNQeQU4oGqSmcsjJ%2fn8Rtfz17hsGXOpkG2RKeBfTofpZGY6odnNvRERmV%2fWVUmyHJ%2ff7IXVuzCzkEKLV4t2svZaVORF2hS%2bFtVvLd3lidSn8IobpDHp%2b28wnpvrWmLnBC2EJ7O44SEwD7bEpDckq%2f%2fwm%2fOiEv5rUKiGphIhTqGrp5pRm%2fAqrvm4d7rA1jvao8o9z41QxVr8hKGLSQ0H5t83zLtonIEOEX4logOUH9Dr8iqADF&v=AQAAANCMnd8BFdERjHoAwE%2fCl%2bsBAAAAtT20EMEVPE6uxPT05NsNKAAAAAACAAAAAAAQZgAAAAEAACAAAAChX5KCcv3180VRfBFEOx9XswxMt%2bSaH9ipmNjYpWs5RAAAAAAOgAAAAAIAACAAAABAQuPZWvgZcsDtjyQZupwNYXRxwr9FdjFhn9N8mmwLQ6AEAACV03w26MHHBIe2GBswXeiyL4nwC3b2j3LVwcT4%2bpwBkSHgG6CDVti30xZxM6iFVzKDoxlgA5TbCbmLj8S840%2fK8S9jSXa4f6Z%2fGTV2lCPK65X3szTVDjBlKpQWt2oCp7%2bWeeh8Ui0MmnsmsoCuVCk%2bWZXgmFUz%2fy6sKKLxWovP60G3v1j3NXkzaO0FJqA2WAytLb%2bi%2fzZeBVPwdoPLpn5r%2bnn3Zanv9YWZD%2fcQzON4Knnhz%2bQxJOhiIEh67We%2bNOFhO9X7tJN7e04oLKDTtxBEBFJJORm6fR6IHxe8GFOu%2fC5bXdQMbnNRHphe91%2f8%2fsnRjnWJOBawD%2bWOqoeOOYinPuDdXiwFkyHpmltkmCdY4yPIFZ35mncTGSIoXuk8moFJUH3DW3gsASGYqibETUnj8R5PljlkSJ4JYJ31F45Y%2fsfVyPg4BJvzJbuJCV91EiQ5il6rn6N7PTsXdo5Y5FEOiwZ5pMDV7vyXbhnoFpmqNvd6xA5FMITDDuMZXi3QJBSIoB4H7hI0yEsb9Ll9rGYeao4MmTDJUfP3WKVQ1g8HL37Pgaa5WPSSmgt01GVZSRwuf8C2ISM5%2fYumH35AAFzjH0%2fUKyGfMEFFzfdQjphw%2bNuvnyKQgp5y22fspgLgeiPnytpVb9565krEbub7F3193AWgYfKggkVZcmNV0GsC2W83mEQ315Hi1NoAeku%2f%2fleMHvwtZGomZDa1cGaUcNlXAKOJU8GEAV1ANDmjTbqMamQeXwhnAX%2feJAbBDflZyn7aQrLVF5S9s9wXTrLRgsApLmj5D1t7Y8TUNAnqzChHFqR4WGRNExSPyBmzrr3Rw9LtII3bINLt0DVnFEm6xP8RzcWZA0Ly5EkFzkmFvxDnLrnovgo4PJYdQWoV7RlVJ0tW1Eiogu09AJ7r%2bqipP1fmaHlRya4%2fHeXYu2GMzHuyujbsqjrxu97MiEk%2fXGsGZdBZXLpBGi4ao2giBORt8aszEKJ0U2KqRBkurI0r78QzVJYX25DVrxig0ZH1kpgod2w8jApGslqASJqZYt%2bFWok%2b7pXEDclZAqwvbHrXF2SpfNy6jc8DG22jKRvlR%2bcY1D3zqJJH4n7LEcEn5mEWCPMPYZnN8VoSTf2xoRDHsRbp%2fVzozmD9u3H2HLu7PkdKfkQcHJ%2ba8JNZrdZrUTrH%2f1CG03owsH88hrI9P2bOIxObKwBBi3nPfUrwoLPuxh5bYthfn2TQ2KFlhqtpK4k1gOwzie4xEC7s9xK1RgtvG1Q%2fprpfIRt%2fYbmcF09sjhllJE0t%2fenbdY5A0yaEz1AsXybubYTTdb48kmM0oeHvMBLbT7jhZlOtuziK9zB5yfXQOKGfvRvoob7PBLXIyCadVS02OHtNdYF%2frUJa%2f%2bJD9fqadUZLlu%2fqW7rfBaW1TYcFr9dwKeIaFavqazaIr3SlJd1krmz53NVbUWRG2ggVAmspRKxZrZZxLBN%2fypqNuOrDo6%2frlJEeA2SyEUefd5Oog1vkPxBRT8gyCtvrUs8byqpgmxzi5H%2f2CFVCwFK1rsbgxi5VCUgBQvy5W50oJnPqqNaLJ4QmIZI8oXRrgwrOXhtDWUAAAADVIZT%2fEptsZBzwH27IWodoTZ3cZC1SJDb0%2f8QaWB8EoTPPHkI9C4ErrMPwj%2biaaz3nz%2bEmA7okrX6SNS6BESYy&t=MAX-DC-VDI-GI&c=MAX&c=&c=&c=Workstation&c=&c=&c=&c=\"",
+      "filename": "ScreenConnect.ClientService.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ScreenConnect Client (cdb7a332e8139c5c)\\ScreenConnect.ClientService.exe",
+      "local_process_id": "5400",
+      "md5": "260e414c2f7e6b561239ab39494db4bb",
+      "process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:760318540380",
+      "process_id": "760318540380",
+      "sha256": "a5c75fdc9bceecbf9a873a1c66eec3dcc87f66f5e973d9dd9937b8a5d7a3c603",
+      "timestamp": "2026-02-28T06:21:27.276Z",
+      "user_graph_id": "uid:755d47112e904d4798576bc21dfcda62:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-GI$"
+    },
+    "parent_process_id": "760318540380",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10100,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFihIMZ5wL-wisl_PL5KCqdAAATiGx-TnBSerpQ8Tu_Bj_YjpIxDjndXA6XoUBHEGwi_W7xw==",
+    "process_end_time": "1772260591",
+    "process_id": "760499670556",
+    "process_start_time": "1772259750",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 50,
+    "severity_name": "Medium",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "82477cdde7d90092fd2fe8b331d41851a2fa42f79e64721307b59e02c789a887",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Remote Access Tools",
+    "technique_id": "T1219",
+    "template_instance_id": "24842",
+    "timestamp": "2026-02-28T06:27:42.666Z",
+    "triggering_process_graph_id": "pid:755d47112e904d4798576bc21dfcda62:760499670556",
+    "type": "signal",
+    "updated_timestamp": "2026-02-28T07:27:46.143639847Z",
+    "user_id": "S-1-5-18",
+    "user_name": "MAX-DC-VDI-GI$",
+    "user_principal": "MAX-DC-VDI-GI$@maxproleasing.local"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "alleged_filetype": "exe",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "systeminfo.exe  ",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:367473997930-10335-28545040",
+    "confidence": 80,
+    "context_timestamp": "2026-02-10T09:11:15.887Z",
+    "crawled_timestamp": "2026-02-10T10:11:20.306980769Z",
+    "created_timestamp": "2026-02-10T09:12:20.393600053Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-02T14:28:04.481Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.18227214.B64.2106252220",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:11:45Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-001",
+      "last_seen": "2026-02-10T10:10:30Z",
+      "local_ip": "10.100.101.54",
+      "mac_address": "00-50-56-93-59-b5",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-10T10:10:42Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "SystemInfoDiscovery",
+    "event_correlation_id": "3a33ef6b-6006-f111-803b-0050569359b5",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:367473997930-10335-28545040?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "systeminfo.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\systeminfo.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "4396",
+      "md5": "0ea256a6b03808df2c6fd7448f77b197",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367453324310",
+      "process_id": "367453324310",
+      "sha256": "5affe32b056e55553ed11a44cfd63d3b3ace956344e960b5a4f76646fc0cfff5",
+      "timestamp": "2026-02-10T09:11:29Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-001$"
+    },
+    "id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367473997930-10335-28545040",
+    "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367473997930-10335-28545040",
+    "ioc_context": [],
+    "lead_id": "55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "local_prevalence": "low",
+    "local_process_id": "4756",
+    "logon_domain": "MAXPRO",
+    "md5": "6408fef9036f891b97d8bdd4adfac591",
+    "mitre_attack": [
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "GenericSystemInfoDiscovery",
+    "objective": "Explore",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\cmd.exe /C systeminfo.exe > \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\\\logs\\systeminfo.log\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "5324",
+      "md5": "0f8c1f11737cd274fac139fae93fa73b",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367472088906",
+      "process_id": "367472088906",
+      "sha256": "fc60c7aeb6af30d719410e6ec05a75761e5ccdf86a47e5d99a461915d9c9b270",
+      "timestamp": "2026-02-10T09:11:25Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-001$"
+    },
+    "parent_process_id": "367472088906",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10335,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFbOz6QogyWXkfYYtcmMPYHwAATiFRChIvaA565OUxoeKxhOzH4EF1IGxQaEYxJs8hMqPTSA==",
+    "process_end_time": "1770714682",
+    "process_id": "367473997930",
+    "process_start_time": "1770714675",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 70,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "389d6d810ad2804e2652bc36142697324692f54d47b7b9338649f763d821791d",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Information Discovery",
+    "technique_id": "T1082",
+    "template_instance_id": "2636",
+    "timestamp": "2026-02-10T09:11:16.9Z",
+    "triggering_process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367473997930",
+    "type": "signal",
+    "updated_timestamp": "2026-02-10T10:11:20.306966383Z",
+    "user_id": "S-1-5-18",
+    "user_name": "MAX-DC-VDI-001$"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:838bbcc4fd3745b3acebe0efa22824ef:367456801118"
+    ],
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "cloud_indicator": "false",
+    "cmdline": "net  session ",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:367456223154-10336-28473360",
+    "confidence": 80,
+    "context_timestamp": "2026-02-10T09:11:04.155Z",
+    "crawled_timestamp": "2026-02-10T10:11:20.317424038Z",
+    "created_timestamp": "2026-02-10T09:12:20.469338595Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-02-02T14:28:04.481Z",
+      "agent_version": "7.33.20505.0",
+      "bios_manufacturer": "VMware, Inc.",
+      "bios_version": "VMW71.00V.18227214.B64.2106252220",
+      "cid": "b83e2e1f050c4662a93b9ae942219205",
+      "config_id_base": "65994767",
+      "config_id_build": "20505",
+      "config_id_platform": "3",
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef",
+      "external_ip": "66.81.19.126",
+      "first_seen": "2025-10-15T12:11:45Z",
+      "groups": [
+        "f8830329f8f5474a89931e911bab4a13"
+      ],
+      "hostinfo": {
+        "active_directory_dn_display": [
+          "VDI Computers",
+          "VDI Computers\\MAXPRO VDI Infrastructure"
+        ],
+        "domain": "maxproleasing.local"
+      },
+      "hostname": "MAX-DC-VDI-001",
+      "last_seen": "2026-02-10T10:10:30Z",
+      "local_ip": "10.100.101.54",
+      "mac_address": "00-50-56-93-59-b5",
+      "machine_domain": "maxproleasing.local",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-02-10T10:10:42Z",
+      "os_version": "Windows 11",
+      "ou": [
+        "VDI Computers",
+        "MAXPRO VDI Infrastructure"
+      ],
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "site_name": "Default-First-Site-Name",
+      "status": "normal",
+      "system_manufacturer": "VMware, Inc.",
+      "system_product_name": "VMware7,1"
+    },
+    "display_name": "SystemNetworkConfigDiscovery",
+    "event_correlation_id": "b42fef6b-6006-f111-803b-0050569359b5",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:ind:838bbcc4fd3745b3acebe0efa22824ef:367456223154-10336-28473360?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "filename": "net.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\net.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "4396",
+      "md5": "0ea256a6b03808df2c6fd7448f77b197",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367453324310",
+      "process_id": "367453324310",
+      "sha256": "5affe32b056e55553ed11a44cfd63d3b3ace956344e960b5a4f76646fc0cfff5",
+      "timestamp": "2026-02-10T09:11:29Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-001$"
+    },
+    "id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367456223154-10336-28473360",
+    "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367456223154-10336-28473360",
+    "ioc_context": [],
+    "lead_id": "55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "local_prevalence": "low",
+    "local_process_id": "7988",
+    "logon_domain": "MAXPRO",
+    "md5": "d4e7a009d386934803364c2d69ed465b",
+    "mitre_attack": [
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      }
+    ],
+    "name": "GenericSystemNetworkConfigDiscovery",
+    "objective": "Explore",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\cmd.exe /c \"\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\scripts\\setAppPermission_Internal.bat\" \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\logs\"\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "9824",
+      "md5": "0f8c1f11737cd274fac139fae93fa73b",
+      "process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367454567022",
+      "process_id": "367454567022",
+      "sha256": "fc60c7aeb6af30d719410e6ec05a75761e5ccdf86a47e5d99a461915d9c9b270",
+      "timestamp": "2026-02-10T09:11:09Z",
+      "user_graph_id": "uid:838bbcc4fd3745b3acebe0efa22824ef:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "MAX-DC-VDI-001$"
+    },
+    "parent_process_id": "367454567022",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10336,
+    "platform": "Windows",
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFXKvaRrVq9Lq_5_fp0E_AdAAATiEgTYqlktF35NTaFVHbuSx5kth34ufnSlpX9avhCKv60w==",
+    "process_end_time": "1770714664",
+    "process_id": "367456223154",
+    "process_start_time": "1770714664",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": 70,
+    "severity_name": "High",
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "e7a3a04db13f7d5e65db45dbed99b80c9ad9907beeba3416e2e5428e1efb791e",
+    "show_in_ui": true,
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Network Configuration Discovery",
+    "technique_id": "T1016",
+    "template_instance_id": "1629",
+    "timestamp": "2026-02-10T09:11:05.013Z",
+    "triggering_process_graph_id": "pid:838bbcc4fd3745b3acebe0efa22824ef:367456223154",
+    "type": "signal",
+    "updated_timestamp": "2026-02-10T10:11:20.317414678Z",
+    "user_id": "S-1-5-18",
+    "user_name": "MAX-DC-VDI-001$"
+  },
+  {
+    "agent_id": "838bbcc4fd3745b3acebe0efa22824ef",
+    "aggregate_id": "",
+    "cid": "b83e2e1f050c4662a93b9ae942219205",
+    "composite_id": "b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "crawled_timestamp": "2026-02-11T13:16:15.134971018Z",
+    "created_timestamp": "2026-02-10T09:11:19.368035116Z",
+    "device": {
+      "device_id": "838bbcc4fd3745b3acebe0efa22824ef"
+    },
+    "display_name": "MAX-DC-VDI-001 at 2026-02-10T09:11:05Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/b83e2e1f050c4662a93b9ae942219205:automated-lead:b83e2e1f050c4662a93b9ae942219205:55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f?_cid=g04000w5rnuzlo7zbazki3gfihkdaimm",
+    "id": "automated-lead:b83e2e1f050c4662a93b9ae942219205:55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "is_closed": true,
+    "lead_id": "55f0fb9a52b1ea4b9ba20a52dcc7056e2b9a595730d53e9c7f1fa59dff95501f",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      },
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "MAX-DC-VDI-001 at 2026-02-10T09:11:05Z",
+    "origin_cid": "b83e2e1f050c4662a93b9ae942219205",
+    "pattern_id": 185000,
+    "poly_id": "AAC4Pi4fBQxGYqk7mulCIZIFgdFZsqjjYF8yWO-WzxENxwAATiHl75d4zpirv5W5GoKf5NqGBxca5hiGwE4t5LWacg8XRw==",
+    "product": "automated-lead",
+    "score": 16,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-02-10T09:11:16Z",
+    "signal_start_timestamp": "2026-02-10T09:11:05Z",
+    "signal_updated_timestamp": "2026-02-11T13:16:12Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+        "display_name": "SystemNetworkConfigDiscovery",
+        "host_id": "838bbcc4fd3745b3acebe0efa22824ef",
+        "hostname": "MAX-DC-VDI-001",
+        "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367456223154-10336-28473360",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10336,
+        "process_id": "367456223154",
+        "severity": 70,
+        "signal_association_timestamp": "2026-02-10T09:11:05Z",
+        "template_instance_id": 1629
+      },
+      {
+        "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+        "display_name": "SystemInfoDiscovery",
+        "host_id": "838bbcc4fd3745b3acebe0efa22824ef",
+        "hostname": "MAX-DC-VDI-001",
+        "indicator_id": "ind:838bbcc4fd3745b3acebe0efa22824ef:367473997930-10335-28545040",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10335,
+        "process_id": "367473997930",
+        "severity": 70,
+        "signal_association_timestamp": "2026-02-10T09:11:16Z",
+        "template_instance_id": 2636
+      }
+    ],
+    "timestamp": "2026-02-11T13:16:14Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-02-11T13:16:15.134963003Z"
+  }
+]

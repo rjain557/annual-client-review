@@ -1,0 +1,3724 @@
+[
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "crawled_timestamp": "2026-04-25T18:04:31.908239115Z",
+    "created_timestamp": "2026-04-25T00:20:14.64050036Z",
+    "device": {
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf"
+    },
+    "display_name": "LAPTOP-MTFA4MM6 at 2026-04-24T20:11:55Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "id": "automated-lead:6ea1b31484b64ca7af623edf4a6b300b:a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "is_closed": true,
+    "lead_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 10251,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      },
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      },
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "LAPTOP-MTFA4MM6 at 2026-04-24T20:11:55Z",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "pattern_id": 185000,
+    "poly_id": "AABuobMUhLZMp69iPt9KazALDuyGgBcQJL0kCE6-YPMSmwAATiEywh6CtXs-hsFyPhDdoRiIWXW6lsMHW5EcsJTtjbuHJw==",
+    "product": "automated-lead",
+    "score": 16,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-04-25T00:20:11Z",
+    "signal_start_timestamp": "2026-04-24T20:11:55Z",
+    "signal_updated_timestamp": "2026-04-25T18:04:28Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process associated with a known ransomware campaign launched. Investigate the host for signs of a ransomware attack.",
+        "display_name": "ProcRansomware",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:389981551275-10251-45556240",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10251,
+        "process_id": "389981551275",
+        "signal_association_timestamp": "2026-04-24T20:11:55Z",
+        "template_instance_id": 14116
+      },
+      {
+        "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+        "display_name": "SystemNetworkConfigDiscovery",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400291452729-10336-47002128",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10336,
+        "process_id": "400291452729",
+        "signal_association_timestamp": "2026-04-25T00:20:01Z",
+        "template_instance_id": 1629
+      },
+      {
+        "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+        "display_name": "SystemInfoDiscovery",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400306209797-10335-47068176",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10335,
+        "process_id": "400306209797",
+        "signal_association_timestamp": "2026-04-25T00:20:11Z",
+        "template_instance_id": 2636
+      }
+    ],
+    "timestamp": "2026-04-25T18:04:31Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-04-25T18:04:31.908220404Z"
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "alleged_filetype": "EXE",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:405982131379",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:405994374678",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:405996154966",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:410083351137",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:410079727620"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\buckl\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Outlook\\SUF9XS1N\\Required Information and Documents for Anthem Authorization Requests 2026.docx\" /o \"\"",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:405977793765-10351-58173712",
+    "context_timestamp": "2026-04-28T19:51:17.542Z",
+    "crawled_timestamp": "2026-04-28T22:00:14.397797726Z",
+    "created_timestamp": "2026-04-28T21:01:14.395584256Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process attempted to establish an unusual connection over a commonly used port, possibly to a command and control server. Adversaries can use this to bypass firewalls and evade detection. Review the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-28T13:55:03.333Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-28T21:27:45Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-28T21:29:35Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "CommonlyUsedPortC2",
+    "dns_requests": [
+      {
+        "domain_name": "autodiscover-s.outlook.com",
+        "interface_index": "0",
+        "load_time": "1777323811",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "relcomms-prod-dagnegedescbeefs.b02.azurefd.net",
+        "interface_index": "0",
+        "load_time": "1777323811",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "support.content.office.net",
+        "interface_index": "0",
+        "load_time": "1777323811",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "autodiscover.housingforhealthca.org",
+        "interface_index": "0",
+        "load_time": "1777323812",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "housingforhealthca.org",
+        "interface_index": "0",
+        "load_time": "1777323812",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "nam13.safelinks.protection.outlook.com",
+        "interface_index": "0",
+        "load_time": "1777323817",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "arc.msn.com",
+        "interface_index": "0",
+        "load_time": "1777323820",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "augloop.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1777323820",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "titles.prod.mos.microsoft.com",
+        "interface_index": "0",
+        "load_time": "1777323821",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "api.addins.omex.office.net",
+        "interface_index": "0",
+        "load_time": "1777323821",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "719512a0-3a43-f111-a605-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:405977793765-10351-58173712?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "WINWORD.EXE",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+    "files_written": [
+      {
+        "filename": "Required Information and Documents for Anthem Authorization Requests 2026.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1777323838"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "9152",
+      "md5": "ac40353454b81af352815bc599e26380",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:361305826771",
+      "process_id": "361305826771",
+      "sha256": "f468e15e73aae3ddab99ea74a9b34bab0104790e5e5b90906fafb713f3f4c7ea",
+      "timestamp": "1601-01-01T00:00:00.000Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckl"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:405977793765-10351-58173712",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:405977793765-10351-58173712",
+    "ioc_context": [],
+    "lead_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "local_prevalence": "common",
+    "local_process_id": "8340",
+    "logon_domain": "LAPTOP-MTFA4MM6",
+    "md5": "bb2f019bd5e39242b0206b8e8e2daabc",
+    "mitre_attack": [
+      {
+        "pattern_id": 10351,
+        "tactic_id": "TA0011",
+        "technique_id": "T1071",
+        "tactic": "Command and Control",
+        "technique": "Application Layer Protocol"
+      }
+    ],
+    "name": "GenericCommonlyUsedPortC2",
+    "network_accesses": [
+      {
+        "access_timestamp": "1777323809",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57877",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.9",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323809",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57878",
+        "protocol": "TCP",
+        "remote_address": "23.66.136.155",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323809",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57876",
+        "protocol": "TCP",
+        "remote_address": "52.123.129.14",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323809",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57879",
+        "protocol": "TCP",
+        "remote_address": "150.171.109.147",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323810",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57880",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.7",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323810",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57881",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.50",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323810",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57883",
+        "protocol": "TCP",
+        "remote_address": "52.96.165.114",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323811",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57886",
+        "protocol": "TCP",
+        "remote_address": "52.96.156.40",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323811",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57885",
+        "protocol": "TCP",
+        "remote_address": "185.230.63.107",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1777323811",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "57884",
+        "protocol": "TCP",
+        "remote_address": "23.103.228.2",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE\" ",
+      "filename": "OUTLOOK.EXE",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "local_process_id": "33548",
+      "md5": "7371583b072e1607ab2646d2375fe0b3",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:404791310316",
+      "process_id": "404791310316",
+      "sha256": "f5cb8e5a33ca3065567eaba70dd89b76f35aabcb2c5ec685910483b670161ad6",
+      "timestamp": "2026-04-28T19:50:47Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckl"
+    },
+    "parent_process_id": "404791310316",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10351,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALz1KrGmgp5XZzk1SsuzkYhQAATiHDmfcia1MVRi4ybbkhaLINybqXAcZCFzUnfzYlqjQnaQ==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1777405918",
+    "process_id": "405977793765",
+    "process_start_time": "1777323807",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "6f5ab377fd15f3b8d8e9a2ff67f33970b2101fa44ff6c0450e7b0cb575865ad4",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Application Layer Protocol",
+    "technique_id": "T1071",
+    "template_instance_id": "9167",
+    "timestamp": "2026-04-28T19:51:19.078Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:405977793765",
+    "type": "signal",
+    "updated_timestamp": "2026-04-28T22:00:14.397783428Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckl",
+    "user_names": [
+      "buckl"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "taskhostw.exe",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:413024574321-10173-2171408",
+    "context_timestamp": "2026-04-28T21:00:05.968Z",
+    "crawled_timestamp": "2026-04-28T22:00:14.397694098Z",
+    "created_timestamp": "2026-04-28T21:01:14.378367562Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process attempted to schedule a task to restart the host. Malware might launch malicious activity at host startup. Review the scheduled task.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-28T13:55:03.333Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-28T21:27:45Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-28T21:29:35Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "TaskRestartHost",
+    "event_correlation_id": "31f6d628-4543-f111-a606-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:413024574321-10173-2171408?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "taskhostw.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\taskhostw.exe",
+    "files_written": [
+      {
+        "filename": "kd_02_15b3.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_19a2.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_15ad.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_1414.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kdnet_uart16550.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_1969.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_0C_8086.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_1d0f.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_07_1415.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      },
+      {
+        "filename": "kd_02_1137.dll",
+        "filepath": "\\Device\\HarddiskVolume1\\EFI\\Microsoft\\Boot",
+        "timestamp": "1777410008"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1384",
+      "md5": "fea300d083f897fb2e439d70eb452909",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:412327687203",
+      "process_id": "412327687203",
+      "sha256": "7f408ec593109215e002efdafd321b385c8dde6f8b3d334efafbb991521e814e",
+      "timestamp": "2026-04-28T20:55:08.933Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:413024574321-10173-2171408",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:413024574321-10173-2171408",
+    "ioc_context": [],
+    "lead_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "local_prevalence": "common",
+    "local_process_id": "19672",
+    "logon_domain": "WORKGROUP",
+    "md5": "0e24b6cbad9a3c201780437842dff82a",
+    "mitre_attack": [
+      {
+        "pattern_id": 10173,
+        "tactic_id": "TA0002",
+        "technique_id": "T1053",
+        "tactic": "Execution",
+        "technique": "Scheduled Task/Job"
+      }
+    ],
+    "name": "TaskRestartHost",
+    "objective": "Follow Through",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+      "filename": "svchost.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\svchost.exe",
+      "local_process_id": "2340",
+      "md5": "b1c5636ec08026fd0f8ccbff49ed7e59",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:412351330363",
+      "process_id": "412351330363",
+      "sha256": "44fd6f9347ceed5798a25c47167f335ef085ae4648a81f775dd4bdc6240d8189",
+      "timestamp": "2026-04-28T20:55:08.943Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "412351330363",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10173,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALy1laNrtad7jhFSqCMb0IVwAATiGHaKK_5rFbUSgJ3Bq3JdphgJqgsNYjlNRXCdpkiwUPMA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1777410008",
+    "process_id": "413024574321",
+    "process_start_time": "1777410002",
+    "product": "automated-lead-context",
+    "scenario": "establish_persistence",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "5016d2e17347bffda32dc91362055e36bc21d9509ec03a4ad76ca84b6bb14182",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Execution",
+    "tactic_id": "TA0002",
+    "technique": "Scheduled Task/Job",
+    "technique_id": "T1053",
+    "template_instance_id": "14524",
+    "timestamp": "2026-04-28T21:00:08.067Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:413024574321",
+    "type": "signal",
+    "updated_timestamp": "2026-04-28T22:00:14.39767607Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": " /updateInstalled /background",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:389981551275-10251-45556240",
+    "context_timestamp": "2026-04-24T20:11:54.584Z",
+    "crawled_timestamp": "2026-04-25T01:20:15.459155432Z",
+    "created_timestamp": "2026-04-25T00:21:15.45535009Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process associated with a known ransomware campaign launched. Investigate the host for signs of a ransomware attack.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-16T10:27:21.308Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-25T00:51:00Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-25T00:52:19Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "ProcRansomware",
+    "dns_requests": [
+      {
+        "domain_name": "config.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1776875037",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20042.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776875050",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20021.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776885862",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20003.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776889466",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20001.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776903873",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20008.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776907475",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20016.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776963114",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20050.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776966716",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20029.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776970317",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20047.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1776970317",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "73fddbad-1840-f111-a605-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:389981551275-10251-45556240?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "OneDrive.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\OneDrive.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe /allusers /update /restart",
+      "filename": "OneDriveSetup.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe",
+      "local_process_id": "25272",
+      "md5": "39955fc5dd61b54fd553c1e2f901563e",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:389943439391",
+      "process_id": "389943439391",
+      "sha256": "1906fc3161db17903261eedcd6b4bd2a7780e9c8667dd688444b0abd0fb3282e",
+      "timestamp": "2026-04-22T16:23:59Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:389981551275-10251-45556240",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:389981551275-10251-45556240",
+    "ioc_context": [],
+    "lead_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "local_prevalence": "low",
+    "local_process_id": "26016",
+    "logon_domain": "MicrosoftAccount",
+    "md5": "9c0593fe9c17232f54030baa8142b6ed",
+    "mitre_attack": [
+      {
+        "pattern_id": 10251,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      }
+    ],
+    "name": "ProcRansomware",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776875032",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50881",
+        "protocol": "TCP",
+        "remote_address": "52.168.117.175",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875035",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50890",
+        "protocol": "TCP",
+        "remote_address": "40.97.222.194",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875035",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50888",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.27",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875035",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50889",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.17",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875041",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50902",
+        "protocol": "TCP",
+        "remote_address": "13.107.136.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875043",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50906",
+        "protocol": "TCP",
+        "remote_address": "52.123.249.189",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875045",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50909",
+        "protocol": "TCP",
+        "remote_address": "13.107.138.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875045",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50910",
+        "protocol": "TCP",
+        "remote_address": "20.99.186.246",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875046",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50912",
+        "protocol": "TCP",
+        "remote_address": "23.103.228.24",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776875049",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50917",
+        "protocol": "TCP",
+        "remote_address": "20.209.142.129",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Follow Through",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe /allusers /update /restart  /permachine  /childprocess  /renameReplaceOneDriveExe  /renameReplaceODSUExe  /removeNonCurrentVersions  /enableODSUReportingMode  /installWebView2 /cusid:S-1-5-18 ",
+      "filename": "OneDriveSetup.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe",
+      "local_process_id": "38056",
+      "md5": "39955fc5dd61b54fd553c1e2f901563e",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:389945644332",
+      "process_id": "389945644332",
+      "sha256": "1906fc3161db17903261eedcd6b4bd2a7780e9c8667dd688444b0abd0fb3282e",
+      "timestamp": "2026-04-22T16:23:59Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "389945644332",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10251,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALvtZxkQk15Cpbo2wOeC1YzwAATiFH0uE0im5Z_dZcaQdYQN9fVE5AEL86TRxTwIBKMqcMww==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "389981551275",
+    "process_start_time": "1776875030",
+    "product": "automated-lead-context",
+    "scenario": "ransomware",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "f21b1acf785eb9b345b24df3c553bda2b72107d6fb08f8d456c331d6f95fb802",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Impact",
+    "tactic_id": "TA0040",
+    "technique": "Data Encrypted for Impact",
+    "technique_id": "T1486",
+    "template_instance_id": "14116",
+    "timestamp": "2026-04-24T20:11:55.624Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:389981551275",
+    "type": "signal",
+    "updated_timestamp": "2026-04-25T01:20:15.459147243Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckleyschinto@yahoo.com",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$",
+      "buckleyschinto@yahoo.com"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:400292729438"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "net  session ",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:400291452729-10336-47002128",
+    "context_timestamp": "2026-04-25T00:20:00.819Z",
+    "crawled_timestamp": "2026-04-25T01:20:15.483205979Z",
+    "created_timestamp": "2026-04-25T00:21:15.444459489Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process accessed system network configuration settings. Adversaries can use this for lateral movement efforts. Review the process tree.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-16T10:27:21.308Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-25T00:51:00Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-25T00:52:19Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "SystemNetworkConfigDiscovery",
+    "event_correlation_id": "3b9ee34d-3a40-f111-a605-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:400291452729-10336-47002128?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "net.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\net.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "19040",
+      "md5": "98ed4f05eef2489fc52c6c12666860b6",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400288004690",
+      "process_id": "400288004690",
+      "sha256": "075240b03ad2bcca9cdc8474394550ca8ea3ffed613d3608230c2338b6a1d639",
+      "timestamp": "2026-04-25T00:20:22Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400291452729-10336-47002128",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400291452729-10336-47002128",
+    "ioc_context": [],
+    "lead_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "local_prevalence": "common",
+    "local_process_id": "13748",
+    "logon_domain": "WORKGROUP",
+    "md5": "d4e7a009d386934803364c2d69ed465b",
+    "mitre_attack": [
+      {
+        "pattern_id": 10336,
+        "tactic_id": "TA0007",
+        "technique_id": "T1016",
+        "tactic": "Discovery",
+        "technique": "System Network Configuration Discovery"
+      }
+    ],
+    "name": "GenericSystemNetworkConfigDiscovery",
+    "objective": "Explore",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\cmd.exe /c \"\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\scripts\\setAppPermission_Internal.bat\" \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\logs\"\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "9508",
+      "md5": "e13a51441dc818b03756928f581accab",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400289499050",
+      "process_id": "400289499050",
+      "sha256": "3728c25aa79337fab4f38ba5ccdd135067fbbd6477b8466bb755178a1aac8285",
+      "timestamp": "2026-04-25T00:20:05Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "400289499050",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10336,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALCRqW33JJSxvRgO_WlriTfQAATiGzqjSjRR7kmuP6lCFy_pCWZHZrhrz3vBwrxTkgux6XMA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1777076400",
+    "process_id": "400291452729",
+    "process_start_time": "1777076400",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "e7a3a04db13f7d5e65db45dbed99b80c9ad9907beeba3416e2e5428e1efb791e",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Network Configuration Discovery",
+    "technique_id": "T1016",
+    "template_instance_id": "1629",
+    "timestamp": "2026-04-25T00:20:01.572Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400291452729",
+    "type": "signal",
+    "updated_timestamp": "2026-04-25T01:20:15.483196799Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "systeminfo.exe  ",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:400306209797-10335-47068176",
+    "context_timestamp": "2026-04-25T00:20:10.285Z",
+    "crawled_timestamp": "2026-04-25T01:20:15.469600617Z",
+    "created_timestamp": "2026-04-25T00:21:15.461226445Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process gathered information about the operating system or hardware. Adversaries can use this to identify system vulnerabilities. Review the process tree.",
+    "device": {
+      "agent_load_flags": "16",
+      "agent_local_time": "2026-04-16T10:27:21.308Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-25T00:51:00Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-25T00:52:19Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "SystemInfoDiscovery",
+    "event_correlation_id": "e88f5882-3c40-f111-a605-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:400306209797-10335-47068176?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "systeminfo.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\systeminfo.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe\" -i dc",
+      "filename": "dcagentregister.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\bin\\dcagentregister.exe",
+      "local_process_id": "19040",
+      "md5": "98ed4f05eef2489fc52c6c12666860b6",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400288004690",
+      "process_id": "400288004690",
+      "sha256": "075240b03ad2bcca9cdc8474394550ca8ea3ffed613d3608230c2338b6a1d639",
+      "timestamp": "2026-04-25T00:20:22Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400306209797-10335-47068176",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:400306209797-10335-47068176",
+    "ioc_context": [],
+    "lead_id": "a707f8d54e72cb6232a53b9506bd9a67420fcde5afe6f57eed46b193f41f8ee1",
+    "local_prevalence": "common",
+    "local_process_id": "28924",
+    "logon_domain": "WORKGROUP",
+    "md5": "6408fef9036f891b97d8bdd4adfac591",
+    "mitre_attack": [
+      {
+        "pattern_id": 10335,
+        "tactic_id": "TA0007",
+        "technique_id": "T1082",
+        "tactic": "Discovery",
+        "technique": "System Information Discovery"
+      }
+    ],
+    "name": "GenericSystemInfoDiscovery",
+    "objective": "Explore",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\cmd.exe /C systeminfo.exe > \"C:\\Program Files (x86)\\ManageEngine\\UEMS_Agent\\\\logs\\systeminfo.log\"",
+      "filename": "cmd.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\SysWOW64\\cmd.exe",
+      "local_process_id": "7104",
+      "md5": "e13a51441dc818b03756928f581accab",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400304006263",
+      "process_id": "400304006263",
+      "sha256": "3728c25aa79337fab4f38ba5ccdd135067fbbd6477b8466bb755178a1aac8285",
+      "timestamp": "2026-04-25T00:20:18Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "400304006263",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10335,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALCvsZ923JawnrQEU7qno_1QAATiFGnnZtIRefQNUKClfwyK9O0cEZVZWIz-kqGQw5Knxtkg==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1777076415",
+    "process_id": "400306209797",
+    "process_start_time": "1777076410",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "389d6d810ad2804e2652bc36142697324692f54d47b7b9338649f763d821791d",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "System Information Discovery",
+    "technique_id": "T1082",
+    "template_instance_id": "2636",
+    "timestamp": "2026-04-25T00:20:11.478Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:400306209797",
+    "type": "signal",
+    "updated_timestamp": "2026-04-25T01:20:15.469589472Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\WINDOWS\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXapskvk16gk8da8kch5g4qxh42vxccved.mca",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:412698939889-459-1253904",
+    "context_timestamp": "2026-04-28T20:55:54.888Z",
+    "crawled_timestamp": "2026-04-28T22:00:14.489481003Z",
+    "created_timestamp": "2026-04-28T21:01:14.38690163Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-28T13:55:03.333Z",
+      "agent_version": "7.36.20805.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20805",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-28T21:27:45Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-28T21:29:35Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "UmppcBypassSuspected",
+    "event_correlation_id": "87f18197-4443-f111-a606-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:412698939889-459-1253904?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "backgroundTaskHost.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\backgroundTaskHost.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1384",
+      "md5": "fea300d083f897fb2e439d70eb452909",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:412327687203",
+      "process_id": "412327687203",
+      "sha256": "7f408ec593109215e002efdafd321b385c8dde6f8b3d334efafbb991521e814e",
+      "timestamp": "2026-04-28T20:55:08.933Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:412698939889-459-1253904",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:412698939889-459-1253904",
+    "ioc_context": [],
+    "lead_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "local_prevalence": "common",
+    "local_process_id": "16008",
+    "logon_domain": "LAPTOP-MTFA4MM6",
+    "md5": "8bde0ae40012bd639fc60e494cc32356",
+    "mitre_attack": [
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      }
+    ],
+    "name": "UmppcBypassSuspected",
+    "objective": "Keep Access",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\svchost.exe -k DcomLaunch -p",
+      "filename": "svchost.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\svchost.exe",
+      "local_process_id": "1716",
+      "md5": "b1c5636ec08026fd0f8ccbff49ed7e59",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:412329464019",
+      "process_id": "412329464019",
+      "sha256": "44fd6f9347ceed5798a25c47167f335ef085ae4648a81f775dd4bdc6240d8189",
+      "timestamp": "2026-04-28T20:55:08.935Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "412329464019",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 459,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALqXZ_o0ZjU2kQx-8PUviUGAAATiE1ZiEX2hHpkbzzedXduE_jYRpQ1yQZQQua1jwe8_MTkw==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1777409832",
+    "process_id": "412698939889",
+    "process_start_time": "1777409749",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "b7d2c17e0038945aa4b72ae7a89e54d29b04ccc0feb62df5c9b7b67de43c2530",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Impair Defenses",
+    "technique_id": "T1562",
+    "timestamp": "2026-04-28T20:56:26.97Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:412698939889",
+    "type": "signal",
+    "updated_timestamp": "2026-04-28T22:00:14.48946552Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckl",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$",
+      "buckl"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "crawled_timestamp": "2026-04-28T21:00:13.069638667Z",
+    "created_timestamp": "2026-04-28T21:00:13.069631395Z",
+    "device": {
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf"
+    },
+    "display_name": "LAPTOP-MTFA4MM6 at 2026-04-28T19:51:19Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "id": "automated-lead:6ea1b31484b64ca7af623edf4a6b300b:58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "is_closed": false,
+    "lead_id": "58671da9f0ba6a79d5c3bb7c88e5c9f9bf3123ffbe6c24105832452aee9ea2b2",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 10351,
+        "tactic_id": "TA0011",
+        "technique_id": "T1071",
+        "tactic": "Command and Control",
+        "technique": "Application Layer Protocol"
+      },
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      },
+      {
+        "pattern_id": 10173,
+        "tactic_id": "TA0002",
+        "technique_id": "T1053",
+        "tactic": "Execution",
+        "technique": "Scheduled Task/Job"
+      }
+    ],
+    "name": "LAPTOP-MTFA4MM6 at 2026-04-28T19:51:19Z",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "pattern_id": 185000,
+    "poly_id": "AABuobMUhLZMp69iPt9KazALDIlLjtfnN7nVkS47OOCXUAAATiEZvS1SuZ8OTh_W6rbKdhtOBHdgo-1QlPphKCASZkJlYA==",
+    "product": "automated-lead",
+    "score": 14,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-04-28T21:00:08Z",
+    "signal_start_timestamp": "2026-04-28T19:51:19Z",
+    "signal_updated_timestamp": "2026-04-28T21:00:08Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process attempted to establish an unusual connection over a commonly used port, possibly to a command and control server. Adversaries can use this to bypass firewalls and evade detection. Review the process tree.",
+        "display_name": "CommonlyUsedPortC2",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:405977793765-10351-58173712",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10351,
+        "process_id": "405977793765",
+        "signal_association_timestamp": "2026-04-28T19:51:19Z",
+        "template_instance_id": 9167
+      },
+      {
+        "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+        "display_name": "UmppcBypassSuspected",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:412698939889-459-1253904",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 459,
+        "process_id": "412698939889",
+        "signal_association_timestamp": "2026-04-28T20:56:26Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process attempted to schedule a task to restart the host. Malware might launch malicious activity at host startup. Review the scheduled task.",
+        "display_name": "TaskRestartHost",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:413024574321-10173-2171408",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10173,
+        "process_id": "413024574321",
+        "signal_association_timestamp": "2026-04-28T21:00:08Z",
+        "template_instance_id": 14524
+      }
+    ],
+    "timestamp": "2026-04-28T21:00:12Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-04-28T21:00:13.069631395Z"
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "EXE",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335958428231",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335958610676",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335959920562",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:340260957173"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" /vu \"C:\\Users\\buckl\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Outlook\\SUF9XS1N\\New Provider Getting Started Cheat Sheet.docx\"",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:335953120332-10351-22042640",
+    "context_timestamp": "2026-04-13T19:48:48.804Z",
+    "crawled_timestamp": "2026-04-14T01:14:22.839603176Z",
+    "created_timestamp": "2026-04-14T00:15:22.945929138Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process attempted to establish an unusual connection over a commonly used port, possibly to a command and control server. Adversaries can use this to bypass firewalls and evade detection. Review the process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-07T17:41:48.994Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T01:10:20Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T01:10:31Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "CommonlyUsedPortC2",
+    "dns_requests": [
+      {
+        "domain_name": "relcomms-prod-dagnegedescbeefs.b02.azurefd.net",
+        "interface_index": "0",
+        "load_time": "1775610071",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "support.content.office.net",
+        "interface_index": "0",
+        "load_time": "1775610071",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "autodiscover-s.outlook.com",
+        "interface_index": "0",
+        "load_time": "1775610072",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "autodiscover.housingforhealthca.org",
+        "interface_index": "0",
+        "load_time": "1775610072",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "housingforhealthca.org",
+        "interface_index": "0",
+        "load_time": "1775610072",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "housingforhealthoc-my.sharepoint.com",
+        "interface_index": "0",
+        "load_time": "1775610072",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "nam13.safelinks.protection.outlook.com",
+        "interface_index": "0",
+        "load_time": "1775610076",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "titles.prod.mos.microsoft.com",
+        "interface_index": "0",
+        "load_time": "1775610078",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "api.addins.omex.office.net",
+        "interface_index": "0",
+        "load_time": "1775610079",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "binaries.templates.cdn.office.net",
+        "interface_index": "0",
+        "load_time": "1775610091",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "a639eab6-7137-f111-a602-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:335953120332-10351-22042640?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "WINWORD.EXE",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+    "files_written": [
+      {
+        "filename": "HHOC SFTP Protocol_login credentials for Filezilla Site (002).LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775693736"
+      },
+      {
+        "filename": "New Provider Getting Started Cheat Sheet 2026.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775694219"
+      },
+      {
+        "filename": "HHOC.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775694219"
+      },
+      {
+        "filename": "Transitional Rent Rate Sheet- Anthem.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775695214"
+      },
+      {
+        "filename": "Housing for Health Transitional Rent Provider Contract Agreement with FCHN- Revised.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775695251"
+      },
+      {
+        "filename": "HHOC Account Login Information.LNK",
+        "filepath": "\\Device\\HarddiskVolume3\\Users\\buckl\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+        "timestamp": "1775850914"
+      }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+      "filename": "explorer.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+      "local_process_id": "11896",
+      "md5": "45facbb2fae7edfc2be186fe76fa61a6",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335274865872",
+      "process_id": "335274865872",
+      "sha256": "6d560ce5e75149dffe1b67f0a9f1a0717c9996d50ef2dbf3349b251b64c3a195",
+      "timestamp": "2026-04-08T00:42:36Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckleyschinto@yahoo.com"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335953120332-10351-22042640",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335953120332-10351-22042640",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "common",
+    "local_process_id": "19600",
+    "logon_domain": "MicrosoftAccount",
+    "md5": "47d6cc7ba4d12c558952d31191d68188",
+    "mitre_attack": [
+      {
+        "pattern_id": 10351,
+        "tactic_id": "TA0011",
+        "technique_id": "T1071",
+        "tactic": "Command and Control",
+        "technique": "Application Layer Protocol"
+      }
+    ],
+    "name": "GenericCommonlyUsedPortC2",
+    "network_accesses": [
+      {
+        "access_timestamp": "1775610070",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50231",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.2",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610070",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50230",
+        "protocol": "TCP",
+        "remote_address": "52.123.249.169",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50233",
+        "protocol": "TCP",
+        "remote_address": "23.103.228.3",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50236",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.42",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50240",
+        "protocol": "TCP",
+        "remote_address": "52.96.104.210",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50239",
+        "protocol": "TCP",
+        "remote_address": "52.96.26.162",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50237",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.25",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50247",
+        "protocol": "TCP",
+        "remote_address": "185.230.63.107",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50242",
+        "protocol": "TCP",
+        "remote_address": "13.107.136.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775610071",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50234",
+        "protocol": "TCP",
+        "remote_address": "13.107.213.69",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Contact Controlled Systems",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE\" ",
+      "filename": "OUTLOOK.EXE",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "local_process_id": "20404",
+      "md5": "494bd0bdc177b12706e3e679cf129f31",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335767913775",
+      "process_id": "335767913775",
+      "sha256": "e369a60bfc66e251c8946b3020c3d680df2ee55834aff53bd0a206840620e150",
+      "timestamp": "2026-04-08T00:51:29Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckleyschinto@yahoo.com"
+    },
+    "parent_process_id": "335767913775",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10351,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALj87r4-B6eRN8zbi-TdEx2gAATiFKxtwuLYavkUYV2ZVUtouDWnj6gfWgLp78uKmsLHxXKA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "335953120332",
+    "process_start_time": "1775610069",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "b7fab98fc8a163c6212e36d5227b4e1dea0ac02c05642ccf114c4db1a9a3b678",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Command and Control",
+    "tactic_id": "TA0011",
+    "technique": "Application Layer Protocol",
+    "technique_id": "T1071",
+    "template_instance_id": "9167",
+    "timestamp": "2026-04-13T19:48:49.478Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335953120332",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T01:14:22.839593628Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckleyschinto@yahoo.com",
+    "user_names": [
+      "buckleyschinto@yahoo.com"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:340744509887",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:340746007287",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:343112855085",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:343106063616",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:343872672561",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:343860087739",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:346263085552",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:346262557177",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:347106891907",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:347108855833",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:347479182883",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:347484782321"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": " /updateInstalled /background",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:340704517025-10251-23257104",
+    "context_timestamp": "2026-04-13T22:59:32.643Z",
+    "crawled_timestamp": "2026-04-14T01:14:22.853432625Z",
+    "created_timestamp": "2026-04-14T00:15:22.852607823Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process associated with a known ransomware campaign launched. Investigate the host for signs of a ransomware attack.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-07T17:41:48.994Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T01:10:20Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T01:10:31Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "ProcRansomware",
+    "dns_requests": [
+      {
+        "domain_name": "config.svc.cloud.microsoft",
+        "interface_index": "0",
+        "load_time": "1775698941",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20049.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775698958",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20050.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775702560",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20040.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775706162",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20043.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775767488",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20048.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775771090",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "oneclient.sfx.ms",
+        "interface_index": "0",
+        "load_time": "1775816587",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "g.live.com",
+        "interface_index": "0",
+        "load_time": "1775816587",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubprodbn20004.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775838801",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "onedriveclubproddm20022.blob.core.windows.net",
+        "interface_index": "0",
+        "load_time": "1775842384",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "26796d9f-8a37-f111-a602-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:340704517025-10251-23257104?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "OneDrive.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\OneDrive.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe /allusers /update /restart /installcodec:8.0.0.54",
+      "filename": "OneDriveSetup.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe",
+      "local_process_id": "24936",
+      "md5": "376458dd2df152c34af74d0182ead32e",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:340696407203",
+      "process_id": "340696407203",
+      "sha256": "44b2f76810ff276d5d703e00d10445e5bf12aef875e411e0082ae73e1352a21b",
+      "timestamp": "2026-04-09T01:42:25Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:340704517025-10251-23257104",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:340704517025-10251-23257104",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "common",
+    "local_process_id": "25532",
+    "logon_domain": "MicrosoftAccount",
+    "md5": "d2f114f3da8ee37eb898f30d53c2101d",
+    "mitre_attack": [
+      {
+        "pattern_id": 10251,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      }
+    ],
+    "name": "ProcRansomware",
+    "network_accesses": [
+      {
+        "access_timestamp": "1775698941",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50163",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.59",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698941",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50164",
+        "protocol": "TCP",
+        "remote_address": "52.110.4.20",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698943",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50169",
+        "protocol": "TCP",
+        "remote_address": "40.99.229.242",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698944",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50170",
+        "protocol": "TCP",
+        "remote_address": "13.107.136.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698947",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50176",
+        "protocol": "TCP",
+        "remote_address": "52.123.249.179",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698947",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50174",
+        "protocol": "TCP",
+        "remote_address": "13.107.138.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698948",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50178",
+        "protocol": "TCP",
+        "remote_address": "20.99.185.48",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698948",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50179",
+        "protocol": "TCP",
+        "remote_address": "23.103.228.10",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698949",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50181",
+        "protocol": "TCP",
+        "remote_address": "52.104.140.25",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775698950",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50183",
+        "protocol": "TCP",
+        "remote_address": "20.42.73.31",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Follow Through",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "C:\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe /allusers /update /restart /installcodec:8.0.0.54  /permachine  /childprocess  /renameReplaceOneDriveExe  /renameReplaceODSUExe  /removeNonCurrentVersions  /enableODSUReportingMode  /installWebView2 /cusid:S-1-5-18 ",
+      "filename": "OneDriveSetup.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft OneDrive\\Update\\OneDriveSetup.exe",
+      "local_process_id": "26320",
+      "md5": "376458dd2df152c34af74d0182ead32e",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:340697557235",
+      "process_id": "340697557235",
+      "sha256": "44b2f76810ff276d5d703e00d10445e5bf12aef875e411e0082ae73e1352a21b",
+      "timestamp": "2026-04-09T01:42:25Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "340697557235",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10251,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazAL1l2kQOWSxjmTBmcEzCJ23QAATiGkPA6Y7hEdIXUFJ1kjLx1qmZzeqW3JOm3up_KUCUxKuA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "340704517025",
+    "process_start_time": "1775698938",
+    "product": "automated-lead-context",
+    "scenario": "ransomware",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "09a30932338a6fd5dff6e676918691c2f06c96b80f610a65f57a7c1d2d884fcf",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Impact",
+    "tactic_id": "TA0040",
+    "technique": "Data Encrypted for Impact",
+    "technique_id": "T1486",
+    "template_instance_id": "14116",
+    "timestamp": "2026-04-13T22:59:33.423Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:340704517025",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T01:14:22.853418063Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckleyschinto@yahoo.com",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$",
+      "buckleyschinto@yahoo.com"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335813536329",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335818640901",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335814805972",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335817651809",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335815748017",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335824101719",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335822854141",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335821996037",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335825131565",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335827250957",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335826015719",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335829720299",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335827699123",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335828715176",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335902695723",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335899948269",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335900867509",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335905855591",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335917243639",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335923644166",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335973953258",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:335992234715",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336010427753",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336031911007",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336061243843",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336072543853",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336075014527",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336087378627",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336089838264",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336094025519",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336097074181",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336105278847",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336120372149",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336137586967",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336141291813",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336147598111",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336149120513",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336153297236",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336156739997",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336163952737",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336165064106",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336166931809",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336169566995",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336177330745",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336183989717",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336195265863",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336262598441",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336366624153",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336373193444",
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:336438871099"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -osint -url https://outlook.office365.com/owa/?viewmodel=ReadMessageItem&InternetMessageID=%3cPH8PR09MB10265BB43B2CFB551C593BF28AD5BA%40PH8PR09MB10265.namprd09.prod.outlook.com%3e",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:335812005663-474-23902992",
+    "context_timestamp": "2026-04-14T00:14:19.314Z",
+    "crawled_timestamp": "2026-04-14T01:14:22.832178375Z",
+    "created_timestamp": "2026-04-14T00:15:22.935471721Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process made a suspiciously high volume of outbound network requests.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-07T17:41:48.994Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T01:10:20Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T01:10:31Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "Parallel port scanning",
+    "dns_requests": [
+      {
+        "domain_name": "m.youtube.com.",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "firefox.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "firefox.settings.services.mozilla.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "mozilla-ohttp.fastly-edge.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "youtube.googleapis.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "firefox.com.",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "mozilla.org",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "use-application-dns.net.",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "restrictmoderate.youtube.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      },
+      {
+        "domain_name": "google.com",
+        "interface_index": "0",
+        "load_time": "1775609577",
+        "request_type": "A"
+      }
+    ],
+    "event_correlation_id": "cb21f955-9637-f111-a602-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:335812005663-474-23902992?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "firefox.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Mozilla Firefox\\firefox.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE\" ",
+      "filename": "OUTLOOK.EXE",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "local_process_id": "20404",
+      "md5": "494bd0bdc177b12706e3e679cf129f31",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335767913775",
+      "process_id": "335767913775",
+      "sha256": "e369a60bfc66e251c8946b3020c3d680df2ee55834aff53bd0a206840620e150",
+      "timestamp": "2026-04-08T00:51:29Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckleyschinto@yahoo.com"
+    },
+    "host_url": "https://nimrc.org/wp-content/uploads/2023/05/MRC-Program-Development-Guide_2023.pdf",
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335812005663-474-23902992",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335812005663-474-23902992",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "unique",
+    "local_process_id": "12028",
+    "logon_domain": "MicrosoftAccount",
+    "md5": "6c74f59cf5c411b5fb5c697f7c170da0",
+    "mitre_attack": [
+      {
+        "pattern_id": 474,
+        "tactic_id": "TA0007",
+        "technique_id": "T1046",
+        "tactic": "Discovery",
+        "technique": "Network Service Discovery"
+      }
+    ],
+    "name": "ParallelPortScanning",
+    "network_accesses": [
+      {
+        "access_timestamp": "1775609575",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55293",
+        "protocol": "TCP",
+        "remote_address": "34.160.144.191",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609576",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55296",
+        "protocol": "TCP",
+        "remote_address": "52.96.110.2",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609576",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55297",
+        "protocol": "TCP",
+        "remote_address": "34.107.221.82",
+        "remote_port": "80"
+      },
+      {
+        "access_timestamp": "1775609576",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55298",
+        "protocol": "TCP",
+        "remote_address": "151.101.197.91",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609577",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55306",
+        "protocol": "TCP",
+        "remote_address": "20.190.190.130",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609577",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "65183",
+        "protocol": "UDP",
+        "remote_address": "34.149.117.202",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609577",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55308",
+        "protocol": "TCP",
+        "remote_address": "23.216.55.62",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609577",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "65185",
+        "protocol": "UDP",
+        "remote_address": "40.97.63.128",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609578",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55312",
+        "protocol": "TCP",
+        "remote_address": "34.107.243.93",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1775609578",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "55319",
+        "protocol": "TCP",
+        "remote_address": "20.50.80.214",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Explore",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -osint -url \"https://outlook.office365.com/owa/?viewmodel=ReadMessageItem&InternetMessageID=%3cPH8PR09MB10265BB43B2CFB551C593BF28AD5BA%40PH8PR09MB10265.namprd09.prod.outlook.com%3e\"",
+      "filename": "firefox.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "local_process_id": "4812",
+      "md5": "6c74f59cf5c411b5fb5c697f7c170da0",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335810757771",
+      "process_id": "335810757771",
+      "sha256": "1e7932868c1f72cfe51f8d74bbd73ce676e0f4243ea56705f1f4659c6dfd5c8c",
+      "timestamp": "2026-04-08T00:52:56Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+      "user_name": "buckleyschinto@yahoo.com"
+    },
+    "parent_process_id": "335810757771",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 474,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALfXYmy_-ZI9DaiHF9m4ODiwAATiHsj0CtD12raWAel1UaqVJsXM9DMsU4F__PSzXR74UZ9w==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "335812005663",
+    "process_start_time": "1775609573",
+    "product": "automated-lead-context",
+    "referrer_url": "https://www.chcf.org/",
+    "scenario": "attacker_methodology",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "1e7932868c1f72cfe51f8d74bbd73ce676e0f4243ea56705f1f4659c6dfd5c8c",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Discovery",
+    "tactic_id": "TA0007",
+    "technique": "Network Service Discovery",
+    "technique_id": "T1046",
+    "timestamp": "2026-04-14T00:14:19.782Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335812005663",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T01:14:22.832168717Z",
+    "user_id": "S-1-5-21-1078111151-3713849059-1780022132-1001",
+    "user_name": "buckleyschinto@yahoo.com",
+    "user_names": [
+      "buckleyschinto@yahoo.com"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"Get-CimInstance -ClassName win32_operatingsystem | select lastbootuptime | ConvertTo-Json -Compress\"",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:352725178131-10320-1287952",
+    "context_timestamp": "2026-04-14T16:45:40.872Z",
+    "crawled_timestamp": "2026-04-14T17:45:52.388673702Z",
+    "created_timestamp": "2026-04-14T16:46:52.389820181Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-14T09:43:24.453Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T17:36:02Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T17:36:47Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "PowershellExecution",
+    "event_correlation_id": "66222156-2138-f111-a603-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:352725178131-10320-1287952?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "powershell.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "19160",
+      "md5": "dfcb1f3e8dd8d740842b05be5b3106af",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352721552265",
+      "process_id": "352721552265",
+      "sha256": "be7d3dba5dfba12cc4db5e45c88ee88d342b8c952b83167a0748aaac50270a3a",
+      "timestamp": "2026-04-14T16:45:49Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352725178131-10320-1287952",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352725178131-10320-1287952",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "common",
+    "local_process_id": "20400",
+    "logon_domain": "WORKGROUP",
+    "md5": "a97e6573b97b44c96122bfa543a82ea1",
+    "mitre_attack": [
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      }
+    ],
+    "name": "GenericPowershellExecution",
+    "objective": "Follow Through",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "2800",
+      "md5": "dfcb1f3e8dd8d740842b05be5b3106af",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352722495852",
+      "process_id": "352722495852",
+      "sha256": "be7d3dba5dfba12cc4db5e45c88ee88d342b8c952b83167a0748aaac50270a3a",
+      "timestamp": "2026-04-14T16:45:49Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "352722495852",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 10320,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALhZtMgS_Y3VfBrbJbxlM2OgAATiHu83U-Z4BVTCNnYUVZCm--GIYkIrP5aLR-YTleEfz9GQ==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776185141",
+    "process_id": "352725178131",
+    "process_start_time": "1776185140",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "0ff6f2c94bc7e2833a5f7e16de1622e5dba70396f31c7d5f56381870317e8c46",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Execution",
+    "tactic_id": "TA0002",
+    "technique": "PowerShell",
+    "technique_id": "T1059.001",
+    "template_instance_id": "1661",
+    "template_instance_version": "1",
+    "timestamp": "2026-04-14T16:45:49.707Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352725178131",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T17:45:52.388664578Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "exe",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"Get-MpPreference | ConvertTo-Json -Compress\"",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:348718996039-459-21640208",
+    "context_timestamp": "2026-04-13T18:54:42.348Z",
+    "crawled_timestamp": "2026-04-14T01:14:22.845554386Z",
+    "created_timestamp": "2026-04-14T00:15:22.875473947Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-07T17:41:48.994Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T01:10:20Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T01:10:31Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "UmppcBypassSuspected",
+    "event_correlation_id": "cd45f837-6a37-f111-a602-4c796e8d384d",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:348718996039-459-21640208?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "powershell.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "2640",
+      "md5": "dfcb1f3e8dd8d740842b05be5b3106af",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335488284193",
+      "process_id": "335488284193",
+      "sha256": "be7d3dba5dfba12cc4db5e45c88ee88d342b8c952b83167a0748aaac50270a3a",
+      "timestamp": "2026-04-08T00:44:06Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:348718996039-459-21640208",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:348718996039-459-21640208",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "common",
+    "local_process_id": "21852",
+    "logon_domain": "WORKGROUP",
+    "md5": "a97e6573b97b44c96122bfa543a82ea1",
+    "mitre_attack": [
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      }
+    ],
+    "name": "UmppcBypassSuspected",
+    "objective": "Keep Access",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\HuntressAgent.exe\"",
+      "filename": "HuntressAgent.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\HuntressAgent.exe",
+      "local_process_id": "3088",
+      "md5": "dfcb1f3e8dd8d740842b05be5b3106af",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:335489658203",
+      "process_id": "335489658203",
+      "sha256": "be7d3dba5dfba12cc4db5e45c88ee88d342b8c952b83167a0748aaac50270a3a",
+      "timestamp": "2026-04-08T00:44:06Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "335489658203",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 459,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazAL5KkOMuGZeLKWOaOgNVZjPAAATiGH4-RqjHdsPFubfqH93I1nKuOO5AqcqzJev-3aantHPQ==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_end_time": "1776106479",
+    "process_id": "348718996039",
+    "process_start_time": "1776106477",
+    "product": "automated-lead-context",
+    "scenario": "suspicious_activity",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "0ff6f2c94bc7e2833a5f7e16de1622e5dba70396f31c7d5f56381870317e8c46",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Defense Evasion",
+    "tactic_id": "TA0005",
+    "technique": "Impair Defenses",
+    "technique_id": "T1562",
+    "timestamp": "2026-04-13T18:54:42.989Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:348718996039",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T01:14:22.84554602Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "alleged_filetype": "exe",
+    "child_process_ids": [
+      "pid:af8627d821d74c84bf5fd343c06b7fdf:352353579795"
+    ],
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:352352073943-56-477456",
+    "context_timestamp": "2026-04-14T16:43:38.977Z",
+    "crawled_timestamp": "2026-04-14T17:44:43.20493727Z",
+    "created_timestamp": "2026-04-14T16:45:43.207144921Z",
+    "data_domains": [
+      "Endpoint"
+    ],
+    "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+    "device": {
+      "agent_load_flags": "17",
+      "agent_local_time": "2026-04-14T09:43:24.453Z",
+      "agent_version": "7.35.20709.0",
+      "bios_manufacturer": "AMI",
+      "bios_version": "F.33",
+      "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+      "config_id_base": "65994767",
+      "config_id_build": "20709",
+      "config_id_platform": "3",
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf",
+      "external_ip": "72.203.113.140",
+      "first_seen": "2025-12-12T18:19:37Z",
+      "groups": [
+        "0921b870735e4e35ab5d3fdccf9a3e7e"
+      ],
+      "hostinfo": {
+        "domain": ""
+      },
+      "hostname": "LAPTOP-MTFA4MM6",
+      "last_seen": "2026-04-14T17:36:02Z",
+      "local_ip": "192.168.0.23",
+      "mac_address": "4c-79-6e-8d-38-49",
+      "machine_domain": "",
+      "major_version": "10",
+      "minor_version": "0",
+      "modified_timestamp": "2026-04-14T17:36:47Z",
+      "os_version": "Windows 11",
+      "ou": null,
+      "platform_id": "0",
+      "platform_name": "Windows",
+      "product_type": "1",
+      "product_type_desc": "Workstation",
+      "status": "normal",
+      "system_manufacturer": "HP",
+      "system_product_name": "HP Laptop 15-dy2xxx"
+    },
+    "display_name": "HashDumpSAMUntrusted",
+    "dns_requests": [
+      {
+        "domain_name": "agent.huntress.io",
+        "interface_index": "0",
+        "load_time": "1776188413",
+        "request_type": "AAAA"
+      },
+      {
+        "domain_name": "huntress-rio.s3.amazonaws.com",
+        "interface_index": "0",
+        "load_time": "1776188413",
+        "request_type": "AAAA"
+      }
+    ],
+    "event_correlation_id": "8af2fd06-2138-f111-a603-4c796e8d384d",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:ind:af8627d821d74c84bf5fd343c06b7fdf:352352073943-56-477456?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "filename": "Rio.exe",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\Rio\\Rio.exe",
+    "global_prevalence": "common",
+    "grandparent_details": {
+      "cmdline": "C:\\WINDOWS\\system32\\services.exe",
+      "filename": "services.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\services.exe",
+      "local_process_id": "1324",
+      "md5": "b5b476ee8bdc2b1a269bdb0c9facc738",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352198178587",
+      "process_id": "352198178587",
+      "sha256": "f08f9a65a69c1033391097824d3e7109c5e4a26ed4d96ddf2bfc20d0e769829d",
+      "timestamp": "2026-04-14T16:43:28.016Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352352073943-56-477456",
+    "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352352073943-56-477456",
+    "ioc_context": [],
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "local_prevalence": "common",
+    "local_process_id": "8064",
+    "logon_domain": "WORKGROUP",
+    "md5": "b5b476ee8bdc2b1a269bdb0c9facc738",
+    "mitre_attack": [
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      }
+    ],
+    "name": "SAMHashDump.Untrusted",
+    "network_accesses": [
+      {
+        "access_timestamp": "1776185114",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "64383",
+        "protocol": "TCP",
+        "remote_address": "32.193.251.123",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776185114",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "63776",
+        "protocol": "TCP",
+        "remote_address": "3.5.7.101",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776185405",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "54770",
+        "protocol": "TCP",
+        "remote_address": "54.161.10.198",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776186007",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50755",
+        "protocol": "TCP",
+        "remote_address": "52.1.126.239",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776186007",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "50756",
+        "protocol": "TCP",
+        "remote_address": "54.231.204.97",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776186608",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "64155",
+        "protocol": "TCP",
+        "remote_address": "52.216.212.225",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776187209",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "64321",
+        "protocol": "TCP",
+        "remote_address": "16.15.199.39",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776187209",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "64320",
+        "protocol": "TCP",
+        "remote_address": "44.220.228.190",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776187810",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "62476",
+        "protocol": "TCP",
+        "remote_address": "52.216.61.209",
+        "remote_port": "443"
+      },
+      {
+        "access_timestamp": "1776188411",
+        "access_type": 0,
+        "connection_direction": "Outbound",
+        "isIPV6": false,
+        "local_address": "192.168.0.23",
+        "local_port": "62050",
+        "protocol": "TCP",
+        "remote_address": "52.217.73.76",
+        "remote_port": "443"
+      }
+    ],
+    "objective": "Gain Access",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "parent_details": {
+      "cmdline": "\"C:\\Program Files\\Huntress\\Rio\\Rio.exe\"",
+      "filename": "Rio.exe",
+      "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Huntress\\Rio\\Rio.exe",
+      "local_process_id": "5960",
+      "md5": "b5b476ee8bdc2b1a269bdb0c9facc738",
+      "process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352296079843",
+      "process_id": "352296079843",
+      "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+      "timestamp": "2026-04-14T16:43:28.142Z",
+      "user_graph_id": "uid:af8627d821d74c84bf5fd343c06b7fdf:S-1-5-18",
+      "user_id": "S-1-5-18",
+      "user_name": "LAPTOP-MTFA4MM6$"
+    },
+    "parent_process_id": "352296079843",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+      "blocking_unsupported_or_disabled": false,
+      "bootup_safeguard_enabled": false,
+      "containment_file_system": false,
+      "critical_process_disabled": false,
+      "detect": false,
+      "fs_operation_blocked": false,
+      "handle_operation_downgraded": false,
+      "inddet_mask": false,
+      "indicator": false,
+      "kill_action_failed": false,
+      "kill_parent": false,
+      "kill_process": false,
+      "kill_subprocess": false,
+      "mfa_required": false,
+      "operation_blocked": false,
+      "policy_disabled": false,
+      "prevention_provisioning_enabled": false,
+      "process_blocked": false,
+      "quarantine_file": false,
+      "quarantine_machine": false,
+      "registry_operation_blocked": false,
+      "response_action_already_applied": false,
+      "response_action_failed": false,
+      "response_action_triggered": false,
+      "rooting": false,
+      "sensor_only": false,
+      "suspend_parent": false,
+      "suspend_process": false
+    },
+    "pattern_id": 56,
+    "platform": "Windows",
+    "poly_id": "AABuobMUhLZMp69iPt9KazALGVK7cfy3p0OUS-wuay_7xQAATiEmRmlIksfDtw0QCauyCg7SheHgeaErn4qpkhOVV0IxtA==",
+    "prevention_policy_id": "332a402d9dcb4b1ba05b34c6040dfa4c",
+    "prevention_policy_name": "Phase 2 - interim protection",
+    "process_id": "352352073943",
+    "process_start_time": "1776185007",
+    "product": "automated-lead-context",
+    "scenario": "credential_theft",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "sha256": "16a74744026401f94c7ea08a7828ebb05f1f7e888c86f88716e4fb3f5800e80e",
+    "show_in_ui": true,
+    "source_hosts": [
+      "LAPTOP-MTFA4MM6"
+    ],
+    "source_ips": [
+      "192.168.0.23"
+    ],
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Credential Access",
+    "tactic_id": "TA0006",
+    "technique": "OS Credential Dumping",
+    "technique_id": "T1003",
+    "timestamp": "2026-04-14T16:44:40.122Z",
+    "triggering_process_graph_id": "pid:af8627d821d74c84bf5fd343c06b7fdf:352352073943",
+    "type": "signal",
+    "updated_timestamp": "2026-04-14T17:44:43.204921239Z",
+    "user_id": "S-1-5-18",
+    "user_name": "LAPTOP-MTFA4MM6$",
+    "user_names": [
+      "LAPTOP-MTFA4MM6$"
+    ]
+  },
+  {
+    "agent_id": "af8627d821d74c84bf5fd343c06b7fdf",
+    "aggregate_id": "",
+    "cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "composite_id": "6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "crawled_timestamp": "2026-04-17T00:14:23.015506594Z",
+    "created_timestamp": "2026-04-14T00:14:21.865690209Z",
+    "device": {
+      "device_id": "af8627d821d74c84bf5fd343c06b7fdf"
+    },
+    "display_name": "LAPTOP-MTFA4MM6 at 2026-04-13T18:54:42Z",
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/6ea1b31484b64ca7af623edf4a6b300b:automated-lead:6ea1b31484b64ca7af623edf4a6b300b:1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6?_cid=g04000uusizplgdbh7bhyymiarscgwse",
+    "id": "automated-lead:6ea1b31484b64ca7af623edf4a6b300b:1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "is_closed": true,
+    "lead_id": "1c11b5ea10c61719ecc207be7e2a0e3bbbd25f965ceb37fb3033f6023a3a81a6",
+    "lead_type": "simple",
+    "mitre_attack": [
+      {
+        "pattern_id": 459,
+        "tactic_id": "TA0005",
+        "technique_id": "T1562",
+        "tactic": "Defense Evasion",
+        "technique": "Impair Defenses"
+      },
+      {
+        "pattern_id": 10351,
+        "tactic_id": "TA0011",
+        "technique_id": "T1071",
+        "tactic": "Command and Control",
+        "technique": "Application Layer Protocol"
+      },
+      {
+        "pattern_id": 10251,
+        "tactic_id": "TA0040",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "technique": "Data Encrypted for Impact"
+      },
+      {
+        "pattern_id": 474,
+        "tactic_id": "TA0007",
+        "technique_id": "T1046",
+        "tactic": "Discovery",
+        "technique": "Network Service Discovery"
+      },
+      {
+        "pattern_id": 56,
+        "tactic_id": "TA0006",
+        "technique_id": "T1003",
+        "tactic": "Credential Access",
+        "technique": "OS Credential Dumping"
+      },
+      {
+        "pattern_id": 10320,
+        "tactic_id": "TA0002",
+        "technique_id": "T1059.001",
+        "tactic": "Execution",
+        "technique": "PowerShell"
+      }
+    ],
+    "name": "LAPTOP-MTFA4MM6 at 2026-04-13T18:54:42Z",
+    "origin_cid": "6ea1b31484b64ca7af623edf4a6b300b",
+    "pattern_id": 185000,
+    "poly_id": "AABuobMUhLZMp69iPt9KazAL8_y9zvzEMqucg-3YhFDARwAATiEwe_9UqONYREORDlCuh_IteJFNKEeBbZDjptuYgBq1Gw==",
+    "product": "automated-lead",
+    "score": 37,
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "show_in_ui": true,
+    "signal_end_timestamp": "2026-04-14T16:45:49Z",
+    "signal_start_timestamp": "2026-04-13T18:54:42Z",
+    "signal_updated_timestamp": "2026-04-17T00:14:19Z",
+    "source_products": [
+      "Automated Leads"
+    ],
+    "source_vendors": [
+      "CrowdStrike"
+    ],
+    "status": "new",
+    "threatgraph_indicators": [
+      {
+        "description": "A process appears to have performed a system call by bypassing UMPPC hooks.",
+        "display_name": "UmppcBypassSuspected",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:348718996039-459-21640208",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 459,
+        "process_id": "348718996039",
+        "signal_association_timestamp": "2026-04-13T18:54:42Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process attempted to establish an unusual connection over a commonly used port, possibly to a command and control server. Adversaries can use this to bypass firewalls and evade detection. Review the process tree.",
+        "display_name": "CommonlyUsedPortC2",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335953120332-10351-22042640",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10351,
+        "process_id": "335953120332",
+        "signal_association_timestamp": "2026-04-13T19:48:49Z",
+        "template_instance_id": 9167
+      },
+      {
+        "description": "A process associated with a known ransomware campaign launched. Investigate the host for signs of a ransomware attack.",
+        "display_name": "ProcRansomware",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:340704517025-10251-23257104",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10251,
+        "process_id": "340704517025",
+        "signal_association_timestamp": "2026-04-13T22:59:33Z",
+        "template_instance_id": 14116
+      },
+      {
+        "description": "A process made a suspiciously high volume of outbound network requests.",
+        "display_name": "Parallel port scanning",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:335812005663-474-23902992",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 474,
+        "process_id": "335812005663",
+        "signal_association_timestamp": "2026-04-14T00:14:19Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "User hashes from SAM hive accessed from signed executable with untrusted root authority",
+        "display_name": "HashDumpSAMUntrusted",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352352073943-56-477456",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 56,
+        "process_id": "352352073943",
+        "signal_association_timestamp": "2026-04-14T16:44:40Z",
+        "template_instance_id": 0
+      },
+      {
+        "description": "A process appears to be suspiciously executing code via Powershell. Investigate the command line and process tree.",
+        "display_name": "PowershellExecution",
+        "host_id": "af8627d821d74c84bf5fd343c06b7fdf",
+        "hostname": "LAPTOP-MTFA4MM6",
+        "indicator_id": "ind:af8627d821d74c84bf5fd343c06b7fdf:352725178131-10320-1287952",
+        "indicator_type": "AssociateIndicator",
+        "pattern_disposition": 0,
+        "pattern_id": 10320,
+        "process_id": "352725178131",
+        "signal_association_timestamp": "2026-04-14T16:45:49Z",
+        "template_instance_id": 1661
+      }
+    ],
+    "timestamp": "2026-04-17T00:14:22Z",
+    "type": "automated-lead",
+    "updated_timestamp": "2026-04-17T00:14:23.015500656Z"
+  }
+]

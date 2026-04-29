@@ -1,0 +1,64 @@
+{
+  "window": [
+    {
+      "id": 1946260,
+      "account_id": 31342,
+      "agent_id": 11359368,
+      "body": "*** Huntress is performing Assisted Remediations. An update will be provided upon completion. Please review any Manual Remediations below. ***\n\nHost: JDH-DC - https://technijian.huntress.io/org/429259/agents/11359368\nOrganization: JDH - JDH Pacific\nTags: None\nSecurity Products: Trend Micro (ntrtscan)\n\nIncident Report: https://technijian.huntress.io/org/429259/infection_reports/1946260\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nAt 2026-02-11 04:51:47 UTC, Huntress detected malicious persistence on host \"JDH-DC\" under the user account \"JDH\\johne\". A registry Run key entry named \"Windows Logon Process\" was configured to execute \"winlgn.exe\" from a non-standard directory, masquerading as a legitimate Windows component. This persistence mechanism ensures the malicious executable will launch automatically at user logon.\n\nThe investigation revealed that the executable \"winlgn.exe\" was located in \"C:\\Users\\johne\\AppData\\Roaming\\Update\\\", a directory commonly abused by malware to evade detection. The file name \"winlgn.exe\" is designed to mimic the legitimate Windows Logon process, a common obfuscation technique. The persistence was established via a User Run key in the registry at \"HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\". While the binary is no longer present on the system, the registry entry remains active.\n\nThe primary risk is that this persistence mechanism was configured to maintain unauthorised access or execute malicious payloads at each user logon. Huntress recommends manually removing the registry Run key entry named \"Windows Logon Process\" from the affected user's registry hive. Additionally, reset the password for the user account \"JDH\\johne\" and conduct a thorough review of the host for any additional indicators of compromise. Failure to remediate may allow reinfection or continued unauthorised access.\n\nUser Account\nUser Account: \"JDH\\johne\" (SID: S-1-5-21-2000478354-1214440339-682003330-1678)\n\nFile System\nFile Path: \"C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\"\nSHA256: Not available\n\nPersistence\nName: \"Windows Logon Process\"\nType: \"User Run Key\"\nService Path: \"C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\"\nPrivilege Level: \"User\"\nRegistry Location: \"HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\n\nHost\nHostname: \"JDH-DC\"\nOperating System: \"Windows Server 2008 R2 Standard\"\n\nThreat Descriptions:\n--------------------\nMalware Artifact: A Malware Artifact is a piece of evidence left behind by malware on a computer system. It could be a file, registry entry, or network connection that indicates the presence of malicious activity.\n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete Registry Value - key: HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run + value: Windows Logon Process\n\nAll provided remediations and recommendations can be found in the Huntress Platform: https://technijian.huntress.io/org/429259/infection_reports/1946260#remediations-tab\n\nLead Signal Information:\n------------------------\nSignal Name: Autorun Inheritance Malicious\nDetected At: 2026-02-11 04:49:26 UTC\nRegistry Key: HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\nRegistry Value: Windows Logon Process\nRegistry Data: C:\\Users\\johne\\AppData\\Roaming\\Update\\winlgn.exe\nFile Path: \n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429259/infection_reports/1946260#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-02-11T05:46:34Z",
+      "indicator_counts": {
+        "footholds": 1,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429259,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 1,
+        "has_more": false,
+        "items": [
+          {
+            "id": 7985061,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKU\\S-1-5-21-2000478354-1214440339-682003330-1678\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "Windows Logon Process"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-02-11T05:20:04Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-02-11T05:20:22Z"
+          }
+        ]
+      },
+      "sent_at": "2026-02-11T05:20:05Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-02-11T05:46:34Z",
+      "subject": "LOW - Incident on JDH-DC (JDH - JDH Pacific)",
+      "summary": null,
+      "updated_at": "2026-02-11T05:46:34Z"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "window": [
+    {
+      "id": 1866108,
+      "account_id": 31342,
+      "agent_id": 11407683,
+      "body": "*** The Huntress Agent has been tasked to isolate this host from the rest of the network in order to prevent the incident from spreading to other hosts. ***\n\nIf you have an urgent request for support, please go to the link below to place a request a callback from SOC Support.\nhttps://technijian.huntress.io/org/429258/infection_reports/1866108/soc_callback_requests/new\n\nHost: WKISI6 - https://technijian.huntress.io/org/429258/agents/11407683\nOrganization: ISI - International Sportsmedicine Institute\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429258/infection_reports/1866108\nSeverity: Critical\n\nInvestigative Summary:\n----------------------\nAt 2026-01-02 21:15:33 UTC, a Windows Startup with the name \"GawUjxu\" was detected on the endpoint WKISI6 under the user Administrator, utilizing regsvr32.exe within the AppData directory. \n\nThe last logged-in user was \"sKieffer / S-1-5-21-2085862506-2924907105-3116931485-1112\". Crowdstrike detected and quarantined the malicious autorun activity. \n\nHuntress noted during the investigation that another startup service, \"GotoMeeting,\" was created at the same time as  \"GawUjxu\". Attackers use regsvr32.exe to run malicious code hosted on remote servers. By using a trusted Microsoft process to execute their code, they can sometimes bypass application whitelisting or firewalls.\n\nHuntress has isolated the host to prevent further malicious activity. Huntress also recommends reimaging the host to a known clean operating system to ensure no further persistence remains. See the recommendations below.\n\nDetails:\n\nAutorun Name: GawUjxu\nPath: regsvr32.exe \"C:\\Users\\administrator\\AppData\\Roaming\\Kafew\\Qogavj.dll\"\nSHA256: 022cb167a29a32dae848be91aef721c74f1975af151807dafcc5ed832db246b7 \n\nAutorun Name: GoToMeeting\nBinary Path: \"C:\\Program Files (x86)\\GoToMeeting\\19950\\g2mstart.exe\" \"/Trigger RunAtLogon\"\nSHA256: 1ddb4e75b45852989ba34368a90d12463f85b378cbd860dfe543faad10e17d5f  \n\nThreat Descriptions:\n--------------------\nSuspicious RMM: A suspicious remote monitoring and management (RMM) application was detected on this endpoint. These applications may be benign within the environment, or levied by adversaries as a method of persistence. Occasionally software vendors will additionally distribute these RMM's as a portion of their support process. \n\nRemediations:\n-------------\nAssisted Remediations provided by the Huntress SOC to remediate the incident. These can be executed automatically in the Huntress Platform:\n- Delete Registry Value - key: HKU\\S-1-5-21-2085862506-2924907105-3116931485-500\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run + value: GawUjxu\n- Delete Registry Value - key: HKU\\S-1-5-21-2085862506-2924907105-3116931485-500\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run + value: GoToMeeting\n- Delete Registry Value - key: HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run + value: GoToMeetingInstall19992\n- Delete Registry Value - key: HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run + value: GoToMeetingInstall19950\n- Delete File - path: c:\\users\\administrator\\appdata\\roaming\\kafew\\qogavj.dll\n- Delete File - path: c:\\program files (x86)\\gotomeeting\\19950\\g2mstart.exe + sha256: 1ddb4e75b45852989ba34368a90d12463f85b378cbd860dfe543faad10e17d5f\n- Delete File - path: c:\\program files (x86)\\gotomeeting\\19992\\g2minstaller.exe + sha256: 415e68bbf6bf7b5ca6090c74b924860b66a6d12e322d142257ef8e9e5e8f2edb\n- Delete File - path: c:\\program files (x86)\\gotomeeting\\19950\\g2minstaller.exe + sha256: 1ddb4e75b45852989ba34368a90d12463f85b378cbd860dfe543faad10e17d5f\n- Delete File - path: C:\\Users\\administrator\\AppData\\Roaming\\Kafew\\\\Comux\n- Delete File - path: C:\\Users\\administrator\\AppData\\Roaming\\Kafew\\\\GoveLkew\n- + 5 more\n\nManual Remediations provided by the Huntress SOC are highly recommended remediation actions to be conducted by your team before resolving the incident in the Huntress Platform:\n- Identify and remove all unauthorized software, scripts, or services from the system.\n- Reimage the system if compromise is extensive or trust in integrity cannot be restored.\n- Audit affected directories/files for additional suspicious files and remove those found.\n- Reset credentials for the affected system's user(s) and any privileged accounts recently used on the system.\n- Enroll the user in a security awareness training session to reinforce safe practices in the corporate environment.\n\nAll remediations provided can be found in the Huntress Platform: Incident Report: https://technijian.huntress.io/org/429258/infection_reports/1866108#remediations-tab\n\nLead Signal Information:\n------------------------\nSignal Name: Regsvr32 Dll Within Appdata\nDetected At: 2026-01-02 21:15:29 UTC\nRegistry Key: HKU\\S-1-5-21-2085862506-2924907105-3116931485-500\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\nRegistry Value: GawUjxu\nRegistry Data: regsvr32.exe \"C:\\Users\\administrator\\AppData\\Roaming\\Kafew\\Qogavj.dll\"\nFile Path: c:\\windows\\system32\\regsvr32.exe\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429258/infection_reports/1866108#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 2,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 0,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "footholds"
+      ],
+      "organization_id": 429258,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 21,
+        "has_more": true,
+        "items": [
+          {
+            "id": 7744983,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKU\\S-1-5-21-2085862506-2924907105-3116931485-500\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "GawUjxu"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-01-02T22:26:59Z"
+          },
+          {
+            "id": 7744994,
+            "type": "manual",
+            "action": "Identify and remove all unauthorized software, scripts, or services from the system.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7744991,
+            "type": "containment",
+            "action": "Isolate Host",
+            "parameters": "WKISI6",
+            "status": "completed",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-01-02T22:26:58Z"
+          },
+          {
+            "id": 7744986,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKU\\S-1-5-21-2085862506-2924907105-3116931485-500\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "GoToMeeting"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-01-02T22:27:00Z"
+          },
+          {
+            "id": 7744995,
+            "type": "manual",
+            "action": "Reimage the system if compromise is extensive or trust in integrity cannot be restored.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7744996,
+            "type": "manual",
+            "action": "Audit affected directories/files for additional suspicious files and remove those found.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7744988,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "GoToMeetingInstall19992"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-01-02T22:27:01Z"
+          },
+          {
+            "id": 7744990,
+            "type": "assisted",
+            "action": "Delete Registry Value",
+            "parameters": [
+              {
+                "name": "key",
+                "description": "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run"
+              },
+              {
+                "name": "value",
+                "description": "GoToMeetingInstall19950"
+              }
+            ],
+            "status": "completed",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": "2026-01-02T22:27:02Z"
+          },
+          {
+            "id": 7744997,
+            "type": "manual",
+            "action": "Reset credentials for the affected system's user(s) and any privileged accounts recently used on the system.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-01-02T22:25:41Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          },
+          {
+            "id": 7744998,
+            "type": "manual",
+            "action": "Enroll the user in a security awareness training session to reinforce safe practices in the corporate environment.",
+            "parameters": null,
+            "status": "approved",
+            "approved_at": "2026-01-02T22:25:42Z",
+            "approved_by": {
+              "id": 63471,
+              "email": null,
+              "name": "Huntress SOC"
+            },
+            "completed_at": null
+          }
+        ]
+      },
+      "sent_at": "2026-01-02T22:25:43Z",
+      "severity": "critical",
+      "status": "sent",
+      "status_updated_at": "2026-01-02T22:25:43Z",
+      "subject": "CRITICAL - ISOLATED - Incident on WKISI6 (ISI - International Sportsmedicine Institute)",
+      "summary": null,
+      "updated_at": "2026-01-02T22:36:13Z"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "_doc": "Manual override file for the daily Huntress pull. Resolution order: (1) explicit `manual` entry mapping <huntress_org_id> -> <LocationCode>; (2) exact normalized-name match against the active CP client list; (3) <CODE> - <Name> prefix match against active CP LocationCodes (Technijian Huntress org names follow this convention). Anything still unmatched lands in unmapped.json. Add an `ignore` entry for Huntress orgs that should never produce a per-client folder (internal lab tenants, decommissioned clients, the Technijian house tenant, etc.).",
+  "manual": {
+  },
+  "ignore": [
+    "408553",
+    "447983",
+    "474028"
+  ],
+  "_ignore_notes": {
+    "408553": "Technijian house tenant - internal MSP account",
+    "447983": "vdi - internal lab/test tenant",
+    "474028": "208ed66a618092605a342b339c488637 - hashed/internal placeholder"
+  }
+}

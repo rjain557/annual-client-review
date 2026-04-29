@@ -1,0 +1,39 @@
+{
+  "window": [
+    {
+      "id": 1600096,
+      "account_id": 31342,
+      "agent_id": 11348419,
+      "body": "\n\nHost: CBILT08 - https://technijian.huntress.io/org/429253/agents/11348419\nOrganization: CBI - Christian Brothers Interiors\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429253/infection_reports/1600096\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: JasonWeiner\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\JasonWeiner\\OneDrive - Christian Brothers Interiors\\Documents - Communication site\\Executive\\CBI Team Member Login Password Info.docx\" /o \"\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-14 19:40:57 UTC\nStart Time: 2025-07-14 19:36:53 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /n \"C:\\Users\\JasonWeiner\\OneDrive - Christian Brothers Interiors\\Documents - Communication site\\Executive\\CBI Team Member Login Password Info.docx\" /o \"\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\nProcess ID: fdf53798-60e8-11f0-bd0d-089df4ded19e\nParent Process: C:\\Windows\\Explorer.EXE\nUser: JasonWeiner\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429253/infection_reports/1600096#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-06T15:38:17Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429253,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-15T10:10:08Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-06T15:38:17Z",
+      "subject": "LOW - Incident on CBILT08 (CBI - Christian Brothers Interiors)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on CBILT08 (CBI - Christian Brothers Interiors)",
+      "updated_at": "2026-01-06T15:38:17Z"
+    }
+  ]
+}

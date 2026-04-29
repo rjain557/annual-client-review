@@ -1,0 +1,22 @@
+{
+  "_comment": "Manual overrides and ignore list for CrowdStrike Flight Control children whose name does not exact-match an active Client Portal Location_Name.",
+  "manual": {
+    "7d54af1e38314f6ab7b127dc298d7a59": "BST",
+    "13679be7b16a400d93e7feddf96d6d26": "EBRMD"
+  },
+  "ignore": [
+    "648ea6c8407c42d8b48f288b4a2d5f2b"
+  ],
+  "_unmapped_pending_review": {
+    "_comment": "Children with no clear CP match. Decision pending. Leaving unmapped is safe - they just don't get a per-client folder.",
+    "520813d2129d455783641c9e414f1618": "CDC Designs",
+    "19c0ddd520544cd1ac264339b5afdb98": "Vintage Design (already-mapped 'Vintage Group' would clash if this also resolves to VG)",
+    "5dfd98fe7f654a0fb0eafcbf4da2cc4d": "J&J Healthcare LLC",
+    "1617a66cf541453bb982132bd85f42b8": "Patient Care Medical",
+    "4b3df49cd1b2436789c3cba3e8389dbf": "Keillor Capital",
+    "1d9adbde255342b7a932d0c3dfc95a26": "Yebo Group"
+  },
+  "hostname_prefix": {
+    "_comment": "Single-CID fallback only. Ignored when Flight Control multi-tenant mode is active (which is the case for Technijian's tenant)."
+  }
+}

@@ -1,0 +1,927 @@
+{
+  "window": [],
+  "all_recent": [
+    {
+      "id": 2095758,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\n\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/2095758\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-04-20 20:13:45 UTC\nStart Time: 2026-04-20 20:03:01 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: bfe173a9-3cf3-11f1-b3be-8cec4bb762a8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/2095758#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-04-21T10:02:50Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-04-21T10:02:50Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-04-21T10:02:50Z"
+    },
+    {
+      "id": 2084888,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor, ESET Security\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/2084888\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-04-15 17:46:27 UTC\nStart Time: 2026-04-15 17:43:20 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: a18113bb-38f1-11f1-8e82-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/2084888#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-04-16T10:02:16Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-04-16T10:02:16Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-04-16T10:02:16Z"
+    },
+    {
+      "id": 2074267,
+      "account_id": 31342,
+      "agent_id": 11587328,
+      "body": "\n\nHost: AAOC-ExecutiveDirector - https://technijian.huntress.io/org/429250/agents/11587328\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/2074267\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-04-10 22:15:44 UTC\nStart Time: 2026-04-10 22:09:57 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: feb7ce78-3528-11f1-8dfc-d0c637324a96\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/2074267#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-04-11T10:03:39Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-04-11T10:03:39Z",
+      "subject": "LOW - Incident on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange C",
+      "updated_at": "2026-04-11T10:03:40Z"
+    },
+    {
+      "id": 2008405,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/2008405\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-03-11 19:33:33 UTC\nStart Time: 2026-03-11 19:26:25 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 886d5138-1d7f-11f1-8e7c-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/2008405#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-03-12T11:01:41Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-03-12T10:03:36Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-03-12T11:01:41Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-03-12T11:01:41Z"
+    },
+    {
+      "id": 2005214,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\n\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/2005214\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-03-10 18:48:26 UTC\nStart Time: 2026-03-10 18:37:32 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: d98a93ac-1cae-11f1-b3b5-8cec4bb762a8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/2005214#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-03-11T17:21:39Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "app_control": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0,
+        "email_security_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-03-11T14:02:09Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-03-11T17:21:39Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-03-11T17:21:39Z"
+    },
+    {
+      "id": 1940419,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1940419\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-02-06 22:18:34 UTC\nStart Time: 2026-02-06 22:10:36 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: d46492fb-03a7-11f1-8e7b-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1940419#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-03-25T10:35:59Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0,
+        "behavioral_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-02-08T10:01:30Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-03-25T10:35:59Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-03-25T10:35:59Z"
+    },
+    {
+      "id": 1873241,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1873241\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-07 18:22:07 UTC\nStart Time: 2026-01-07 18:19:58 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: f2d592c8-ebf3-11f0-8e7b-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1873241#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-08T10:05:40Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-01-08T10:05:40Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-01-08T10:05:40Z"
+    },
+    {
+      "id": 1866681,
+      "account_id": 31342,
+      "agent_id": 11587328,
+      "body": "\n\nHost: AAOC-ExecutiveDirector - https://technijian.huntress.io/org/429250/agents/11587328\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1866681\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-02 15:31:08 UTC\nStart Time: 2025-12-29 19:44:09 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: b69d91ea-e4ee-11f0-8de8-d0c637324a96\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1866681#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-03T10:03:08Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2026-01-03T10:03:08Z",
+      "subject": "LOW - Incident on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange C",
+      "updated_at": "2026-01-03T10:03:08Z"
+    },
+    {
+      "id": 1850604,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\n\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1850604\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-17 22:58:22 UTC\nStart Time: 2025-12-17 22:52:21 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: ea806363-db9a-11f0-b3ae-8cec4bb762a8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1850604#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-19T10:06:43Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-12-19T10:06:43Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-12-19T10:06:43Z"
+    },
+    {
+      "id": 1837970,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1837970\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-08 18:46:28 UTC\nStart Time: 2025-12-08 18:39:38 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: a92dc93f-d464-11f0-8e7b-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1837970#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 4,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-09T10:02:28Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-12-09T10:02:28Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-12-11T00:29:36Z"
+    },
+    {
+      "id": 1787300,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1787300\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-11-06 00:43:33 UTC\nStart Time: 2025-11-06 00:42:24 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: a3e8b9b0-baa8-11f0-8e78-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1787300#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-03-25T10:23:31Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-11-06T11:42:58Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-03-25T10:23:31Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-03-25T10:23:31Z"
+    },
+    {
+      "id": 1734178,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1734178\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-10-06 15:43:20 UTC\nStart Time: 2025-10-06 15:39:59 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 8ea07e97-a2ca-11f0-8e75-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1734178#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-10-07T10:07:20Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-10-07T10:07:20Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-10-07T10:07:20Z"
+    },
+    {
+      "id": 1722897,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\n\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1722897\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-29 22:04:42 UTC\nStart Time: 2025-09-29 22:04:06 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 2b7ecbcd-9d7f-11f0-b3a8-8cec4bb762a8\nParent Process: C:\\Windows\\explorer.exe\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1722897#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-30T10:08:17Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-09-30T10:08:17Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-09-30T10:08:17Z"
+    },
+    {
+      "id": 1680644,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1680644\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-03 18:01:32 UTC\nStart Time: 2025-09-03 17:58:40 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 4422f06e-88ef-11f0-8e74-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1680644#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-04T10:08:34Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-09-04T10:08:34Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-09-04T10:08:34Z"
+    },
+    {
+      "id": 1621351,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor, ESET Security\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1621351\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-29 16:03:51 UTC\nStart Time: 2025-07-29 15:55:53 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 56939255-6c93-11f0-8e71-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1621351#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-30T10:06:12Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-07-30T10:06:12Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-07-30T10:06:12Z"
+    },
+    {
+      "id": 1619559,
+      "account_id": 31342,
+      "agent_id": 11587328,
+      "body": "\n\nHost: AAOC-ExecutiveDirector - https://technijian.huntress.io/org/429250/agents/11587328\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1619559\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-29 01:30:23 UTC\nStart Time: 2025-07-29 01:27:02 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: f804b5bd-6c1a-11f0-8db4-d0c637324a96\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1619559#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-29T10:09:42Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-07-29T10:09:42Z",
+      "subject": "LOW - Incident on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange C",
+      "updated_at": "2025-07-29T10:09:42Z"
+    },
+    {
+      "id": 1590276,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\n\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1590276\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-07 19:23:16 UTC\nStart Time: 2025-07-07 19:17:24 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 8e79b4a0-5b66-11f0-b3a0-8cec4bb762a8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1590276#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-03-25T10:16:34Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-08T10:08:51Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-03-25T10:16:34Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2026-03-25T10:16:34Z"
+    },
+    {
+      "id": 1572465,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\n\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1572465\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-06-23 21:30:46 UTC\nStart Time: 2025-06-23 21:30:10 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 4851d12d-5077-11f0-8e6d-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1572465#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-06-24T10:08:42Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-06-24T10:08:42Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-06-24T10:08:42Z"
+    },
+    {
+      "id": 1538074,
+      "account_id": 31342,
+      "agent_id": 11346271,
+      "body": "\nHost: AAOC-28 - https://technijian.huntress.io/org/429250/agents/11346271\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1538074\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-05-27 23:59:55 UTC\nStart Time: 2025-05-27 23:53:31 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 91a49d8d-3b55-11f0-b39c-8cec4bb762a8\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1538074#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-29T10:15:25Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-05-29T10:15:25Z",
+      "subject": "LOW - Incident on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-28 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-05-29T10:15:25Z"
+    },
+    {
+      "id": 1535217,
+      "account_id": 31342,
+      "agent_id": 11587328,
+      "body": "\nHost: AAOC-ExecutiveDirector - https://technijian.huntress.io/org/429250/agents/11587328\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1535217\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 01-01-25).xlsx\"\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords.xls\"\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 05-26-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-05-26 15:03:06 UTC\nStart Time: 2025-05-26 14:58:30 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 01-01-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c231a60e-3a41-11f0-8da6-d0c637324a96\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1535217#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 4,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-27T10:04:56Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-05-27T10:04:56Z",
+      "subject": "LOW - Incident on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange C",
+      "updated_at": "2025-05-27T10:04:56Z"
+    },
+    {
+      "id": 1526453,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1526453\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-05-19 22:43:41 UTC\nStart Time: 2025-05-19 22:40:53 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c6242217-3501-11f0-8e68-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/429250/infection_reports/1526453#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-20T10:16:08Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-05-20T10:16:08Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-05-20T10:16:08Z"
+    },
+    {
+      "id": 1520806,
+      "account_id": 31342,
+      "agent_id": 11991856,
+      "body": "\nHost: AAOC-29 - https://technijian.huntress.io/org/429250/agents/11991856\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1520806\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-05-15 00:52:30 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c02390a1-3126-11f0-a184-9c67d64f62b1\nParent Process: C:\\Windows\\Explorer.EXE\nUser: Van\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-08-23T00:34:15Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-05-15T10:23:11Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-08-23T00:34:15Z",
+      "subject": "LOW - Incident on AAOC-29 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-29 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-08-23T00:34:15Z"
+    },
+    {
+      "id": 1480493,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor, ESET Security\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1480493\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-04-14 17:18:16 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 4ff0c7a9-1952-11f0-8e66-64006a442afd\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: Van\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-04-15T12:08:46Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-04-15T10:21:47Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-04-15T12:08:46Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-04-15T12:08:46Z"
+    },
+    {
+      "id": 1477409,
+      "account_id": 31342,
+      "agent_id": 11587328,
+      "body": "\nHost: AAOC-ExecutiveDirector - https://technijian.huntress.io/org/429250/agents/11587328\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1477409\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: cordero\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 01-01-25).xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-04-11 17:03:45 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\cordero\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Passwords (Revised 01-01-25).xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: d6c23123-16f6-11f0-8d9d-d0c637324a96\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: cordero\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": null,
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-04-12T10:43:13Z",
+      "severity": "low",
+      "status": "sent",
+      "status_updated_at": "2025-04-12T10:43:13Z",
+      "subject": "LOW - Incident on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-ExecutiveDirector (AOC - Apartment Association of Orange C",
+      "updated_at": "2025-04-12T10:43:13Z"
+    },
+    {
+      "id": 1445618,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: AOC - Apartment Association of Orange County\nTags: None\nSecurity Products: ESET Security, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1445618\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-03-12 18:37:43 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c1b50027-ff6a-11ef-8e62-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\nStart Time: 2025-03-13 02:47:22 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: dcd35e88-ffb4-11ef-8e62-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-04-15T12:10:01Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-03-13T11:17:09Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-04-15T12:10:01Z",
+      "subject": "LOW - Incident on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (AOC - Apartment Association of Orange County)",
+      "updated_at": "2025-04-15T12:10:01Z"
+    },
+    {
+      "id": 1408821,
+      "account_id": 31342,
+      "agent_id": 11346267,
+      "body": "\nHost: AAOC-20 - https://technijian.huntress.io/org/429250/agents/11346267\nOrganization: Apartment Association of Orange County\nTags: None\nSecurity Products: Windows Defender, ESET Security, CrowdStrike (CSFalconService)\n\nIncident Report: https://technijian.huntress.io/org/429250/infection_reports/1408821\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nUser: Van\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023-AAOC-28.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\n\n\nProcesses\n---------\nStart Time: 2025-02-07 18:56:15 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 140290f9-e582-11ef-8e5f-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\nStart Time: 2025-02-07 19:22:38 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 6467ea2f-e586-11ef-8e5f-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\nStart Time: 2025-02-07 23:31:03 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\Van.AAOC\\Apartment Association of Orange County\\Secure - Documents\\_ACCOUNTING\\_PASSWORDS\\Accounting Passwords 12-18-2023-AAOC-28.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: ae64895a-e5a6-11ef-8e5f-64006a442afd\nParent Process: C:\\Windows\\explorer.exe\nUser: Van\n\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-02-14T09:08:58Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 3,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 429250,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-02-08T11:22:49Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-02-14T09:08:58Z",
+      "subject": "LOW - Incident on AAOC-20 (Apartment Association of Orange County)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on AAOC-20 (Apartment Association of Orange County)",
+      "updated_at": "2025-02-14T09:08:58Z"
+    }
+  ]
+}

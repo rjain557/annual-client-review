@@ -1,0 +1,423 @@
+{
+  "window": [
+    {
+      "id": 1882113,
+      "account_id": 31342,
+      "agent_id": 14735766,
+      "body": "\n\nHost: WKORX72 - https://technijian.huntress.io/org/426003/agents/14735766\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1882113\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: LDelafuente\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\LDelafuente\\OneDrive - Orthoxpress\\Desktop\\passwords.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-09 16:22:19 UTC\nStart Time: 2026-01-09 16:20:09 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\LDelafuente\\OneDrive - Orthoxpress\\Desktop\\passwords.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 2ed6bd5d-ed76-11f0-b0ae-700810d6374b\nParent Process: C:\\windows\\Explorer.EXE\nUser: LDelafuente\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1882113#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-10T10:23:10Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-10T10:05:41Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-10T10:23:10Z",
+      "subject": "LOW - Incident on WKORX72 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX72 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-10T10:23:10Z"
+    },
+    {
+      "id": 1881128,
+      "account_id": 31342,
+      "agent_id": 11391625,
+      "body": "\n\nHost: WKORX49 - https://technijian.huntress.io/org/426003/agents/11391625\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: Windows Defender, CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1881128\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: mgalfayan\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\mgalfayan\\OneDrive - Orthoxpress\\Documents - Inventory\\Inventory\\POD\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-09 14:51:21 UTC\nStart Time: 2026-01-09 14:47:58 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\mgalfayan\\OneDrive - Orthoxpress\\Documents - Inventory\\Inventory\\POD\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 10daa573-ed6a-11f0-8d80-a4bb6dd179fe\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: mgalfayan\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1881128#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-10T10:17:43Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 2,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-10T10:04:17Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-10T10:17:43Z",
+      "subject": "LOW - Incident on WKORX49 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX49 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-10T10:17:43Z"
+    },
+    {
+      "id": 1877843,
+      "account_id": 31342,
+      "agent_id": 11413250,
+      "body": "\n\nHost: ORX-DC-TS-04 - https://technijian.huntress.io/org/426003/agents/11413250\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike (CSFalconService), Windows Defender (WinDefend)\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1877843\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: DAyala\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\Users\\DAyala\\Orthoxpress\\Accounting - Documents\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-07 23:29:45 UTC\nStart Time: 2026-01-07 23:20:40 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\Users\\DAyala\\Orthoxpress\\Accounting - Documents\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: c5044f0b-ec1e-11f0-90cc-00505693a21c\nParent Process: C:\\Windows\\Explorer.EXE\nUser: DAyala\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1877843#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-09T10:27:21Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-09T10:03:52Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-09T10:27:21Z",
+      "subject": "LOW - Incident on ORX-DC-TS-04 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ORX-DC-TS-04 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-09T10:27:21Z"
+    },
+    {
+      "id": 1873258,
+      "account_id": 31342,
+      "agent_id": 11395937,
+      "body": "\n\nHost: LPJRM01 - https://technijian.huntress.io/org/426003/agents/11395937\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1873258\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: dbowe\nCommand: \"C:\\Program Files (x86)\\Adobe\\Acrobat 2015\\Acrobat\\Acrobat.exe\" \"C:\\Users\\dbowe.JRMED\\OneDrive - Orthoxpress\\Employment Resources\\Employment Paperwork\\OKX New Hire - Post Hire Forms - Documents\\Post Acceptance - (Company) Onboarding Documents\\Logins-Passwords-Codes_Form.pdf\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2026-01-06 22:37:10 UTC\nStart Time: 2026-01-06 22:31:34 UTC\nCommand: \"C:\\Program Files (x86)\\Adobe\\Acrobat 2015\\Acrobat\\Acrobat.exe\" \"C:\\Users\\dbowe.JRMED\\OneDrive - Orthoxpress\\Employment Resources\\Employment Paperwork\\OKX New Hire - Post Hire Forms - Documents\\Post Acceptance - (Company) Onboarding Documents\\Logins-Passwords-Codes_Form.pdf\"\nExecutable: C:\\Program Files (x86)\\Adobe\\Acrobat 2015\\Acrobat\\Acrobat.exe\nProcess ID: 309763a2-eb4f-11f0-ae43-9cb6d0c847f4\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: dbowe\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1873258#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T15:45:35Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2026-01-08T10:05:41Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T15:45:35Z",
+      "subject": "LOW - Incident on LPJRM01 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on LPJRM01 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T15:45:35Z"
+    },
+    {
+      "id": 1841961,
+      "account_id": 31342,
+      "agent_id": 14735766,
+      "body": "\n\nHost: WKORX72 - https://technijian.huntress.io/org/426003/agents/14735766\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1841961\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: LDelafuente\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\LDelafuente\\OneDrive - Orthoxpress\\Desktop\\passwords.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-09 16:20:08 UTC\nStart Time: 2025-12-09 16:13:14 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"C:\\Users\\LDelafuente\\OneDrive - Orthoxpress\\Desktop\\passwords.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: cb7da720-d518-11f0-b0ab-700810d63748\nParent Process: C:\\windows\\Explorer.EXE\nUser: LDelafuente\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1841961#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-10T10:24:17Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 4,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-10T10:04:41Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-10T10:24:17Z",
+      "subject": "LOW - Incident on WKORX72 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX72 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-10T10:24:17Z"
+    },
+    {
+      "id": 1840924,
+      "account_id": 31342,
+      "agent_id": 11413250,
+      "body": "\n\nHost: ORX-DC-TS-04 - https://technijian.huntress.io/org/426003/agents/11413250\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike (CSFalconService), Windows Defender (WinDefend)\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1840924\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: DAyala\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\Users\\DAyala\\Orthoxpress\\Accounting - Documents\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-12-09 16:14:47 UTC\nStart Time: 2025-12-09 16:12:52 UTC\nCommand: \"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\Users\\DAyala\\Orthoxpress\\Accounting - Documents\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 6fa7b362-d519-11f0-90c9-00505693a21c\nParent Process: C:\\Windows\\Explorer.EXE\nUser: DAyala\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1840924#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-09T10:29:11Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-12-10T10:03:04Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-09T10:29:11Z",
+      "subject": "LOW - Incident on ORX-DC-TS-04 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on ORX-DC-TS-04 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-09T10:29:11Z"
+    },
+    {
+      "id": 1777968,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\n\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1777968\nSeverity: Low\n\nInvestigative Summary:\n----------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: GretchenMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions:\n-------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information:\n------------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-10-31 18:02:37 UTC\nStart Time: 2025-10-31 17:54:00 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 301ab9d3-b682-11f0-bc53-a4bb6dd1940b\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: GretchenMaestre\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1777968#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T09:48:13Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-11-01T10:51:40Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T09:48:13Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:13Z"
+    },
+    {
+      "id": 1719838,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\n\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1719838\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/limited-preview/gplK6A7B8ROq\n\nCommands used to open files that may contain passwords:\nUser: GMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-09-26 19:01:55 UTC\nStart Time: 2025-09-26 19:00:48 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 0f595f94-9b0b-11f0-bc41-a4bb6dd1940b\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: GMaestre\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1719838#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T09:48:13Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-09-27T10:05:22Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T09:48:13Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:13Z"
+    },
+    {
+      "id": 1667933,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\n\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1667933\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: GMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-08-26 21:32:47 UTC\nStart Time: 2025-08-26 21:24:07 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 854f9286-82c2-11f0-bc34-a4bb6dd1940b\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: GMaestre\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1667933#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T09:48:13Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-08-27T10:08:12Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T09:48:13Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:13Z"
+    },
+    {
+      "id": 1594292,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\n\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1594292\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: GMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-07-09 17:50:46 UTC\nStart Time: 2025-07-09 17:50:34 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: b69171a3-5ceb-11f0-bc2d-a4bb6dd1940b\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: GMaestre\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1594292#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T09:48:13Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-07-10T10:07:28Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T09:48:13Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:13Z"
+    },
+    {
+      "id": 1550251,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1550251\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: GMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nLead Signal Information\n-----------------------\nSignal Name: Potential Unsecured Credentials In Files\nDetected At: 2025-06-05 17:29:58 UTC\nStart Time: 2025-06-05 17:21:23 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: 98fbbe72-422e-11f0-bc25-a4bb6dd1940b\nParent Process: C:\\WINDOWS\\Explorer.EXE\nUser: GMaestre\n\nAll investigated signals can be found in the Huntress Platform: https://technijian.huntress.io/org/426003/infection_reports/1550251#signals-investigated-tab\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2025-06-09T15:51:34Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "favicon_detections": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-06-06T10:06:57Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2025-06-09T15:51:34Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:13Z"
+    },
+    {
+      "id": 1486611,
+      "account_id": 31342,
+      "agent_id": 11391805,
+      "body": "\nHost: WKORX52 - https://technijian.huntress.io/org/426003/agents/11391805\nOrganization: ORX - Ortho Xpress\nTags: None\nSecurity Products: CrowdStrike Falcon Sensor\n\nIncident Report: https://technijian.huntress.io/org/426003/infection_reports/1486611\nSeverity: Low\n\nInvestigative Summary\n---------------------\nHuntress detected one or more files on this endpoint that may contain passwords. Having passwords readily available on disk or network shares does not follow security best-practices as threat actors often search for and exploit this data. To reduce organizational risk, we recommend you remove these files and consider the use of a secure password manager.\nThis message was sent out to ensure you are aware of this potential security risk on this host. We will not be able to verify removal of the password files. We did not collect/examine the file to verify that it contains passwords.\n\nGiven the existence of this file, we recommend that your users receive training on the risks of insecure password storage:\n\n- If you already have a Huntress Security Awareness Training (SAT) subscription, you can assign the \"Storing Passwords\" and \"Password Manager\" episodes to all employees of the affected organization.\n- If you don't have an SAT subscription yet, you can start a free trial for full access to all content. Alternatively, we've made the \"Storing Passwords\" episode available to you for free at https://mycurricula.com/login/d93fpsfxje\n\nCommands used to open files that may contain passwords:\nUser: GMaestre\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\n\nRemediation Instructions\n------------------------\nTo mitigate against post-exploitation attacks and lateral movement, consider switching to a secure password management solution. Before deleting any local credential files, ensure they have been backed up in a secure, encrypted location.\nThere may be other password files located on disk in the same directory as the above processes seen on the host - this list is not exhaustive. Huntress has not manually downloaded the files to confirm they contain credentials; however, due to the naming, password content is likely and your team should consider investigating.\nIf a threat actor gains access to this host and discovers a password file (whether locally or on a shared drive), these credentials can be used to launch follow-on attacks against the organization or to laterally move across the network. Additionally, password storage in this manner may negatively impact audits for mandatory security standards in certain industries.\n\nProcesses\n---------\nStart Time: 2025-04-17 16:31:29 UTC\nCommand: \"C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"E:\\UserProfiles\\GMaestre\\OneDrive - Orthoxpress\\Accounting\\Accounting Logins\\Passwords and Login Info.xlsx\"\nExecutable: C:\\Program Files (x86)\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\nProcess ID: a2043c76-1ba8-11f0-bc1d-a4bb6dd1940b\nParent Process: C:\\Windows\\explorer.exe\nUser: GMaestre\n\n-------------------------\nThanks again for trusting Huntress and please don't hesitate to reach out to incidents@huntress.io if you have any questions.\n",
+      "closed_at": "2026-01-08T09:48:12Z",
+      "indicator_counts": {
+        "footholds": 0,
+        "mde_detections": 0,
+        "monitored_files": 0,
+        "siem_detections": 0,
+        "managed_identity": 0,
+        "process_detections": 1,
+        "ransomware_canaries": 0,
+        "antivirus_detections": 0
+      },
+      "indicator_types": [
+        "process_detections"
+      ],
+      "organization_id": 426003,
+      "platform": "windows",
+      "remediations": {
+        "total_count": 0,
+        "has_more": false,
+        "items": []
+      },
+      "sent_at": "2025-04-18T10:13:35Z",
+      "severity": "low",
+      "status": "closed",
+      "status_updated_at": "2026-01-08T09:48:12Z",
+      "subject": "LOW - Incident on WKORX52 (ORX - Ortho Xpress)",
+      "summary": "LOW - Potentially Insecure Credentials: Credentials In Files on WKORX52 (ORX - Ortho Xpress)",
+      "updated_at": "2026-01-08T09:48:12Z"
+    }
+  ]
+}
