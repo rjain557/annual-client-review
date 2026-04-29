@@ -1,0 +1,1058 @@
+{
+  "org": {
+    "id": "80731",
+    "name": "Technijian Inc"
+  },
+  "network": {
+    "id": "N_3710403142999873721",
+    "name": "05-Technijian LAB",
+    "productTypes": [
+      "appliance"
+    ]
+  },
+  "productType": "appliance",
+  "window": {
+    "t0": "2026-01-29T00:00:00Z",
+    "t1": "2026-01-29T23:59:59Z"
+  },
+  "fetched_at": "2026-04-29T21:47:24Z",
+  "count": 62,
+  "events": [
+    {
+      "occurredAt": "2026-01-29T23:48:05.697870Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7399253681 unexpected packets seen (7335497963 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:48:05.697860Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3294851367 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:48:05.697849Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.107.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "6",
+        "details": "sent 4100400670 unexpected packets (Last seen packet IP=10.6.9.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:48:05.697046Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644489 unexpected packets seen (11927644485 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:48:05.697036Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.1.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643485 unexpected packets (Last seen packet IP=172.16.9.10)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:41:57.325830Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:41:57.325820Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:41:22.290795Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:41:22.290785Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.113382Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7335497963 unexpected packets seen (7272438993 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.113372Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 430 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.113362Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3272678136 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.113352Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.1.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "49",
+        "details": "sent 4058818183 unexpected packets (Last seen packet IP=10.100.49.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.112581Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644485 unexpected packets seen (11927644479 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T23:17:59.112571Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "172.16.9.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643481 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.269715Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7272438993 unexpected packets seen (7211175768 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.269705Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 429 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.269695Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3251460029 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.269685Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.9.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "49",
+        "details": "sent 4016977321 unexpected packets (Last seen packet IP=10.100.49.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.263686Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644479 unexpected packets seen (11927644475 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:48:06.263676Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "172.16.9.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643475 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:41:41.922362Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:41:41.922341Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:41:07.822782Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:41:07.822772Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:18:05.260771Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7211175768 unexpected packets seen (7148974915 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:18:05.260761Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3229239411 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:18:05.260751Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.8.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "6",
+        "details": "sent 3977934715 unexpected packets (Last seen packet IP=10.6.9.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:18:05.259814Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644475 unexpected packets seen (11927644469 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T22:18:05.259804Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "172.16.9.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643471 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.980771Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7148974915 unexpected packets seen (7086468408 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.980761Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 428 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.980751Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3206953579 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.980741Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.3.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "49",
+        "details": "sent 3938019694 unexpected packets (Last seen packet IP=10.100.49.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.978106Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644469 unexpected packets seen (11927644465 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:48:02.978096Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "172.16.9.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643465 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:41:06.916769Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:41:06.916759Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:40:15.391007Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:40:15.390997Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.036911Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7086468408 unexpected packets seen (7023312638 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.036901Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 426 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.036891Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3185634049 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.036881Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.8.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "6",
+        "details": "sent 3896832719 unexpected packets (Last seen packet IP=10.6.9.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.032799Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644465 unexpected packets seen (11927644459 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T21:18:01.032789Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "172.16.9.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643461 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.186271Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "7023312638 unexpected packets seen (6959889597 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.186261Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 424 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.186252Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3163162369 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.186242Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.9.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "6",
+        "details": "sent 3856148631 unexpected packets (Last seen packet IP=10.6.9.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.182099Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644459 unexpected packets seen (11927644455 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:48:06.182089Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.1.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643455 unexpected packets (Last seen packet IP=172.16.9.10)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:19:33.443384Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:19:33.443375Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.227495Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "6959889597 unexpected packets seen (6896022870 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.227485Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k868a30",
+      "clientDescription": null,
+      "clientMac": "00:50:56:b9:f7:a0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.6.201",
+        "MAC": "00:50:56:B9:F7:A0",
+        "VLAN": "7",
+        "details": "sent 422 unexpected packets (Last seen packet IP on VLAN=6)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.227475Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kabee1f",
+      "clientDescription": null,
+      "clientMac": "00:00:0c:07:ac:06",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.6.9.3",
+        "MAC": "00:00:0C:07:AC:06",
+        "VLAN": "6",
+        "details": "sent 3139794926 unexpected packets"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.227466Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "k92682a",
+      "clientDescription": "00:3a:7d:b2:78:fc",
+      "clientMac": "00:3a:7d:b2:78:fc",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.7.9.4",
+        "MAC": "00:3A:7D:B2:78:FC",
+        "VLAN": "6",
+        "details": "sent 3816093035 unexpected packets (Last seen packet IP=10.6.9.4)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.222570Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "summary": "11927644455 unexpected packets seen (11927644449 packets till last report)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:18:06.222560Z",
+      "networkId": "N_3710403142999873721",
+      "type": "martian_vlan",
+      "description": "Source IP and/or VLAN mismatch",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "Client": "10.100.1.10",
+        "MAC": "50:6B:4B:54:2A:C1",
+        "VLAN": "1",
+        "details": "sent 11927643451 unexpected packets (Last seen packet IP=172.16.9.10)"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:17:27.703164Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "kf04f5f",
+      "clientDescription": "50:6b:4b:54:2a:c1",
+      "clientMac": "50:6b:4b:54:2a:c1",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C0"
+      }
+    },
+    {
+      "occurredAt": "2026-01-29T20:17:27.703154Z",
+      "networkId": "N_3710403142999873721",
+      "type": "ip_conflict",
+      "description": "Client IP conflict",
+      "clientId": "k3152e8",
+      "clientDescription": "TRUENAS",
+      "clientMac": "50:6b:4b:54:2a:c0",
+      "category": "ip_conflicts",
+      "deviceSerial": "Q2WN-P4VJ-ZPR6",
+      "deviceName": "TE-LAB-FW-01",
+      "eventData": {
+        "conflicting_ip": "10.100.1.10",
+        "contending_mac": "50:6B:4B:54:2A:C1"
+      }
+    }
+  ]
+}

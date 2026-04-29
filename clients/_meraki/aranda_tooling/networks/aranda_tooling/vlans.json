@@ -1,0 +1,281 @@
+[
+  {
+    "id": 1,
+    "networkId": "L_686235993220607281",
+    "name": "Untagged",
+    "applianceIp": "10.10.0.1",
+    "subnet": "10.10.0.0/16",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "10.10.1.20\n172.16.94.253",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221225951",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 2,
+    "networkId": "L_686235993220607281",
+    "name": "Config VLAN",
+    "applianceIp": "192.168.254.1",
+    "subnet": "192.168.254.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221787316",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 3,
+    "networkId": "L_686235993220607281",
+    "name": "Config VLAN2",
+    "applianceIp": "192.168.0.1",
+    "subnet": "192.168.0.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221797674",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 10,
+    "networkId": "L_686235993220607281",
+    "name": "Office Management VLAN",
+    "applianceIp": "172.28.0.1",
+    "subnet": "172.28.0.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "686235993221242247",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 20,
+    "networkId": "L_686235993220607281",
+    "name": "Office Wired Network",
+    "applianceIp": "172.28.2.1",
+    "subnet": "172.28.2.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "10.10.1.20\n172.16.94.253",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221242248",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 30,
+    "networkId": "L_686235993220607281",
+    "name": "Office Wi-Fi Network",
+    "applianceIp": "172.28.4.1",
+    "subnet": "172.28.4.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "10.10.1.20\n172.16.94.253",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221242249",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 40,
+    "networkId": "L_686235993220607281",
+    "name": "Office Wi-Fi Guest",
+    "applianceIp": "172.28.6.1",
+    "subnet": "172.28.6.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221242250",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 50,
+    "networkId": "L_686235993220607281",
+    "name": "Office Services",
+    "applianceIp": "172.28.8.1",
+    "subnet": "172.28.8.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "686235993221242251",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 60,
+    "networkId": "L_686235993220607281",
+    "name": "Office IoT",
+    "applianceIp": "172.28.10.1",
+    "subnet": "172.28.10.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221242252",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 70,
+    "networkId": "L_686235993220607281",
+    "name": "Office Printers VLAN",
+    "applianceIp": "172.28.12.1",
+    "subnet": "172.28.12.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221808274",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 100,
+    "networkId": "L_686235993220607281",
+    "name": "OT Management VLAN",
+    "applianceIp": "10.28.0.1",
+    "subnet": "10.28.0.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "686235993221246817",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 110,
+    "networkId": "L_686235993220607281",
+    "name": "OT Wired Network",
+    "applianceIp": "10.28.2.1",
+    "subnet": "10.28.2.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "10.10.1.20\n172.16.94.253",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "686235993221246818",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 120,
+    "networkId": "L_686235993220607281",
+    "name": "OT Printers",
+    "applianceIp": "10.28.4.1",
+    "subnet": "10.28.4.0/23",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "686235993221655915",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 200,
+    "networkId": "L_686235993220607281",
+    "name": "BGP",
+    "applianceIp": "198.19.0.66",
+    "subnet": "198.19.0.64/30",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "686235993221670762",
+    "ipv6": {
+      "enabled": false
+    },
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  }
+]

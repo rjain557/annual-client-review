@@ -1,0 +1,18 @@
+{
+  "_doc": "Manual override file for the daily Sophos pull. Resolution order: (1) explicit `manual` entry mapping <sophos_tenant_id> -> <LocationCode>; (2) exact normalized-name match against the active CP client list; (3) bare-code match (Sophos tenant name == LocationCode). Anything still unmatched lands in unmapped.json. Add an `ignore` entry for Sophos tenants that should never produce a per-client folder (Technijian house tenant, internal lab, decommissioned).",
+  "manual": {
+    "de552407-3492-410e-bea6-b78a77df265a": "ORX"
+  },
+  "_manual_notes": {
+    "de552407-3492-410e-bea6-b78a77df265a": "OrthoXpress Distribution Inc. -> ORX (CP Location_Name 'Ortho Xpress' won't normalize-match)"
+  },
+  "ignore": [
+    "f9ef08f4-0d4a-4883-bf42-4bc1d191ed41"
+  ],
+  "_ignore_notes": {
+    "f9ef08f4-0d4a-4883-bf42-4bc1d191ed41": "Technijian house tenant - internal MSP account"
+  },
+  "_unmapped_notes": {
+    "774f0212-aaa0-451c-95a1-6dbc36ce19e1": "Yebo Group - not in active CP client list (not a managed-IT-active tenant). Leave unmapped; will appear in unmapped.json each run for triage."
+  }
+}

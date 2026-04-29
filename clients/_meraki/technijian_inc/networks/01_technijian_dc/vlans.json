@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-001-MNG",
+    "applianceIp": "10.100.1.1",
+    "subnet": "10.100.1.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "google_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "573083052583081692",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 49,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-049-Transist",
+    "applianceIp": "10.100.49.254",
+    "subnet": "10.100.49.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "3710403143000132007",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 115,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-115-ISOLATION TEST",
+    "applianceIp": "10.100.115.1",
+    "subnet": "10.100.115.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "4.2.2.4\n8.8.8.8",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "3710403143000063562",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 116,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-116-ISOLATION TEST",
+    "applianceIp": "10.100.116.4",
+    "subnet": "10.100.116.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "4.2.2.4\n8.8.8.8",
+    "dhcpHandling": "Run a DHCP server",
+    "dhcpLeaseTime": "1 day",
+    "dhcpBootOptionsEnabled": false,
+    "dhcpOptions": [],
+    "interfaceId": "3710403143000071757",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 250,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-250-SEO-TEST",
+    "applianceIp": "10.100.250.1",
+    "subnet": "10.100.250.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "3710403143000130345",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 251,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-251-SEO-PROD",
+    "applianceIp": "10.100.251.1",
+    "subnet": "10.100.251.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "3710403143000130346",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  },
+  {
+    "id": 252,
+    "networkId": "N_573083052583193247",
+    "name": "VLAN-252-DEV-TEST",
+    "applianceIp": "10.100.252.1",
+    "subnet": "10.100.252.0/24",
+    "fixedIpAssignments": {},
+    "reservedIpRanges": [],
+    "dnsNameservers": "upstream_dns",
+    "dhcpHandling": "Do not respond to DHCP requests",
+    "interfaceId": "3710403143000130342",
+    "mandatoryDhcp": {
+      "enabled": false
+    }
+  }
+]

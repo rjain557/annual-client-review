@@ -1,0 +1,24 @@
+{
+  "_doc": "Persistent state for the Sophos -> Client Portal ticket router. Maps Sophos alert.id to the CP ticket created for it, and tracks reminder-email cadence so we don't open duplicate tickets or spam support@technijian.com. Updated by route_alerts.py every hour when run with --apply.",
+  "_schema": {
+    "<sophos_alert_id>": {
+      "LocationCode": "<CODE>",
+      "sophos_tenant_id": "<uuid>",
+      "alert_category": "connectivity|updating|security|...",
+      "alert_severity": "low|medium|high",
+      "alert_type": "Event::Firewall::...",
+      "alert_description": "human readable",
+      "alert_raised_at": "ISO 8601",
+      "first_seen_by_router_at": "ISO 8601",
+      "ticket_id": "<CP ticket id> or null if creation pending/failed",
+      "ticket_created_at": "ISO 8601 or null",
+      "ticket_url": "https://... or null",
+      "ticket_assigned_to": "india-support-pod",
+      "ticket_billable": "true (client alert) or false (internal infra)",
+      "last_email_sent_at": "ISO 8601 or null",
+      "email_count": 0,
+      "resolved_at": "ISO 8601 or null (set when alert no longer in API)"
+    }
+  },
+  "alerts": {}
+}
