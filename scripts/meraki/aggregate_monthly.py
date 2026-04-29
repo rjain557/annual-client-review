@@ -28,9 +28,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-DEFAULT_ROOT = Path(
-    r"c:/VSCode/annual-client-review/annual-client-review-1/clients/_meraki"
-)
+DEFAULT_ROOT = Path(__file__).resolve().parents[2] / "clients" / "_meraki"
 
 
 def parse_args() -> argparse.Namespace:
