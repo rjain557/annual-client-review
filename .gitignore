@@ -21,3 +21,13 @@ technijian/huntress-pull/state/*.log
 technijian/huntress-pull/state/[0-9]*.json
 # Huntress backfill — large per-month run logs are reproducible from the API; keep the per-client artifacts under clients/<code>/huntress/monthly/ committed
 technijian/huntress-pull/backfill/backfill-log-*.json
+
+# ScreenConnect recordings — never commit raw .crv, intermediate .avi, or converted .mp4 (large binaries; live on Teams / file share, not in git)
+*.crv
+*.avi
+*.mp4
+# ScreenConnect Teams destination config — gitignored to keep live team/channel ids local-only
+technijian/screenconnect-pull/state/teams-destination.json
+# ScreenConnect run logs / state
+technijian/screenconnect-pull/state/*.log
+technijian/screenconnect-pull/state/[0-9]*.json
