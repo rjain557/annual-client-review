@@ -1,15 +1,20 @@
 """
-Generate branded monthly Meraki activity Word reports per org.
+Generate branded monthly Meraki activity Word reports per client.
 
-Reads the JSON summaries written by aggregate_monthly.py and produces:
+Reads JSON summaries written by aggregate_monthly.py:
+  clients/<code>/meraki/monthly/<YYYY-MM>.json
 
-  clients/_meraki/<org_slug>/reports/<ORG> - Meraki Monthly Activity - <YYYY-MM>.docx
+Writes:
+  clients/<code>/meraki/reports/<Org Name> - Meraki Monthly Activity - <YYYY-MM>.docx
 
-Uses the same brand styling (dark blue 1F4E79, alt rows F2F7FB) as the
-existing per-client annual review docs.
+Uses the canonical Technijian brand helpers from
+`technijian/shared/scripts/_brand.py` (cover page, section headers, styled
+tables, metric cards, callout boxes — Open Sans, CORE_BLUE #006DB6, CORE_ORANGE
+#F67D4B). Runs the proofread gate (`technijian/shared/scripts/proofread_docx.py`)
+on every generated report and exits non-zero on any failure.
 
 Usage:
-  python generate_monthly_docx.py                              # all orgs / months that have JSON summaries
+  python generate_monthly_docx.py
   python generate_monthly_docx.py --month 2026-03
   python generate_monthly_docx.py --only vaf,bwh
   python generate_monthly_docx.py --from 2026-01 --to 2026-03
@@ -23,401 +28,434 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Any
 
-REPO_ROOT = Path(__file__).resolve().parents[2]  # annual-client-review-1
-PROOFREADER = REPO_ROOT / "technijian" / "shared" / "scripts" / "proofread_docx.py"
+# Wire in shared brand helpers
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SHARED = REPO_ROOT / "technijian" / "shared" / "scripts"
+sys.path.insert(0, str(SHARED))
+import _brand as brand  # noqa: E402
+
+PROOFREADER = SHARED / "proofread_docx.py"
+CLIENTS_ROOT = REPO_ROOT / "clients"
 
 EXPECTED_SECTIONS = [
     "Executive Summary",
     "Network & Device Inventory",
     "Security Posture",
     "IDS/IPS & AMP Events",
-    "Firewall / Network Activity",
+    "Firewall & Network Activity",
     "Daily Trend",
+    "What Technijian Did For You",
+    "Recommendations",
+    "About This Report",
 ]
 
-try:
-    from docx import Document
-    from docx.shared import Inches, Pt, RGBColor
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
-    from docx.oxml.ns import nsdecls
-    from docx.oxml import parse_xml
-except ImportError:
-    print("ERROR: python-docx is required. Install with: pip install python-docx", file=sys.stderr)
-    sys.exit(2)
-
-# Brand palette (matches generate_aava_docx.py / generate_bwh_docx.py)
-DARK_BLUE = RGBColor(0x1F, 0x4E, 0x79)
-MED_BLUE  = RGBColor(0x2E, 0x75, 0xB6)
-GRAY      = RGBColor(0x66, 0x66, 0x66)
-WHITE     = RGBColor(0xFF, 0xFF, 0xFF)
-BLACK     = RGBColor(0x00, 0x00, 0x00)
-DARK_BLUE_HEX = "1F4E79"
-ALT_ROW_HEX   = "F2F7FB"
-WHITE_HEX     = "FFFFFF"
-
-DEFAULT_ROOT = Path(__file__).resolve().parents[2] / "clients" / "_meraki"
-
-L = WD_ALIGN_PARAGRAPH.LEFT
-R = WD_ALIGN_PARAGRAPH.RIGHT
-C = WD_ALIGN_PARAGRAPH.CENTER
-
-
-# ---------------------------------------------------------------------------
-# docx helpers (kept minimal, mirroring conventions in generate_aava_docx.py)
-# ---------------------------------------------------------------------------
-
-def shade(cell, color_hex: str) -> None:
-    cell._tc.get_or_add_tcPr().append(
-        parse_xml(f'<w:shd {nsdecls("w")} w:fill="{color_hex}"/>')
-    )
-
-
-def set_text(cell, text, *, bold=False, size=Pt(9), color=BLACK, align=L) -> None:
-    cell.text = ""
-    p = cell.paragraphs[0]
-    p.alignment = align
-    run = p.add_run(str(text))
-    run.bold = bold
-    run.font.size = size
-    run.font.color.rgb = color
-
-
-def header_row(table, texts, aligns=None) -> None:
-    aligns = aligns or [L] * len(texts)
-    row = table.rows[0]
-    for i, t in enumerate(texts):
-        cell = row.cells[i]
-        shade(cell, DARK_BLUE_HEX)
-        set_text(cell, t, bold=True, color=WHITE, align=aligns[i])
-
-
-def data_row(table, texts, idx, aligns=None) -> None:
-    aligns = aligns or [L] * len(texts)
-    row = table.add_row()
-    fill = ALT_ROW_HEX if idx % 2 == 0 else WHITE_HEX
-    for i, t in enumerate(texts):
-        cell = row.cells[i]
-        shade(cell, fill)
-        set_text(cell, t, align=aligns[i])
-
-
-def make_table(doc, headers, rows, col_aligns=None) -> None:
-    if not rows:
-        rows = [["—"] * len(headers)]
-    t = doc.add_table(rows=1, cols=len(headers))
-    t.autofit = True
-    header_row(t, headers, col_aligns)
-    for i, r in enumerate(rows):
-        data_row(t, r, i, col_aligns)
-
-
-def h1(doc, text):
-    p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(12)
-    p.paragraph_format.space_after = Pt(6)
-    run = p.add_run(text)
-    run.bold = True
-    run.font.size = Pt(16)
-    run.font.color.rgb = DARK_BLUE
-
-
-def h2(doc, text):
-    p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(8)
-    p.paragraph_format.space_after = Pt(4)
-    run = p.add_run(text)
-    run.bold = True
-    run.font.size = Pt(12)
-    run.font.color.rgb = MED_BLUE
-
-
-def body(doc, text, bold=False):
-    p = doc.add_paragraph()
-    p.paragraph_format.space_after = Pt(4)
-    run = p.add_run(text)
-    run.bold = bold
-    run.font.size = Pt(10)
-
-
-def kv_table(doc, pairs):
-    """Two-column key/value table — used for at-a-glance summaries."""
-    rows = [[k, str(v)] for k, v in pairs]
-    make_table(doc, ["Field", "Value"], rows, [L, R])
-
-
-def callout_box(doc, title: str, text: str) -> None:
-    """Single-cell shaded callout box. The proofreader expects at least one
-    of these per report (warns otherwise)."""
-    t = doc.add_table(rows=1, cols=1)
-    t.autofit = True
-    cell = t.rows[0].cells[0]
-    shade(cell, ALT_ROW_HEX)
-    cell.text = ""
-    p = cell.paragraphs[0]
-    run = p.add_run(title)
-    run.bold = True
-    run.font.size = Pt(11)
-    run.font.color.rgb = DARK_BLUE
-    sub = cell.add_paragraph()
-    r2 = sub.add_run(text)
-    r2.font.size = Pt(10)
-    r2.font.color.rgb = BLACK
-
-
-def metric_cards(doc, metrics: list[tuple[str, str]]) -> None:
-    """Multi-column header-style metric row (3+ cells). The proofreader
-    expects this in the first half of the document (warns otherwise)."""
-    if len(metrics) < 3:
-        # pad to at least 3 columns so the row is recognized as a metric strip
-        while len(metrics) < 3:
-            metrics.append(("", ""))
-    t = doc.add_table(rows=2, cols=len(metrics))
-    t.autofit = True
-    for i, (label, value) in enumerate(metrics):
-        head = t.rows[0].cells[i]
-        shade(head, DARK_BLUE_HEX)
-        set_text(head, label, bold=True, size=Pt(9), color=WHITE, align=C)
-        val = t.rows[1].cells[i]
-        shade(val, ALT_ROW_HEX)
-        set_text(val, value, bold=True, size=Pt(14), color=DARK_BLUE, align=C)
-
-
-# ---------------------------------------------------------------------------
-# Report assembly
-# ---------------------------------------------------------------------------
 
 def fmt_int(n) -> str:
     try:
         return f"{int(n):,}"
     except Exception:
-        return str(n)
+        return str(n) if n is not None else "0"
 
 
-def setup_doc(org_name: str, month: str) -> Document:
-    doc = Document()
-    sec = doc.sections[0]
-    sec.left_margin = Inches(0.7)
-    sec.right_margin = Inches(0.7)
-    sec.top_margin = Inches(0.6)
-    sec.bottom_margin = Inches(0.6)
+def status_color_for_security(total: int, blocked: int, alerted: int):
+    if total == 0:
+        return brand.GREEN
+    if blocked >= alerted:
+        return brand.CORE_BLUE
+    return brand.CORE_ORANGE
 
-    # Title
-    p = doc.add_paragraph()
-    p.alignment = C
-    r = p.add_run(f"{org_name}\nMeraki Monthly Activity Report\n{month}")
-    r.bold = True
-    r.font.size = Pt(20)
-    r.font.color.rgb = DARK_BLUE
 
-    p = doc.add_paragraph()
-    p.alignment = C
-    r = p.add_run(f"Prepared by Technijian, Inc.  |  Generated {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-    r.font.size = Pt(9)
-    r.font.color.rgb = GRAY
-    return doc
+# ---------------------------------------------------------------------------
+# Sections
+# ---------------------------------------------------------------------------
+
+def render_cover_page(doc, org_name: str, month: str) -> None:
+    month_dt = datetime.strptime(month, "%Y-%m")
+    month_label = month_dt.strftime("%B %Y")
+    brand.render_cover(
+        doc,
+        title=f"Meraki Monthly Activity",
+        subtitle=f"{org_name} — {month_label}",
+        date_text=f"Reporting period: {month_label}",
+        footer_note="Confidential — for internal Technijian and named-client use only.",
+    )
+    brand.add_page_break(doc)
 
 
 def section_executive_summary(doc, payload: dict) -> None:
-    h1(doc, "Executive Summary")
+    brand.add_section_header(doc, "Executive Summary")
+
     cfg = payload["configuration"]
     sec = payload["security_events"]
     net = payload["network_events"]
+    blocked = (sec.get("by_blocked") or {}).get("blocked", 0) or 0
+    alerted = (sec.get("by_blocked") or {}).get("alerted", 0) or 0
 
-    # Top-of-page metric strip (3+ cells -> recognized as metric cards)
-    metric_cards(doc, [
-        ("Networks",         fmt_int(cfg.get("network_count", 0))),
-        ("Devices",          fmt_int(cfg.get("device_count", 0))),
-        ("IDS/IPS events",   fmt_int(sec.get("total", 0))),
-        ("Activity events",  fmt_int(net.get("total", 0))),
+    # KPI strip
+    brand.add_metric_card_row(doc, [
+        (fmt_int(cfg.get("network_count", 0)), "Networks", brand.CORE_BLUE),
+        (fmt_int(cfg.get("device_count", 0)),  "Devices",  brand.CORE_BLUE),
+        (fmt_int(sec.get("total", 0)),         "IDS/IPS events",
+         status_color_for_security(sec.get("total", 0), blocked, alerted)),
+        (fmt_int(net.get("total", 0)),         "Activity events", brand.TEAL),
     ])
 
-    # Status callout (single-cell table)
-    blocked = (sec.get("by_blocked") or {}).get("blocked", 0)
-    alerted = (sec.get("by_blocked") or {}).get("alerted", 0)
+    # Status callout
     if sec.get("total", 0) == 0:
-        status = ("All clear", "No IDS/IPS or AMP events were recorded across "
-                  "the reporting period. Continue normal monitoring.")
+        brand.add_callout_box(
+            doc,
+            "All clear — no IDS/IPS or AMP events were recorded across the "
+            "reporting period. Continue normal monitoring.",
+            accent_hex=brand.GREEN_HEX, bg_hex="EAF7EE",
+        )
     elif blocked >= alerted:
-        status = ("Active prevention", f"{fmt_int(blocked)} threats were blocked "
-                  f"and {fmt_int(alerted)} alerted. The intrusion-prevention "
-                  "engine is actively dropping malicious traffic.")
+        brand.add_callout_box(
+            doc,
+            f"Active prevention — {fmt_int(blocked)} threats blocked, "
+            f"{fmt_int(alerted)} alerted. The intrusion-prevention engine is "
+            "actively dropping malicious traffic.",
+            accent_hex=brand.CORE_BLUE_HEX, bg_hex="EAF3FA",
+        )
     else:
-        status = ("Detect-mode activity", f"{fmt_int(alerted)} alerts were "
-                  f"recorded with {fmt_int(blocked)} blocks. Review whether the "
-                  "appliance should be moved from detect to prevention mode for "
-                  "high-priority signatures.")
-    callout_box(doc, status[0], status[1])
+        brand.add_callout_box(
+            doc,
+            f"Detect-mode activity — {fmt_int(alerted)} alerts recorded with "
+            f"{fmt_int(blocked)} blocks. Review whether the appliance should be "
+            "moved from detect to prevention mode for high-priority signatures.",
+        )
 
-    pairs = [
-        ("Reporting period",                payload["month"]),
-        ("Networks under management",       fmt_int(cfg.get("network_count", 0))),
-        ("Devices under management",        fmt_int(cfg.get("device_count", 0))),
-        ("Total IDS/IPS / AMP events",      fmt_int(sec.get("total", 0))),
-        ("Days with security events",       fmt_int(sec.get("days_with_events", 0))),
-        ("Total firewall activity events",  fmt_int(net.get("total", 0))),
-        ("Networks with activity",          fmt_int(net.get("networks_with_events", 0))),
-    ]
-    kv_table(doc, pairs)
+    brand.add_body(
+        doc,
+        f"This report summarizes Cisco Meraki firewall, intrusion-prevention "
+        f"(IDS/IPS), advanced-malware-protection (AMP), and configuration "
+        f"posture for {payload['configuration'].get('org') or payload['client_code']} "
+        f"during {payload['month']}. Activity counts are aggregated from daily "
+        f"Meraki Dashboard API pulls; configuration reflects the most recent "
+        f"snapshot.",
+    )
 
 
 def section_inventory(doc, cfg: dict) -> None:
-    h1(doc, "Network & Device Inventory")
-    h2(doc, "Devices by model")
-    rows = sorted(((m or "(unknown)", c) for m, c in cfg.get("device_models", {}).items()),
-                  key=lambda x: -x[1])
-    make_table(doc, ["Model", "Count"], [[m, fmt_int(c)] for m, c in rows], [L, R])
+    brand.add_section_header(doc, "Network & Device Inventory")
 
-    h2(doc, "Devices by product type")
-    rows = sorted(((m or "(unknown)", c) for m, c in cfg.get("device_product_types", {}).items()),
-                  key=lambda x: -x[1])
-    make_table(doc, ["Product type", "Count"], [[m, fmt_int(c)] for m, c in rows], [L, R])
+    brand.add_body(doc, "Devices by model:", bold=True)
+    rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_models") or {}).items()),
+                  key=lambda x: -x[1]) or [("—", 0)]
+    brand.styled_table(doc, ["Model", "Count"], [[m, fmt_int(c)] for m, c in rows],
+                       col_widths=[3.5, 1.5])
 
-    h2(doc, "Networks")
-    headers = ["Name", "Product types", "VLANs", "L3 rules", "L7 rules", "Inbound", "Port fwd", "1:1 NAT"]
+    brand.add_body(doc, "Devices by product type:", bold=True)
+    rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_product_types") or {}).items()),
+                  key=lambda x: -x[1]) or [("—", 0)]
+    brand.styled_table(doc, ["Product type", "Count"], [[m, fmt_int(c)] for m, c in rows],
+                       col_widths=[3.5, 1.5])
+
+    brand.add_body(doc, "Networks under management:", bold=True)
+    headers = ["Network", "Product types", "VLANs", "L3 rules", "L7 rules", "Inbound", "Port fwd"]
     rows = []
-    for n in cfg.get("networks", []):
+    for n in cfg.get("networks", []) or []:
         rows.append([
             n.get("name") or n.get("slug") or "—",
-            ", ".join(n.get("productTypes") or []),
+            ", ".join(n.get("productTypes") or []) or "—",
             fmt_int(n.get("vlan_count", 0)),
             fmt_int(n.get("firewall_l3_rule_count", 0)),
             fmt_int(n.get("firewall_l7_rule_count", 0)),
             fmt_int(n.get("firewall_inbound_rule_count", 0)),
             fmt_int(n.get("port_forward_count", 0)),
-            fmt_int(n.get("one_to_one_nat_count", 0)),
         ])
-    make_table(doc, headers, rows, [L, L, R, R, R, R, R, R])
+    if not rows:
+        rows = [["(no networks)", "—", "0", "0", "0", "0", "0"]]
+    brand.styled_table(doc, headers, rows,
+                       col_widths=[2.0, 1.6, 0.7, 0.8, 0.8, 0.8, 0.8])
 
 
 def section_security_posture(doc, cfg: dict) -> None:
-    h1(doc, "Security Posture (current configuration)")
+    brand.add_section_header(doc, "Security Posture")
+
+    brand.add_body(
+        doc,
+        "Current configuration of the intrusion-prevention engine, "
+        "anti-malware protection, content filtering, site-to-site VPN, and "
+        "syslog forwarding per network.",
+    )
+    headers = ["Network", "IDS/IPS mode", "AMP mode", "URL cats blocked",
+               "URL patterns blocked", "S2S VPN", "Syslog dests"]
     rows = []
-    for n in cfg.get("networks", []):
+    for n in cfg.get("networks", []) or []:
         intr = n.get("intrusion") or {}
         amp  = n.get("malware") or {}
         cfilt = n.get("content_filtering") or {}
+        ids_mode = (intr.get("mode") or "—").title()
+        amp_mode = (amp.get("mode") or "—").title()
         rows.append([
             n.get("name") or n.get("slug") or "—",
-            intr.get("mode") or "—",
-            amp.get("mode") or "—",
+            ids_mode,
+            amp_mode,
             fmt_int(cfilt.get("blocked_categories_count", 0)),
             fmt_int(cfilt.get("blocked_url_patterns_count", 0)),
-            n.get("s2s_vpn_mode") or "—",
+            (n.get("s2s_vpn_mode") or "—").title(),
             fmt_int(n.get("syslog_destination_count", 0)),
         ])
-    make_table(doc,
-               ["Network", "IDS/IPS mode", "AMP mode",
-                "URL cats blocked", "URL patterns blocked",
-                "S2S VPN mode", "Syslog dests"],
-               rows, [L, L, L, R, R, L, R])
+    if not rows:
+        rows = [["(no networks)", "—", "—", "0", "0", "—", "0"]]
+    # status_col uses `IDS/IPS mode` column. brand.styled_table colors by
+    # text content: "prevention" -> green via "active"-like match, "detection"
+    # -> teal via "medium" match, "disabled" -> red.
+    brand.styled_table(doc, headers, rows, col_widths=[1.8, 1.0, 0.8, 0.9, 1.0, 0.7, 0.7],
+                       status_col=1)
 
 
 def section_security_events(doc, sec: dict) -> None:
-    h1(doc, "IDS/IPS & AMP Events")
-    body(doc, f"Total events captured this period: {fmt_int(sec.get('total', 0))} "
-              f"across {sec.get('days_with_events', 0)} days with activity.")
+    brand.add_section_header(doc, "IDS/IPS & AMP Events")
 
-    if sec.get("by_priority"):
-        h2(doc, "By priority / severity")
-        rows = sorted(sec["by_priority"].items(), key=lambda x: x[0])
-        make_table(doc, ["Priority", "Count"],
-                   [[k, fmt_int(v)] for k, v in rows], [L, R])
+    total = sec.get("total", 0)
+    days = sec.get("days_with_events", 0)
+    brand.add_body(
+        doc,
+        f"Total IDS/IPS and AMP events captured during the reporting period: "
+        f"{fmt_int(total)} across {fmt_int(days)} days with activity.",
+    )
+
+    if total == 0:
+        brand.add_callout_box(
+            doc,
+            "No security events were recorded during this period. This indicates "
+            "either a clean network or that the IDS/IPS engine is in detection-only "
+            "mode with no triggered signatures. Review the Security Posture section "
+            "to confirm the intended configuration.",
+            accent_hex=brand.GREEN_HEX, bg_hex="EAF7EE",
+        )
+        return
 
     if sec.get("by_blocked"):
-        h2(doc, "Blocked vs. alerted")
-        make_table(doc, ["Action", "Count"],
-                   [[k.title(), fmt_int(v)] for k, v in sec["by_blocked"].items()], [L, R])
+        brand.add_body(doc, "Blocked vs. alerted:", bold=True)
+        rows = [[k.title(), fmt_int(v)] for k, v in (sec["by_blocked"] or {}).items()]
+        brand.styled_table(doc, ["Action", "Events"], rows, col_widths=[3.0, 2.0])
+
+    if sec.get("by_priority"):
+        brand.add_body(doc, "By priority / severity:", bold=True)
+        rows = sorted((sec["by_priority"] or {}).items(), key=lambda x: x[0])
+        brand.styled_table(doc, ["Priority", "Events"],
+                           [[k, fmt_int(v)] for k, v in rows],
+                           col_widths=[3.0, 2.0])
 
     if sec.get("by_signature_top"):
-        h2(doc, "Top 15 signatures")
-        rows = [[s, fmt_int(c)] for s, c in sec["by_signature_top"]]
-        make_table(doc, ["Signature", "Count"], rows, [L, R])
+        brand.add_body(doc, "Top signatures:", bold=True)
+        rows = [[s, fmt_int(c)] for s, c in (sec["by_signature_top"] or [])]
+        brand.styled_table(doc, ["Signature", "Hits"], rows, col_widths=[5.0, 1.0])
 
     if sec.get("top_sources"):
-        h2(doc, "Top 15 source IPs")
-        rows = [[s, fmt_int(c)] for s, c in sec["top_sources"]]
-        make_table(doc, ["Source", "Hits"], rows, [L, R])
+        brand.add_body(doc, "Top source IPs:", bold=True)
+        rows = [[s, fmt_int(c)] for s, c in (sec["top_sources"] or [])]
+        brand.styled_table(doc, ["Source", "Hits"], rows, col_widths=[4.0, 2.0])
 
     if sec.get("top_destinations"):
-        h2(doc, "Top 15 destination IPs")
-        rows = [[s, fmt_int(c)] for s, c in sec["top_destinations"]]
-        make_table(doc, ["Destination", "Hits"], rows, [L, R])
+        brand.add_body(doc, "Top destination IPs:", bold=True)
+        rows = [[s, fmt_int(c)] for s, c in (sec["top_destinations"] or [])]
+        brand.styled_table(doc, ["Destination", "Hits"], rows, col_widths=[4.0, 2.0])
 
 
 def section_activity(doc, net: dict) -> None:
-    h1(doc, "Firewall / Network Activity")
-    body(doc, f"Total firewall/appliance activity events: {fmt_int(net.get('total', 0))} "
-              f"across {net.get('networks_with_events', 0)} active networks.")
+    brand.add_section_header(doc, "Firewall & Network Activity")
+
+    total = net.get("total", 0)
+    n_active = net.get("networks_with_events", 0)
+    brand.add_body(
+        doc,
+        f"Total firewall, VPN, DHCP, and connectivity events: {fmt_int(total)} "
+        f"across {fmt_int(n_active)} active networks.",
+    )
+
+    if total == 0:
+        brand.add_body(
+            doc,
+            "No appliance-layer activity events were recorded for this period. "
+            "Wireless-only networks (no MX appliance) and dormant sites typically "
+            "show zero events here — verify the network topology in the inventory "
+            "above if this is unexpected.",
+        )
+        return
 
     if net.get("by_type_top"):
-        h2(doc, "Top 20 event types")
-        rows = [[t, fmt_int(c)] for t, c in net["by_type_top"]]
-        make_table(doc, ["Event type", "Count"], rows, [L, R])
+        brand.add_body(doc, "Top event types:", bold=True)
+        rows = [[t, fmt_int(c)] for t, c in (net["by_type_top"] or [])]
+        brand.styled_table(doc, ["Event type", "Count"], rows, col_widths=[4.5, 1.5])
 
     if net.get("by_category"):
-        h2(doc, "By category")
-        rows = sorted(net["by_category"].items(), key=lambda x: -x[1])
-        make_table(doc, ["Category", "Count"],
-                   [[k, fmt_int(v)] for k, v in rows], [L, R])
+        brand.add_body(doc, "By category:", bold=True)
+        rows = sorted((net["by_category"] or {}).items(), key=lambda x: -x[1])
+        brand.styled_table(doc, ["Category", "Count"],
+                           [[k, fmt_int(v)] for k, v in rows],
+                           col_widths=[4.5, 1.5])
 
     if net.get("by_network"):
-        h2(doc, "Per-network rollup")
+        brand.add_body(doc, "Per-network rollup:", bold=True)
         rows = []
-        for slug, info in sorted(net["by_network"].items(), key=lambda kv: -kv[1]["total"]):
-            top_types = ", ".join(f"{t}({fmt_int(c)})" for t, c in info["by_type_top"][:3])
+        for slug, info in sorted((net["by_network"] or {}).items(),
+                                 key=lambda kv: -kv[1]["total"]):
+            top_types = ", ".join(f"{t} ({fmt_int(c)})" for t, c in info["by_type_top"][:3])
             rows.append([info["name"] or slug, fmt_int(info["total"]), top_types])
-        make_table(doc, ["Network", "Total events", "Top event types"], rows, [L, R, L])
+        brand.styled_table(doc, ["Network", "Events", "Top event types"], rows,
+                           col_widths=[2.0, 1.0, 3.5])
 
 
 def section_daily_trend(doc, sec: dict, net: dict) -> None:
-    h1(doc, "Daily Trend")
+    brand.add_section_header(doc, "Daily Trend")
+
+    brand.add_body(
+        doc,
+        "Day-by-day count of intrusion-prevention events versus appliance-layer "
+        "activity events. Use this to spot anomalies — sudden spikes typically "
+        "correlate with outbound malware activity, port scans, or VPN tunnel "
+        "flapping.",
+    )
+
     sec_by_day = {x["date"]: x["count"] for x in sec.get("daily_counts", [])}
     net_by_day = {x["date"]: x["count"] for x in net.get("daily_counts", [])}
     days = sorted(set(sec_by_day) | set(net_by_day))
+    if not days:
+        brand.add_body(doc, "No daily data available for this period.")
+        return
     rows = [[d, fmt_int(sec_by_day.get(d, 0)), fmt_int(net_by_day.get(d, 0))]
             for d in days]
-    make_table(doc, ["Date", "Security events", "Activity events"], rows, [L, R, R])
+    brand.styled_table(doc, ["Date", "Security events", "Activity events"],
+                       rows, col_widths=[2.5, 1.75, 1.75])
 
+
+def section_what_technijian_did(doc, payload: dict) -> None:
+    brand.add_section_header(doc, "What Technijian Did For You")
+
+    brand.add_body(
+        doc,
+        "Throughout the reporting period the Technijian network operations team "
+        "performed the following ongoing services for your Meraki environment:",
+    )
+
+    bullets = [
+        ("24x7 monitoring: ", "continuous health checks against every Meraki appliance, switch, and access point in your dashboard."),
+        ("Threat intelligence: ", "Cisco's Talos and AMP feeds are kept current; signature definitions update automatically as Cisco publishes them."),
+        ("Configuration drift detection: ", "daily snapshots of firewall rules, VLANs, content filtering, IDS/IPS settings, and VPN configuration; deviations from the documented baseline are reviewed."),
+        ("Incident review: ", "high-priority security alerts are triaged within the on-call SLA and ticketed in the Technijian Client Portal."),
+        ("Monthly reporting: ", "this document — every line item is sourced from the Meraki Dashboard API and verified through a structural proofreader before delivery."),
+    ]
+    for prefix, text in bullets:
+        brand.add_bullet(doc, text, bold_prefix=prefix)
+
+
+def section_recommendations(doc, payload: dict) -> None:
+    brand.add_section_header(doc, "Recommendations")
+
+    cfg = payload["configuration"]
+    sec = payload["security_events"]
+
+    detect_only_networks = []
+    no_amp_networks = []
+    no_syslog_networks = []
+    for n in cfg.get("networks", []) or []:
+        intr_mode = ((n.get("intrusion") or {}).get("mode") or "").lower()
+        amp_mode = ((n.get("malware") or {}).get("mode") or "").lower()
+        if intr_mode and intr_mode != "prevention":
+            detect_only_networks.append(n.get("name") or n.get("slug"))
+        if amp_mode and amp_mode != "enabled":
+            no_amp_networks.append(n.get("name") or n.get("slug"))
+        if (n.get("syslog_destination_count") or 0) == 0 and "appliance" in (n.get("productTypes") or []):
+            no_syslog_networks.append(n.get("name") or n.get("slug"))
+
+    recs: list[tuple[str, str]] = []
+    if detect_only_networks:
+        recs.append((
+            "Move IDS to prevention mode: ",
+            f"the following network(s) currently run IDS/IPS in detection-only "
+            f"mode: {', '.join(detect_only_networks)}. We recommend a "
+            f"two-week prevention-mode trial after reviewing this period's "
+            f"signature distribution to confirm no false-positive risk."
+        ))
+    if no_amp_networks:
+        recs.append((
+            "Enable AMP: ",
+            f"advanced-malware-protection is not fully enabled on "
+            f"{', '.join(no_amp_networks)}. AMP adds file-reputation lookups "
+            f"and retrospective detection on top of signature-based IDS — "
+            f"recommended for any network handling email or web traffic."
+        ))
+    if no_syslog_networks:
+        recs.append((
+            "Forward syslog: ",
+            f"appliances on {', '.join(no_syslog_networks)} are not "
+            f"configured to forward syslog. Pointing these at the Technijian "
+            f"central syslog receiver lets us perform per-signature historical "
+            f"analysis beyond the Meraki API's 31-day window."
+        ))
+    if sec.get("total", 0) == 0:
+        recs.append((
+            "Validate detection coverage: ",
+            "zero security events for the period is unusual unless the network "
+            "is genuinely low-traffic. Consider running a controlled test "
+            "(e.g., EICAR file download from an isolated workstation) to "
+            "confirm the IDS/IPS pipeline end-to-end."
+        ))
+    if not recs:
+        recs.append((
+            "Stay the course: ",
+            "all monitored networks are configured per the recommended baseline "
+            "and event volumes are within expected ranges. No configuration "
+            "changes are required this period."
+        ))
+
+    for prefix, text in recs:
+        brand.add_bullet(doc, text, bold_prefix=prefix)
+
+
+def section_about(doc, payload: dict) -> None:
+    brand.add_section_header(doc, "About This Report")
+
+    brand.add_body(
+        doc,
+        "This report is generated automatically from the Cisco Meraki Dashboard "
+        "API by Technijian's annual-client-review pipeline. Every figure shown "
+        "is sourced from the API at report-generation time; no manual data "
+        "entry is involved.",
+    )
+    brand.add_body(
+        doc,
+        f"Report generated {datetime.now().strftime('%Y-%m-%d %H:%M %Z').strip()} "
+        f"for client code '{payload['client_code']}'. Configuration snapshot taken "
+        f"{payload['configuration'].get('snapshot_at') or 'unknown'}.",
+    )
+    brand.add_body(
+        doc,
+        "For questions about any item in this report, or to request a different "
+        "reporting cadence, contact your Technijian account manager or open a "
+        "ticket via the Client Portal.",
+    )
+
+
+# ---------------------------------------------------------------------------
+# Build orchestration
+# ---------------------------------------------------------------------------
 
 def build_report(payload: dict, out_path: Path) -> None:
-    org_name = payload["configuration"].get("org") or payload["org_slug"]
-    doc = setup_doc(org_name, payload["month"])
+    org_name = (payload["configuration"].get("org") or payload["client_code"]).strip()
+
+    doc = brand.new_branded_document()
+    render_cover_page(doc, org_name, payload["month"])
+
     section_executive_summary(doc, payload)
     section_inventory(doc, payload["configuration"])
     section_security_posture(doc, payload["configuration"])
     section_security_events(doc, payload["security_events"])
     section_activity(doc, payload["network_events"])
     section_daily_trend(doc, payload["security_events"], payload["network_events"])
-
-    doc.add_page_break()
-    p = doc.add_paragraph()
-    p.alignment = C
-    r = p.add_run("End of report  |  Generated by Technijian Meraki monthly pipeline")
-    r.font.size = Pt(8)
-    r.font.color.rgb = GRAY
+    section_what_technijian_did(doc, payload)
+    section_recommendations(doc, payload)
+    section_about(doc, payload)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     doc.save(str(out_path))
 
 
-def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description=__doc__,
-                                formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--month")
-    p.add_argument("--from", dest="from_month")
-    p.add_argument("--to",   dest="to_month")
-    p.add_argument("--only")
-    p.add_argument("--skip")
-    p.add_argument("--root", default=str(DEFAULT_ROOT))
-    return p.parse_args()
-
-
 def run_proofreader(generated: list[Path]) -> int:
-    """Invoke the shared proofread_docx.py against every generated report.
-    Exits non-zero if any fails. The proofread-report skill describes the
-    7 scored checks + 2 warning checks performed."""
     if not generated:
         return 0
     if not PROOFREADER.exists():
@@ -436,6 +474,18 @@ def run_proofreader(generated: list[Path]) -> int:
     return rc
 
 
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--month")
+    p.add_argument("--from", dest="from_month")
+    p.add_argument("--to",   dest="to_month")
+    p.add_argument("--only")
+    p.add_argument("--skip")
+    p.add_argument("--root", default=str(CLIENTS_ROOT))
+    return p.parse_args()
+
+
 def main() -> int:
     args = parse_args()
     root = Path(args.root)
@@ -443,12 +493,15 @@ def main() -> int:
     skip = {s.strip().lower() for s in (args.skip or "").split(",") if s.strip()}
 
     generated: list[Path] = []
-    for org_dir in sorted([d for d in root.iterdir() if d.is_dir() and not d.name.startswith("_")]):
-        if only and org_dir.name not in only:
+    for client_dir in sorted([d for d in root.iterdir() if d.is_dir() and not d.name.startswith("_")]):
+        meraki_dir = client_dir / "meraki"
+        if not meraki_dir.exists():
             continue
-        if org_dir.name in skip:
+        if only and client_dir.name not in only:
             continue
-        monthly_dir = org_dir / "monthly"
+        if client_dir.name in skip:
+            continue
+        monthly_dir = meraki_dir / "monthly"
         if not monthly_dir.exists():
             continue
         for f in sorted(monthly_dir.glob("*.json")):
@@ -460,12 +513,16 @@ def main() -> int:
             if args.to_month and month > args.to_month:
                 continue
             payload = json.loads(f.read_text(encoding="utf-8"))
-            org_label = (payload["configuration"].get("org") or org_dir.name).strip()
+            org_label = (payload["configuration"].get("org") or client_dir.name).strip()
             safe_label = "".join(c if c.isalnum() or c in " -_" else "_" for c in org_label)
-            out = org_dir / "reports" / f"{safe_label} - Meraki Monthly Activity - {month}.docx"
+            out = meraki_dir / "reports" / f"{safe_label} - Meraki Monthly Activity - {month}.docx"
             build_report(payload, out)
             generated.append(out)
-            print(f"  [{org_dir.name}] {month} -> {out.relative_to(root)}")
+            try:
+                rel = out.relative_to(root)
+            except ValueError:
+                rel = out
+            print(f"  [{client_dir.name}] {month} -> {rel}")
     print(f"\nGenerated {len(generated)} Word report(s)")
 
     rc = run_proofreader(generated)

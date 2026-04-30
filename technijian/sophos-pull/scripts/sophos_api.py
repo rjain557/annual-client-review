@@ -176,6 +176,42 @@ def partner_get(path: str, query: dict[str, str] | None = None) -> dict[str, Any
         return {"status": "ERR", "body": str(e)[:300]}
 
 
+def partner_post(path: str, body: dict[str, Any]) -> dict[str, Any]:
+    """Partner-scoped POST. Used for admin role assignments. Caller must
+    confirm the operation is approved — this is a write API."""
+    me = whoami()
+    headers = _bearer_headers({"X-Partner-ID": me["id"], "Content-Type": "application/json"})
+    url = f"{GLOBAL_HOST}{path}"
+    data = json.dumps(body).encode("utf-8")
+    req = urllib.request.Request(url, data=data, method="POST",
+                                 headers={**headers, "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            text = r.read().decode("utf-8")
+            return {"status": r.status, "body": json.loads(text) if text else {}}
+    except urllib.error.HTTPError as e:
+        return {"status": e.code, "body": e.read().decode("utf-8", errors="replace")[:500]}
+    except Exception as e:
+        return {"status": "ERR", "body": str(e)[:500]}
+
+
+def partner_delete(path: str) -> dict[str, Any]:
+    """Partner-scoped DELETE. Used to remove admin role assignments."""
+    me = whoami()
+    headers = _bearer_headers({"X-Partner-ID": me["id"]})
+    url = f"{GLOBAL_HOST}{path}"
+    req = urllib.request.Request(url, method="DELETE",
+                                 headers={**headers, "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            text = r.read().decode("utf-8")
+            return {"status": r.status, "body": json.loads(text) if text else {}}
+    except urllib.error.HTTPError as e:
+        return {"status": e.code, "body": e.read().decode("utf-8", errors="replace")[:500]}
+    except Exception as e:
+        return {"status": "ERR", "body": str(e)[:500]}
+
+
 if __name__ == "__main__":
     me = whoami()
     print("[whoami]", json.dumps(me, indent=2))

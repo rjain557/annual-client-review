@@ -3,7 +3,7 @@ Pull a full configuration snapshot for every accessible Meraki org/network.
 
 Output (overwritten on each run — this is a "current state" snapshot):
 
-  clients/_meraki/<org_slug>/
+  clients/<code>/meraki/
     org_meta.json
     networks.json
     devices.json
@@ -38,6 +38,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import meraki_api as m
+from _org_mapping import client_folder
 
 
 DEFAULT_OUTPUT_ROOT = Path(__file__).resolve().parents[2] / "clients"
@@ -114,7 +115,7 @@ def main() -> int:
             continue
         if slug in skip:
             continue
-        org_dir = output_root / "_meraki" / slug
+        org_dir = output_root / client_folder(slug) / "meraki"
         write_json(org_dir / "org_meta.json", org)
 
         try:
@@ -172,7 +173,7 @@ def main() -> int:
                                  "networks": len(networks),
                                  "devices": len(devices)})
 
-    log = output_root / "_meraki" / "configuration_pull_log.json"
+    log = output_root / "_meraki_logs" / "configuration_pull_log.json"
     log.parent.mkdir(parents=True, exist_ok=True)
     log.write_text(json.dumps({
         "snapshot_at": iso_utc(datetime.now(timezone.utc)),

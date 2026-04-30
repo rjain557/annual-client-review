@@ -46,9 +46,12 @@ and exits non-zero if any report fails. **Do not bypass with `--no-proofread`**
 ## Output
 
 ```
-clients/_meraki/<org_slug>/
+clients/<code>/meraki/
   monthly/<YYYY-MM>.json            # aggregated summary (input to docx)
   reports/<Org Name> - Meraki Monthly Activity - <YYYY-MM>.docx
+
+clients/_meraki_logs/
+  monthly_index.json                # cross-client roll-up of generated files
 ```
 
 The JSON summary is the source of truth for everything in the doc — if a

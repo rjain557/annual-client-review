@@ -39,9 +39,13 @@ Companion items still to be supplied once the SP is known:
 """
 from __future__ import annotations
 
-# Set this to the actual assignment value when discovered. Constants kept
-# here so the router can read them for the routing-plan report.
-INDIA_SUPPORT_POD = "TODO_INDIA_SUPPORT_POD_ID"
+# Resolved 2026-04-29 via stp_GetTechnijianUser_PodList:
+#   DirID=205  CHD : TS1  (Chandigarh Tech Support) — India tech support pod
+#   DirID=206  CHD : PR1  (Chandigarh Programming) — dev work, NOT this pipeline
+# Sophos firewall alerts are tech-support work (break-fix / connectivity),
+# so they go to CHD : TS1, not the programming pod.
+INDIA_SUPPORT_POD = 205
+INDIA_SUPPORT_POD_NAME = "CHD : TS1"
 
 # Default ticket priority for Sophos firewall alerts. Adjust as needed.
 DEFAULT_PRIORITY = "Normal"

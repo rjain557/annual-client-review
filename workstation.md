@@ -90,9 +90,24 @@ Expected output for the second command:
 Files land at `clients\aava\monthly\2026-03\` (5 files) and the run log at
 `technijian\monthly-pull\state\2026-03.json`.
 
-## 5. Claude Code skills (optional)
+## 5. Claude Code skills
 
-The skills are user-scoped; copy them to the same path on the new machine:
+**New convention (as of 2026-04-29):** repo-specific skills live in the repo
+itself at `<repo>/.claude/skills/<skill-name>/SKILL.md`. Claude Code
+auto-discovers them when opened in the workspace — no copy step required.
+Newly added skills (Meraki) ship inside the repo; they travel with the clone.
+
+Skills currently bundled in this repo:
+
+```
+.claude\skills\meraki-pull\SKILL.md            (raw data pull, all orgs)
+.claude\skills\meraki-monthly-report\SKILL.md  (monthly Word reports)
+.claude\skills\proofread-report\SKILL.md       (DOCX quality gate)
+```
+
+**Legacy convention** (still applies to older Technijian skills):
+some skills are still user-scoped on the original workstation. Copy these
+to the same path on the new machine if you intend to use them:
 
 ```
 %USERPROFILE%\.claude\skills\monthly-client-pull\SKILL.md
@@ -100,9 +115,10 @@ The skills are user-scoped; copy them to the same path on the new machine:
 %USERPROFILE%\.claude\skills\huntress-daily-pull\SKILL.md
 ```
 
-Once present, Claude Code recognizes `/monthly-client-pull`,
-`/huntress-daily-pull`, and natural-language triggers ("pull last month",
-"monthly client pull", "pull huntress", "huntress 24h", etc.).
+When migrating those, prefer moving them into the repo's
+`.claude\skills\` so they become portable. The Python scripts these
+skills wrap have always lived in the repo and run standalone — the
+`%USERPROFILE%` location only governs Claude Code skill discovery.
 
 ## 6. Schedule the monthly pull (recommended)
 
@@ -749,3 +765,179 @@ schtasks /run   /tn "Technijian-MonthlyScreenConnectPull"
 | Watcher shows 0% progress after 10 min | GUI status bar should show "Transcoding..."; if blank, manually click "Choose Capture Files to Transcode", navigate to `R:\`, Ctrl+A, Open |
 | 0-byte AVI on R:\ | Source file empty or in-progress — skipped automatically |
 | `teams_url` empty in audit CSV | Watcher hasn't completed yet; re-run `build_client_audit.py --all --no-refresh-db` after watcher finishes |
+
+---
+
+## 28. Cisco Meraki API credentials
+
+The daily Cisco Meraki pull (`scripts\meraki\pull_all.py`) reads
+credentials from either an env var or the OneDrive-synced markdown file.
+Pick one.
+
+### Option A — environment variable (recommended for headless runs)
+
+```cmd
+setx MERAKI_API_KEY "<40 hex chars>"
+```
+
+### Option B — OneDrive keyvault file
+
+Make sure OneDrive has finished syncing this file:
+
+```text
+%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\meraki.md
+```
+
+It must contain a line like:
+
+```markdown
+**API Key:** 53417a9ed1031c8221ac961eb88eca2ec3d5b529
+```
+
+`meraki_api.get_api_key()` falls back to this file when the env var is
+absent (regex grabs the first 40-hex token under `**API Key:**`).
+
+The key is generated in **Meraki Dashboard → My Profile → API access**.
+Auth uses **Bearer** (`Authorization: Bearer <key>`) — the legacy
+`X-Cisco-Meraki-API-Key` header is rejected by keys created in 2026+.
+
+The key gives admin access to every Meraki organization the owning user is
+administered on. The current personal key (`rjain@technijian.com`) covers
+**9 orgs**: `technijian_inc`, `technijian` (dormant), `vaf`, `aranda_tooling`,
+`aoc`, `bwh`, `gsc` (dormant), `orx`, `vg`. Two orgs return 403 because
+they have no active device licenses; the pipeline skips them silently.
+
+**Long-term recommendation:** generate a fresh key from a service-account
+user (`meraki-api@technijian.com`) and replace this one. Personal keys die
+with 2FA rotations or staff changes.
+
+## 29. Meraki pull smoke test
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+
+REM Auth + key vault probe — prints owner identity
+python -c "import sys; sys.path.insert(0, r'scripts\meraki'); import meraki_api as m; me = m.whoami(); print(me['name'], '-', me['email'])"
+
+REM Org list — should print 9 orgs with API status
+python -c "import sys; sys.path.insert(0, r'scripts\meraki'); import meraki_api as m; [print(o['id'], o['name']) for o in m.list_organizations()]"
+
+REM One org, last 24h — confirms write paths
+python scripts\meraki\pull_security_events.py --only vaf --days 1
+python scripts\meraki\pull_network_events.py --only technijian_inc --days 1
+python scripts\meraki\pull_configuration.py --only aoc
+```
+
+After the third command, expect output at:
+- `clients\<code>\meraki\security_events\YYYY-MM-DD.json`
+- `clients\<code>\meraki\network_events\<network_slug>\YYYY-MM-DD.json`
+- `clients\<code>\meraki\networks\<network_slug>\<endpoint>.json` (~30 files per network)
+
+Where `<code>` is the existing client folder name (`technijian`, `arnd`, `aoc`, `bwh`, `orx`, `vaf`, `vg`). Mapping from Meraki org slug to client code lives in `scripts\meraki\_org_mapping.py`.
+
+## 30. Schedule the daily Meraki pull (recommended)
+
+The Python scripts have no `.cmd` wrapper yet — register a Task Scheduler
+job that runs `python scripts\meraki\pull_all.py --skip technijian,gsc`
+**every day at 5:00 AM local**. 1 AM = Huntress, 2 AM = Umbrella, 3 AM =
+CrowdStrike, 4 AM = Teramind; 5 AM avoids contention with all four.
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-DailyMerakiPull" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\scripts\meraki\pull_all.py --skip technijian,gsc" ^
+  /sc DAILY ^
+  /st 05:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-DailyMerakiPull" /v /fo LIST
+schtasks /run   /tn "Technijian-DailyMerakiPull"
+```
+
+Same SYSTEM-vs-user caveat as the other pulls — task must run as the
+workstation user so the OneDrive keyvault file is readable.
+
+## 31. What the Meraki pull writes
+
+```text
+clients\<code>\meraki\
+  org_meta.json
+  networks.json
+  devices.json
+  config_snapshot_at.json                      coverage report
+  security_events\YYYY-MM-DD.json              IDS/IPS + AMP per day (org-wide)
+  network_events\<network_slug>\YYYY-MM-DD.json  firewall/VPN/DHCP events per day
+  networks\<network_slug>\<endpoint>.json      ~30 config endpoints (firewall L3/L7/inbound,
+                                               IDS/IPS settings, AMP, content filtering,
+                                               VLANs, S2S VPN, SSIDs, switch ACLs, etc.)
+  monthly\YYYY-MM.json                         aggregated summary (input to docx)
+  reports\<Org Name> - Meraki Monthly Activity - YYYY-MM.docx
+
+clients\_meraki_logs\
+  security_events_pull_log.json
+  network_events_pull_log.json
+  configuration_pull_log.json
+  monthly_index.json
+```
+
+`<code>` is the existing client folder name (e.g. `aoc`, `bwh`, `vaf`, `orx`, `vg`,
+`technijian`, `arnd`). The Meraki-org-slug → client-code mapping lives in
+`scripts\meraki\_org_mapping.py` — add an entry there when onboarding a new org.
+
+Daily event files are **idempotent on re-run** — same-day reruns overwrite
+that day's file. Configuration snapshots overwrite the whole snapshot tree.
+
+## 32. Backfill historical Meraki data
+
+```cmd
+REM Full year-to-date for all licensed orgs
+python scripts\meraki\pull_security_events.py --skip technijian,gsc --since 2026-01-01 --until 2026-04-29
+python scripts\meraki\pull_network_events.py  --skip technijian,gsc --since 2026-01-01 --until 2026-04-29
+
+REM One org, range
+python scripts\meraki\pull_security_events.py --only vaf --since 2026-03-01 --until 2026-03-31
+```
+
+The 2026-01 to 2026-04 backfill takes ~5 minutes for security events
+(org-wide endpoint, only ~1 call per org per day) and ~30-60 minutes
+for network events (per-network, paginated through the events endpoint
+which doesn't natively accept time bounds — see gotcha in `meraki-pull`
+SKILL.md).
+
+## 33. Generate monthly activity reports
+
+After daily files are present:
+
+```cmd
+REM Aggregate -> JSON summary
+python scripts\meraki\aggregate_monthly.py --month 2026-03
+
+REM Render Word reports (auto-runs proofread_docx.py at the end)
+python scripts\meraki\generate_monthly_docx.py --month 2026-03
+```
+
+Each report goes through the proofread gate
+(`technijian\shared\scripts\proofread_docx.py` — 7 scored checks + 2
+warnings). The generator exits non-zero if any report fails.
+
+`generate_monthly_docx.py` requires `pip install python-docx`; the pull
+scripts use stdlib only.
+
+## 34. Troubleshooting (Meraki pull)
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| `Meraki API key not found` | env var unset and keyfile placeholder still present | Paste the API key into `keys\meraki.md` under `**API Key:**` or `setx MERAKI_API_KEY`. |
+| `HTTP 401 No valid authentication method found` | Sent the legacy `X-Cisco-Meraki-API-Key` header | Switch to `Authorization: Bearer <key>`. The shipped client already does this; only relevant if you write custom scripts. |
+| `HTTP 403 Meraki API services are available for licensed Meraki devices only` | Org has no active device licenses | Add the org slug to `--skip`, or renew licensing in Dashboard → Organization → License info. The pipeline already skips `technijian` and `gsc` by default in scheduled runs. |
+| Network events return 1000 events per day always | Direct call to `/networks/{id}/events` with `t0`/`t1` (the endpoint silently ignores time params) | Use `meraki_api.get_network_events()` — it walks back via `endingBefore=pageStartAt` and filters client-side to the requested window. |
+| Some networks show "0 events" while others show thousands | Wrong `--product-type` for the network's hardware mix | VAF is wireless-only, AOC has a single appliance, etc. Re-run with `--product-type wireless` or `switch` for the right layer. |
+| Configuration endpoint returns 400 | "Feature not enabled / not licensed" on this network (e.g., VLANs disabled, IDS not licensed) | Recorded in `config_snapshot_at.json` coverage report. Normal — no action needed. |
+| Report fails proofread "Missing section: 'X'" | Section name in `EXPECTED_SECTIONS` doesn't match rendered text | Open the doc, find the actual heading, update the constant in `generate_monthly_docx.py`. |
+| Monthly report shows "0" for events but daily files exist | Day boundaries: monthly aggregation uses YYYY-MM-DD prefix; verify file names match | Check `clients\<code>\meraki\security_events\` filenames are `YYYY-MM-DD.json`, not Excel-style or anything else. |
+| Scheduled task ran but per-org folders are absent | Task ran as `SYSTEM` (no OneDrive sync for keyfile) | Run the task as the workstation user (`/ru "%USERNAME%"`), not SYSTEM. |

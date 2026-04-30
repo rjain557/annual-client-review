@@ -3,7 +3,7 @@ Pull Meraki IDS/IPS + AMP security events for all accessible orgs.
 
 Daily window by default. Output:
 
-  clients/_meraki/<org_slug>/security_events/<YYYY-MM-DD>.json
+  clients/<code>/meraki/security_events/<YYYY-MM-DD>.json
 
 Each daily file contains the raw events list returned from
 `GET /organizations/{orgId}/appliance/security/events`. Re-running on the
@@ -26,6 +26,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import meraki_api as m
+from _org_mapping import client_folder
 
 
 # Repo-relative: this file is at <repo>/scripts/meraki/pull_security_events.py
@@ -56,6 +57,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT),
                    help="Root output dir (defaults to repo's clients/)")
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--force", action="store_true",
+                   help="Re-fetch days even when an output file already exists.")
     return p.parse_args()
 
 
@@ -99,11 +102,14 @@ def main() -> int:
             continue
         if slug in skip:
             continue
-        org_dir = output_root / "_meraki" / slug / "security_events"
+        org_dir = output_root / client_folder(slug) / "meraki" / "security_events"
         org_dir.mkdir(parents=True, exist_ok=True)
         org_total = 0
         for day in days:
             t0, t1, label = day_bounds(day)
+            out = org_dir / f"{label}.json"
+            if out.exists() and not args.force:
+                continue
             try:
                 events = m.get_security_events_org(org["id"], t0=t0, t1=t1)
             except m.MerakiError as e:
@@ -111,7 +117,6 @@ def main() -> int:
                 summary.append({"org": org["name"], "slug": slug, "day": label,
                                 "error": f"HTTP {e.status}"})
                 continue
-            out = org_dir / f"{label}.json"
             payload = {
                 "org": {"id": org["id"], "name": org["name"]},
                 "window": {"t0": t0, "t1": t1},
@@ -121,12 +126,16 @@ def main() -> int:
             }
             out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
             org_total += len(events)
-            print(f"  [{slug}] {label}: {len(events)} events -> {out.relative_to(output_root)}")
+            try:
+                rel = out.relative_to(output_root)
+            except ValueError:
+                rel = out
+            print(f"  [{slug}] {label}: {len(events)} events -> {rel}")
             summary.append({"org": org["name"], "slug": slug, "day": label,
                             "count": len(events)})
         print(f"  [{slug}] TOTAL: {org_total} events across {len(days)} day(s)")
 
-    log = output_root / "_meraki" / "security_events_pull_log.json"
+    log = output_root / "_meraki_logs" / "security_events_pull_log.json"
     log.parent.mkdir(parents=True, exist_ok=True)
     log.write_text(json.dumps({
         "fetched_at": iso_utc(datetime.now(timezone.utc)),

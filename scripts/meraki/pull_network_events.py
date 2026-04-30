@@ -3,7 +3,7 @@ Pull Meraki appliance/firewall activity events (the "event log") per network.
 
 Daily window by default. Output:
 
-  clients/_meraki/<org_slug>/network_events/<network_slug>/<YYYY-MM-DD>.json
+  clients/<code>/meraki/network_events/<network_slug>/<YYYY-MM-DD>.json
 
 These are the firewall / VPN / DHCP / connectivity events you'd see in
 Dashboard → Network-wide → Monitor → Event log (filtered to productType=appliance
@@ -25,6 +25,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import meraki_api as m
+from _org_mapping import client_folder
 
 
 DEFAULT_OUTPUT_ROOT = Path(__file__).resolve().parents[2] / "clients"
@@ -50,6 +51,8 @@ def parse_args() -> argparse.Namespace:
                    help="Max pages per (network, day). Each page = up to 1000 events.")
     p.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT))
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--force", action="store_true",
+                   help="Re-fetch days even when an output file already exists.")
     return p.parse_args()
 
 
@@ -101,12 +104,16 @@ def main() -> int:
             if not m.network_has_product(net, args.product_type):
                 continue
             net_slug = m.slugify(net["name"])
-            net_dir = output_root / "_meraki" / slug / "network_events" / net_slug
+            net_dir = output_root / client_folder(slug) / "meraki" / "network_events" / net_slug
             net_dir.mkdir(parents=True, exist_ok=True)
             for day in days:
                 t0 = day.replace(hour=0, minute=0, second=0, microsecond=0)
                 t1 = t0 + timedelta(days=1) - timedelta(seconds=1)
                 label = t0.strftime("%Y-%m-%d")
+                out = net_dir / f"{label}.json"
+                if out.exists() and not args.force:
+                    # Idempotent skip: already fetched in a prior run.
+                    continue
                 try:
                     events = m.get_network_events(
                         net["id"], product_type=args.product_type,
@@ -128,13 +135,12 @@ def main() -> int:
                     "count": len(events),
                     "events": events,
                 }
-                out = net_dir / f"{label}.json"
                 out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
                 print(f"  [{slug}/{net_slug}] {label}: {len(events)} events")
                 summary.append({"org": org["name"], "network": net["name"],
                                 "day": label, "count": len(events)})
 
-    log = output_root / "_meraki" / "network_events_pull_log.json"
+    log = output_root / "_meraki_logs" / "network_events_pull_log.json"
     log.parent.mkdir(parents=True, exist_ok=True)
     log.write_text(json.dumps({
         "fetched_at": iso_utc(datetime.now(timezone.utc)),

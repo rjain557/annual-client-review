@@ -1,0 +1,1293 @@
+{
+  "generated_at": "2026-04-30T00:33:18Z",
+  "client_code": "technijian",
+  "month": "2026-03",
+  "configuration": {
+    "org": "Technijian Inc",
+    "snapshot_at": "2026-04-29T21:36:06Z",
+    "network_count": 5,
+    "device_count": 12,
+    "device_models": {
+      "MR66": 1,
+      "MS42": 2,
+      "MS42P": 1,
+      "MX100": 2,
+      "MR42": 3,
+      "MX105": 3
+    },
+    "device_product_types": {
+      "wireless": 4,
+      "switch": 3,
+      "appliance": 5
+    },
+    "networks": [
+      {
+        "slug": "01_technijian_dc",
+        "name": "01-Technijian DC",
+        "productTypes": [
+          "appliance"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 7,
+        "firewall_l7_rule_count": 1,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 86,
+        "intrusion": {
+          "mode": "detection",
+          "rulesetGenerated": "balanced",
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "enabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 1,
+          "allowed_url_patterns_count": 2
+        },
+        "vlan_count": 7,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "hub",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "02_technijian_hq",
+        "name": "02-Technijian HQ",
+        "productTypes": [
+          "sensor",
+          "switch",
+          "wireless"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 0,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 0,
+        "ssid_count": 3,
+        "s2s_vpn_mode": null,
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "03_technijian_lv",
+        "name": "03-Technijian LV",
+        "productTypes": [
+          "appliance",
+          "switch"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 1,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "intrusion": {
+          "mode": "disabled",
+          "rulesetGenerated": null,
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "disabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 10,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "hub",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "04_technijian_mdm",
+        "name": "04-Technijian MDM",
+        "productTypes": [
+          "systemsManager"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 0,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 0,
+        "ssid_count": 0,
+        "s2s_vpn_mode": null,
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "05_technijian_lab",
+        "name": "05-Technijian LAB",
+        "productTypes": [
+          "appliance"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 1,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 1,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 3,
+        "intrusion": {
+          "mode": "disabled",
+          "rulesetGenerated": null,
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "disabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 1,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "none",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      }
+    ]
+  },
+  "security_events": {
+    "total": 11264,
+    "days_with_events": 6,
+    "daily_counts": [
+      {
+        "date": "2026-03-01",
+        "count": 0
+      },
+      {
+        "date": "2026-03-02",
+        "count": 0
+      },
+      {
+        "date": "2026-03-03",
+        "count": 0
+      },
+      {
+        "date": "2026-03-04",
+        "count": 0
+      },
+      {
+        "date": "2026-03-05",
+        "count": 0
+      },
+      {
+        "date": "2026-03-06",
+        "count": 0
+      },
+      {
+        "date": "2026-03-07",
+        "count": 0
+      },
+      {
+        "date": "2026-03-08",
+        "count": 0
+      },
+      {
+        "date": "2026-03-09",
+        "count": 0
+      },
+      {
+        "date": "2026-03-10",
+        "count": 0
+      },
+      {
+        "date": "2026-03-11",
+        "count": 0
+      },
+      {
+        "date": "2026-03-12",
+        "count": 0
+      },
+      {
+        "date": "2026-03-13",
+        "count": 0
+      },
+      {
+        "date": "2026-03-14",
+        "count": 0
+      },
+      {
+        "date": "2026-03-15",
+        "count": 0
+      },
+      {
+        "date": "2026-03-16",
+        "count": 0
+      },
+      {
+        "date": "2026-03-17",
+        "count": 0
+      },
+      {
+        "date": "2026-03-18",
+        "count": 0
+      },
+      {
+        "date": "2026-03-19",
+        "count": 0
+      },
+      {
+        "date": "2026-03-20",
+        "count": 0
+      },
+      {
+        "date": "2026-03-21",
+        "count": 0
+      },
+      {
+        "date": "2026-03-22",
+        "count": 0
+      },
+      {
+        "date": "2026-03-23",
+        "count": 0
+      },
+      {
+        "date": "2026-03-24",
+        "count": 0
+      },
+      {
+        "date": "2026-03-25",
+        "count": 0
+      },
+      {
+        "date": "2026-03-26",
+        "count": 1859
+      },
+      {
+        "date": "2026-03-27",
+        "count": 1877
+      },
+      {
+        "date": "2026-03-28",
+        "count": 1986
+      },
+      {
+        "date": "2026-03-29",
+        "count": 2310
+      },
+      {
+        "date": "2026-03-30",
+        "count": 1591
+      },
+      {
+        "date": "2026-03-31",
+        "count": 1641
+      }
+    ],
+    "by_signature_top": [
+      [
+        "1:45749:2",
+        8889
+      ],
+      [
+        "1:300053:3",
+        733
+      ],
+      [
+        "1:63598:1",
+        695
+      ],
+      [
+        "1:65554:1",
+        476
+      ],
+      [
+        "1:65183:1",
+        98
+      ],
+      [
+        "1:58853:1",
+        84
+      ],
+      [
+        "1:300786:1",
+        64
+      ],
+      [
+        "1:25977:4",
+        47
+      ],
+      [
+        "1:51390:2",
+        43
+      ],
+      [
+        "1:37732:6",
+        33
+      ],
+      [
+        "3:64719:1",
+        32
+      ],
+      [
+        "1:58992:1",
+        22
+      ],
+      [
+        "1:25975:3",
+        20
+      ],
+      [
+        "1:44687:3",
+        15
+      ],
+      [
+        "1:300677:1",
+        2
+      ]
+    ],
+    "by_priority": {
+      "1": 11188,
+      "2": 43,
+      "3": 33
+    },
+    "by_blocked": {
+      "alerted": 11264
+    },
+    "top_sources": [
+      [
+        "149.112.84.49:12345",
+        33
+      ],
+      [
+        "62.84.179.244:55314",
+        32
+      ],
+      [
+        "147.93.146.163:38332",
+        32
+      ],
+      [
+        "185.213.27.243:52848",
+        32
+      ],
+      [
+        "75.119.143.158:55738",
+        32
+      ],
+      [
+        "61.245.11.87:43780",
+        32
+      ],
+      [
+        "103.40.61.98:54036",
+        32
+      ],
+      [
+        "103.40.61.98:46984",
+        32
+      ],
+      [
+        "87.106.91.226:60836",
+        32
+      ],
+      [
+        "13.83.90.155:40734",
+        32
+      ],
+      [
+        "77.237.237.57:35806",
+        32
+      ],
+      [
+        "84.247.190.4:51286",
+        32
+      ],
+      [
+        "185.91.69.217:41726",
+        32
+      ],
+      [
+        "199.195.248.31:50610",
+        32
+      ],
+      [
+        "45.88.223.138:59572",
+        32
+      ]
+    ],
+    "top_destinations": [
+      [
+        "10.100.253.51:80",
+        904
+      ],
+      [
+        "10.100.254.71:80",
+        780
+      ],
+      [
+        "10.100.251.99:80",
+        616
+      ],
+      [
+        "10.100.103.53:80",
+        561
+      ],
+      [
+        "10.100.106.65:80",
+        524
+      ],
+      [
+        "10.100.106.75:80",
+        519
+      ],
+      [
+        "10.100.250.125:80",
+        490
+      ],
+      [
+        "10.100.240.65:80",
+        486
+      ],
+      [
+        "10.100.240.161:80",
+        439
+      ],
+      [
+        "10.100.253.53:80",
+        436
+      ],
+      [
+        "10.100.254.96:80",
+        404
+      ],
+      [
+        "10.100.254.229:80",
+        400
+      ],
+      [
+        "10.100.240.156:80",
+        383
+      ],
+      [
+        "10.100.254.107:80",
+        370
+      ],
+      [
+        "10.100.251.41:80",
+        347
+      ]
+    ],
+    "top_internal_clients": [
+      [
+        "c2:ef:0a:64:fd:33",
+        905
+      ],
+      [
+        "c2:ef:0a:64:fe:47",
+        780
+      ],
+      [
+        "c2:ef:0a:64:fb:63",
+        617
+      ],
+      [
+        "c2:ef:0a:64:67:35",
+        562
+      ],
+      [
+        "c2:ef:0a:64:6a:41",
+        528
+      ],
+      [
+        "c2:ef:0a:64:6a:4b",
+        519
+      ],
+      [
+        "c2:ef:0a:64:fa:7d",
+        492
+      ],
+      [
+        "c2:ef:0a:64:f0:41",
+        490
+      ],
+      [
+        "c2:ef:0a:64:f0:a1",
+        439
+      ],
+      [
+        "c2:ef:0a:64:fd:35",
+        438
+      ],
+      [
+        "c2:ef:0a:64:fe:60",
+        404
+      ],
+      [
+        "c2:ef:0a:64:fe:e5",
+        400
+      ],
+      [
+        "c2:ef:0a:64:f0:9c",
+        384
+      ],
+      [
+        "c2:ef:0a:64:fe:6b",
+        370
+      ],
+      [
+        "c2:ef:0a:64:fb:29",
+        348
+      ]
+    ],
+    "sample_events": [
+      {
+        "ts": "2026-03-26T00:06:29.552376Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "",
+        "srcIp": "176.96.136.202:44823",
+        "destIp": "10.100.254.80:9034",
+        "protocol": "udp/ip",
+        "priority": "1",
+        "classification": "9",
+        "blocked": false,
+        "message": "SERVER-OTHER RealTek UDPServer command injection attempt",
+        "signature": "1:58853:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/58853"
+      },
+      {
+        "ts": "2026-03-26T00:08:37.880034Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:fe:6b",
+        "srcIp": "65.49.1.108:62122",
+        "destIp": "10.100.254.107:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "21",
+        "blocked": false,
+        "message": "MALWARE-BACKDOOR Aspx.Webshell.Agent inbound request for known webshell path attempt",
+        "signature": "1:65183:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/65183"
+      },
+      {
+        "ts": "2026-03-26T00:08:42.960932Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:6a:42",
+        "srcIp": "64.62.197.122:2136",
+        "destIp": "10.100.106.66:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "21",
+        "blocked": false,
+        "message": "MALWARE-BACKDOOR Aspx.Webshell.Agent inbound request for known webshell path attempt",
+        "signature": "1:65183:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/65183"
+      },
+      {
+        "ts": "2026-03-26T00:08:50.088749Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:fe:e5",
+        "srcIp": "64.62.197.212:41302",
+        "destIp": "10.100.254.229:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "21",
+        "blocked": false,
+        "message": "MALWARE-BACKDOOR Aspx.Webshell.Agent inbound request for known webshell path attempt",
+        "signature": "1:65183:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/65183"
+      },
+      {
+        "ts": "2026-03-26T00:09:37.810340Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55306",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt",
+        "signature": "1:300053:3",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/300053"
+      },
+      {
+        "ts": "2026-03-26T00:09:38.193351Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55312",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt",
+        "signature": "1:300053:3",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/300053"
+      },
+      {
+        "ts": "2026-03-26T00:09:38.613322Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "9",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHP PHP-CGI command execution attempt",
+        "signature": "1:63598:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/63598"
+      },
+      {
+        "ts": "2026-03-26T00:09:39.012845Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "9",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHP PHP-CGI command execution attempt",
+        "signature": "1:63598:1",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/63598"
+      },
+      {
+        "ts": "2026-03-26T00:09:39.421930Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:39.820410Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:40.679977Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:41.194585Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:42.122240Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:42.836500Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:43.327507Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:43.702334Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:43.898539Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:44.120521Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:44.300668Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:44.497812Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:44.706695Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:44.892117Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:45.092020Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:45.300753Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      },
+      {
+        "ts": "2026-03-26T00:09:45.510644Z",
+        "eventType": "IDS Alert",
+        "deviceMac": "6c:7f:0c:0d:fe:77",
+        "clientMac": "c2:ef:0a:64:f0:41",
+        "srcIp": "62.84.179.244:55314",
+        "destIp": "10.100.240.65:80",
+        "protocol": "tcp/ip",
+        "priority": "1",
+        "classification": "28",
+        "blocked": false,
+        "message": "SERVER-WEBAPP PHPUnit PHP remote code execution attempt",
+        "signature": "1:45749:2",
+        "sigSource": "",
+        "ruleId": "meraki:intrusion/snort/GID/1/SID/45749"
+      }
+    ]
+  },
+  "network_events": {
+    "total": 3962,
+    "networks_with_events": 1,
+    "by_network": {
+      "05_technijian_lab": {
+        "name": "05-Technijian LAB",
+        "total": 3962,
+        "by_type_top": [
+          [
+            "martian_vlan",
+            2078
+          ],
+          [
+            "ip_conflict",
+            1552
+          ],
+          [
+            "route_connection_change",
+            106
+          ],
+          [
+            "carrier_event",
+            92
+          ],
+          [
+            "dhcp_lease",
+            80
+          ],
+          [
+            "events_dropped2",
+            30
+          ],
+          [
+            "dhcp_release",
+            19
+          ],
+          [
+            "dhcp_problem",
+            5
+          ]
+        ],
+        "daily_counts": [
+          {
+            "date": "2026-03-01",
+            "count": 349
+          },
+          {
+            "date": "2026-03-02",
+            "count": 348
+          },
+          {
+            "date": "2026-03-03",
+            "count": 265
+          },
+          {
+            "date": "2026-03-04",
+            "count": 220
+          },
+          {
+            "date": "2026-03-05",
+            "count": 200
+          },
+          {
+            "date": "2026-03-06",
+            "count": 213
+          },
+          {
+            "date": "2026-03-07",
+            "count": 194
+          },
+          {
+            "date": "2026-03-08",
+            "count": 352
+          },
+          {
+            "date": "2026-03-09",
+            "count": 334
+          },
+          {
+            "date": "2026-03-10",
+            "count": 288
+          },
+          {
+            "date": "2026-03-11",
+            "count": 248
+          },
+          {
+            "date": "2026-03-12",
+            "count": 320
+          },
+          {
+            "date": "2026-03-13",
+            "count": 184
+          },
+          {
+            "date": "2026-03-14",
+            "count": 0
+          },
+          {
+            "date": "2026-03-15",
+            "count": 0
+          },
+          {
+            "date": "2026-03-16",
+            "count": 0
+          },
+          {
+            "date": "2026-03-17",
+            "count": 19
+          },
+          {
+            "date": "2026-03-18",
+            "count": 29
+          },
+          {
+            "date": "2026-03-19",
+            "count": 112
+          },
+          {
+            "date": "2026-03-20",
+            "count": 108
+          },
+          {
+            "date": "2026-03-21",
+            "count": 30
+          },
+          {
+            "date": "2026-03-22",
+            "count": 0
+          },
+          {
+            "date": "2026-03-23",
+            "count": 0
+          },
+          {
+            "date": "2026-03-24",
+            "count": 12
+          },
+          {
+            "date": "2026-03-25",
+            "count": 136
+          },
+          {
+            "date": "2026-03-26",
+            "count": 0
+          },
+          {
+            "date": "2026-03-27",
+            "count": 0
+          },
+          {
+            "date": "2026-03-28",
+            "count": 0
+          },
+          {
+            "date": "2026-03-29",
+            "count": 0
+          },
+          {
+            "date": "2026-03-30",
+            "count": 0
+          },
+          {
+            "date": "2026-03-31",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "by_type_top": [
+      [
+        "martian_vlan",
+        2078
+      ],
+      [
+        "ip_conflict",
+        1552
+      ],
+      [
+        "route_connection_change",
+        106
+      ],
+      [
+        "carrier_event",
+        92
+      ],
+      [
+        "dhcp_lease",
+        80
+      ],
+      [
+        "events_dropped2",
+        30
+      ],
+      [
+        "dhcp_release",
+        19
+      ],
+      [
+        "dhcp_problem",
+        5
+      ]
+    ],
+    "by_category": {
+      "ip_conflicts": 3630,
+      "dhcp": 104,
+      "route_tracking": 106,
+      "node_state": 92,
+      "dropped": 30
+    },
+    "daily_counts": [
+      {
+        "date": "2026-03-01",
+        "count": 349
+      },
+      {
+        "date": "2026-03-02",
+        "count": 348
+      },
+      {
+        "date": "2026-03-03",
+        "count": 265
+      },
+      {
+        "date": "2026-03-04",
+        "count": 220
+      },
+      {
+        "date": "2026-03-05",
+        "count": 200
+      },
+      {
+        "date": "2026-03-06",
+        "count": 213
+      },
+      {
+        "date": "2026-03-07",
+        "count": 194
+      },
+      {
+        "date": "2026-03-08",
+        "count": 352
+      },
+      {
+        "date": "2026-03-09",
+        "count": 334
+      },
+      {
+        "date": "2026-03-10",
+        "count": 288
+      },
+      {
+        "date": "2026-03-11",
+        "count": 248
+      },
+      {
+        "date": "2026-03-12",
+        "count": 320
+      },
+      {
+        "date": "2026-03-13",
+        "count": 184
+      },
+      {
+        "date": "2026-03-14",
+        "count": 0
+      },
+      {
+        "date": "2026-03-15",
+        "count": 0
+      },
+      {
+        "date": "2026-03-16",
+        "count": 0
+      },
+      {
+        "date": "2026-03-17",
+        "count": 19
+      },
+      {
+        "date": "2026-03-18",
+        "count": 29
+      },
+      {
+        "date": "2026-03-19",
+        "count": 112
+      },
+      {
+        "date": "2026-03-20",
+        "count": 108
+      },
+      {
+        "date": "2026-03-21",
+        "count": 30
+      },
+      {
+        "date": "2026-03-22",
+        "count": 0
+      },
+      {
+        "date": "2026-03-23",
+        "count": 0
+      },
+      {
+        "date": "2026-03-24",
+        "count": 12
+      },
+      {
+        "date": "2026-03-25",
+        "count": 136
+      },
+      {
+        "date": "2026-03-26",
+        "count": 0
+      },
+      {
+        "date": "2026-03-27",
+        "count": 0
+      },
+      {
+        "date": "2026-03-28",
+        "count": 0
+      },
+      {
+        "date": "2026-03-29",
+        "count": 0
+      },
+      {
+        "date": "2026-03-30",
+        "count": 0
+      },
+      {
+        "date": "2026-03-31",
+        "count": 1
+      }
+    ]
+  }
+}

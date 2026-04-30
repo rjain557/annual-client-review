@@ -55,68 +55,53 @@ python pull_configuration.py              # full config snapshot, all orgs
 
 ## Output structure
 
-All output lands in `clients/_meraki/<org-slug>/` so it sits alongside the
-client-portal pull data without colliding with the per-client `clients/<code>/`
-folders (Meraki org names don't always match client portal LocationCodes).
+Output uses the standard per-client layout: `clients/<code>/meraki/...`. The
+Meraki-org-slug → CP-LocationCode mapping is in `scripts/meraki/_org_mapping.py`.
+Cross-org logs (run summaries) land in `clients/_meraki_logs/`.
 
 ```
-clients/_meraki/
+clients/<code>/meraki/
+  org_meta.json
+  networks.json
+  devices.json
+  config_snapshot_at.json
+  security_events/
+    2026-04-29.json                # daily IDS/IPS + AMP file
+  network_events/
+    <network-slug>/
+      2026-04-29.json              # firewall/VPN/DHCP activity log
+  networks/
+    <network-slug>/
+      meta.json
+      firewall_l3.json firewall_l7.json firewall_inbound.json
+      firewall_cellular.json firewall_port_forwarding.json
+      firewall_1to1_nat.json firewall_1tomany_nat.json
+      security_intrusion.json      # IDS/IPS mode + ruleset
+      security_malware.json        # AMP config
+      content_filtering.json
+      traffic_shaping.json traffic_shaping_rules.json traffic_shaping_uplink_bw.json
+      vlans.json vpn_s2s.json static_routes.json
+      appliance_ports.json appliance_settings.json
+      wireless_ssids.json wireless_settings.json wireless_rf_profiles.json   # MR
+      switch_access_policies.json switch_qos_rules.json
+      switch_port_schedules.json switch_settings.json                         # MS
+      syslog_servers.json snmp.json alerts_settings.json
+      group_policies.json webhooks_http_servers.json
+  monthly/<YYYY-MM>.json            # aggregated summary (input to docx)
+  reports/<Org Name> - Meraki Monthly Activity - <YYYY-MM>.docx
+
+clients/_meraki_logs/
   security_events_pull_log.json
   network_events_pull_log.json
   configuration_pull_log.json
-  technijian_inc/
-    org_meta.json
-    networks.json
-    devices.json
-    config_snapshot_at.json
-    security_events/
-      2026-04-29.json                # daily IDS/IPS + AMP file
-    network_events/
-      <network-slug>/
-        2026-04-29.json              # firewall/VPN/DHCP activity log
-    networks/
-      <network-slug>/
-        meta.json
-        firewall_l3.json
-        firewall_l7.json
-        firewall_inbound.json
-        firewall_cellular.json
-        firewall_port_forwarding.json
-        firewall_1to1_nat.json
-        firewall_1tomany_nat.json
-        security_intrusion.json      # IDS/IPS mode + ruleset
-        security_malware.json        # AMP config
-        content_filtering.json
-        traffic_shaping.json
-        traffic_shaping_rules.json
-        traffic_shaping_uplink_bw.json
-        vlans.json
-        vpn_s2s.json
-        static_routes.json
-        appliance_ports.json
-        appliance_settings.json
-        wireless_ssids.json          # MR networks
-        wireless_settings.json
-        wireless_rf_profiles.json
-        switch_access_policies.json  # MS networks
-        switch_qos_rules.json
-        switch_port_schedules.json
-        switch_settings.json
-        syslog_servers.json
-        snmp.json
-        alerts_settings.json
-        group_policies.json
-        webhooks_http_servers.json
-  vaf/
-    ...
-  aoc/
-    ...
-  bwh/
-    ...
+  monthly_index.json
 ```
 
-Event files are append-on-day-boundary: re-running on the same day overwrites
-that day's file (idempotent). Configuration snapshots overwrite each run.
+CP-code mapping: `technijian_inc → technijian`, `aranda_tooling → arnd`,
+`aoc/bwh/orx/vaf/vg → same`. Event files are idempotent on day boundaries
+(re-running on the same day overwrites that day's file). The puller skips
+already-fetched days unless `--force` is passed. Configuration snapshots
+overwrite each run.
 
 ## Org slugs (current)
 

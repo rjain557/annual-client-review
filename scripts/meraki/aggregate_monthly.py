@@ -1,20 +1,20 @@
 """
 Aggregate daily Meraki pull files into per-org per-month summary JSON.
 
-Reads:
-  clients/_meraki/<org_slug>/security_events/<YYYY-MM-DD>.json
-  clients/_meraki/<org_slug>/network_events/<network_slug>/<YYYY-MM-DD>.json
-  clients/_meraki/<org_slug>/{org_meta,networks,devices}.json
-  clients/_meraki/<org_slug>/networks/<network_slug>/*.json
+Reads (from clients/<code>/meraki/):
+  security_events/<YYYY-MM-DD>.json
+  network_events/<network_slug>/<YYYY-MM-DD>.json
+  org_meta.json, networks.json, devices.json
+  networks/<network_slug>/*.json
 
 Writes:
-  clients/_meraki/<org_slug>/monthly/<YYYY-MM>.json     (structured summary)
-  clients/_meraki/_monthly_index.json                    (cross-org index)
+  clients/<code>/meraki/monthly/<YYYY-MM>.json     (structured summary)
+  clients/_meraki_logs/monthly_index.json          (cross-client index)
 
 Usage:
-  python aggregate_monthly.py                              # all orgs, all months found
-  python aggregate_monthly.py --month 2026-03              # single month, all orgs
-  python aggregate_monthly.py --only vaf,bwh               # subset of orgs
+  python aggregate_monthly.py                              # all clients, all months
+  python aggregate_monthly.py --month 2026-03              # one month, all clients
+  python aggregate_monthly.py --only vaf,bwh               # subset
   python aggregate_monthly.py --from 2026-01 --to 2026-03  # range
 """
 
@@ -23,12 +23,12 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-DEFAULT_ROOT = Path(__file__).resolve().parents[2] / "clients" / "_meraki"
+CLIENTS_ROOT = Path(__file__).resolve().parents[2] / "clients"
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,29 +37,37 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--month", help="Single month YYYY-MM")
     p.add_argument("--from", dest="from_month", help="Start month YYYY-MM (inclusive)")
     p.add_argument("--to", dest="to_month", help="End month YYYY-MM (inclusive)")
-    p.add_argument("--only", help="Comma-separated org slugs")
-    p.add_argument("--skip", help="Comma-separated org slugs to skip")
-    p.add_argument("--root", default=str(DEFAULT_ROOT), help="Output root")
+    p.add_argument("--only", help="Comma-separated client codes (lowercase)")
+    p.add_argument("--skip", help="Comma-separated client codes to skip")
+    p.add_argument("--root", default=str(CLIENTS_ROOT), help="clients/ root")
     return p.parse_args()
 
 
 def month_of(date_str: str) -> str:
-    return date_str[:7]  # YYYY-MM
+    return date_str[:7]
 
 
-def discover_org_dirs(root: Path) -> list[Path]:
-    if not root.exists():
-        return []
-    return sorted([d for d in root.iterdir() if d.is_dir() and not d.name.startswith("_")])
+def discover_meraki_clients(clients_root: Path) -> list[Path]:
+    """Find every clients/<code>/meraki/ directory."""
+    out: list[Path] = []
+    if not clients_root.exists():
+        return out
+    for client_dir in sorted(clients_root.iterdir()):
+        if not client_dir.is_dir() or client_dir.name.startswith("_"):
+            continue
+        meraki_dir = client_dir / "meraki"
+        if meraki_dir.exists() and meraki_dir.is_dir():
+            out.append(meraki_dir)
+    return out
 
 
-def discover_months_for_org(org_dir: Path) -> set[str]:
+def discover_months(meraki_dir: Path) -> set[str]:
     months: set[str] = set()
-    sec_dir = org_dir / "security_events"
+    sec_dir = meraki_dir / "security_events"
     if sec_dir.exists():
         for f in sec_dir.glob("*.json"):
             months.add(month_of(f.stem))
-    net_dir = org_dir / "network_events"
+    net_dir = meraki_dir / "network_events"
     if net_dir.exists():
         for n in net_dir.iterdir():
             if n.is_dir():
@@ -92,19 +100,22 @@ def filter_months(all_months: Iterable[str], target: str | None,
     return months
 
 
-def aggregate_security(org_dir: Path, month: str) -> dict:
-    sec_dir = org_dir / "security_events"
+def aggregate_security(meraki_dir: Path, month: str) -> dict:
+    sec_dir = meraki_dir / "security_events"
+    empty = {"total": 0, "days_with_events": 0, "daily_counts": [],
+             "by_signature_top": [], "by_priority": {}, "by_blocked": {},
+             "top_sources": [], "top_destinations": [],
+             "top_internal_clients": [], "sample_events": []}
     if not sec_dir.exists():
-        return _empty_security()
+        return empty
     files = sorted([f for f in sec_dir.glob(f"{month}-*.json")])
     if not files:
-        return _empty_security()
+        return empty
 
     daily_counts: list[dict] = []
     by_signature: Counter = Counter()
     by_priority: Counter = Counter()
     by_blocked: Counter = Counter()
-    by_disposition: Counter = Counter()
     top_src: Counter = Counter()
     top_dst: Counter = Counter()
     top_clients: Counter = Counter()
@@ -123,9 +134,6 @@ def aggregate_security(org_dir: Path, month: str) -> dict:
             by_priority[str(pri)] += 1
             blocked = ev.get("blocked")
             by_blocked["blocked" if blocked else "alerted"] += 1
-            disp = ev.get("disposition") or ev.get("dstName") or ""
-            if disp:
-                by_disposition[disp] += 1
             src = ev.get("srcIp") or ev.get("src") or ""
             dst = ev.get("destIp") or ev.get("dest") or ev.get("dst") or ""
             cli = ev.get("clientName") or ev.get("clientMac") or ""
@@ -145,7 +153,6 @@ def aggregate_security(org_dir: Path, month: str) -> dict:
         "by_signature_top": by_signature.most_common(15),
         "by_priority": dict(by_priority),
         "by_blocked": dict(by_blocked),
-        "by_disposition_top": by_disposition.most_common(10),
         "top_sources": top_src.most_common(15),
         "top_destinations": top_dst.most_common(15),
         "top_internal_clients": top_clients.most_common(15),
@@ -153,17 +160,12 @@ def aggregate_security(org_dir: Path, month: str) -> dict:
     }
 
 
-def _empty_security() -> dict:
-    return {"total": 0, "days_with_events": 0, "daily_counts": [],
-            "by_signature_top": [], "by_priority": {}, "by_blocked": {},
-            "by_disposition_top": [], "top_sources": [], "top_destinations": [],
-            "top_internal_clients": [], "sample_events": []}
-
-
-def aggregate_network(org_dir: Path, month: str) -> dict:
-    net_dir = org_dir / "network_events"
+def aggregate_network(meraki_dir: Path, month: str) -> dict:
+    net_dir = meraki_dir / "network_events"
+    empty = {"total": 0, "networks_with_events": 0, "by_network": {},
+             "by_type_top": [], "by_category": {}, "daily_counts": []}
     if not net_dir.exists():
-        return _empty_network()
+        return empty
 
     by_network: dict[str, dict] = {}
     by_type: Counter = Counter()
@@ -215,19 +217,11 @@ def aggregate_network(org_dir: Path, month: str) -> dict:
     }
 
 
-def _empty_network() -> dict:
-    return {"total": 0, "networks_with_events": 0, "by_network": {},
-            "by_type_top": [], "by_category": {}, "daily_counts": []}
-
-
-def aggregate_configuration(org_dir: Path) -> dict:
-    """Snapshot summary from the latest config pull (point-in-time, not historical).
-    Counts firewall rules, IDS mode, AMP mode, content filtering categories,
-    VLANs, SSIDs, etc. across all networks."""
-    org_meta = load_json(org_dir / "org_meta.json") or {}
-    networks = load_json(org_dir / "networks.json") or []
-    devices = load_json(org_dir / "devices.json") or []
-    snap = load_json(org_dir / "config_snapshot_at.json") or {}
+def aggregate_configuration(meraki_dir: Path) -> dict:
+    org_meta = load_json(meraki_dir / "org_meta.json") or {}
+    networks = load_json(meraki_dir / "networks.json") or []
+    devices = load_json(meraki_dir / "devices.json") or []
+    snap = load_json(meraki_dir / "config_snapshot_at.json") or {}
 
     summary = {
         "org": org_meta.get("name"),
@@ -239,7 +233,7 @@ def aggregate_configuration(org_dir: Path) -> dict:
         "networks": [],
     }
 
-    nets_dir = org_dir / "networks"
+    nets_dir = meraki_dir / "networks"
     if nets_dir.exists():
         for n in sorted(nets_dir.iterdir()):
             if not n.is_dir():
@@ -251,16 +245,15 @@ def aggregate_configuration(org_dir: Path) -> dict:
                 "productTypes": net_meta.get("productTypes"),
                 "timeZone": net_meta.get("timeZone"),
             }
-            l3 = load_json(n / "firewall_l3.json") or {}
-            net_summary["firewall_l3_rule_count"] = len(l3.get("rules", []))
-            l7 = load_json(n / "firewall_l7.json") or {}
-            net_summary["firewall_l7_rule_count"] = len(l7.get("rules", []))
-            inb = load_json(n / "firewall_inbound.json") or {}
-            net_summary["firewall_inbound_rule_count"] = len(inb.get("rules", []))
-            pf = load_json(n / "firewall_port_forwarding.json") or {}
-            net_summary["port_forward_count"] = len(pf.get("rules", []))
-            nat1 = load_json(n / "firewall_1to1_nat.json") or {}
-            net_summary["one_to_one_nat_count"] = len(nat1.get("rules", []))
+            for fname, key in [
+                ("firewall_l3.json", "firewall_l3_rule_count"),
+                ("firewall_l7.json", "firewall_l7_rule_count"),
+                ("firewall_inbound.json", "firewall_inbound_rule_count"),
+                ("firewall_port_forwarding.json", "port_forward_count"),
+                ("firewall_1to1_nat.json", "one_to_one_nat_count"),
+            ]:
+                d = load_json(n / fname) or {}
+                net_summary[key] = len(d.get("rules", []))
             ids = load_json(n / "security_intrusion.json")
             if ids:
                 net_summary["intrusion"] = {
@@ -298,28 +291,29 @@ def main() -> int:
     only = {s.strip().lower() for s in (args.only or "").split(",") if s.strip()}
     skip = {s.strip().lower() for s in (args.skip or "").split(",") if s.strip()}
 
-    orgs = [d for d in discover_org_dirs(root)
-            if (not only or d.name in only) and d.name not in skip]
-    print(f"Aggregating {len(orgs)} org(s) from {root}")
+    meraki_dirs = [d for d in discover_meraki_clients(root)
+                   if (not only or d.parent.name in only) and d.parent.name not in skip]
+    print(f"Aggregating {len(meraki_dirs)} client(s) from {root}")
 
     index: list[dict] = []
     total_files = 0
-    for org_dir in orgs:
-        all_months = discover_months_for_org(org_dir)
+    for meraki_dir in meraki_dirs:
+        client_code = meraki_dir.parent.name
+        all_months = discover_months(meraki_dir)
         months = filter_months(all_months, args.month, args.from_month, args.to_month)
         if not months:
-            print(f"  [{org_dir.name}] no months found")
+            print(f"  [{client_code}] no months found")
             continue
-        config_summary = aggregate_configuration(org_dir)
+        config_summary = aggregate_configuration(meraki_dir)
 
-        out_dir = org_dir / "monthly"
+        out_dir = meraki_dir / "monthly"
         out_dir.mkdir(parents=True, exist_ok=True)
         for m in months:
-            sec = aggregate_security(org_dir, m)
-            net = aggregate_network(org_dir, m)
+            sec = aggregate_security(meraki_dir, m)
+            net = aggregate_network(meraki_dir, m)
             payload = {
                 "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "org_slug": org_dir.name,
+                "client_code": client_code,
                 "month": m,
                 "configuration": config_summary,
                 "security_events": sec,
@@ -328,19 +322,18 @@ def main() -> int:
             out = out_dir / f"{m}.json"
             out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
             total_files += 1
-            index.append({"org_slug": org_dir.name, "month": m,
+            index.append({"client_code": client_code, "month": m,
                           "security_events_total": sec["total"],
-                          "network_events_total": net["total"],
-                          "path": str(out.relative_to(root))})
-            print(f"  [{org_dir.name}] {m}: sec={sec['total']:>5}  net={net['total']:>6}")
+                          "network_events_total": net["total"]})
+            print(f"  [{client_code}] {m}: sec={sec['total']:>6}  net={net['total']:>6}")
 
-    idx_path = root / "_monthly_index.json"
-    idx_path.write_text(json.dumps({
+    log_dir = root / "_meraki_logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    (log_dir / "monthly_index.json").write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "monthly_files": index,
     }, indent=2), encoding="utf-8")
     print(f"\nWrote {total_files} monthly summaries")
-    print(f"Index: {idx_path}")
     return 0
 
 
