@@ -1,0 +1,62 @@
+{
+  "filename_stem": "20260423_BWH_4dd17627_0bdc3f56",
+  "client_code": "BWH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\BWH-2026-04\\20260423_BWH_4dd17627_0bdc3f56.mp4",
+  "analyzed_at": "2026-04-30T17:02:42Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician navigated OneDrive folders to investigate and manage a project's warranty documentation. A folder was renamed, but a duplicate folder containing a recently uploaded document appeared, which the technician deleted to resolve the naming conflict. The technician then verified other project folder structures.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Navigated through local OneDrive application to 'Glendora' project folder.\",\n    \"Accessed 'Warranty' and 'NHOs' subfolders, noting they were empty.\",\n    \"Opened Microsoft Edge and logged into OneDrive web interface.\",\n    \"Navigated to the same 'Glendora' project folder and verified 'Warranty' and 'NHOs' subfolders were empty on the web.\",\n    \"Returned to the local OneDrive application.\",\n    \"Renamed the 'Warranty' folder to 'Warranty1'.\",\n    \"Observed two folders, 'Warranty' and 'Warranty1', in the same directory.\",\n    \"Found a newly uploaded PDF document ('ALISAL Orientation Package-1-1.pdf') inside the 'Warranty' folder that mysteriously reappeared.\",\n    \"Deleted the 'Warranty' folder containing the new PDF document.\",\n    \"Renamed 'Warranty1' back to 'Warranty'.\",\n    \"Navigated to a different project ('Westminster') and its 'Warranty Service' and 'New Home Orientation Forms' subfolders to verify their contents.\"\n  ],\n  \"applications_used\": [\n    \"OneDrive (desktop application)\",\n    \"Microsoft Edge\"\n  ],\n  \"issues_observed\": [\n    \"A duplicate 'Warranty' folder appeared after the original 'Warranty' folder was renamed to 'Warranty1'.\",\n    \"The duplicate 'Warranty' folder contained a newly uploaded PDF, which was not present in the original folder before renaming.\"\n  ],\n  \"issues_resolved\": [\n    \"The duplicate folder naming conflict was resolved by deleting one of the conflicting 'Warranty' folders.\"\n  ],\n  \"machines_touched\": [\n    \"brandywinehomes-mysharepoint.com\"\n  ],\n  \"notable_events\": [\n    \"The unexpected appearance of a duplicate 'Warranty' folder containing a newly uploaded PDF document ('ALISAL Orientation Package-1-1.pdf') after the original folder was renamed. This indicates a potential sync conflict or simultaneous user activity.\",\n    \"The subsequent deletion of the folder containing the newly uploaded PDF to resolve the naming conflict.\",\n    \"A 'Your battery is running low' system notification appeared at 01:00.\"\n  ],\n  \"concerns\": [\n    \"Data Loss: The technician deleted a folder containing a newly uploaded PDF without confirming with the user or investigating the nature of the duplicate folder/sync conflict. This resulted in the permanent deletion of a document that was 'a few seconds old', likely indicating recent and intentional user activity.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically in navigating folders and performing a rename operation. However, the approach to resolving the unexpected folder duplication and its contents was quick but led to potential data loss by deleting a recently uploaded document without user consultation or further investigation into the sync conflict.\",\n    \"coaching_flags\": [\n      \"Verify contents and user intent before deleting folders involved in a naming conflict, especially when recent content changes are detected.\",\n      \"Investigate the root cause of duplicate folders or sync conflicts (e.g., check OneDrive sync status, user activity logs) rather than immediately deleting one side.\",\n      \"Communicate with the user about unexpected data or conflicts found during file management to prevent accidental data loss.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician navigated OneDrive folders to investigate and manage a project's warranty documentation. A folder was renamed, but a duplicate folder containing a recently uploaded document appeared, which the technician deleted to resolve the naming conflict. The technician then verified other project folder structures.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Navigated through local OneDrive application to 'Glendora' project folder.",
+      "Accessed 'Warranty' and 'NHOs' subfolders, noting they were empty.",
+      "Opened Microsoft Edge and logged into OneDrive web interface.",
+      "Navigated to the same 'Glendora' project folder and verified 'Warranty' and 'NHOs' subfolders were empty on the web.",
+      "Returned to the local OneDrive application.",
+      "Renamed the 'Warranty' folder to 'Warranty1'.",
+      "Observed two folders, 'Warranty' and 'Warranty1', in the same directory.",
+      "Found a newly uploaded PDF document ('ALISAL Orientation Package-1-1.pdf') inside the 'Warranty' folder that mysteriously reappeared.",
+      "Deleted the 'Warranty' folder containing the new PDF document.",
+      "Renamed 'Warranty1' back to 'Warranty'.",
+      "Navigated to a different project ('Westminster') and its 'Warranty Service' and 'New Home Orientation Forms' subfolders to verify their contents."
+    ],
+    "applications_used": [
+      "OneDrive (desktop application)",
+      "Microsoft Edge"
+    ],
+    "issues_observed": [
+      "A duplicate 'Warranty' folder appeared after the original 'Warranty' folder was renamed to 'Warranty1'.",
+      "The duplicate 'Warranty' folder contained a newly uploaded PDF, which was not present in the original folder before renaming."
+    ],
+    "issues_resolved": [
+      "The duplicate folder naming conflict was resolved by deleting one of the conflicting 'Warranty' folders."
+    ],
+    "machines_touched": [
+      "brandywinehomes-mysharepoint.com"
+    ],
+    "notable_events": [
+      "The unexpected appearance of a duplicate 'Warranty' folder containing a newly uploaded PDF document ('ALISAL Orientation Package-1-1.pdf') after the original folder was renamed. This indicates a potential sync conflict or simultaneous user activity.",
+      "The subsequent deletion of the folder containing the newly uploaded PDF to resolve the naming conflict.",
+      "A 'Your battery is running low' system notification appeared at 01:00."
+    ],
+    "concerns": [
+      "Data Loss: The technician deleted a folder containing a newly uploaded PDF without confirming with the user or investigating the nature of the duplicate folder/sync conflict. This resulted in the permanent deletion of a document that was 'a few seconds old', likely indicating recent and intentional user activity."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically in navigating folders and performing a rename operation. However, the approach to resolving the unexpected folder duplication and its contents was quick but led to potential data loss by deleting a recently uploaded document without user consultation or further investigation into the sync conflict.",
+      "coaching_flags": [
+        "Verify contents and user intent before deleting folders involved in a naming conflict, especially when recent content changes are detected.",
+        "Investigate the root cause of duplicate folders or sync conflicts (e.g., check OneDrive sync status, user activity logs) rather than immediately deleting one side.",
+        "Communicate with the user about unexpected data or conflicts found during file management to prevent accidental data loss."
+      ]
+    }
+  }
+}

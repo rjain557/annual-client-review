@@ -35,7 +35,7 @@ KEYS_DIR    = Path(r"C:\Users\rjain\OneDrive - Technijian, Inc\Documents\VSCODE\
 CABINET_DIR = Path(r"C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet")
 STATE_FILE  = REPO_ROOT / "technijian" / "screenconnect-pull" / "state" / "gemini_analysis_state.json"
 
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-2.5-flash"
 
 ANALYSIS_PROMPT = """You are reviewing a ScreenConnect remote support session recording.
 A Technijian IT technician connected remotely to a client computer and performed IT support work.
@@ -51,25 +51,35 @@ Analyze this screen recording and return a JSON object — nothing else, no mark
   "machines_touched": ["computer names, server names, or IP addresses visible in the recording"],
   "notable_events": ["anything unusual, time-consuming, or worth flagging for the client report"],
   "concerns": ["any security, compliance, or quality concerns — empty array if none"],
-  "estimated_productivity": "high | medium | low — based on work accomplished vs time spent"
+  "estimated_productivity": "high | medium | low — based on work accomplished vs time spent",
+
+  "tech_performance": {
+    "appeared_stuck": "true | false — tech visibly repeated the same action, searched the same thing multiple times, or showed no clear direction for more than 2 minutes",
+    "stuck_details": ["describe each stuck moment: what they were trying, how long, what broke the loop — empty if none"],
+    "idle_gaps": ["describe each gap >60 seconds where screen was static or mouse inactive — include approximate timestamp and duration — empty if none"],
+    "idle_gap_count": 0,
+    "longest_idle_seconds": 0,
+    "total_idle_estimate_seconds": 0,
+    "efficiency_notes": "brief assessment of whether the tech worked methodically or seemed uncertain — e.g. 'straight to Event Viewer, found root cause in 3 min' vs 'tried 4 different things without a clear plan'",
+    "coaching_flags": ["specific behaviors worth reviewing with the tech — e.g. 'did not check Windows Update before manual driver install', 'left RDP session open after work completed' — empty if none"]
+  }
 }"""
 
 
 # ── credentials ────────────────────────────────────────────────────────────────
 
 def _load_gemini_api_key() -> str | None:
-    key = os.environ.get("GEMINI_API_KEY")
-    if key:
-        return key
+    # Keyfile takes priority — env var is fallback for headless/CI use only.
+    # This avoids stale GEMINI_API_KEY env vars overriding a freshly updated keyfile.
     kf = KEYS_DIR / "gemini.md"
     if kf.exists():
         text = kf.read_text(encoding="utf-8")
         m = re.search(r"\*\*API Key:\*\*\s*([^\s\r\n]+)", text)
         if m:
             val = m.group(1).strip()
-            if not val.startswith("TODO"):
+            if not val.startswith("TODO") and not val.startswith("PASTE"):
                 return val
-    return None
+    return os.environ.get("GEMINI_API_KEY")
 
 
 def _build_client() -> "genai.Client":  # type: ignore[name-defined]
@@ -143,7 +153,7 @@ def _upload_and_wait(client, mp4_path: Path) -> object:
 
     print(f"  Uploading {mp4_path.name} ({mp4_path.stat().st_size // 1_048_576} MB)...")
     file_obj = client.files.upload(
-        path=str(mp4_path),
+        file=str(mp4_path),
         config=types.UploadFileConfig(mime_type="video/mp4", display_name=mp4_path.stem),
     )
     # Poll until ACTIVE (Gemini processes video server-side)
