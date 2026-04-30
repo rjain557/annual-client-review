@@ -1,0 +1,47 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_b77e312a",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_b77e312a.mp4",
+  "analyzed_at": "2026-04-30T18:45:37Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client computer to configure TeamViewer for unattended access by setting a password. They also performed a system overview, checking network configurations, display adapter properties, and reviewing local users, groups, and devices in Computer Management before shutting down the machine.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Configured TeamViewer for unattended access and set a password.\",\n    \"Gathered network configuration details using 'ipconfig /all' in Command Prompt.\",\n    \"Checked display adapter properties, noting 'Microsoft Basic Display Adapter'.\",\n    \"Reviewed local user accounts, groups, and device manager entries in Computer Management.\",\n    \"Initiated a system shutdown.\"\n  ],\n  \"applications_used\": [\n    \"TeamViewer\",\n    \"Command Prompt\",\n    \"Settings (Display)\",\n    \"Computer Management\"\n  ],\n  \"issues_observed\": [\n    \"Display adapter was identified as 'Microsoft Basic Display Adapter', suggesting a generic driver might be in use.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"DESKTOP-7H482T5\"\n  ],\n  \"notable_events\": [\n    \"The client's display adapter was using a generic 'Microsoft Basic Display Adapter' driver, which might indicate a need for a specific manufacturer driver for optimal performance.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, first addressing the primary task of TeamViewer configuration, then systematically reviewing key system components (network, display, devices) before concluding the session with a shutdown. The actions appeared purposeful and efficient.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client computer to configure TeamViewer for unattended access by setting a password. They also performed a system overview, checking network configurations, display adapter properties, and reviewing local users, groups, and devices in Computer Management before shutting down the machine.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Configured TeamViewer for unattended access and set a password.",
+      "Gathered network configuration details using 'ipconfig /all' in Command Prompt.",
+      "Checked display adapter properties, noting 'Microsoft Basic Display Adapter'.",
+      "Reviewed local user accounts, groups, and device manager entries in Computer Management.",
+      "Initiated a system shutdown."
+    ],
+    "applications_used": [
+      "TeamViewer",
+      "Command Prompt",
+      "Settings (Display)",
+      "Computer Management"
+    ],
+    "issues_observed": [
+      "Display adapter was identified as 'Microsoft Basic Display Adapter', suggesting a generic driver might be in use."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "DESKTOP-7H482T5"
+    ],
+    "notable_events": [
+      "The client's display adapter was using a generic 'Microsoft Basic Display Adapter' driver, which might indicate a need for a specific manufacturer driver for optimal performance."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, first addressing the primary task of TeamViewer configuration, then systematically reviewing key system components (network, display, devices) before concluding the session with a shutdown. The actions appeared purposeful and efficient.",
+      "coaching_flags": []
+    }
+  }
+}

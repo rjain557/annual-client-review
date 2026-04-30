@@ -1,0 +1,56 @@
+{
+  "filename_stem": "20260428_ORX_6a773039_dd442e03",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260428_ORX_6a773039_dd442e03.mp4",
+  "analyzed_at": "2026-04-30T19:03:19Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client's server, ORX-DC-3CX-01, via Server Manager. They observed the server dashboard showing an alert status and encountered a failed OneDrive sign-in attempt. The technician then manually reviewed various system services using both Server Manager's service detail view and the native Windows Services application, but did not resolve any identified issues or thoroughly investigate the server alerts.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Server Manager to check server status.\",\n    \"Attempted to sign into OneDrive after an error notification, but encountered another sign-in failure (Error Code: 0x8004e4a4).\",\n    \"Closed the OneDrive error prompt.\",\n    \"Opened the Services Detail View from Server Manager for 'All Servers'.\",\n    \"Inspected the status of 'Clipboard User Service' and two 'Google Update Services' via Server Manager.\",\n    \"Closed Server Manager.\",\n    \"Opened the Windows 'Services' application.\",\n    \"Scrolled through and manually inspected various running services, including 'Google Update Service (gupdate)', 'Google Update Service (gupdatem)', 'Network Location Awareness', and 'Local Session Manager'.\",\n    \"Closed the Services application.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Microsoft OneDrive (login prompt)\",\n    \"Services (Windows administrative tool)\"\n  ],\n  \"issues_observed\": [\n    \"Server Manager dashboard showed 'Local Server' and 'All Servers' in a 'red' (alert) status, with 'Roles 0' and 'Server groups 0' despite being a domain controller.\",\n    \"OneDrive displayed a notification 'There was a problem signing in'.\",\n    \"OneDrive login attempt failed with 'Error Code: 0x8004e4a4' after entering credentials.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"ORX-DC-3CX-01\"\n  ],\n  \"notable_events\": [\n    \"Initial loading of Server Manager was slow and the dashboard remained in an alert state throughout the observation.\",\n    \"A OneDrive sign-in issue occurred and failed to resolve after a credential re-entry attempt.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved methodically between Server Manager and the Services application. However, the initial Server Manager alerts were not thoroughly investigated, and the manual service checks did not appear to be directly targeting the observed issues like the server alerts or OneDrive error.\",\n    \"coaching_flags\": [\n      \"Did not investigate why Server Manager displayed 'Local Server' and 'All Servers' in red with 0 roles and 0 server groups.\",\n      \"Inspected services in the native Services app without a clear objective directly related to the observed Server Manager alerts or the OneDrive sign-in error.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client's server, ORX-DC-3CX-01, via Server Manager. They observed the server dashboard showing an alert status and encountered a failed OneDrive sign-in attempt. The technician then manually reviewed various system services using both Server Manager's service detail view and the native Windows Services application, but did not resolve any identified issues or thoroughly investigate the server alerts.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Server Manager to check server status.",
+      "Attempted to sign into OneDrive after an error notification, but encountered another sign-in failure (Error Code: 0x8004e4a4).",
+      "Closed the OneDrive error prompt.",
+      "Opened the Services Detail View from Server Manager for 'All Servers'.",
+      "Inspected the status of 'Clipboard User Service' and two 'Google Update Services' via Server Manager.",
+      "Closed Server Manager.",
+      "Opened the Windows 'Services' application.",
+      "Scrolled through and manually inspected various running services, including 'Google Update Service (gupdate)', 'Google Update Service (gupdatem)', 'Network Location Awareness', and 'Local Session Manager'.",
+      "Closed the Services application."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Microsoft OneDrive (login prompt)",
+      "Services (Windows administrative tool)"
+    ],
+    "issues_observed": [
+      "Server Manager dashboard showed 'Local Server' and 'All Servers' in a 'red' (alert) status, with 'Roles 0' and 'Server groups 0' despite being a domain controller.",
+      "OneDrive displayed a notification 'There was a problem signing in'.",
+      "OneDrive login attempt failed with 'Error Code: 0x8004e4a4' after entering credentials."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "ORX-DC-3CX-01"
+    ],
+    "notable_events": [
+      "Initial loading of Server Manager was slow and the dashboard remained in an alert state throughout the observation.",
+      "A OneDrive sign-in issue occurred and failed to resolve after a credential re-entry attempt."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved methodically between Server Manager and the Services application. However, the initial Server Manager alerts were not thoroughly investigated, and the manual service checks did not appear to be directly targeting the observed issues like the server alerts or OneDrive error.",
+      "coaching_flags": [
+        "Did not investigate why Server Manager displayed 'Local Server' and 'All Servers' in red with 0 roles and 0 server groups.",
+        "Inspected services in the native Services app without a clear objective directly related to the observed Server Manager alerts or the OneDrive sign-in error."
+      ]
+    }
+  }
+}

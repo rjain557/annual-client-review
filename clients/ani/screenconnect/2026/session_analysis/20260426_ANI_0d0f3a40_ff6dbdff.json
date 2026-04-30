@@ -1,0 +1,61 @@
+{
+  "filename_stem": "20260426_ANI_0d0f3a40_ff6dbdff",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260426_ANI_0d0f3a40_ff6dbdff.mp4",
+  "analyzed_at": "2026-04-30T17:45:08Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician addressed an issue where several Veeam-related services were stopped on a server. They systematically started the identified services using Server Manager and the native Windows Services application, then verified that Veeam backup jobs were running successfully.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Opened Server Manager to identify stopped services.\",\n    \"Started multiple Veeam services (e.g., Veeam ONE Agent, Veeam Cloud Connect Service, Veeam Kubernetes Service, Veeam Management Agent Service, Veeam Data Analyzer Service, Veeam CDP Coordinator Service, Veeam Backup Service) via Server Manager's services detail view.\",\n    \"Used Windows search to open the native Services console.\",\n    \"Located and started the 'Veeam Deployment Service' from the Services console.\",\n    \"Opened Veeam Backup & Replication 12 and connected to verify backup job status.\",\n    \"Confirmed that the 'Bkp_ANI' backup job showed a 'Success' status from its last run.\",\n    \"Signed out of the server.\",\n    \"Started 'Google Updater Service' and 'Google Updater Internal Service' (not directly Veeam-related but found among the stopped services).\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Windows Services console\",\n    \"Veeam Backup & Replication 12\"\n  ],\n  \"issues_observed\": [\n    \"Server Manager Dashboard displayed red warnings under 'Services' for both 'Local Server' and 'All Servers', indicating stopped services.\",\n    \"Numerous Veeam-related services were found in a stopped state.\"\n  ],\n  \"issues_resolved\": [\n    \"Most stopped Veeam services were successfully started.\",\n    \"Veeam backup jobs were confirmed to be running and completing successfully.\"\n  ],\n  \"machines_touched\": [\n    \"ANI-HQ-VBR-02 (the remote server)\",\n    \"VM-ANDERSEN-AITS (Veeam backup target)\",\n    \"VMANIDC02 (Veeam backup target)\",\n    \"VMANIFG1 (Veeam backup target)\",\n    \"VMANIFG2 (Veeam backup target)\",\n    \"VMANIFS1 (Veeam backup target)\",\n    \"VMANIFS2 (Veeam backup target)\",\n    \"VMANIOPT1 (Veeam backup target)\",\n    \"VMANI-SDDI (Veeam backup target)\"\n  ],\n  \"notable_events\": [\n    \"The technician had to switch from Server Manager's service view to the native Windows Services console to start all required services, specifically the 'Veeam Deployment Service'.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician quickly identified the problem area (stopped services) and proceeded methodically to resolve it, utilizing two different tools (Server Manager and native Services console) as needed, and then verifying the fix within the Veeam application. The process was direct and efficient.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician addressed an issue where several Veeam-related services were stopped on a server. They systematically started the identified services using Server Manager and the native Windows Services application, then verified that Veeam backup jobs were running successfully.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Opened Server Manager to identify stopped services.",
+      "Started multiple Veeam services (e.g., Veeam ONE Agent, Veeam Cloud Connect Service, Veeam Kubernetes Service, Veeam Management Agent Service, Veeam Data Analyzer Service, Veeam CDP Coordinator Service, Veeam Backup Service) via Server Manager's services detail view.",
+      "Used Windows search to open the native Services console.",
+      "Located and started the 'Veeam Deployment Service' from the Services console.",
+      "Opened Veeam Backup & Replication 12 and connected to verify backup job status.",
+      "Confirmed that the 'Bkp_ANI' backup job showed a 'Success' status from its last run.",
+      "Signed out of the server.",
+      "Started 'Google Updater Service' and 'Google Updater Internal Service' (not directly Veeam-related but found among the stopped services)."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Windows Services console",
+      "Veeam Backup & Replication 12"
+    ],
+    "issues_observed": [
+      "Server Manager Dashboard displayed red warnings under 'Services' for both 'Local Server' and 'All Servers', indicating stopped services.",
+      "Numerous Veeam-related services were found in a stopped state."
+    ],
+    "issues_resolved": [
+      "Most stopped Veeam services were successfully started.",
+      "Veeam backup jobs were confirmed to be running and completing successfully."
+    ],
+    "machines_touched": [
+      "ANI-HQ-VBR-02 (the remote server)",
+      "VM-ANDERSEN-AITS (Veeam backup target)",
+      "VMANIDC02 (Veeam backup target)",
+      "VMANIFG1 (Veeam backup target)",
+      "VMANIFG2 (Veeam backup target)",
+      "VMANIFS1 (Veeam backup target)",
+      "VMANIFS2 (Veeam backup target)",
+      "VMANIOPT1 (Veeam backup target)",
+      "VMANI-SDDI (Veeam backup target)"
+    ],
+    "notable_events": [
+      "The technician had to switch from Server Manager's service view to the native Windows Services console to start all required services, specifically the 'Veeam Deployment Service'."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician quickly identified the problem area (stopped services) and proceeded methodically to resolve it, utilizing two different tools (Server Manager and native Services console) as needed, and then verifying the fix within the Veeam application. The process was direct and efficient.",
+      "coaching_flags": []
+    }
+  }
+}

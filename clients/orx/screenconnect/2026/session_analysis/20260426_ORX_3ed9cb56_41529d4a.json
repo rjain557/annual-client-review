@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260426_ORX_3ed9cb56_41529d4a",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260426_ORX_3ed9cb56_41529d4a.mp4",
+  "analyzed_at": "2026-04-30T18:53:04Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client computer to address a display driver issue. They initially checked Device Manager, which showed a generic 'Microsoft Basic Display Adapter', and attempted an automatic driver update, which failed. The technician then navigated to Windows Update, found an optional Intel display driver, and initiated its download and installation, followed by a system restart.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Device Manager and inspected 'Display adapters'\",\n    \"Attempted automatic driver update for 'Microsoft Basic Display Adapter'\",\n    \"Opened Windows Update\",\n    \"Checked for and viewed optional updates\",\n    \"Selected and initiated download and installation of an Intel display driver update\",\n    \"Restarted the computer\"\n  ],\n  \"applications_used\": [\n    \"Device Manager\",\n    \"Windows Update\"\n  ],\n  \"issues_observed\": [\n    \"Display adapter listed as 'Microsoft Basic Display Adapter' in Device Manager\",\n    \"Automatic driver search failed to find an updated driver\",\n    \"An Intel display driver update was available in optional Windows updates\"\n  ],\n  \"issues_resolved\": [\n    \"Initiated the installation of the correct Intel display driver to replace the generic Microsoft Basic Display Adapter driver\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"A brief screen flicker/blackout occurred during the driver download/installation phase (00:41-00:42), which is expected during display driver updates.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently. They quickly identified the generic display driver, attempted the initial fix, and then moved directly to Windows Update to find the correct optional driver update without any hesitation or wasted steps.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client computer to address a display driver issue. They initially checked Device Manager, which showed a generic 'Microsoft Basic Display Adapter', and attempted an automatic driver update, which failed. The technician then navigated to Windows Update, found an optional Intel display driver, and initiated its download and installation, followed by a system restart.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Device Manager and inspected 'Display adapters'",
+      "Attempted automatic driver update for 'Microsoft Basic Display Adapter'",
+      "Opened Windows Update",
+      "Checked for and viewed optional updates",
+      "Selected and initiated download and installation of an Intel display driver update",
+      "Restarted the computer"
+    ],
+    "applications_used": [
+      "Device Manager",
+      "Windows Update"
+    ],
+    "issues_observed": [
+      "Display adapter listed as 'Microsoft Basic Display Adapter' in Device Manager",
+      "Automatic driver search failed to find an updated driver",
+      "An Intel display driver update was available in optional Windows updates"
+    ],
+    "issues_resolved": [
+      "Initiated the installation of the correct Intel display driver to replace the generic Microsoft Basic Display Adapter driver"
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "A brief screen flicker/blackout occurred during the driver download/installation phase (00:41-00:42), which is expected during display driver updates."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently. They quickly identified the generic display driver, attempted the initial fix, and then moved directly to Windows Update to find the correct optional driver update without any hesitation or wasted steps.",
+      "coaching_flags": []
+    }
+  }
+}

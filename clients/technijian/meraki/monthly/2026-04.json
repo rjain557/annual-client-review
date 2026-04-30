@@ -1,15 +1,491 @@
 {
-  "generated_at": "2026-04-30T16:49:25Z",
+  "generated_at": "2026-04-30T16:54:48Z",
   "client_code": "technijian",
   "month": "2026-04",
   "configuration": {
-    "org": "Technijian",
-    "snapshot_at": "2026-04-30T16:48:31Z",
-    "network_count": 0,
-    "device_count": 0,
-    "device_models": {},
-    "device_product_types": {},
-    "devices": [],
+    "org": "Technijian Inc",
+    "snapshot_at": "2026-04-30T16:54:18Z",
+    "network_count": 5,
+    "device_count": 12,
+    "device_models": {
+      "MR66": 1,
+      "MS42": 2,
+      "MS42P": 1,
+      "MX100": 2,
+      "MR42": 3,
+      "MX105": 3
+    },
+    "device_product_types": {
+      "wireless": 4,
+      "switch": 3,
+      "appliance": 5
+    },
+    "devices": [
+      {
+        "name": "TE-DC-FW-01 (Primary)",
+        "model": "MX105",
+        "serial": "Q3LB-2Y33-86PD",
+        "firmware": "wired-19-2-4",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "01-Technijian DC",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "66.81.19.1",
+                "address": "66.81.19.126/25",
+                "nameservers": {
+                  "addresses": [
+                    "1.1.1.1",
+                    "1.0.0.1"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "66.81.19.1",
+                "address": "66.81.19.126/25",
+                "nameservers": {
+                  "addresses": [
+                    "1.1.1.1",
+                    "4.2.2.4"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan3": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "active",
+            "ip": "66.81.19.126",
+            "gateway": "66.81.19.1",
+            "publicIp": "66.81.19.126",
+            "primaryDns": "1.1.1.1",
+            "secondaryDns": "1.0.0.1",
+            "ipAssignedBy": "static"
+          },
+          {
+            "interface": "wan2",
+            "status": "not connected",
+            "ip": null,
+            "gateway": null,
+            "publicIp": null,
+            "primaryDns": null,
+            "secondaryDns": null,
+            "ipAssignedBy": null
+          }
+        ]
+      },
+      {
+        "name": "TE-DC-FW-01 (Secondary)",
+        "model": "MX105",
+        "serial": "Q3LB-HH3E-CJYD",
+        "firmware": "wired-19-2-4",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "01-Technijian DC",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "66.81.18.193",
+                "address": "66.81.18.194/28",
+                "nameservers": {
+                  "addresses": [
+                    "1.1.1.1",
+                    "4.2.2.4"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "66.81.18.193",
+                "address": "66.81.18.194/28",
+                "nameservers": {
+                  "addresses": [
+                    "1.1.1.1",
+                    "4.2.2.4"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan3": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "active",
+            "ip": "66.81.18.194",
+            "gateway": "66.81.18.193",
+            "publicIp": "66.81.18.194",
+            "primaryDns": "1.1.1.1",
+            "secondaryDns": "4.2.2.4",
+            "ipAssignedBy": "static"
+          },
+          {
+            "interface": "wan2",
+            "status": "not connected",
+            "ip": null,
+            "gateway": null,
+            "publicIp": null,
+            "primaryDns": null,
+            "secondaryDns": null,
+            "ipAssignedBy": null
+          }
+        ]
+      },
+      {
+        "name": "TE-LAB-FW-01",
+        "model": "MX105",
+        "serial": "Q2WN-P4VJ-ZPR6",
+        "firmware": "wired-19-1-11",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "05-Technijian LAB",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "10.120.50.1",
+                "address": "10.120.50.109/24",
+                "nameservers": {
+                  "addresses": [
+                    "8.8.8.8",
+                    "8.8.4.4"
+                  ]
+                }
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "99.50.93.150",
+                "address": "99.50.93.145/29",
+                "nameservers": {
+                  "addresses": [
+                    "8.8.8.8",
+                    "8.8.4.4"
+                  ]
+                }
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan3": {
+            "enabled": false,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "failed",
+            "ip": "10.120.50.109",
+            "gateway": "10.120.50.1",
+            "publicIp": "64.58.160.218",
+            "primaryDns": "8.8.8.8",
+            "secondaryDns": "8.8.4.4",
+            "ipAssignedBy": "static"
+          },
+          {
+            "interface": "wan2",
+            "status": "not connected",
+            "ip": null,
+            "gateway": null,
+            "publicIp": null,
+            "primaryDns": null,
+            "secondaryDns": null,
+            "ipAssignedBy": null
+          }
+        ]
+      },
+      {
+        "name": "TE-LAB-FW-01 (Spare)",
+        "model": "MX100",
+        "serial": "Q2JN-K5UD-GNPQ",
+        "firmware": "wired-18-1-07",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "03-Technijian LV",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "10.120.50.1",
+                "address": "10.120.50.253/24",
+                "nameservers": {
+                  "addresses": [
+                    "8.8.8.8",
+                    "4.2.2.4"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": false,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "not connected",
+            "ip": "10.120.50.253",
+            "gateway": "10.120.50.1",
+            "publicIp": "64.58.160.218",
+            "primaryDns": "8.8.8.8",
+            "secondaryDns": "4.2.2.4",
+            "ipAssignedBy": "static"
+          }
+        ]
+      },
+      {
+        "name": "TE-LV-FW-01 (Primary)",
+        "model": "MX100",
+        "serial": "Q2JN-6K9Q-M6K2",
+        "firmware": "wired-18-1-07",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "03-Technijian LV",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": true,
+              "vlanId": 50
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "10.120.50.1",
+                "address": "10.120.50.252/24",
+                "nameservers": {
+                  "addresses": [
+                    "4.2.2.4",
+                    "8.8.8.8"
+                  ]
+                }
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": false,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "not connected",
+            "ip": "10.120.50.252",
+            "gateway": "10.120.50.1",
+            "publicIp": "64.58.160.218",
+            "primaryDns": "4.2.2.4",
+            "secondaryDns": "8.8.8.8",
+            "ipAssignedBy": "static"
+          }
+        ]
+      },
+      {
+        "name": "LV-DC-Active",
+        "model": "MS42",
+        "serial": "Q2CP-7MQ9-GUYF",
+        "firmware": "switch-15-21-1",
+        "lanIp": "192.168.254.2",
+        "productType": "switch",
+        "network": "03-Technijian LV"
+      },
+      {
+        "name": "LV-DC-FailOver",
+        "model": "MS42",
+        "serial": "Q2CP-7VLB-8TNC",
+        "firmware": "switch-15-21-1",
+        "lanIp": "192.168.253.10",
+        "productType": "switch",
+        "network": "03-Technijian LV"
+      },
+      {
+        "name": "TE-HQ-WAREHOUSE-01",
+        "model": "MS42P",
+        "serial": "Q2DP-XDND-URS4",
+        "firmware": "Not running configured version",
+        "lanIp": "10.10.10.134",
+        "productType": "switch",
+        "network": "02-Technijian HQ"
+      },
+      {
+        "name": "TE-HQ-AP-01",
+        "model": "MR42",
+        "serial": "Q2KD-CFPE-EXBF",
+        "firmware": "wireless-30-7-1",
+        "lanIp": "10.120.1.15",
+        "productType": "wireless",
+        "network": "02-Technijian HQ"
+      },
+      {
+        "name": "TE-HQ-AP-02",
+        "model": "MR42",
+        "serial": "Q2KD-CENM-CZUL",
+        "firmware": "wireless-30-7-1",
+        "lanIp": "10.120.1.16",
+        "productType": "wireless",
+        "network": "02-Technijian HQ"
+      },
+      {
+        "name": "TE-HQ-AP-03",
+        "model": "MR66",
+        "serial": "Q2CK-DWQ4-MUAR",
+        "firmware": "wireless-26-8-3",
+        "lanIp": "10.120.1.17",
+        "productType": "wireless",
+        "network": "02-Technijian HQ"
+      },
+      {
+        "name": "TE-HQ-AP-04",
+        "model": "MR42",
+        "serial": "Q2KD-CQUG-H59C",
+        "firmware": "wireless-30-7-1",
+        "lanIp": "10.120.1.26",
+        "productType": "wireless",
+        "network": "02-Technijian HQ"
+      }
+    ],
     "networks": [
       {
         "slug": "01_technijian_dc",

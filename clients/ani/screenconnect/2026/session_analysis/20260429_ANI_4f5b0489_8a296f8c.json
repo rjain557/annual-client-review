@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260429_ANI_4f5b0489_8a296f8c",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260429_ANI_4f5b0489_8a296f8c.mp4",
+  "analyzed_at": "2026-04-30T17:58:19Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a quick repair of Microsoft 365 Apps for enterprise, likely to address an issue with Outlook hanging, as indicated by an \\\"Application Hang\\\" error found in the Event Viewer. After the repair, the technician reviewed Event Viewer logs and the user's Documents folder before restarting the computer.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Logged into the computer as 'Neil Andersen'.\",\n    \"Opened Control Panel and navigated to Programs and Features.\",\n    \"Initiated and completed a 'Quick Repair' for 'Microsoft 365 Apps for enterprise - en-us'.\",\n    \"Opened Event Viewer and reviewed 'Application' logs, identifying an 'Application Hang' error (Event ID 1002) related to 'outlook.exe'.\",\n    \"Opened File Explorer and viewed the contents of the user's 'Documents' folder.\",\n    \"Restarted the client computer.\"\n  ],\n  \"applications_used\": [\n    \"Control Panel\",\n    \"Programs and Features\",\n    \"Microsoft 365 Apps for enterprise (repair tool)\",\n    \"Event Viewer\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [\n    \"An 'Application Hang' error (Event ID 1002) in the Event Viewer logs, indicating an issue with 'outlook.exe' becoming unresponsive.\"\n  ],\n  \"issues_resolved\": [\n    \"The Microsoft 365 Apps for enterprise suite underwent a successful 'Quick Repair', which is a common resolution for application stability issues. Full resolution of the Outlook hang cannot be confirmed without further monitoring post-restart.\"\n  ],\n  \"machines_touched\": [\n    \"Client computer for user Neil Andersen\"\n  ],\n  \"notable_events\": [\n    \"The explicit use of the Microsoft 365 repair utility to address application stability.\",\n    \"Systematic checking of Event Viewer logs to diagnose the issue.\",\n    \"The final action was a system restart, often a crucial step after software repairs.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically, quickly moving to the likely solution (Office repair) and then confirming initial diagnosis with Event Viewer. There was no visible hesitation or inefficient action. The process was efficient and purposeful.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a quick repair of Microsoft 365 Apps for enterprise, likely to address an issue with Outlook hanging, as indicated by an \"Application Hang\" error found in the Event Viewer. After the repair, the technician reviewed Event Viewer logs and the user's Documents folder before restarting the computer.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Logged into the computer as 'Neil Andersen'.",
+      "Opened Control Panel and navigated to Programs and Features.",
+      "Initiated and completed a 'Quick Repair' for 'Microsoft 365 Apps for enterprise - en-us'.",
+      "Opened Event Viewer and reviewed 'Application' logs, identifying an 'Application Hang' error (Event ID 1002) related to 'outlook.exe'.",
+      "Opened File Explorer and viewed the contents of the user's 'Documents' folder.",
+      "Restarted the client computer."
+    ],
+    "applications_used": [
+      "Control Panel",
+      "Programs and Features",
+      "Microsoft 365 Apps for enterprise (repair tool)",
+      "Event Viewer",
+      "File Explorer"
+    ],
+    "issues_observed": [
+      "An 'Application Hang' error (Event ID 1002) in the Event Viewer logs, indicating an issue with 'outlook.exe' becoming unresponsive."
+    ],
+    "issues_resolved": [
+      "The Microsoft 365 Apps for enterprise suite underwent a successful 'Quick Repair', which is a common resolution for application stability issues. Full resolution of the Outlook hang cannot be confirmed without further monitoring post-restart."
+    ],
+    "machines_touched": [
+      "Client computer for user Neil Andersen"
+    ],
+    "notable_events": [
+      "The explicit use of the Microsoft 365 repair utility to address application stability.",
+      "Systematic checking of Event Viewer logs to diagnose the issue.",
+      "The final action was a system restart, often a crucial step after software repairs."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically, quickly moving to the likely solution (Office repair) and then confirming initial diagnosis with Event Viewer. There was no visible hesitation or inefficient action. The process was efficient and purposeful.",
+      "coaching_flags": []
+    }
+  }
+}

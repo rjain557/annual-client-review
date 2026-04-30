@@ -1,0 +1,58 @@
+{
+  "filename_stem": "20260423_Technijian_8a3bb7f1_a9bfba48",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_8a3bb7f1_a9bfba48.mp4",
+  "analyzed_at": "2026-04-30T19:37:57Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician signed out of Microsoft Teams after a brief chat, closed a Microsoft Teams file synchronization error, and then focused on network configuration work, evident by an open ChatGPT window discussing network fixes and a PuTTY session displaying Cisco Nexus commands. A Device Manager window remained open but was not interacted with.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Signed out of Microsoft Teams.\",\n    \"Closed the 'Welcome to Teams' window.\",\n    \"Closed a Microsoft Teams file synchronization error dialog.\",\n    \"Reviewed network configuration 'Priority fixes' in ChatGPT.\",\n    \"Observed Cisco Nexus network device configuration output in PuTTY.\",\n    \"Minimized Microsoft Word document displaying IP configuration.\"\n  ],\n  \"applications_used\": [\n    \"Device Manager\",\n    \"Microsoft Teams\",\n    \"Microsoft Word\",\n    \"PuTTY\",\n    \"Google Chrome (for ChatGPT and Microsoft Teams Chat Files)\"\n  ],\n  \"issues_observed\": [\n    \"Microsoft Teams file synchronization error: 'The cloud operation was not completed before the time-out period expired. Error 0x80004AAA' for 'NX02_Exact_Delta_Runbook_Legacy_Target_Rollback'.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client machine (Windows desktop)\",\n    \"TE-HQ-LAB-02 (network device, likely Cisco Nexus, via PuTTY)\",\n    \"10.6.9.101 (IP address visible in Word document)\",\n    \"172.16.9.5\",\n    \"10.100.1.1\",\n    \"172.16.9.0\",\n    \"10.100.1.2\"\n  ],\n  \"notable_events\": [\n    \"The technician signed out of Teams while a banner indicated they were in a call on another device.\",\n    \"Encountered and closed a Teams file sync error.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician efficiently moved between tasks, quickly addressing the Teams sign-out and the file sync error before proceeding to review network configuration details.\",\n    \"coaching_flags\": [\n      \"Signed out of Teams while reportedly being in a call on another device, which could potentially disrupt ongoing communication or signal availability issues.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician signed out of Microsoft Teams after a brief chat, closed a Microsoft Teams file synchronization error, and then focused on network configuration work, evident by an open ChatGPT window discussing network fixes and a PuTTY session displaying Cisco Nexus commands. A Device Manager window remained open but was not interacted with.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Signed out of Microsoft Teams.",
+      "Closed the 'Welcome to Teams' window.",
+      "Closed a Microsoft Teams file synchronization error dialog.",
+      "Reviewed network configuration 'Priority fixes' in ChatGPT.",
+      "Observed Cisco Nexus network device configuration output in PuTTY.",
+      "Minimized Microsoft Word document displaying IP configuration."
+    ],
+    "applications_used": [
+      "Device Manager",
+      "Microsoft Teams",
+      "Microsoft Word",
+      "PuTTY",
+      "Google Chrome (for ChatGPT and Microsoft Teams Chat Files)"
+    ],
+    "issues_observed": [
+      "Microsoft Teams file synchronization error: 'The cloud operation was not completed before the time-out period expired. Error 0x80004AAA' for 'NX02_Exact_Delta_Runbook_Legacy_Target_Rollback'."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client machine (Windows desktop)",
+      "TE-HQ-LAB-02 (network device, likely Cisco Nexus, via PuTTY)",
+      "10.6.9.101 (IP address visible in Word document)",
+      "172.16.9.5",
+      "10.100.1.1",
+      "172.16.9.0",
+      "10.100.1.2"
+    ],
+    "notable_events": [
+      "The technician signed out of Teams while a banner indicated they were in a call on another device.",
+      "Encountered and closed a Teams file sync error."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician efficiently moved between tasks, quickly addressing the Teams sign-out and the file sync error before proceeding to review network configuration details.",
+      "coaching_flags": [
+        "Signed out of Teams while reportedly being in a call on another device, which could potentially disrupt ongoing communication or signal availability issues."
+      ]
+    }
+  }
+}

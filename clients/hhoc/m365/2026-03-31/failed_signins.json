@@ -1,0 +1,1181 @@
+[
+  {
+    "id": "f88eeed5-fcf9-472d-aaec-1820b0591000",
+    "createdDateTime": "2026-04-02T01:00:38Z",
+    "userDisplayName": "Heather Stratman",
+    "userPrincipalName": "hhoc@housingforhealthoc.onmicrosoft.com",
+    "userId": "dac62532-3ae8-4c2c-9300-8fdef5429b16",
+    "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
+    "appDisplayName": "OfficeHome",
+    "ipAddress": "64.58.160.218",
+    "clientAppUsed": "Browser",
+    "correlationId": "3ade4fb1-05d4-4fd9-825f-3a261ff1cd53",
+    "conditionalAccessStatus": "failure",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "OfficeHome",
+    "resourceId": "4765445b-32c6-49b0-83e6-1d93765276ca",
+    "status": {
+      "errorCode": 50074,
+      "failureReason": "Strong Authentication is required.",
+      "additionalDetails": "User needs to perform multi-factor authentication. There could be multiple things requiring multi-factor, e.g. Conditional Access policies, per-user enforcement, requested by client, among others."
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Windows10",
+      "browser": "Edge 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Santa Ana",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.7198,
+        "longitude": -117.91412
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "failure"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "9f833dd7-5d43-4d85-a790-7fb580d01e00",
+    "createdDateTime": "2026-04-01T21:20:46Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "00000006-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Microsoft Office 365 Portal",
+    "ipAddress": "2603:8002:540:2d19:ddae:2ed1:15cf:c325",
+    "clientAppUsed": "Browser",
+    "correlationId": "d4803a7f-5e4c-4aa2-a24b-076c0f0029a6",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Windows Azure Active Directory",
+    "resourceId": "00000002-0000-0000-c000-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Windows10",
+      "browser": "Chrome 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 34.0476,
+        "longitude": -118.29227
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "3a6a1bcd-3a8b-410f-bc7e-805459671d00",
+    "createdDateTime": "2026-04-02T20:23:39Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "00000006-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Microsoft Office 365 Portal",
+    "ipAddress": "2600:1012:b384:cc12:c846:9794:e2b8:8295",
+    "clientAppUsed": "Browser",
+    "correlationId": "3ff400c8-b02a-4629-9510-4e519ada2d76",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Windows Azure Active Directory",
+    "resourceId": "00000002-0000-0000-c000-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.3",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Desert Hot Springs",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.95391,
+        "longitude": -116.53847
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "69c56e60-8cee-4f82-8fae-1bc2e24f1100",
+    "createdDateTime": "2026-04-07T15:59:46Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "08ad6f98-a4f8-4635-bb8d-f1a3044760f0",
+    "appDisplayName": "M365 MCP Client for Claude",
+    "ipAddress": "2603:8002:540:2d19:b7f1:8b94:ffe0:9b29",
+    "clientAppUsed": "Mobile Apps and Desktop clients",
+    "correlationId": "07b466d1-7b10-4632-8d80-532abcf36571",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "M365 MCP Server for Claude",
+    "resourceId": "07c030f6-5743-41b7-ba00-0a6e85f37c17",
+    "status": {
+      "errorCode": 90094,
+      "failureReason": "Admin consent is required for the permissions requested by this application.",
+      "additionalDetails": "Ask your tenant administrator to provide consent for this application."
+    },
+    "deviceDetail": {
+      "deviceId": "8444d625-10d5-40ff-876f-f1a5cb47abdf",
+      "displayName": "HHCA-Maritza",
+      "operatingSystem": "Windows10",
+      "browser": "Edge 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": "Azure AD registered"
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 34.0476,
+        "longitude": -118.29227
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "2f3ce3c7-d83b-494a-b6b6-94e951874600",
+    "createdDateTime": "2026-04-08T00:19:58Z",
+    "userDisplayName": "Buckley Farina",
+    "userPrincipalName": "buckley.f@housingforhealthca.org",
+    "userId": "d16db7a9-d8f3-40a3-ba29-d5b82e572ff0",
+    "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
+    "appDisplayName": "Microsoft Office",
+    "ipAddress": "72.203.113.140",
+    "clientAppUsed": "Unknown",
+    "correlationId": "ace1713f-0f5a-4799-ba4d-194263f9a22f",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Microsoft Rights Management Services",
+    "resourceId": "00000012-0000-0000-c000-000000000000",
+    "status": {
+      "errorCode": 90072,
+      "failureReason": "User account '{user}' from identity provider '{idp}' does not exist in tenant '{tenant}' and cannot access the application '{application}'({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account",
+      "additionalDetails": "The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account"
+    },
+    "deviceDetail": {
+      "deviceId": "3948b575-bd90-4fb8-8f5b-8136a4ff3ffd",
+      "displayName": "LAPTOP-MTFA4MM6",
+      "operatingSystem": "Windows10",
+      "browser": "Edge 18.26200",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": "Azure AD registered"
+    },
+    "location": {
+      "city": "Mission Viejo",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.56157,
+        "longitude": -117.67113
+      }
+    },
+    "appliedConditionalAccessPolicies": []
+  },
+  {
+    "id": "d26ed60c-ba12-403f-80fa-9e018b162700",
+    "createdDateTime": "2026-04-09T17:20:43Z",
+    "userDisplayName": "Heather Dion",
+    "userPrincipalName": "heather.d@housingforhealthca.org",
+    "userId": "5c1840a0-3e81-4aa4-ba4e-5796977adecc",
+    "appId": "00000003-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Office 365 SharePoint Online",
+    "ipAddress": "2603:8001:2300:62c2:f81e:caa1:bebe:50e5",
+    "clientAppUsed": "Browser",
+    "correlationId": "f65608a2-203f-c000-87a0-0a3edfe4a07d",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 SharePoint Online",
+    "resourceId": "00000003-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "MacOs",
+      "browser": "Chrome 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Palm Desert",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.69984,
+        "longitude": -116.39183
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "2aa6d15e-4fe6-42c0-9c3c-c35ff9fa5500",
+    "createdDateTime": "2026-04-15T17:30:56Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "9199bf20-a13f-4107-85dc-02114787ef48",
+    "appDisplayName": "One Outlook Web",
+    "ipAddress": "2600:1012:b3a1:1d17:f9cb:2666:feb1:f81c",
+    "clientAppUsed": "Browser",
+    "correlationId": "52ea30e0-68a5-a7f9-6114-f160f48471be",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 Exchange Online",
+    "resourceId": "00000002-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50074,
+      "failureReason": "Strong Authentication is required.",
+      "additionalDetails": "User needs to perform multi-factor authentication. There could be multiple things requiring multi-factor, e.g. Conditional Access policies, per-user enforcement, requested by client, among others."
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.3",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Ashburn",
+      "state": "Virginia",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 39.0437,
+        "longitude": -77.4742
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "8e26387d-86c1-4be3-825a-d20013bb2100",
+    "createdDateTime": "2026-04-15T19:46:21Z",
+    "userDisplayName": "Technijian IT Support",
+    "userPrincipalName": "technijian@housingforhealthca.org",
+    "userId": "30123afb-513f-47bc-91cd-0519fe9ba6cb",
+    "appId": "00000006-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Microsoft Office 365 Portal",
+    "ipAddress": "182.72.80.174",
+    "clientAppUsed": "Browser",
+    "correlationId": "5530f39a-471b-4a2a-909f-9e4a7378c4b0",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Windows Azure Active Directory",
+    "resourceId": "00000002-0000-0000-c000-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Windows10",
+      "browser": "Edge 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Panchkula",
+      "state": "Haryana",
+      "countryOrRegion": "IN",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 30.6942,
+        "longitude": 76.8606
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "4d36879c-158e-4ec3-bcf4-9c0076c62700",
+    "createdDateTime": "2026-04-17T21:15:26Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "9199bf20-a13f-4107-85dc-02114787ef48",
+    "appDisplayName": "One Outlook Web",
+    "ipAddress": "2600:1012:b340:edaf:8cd1:34a5:332b:6f1e",
+    "clientAppUsed": "Browser",
+    "correlationId": "3e2b7c24-aa8b-de8b-6dc5-c26234380180",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 Exchange Online",
+    "resourceId": "00000002-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50088,
+      "failureReason": "Limit on telecom MFA calls reached. Please try again in a few minutes.",
+      "additionalDetails": "MFA required in Azure AD"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.3",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Mission Hills (San Diego)",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 32.76876,
+        "longitude": -117.20369
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "608159c8-72d9-4901-af7c-f43fd5961800",
+    "createdDateTime": "2026-04-17T21:15:16Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "9199bf20-a13f-4107-85dc-02114787ef48",
+    "appDisplayName": "One Outlook Web",
+    "ipAddress": "2600:1012:b340:edaf:8cd1:34a5:332b:6f1e",
+    "clientAppUsed": "Browser",
+    "correlationId": "3e2b7c24-aa8b-de8b-6dc5-c26234380180",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 Exchange Online",
+    "resourceId": "00000002-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50074,
+      "failureReason": "Strong Authentication is required.",
+      "additionalDetails": "User needs to perform multi-factor authentication. There could be multiple things requiring multi-factor, e.g. Conditional Access policies, per-user enforcement, requested by client, among others."
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.3",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Mission Hills (San Diego)",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 32.76876,
+        "longitude": -117.20369
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "e5fb4726-b5dc-4916-ab8f-1389b54a2800",
+    "createdDateTime": "2026-04-17T19:58:22Z",
+    "userDisplayName": "Intake HHOC",
+    "userPrincipalName": "intake@housingforhealthca.org",
+    "userId": "18a6d01c-a380-4c1a-8a65-993cb8d824e6",
+    "appId": "9199bf20-a13f-4107-85dc-02114787ef48",
+    "appDisplayName": "One Outlook Web",
+    "ipAddress": "2600:6c50:e40:1422:1b2:52a4:761a:8d31",
+    "clientAppUsed": "Browser",
+    "correlationId": "7427ad0c-acf2-a5a8-9dac-44f8dfd75a20",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 Exchange Online",
+    "resourceId": "00000002-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50126,
+      "failureReason": "Error validating credentials due to invalid username or password.",
+      "additionalDetails": "The user didn't enter the right credentials. \u00a0It's expected to see some number of these errors in your logs due to users making mistakes."
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Windows10",
+      "browser": "Chrome 147.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 34.15121,
+        "longitude": -118.27491
+      }
+    },
+    "appliedConditionalAccessPolicies": []
+  },
+  {
+    "id": "4cc2251d-1520-4f67-bbf3-dd9d74301200",
+    "createdDateTime": "2026-04-17T19:01:44Z",
+    "userDisplayName": "Maritza Alvarez",
+    "userPrincipalName": "maritza.a@housingforhealthca.org",
+    "userId": "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+    "appId": "9199bf20-a13f-4107-85dc-02114787ef48",
+    "appDisplayName": "One Outlook Web",
+    "ipAddress": "2600:1012:b340:edaf:8cd1:34a5:332b:6f1e",
+    "clientAppUsed": "Browser",
+    "correlationId": "d72e1f87-c467-2c56-01a6-9d41c1094456",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 Exchange Online",
+    "resourceId": "00000002-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50074,
+      "failureReason": "Strong Authentication is required.",
+      "additionalDetails": "User needs to perform multi-factor authentication. There could be multiple things requiring multi-factor, e.g. Conditional Access policies, per-user enforcement, requested by client, among others."
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.3",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Mission Hills (San Diego)",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 32.76876,
+        "longitude": -117.20369
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "37eabf91-eef5-4273-b87b-94e4e86a7300",
+    "createdDateTime": "2026-04-21T20:40:06Z",
+    "userDisplayName": "Montserrat  Hernandez",
+    "userPrincipalName": "montserrat.h@housingforhealthca.org",
+    "userId": "911c2ed1-7b93-4948-be15-f4b758d78680",
+    "appId": "00000003-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Office 365 SharePoint Online",
+    "ipAddress": "2600:1012:b37a:5ffd:68f9:1f41:e579:2b01",
+    "clientAppUsed": "Browser",
+    "correlationId": "243f0ca2-d038-c000-ce12-724ab6a633bd",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 SharePoint Online",
+    "resourceId": "00000003-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Ios 18.7.0",
+      "browser": "Mobile Safari 26.4",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Riverside",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.95354,
+        "longitude": -117.39656
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "db9fa188-5ca4-43bf-9d0f-bb3e1dbd2000",
+    "createdDateTime": "2026-04-23T21:41:34Z",
+    "userDisplayName": "Mary Rivers",
+    "userPrincipalName": "mary@codetenderloin26.onmicrosoft.com",
+    "userId": "15ac7590-b0c0-4071-bc79-d295e184d268",
+    "appId": "00000003-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Office 365 SharePoint Online",
+    "ipAddress": "2601:646:201:d530:b0a6:ce92:3d0d:713",
+    "clientAppUsed": "Browser",
+    "correlationId": "73e70ca2-8096-c000-f610-c41d77c122e0",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 SharePoint Online",
+    "resourceId": "00000003-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "{PII Removed}",
+      "displayName": "{PII Removed}",
+      "operatingSystem": "MacOs",
+      "browser": "Chrome 146.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 37.79691,
+        "longitude": -122.39826
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "21f55492-f856-4546-a071-9687f094f700",
+    "createdDateTime": "2026-04-27T22:44:38Z",
+    "userDisplayName": "Mary Rivers",
+    "userPrincipalName": "mary@codetenderloin26.onmicrosoft.com",
+    "userId": "15ac7590-b0c0-4071-bc79-d295e184d268",
+    "appId": "00000003-0000-0ff1-ce00-000000000000",
+    "appDisplayName": "Office 365 SharePoint Online",
+    "ipAddress": "98.51.100.187",
+    "clientAppUsed": "Browser",
+    "correlationId": "a6340ea2-40c2-c000-f610-caaebfd7f2a9",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Office 365 SharePoint Online",
+    "resourceId": "00000003-0000-0ff1-ce00-000000000000",
+    "status": {
+      "errorCode": 50140,
+      "failureReason": "This occurred due to 'Keep me signed in' interrupt when the user was signing in.",
+      "additionalDetails": "This is an expected part of the login flow, where a user is asked if they want to remain signed into this browser to make further logins easier. For more details, see https://techcommunity.microsoft.com/t5/microsoft-entra/the-new-azure-ad-sign-in-and-keep-me-signed-in-experiences/td-p/128267"
+    },
+    "deviceDetail": {
+      "deviceId": "{PII Removed}",
+      "displayName": "{PII Removed}",
+      "operatingSystem": "MacOs",
+      "browser": "Chrome 147.0.0",
+      "isCompliant": false,
+      "isManaged": false,
+      "trustType": null
+    },
+    "location": {
+      "city": "Emeryville",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 37.83543,
+        "longitude": -122.27813
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "notApplied"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+        "displayName": "Require multifactor authentication for Azure management",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  },
+  {
+    "id": "5502e18c-2e11-4510-ad81-5403d7994100",
+    "createdDateTime": "2026-04-30T17:35:59Z",
+    "userDisplayName": "Technijian, Inc. technician",
+    "userPrincipalName": "user_33835aabb3d04208bb5e28171fdba12a@technijian.com",
+    "userId": "33835aab-b3d0-4208-bb5e-28171fdba12a",
+    "appId": "5cbc8ba3-2795-4129-9258-b41102cac82e",
+    "appDisplayName": "Technijian-Partner-Graph-Read",
+    "ipAddress": "64.58.160.XXX",
+    "clientAppUsed": "Mobile Apps and Desktop clients",
+    "correlationId": "d4195a2c-ec70-4bda-a977-f9de20f9b50b",
+    "conditionalAccessStatus": "success",
+    "isInteractive": true,
+    "riskDetail": "hidden",
+    "riskLevelAggregated": "hidden",
+    "riskLevelDuringSignIn": "hidden",
+    "riskState": "none",
+    "riskEventTypes": [],
+    "riskEventTypes_v2": [],
+    "resourceDisplayName": "Windows Azure Active Directory",
+    "resourceId": "00000002-0000-0000-c000-000000000000",
+    "status": {
+      "errorCode": 65001,
+      "failureReason": "The user or administrator has not consented to use the application with ID '{identifier}'{namePhrase}. Send an interactive authorization request for this user and resource.",
+      "additionalDetails": "MFA requirement satisfied by claim in the token"
+    },
+    "deviceDetail": {
+      "deviceId": "{PII Removed}",
+      "displayName": "{PII Removed}",
+      "operatingSystem": "Windows10",
+      "browser": "Edge 147.0.0",
+      "isCompliant": true,
+      "isManaged": true,
+      "trustType": null
+    },
+    "location": {
+      "city": "Fountain Valley",
+      "state": "California",
+      "countryOrRegion": "US",
+      "geoCoordinates": {
+        "altitude": null,
+        "latitude": 33.72917,
+        "longitude": -117.92024
+      }
+    },
+    "appliedConditionalAccessPolicies": [
+      {
+        "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+        "displayName": "Require multifactor authentication for admins",
+        "enforcedGrantControls": [
+          "Mfa"
+        ],
+        "enforcedSessionControls": [],
+        "result": "success"
+      },
+      {
+        "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+        "displayName": "Require multifactor authentication for all users",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      },
+      {
+        "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+        "displayName": "Block legacy authentication",
+        "enforcedGrantControls": [],
+        "enforcedSessionControls": [],
+        "result": "notEnabled"
+      }
+    ]
+  }
+]

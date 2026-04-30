@@ -1,0 +1,65 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_23a00488",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_23a00488.mp4",
+  "analyzed_at": "2026-04-30T19:25:55Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive system health check and optimization, investigating network activity, disabling unnecessary Windows services (WebClient and Windows Search), performing a disk cleanup, reviewing system logs and performance metrics, and concluding with an internet speed test.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Ran `netstat -ano` in Command Prompt to inspect network connections.\",\n    \"Attempted to identify a process by PID using `tasklist /svc /fi \\\"pid eq [PID]\\\"` which was not found.\",\n    \"Reviewed network activity in Resource Monitor.\",\n    \"Disabled the 'WebClient' service.\",\n    \"Disabled the 'Windows Search' service.\",\n    \"Performed a Disk Cleanup, including system files.\",\n    \"Checked Windows Update status.\",\n    \"Checked Disk Defragmentation and Optimization status.\",\n    \"Reviewed Task Manager (Performance, Startup, and Details tabs).\",\n    \"Reviewed Event Viewer (System and Application logs).\",\n    \"Checked Network and Sharing Center.\",\n    \"Reviewed Device Manager via System Properties.\",\n    \"Performed an internet speed test using fast.com.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Resource Monitor\",\n    \"Services\",\n    \"Windows Update\",\n    \"Defragment and Optimize Drives\",\n    \"Task Manager\",\n    \"Disk Cleanup\",\n    \"Event Viewer\",\n    \"Network and Sharing Center\",\n    \"System Properties\",\n    \"Device Manager\",\n    \"Microsoft Edge\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [\n    \"WebClient service disabled\",\n    \"Windows Search service disabled\"\n  ],\n  \"machines_touched\": [\n    \"PC\"\n  ],\n  \"notable_events\": [\n    \"Disabling 'WebClient' and 'Windows Search' services for system optimization.\",\n    \"Initial investigation of a transient PID (3692) using netstat and tasklist which quickly disappeared.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, moving directly to each diagnostic tool or configuration setting without hesitation. All actions were performed promptly and purposefully.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive system health check and optimization, investigating network activity, disabling unnecessary Windows services (WebClient and Windows Search), performing a disk cleanup, reviewing system logs and performance metrics, and concluding with an internet speed test.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Ran `netstat -ano` in Command Prompt to inspect network connections.",
+      "Attempted to identify a process by PID using `tasklist /svc /fi \"pid eq [PID]\"` which was not found.",
+      "Reviewed network activity in Resource Monitor.",
+      "Disabled the 'WebClient' service.",
+      "Disabled the 'Windows Search' service.",
+      "Performed a Disk Cleanup, including system files.",
+      "Checked Windows Update status.",
+      "Checked Disk Defragmentation and Optimization status.",
+      "Reviewed Task Manager (Performance, Startup, and Details tabs).",
+      "Reviewed Event Viewer (System and Application logs).",
+      "Checked Network and Sharing Center.",
+      "Reviewed Device Manager via System Properties.",
+      "Performed an internet speed test using fast.com."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Resource Monitor",
+      "Services",
+      "Windows Update",
+      "Defragment and Optimize Drives",
+      "Task Manager",
+      "Disk Cleanup",
+      "Event Viewer",
+      "Network and Sharing Center",
+      "System Properties",
+      "Device Manager",
+      "Microsoft Edge"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [
+      "WebClient service disabled",
+      "Windows Search service disabled"
+    ],
+    "machines_touched": [
+      "PC"
+    ],
+    "notable_events": [
+      "Disabling 'WebClient' and 'Windows Search' services for system optimization.",
+      "Initial investigation of a transient PID (3692) using netstat and tasklist which quickly disappeared."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, moving directly to each diagnostic tool or configuration setting without hesitation. All actions were performed promptly and purposefully.",
+      "coaching_flags": []
+    }
+  }
+}

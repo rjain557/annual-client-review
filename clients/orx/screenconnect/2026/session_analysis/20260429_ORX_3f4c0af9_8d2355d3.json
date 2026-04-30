@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260429_ORX_3f4c0af9_8d2355d3",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260429_ORX_3f4c0af9_8d2355d3.mp4",
+  "analyzed_at": "2026-04-30T19:09:22Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed maintenance tasks including uninstalling Zoom and Mozilla Firefox applications, and attempting to delete temporary files. They also briefly inspected service properties and attempted to log into a Google account via Chrome, which failed due to 2-step verification and an unrecognized device error.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Attempted to log into a Google account via Chrome, which failed due to 2-step verification and an unrecognized device error.\",\n    \"Checked properties of the 'Remote Desktop Services UserMode Port Redirector' service.\",\n    \"Checked properties of the 'ScreenConnect Client' service.\",\n    \"Attempted to delete temporary files from C:\\\\Windows\\\\temp (partially successful, encountered 'Folder Access Denied' and 'File In Use' errors).\",\n    \"Uninstalled the Zoom application.\",\n    \"Uninstalled the Mozilla Firefox application.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"Services\",\n    \"File Explorer\",\n    \"Control Panel (Programs and Features)\"\n  ],\n  \"issues_observed\": [\n    \"Google login failed due to 2-step verification and 'This device isn't recognized' error.\",\n    \"'Folder Access Denied' and 'File In Use' errors encountered when attempting to delete temporary files from C:\\\\Windows\\\\temp.\"\n  ],\n  \"issues_resolved\": [\n    \"Zoom application successfully uninstalled.\",\n    \"Mozilla Firefox application successfully uninstalled.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically and efficiently, moving quickly between tasks and abandoning attempts that failed (e.g., Google login, full temp file deletion) without excessive deliberation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed maintenance tasks including uninstalling Zoom and Mozilla Firefox applications, and attempting to delete temporary files. They also briefly inspected service properties and attempted to log into a Google account via Chrome, which failed due to 2-step verification and an unrecognized device error.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Attempted to log into a Google account via Chrome, which failed due to 2-step verification and an unrecognized device error.",
+      "Checked properties of the 'Remote Desktop Services UserMode Port Redirector' service.",
+      "Checked properties of the 'ScreenConnect Client' service.",
+      "Attempted to delete temporary files from C:\\Windows\\temp (partially successful, encountered 'Folder Access Denied' and 'File In Use' errors).",
+      "Uninstalled the Zoom application.",
+      "Uninstalled the Mozilla Firefox application."
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "Services",
+      "File Explorer",
+      "Control Panel (Programs and Features)"
+    ],
+    "issues_observed": [
+      "Google login failed due to 2-step verification and 'This device isn't recognized' error.",
+      "'Folder Access Denied' and 'File In Use' errors encountered when attempting to delete temporary files from C:\\Windows\\temp."
+    ],
+    "issues_resolved": [
+      "Zoom application successfully uninstalled.",
+      "Mozilla Firefox application successfully uninstalled."
+    ],
+    "machines_touched": [],
+    "notable_events": [],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically and efficiently, moving quickly between tasks and abandoning attempts that failed (e.g., Google login, full temp file deletion) without excessive deliberation.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260423_Technijian_1fbf7d73_d46985b4",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_1fbf7d73_d46985b4.mp4",
+  "analyzed_at": "2026-04-30T19:30:25Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a remote machine, checked network status and some downloaded files. They then navigated to Namecheap.com to attempt a login, but the login failed due to too many prior incorrect attempts, triggering an account lockout warning.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Closed 'Advanced IP Scanner' window.\",\n    \"Closed File Explorer window showing downloaded iperf files.\",\n    \"Closed 'Ethernet 2 Status' window.\",\n    \"Canceled 'Shutdown Event Tracker' dialog.\",\n    \"Opened Google Chrome.\",\n    \"Navigated to namecheap.com.\",\n    \"Dismissed cookie consent banner.\",\n    \"Attempted to sign in to Namecheap using username 'technijian' and password 'Support92618!'.\",\n    \"Observed failed login and account lockout warning.\"\n  ],\n  \"applications_used\": [\n    \"Advanced IP Scanner\",\n    \"File Explorer\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Namecheap.com login failed with a message indicating '5 consecutive failed attempts' and a warning about imminent account lockout.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Remote desktop client machine (IPs in 10.100.254.x range observed during initial scan).\"\n  ],\n  \"notable_events\": [\n    \"A sensitive password ('Support92618!') was briefly revealed on screen during the Namecheap login attempt (00:32 - 00:35).\",\n    \"The login attempt to Namecheap failed due to multiple prior incorrect attempts, resulting in a warning that the account would be locked if this attempt also failed.\"\n  ],\n  \"concerns\": [\n    \"Security: The technician exposed a sensitive password ('Support92618!') on screen, which is a significant security risk as it could be captured in the recording or observed.\",\n    \"Quality: The technician proceeded with a login attempt on Namecheap.com despite a clear warning that it was the 'LAST try' after 5 failed attempts, risking an account lockout without first attempting a password reset or confirming account status.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved methodically through the initial steps. However, the decision to proceed with a login attempt after receiving a 'LAST TRY' warning for previous failed attempts suggests a lack of efficiency or pre-assessment that led to an account lockout risk.\",\n    \"coaching_flags\": [\n      \"Revealed a sensitive password ('Support92618!') on screen during a remote session, which is a security risk and should be avoided.\",\n      \"Attempted login after receiving a critical warning about multiple prior failed attempts, risking account lockout instead of immediately pursuing password reset or account status verification.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a remote machine, checked network status and some downloaded files. They then navigated to Namecheap.com to attempt a login, but the login failed due to too many prior incorrect attempts, triggering an account lockout warning.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Closed 'Advanced IP Scanner' window.",
+      "Closed File Explorer window showing downloaded iperf files.",
+      "Closed 'Ethernet 2 Status' window.",
+      "Canceled 'Shutdown Event Tracker' dialog.",
+      "Opened Google Chrome.",
+      "Navigated to namecheap.com.",
+      "Dismissed cookie consent banner.",
+      "Attempted to sign in to Namecheap using username 'technijian' and password 'Support92618!'.",
+      "Observed failed login and account lockout warning."
+    ],
+    "applications_used": [
+      "Advanced IP Scanner",
+      "File Explorer",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Namecheap.com login failed with a message indicating '5 consecutive failed attempts' and a warning about imminent account lockout."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Remote desktop client machine (IPs in 10.100.254.x range observed during initial scan)."
+    ],
+    "notable_events": [
+      "A sensitive password ('Support92618!') was briefly revealed on screen during the Namecheap login attempt (00:32 - 00:35).",
+      "The login attempt to Namecheap failed due to multiple prior incorrect attempts, resulting in a warning that the account would be locked if this attempt also failed."
+    ],
+    "concerns": [
+      "Security: The technician exposed a sensitive password ('Support92618!') on screen, which is a significant security risk as it could be captured in the recording or observed.",
+      "Quality: The technician proceeded with a login attempt on Namecheap.com despite a clear warning that it was the 'LAST try' after 5 failed attempts, risking an account lockout without first attempting a password reset or confirming account status."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved methodically through the initial steps. However, the decision to proceed with a login attempt after receiving a 'LAST TRY' warning for previous failed attempts suggests a lack of efficiency or pre-assessment that led to an account lockout risk.",
+      "coaching_flags": [
+        "Revealed a sensitive password ('Support92618!') on screen during a remote session, which is a security risk and should be avoided.",
+        "Attempted login after receiving a critical warning about multiple prior failed attempts, risking account lockout instead of immediately pursuing password reset or account status verification."
+      ]
+    }
+  }
+}

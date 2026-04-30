@@ -1,0 +1,43 @@
+{
+  "client_code": "NOR",
+  "tenant_id": "61d9b3ff-5962-4628-b32f-d840822545ce",
+  "month": "2026-04",
+  "errors": [],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 1,
+    "warn_count": 0,
+    "checks": [
+      {
+        "check": "Conditional Access Policies",
+        "status": "fail",
+        "value": "0 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "pass",
+        "value": "Security defaults enabled",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Global Administrator Count",
+        "status": "pass",
+        "value": "1 Global Admins",
+        "detail": "Best practice: 2-3 Global Admins maximum"
+      },
+      {
+        "check": "Microsoft Secure Score",
+        "status": "pass",
+        "value": "50.0/56.0 (89.3%)",
+        "detail": "Target: >60% of available score"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "pass",
+        "value": "0 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "filename_stem": "20260426_ANI_0d0f3a40_83cad7b4",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260426_ANI_0d0f3a40_83cad7b4.mp4",
+  "analyzed_at": "2026-04-30T17:43:39Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client computer to diagnose and configure network settings. They verified internet connectivity using ping and tracert, then changed the Ethernet adapter's DNS servers to Google's public DNS (8.8.8.8 and 8.8.4.4). The session concluded with DNS flushing, IP renewal, and a final connectivity check.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Checked current network configuration (IP, DNS, Gateway) using `ipconfig /all`.\",\n    \"Verified internet connectivity with `ping google.com` and `tracert google.com`.\",\n    \"Accessed Network Connections and modified the Ethernet adapter's IPv4 properties.\",\n    \"Changed the DNS server addresses to 8.8.8.8 (Preferred) and 8.8.4.4 (Alternate).\",\n    \"Ran network diagnostics, which reported no problems.\",\n    \"Flushed the DNS resolver cache using `ipconfig /flushdns`.\",\n    \"Registered DNS records using `ipconfig /registerdns`.\",\n    \"Released and renewed the IP address lease using `ipconfig /release` and `ipconfig /renew`.\",\n    \"Re-verified internet connectivity with `ping google.com`.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt (Admin)\",\n    \"Network Connections (ncpa.cpl)\",\n    \"Ethernet Status\",\n    \"Ethernet Properties\",\n    \"Internet Protocol Version 4 (TCP/IPv4) Properties\",\n    \"Windows Network Diagnostics\"\n  ],\n  \"issues_observed\": [\n    \"No specific issues or error messages were observed; the network troubleshooter reported 'Problems found: None'.\"\n  ],\n  \"issues_resolved\": [\n    \"No explicit issues were observed as resolved, though the actions imply a potential DNS or connectivity issue was being addressed.\"\n  ],\n  \"machines_touched\": [\n    \"Client machine (IP address 192.168.1.189 visible during ipconfig)\"\n  ],\n  \"notable_events\": [\n    \"The technician performed a series of methodical steps to configure and verify network settings.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, directly using command-line tools and GUI network settings to diagnose and configure the network. All steps were logical and executed without hesitation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client computer to diagnose and configure network settings. They verified internet connectivity using ping and tracert, then changed the Ethernet adapter's DNS servers to Google's public DNS (8.8.8.8 and 8.8.4.4). The session concluded with DNS flushing, IP renewal, and a final connectivity check.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Checked current network configuration (IP, DNS, Gateway) using `ipconfig /all`.",
+      "Verified internet connectivity with `ping google.com` and `tracert google.com`.",
+      "Accessed Network Connections and modified the Ethernet adapter's IPv4 properties.",
+      "Changed the DNS server addresses to 8.8.8.8 (Preferred) and 8.8.4.4 (Alternate).",
+      "Ran network diagnostics, which reported no problems.",
+      "Flushed the DNS resolver cache using `ipconfig /flushdns`.",
+      "Registered DNS records using `ipconfig /registerdns`.",
+      "Released and renewed the IP address lease using `ipconfig /release` and `ipconfig /renew`.",
+      "Re-verified internet connectivity with `ping google.com`."
+    ],
+    "applications_used": [
+      "Command Prompt (Admin)",
+      "Network Connections (ncpa.cpl)",
+      "Ethernet Status",
+      "Ethernet Properties",
+      "Internet Protocol Version 4 (TCP/IPv4) Properties",
+      "Windows Network Diagnostics"
+    ],
+    "issues_observed": [
+      "No specific issues or error messages were observed; the network troubleshooter reported 'Problems found: None'."
+    ],
+    "issues_resolved": [
+      "No explicit issues were observed as resolved, though the actions imply a potential DNS or connectivity issue was being addressed."
+    ],
+    "machines_touched": [
+      "Client machine (IP address 192.168.1.189 visible during ipconfig)"
+    ],
+    "notable_events": [
+      "The technician performed a series of methodical steps to configure and verify network settings."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, directly using command-line tools and GUI network settings to diagnose and configure the network. All steps were logical and executed without hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

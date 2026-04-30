@@ -1,0 +1,40 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_976dd687",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_976dd687.mp4",
+  "analyzed_at": "2026-04-30T19:45:18Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a server and modified a PHP configuration file for a Nextcloud instance. They updated the 'datadirectory' path from '/mnt/ncdata/' to '/mnt/ncdata/NC-groupfolders'.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Modified the 'datadirectory' path in a Nextcloud PHP configuration file to '/mnt/ncdata/NC-groupfolders'.\"\n  ],\n  \"applications_used\": [\n    \"Text editor (likely running in a terminal, possibly VS Code or Notepad++)\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"vaf-mydisk2.technijian.com\",\n    \"nextcloud-aio-database\"\n  ],\n  \"notable_events\": [\n    \"A comment '#this changed by deepak' was present next to the 'datadirectory' line, indicating previous modifications or specific instructions related to this setting.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked directly and efficiently, making a precise configuration change without any apparent hesitation or deviation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a server and modified a PHP configuration file for a Nextcloud instance. They updated the 'datadirectory' path from '/mnt/ncdata/' to '/mnt/ncdata/NC-groupfolders'.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Modified the 'datadirectory' path in a Nextcloud PHP configuration file to '/mnt/ncdata/NC-groupfolders'."
+    ],
+    "applications_used": [
+      "Text editor (likely running in a terminal, possibly VS Code or Notepad++)"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "vaf-mydisk2.technijian.com",
+      "nextcloud-aio-database"
+    ],
+    "notable_events": [
+      "A comment '#this changed by deepak' was present next to the 'datadirectory' line, indicating previous modifications or specific instructions related to this setting."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked directly and efficiently, making a precise configuration change without any apparent hesitation or deviation.",
+      "coaching_flags": []
+    }
+  }
+}

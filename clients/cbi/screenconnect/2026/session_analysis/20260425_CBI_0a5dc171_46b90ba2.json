@@ -1,0 +1,44 @@
+{
+  "filename_stem": "20260425_CBI_0a5dc171_46b90ba2",
+  "client_code": "CBI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\CBI-2026-04\\20260425_CBI_0a5dc171_46b90ba2.mp4",
+  "analyzed_at": "2026-04-30T18:02:20Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician remotely connected to a client computer to perform software removal. They systematically uninstalled the TeamViewer application by first stopping and disabling its associated service, then using the Control Panel's Programs and Features to remove the software, and finally ensuring all service entries were deleted via command prompt.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Stopped and disabled the 'TeamViewer (Service)' service using services.msc.\",\n    \"Uninstalled the 'TeamViewer' application via Control Panel's Programs and Features.\",\n    \"Removed residual TeamViewer service entry using the 'sc delete TeamViewer' command in an elevated Command Prompt.\",\n    \"Refreshed the desktop.\"\n  ],\n  \"applications_used\": [\n    \"Services (services.msc)\",\n    \"Control Panel\",\n    \"Programs and Features\",\n    \"Command Prompt (cmd.exe)\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [\n    \"Successfully removed the TeamViewer application and all its associated components from the system.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The technician performed a thorough removal by using the 'sc delete' command to ensure no residual service entries remained after the standard uninstall process.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, demonstrating a clear understanding of the steps required for a complete software uninstallation, including cleaning up residual service entries.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician remotely connected to a client computer to perform software removal. They systematically uninstalled the TeamViewer application by first stopping and disabling its associated service, then using the Control Panel's Programs and Features to remove the software, and finally ensuring all service entries were deleted via command prompt.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Stopped and disabled the 'TeamViewer (Service)' service using services.msc.",
+      "Uninstalled the 'TeamViewer' application via Control Panel's Programs and Features.",
+      "Removed residual TeamViewer service entry using the 'sc delete TeamViewer' command in an elevated Command Prompt.",
+      "Refreshed the desktop."
+    ],
+    "applications_used": [
+      "Services (services.msc)",
+      "Control Panel",
+      "Programs and Features",
+      "Command Prompt (cmd.exe)"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [
+      "Successfully removed the TeamViewer application and all its associated components from the system."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The technician performed a thorough removal by using the 'sc delete' command to ensure no residual service entries remained after the standard uninstall process."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, demonstrating a clear understanding of the steps required for a complete software uninstallation, including cleaning up residual service entries.",
+      "coaching_flags": []
+    }
+  }
+}

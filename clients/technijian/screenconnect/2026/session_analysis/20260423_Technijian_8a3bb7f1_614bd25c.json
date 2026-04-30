@@ -1,0 +1,46 @@
+{
+  "filename_stem": "20260423_Technijian_8a3bb7f1_614bd25c",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_8a3bb7f1_614bd25c.mp4",
+  "analyzed_at": "2026-04-30T19:35:25Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician is reviewing a ChatGPT output that provides a list of \\\"Priority fixes\\\" for a network lab environment. These recommendations address various configuration issues, including vPC keepalive methods, OS standardization, labeling discrepancies, and ACL policies, indicating a planning phase for network configuration changes.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Reviewing AI-generated network configuration recommendations from ChatGPT\",\n    \"Analyzing priority fixes related to vPC, OS standardization, labeling, mirroring, and ACL policies\"\n  ],\n  \"applications_used\": [\n    \"Browser (displaying ChatGPT)\",\n    \"Notepad\"\n  ],\n  \"issues_observed\": [\n    \"ChatGPT identified that LAB-02 configuration is not closely aligned with DC-02, potentially due to partial or repurposed configuration.\",\n    \"Internal configuration drift was observed in the lab pair, specifically regarding vPC keepalive, interface descriptions, and routing syntax.\",\n    \"Specific priority fixes were recommended: standardizing vPC keepalive methods, standardizing to one NK-OS train, correcting label/description mistakes, deciding on full mirroring for LAB-02 from DC-02 (which would require substantial rebuild of SVIs, HSRP, routes, and port-channel roles), and reconciling ACL policy differences.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"LAB-01\",\n    \"LAB-02\",\n    \"DC-02\"\n  ],\n  \"notable_events\": [\n    \"The primary tool for analyzing and planning network fixes is ChatGPT, suggesting a modern approach to network troubleshooting and configuration.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician appears to be working methodically, leveraging an AI tool (ChatGPT) to efficiently analyze complex network configuration issues and prioritize remediation steps. The static screen indicates active reading and processing of information rather than inactivity.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician is reviewing a ChatGPT output that provides a list of \"Priority fixes\" for a network lab environment. These recommendations address various configuration issues, including vPC keepalive methods, OS standardization, labeling discrepancies, and ACL policies, indicating a planning phase for network configuration changes.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Reviewing AI-generated network configuration recommendations from ChatGPT",
+      "Analyzing priority fixes related to vPC, OS standardization, labeling, mirroring, and ACL policies"
+    ],
+    "applications_used": [
+      "Browser (displaying ChatGPT)",
+      "Notepad"
+    ],
+    "issues_observed": [
+      "ChatGPT identified that LAB-02 configuration is not closely aligned with DC-02, potentially due to partial or repurposed configuration.",
+      "Internal configuration drift was observed in the lab pair, specifically regarding vPC keepalive, interface descriptions, and routing syntax.",
+      "Specific priority fixes were recommended: standardizing vPC keepalive methods, standardizing to one NK-OS train, correcting label/description mistakes, deciding on full mirroring for LAB-02 from DC-02 (which would require substantial rebuild of SVIs, HSRP, routes, and port-channel roles), and reconciling ACL policy differences."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "LAB-01",
+      "LAB-02",
+      "DC-02"
+    ],
+    "notable_events": [
+      "The primary tool for analyzing and planning network fixes is ChatGPT, suggesting a modern approach to network troubleshooting and configuration."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician appears to be working methodically, leveraging an AI tool (ChatGPT) to efficiently analyze complex network configuration issues and prioritize remediation steps. The static screen indicates active reading and processing of information rather than inactivity.",
+      "coaching_flags": []
+    }
+  }
+}

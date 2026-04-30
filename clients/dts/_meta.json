@@ -3,6 +3,7 @@
   "DirID": 8052,
   "Location_Name": "Disruptix Talent Solutions",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.DTS",
   "Data_Signals": [
     "cp",
     "huntress",
@@ -21,9 +22,18 @@
   "Time_Entries_This_Month": 1,
   "Total_Active_Users": 2,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5468,
+    "Contract_Name": "Monthly Support",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "Active",
+    "DateSigned": "2025-08-26T15:30:07.8530000",
+    "Signed_DirID": 8056
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

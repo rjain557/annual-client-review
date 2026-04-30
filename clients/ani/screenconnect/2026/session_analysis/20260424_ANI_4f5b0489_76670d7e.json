@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260424_ANI_4f5b0489_76670d7e",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260424_ANI_4f5b0489_76670d7e.mp4",
+  "analyzed_at": "2026-04-30T17:41:47Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician remotely accessed the client's desktop, logged in, and attempted to open an Excel file. Subsequently, they tried to launch Google Chrome, which resulted in a 'Run Error' message indicating a missing Snagit executable file. The session ended shortly after the error was dismissed, with no apparent resolution.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Logged into the Windows desktop as 'Neil Andersen'.\",\n    \"Attempted to open an Excel file named 'SAB_2396_...'.\",\n    \"Clicked 'OK' on an 'Agent Launch' window, possibly related to Cydexmation software.\",\n    \"Attempted to launch Google Chrome from the taskbar.\",\n    \"Dismissed a 'Run Error' dialog box.\"\n  ],\n  \"applications_used\": [\n    \"Microsoft Excel (attempted to open a file)\",\n    \"Google Chrome (attempted to launch)\",\n    \"Cydexmation Agent Launch (system utility)\",\n    \"Snagit (referenced in error message)\"\n  ],\n  \"issues_observed\": [\n    \"Excel file did not visually open after being clicked (or opened off-screen).\",\n    \"An 'Agent Launch' window briefly appeared and disappeared.\",\n    \"A 'Run Error' occurred when attempting to launch Google Chrome, stating 'Cannot run command 'C:\\\\users\\\\NA\\\\appdata\\\\roaming\\\\techsmith\\\\snagit\\\\2023\\\\snagit.exe'' due to the file or folder not existing. This suggests an issue with Chrome's shortcut or an integration failure with Snagit.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Neil Andersen's computer\"\n  ],\n  \"notable_events\": [\n    \"Encountered a 'Run Error' when launching Chrome, indicating a problem with a Snagit executable path.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"00:09 - 00:16 (7 seconds): Cursor idle after attempting to open an Excel file.\",\n      \"00:19 - 00:33 (14 seconds): Cursor idle after dismissing the 'Agent Launch' window, before attempting to open Chrome.\",\n      \"00:38 - 00:44 (6 seconds): Cursor idle after dismissing the 'Run Error' until the end of the recording.\"\n    ],\n    \"idle_gap_count\": 3,\n    \"longest_idle_seconds\": 14,\n    \"total_idle_estimate_seconds\": 27,\n    \"efficiency_notes\": \"The technician performed limited actions, attempting to open two applications. One resulted in an error, which was acknowledged but not investigated or resolved within the captured session.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician remotely accessed the client's desktop, logged in, and attempted to open an Excel file. Subsequently, they tried to launch Google Chrome, which resulted in a 'Run Error' message indicating a missing Snagit executable file. The session ended shortly after the error was dismissed, with no apparent resolution.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Logged into the Windows desktop as 'Neil Andersen'.",
+      "Attempted to open an Excel file named 'SAB_2396_...'.",
+      "Clicked 'OK' on an 'Agent Launch' window, possibly related to Cydexmation software.",
+      "Attempted to launch Google Chrome from the taskbar.",
+      "Dismissed a 'Run Error' dialog box."
+    ],
+    "applications_used": [
+      "Microsoft Excel (attempted to open a file)",
+      "Google Chrome (attempted to launch)",
+      "Cydexmation Agent Launch (system utility)",
+      "Snagit (referenced in error message)"
+    ],
+    "issues_observed": [
+      "Excel file did not visually open after being clicked (or opened off-screen).",
+      "An 'Agent Launch' window briefly appeared and disappeared.",
+      "A 'Run Error' occurred when attempting to launch Google Chrome, stating 'Cannot run command 'C:\\users\\NA\\appdata\\roaming\\techsmith\\snagit\\2023\\snagit.exe'' due to the file or folder not existing. This suggests an issue with Chrome's shortcut or an integration failure with Snagit."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Neil Andersen's computer"
+    ],
+    "notable_events": [
+      "Encountered a 'Run Error' when launching Chrome, indicating a problem with a Snagit executable path."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "00:09 - 00:16 (7 seconds): Cursor idle after attempting to open an Excel file.",
+        "00:19 - 00:33 (14 seconds): Cursor idle after dismissing the 'Agent Launch' window, before attempting to open Chrome.",
+        "00:38 - 00:44 (6 seconds): Cursor idle after dismissing the 'Run Error' until the end of the recording."
+      ],
+      "idle_gap_count": 3,
+      "longest_idle_seconds": 14,
+      "total_idle_estimate_seconds": 27,
+      "efficiency_notes": "The technician performed limited actions, attempting to open two applications. One resulted in an error, which was acknowledged but not investigated or resolved within the captured session.",
+      "coaching_flags": []
+    }
+  }
+}

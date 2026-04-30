@@ -1,0 +1,49 @@
+{
+  "client_code": "CBI",
+  "tenant_id": "d8a53075-5e10-4bf9-84ac-7f4595d67295",
+  "month": "2026-04",
+  "errors": [],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 1,
+    "warn_count": 1,
+    "checks": [
+      {
+        "check": "MFA Registration",
+        "status": "warn",
+        "value": "88.2% (15/17 users)",
+        "detail": "Target: 100% of users registered for MFA"
+      },
+      {
+        "check": "Conditional Access Policies",
+        "status": "pass",
+        "value": "2 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "fail",
+        "value": "Not blocked",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Global Administrator Count",
+        "status": "pass",
+        "value": "1 Global Admins",
+        "detail": "Best practice: 2-3 Global Admins maximum"
+      },
+      {
+        "check": "Microsoft Secure Score",
+        "status": "pass",
+        "value": "182.53/278.0 (65.7%)",
+        "detail": "Target: >60% of available score"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "pass",
+        "value": "0 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

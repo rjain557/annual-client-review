@@ -1,0 +1,51 @@
+{
+  "filename_stem": "20260422_Technijian_1d4f315e_2f1c2a8a",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_1d4f315e_2f1c2a8a.mp4",
+  "analyzed_at": "2026-04-30T19:11:48Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The remote support session recording is severely corrupted, displaying large pixelated blocks instead of the actual screen content. Due to this extreme video corruption, it is impossible to observe the technician's actions, the client's issues, or any work performed during the entire 6-minute 15-second session.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\"Unable to determine due to severe video corruption.\"],\n  \"applications_used\": [\"Google Chrome (tab title 'about:blank' briefly visible amidst corruption)\"],\n  \"issues_observed\": [\"Severe video corruption and pixelation throughout the entire recording (0:00-6:15), rendering the remote session content unviewable. This corruption manifests as large, shifting black and grey horizontal and vertical blocks.\"],\n  \"issues_resolved\": [\"Unable to determine due to severe video corruption.\"],\n  \"machines_touched\": [\"Unable to determine due to severe video corruption.\"],\n  \"notable_events\": [\"The entire recording from start to finish is characterized by severe video corruption, making it impossible to discern any meaningful activity, user interface, or text on the remote machine. This effectively renders the recording useless for analysis of the support session.\"],\n  \"concerns\": [\"Critical video quality issue: The recording is entirely unwatchable due to severe corruption, preventing any review of the support session for accuracy, completeness, or adherence to procedures.\"],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\"The display remained static and heavily corrupted with large grey and black blocks from 0:00 until the end of the recording (6:15). This state suggests either the remote session itself was unusable/frozen for the technician, or the recording process failed, preventing any visible progress or interaction. Duration: ~6 minutes 15 seconds.\"],\n    \"idle_gaps\": [\"00:00-06:15 (375 seconds): The entire video displays a severely corrupted and mostly static image, making it impossible to confirm any active work or technician presence. If the remote session was functioning for the technician, their actions are not visible; if it was corrupted for them as well, then the entire session would be considered an idle/unproductive period.\"],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 375,\n    \"total_idle_estimate_seconds\": 375,\n    \"efficiency_notes\": \"Unable to assess efficiency as the video is completely corrupted, making all potential actions and progress unviewable.\",\n    \"coaching_flags\": [\"Investigate the root cause of the severe video corruption in this recording. Determine if the issue lies with the remote session itself (e.g., display driver issues on the client machine, network problems), the ScreenConnect recording mechanism, or the playback environment. Ensure future sessions are recorded in a viewable format for proper auditing and quality control.\", \"If the corruption was visible to the technician during the session, review procedures for handling unusable remote session displays and documenting such issues.\"]\n  }\n}",
+  "analysis": {
+    "summary": "The remote support session recording is severely corrupted, displaying large pixelated blocks instead of the actual screen content. Due to this extreme video corruption, it is impossible to observe the technician's actions, the client's issues, or any work performed during the entire 6-minute 15-second session.",
+    "session_type": "other",
+    "actions_taken": [
+      "Unable to determine due to severe video corruption."
+    ],
+    "applications_used": [
+      "Google Chrome (tab title 'about:blank' briefly visible amidst corruption)"
+    ],
+    "issues_observed": [
+      "Severe video corruption and pixelation throughout the entire recording (0:00-6:15), rendering the remote session content unviewable. This corruption manifests as large, shifting black and grey horizontal and vertical blocks."
+    ],
+    "issues_resolved": [
+      "Unable to determine due to severe video corruption."
+    ],
+    "machines_touched": [
+      "Unable to determine due to severe video corruption."
+    ],
+    "notable_events": [
+      "The entire recording from start to finish is characterized by severe video corruption, making it impossible to discern any meaningful activity, user interface, or text on the remote machine. This effectively renders the recording useless for analysis of the support session."
+    ],
+    "concerns": [
+      "Critical video quality issue: The recording is entirely unwatchable due to severe corruption, preventing any review of the support session for accuracy, completeness, or adherence to procedures."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "The display remained static and heavily corrupted with large grey and black blocks from 0:00 until the end of the recording (6:15). This state suggests either the remote session itself was unusable/frozen for the technician, or the recording process failed, preventing any visible progress or interaction. Duration: ~6 minutes 15 seconds."
+      ],
+      "idle_gaps": [
+        "00:00-06:15 (375 seconds): The entire video displays a severely corrupted and mostly static image, making it impossible to confirm any active work or technician presence. If the remote session was functioning for the technician, their actions are not visible; if it was corrupted for them as well, then the entire session would be considered an idle/unproductive period."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 375,
+      "total_idle_estimate_seconds": 375,
+      "efficiency_notes": "Unable to assess efficiency as the video is completely corrupted, making all potential actions and progress unviewable.",
+      "coaching_flags": [
+        "Investigate the root cause of the severe video corruption in this recording. Determine if the issue lies with the remote session itself (e.g., display driver issues on the client machine, network problems), the ScreenConnect recording mechanism, or the playback environment. Ensure future sessions are recorded in a viewable format for proper auditing and quality control.",
+        "If the corruption was visible to the technician during the session, review procedures for handling unusable remote session displays and documenting such issues."
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "filename_stem": "20260429_ANI_4f5b0489_d6e2f9d8",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260429_ANI_4f5b0489_d6e2f9d8.mp4",
+  "analyzed_at": "2026-04-30T17:59:29Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to map a network drive (Z: to \\\\\\\\10.10.5.53\\\\MICHELE\\\\Code12) which failed with an error indicating the network name was unavailable. After acknowledging the error, the technician tried to map the same network path with a different drive letter (Y:), and then initiated browsing for the network folder, which appeared to be unresponsive.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to map network drive Z: to \\\\\\\\10.10.5.53\\\\MICHELE\\\\Code12\",\n    \"Acknowledged an error message about the network name being unavailable\",\n    \"Changed the desired drive letter from Z: to Y: for mapping\",\n    \"Initiated browsing for the network folder \\\\\\\\10.10.5.53\\\\MICHELE\\\\Code12\",\n    \"Communicated with the client via GoToAssist chat\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Map Network Drive dialog\",\n    \"GoToAssist chat\"\n  ],\n  \"issues_observed\": [\n    \"Error message: 'The mapped network drive could not be created because the following error has occurred: The specified network name is no longer available.'\",\n    \"The 'Browse For Folder' dialog hung or was very slow to load network locations (indicated by a loading spinner)\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"10.10.5.53\"\n  ],\n  \"notable_events\": [\n    \"The technician received a clear error message that the network path was unavailable, but continued to attempt mapping without immediately diagnosing the network connectivity to the target server.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"After the initial drive mapping failed due to 'network name is no longer available' (00:12), the technician attempted to map the same problematic path using a different drive letter (Y: at 00:20), indicating a lack of methodical troubleshooting for the underlying network availability issue. The subsequent 'Browse For Folder' action (from 00:39) was also stuck loading until the end of the video, prolonging the inactivity.\"\n    ],\n    \"idle_gaps\": [\n      \"00:14 - 00:20 (6 seconds): After dismissing the error, the technician paused before changing the drive letter.\",\n      \"00:20 - 00:33 (13 seconds): The technician selected the Y: drive and paused before clicking 'Browse...'\"\n    ],\n    \"idle_gap_count\": 2,\n    \"longest_idle_seconds\": 13,\n    \"total_idle_estimate_seconds\": 19,\n    \"efficiency_notes\": \"The technician did not appear to follow a clear troubleshooting methodology for network connectivity issues. Instead of verifying the availability of the network path after the initial error, they attempted a similar action (mapping with a different drive letter) and then initiated a slow network browse.\",\n    \"coaching_flags\": [\n      \"Should have verified the availability of the network path/server (e.g., ping, `net view`, or attempting to access via \\\\\\\\IPADDRESS) immediately after receiving the 'network name is no longer available' error, rather than immediately retrying the map drive function with a different drive letter.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to map a network drive (Z: to \\\\10.10.5.53\\MICHELE\\Code12) which failed with an error indicating the network name was unavailable. After acknowledging the error, the technician tried to map the same network path with a different drive letter (Y:), and then initiated browsing for the network folder, which appeared to be unresponsive.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to map network drive Z: to \\\\10.10.5.53\\MICHELE\\Code12",
+      "Acknowledged an error message about the network name being unavailable",
+      "Changed the desired drive letter from Z: to Y: for mapping",
+      "Initiated browsing for the network folder \\\\10.10.5.53\\MICHELE\\Code12",
+      "Communicated with the client via GoToAssist chat"
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Map Network Drive dialog",
+      "GoToAssist chat"
+    ],
+    "issues_observed": [
+      "Error message: 'The mapped network drive could not be created because the following error has occurred: The specified network name is no longer available.'",
+      "The 'Browse For Folder' dialog hung or was very slow to load network locations (indicated by a loading spinner)"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "10.10.5.53"
+    ],
+    "notable_events": [
+      "The technician received a clear error message that the network path was unavailable, but continued to attempt mapping without immediately diagnosing the network connectivity to the target server."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "After the initial drive mapping failed due to 'network name is no longer available' (00:12), the technician attempted to map the same problematic path using a different drive letter (Y: at 00:20), indicating a lack of methodical troubleshooting for the underlying network availability issue. The subsequent 'Browse For Folder' action (from 00:39) was also stuck loading until the end of the video, prolonging the inactivity."
+      ],
+      "idle_gaps": [
+        "00:14 - 00:20 (6 seconds): After dismissing the error, the technician paused before changing the drive letter.",
+        "00:20 - 00:33 (13 seconds): The technician selected the Y: drive and paused before clicking 'Browse...'"
+      ],
+      "idle_gap_count": 2,
+      "longest_idle_seconds": 13,
+      "total_idle_estimate_seconds": 19,
+      "efficiency_notes": "The technician did not appear to follow a clear troubleshooting methodology for network connectivity issues. Instead of verifying the availability of the network path after the initial error, they attempted a similar action (mapping with a different drive letter) and then initiated a slow network browse.",
+      "coaching_flags": [
+        "Should have verified the availability of the network path/server (e.g., ping, `net view`, or attempting to access via \\\\IPADDRESS) immediately after receiving the 'network name is no longer available' error, rather than immediately retrying the map drive function with a different drive letter."
+      ]
+    }
+  }
+}

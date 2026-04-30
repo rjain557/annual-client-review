@@ -3,6 +3,7 @@
   "DirID": 4307,
   "Location_Name": "Coast Aero Mfg",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.CAM",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": true,
@@ -17,9 +18,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 3,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 4396,
+    "Contract_Name": "Hourly Rate (2020)",
+    "ContractType": "Hourly Rate",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2020-01-24T15:03:13.8130000",
+    "Signed_DirID": 211
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

@@ -22,6 +22,7 @@ import json
 import os
 import re
 import time
+import xml.etree.ElementTree as _ET
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -215,6 +216,137 @@ def get_invoices_xml(client_dir_id: int) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Ticket creation (stp_xml_Tkt_API_CreateV3)
+# ---------------------------------------------------------------------------
+
+def _xml_escape(value: Any) -> str:
+    """Escape a value for safe inclusion in an XML element body.
+
+    Handles None, ints, and strings. Escapes &, <, >, " and ' so that
+    user-supplied text in Title/Description never breaks the XML envelope.
+    """
+    if value is None:
+        return ""
+    s = str(value)
+    return (s.replace("&", "&amp;")
+             .replace("<", "&lt;")
+             .replace(">", "&gt;")
+             .replace('"', "&quot;")
+             .replace("'", "&apos;"))
+
+
+def build_ticket_xml(*,
+                     requestor_dir_id: int,
+                     assign_to_dir_id: int,
+                     contract_id: int,
+                     title: str,
+                     priority: int,
+                     status: int,
+                     description: str,
+                     request_type: str,
+                     role_type: int,
+                     work_type: int,
+                     client_id: int,
+                     asset_id: int = 0,
+                     location_top_filter: str = "",
+                     asset_txt: str = "",
+                     status_txt: str = "",
+                     priority_txt: str = "",
+                     parent_id: int = 0,
+                     created_by: str = "clientportal@technijian.com",
+                     category: str = "API") -> str:
+    """Build the <Root><Ticket>...</Ticket></Root> XML payload accepted by
+    stp_xml_Tkt_API_CreateV3.
+
+    All values are XML-escaped. Required SP fields per the CP API:
+      Requestor_DirID, AssignTo_DirID, ContractID, Title, Priority, Status,
+      Description, RequestType, RoleType, WorkType, ClientID.
+    """
+    fields = [
+        ("Requestor_DirID", requestor_dir_id),
+        ("AssignTo_DirID", assign_to_dir_id),
+        ("ContractID", contract_id),
+        ("AssetID", asset_id),
+        ("Title", title),
+        ("Priority", priority),
+        ("Status", status),
+        ("Description", description),
+        ("RequestType", request_type),
+        ("LocationTopFilter", location_top_filter),
+        ("RoleType", role_type),
+        ("WorkType", work_type),
+        ("ClientID", client_id),
+        ("AssetTxt", asset_txt),
+        ("StatusTxt", status_txt),
+        ("PriorityTxt", priority_txt),
+        ("ParentID", parent_id),
+        ("CreatedBy", created_by),
+        ("Category", category),
+    ]
+    parts = ["<Root>", "<Ticket>"]
+    for tag, value in fields:
+        parts.append(f"<{tag}>{_xml_escape(value)}</{tag}>")
+    parts.append("</Ticket>")
+    parts.append("</Root>")
+    return "".join(parts)
+
+
+def create_ticket_v3(xml_payload: str) -> dict:
+    """Call stp_xml_Tkt_API_CreateV3 with a pre-built XML payload.
+
+    Returns the full SP response dict. The caller is responsible for
+    interpreting `resultSets` / `outputParameters`. Use `extract_ticket_id`
+    to pull the new TicketID out of the response.
+    """
+    return execute_sp("dbo", "dbo", "stp_xml_Tkt_API_CreateV3",
+                      {"XML_IN": xml_payload})
+
+
+def extract_ticket_id(result: dict) -> Optional[int]:
+    """Best-effort extraction of the new TicketID from a CreateV3 response.
+
+    The SP returns the inserted row's identity in one of several shapes
+    across CP API versions. Tries (in order):
+      1) outputParameters.XML_OUT — XML envelope <Root><Tickets><TicketID>N</TicketID></Tickets></Root>
+         (confirmed live shape as of 2026-04-30)
+      2) outputParameters direct key: TicketID / Ticket_ID / TktID / NewTicketID
+      3) first resultSets row's TicketID / Ticket_ID / TktID / ID / NewTicketID
+    """
+    op = result.get("outputParameters") or result.get("OutputParameters") or {}
+
+    # 1) XML_OUT envelope (primary live shape)
+    xml_out = op.get("XML_OUT") or op.get("xml_out") or ""
+    if xml_out and "<TicketID>" in xml_out:
+        try:
+            root = _ET.fromstring(xml_out)
+            node = root.find(".//TicketID")
+            if node is not None and node.text:
+                return int(node.text)
+        except Exception:
+            pass
+
+    # 2) Direct outputParameter keys
+    for k, v in op.items():
+        if k.lower() in ("ticketid", "ticket_id", "tktid", "newticketid"):
+            try:
+                return int(v) if v not in (None, "") else None
+            except (TypeError, ValueError):
+                return None
+
+    # 3) First resultSet row
+    rows = sp_rows(result, 0)
+    if rows:
+        first = rows[0]
+        for key in ("TicketID", "Ticket_ID", "TktID", "ID", "NewTicketID"):
+            if key in first and first[key] not in (None, ""):
+                try:
+                    return int(first[key])
+                except (TypeError, ValueError):
+                    return None
+    return None
+
+
+# ---------------------------------------------------------------------------
 # XML parsing (Root/<ChildTag>/* flat-record shape used by the API)
 # ---------------------------------------------------------------------------
 
@@ -275,4 +407,7 @@ __all__ = [
     "get_invoices_xml",
     "parse_flat_xml",
     "iso_date",
+    "build_ticket_xml",
+    "create_ticket_v3",
+    "extract_ticket_id",
 ]

@@ -1,0 +1,44 @@
+{
+  "filename_stem": "20260428_ORX_6a773039_465884bf",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260428_ORX_6a773039_465884bf.mp4",
+  "analyzed_at": "2026-04-30T19:02:01Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Windows computer that was in the process of booting after applying updates, showing 'Getting Windows ready' and 'Working on updates 100% complete' messages. After the system reached the lock screen, the technician attempted to log in multiple times as 'Administrator' but encountered a persistent issue where the login screen would briefly show 'Welcome' before returning to the password prompt. The session ended with the message 'Please wait for the User Profile Service' appearing.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Waited for Windows to complete system preparation and update application.\",\n    \"Dismissed the lock screen.\",\n    \"Attempted to log in as 'Administrator' by entering a password and clicking submit (at least 3 times).\"\n  ],\n  \"applications_used\": [],\n  \"issues_observed\": [\n    \"Extended boot time after updates (showing 'Getting Windows ready' and 'Working on updates').\",\n    \"Repeated failed login attempts for the 'Administrator' account, where the system briefly displayed 'Welcome' but then returned to the password prompt.\",\n    \"The system displayed 'Please wait for the User Profile Service' at the end of the recording, indicating a potential issue or delay in loading the user profile.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client computer (no specific name visible)\"\n  ],\n  \"notable_events\": [\n    \"The repeated login attempts for the Administrator account that failed to progress beyond the 'Welcome' screen, indicating a persistent login issue or profile loading delay.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"From approximately 00:38 to 00:46, the technician repeatedly entered the password for the 'Administrator' account and clicked submit. Each attempt resulted in a brief 'Welcome' message followed by the login screen reappearing, indicating a loop where the login was not completing. This repetition of the same action lasted for about 8 seconds, suggesting the technician was stuck on the login issue.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician spent a significant portion of the recording waiting for system processes (booting, updates). Once at the login screen, they methodically attempted to log in but appeared to be stuck in a loop of repeated password entry when the initial attempts failed, rather than immediately trying alternative troubleshooting steps for a login issue.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Windows computer that was in the process of booting after applying updates, showing 'Getting Windows ready' and 'Working on updates 100% complete' messages. After the system reached the lock screen, the technician attempted to log in multiple times as 'Administrator' but encountered a persistent issue where the login screen would briefly show 'Welcome' before returning to the password prompt. The session ended with the message 'Please wait for the User Profile Service' appearing.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Waited for Windows to complete system preparation and update application.",
+      "Dismissed the lock screen.",
+      "Attempted to log in as 'Administrator' by entering a password and clicking submit (at least 3 times)."
+    ],
+    "applications_used": [],
+    "issues_observed": [
+      "Extended boot time after updates (showing 'Getting Windows ready' and 'Working on updates').",
+      "Repeated failed login attempts for the 'Administrator' account, where the system briefly displayed 'Welcome' but then returned to the password prompt.",
+      "The system displayed 'Please wait for the User Profile Service' at the end of the recording, indicating a potential issue or delay in loading the user profile."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client computer (no specific name visible)"
+    ],
+    "notable_events": [
+      "The repeated login attempts for the Administrator account that failed to progress beyond the 'Welcome' screen, indicating a persistent login issue or profile loading delay."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "From approximately 00:38 to 00:46, the technician repeatedly entered the password for the 'Administrator' account and clicked submit. Each attempt resulted in a brief 'Welcome' message followed by the login screen reappearing, indicating a loop where the login was not completing. This repetition of the same action lasted for about 8 seconds, suggesting the technician was stuck on the login issue."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician spent a significant portion of the recording waiting for system processes (booting, updates). Once at the login screen, they methodically attempted to log in but appeared to be stuck in a loop of repeated password entry when the initial attempts failed, rather than immediately trying alternative troubleshooting steps for a login issue.",
+      "coaching_flags": []
+    }
+  }
+}

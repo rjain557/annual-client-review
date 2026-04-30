@@ -3,6 +3,7 @@
   "DirID": 108,
   "Location_Name": "Ortho Xpress",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.ORX",
   "Data_Signals": [
     "cp",
     "huntress",
@@ -21,9 +22,18 @@
   "Time_Entries_This_Month": 213,
   "Total_Active_Users": 150,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5353,
+    "Contract_Name": "Monthly Support - 2025",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2025-04-04T08:00:49.6430000",
+    "Signed_DirID": 5046
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_212840c4",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_212840c4.mp4",
+  "analyzed_at": "2026-04-30T18:42:07Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into a Windows client machine. An initial login attempt failed due to a typo in the administrator username. The technician corrected the typo and successfully initiated the login process, which was awaiting the User Profile Service at the end of the recording.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Attempted to log in as 'oxpl\\\\adminstrtor' with an incorrect password.\",\n    \"Corrected the username from 'oxpl\\\\adminstrtor' to 'oxpl\\\\Administrator'.\",\n    \"Successfully initiated login as 'oxpl\\\\Administrator' with the correct password.\"\n  ],\n  \"applications_used\": [],\n  \"issues_observed\": [\n    \"Login failure: 'The user name or password is incorrect. Try again.' due to a username typo.\"\n  ],\n  \"issues_resolved\": [\n    \"Username typo corrected, allowing the login process to proceed.\"\n  ],\n  \"machines_touched\": [\n    \"Client Windows machine (domain: oxpl)\"\n  ],\n  \"notable_events\": [\n    \"Initial login attempt failed due to a minor typo ('adminstrtor' instead of 'Administrator') in the username field.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked efficiently, quickly identifying and correcting a typo in the username to proceed with the login.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into a Windows client machine. An initial login attempt failed due to a typo in the administrator username. The technician corrected the typo and successfully initiated the login process, which was awaiting the User Profile Service at the end of the recording.",
+    "session_type": "other",
+    "actions_taken": [
+      "Attempted to log in as 'oxpl\\adminstrtor' with an incorrect password.",
+      "Corrected the username from 'oxpl\\adminstrtor' to 'oxpl\\Administrator'.",
+      "Successfully initiated login as 'oxpl\\Administrator' with the correct password."
+    ],
+    "applications_used": [],
+    "issues_observed": [
+      "Login failure: 'The user name or password is incorrect. Try again.' due to a username typo."
+    ],
+    "issues_resolved": [
+      "Username typo corrected, allowing the login process to proceed."
+    ],
+    "machines_touched": [
+      "Client Windows machine (domain: oxpl)"
+    ],
+    "notable_events": [
+      "Initial login attempt failed due to a minor typo ('adminstrtor' instead of 'Administrator') in the username field."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked efficiently, quickly identifying and correcting a typo in the username to proceed with the login.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,102 +1,144 @@
-"""Client Portal ticket creation — STUB awaiting SP signature.
+"""Sophos alert router compatibility shim.
 
-Discovered via the public OpenAPI spec (https://api-clientportal.technijian.com/swagger/v1/swagger.json):
+The canonical Client Portal ticket-create helper now lives at
+`scripts/clientportal/cp_tickets.py` next to `cp_api.py`. This shim:
 
-  POST /api/modules/dbo/stored-procedures/client-portal/dbo/stp_xml_Tkt_API_Create/execute
-  POST /api/modules/dbo/stored-procedures/client-portal/dbo/stp_xml_Tkt_API_CreateV2/execute
-  POST /api/modules/dbo/stored-procedures/client-portal/dbo/stp_xml_Tkt_API_CreateV3/execute  <- presumed latest
+  - Re-exports the high-level `create_ticket(...)` from the canonical module
+    with a Sophos-friendly call signature (subject/description, opener_id,
+    billable kwarg) so `route_alerts.py` does not need a refactor.
+  - Re-exports the operational defaults (`INDIA_SUPPORT_POD`,
+    `CLIENT_BILLABLE`) the router prints in routing-plan.json.
 
-  Assignment:
-  POST /api/modules/dbo/stored-procedures/client-portal/dbo/stp_Tkt_Assigned_Save/execute
-
-  Lookups (read-only, safe to probe):
-  POST /api/modules/lookups/stored-procedures/client-portal/dbo/stp_xml_Lookup_Priority_DSB_Ticket_Filter/execute
-  POST /api/modules/lookups/stored-procedures/client-portal/dbo/stp_xml_Lookup_Status_DSB_Ticket_Filter/execute
-  POST /api/modules/pod/stored-procedures/client-portal/dbo/stp_xml_TechTktShift_List_Get/execute
-
-The OpenAPI spec models every SP body as a generic
-`{"Parameters": <object>}` — the actual required parameters for the
-ticket-create SPs are NOT in the spec. Live probing of the write SPs is
-explicitly NOT done from this code without prior user approval.
-
-To wire this up, the user needs to provide one of:
-    (a) The exact `Parameters` object the front-end sends when creating a
-        ticket via the Client Portal UI (a network capture of one ticket
-        create from the portal will give us this in 30 seconds).
-    (b) A direct read-out of the SP signature from CP source: the parameter
-        names + types for stp_xml_Tkt_API_CreateV3 and stp_Tkt_Assigned_Save.
-    (c) Explicit approval to probe stp_xml_Tkt_API_CreateV3 with empty
-        Parameters (SQL Server typically returns "Procedure expects parameter
-        @X" which reveals the required signature one parameter at a time).
-
-Until the SP is wired, `create_ticket()` raises NotImplementedError so the
-router can never silently no-op while pretending to have created a ticket.
-
-Companion items still to be supplied once the SP is known:
-    - INDIA_SUPPORT_POD value (group/user/queue id; from
-      stp_xml_TechTktShift_List_Get or directly from the CP admin).
-    - AUTOMATION_OPENER_ID for audit attribution.
+Sophos client alerts are CLIENT-BILLABLE — they hit the client's contract
+via `ContractID`, not Technijian's internal cost center. The router's
+`billable=True` convention is preserved here. There is currently no
+SP-level billable flag in `stp_xml_Tkt_API_CreateV3`; ContractID itself
+encodes the billing entity.
 """
 from __future__ import annotations
 
+import importlib.util
+import sys
+from pathlib import Path
+
+# The canonical module lives at scripts/clientportal/cp_tickets.py — same
+# filename as this shim, so a plain `import cp_tickets` collides via
+# sys.modules. Load by file path under a different module name.
+_REPO_ROOT = Path(__file__).resolve().parents[3]
+_CP_SCRIPTS = _REPO_ROOT / "scripts" / "clientportal"
+if str(_CP_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_CP_SCRIPTS))  # so cp_api.py is importable from the canonical module
+
+_canonical_path = _CP_SCRIPTS / "cp_tickets.py"
+_spec = importlib.util.spec_from_file_location("cp_tickets_canonical", _canonical_path)
+_canonical = importlib.util.module_from_spec(_spec)
+sys.modules["cp_tickets_canonical"] = _canonical
+_spec.loader.exec_module(_canonical)
+
+# ---- Re-exported defaults the router reads ---------------------------------
+
 # Resolved 2026-04-29 via stp_GetTechnijianUser_PodList:
 #   DirID=205  CHD : TS1  (Chandigarh Tech Support) — India tech support pod
-#   DirID=206  CHD : PR1  (Chandigarh Programming) — dev work, NOT this pipeline
-# Sophos firewall alerts are tech-support work (break-fix / connectivity),
-# so they go to CHD : TS1, not the programming pod.
-INDIA_SUPPORT_POD = 205
-INDIA_SUPPORT_POD_NAME = "CHD : TS1"
+INDIA_SUPPORT_POD = _canonical.INDIA_SUPPORT_POD_DIRID
+INDIA_SUPPORT_POD_NAME = _canonical.INDIA_SUPPORT_POD_NAME
 
-# Default ticket priority for Sophos firewall alerts. Adjust as needed.
-DEFAULT_PRIORITY = "Normal"
-
-# Tickets opened on behalf of automation should record a known operator id
-# (so the audit log shows the source). Replace once the CP SP is wired.
-AUTOMATION_OPENER_ID = "TODO_AUTOMATION_USER_ID"
-
-# Client-alert tickets are CLIENT BILLABLE (against the managed-IT contract
-# or T&M), NOT Technijian-internal. The SP parameter name for this flag is
-# yet to be confirmed — likely `IsBillable`, `Billable`, `TicketType`, or
-# `IsInternal=False` (presence of stp_xml_InternalTicket_Setting_List_Get
-# in the OpenAPI strongly implies internal-vs-billable is a distinct flag).
-# When wiring the SP, ensure this maps to the BILLABLE branch so the work
-# is on the client's contract / hits their invoice, not Technijian's
-# internal cost center.
+# Sophos alerts are client-billable by default (against the managed-IT
+# contract, NOT Technijian internal). ContractID resolution at call time
+# enforces this — there is no separate SP flag.
 CLIENT_BILLABLE = True
 INTERNAL_TICKET = False
+
+# Default priority/category for Sophos alert tickets. Maps free-text severity
+# strings to the CP Priority lookup ids.
+#   Critical -> 1253 "Critical"        (Sophos critical alerts)
+#   High     -> 1255 "Same Day"        (Sophos high alerts)
+#   Medium   -> 1256 "Next Day"        (Sophos medium alerts)
+#   Low      -> 1257 "When Convenient" (Sophos low / informational)
+#   Normal   -> 1257 "When Convenient" (legacy default)
+PRIORITY_BY_SEVERITY = {
+    "critical": 1253,
+    "high": 1255,
+    "medium": 1256,
+    "low": 1257,
+    "normal": 1257,
+    "info": 2611,        # 2611 = "Watch"
+    "informational": 2611,
+}
+DEFAULT_PRIORITY = "Normal"  # legacy free-text — translated below
+AUTOMATION_OPENER_ID = _canonical.DEFAULT_CREATED_BY
 
 
 def create_ticket(*,
                   client_dir_id: int,
                   subject: str,
                   description: str,
-                  assigned_to: str = INDIA_SUPPORT_POD,
-                  priority: str = DEFAULT_PRIORITY,
+                  assigned_to: int = INDIA_SUPPORT_POD,
+                  priority=DEFAULT_PRIORITY,
                   source: str = "Sophos Central (auto)",
                   opener_id: str = AUTOMATION_OPENER_ID,
                   billable: bool = CLIENT_BILLABLE) -> dict:
-    """Create a CP ticket. Currently UNWIRED — raises NotImplementedError.
+    """Create a CP ticket for a Sophos alert.
 
     Args:
         client_dir_id: CP DirID of the client this ticket is FOR (their
-            contract is what gets billed, NOT Technijian's house tenant).
-        subject / description: human-readable text.
-        assigned_to: target queue/pod/user (default INDIA_SUPPORT_POD).
-        priority: CP priority enum value.
-        source: free-form attribution string for the audit log.
-        opener_id: CP user id under whom the ticket is opened (audit).
-        billable: True = client-billable (default for client alerts);
-            False = Technijian internal. For Sophos client alerts ALWAYS
-            pass billable=True. Internal infrastructure issues (e.g. the
-            Technijian house tenant firewall) would pass False.
+            contract is what gets billed).
+        subject / description: human-readable text -> Title / Description.
+        assigned_to: AssignTo_DirID; defaults to the India support pod.
+        priority: legacy free-text priority; ignored when not numeric.
+            Translated to Priority=1 (Normal) unless overridden upstream.
+        source: free-form attribution string prepended to the description.
+        opener_id: CreatedBy attribution string for the audit log.
+        billable: True = client-billable. Currently advisory — ContractID
+            resolution determines the billing entity.
 
-    Returns: {"ticket_id": <id>, "ticket_url": <url>, "raw": <SP response>}
-    Raises:  NotImplementedError until the SP signature is supplied.
+    Returns: {"ticket_id": <id|None>, "ticket_url": <url|None>, "raw": <SP response>}
+    Raises: RuntimeError if no Active signed contract exists for the client.
     """
-    raise NotImplementedError(
-        "CP ticket-create SP not yet wired. See module docstring for the "
-        "checklist of what to fill in. Until then, route_alerts.py runs in "
-        "REPORT mode (no --apply) and logs what would be created. The "
-        "wired implementation MUST honour the `billable` flag so client "
-        "alerts hit the client contract, not Technijian internal."
+    contract_id = _canonical.lookup_active_contract_id(client_dir_id)
+    if contract_id is None:
+        raise RuntimeError(
+            f"No Active signed contract for ClientID={client_dir_id}; "
+            "cannot create a billable ticket. Resolve via the contracts pipeline."
+        )
+
+    body = description if not source else f"[{source}]\n{description}"
+
+    # Map free-text severity to a CP Priority lookup id.
+    if isinstance(priority, int):
+        priority_int = priority
+    else:
+        key = (priority or "").strip().lower()
+        priority_int = PRIORITY_BY_SEVERITY.get(key, _canonical.DEFAULT_PRIORITY)
+
+    # Sophos client alerts route to the offshore tech-support pod, so the
+    # right RoleType is "Off-Shore Tech Support" (1236), not the canonical
+    # default of 1232 "Tech Support".
+    location_top_filter = _canonical.lookup_location_top_filter_by_dir_id(client_dir_id)
+    result = _canonical.create_ticket(
+        requestor_dir_id=client_dir_id,
+        client_id=client_dir_id,
+        contract_id=contract_id,
+        title=subject,
+        description=body,
+        assign_to_dir_id=assigned_to,
+        priority=priority_int,
+        role_type=1236,  # Off-Shore Tech Support
+        location_top_filter=location_top_filter,
+        created_by=opener_id,
     )
+    return {
+        "ticket_id": result["ticket_id"],
+        "ticket_url": None,  # CP does not expose a stable per-ticket URL via this SP
+        "raw": result["raw"],
+    }
+
+
+__all__ = [
+    "INDIA_SUPPORT_POD",
+    "INDIA_SUPPORT_POD_NAME",
+    "CLIENT_BILLABLE",
+    "INTERNAL_TICKET",
+    "DEFAULT_PRIORITY",
+    "AUTOMATION_OPENER_ID",
+    "create_ticket",
+]

@@ -1,0 +1,157 @@
+{
+  "id": "61d9b3ff-5962-4628-b32f-d840822545ce_2026-04-30",
+  "azureTenantId": "61d9b3ff-5962-4628-b32f-d840822545ce",
+  "activeUserCount": 3,
+  "createdDateTime": "2026-04-30T00:00:00Z",
+  "currentScore": 50.0,
+  "enabledServices": [
+    "HasAADFree"
+  ],
+  "licensedUserCount": 0,
+  "maxScore": 56.0,
+  "vendorInformation": {
+    "provider": "SecureScore",
+    "providerVersion": null,
+    "subProvider": null,
+    "vendor": "Microsoft"
+  },
+  "averageComparativeScores": [
+    {
+      "basis": "AllTenants",
+      "averageScore": 53.52,
+      "appsScore": 40.28,
+      "appsScoreMax": 103.0,
+      "dataScore": 0.76,
+      "dataScoreMax": 4.36,
+      "deviceScore": 12.09,
+      "deviceScoreMax": 22.08,
+      "identityScore": 37.84,
+      "identityScoreMax": 61.41,
+      "infrastructureScore": 0.0,
+      "infrastructureScoreMax": 0.0
+    },
+    {
+      "basis": "TotalSeats",
+      "averageScore": 46.68,
+      "SeatSizeRangeLowerValue": "1",
+      "SeatSizeRangeUpperValue": "100",
+      "appsScore": 46.19,
+      "appsScoreMax": 127.03,
+      "dataScore": 0.71,
+      "dataScoreMax": 5.43,
+      "deviceScore": 9.53,
+      "deviceScoreMax": 17.47,
+      "identityScore": 36.36,
+      "identityScoreMax": 61.59,
+      "infrastructureScore": 0.0,
+      "infrastructureScoreMax": 0.0
+    }
+  ],
+  "controlScores": [
+    {
+      "controlCategory": "Identity",
+      "controlName": "IntegratedApps",
+      "description": "To reduce the risk of malicious applications attempting to trick users into granting them access to your organization's data, we recommend that you allow user consent only for applications that have been published by a verified publisher.",
+      "score": 0.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have no user consent policy in place.",
+      "on": "false",
+      "scoreInPercentage": 0.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "PWAgePolicyNew",
+      "description": "Research has found that when periodic password resets are enforced, passwords become less secure. Users tend to pick a weaker password and vary it slightly for each reset. If a user creates a strong password (long, complex and without any pragmatic words present) it should remain just as strong in the future as it is today. It is Microsoft's official security position to not expire passwords periodically without a specific reason, and recommends that cloud-only tenants set the password policy to never expire.",
+      "score": 8.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "Your current policy is set to never let passwords expire.",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "SelfServicePasswordReset",
+      "description": "With self-service password reset in Microsoft Entra ID, users no longer need to engage help desk to reset passwords. This feature works well with Microsoft Entra ID dynamically banned passwords, which prevents easily guessable passwords from being used.",
+      "score": 1.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 of 0 users who don't have self-service password reset enabled.",
+      "count": "0",
+      "total": "0",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "BlockLegacyAuthentication",
+      "description": "Today, most compromising sign-in attempts come from legacy authentication. Older office clients such as Office 2010 don\u2019t support modern authentication and use legacy protocols such as IMAP, SMTP, and POP3. Legacy authentication does not support multifactor authentication (MFA). Even if an MFA policy is configured in your environment, bad actors can bypass these enforcements through legacy protocols.",
+      "score": 8.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 of 3 users that don't have legacy authentication blocked.",
+      "count": "3",
+      "total": "3",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "MFARegistrationV2",
+      "description": "Multifactor authentication (MFA) helps protect devices and data that are accessible to these users. Adding more authentication methods, such as the Microsoft Authenticator app or a phone number, increases the level of protection if one factor is compromised.",
+      "score": 9.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 out of 3 users that aren\u2019t registered with MFA.",
+      "count": "3",
+      "total": "3",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "AdminMFAV2",
+      "description": "<p>Requiring multifactor authentication (MFA) for administrative roles makes it harder for attackers to access accounts. Administrative roles have higher permissions than typical users. If any of those accounts are compromised, your entire organization is exposed. At a minimum, protect the following roles:&nbsp;</p><ul><li>Global administrator&nbsp;</li><li>Authentication administrator&nbsp;</li><li>Billing administrator&nbsp;</li><li>Conditional Access administrator&nbsp;</li><li>Exchange administrator&nbsp;</li><li>Helpdesk administrator&nbsp;</li><li>Security administrator&nbsp;</li><li>SharePoint administrator&nbsp;</li><li>User administrator&nbsp;</li></ul>",
+      "score": 10.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 out of 0 users with administrative roles that aren\u2019t registered and protected with MFA.",
+      "count": "0",
+      "total": "0",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "SigninRiskPolicy",
+      "description": "Turning on the sign-in risk policy ensures that suspicious sign-ins are challenged for multifactor authentication (MFA).",
+      "score": 7.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 of 3 users that don't have the sign-in risky policy turned on.",
+      "count": "3",
+      "total": "3",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "UserRiskPolicy",
+      "description": "With the user risk policy turned on, Microsoft Entra ID detects the probability that a user account has been compromised. As an administrator, you can configure a user risk Conditional Access policy to automatically respond to a specific user risk level. For example, you can block access to your resources or require a password change to get a user account back into a clean state.",
+      "score": 7.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 users out of 3 that do not have user risk policy enabled.",
+      "count": "3",
+      "total": "3",
+      "scoreInPercentage": 100.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "OneAdmin",
+      "description": "<p>Having more than one global administrator helps if you are unable to fulfill the needs or obligations of your organization. It's important to have a delegate or an emergency account someone from your team can access if necessary. It also allows admins the ability to monitor each other for signs of a breach.</p> <p><strong>Note</strong>:</p> <p>According to CIS O365 Benchmark 2.0.0, the suggestion is to have between two to four global admins. Currently, the condition to comply is to have more than one global administrator - This security recommendation will be updated accordingly to CIS benchmark in the future.</p> <p><h4>Rationale:</h4></p> <p>If there is only one global tenant administrator, he or she can perform malicious activity without the possibility of being discovered by another admin. If there are numerous global tenant administrators, the more likely it is that one of their accounts will be successfully breached by an external attacker.</p>",
+      "score": 0.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You currently have 1 global admins.",
+      "count": "1",
+      "scoreInPercentage": 0.0
+    },
+    {
+      "controlCategory": "Identity",
+      "controlName": "RoleOverlap",
+      "description": "Ensure that your administrators can accomplish their work with the least amount of privilege assigned to their account. Assigning users roles like Password Administrator or Exchange Online Administrator, instead of Global Administrator, reduces the likelihood of a global administrative privileged account being breached.",
+      "score": 0.0,
+      "lastSynced": "2026-04-26T04:32:55Z",
+      "implementationStatus": "You have 0 users with least privileged administrative roles.",
+      "count": "0",
+      "scoreInPercentage": 0.0
+    }
+  ]
+}

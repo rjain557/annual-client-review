@@ -1,0 +1,87 @@
+{
+  "filename_stem": "20260422_Technijian_1fbf7d73_ed813e5f",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_1fbf7d73_ed813e5f.mp4",
+  "analyzed_at": "2026-04-30T19:16:19Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician connected to a client machine to perform network diagnostics, including `tracert` and `ipconfig`. They downloaded iPerf3 for bandwidth testing. During the session, the technician inadvertently misconfigured the client's network adapter by manually setting an incorrect static IP, which resulted in a loss of network connectivity. After resolving this self-induced issue by reverting to automatic IP configuration, they successfully ran the iPerf3 test.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Checked network trace to a remote server (10.100.254.171).\",\n    \"Checked local IP configuration using `ipconfig`.\",\n    \"Downloaded iPerf3 application binaries via Chrome.\",\n    \"Extracted the iPerf3 application.\",\n    \"Attempted to run iPerf3 for network performance testing.\",\n    \"Incorrectly configured the client's network adapter (IPv4 address).\",\n    \"Diagnosed and reverted the incorrect network configuration.\",\n    \"Re-ran iPerf3 to confirm restored network performance.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Google Chrome\",\n    \"File Explorer\",\n    \"Control Panel\",\n    \"iPerf3\"\n  ],\n  \"issues_observed\": [\n    \"\\\"Shutdown Event Tracker\\\" dialog indicating an unexpected shutdown.\",\n    \"Client machine lost network connectivity after technician's IP configuration change.\",\n    \"iPerf3 tests initially failed due to incorrect network configuration and target IP.\"\n  ],\n  \"issues_resolved\": [\n    \"Loss of network connectivity (self-induced) by reverting IP configuration.\",\n    \"Successfully confirmed network performance using iPerf3 after restoring connectivity.\"\n  ],\n  \"machines_touched\": [\n    \"Client machine (IP: 10.100.254.173)\",\n    \"Server ops.technijian.com (IP: 10.100.254.171)\"\n  ],\n  \"notable_events\": [\n    \"The presence of a \\\"Shutdown Event Tracker\\\" dialog at the start suggests a prior system crash or unexpected shutdown.\",\n    \"The technician inadvertently caused a network outage by manually changing the client's IP address to an incorrect value.\"\n  ],\n  \"concerns\": [\n    \"The technician made an untested and unannounced network configuration change that caused a loss of network connectivity.\",\n    \"The technician spent time troubleshooting a self-induced problem, impacting efficiency.\",\n    \"An extended period of inactivity was observed after the work appeared to be completed.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"~3:40-3:49: The technician attempted to manually set a static IP address for the client's network adapter, incorrectly entering '10.100.7.173' (instead of '10.100.254.173'), which immediately caused a 'No network access' state. They clicked 'OK' to apply this erroneous setting.\",\n      \"~4:40-4:46: With network connectivity broken, the technician attempted to re-run the iPerf3 test using the incorrect target IP '10.100.7.171' (consistent with their prior misconfiguration attempt), resulting in connection failures before diagnosing the actual network settings issue.\",\n      \"~2:14-2:40: After the first iperf test, the technician closed and reopened Command Prompt, then attempted to run iperf3 without navigating back into the correct directory, leading to a 'not recognized' error before correcting the path.\"\n    ],\n    \"idle_gaps\": [\n      \"~0:07-0:10 (3s)\",\n      \"~0:26-0:27 (1s)\",\n      \"~0:40-0:43 (3s)\",\n      \"~1:26-1:37 (11s)\",\n      \"~2:10-2:14 (4s)\",\n      \"~2:29-2:34 (5s)\",\n      \"~2:47-2:49 (2s)\",\n      \"~2:54-3:03 (9s)\",\n      \"~3:20-3:23 (3s)\",\n      \"~3:26-3:32 (6s)\",\n      \"~3:58-4:03 (5s)\",\n      \"~4:19-4:26 (7s)\",\n      \"~5:02-5:08 (6s)\",\n      \"~5:14-5:19 (5s)\",\n      \"~5:29-5:32 (3s)\",\n      \"~6:20-7:20 (60s)\"\n    ],\n    \"idle_gap_count\": 16,\n    \"longest_idle_seconds\": 60,\n    \"total_idle_estimate_seconds\": 133,\n    \"efficiency_notes\": \"The technician initially showed a methodical approach but introduced a critical network configuration error that required significant time to diagnose and resolve. This self-induced issue, coupled with several small pauses and one large idle period at the end, severely impacted the overall efficiency of the session.\",\n    \"coaching_flags\": [\n      \"Avoid making arbitrary or untested configuration changes to critical network settings without a clear plan or client consultation, as this can lead to service disruption.\",\n      \"Improve diagnostic skills to quickly identify and rectify self-induced errors.\",\n      \"Minimize idle time during remote sessions, especially after tasks are ostensibly complete, or clearly communicate any waiting periods to the client.\"\n    ]\n  }\n}",
+  "analysis": {
+    "summary": "The technician connected to a client machine to perform network diagnostics, including `tracert` and `ipconfig`. They downloaded iPerf3 for bandwidth testing. During the session, the technician inadvertently misconfigured the client's network adapter by manually setting an incorrect static IP, which resulted in a loss of network connectivity. After resolving this self-induced issue by reverting to automatic IP configuration, they successfully ran the iPerf3 test.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Checked network trace to a remote server (10.100.254.171).",
+      "Checked local IP configuration using `ipconfig`.",
+      "Downloaded iPerf3 application binaries via Chrome.",
+      "Extracted the iPerf3 application.",
+      "Attempted to run iPerf3 for network performance testing.",
+      "Incorrectly configured the client's network adapter (IPv4 address).",
+      "Diagnosed and reverted the incorrect network configuration.",
+      "Re-ran iPerf3 to confirm restored network performance."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Google Chrome",
+      "File Explorer",
+      "Control Panel",
+      "iPerf3"
+    ],
+    "issues_observed": [
+      "\"Shutdown Event Tracker\" dialog indicating an unexpected shutdown.",
+      "Client machine lost network connectivity after technician's IP configuration change.",
+      "iPerf3 tests initially failed due to incorrect network configuration and target IP."
+    ],
+    "issues_resolved": [
+      "Loss of network connectivity (self-induced) by reverting IP configuration.",
+      "Successfully confirmed network performance using iPerf3 after restoring connectivity."
+    ],
+    "machines_touched": [
+      "Client machine (IP: 10.100.254.173)",
+      "Server ops.technijian.com (IP: 10.100.254.171)"
+    ],
+    "notable_events": [
+      "The presence of a \"Shutdown Event Tracker\" dialog at the start suggests a prior system crash or unexpected shutdown.",
+      "The technician inadvertently caused a network outage by manually changing the client's IP address to an incorrect value."
+    ],
+    "concerns": [
+      "The technician made an untested and unannounced network configuration change that caused a loss of network connectivity.",
+      "The technician spent time troubleshooting a self-induced problem, impacting efficiency.",
+      "An extended period of inactivity was observed after the work appeared to be completed."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "~3:40-3:49: The technician attempted to manually set a static IP address for the client's network adapter, incorrectly entering '10.100.7.173' (instead of '10.100.254.173'), which immediately caused a 'No network access' state. They clicked 'OK' to apply this erroneous setting.",
+        "~4:40-4:46: With network connectivity broken, the technician attempted to re-run the iPerf3 test using the incorrect target IP '10.100.7.171' (consistent with their prior misconfiguration attempt), resulting in connection failures before diagnosing the actual network settings issue.",
+        "~2:14-2:40: After the first iperf test, the technician closed and reopened Command Prompt, then attempted to run iperf3 without navigating back into the correct directory, leading to a 'not recognized' error before correcting the path."
+      ],
+      "idle_gaps": [
+        "~0:07-0:10 (3s)",
+        "~0:26-0:27 (1s)",
+        "~0:40-0:43 (3s)",
+        "~1:26-1:37 (11s)",
+        "~2:10-2:14 (4s)",
+        "~2:29-2:34 (5s)",
+        "~2:47-2:49 (2s)",
+        "~2:54-3:03 (9s)",
+        "~3:20-3:23 (3s)",
+        "~3:26-3:32 (6s)",
+        "~3:58-4:03 (5s)",
+        "~4:19-4:26 (7s)",
+        "~5:02-5:08 (6s)",
+        "~5:14-5:19 (5s)",
+        "~5:29-5:32 (3s)",
+        "~6:20-7:20 (60s)"
+      ],
+      "idle_gap_count": 16,
+      "longest_idle_seconds": 60,
+      "total_idle_estimate_seconds": 133,
+      "efficiency_notes": "The technician initially showed a methodical approach but introduced a critical network configuration error that required significant time to diagnose and resolve. This self-induced issue, coupled with several small pauses and one large idle period at the end, severely impacted the overall efficiency of the session.",
+      "coaching_flags": [
+        "Avoid making arbitrary or untested configuration changes to critical network settings without a clear plan or client consultation, as this can lead to service disruption.",
+        "Improve diagnostic skills to quickly identify and rectify self-induced errors.",
+        "Minimize idle time during remote sessions, especially after tasks are ostensibly complete, or clearly communicate any waiting periods to the client."
+      ]
+    }
+  }
+}

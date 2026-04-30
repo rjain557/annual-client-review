@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260429_ANI_4f5b0489_57123269",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260429_ANI_4f5b0489_57123269.mp4",
+  "analyzed_at": "2026-04-30T17:49:56Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to the client's machine, identified as WS-428, and initiated an immediate system restart using PowerShell. This action was performed to facilitate a platform conversion, as communicated in the ongoing chat sessions.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Read chat messages regarding system access, a mapped drive issue, and an upcoming restart.\",\n    \"Opened the Start menu and searched for 'PowerShell'.\",\n    \"Launched 'Windows PowerShell' as an administrator.\",\n    \"Entered administrative credentials at the User Account Control (UAC) prompt.\",\n    \"Executed the command 'shutdown -r -t 0' in PowerShell to perform an immediate system restart.\"\n  ],\n  \"applications_used\": [\n    \"ScreenConnect\",\n    \"Messages (ScreenConnect chat)\",\n    \"GoToAssist (chat application)\",\n    \"Windows Search\",\n    \"Windows PowerShell\",\n    \"User Account Control (UAC)\"\n  ],\n  \"issues_observed\": [\n    \"Client query about logging into an 'IDP system'.\",\n    \"Client query about a mapped drive on 'WS-428' using an IP address.\",\n    \"Internal chat indicating a platform conversion requiring a system restart.\"\n  ],\n  \"issues_resolved\": [\n    \"The system restart, a necessary step for the platform conversion, was successfully initiated.\"\n  ],\n  \"machines_touched\": [\n    \"WS-428\"\n  ],\n  \"notable_events\": [\n    \"The immediate restart command ('shutdown -r -t 0') was used, consistent with chat instructions for a quick reboot.\"\n  ],\n  \"concerns\": [\n    \"During the UAC prompt, the input for the administrator password (as masked dots) was briefly visible on screen. While it was not the actual password, general best practice is to avoid recording any sensitive input when possible, even masked.\"\n  ],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically and efficiently, quickly locating PowerShell and executing the required restart command as indicated by the chat context.\",\n    \"coaching_flags\": [\n      \"Exercise caution when entering credentials during screen-recorded sessions to minimize any potential exposure, even when masked.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to the client's machine, identified as WS-428, and initiated an immediate system restart using PowerShell. This action was performed to facilitate a platform conversion, as communicated in the ongoing chat sessions.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Read chat messages regarding system access, a mapped drive issue, and an upcoming restart.",
+      "Opened the Start menu and searched for 'PowerShell'.",
+      "Launched 'Windows PowerShell' as an administrator.",
+      "Entered administrative credentials at the User Account Control (UAC) prompt.",
+      "Executed the command 'shutdown -r -t 0' in PowerShell to perform an immediate system restart."
+    ],
+    "applications_used": [
+      "ScreenConnect",
+      "Messages (ScreenConnect chat)",
+      "GoToAssist (chat application)",
+      "Windows Search",
+      "Windows PowerShell",
+      "User Account Control (UAC)"
+    ],
+    "issues_observed": [
+      "Client query about logging into an 'IDP system'.",
+      "Client query about a mapped drive on 'WS-428' using an IP address.",
+      "Internal chat indicating a platform conversion requiring a system restart."
+    ],
+    "issues_resolved": [
+      "The system restart, a necessary step for the platform conversion, was successfully initiated."
+    ],
+    "machines_touched": [
+      "WS-428"
+    ],
+    "notable_events": [
+      "The immediate restart command ('shutdown -r -t 0') was used, consistent with chat instructions for a quick reboot."
+    ],
+    "concerns": [
+      "During the UAC prompt, the input for the administrator password (as masked dots) was briefly visible on screen. While it was not the actual password, general best practice is to avoid recording any sensitive input when possible, even masked."
+    ],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically and efficiently, quickly locating PowerShell and executing the required restart command as indicated by the chat context.",
+      "coaching_flags": [
+        "Exercise caution when entering credentials during screen-recorded sessions to minimize any potential exposure, even when masked."
+      ]
+    }
+  }
+}

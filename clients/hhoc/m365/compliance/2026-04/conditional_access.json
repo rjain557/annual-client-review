@@ -1,0 +1,245 @@
+[
+  {
+    "id": "938b9c3b-1386-48dc-acec-712b1e084659",
+    "displayName": "Require multifactor authentication for admins",
+    "createdDateTime": "2024-10-27T22:16:56.4386265Z",
+    "modifiedDateTime": "2025-05-14T04:12:35.5924432Z",
+    "state": "enabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "All"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [],
+        "excludeUsers": [
+          "30123afb-513f-47bc-91cd-0519fe9ba6cb"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [
+          "62e90394-69f5-4237-9190-012177145e10",
+          "194ae4cb-b126-40b2-bd5b-6091b380977d",
+          "f28a1f50-f6e7-4571-818b-6a12f2af6b6c",
+          "29232cdf-9323-42fd-ade2-1d097af3e4de",
+          "b1be1c3e-b65d-4f19-8427-f6fa0d97feb9",
+          "729827e3-9c14-49f7-bb1b-9608f156bbb8",
+          "b0f54661-2d74-4c50-afa3-1ec803f12efe",
+          "fe930be7-5e62-47db-91af-98c3a49a38b1",
+          "c4e39bd9-1100-46d3-8c65-fb160da0071f",
+          "9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3",
+          "158c047a-c907-4556-b7ef-446551a6b5f7",
+          "966707d0-3269-4727-9be2-8c3a10f19b9d",
+          "7be44c8a-adaf-4e2a-84d6-ab2649e08a13",
+          "e8611ab8-c189-46e8-94e1-60213ab1f814"
+        ],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "mfa"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('938b9c3b-1386-48dc-acec-712b1e084659')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  },
+  {
+    "id": "e05b4149-9ba6-4002-b66a-fda2693e2a2c",
+    "displayName": "Block legacy authentication",
+    "createdDateTime": "2024-10-27T22:16:57.952643Z",
+    "modifiedDateTime": "2025-05-20T18:34:05.2322254Z",
+    "state": "disabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "exchangeActiveSync",
+        "other"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "All"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "30123afb-513f-47bc-91cd-0519fe9ba6cb"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "block"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('e05b4149-9ba6-4002-b66a-fda2693e2a2c')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  },
+  {
+    "id": "dcf2e763-4638-46e1-b57d-bea91f095ae7",
+    "displayName": "Require multifactor authentication for all users",
+    "createdDateTime": "2024-10-27T22:16:59.4695303Z",
+    "modifiedDateTime": "2025-05-20T18:30:39.0646113Z",
+    "state": "disabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "All"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "19831f32-cbe6-43a3-88e5-ef413d095a26",
+          "5c1840a0-3e81-4aa4-ba4e-5796977adecc",
+          "bb1c58a3-f916-4f2b-96a1-4f7e7a0d6030",
+          "d16db7a9-d8f3-40a3-ba29-d5b82e572ff0",
+          "05995bad-7cd7-48d9-94a9-714a0baf3ead",
+          "9b0409e1-bfdf-43a7-ab20-882b71763ae8",
+          "ebb2aef2-8983-442a-aa26-238c51a322a5",
+          "cc964ffb-f011-4df6-a274-d44c7c1b88bb",
+          "ebbc2e75-ae36-435a-a410-6013e7185307",
+          "30123afb-513f-47bc-91cd-0519fe9ba6cb"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "mfa"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('dcf2e763-4638-46e1-b57d-bea91f095ae7')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  },
+  {
+    "id": "06d2409c-981b-4c1f-9d30-67894c61a490",
+    "displayName": "Require multifactor authentication for Azure management",
+    "createdDateTime": "2024-10-27T22:17:00.8734508Z",
+    "modifiedDateTime": "2025-05-20T18:34:36.383925Z",
+    "state": "disabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "797f4846-ba00-4fd7-ba43-dac1f8f63013"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "30123afb-513f-47bc-91cd-0519fe9ba6cb"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "mfa"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('06d2409c-981b-4c1f-9d30-67894c61a490')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  }
+]

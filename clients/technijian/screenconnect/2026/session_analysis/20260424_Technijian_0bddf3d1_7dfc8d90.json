@@ -1,0 +1,52 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_7dfc8d90",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_7dfc8d90.mp4",
+  "analyzed_at": "2026-04-30T19:44:13Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician investigated disk devices on a Linux system, focusing on `/dev/sdb`. They used various command-line tools to gather information about disk and partition structures, including checking partition types, listing block devices, and attempting to view kernel messages.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Executed `sudo lsblk` to list block devices and their mount points.\",\n    \"Executed `sudo blkid /dev/sdb` to retrieve the unique identifier (UUID) and filesystem type for the `/dev/sdb` device.\",\n    \"Executed `ls /dev/sd*` to list all `sd` type block devices.\",\n    \"Executed `sudo partprobe` to inform the operating system about partition table changes.\",\n    \"Attempted `sudo dmesg | grep sdb` to filter kernel messages related to `/dev/sdb`.\",\n    \"Attempted `sudo lsscsi -m discovery` to list SCSI devices.\"\n  ],\n  \"applications_used\": [\n    \"Terminal\",\n    \"lsblk\",\n    \"blkid\",\n    \"ls\",\n    \"partprobe\",\n    \"dmesg\",\n    \"grep\",\n    \"lsscsi\"\n  ],\n  \"issues_observed\": [\n    \"`dmesg: read kernel buffer failed: Operation not permitted` error message when attempting to view kernel logs.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\"\n  ],\n  \"notable_events\": [\n    \"The `dmesg` command failed with a 'read kernel buffer failed: Operation not permitted' error, indicating a potential permission issue or kernel restriction.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, using a series of relevant Linux command-line tools to gather information about disk devices. There was a minor typing error in one command attempt, but it was quickly self-corrected.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician investigated disk devices on a Linux system, focusing on `/dev/sdb`. They used various command-line tools to gather information about disk and partition structures, including checking partition types, listing block devices, and attempting to view kernel messages.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Executed `sudo lsblk` to list block devices and their mount points.",
+      "Executed `sudo blkid /dev/sdb` to retrieve the unique identifier (UUID) and filesystem type for the `/dev/sdb` device.",
+      "Executed `ls /dev/sd*` to list all `sd` type block devices.",
+      "Executed `sudo partprobe` to inform the operating system about partition table changes.",
+      "Attempted `sudo dmesg | grep sdb` to filter kernel messages related to `/dev/sdb`.",
+      "Attempted `sudo lsscsi -m discovery` to list SCSI devices."
+    ],
+    "applications_used": [
+      "Terminal",
+      "lsblk",
+      "blkid",
+      "ls",
+      "partprobe",
+      "dmesg",
+      "grep",
+      "lsscsi"
+    ],
+    "issues_observed": [
+      "`dmesg: read kernel buffer failed: Operation not permitted` error message when attempting to view kernel logs."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02"
+    ],
+    "notable_events": [
+      "The `dmesg` command failed with a 'read kernel buffer failed: Operation not permitted' error, indicating a potential permission issue or kernel restriction."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, using a series of relevant Linux command-line tools to gather information about disk devices. There was a minor typing error in one command attempt, but it was quickly self-corrected.",
+      "coaching_flags": []
+    }
+  }
+}

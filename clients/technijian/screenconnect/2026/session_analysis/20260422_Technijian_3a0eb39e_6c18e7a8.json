@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260422_Technijian_3a0eb39e_6c18e7a8",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_3a0eb39e_6c18e7a8.mp4",
+  "analyzed_at": "2026-04-30T19:17:23Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Windows Server, dismissed dialogs related to an unexpected shutdown and network configuration. They then accessed the MailStore Service Provider Edition Configuration tool, where they stopped, started, and subsequently stopped the 'Instance-Host' service.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Dismissed the 'Shutdown Event Tracker' dialog.\",\n    \"Declined network discoverability in the 'Networks' sidebar.\",\n    \"Opened 'MailStore Service Provider Edition Configuration' via Server Manager tools.\",\n    \"Stopped the 'Instance-Host' service in MailStore.\",\n    \"Started the 'Instance-Host' service in MailStore.\",\n    \"Stopped the 'Instance-Host' service in MailStore again.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"MailStore Service Provider Edition Configuration\"\n  ],\n  \"issues_observed\": [\n    \"A 'Shutdown Event Tracker' dialog indicated the computer shut down unexpectedly.\",\n    \"Server Manager displayed red alerts for 'Events' and 'Services' under 'Local Server' and 'All Servers'.\",\n    \"A 'Windows Update' notification briefly appeared, indicating required updates are available.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Local Server\"\n  ],\n  \"notable_events\": [\n    \"The session began with an unexpected shutdown event indicated by the system.\",\n    \"Pending Windows Updates were noted via a notification.\",\n    \"The MailStore service was stopped, started, and then stopped again within the recording, possibly for troubleshooting or pre-maintenance.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, promptly addressing initial dialogs and navigating directly to the MailStore configuration. The sequence of stopping and starting the service appears to be a deliberate troubleshooting or configuration step.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Windows Server, dismissed dialogs related to an unexpected shutdown and network configuration. They then accessed the MailStore Service Provider Edition Configuration tool, where they stopped, started, and subsequently stopped the 'Instance-Host' service.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Dismissed the 'Shutdown Event Tracker' dialog.",
+      "Declined network discoverability in the 'Networks' sidebar.",
+      "Opened 'MailStore Service Provider Edition Configuration' via Server Manager tools.",
+      "Stopped the 'Instance-Host' service in MailStore.",
+      "Started the 'Instance-Host' service in MailStore.",
+      "Stopped the 'Instance-Host' service in MailStore again."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "MailStore Service Provider Edition Configuration"
+    ],
+    "issues_observed": [
+      "A 'Shutdown Event Tracker' dialog indicated the computer shut down unexpectedly.",
+      "Server Manager displayed red alerts for 'Events' and 'Services' under 'Local Server' and 'All Servers'.",
+      "A 'Windows Update' notification briefly appeared, indicating required updates are available."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Local Server"
+    ],
+    "notable_events": [
+      "The session began with an unexpected shutdown event indicated by the system.",
+      "Pending Windows Updates were noted via a notification.",
+      "The MailStore service was stopped, started, and then stopped again within the recording, possibly for troubleshooting or pre-maintenance."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, promptly addressing initial dialogs and navigating directly to the MailStore configuration. The sequence of stopping and starting the service appears to be a deliberate troubleshooting or configuration step.",
+      "coaching_flags": []
+    }
+  }
+}

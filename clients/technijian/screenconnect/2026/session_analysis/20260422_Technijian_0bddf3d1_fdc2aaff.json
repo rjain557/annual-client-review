@@ -1,0 +1,70 @@
+{
+  "filename_stem": "20260422_Technijian_0bddf3d1_fdc2aaff",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_0bddf3d1_fdc2aaff.mp4",
+  "analyzed_at": "2026-04-30T19:10:38Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician troubleshooted a network connection issue, starting by addressing a PuTTY error. They investigated network adapter configurations, manually assigned a static IP address to an unidentified network, and performed network bandwidth tests using iPerf3 to verify connectivity and performance with a remote host.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Acknowledged PuTTY fatal network error message.\",\n    \"Closed browser tab related to 'ManageEngine OpManager MSP'.\",\n    \"Opened Command Prompt as administrator.\",\n    \"Executed `ipconfig` to review current network configurations.\",\n    \"Used Google Chrome to search for and download the iPerf3 network testing tool (64-bit version).\",\n    \"Extracted the downloaded iPerf3 zip file to the Downloads folder.\",\n    \"Navigated to the iPerf3 executable directory in Command Prompt.\",\n    \"Started iPerf3 in server mode (`iperf3 -s`) for network bandwidth testing.\",\n    \"Opened Network Connections (ncpa.cpl).\",\n    \"Accessed properties for the 'Ethernet1' network adapter.\",\n    \"Configured 'Internet Protocol Version 4 (TCP/IPv4)' properties.\",\n    \"Manually assigned a static IPv4 address (10.100.7.171) and subnet mask (255.255.255.0) to 'Ethernet1'.\",\n    \"Performed `ping` test to `10.100.7.173` to verify connectivity.\",\n    \"Restarted iPerf3 in server mode (`iperf3 -s`) to await external client connections and measure bandwidth.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Google Chrome\",\n    \"Command Prompt\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [\n    \"PuTTY Fatal Error: Network error: Software caused connection abort.\",\n    \"The 'Ethernet1' network adapter showed an Automatic Private IP Addressing (APIPA) address (169.254.x.x), indicating no DHCP assignment or static configuration.\",\n    \"An error pop-up for invalid IP address format was briefly encountered while setting static IP (quickly corrected).\",\n    \"Initial ping requests to 10.100.7.173 timed out before subsequent successful replies.\"\n  ],\n  \"issues_resolved\": [\n    \"Connectivity to the remote host 10.100.7.173 was established and verified via ping and iPerf3 after static IP configuration on the client machine.\"\n  ],\n  \"machines_touched\": [\n    \"Client machine (Windows OS)\",\n    \"10.100.254.171 (Initial IP of client's Ethernet0)\",\n    \"10.100.7.171 (Static IP configured on client's Ethernet1)\",\n    \"10.100.7.173 (Remote host)\"\n  ],\n  \"notable_events\": [\n    \"The technician initially ran iPerf3 in server mode on the client machine itself (01:54-02:28 and 03:04-03:36) without a clear external client, which effectively tested loopback performance rather than external network bandwidth. This was corrected later when an external client connected.\",\n    \"A manual static IP address change was applied to 'Ethernet1' after identifying its APIPA address.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"The technician ran `iperf3 -s` twice (01:54 for ~30s and 03:04 for ~30s) without an external client connecting, suggesting uncertainty on how to initiate an actual network bandwidth test between two machines. This resulted in loopback tests or no active test for these durations.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically through network diagnostics (ipconfig, ncpa.cpl). However, there was some initial hesitation and incorrect usage of iPerf3 (running loopback tests) before successfully configuring the network and performing external bandwidth tests.\",\n    \"coaching_flags\": [\n      \"Ensure full understanding of network testing tools like iPerf3 and their proper usage for inter-machine connectivity tests versus loopback tests.\",\n      \"Review the process for setting static IP addresses to minimize input errors.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician troubleshooted a network connection issue, starting by addressing a PuTTY error. They investigated network adapter configurations, manually assigned a static IP address to an unidentified network, and performed network bandwidth tests using iPerf3 to verify connectivity and performance with a remote host.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Acknowledged PuTTY fatal network error message.",
+      "Closed browser tab related to 'ManageEngine OpManager MSP'.",
+      "Opened Command Prompt as administrator.",
+      "Executed `ipconfig` to review current network configurations.",
+      "Used Google Chrome to search for and download the iPerf3 network testing tool (64-bit version).",
+      "Extracted the downloaded iPerf3 zip file to the Downloads folder.",
+      "Navigated to the iPerf3 executable directory in Command Prompt.",
+      "Started iPerf3 in server mode (`iperf3 -s`) for network bandwidth testing.",
+      "Opened Network Connections (ncpa.cpl).",
+      "Accessed properties for the 'Ethernet1' network adapter.",
+      "Configured 'Internet Protocol Version 4 (TCP/IPv4)' properties.",
+      "Manually assigned a static IPv4 address (10.100.7.171) and subnet mask (255.255.255.0) to 'Ethernet1'.",
+      "Performed `ping` test to `10.100.7.173` to verify connectivity.",
+      "Restarted iPerf3 in server mode (`iperf3 -s`) to await external client connections and measure bandwidth."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Google Chrome",
+      "Command Prompt",
+      "File Explorer"
+    ],
+    "issues_observed": [
+      "PuTTY Fatal Error: Network error: Software caused connection abort.",
+      "The 'Ethernet1' network adapter showed an Automatic Private IP Addressing (APIPA) address (169.254.x.x), indicating no DHCP assignment or static configuration.",
+      "An error pop-up for invalid IP address format was briefly encountered while setting static IP (quickly corrected).",
+      "Initial ping requests to 10.100.7.173 timed out before subsequent successful replies."
+    ],
+    "issues_resolved": [
+      "Connectivity to the remote host 10.100.7.173 was established and verified via ping and iPerf3 after static IP configuration on the client machine."
+    ],
+    "machines_touched": [
+      "Client machine (Windows OS)",
+      "10.100.254.171 (Initial IP of client's Ethernet0)",
+      "10.100.7.171 (Static IP configured on client's Ethernet1)",
+      "10.100.7.173 (Remote host)"
+    ],
+    "notable_events": [
+      "The technician initially ran iPerf3 in server mode on the client machine itself (01:54-02:28 and 03:04-03:36) without a clear external client, which effectively tested loopback performance rather than external network bandwidth. This was corrected later when an external client connected.",
+      "A manual static IP address change was applied to 'Ethernet1' after identifying its APIPA address."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "The technician ran `iperf3 -s` twice (01:54 for ~30s and 03:04 for ~30s) without an external client connecting, suggesting uncertainty on how to initiate an actual network bandwidth test between two machines. This resulted in loopback tests or no active test for these durations."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically through network diagnostics (ipconfig, ncpa.cpl). However, there was some initial hesitation and incorrect usage of iPerf3 (running loopback tests) before successfully configuring the network and performing external bandwidth tests.",
+      "coaching_flags": [
+        "Ensure full understanding of network testing tools like iPerf3 and their proper usage for inter-machine connectivity tests versus loopback tests.",
+        "Review the process for setting static IP addresses to minimize input errors."
+      ]
+    }
+  }
+}

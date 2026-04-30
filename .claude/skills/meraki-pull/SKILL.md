@@ -68,7 +68,11 @@ clients/<code>/meraki/
   org_meta.json
   networks.json
   devices.json
+  uplink_statuses.json              # org-wide WAN status (live IPs, status, gateway, DNS)
   config_snapshot_at.json           # latest snapshot metadata
+  devices/
+    <serial>/
+      uplink_settings.json          # per-appliance WAN port config (static/DHCP, VLAN tag)
   security_events/
     2026-04-29.json                 # daily IDS/IPS + AMP file
   network_events/
@@ -82,6 +86,8 @@ clients/<code>/meraki/
   config_history/                   # versioned daily config backups
     <YYYY-MM-DD>/
       org_meta.json networks.json devices.json config_snapshot_at.json
+      uplink_statuses.json
+      devices/<serial>/uplink_settings.json
       networks/<network-slug>/<same 30 files as above>
   change_log/                       # admin configuration change audit log
     <YYYY-MM>.json                  # all Dashboard changes for that month
@@ -177,6 +183,50 @@ orgs and feature-disabled networks.
   backs off on 5xx, up to 4 retries.
 - For multi-org pulls the orchestrator runs orgs sequentially. Don't
   parallelize across orgs without a token-bucket limiter.
+
+## WAN uplink pull
+
+`pull_configuration.py` also collects two WAN data sources after writing
+`devices.json`:
+
+```python
+# Org-wide: current WAN IPs, status (active/not connected/failed), gateway, DNS
+GET /organizations/{id}/uplinks/statuses
+→ clients/<code>/meraki/uplink_statuses.json
+
+# Per-appliance: static/DHCP config, VLAN tagging for each WAN port
+GET /devices/{serial}/appliance/uplinks/settings
+→ clients/<code>/meraki/devices/<serial>/uplink_settings.json
+```
+
+Both are also written to `config_history/<YYYY-MM-DD>/` for versioning.
+The aggregate_monthly.py joins them onto the device rows and exposes
+`uplink_settings` (config) + `uplink_status` (live state) per device.
+
+**WAN API quirks to know:**
+- Meraki returns WAN2 as "enabled/static" with the same IP/gateway as WAN1
+  even when WAN2 port has nothing plugged in — deduplicate by IP+gateway key.
+- WAN3 (cellular) appears as "enabled/dynamic" with an empty IP even without
+  a SIM installed — skip entries where interface is `wan3`, mode is `dynamic`,
+  and IP is `"—"` (or empty).
+- Warm-spare secondary appliance: its WAN interface shows as `not connected`
+  because the primary holds the virtual MAC; the IP/gateway values are still
+  correct for display — annotate the status in the report table.
+
+## Dormant-org metadata protection
+
+Two Meraki orgs map to the same client folder (`technijian_inc` id=80731,
+active; `technijian` id=699778, dormant 403). `pull_configuration.py` guards
+against the dormant org overwriting the active org's data:
+
+```
+# if current org has 0 networks AND 0 devices AND folder already has org_meta.json
+# from a DIFFERENT org ID → skip overwrite
+```
+
+This means always run `pull_configuration.py` with the active org's slug
+(`--only technijian_inc`) if you need to force a refresh; running `--all`
+is safe because the guard fires automatically for dormant orgs.
 
 ## Gotchas
 

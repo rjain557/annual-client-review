@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_c490b558",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_c490b558.mp4",
+  "analyzed_at": "2026-04-30T19:48:59Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected remotely to a Windows 10 client machine. The session began at the lock screen, where the technician entered the password for the 'Administrator' account and successfully logged in. During the login process, the technician briefly revealed the entered password on screen.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Initiated remote session to client computer.\",\n    \"Navigated the Windows 10 lock screen.\",\n    \"Attempted to open and then closed the Ease of Access menu.\",\n    \"Entered password for the 'Administrator' user.\",\n    \"Revealed the entered password 'Password' on screen.\",\n    \"Submitted credentials and logged into the Administrator account.\"\n  ],\n  \"applications_used\": [\n    \"Windows 10 Login Screen\",\n    \"Ease of Access\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client computer\"\n  ],\n  \"notable_events\": [\n    \"The technician revealed the administrator password 'Password' on screen during login.\"\n  ],\n  \"concerns\": [\n    \"Security concern: The technician revealed the 'Administrator' password ('Password') on screen during a recorded remote session.\",\n    \"Security concern: The Administrator account appears to be using a highly insecure password ('Password').\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician proceeded directly to log in. There was a brief, unnecessary interaction with the Ease of Access menu. Revealing the password was a deliberate action, not an indication of inefficiency in task completion, but a security lapse.\",\n    \"coaching_flags\": [\n      \"Technicians should never reveal passwords on screen during remote support sessions, especially when they are being recorded.\",\n      \"Review client's administrator password strength; 'Password' is a highly insecure credential for an administrator account.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected remotely to a Windows 10 client machine. The session began at the lock screen, where the technician entered the password for the 'Administrator' account and successfully logged in. During the login process, the technician briefly revealed the entered password on screen.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Initiated remote session to client computer.",
+      "Navigated the Windows 10 lock screen.",
+      "Attempted to open and then closed the Ease of Access menu.",
+      "Entered password for the 'Administrator' user.",
+      "Revealed the entered password 'Password' on screen.",
+      "Submitted credentials and logged into the Administrator account."
+    ],
+    "applications_used": [
+      "Windows 10 Login Screen",
+      "Ease of Access"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client computer"
+    ],
+    "notable_events": [
+      "The technician revealed the administrator password 'Password' on screen during login."
+    ],
+    "concerns": [
+      "Security concern: The technician revealed the 'Administrator' password ('Password') on screen during a recorded remote session.",
+      "Security concern: The Administrator account appears to be using a highly insecure password ('Password')."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician proceeded directly to log in. There was a brief, unnecessary interaction with the Ease of Access menu. Revealing the password was a deliberate action, not an indication of inefficiency in task completion, but a security lapse.",
+      "coaching_flags": [
+        "Technicians should never reveal passwords on screen during remote support sessions, especially when they are being recorded.",
+        "Review client's administrator password strength; 'Password' is a highly insecure credential for an administrator account."
+      ]
+    }
+  }
+}

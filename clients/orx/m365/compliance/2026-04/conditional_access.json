@@ -1,0 +1,253 @@
+[
+  {
+    "id": "b2552715-598d-4cba-bd01-77d20829f2b4",
+    "displayName": "Myremote MFA Policy",
+    "createdDateTime": "2023-11-10T13:14:10.1097079Z",
+    "modifiedDateTime": "2024-05-01T15:10:42.8650675Z",
+    "state": "enabled",
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "da085d8e-7d60-4f55-ad3d-a811f1657d96"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "5361cb89-c017-4816-b674-f14d67681f44"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "mfa"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('b2552715-598d-4cba-bd01-77d20829f2b4')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    },
+    "sessionControls": {
+      "disableResilienceDefaults": null,
+      "applicationEnforcedRestrictions": null,
+      "cloudAppSecurity": null,
+      "persistentBrowser": null,
+      "secureSignInSession": null,
+      "signInFrequency": {
+        "value": 10,
+        "type": "hours",
+        "authenticationType": "primaryAndSecondaryAuthentication",
+        "frequencyInterval": "timeBased",
+        "isEnabled": true
+      }
+    }
+  },
+  {
+    "id": "df96d58e-c887-4051-9a3d-3c7b13753a3a",
+    "displayName": "Client portal MFA",
+    "createdDateTime": "2024-05-01T15:11:34.2485073Z",
+    "modifiedDateTime": "2024-07-11T19:10:15.7298058Z",
+    "state": "enabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "All"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "5361cb89-c017-4816-b674-f14d67681f44"
+        ],
+        "excludeUsers": [
+          "d6f2367b-9d51-44b6-8e69-01557bef3b84",
+          "12056eb0-907f-49d4-8427-0adc7dc19d63",
+          "a9d26536-e311-4da4-929d-bee1fe70de6b"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      },
+      "locations": {
+        "includeLocations": [
+          "All"
+        ],
+        "excludeLocations": [
+          "01d6ab17-cdb4-4cf0-836b-c194dac80572"
+        ]
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('df96d58e-c887-4051-9a3d-3c7b13753a3a')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": {
+        "id": "00000000-0000-0000-0000-000000000002",
+        "createdDateTime": "2021-12-01T08:00:00Z",
+        "modifiedDateTime": "2021-12-01T08:00:00Z",
+        "displayName": "Multifactor authentication",
+        "description": "Combinations of methods that satisfy strong authentication, such as a password + SMS",
+        "policyType": "builtIn",
+        "requirementsSatisfied": "mfa",
+        "allowedCombinations": [
+          "windowsHelloForBusiness",
+          "fido2",
+          "x509CertificateMultiFactor",
+          "deviceBasedPush",
+          "temporaryAccessPassOneTime",
+          "temporaryAccessPassMultiUse",
+          "password,microsoftAuthenticatorPush",
+          "password,softwareOath",
+          "password,hardwareOath",
+          "password,sms",
+          "password,voice",
+          "federatedMultiFactor",
+          "microsoftAuthenticatorPush,federatedSingleFactor",
+          "softwareOath,federatedSingleFactor",
+          "hardwareOath,federatedSingleFactor",
+          "sms,federatedSingleFactor",
+          "voice,federatedSingleFactor"
+        ],
+        "combinationConfigurations@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('df96d58e-c887-4051-9a3d-3c7b13753a3a')/grantControls/authenticationStrength/combinationConfigurations",
+        "combinationConfigurations": []
+      }
+    }
+  },
+  {
+    "id": "5bfb527d-2e2e-4ac1-84f5-be1cc43d82d8",
+    "displayName": "Whitelisted IP's for O365 in office",
+    "createdDateTime": "2024-07-10T22:55:38.0602588Z",
+    "modifiedDateTime": "2025-09-02T23:34:42.1573515Z",
+    "state": "enabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "Office365"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "d6f2367b-9d51-44b6-8e69-01557bef3b84",
+          "a9d26536-e311-4da4-929d-bee1fe70de6b",
+          "3a9e2a36-c8fd-4776-93a8-ebaf2b6e4312"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      },
+      "locations": {
+        "includeLocations": [
+          "All"
+        ],
+        "excludeLocations": [
+          "0be8808f-8096-4d90-9f46-4f92a4d12df9",
+          "01d6ab17-cdb4-4cf0-836b-c194dac80572"
+        ]
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('5bfb527d-2e2e-4ac1-84f5-be1cc43d82d8')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": {
+        "id": "00000000-0000-0000-0000-000000000002",
+        "createdDateTime": "2021-12-01T08:00:00Z",
+        "modifiedDateTime": "2021-12-01T08:00:00Z",
+        "displayName": "Multifactor authentication",
+        "description": "Combinations of methods that satisfy strong authentication, such as a password + SMS",
+        "policyType": "builtIn",
+        "requirementsSatisfied": "mfa",
+        "allowedCombinations": [
+          "windowsHelloForBusiness",
+          "fido2",
+          "x509CertificateMultiFactor",
+          "deviceBasedPush",
+          "temporaryAccessPassOneTime",
+          "temporaryAccessPassMultiUse",
+          "password,microsoftAuthenticatorPush",
+          "password,softwareOath",
+          "password,hardwareOath",
+          "password,sms",
+          "password,voice",
+          "federatedMultiFactor",
+          "microsoftAuthenticatorPush,federatedSingleFactor",
+          "softwareOath,federatedSingleFactor",
+          "hardwareOath,federatedSingleFactor",
+          "sms,federatedSingleFactor",
+          "voice,federatedSingleFactor"
+        ],
+        "combinationConfigurations@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('5bfb527d-2e2e-4ac1-84f5-be1cc43d82d8')/grantControls/authenticationStrength/combinationConfigurations",
+        "combinationConfigurations": []
+      }
+    }
+  }
+]

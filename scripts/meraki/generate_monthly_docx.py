@@ -228,6 +228,11 @@ def section_firewall_config(doc, cfg: dict) -> None:
             if not interfaces:
                 wan_rows.append([dev_name, net_name, "—", "—", "—", "—", "—"])
                 continue
+            # Render configured WAN interfaces. Filter out the Meraki API
+            # quirks: WAN2 returned as default-duplicate of WAN1 when not
+            # actually configured, and WAN3 cellular returned as
+            # "enabled dynamic" placeholder even when no SIM is present.
+            seen_addrs: set[str] = set()
             for iface_name, iface_cfg in sorted(interfaces.items()):
                 if not iface_cfg.get("enabled", True):
                     continue
@@ -235,10 +240,21 @@ def section_firewall_config(doc, cfg: dict) -> None:
                 assignment = (svi.get("assignmentMode") or "dhcp").title()
                 ip_addr = svi.get("address") or "—"
                 gateway = svi.get("gateway") or "—"
+                # Skip WAN3 cellular placeholder (dynamic with no real config)
+                if iface_name == "wan3" and assignment.lower() == "dynamic" and ip_addr == "—":
+                    continue
+                # Skip duplicate IP — API returns wan2 with same IP as wan1 when wan2 is unused
+                addr_key = f"{ip_addr}|{gateway}"
+                if addr_key in seen_addrs and ip_addr != "—":
+                    continue
+                seen_addrs.add(addr_key)
                 dns_list = (svi.get("nameservers") or {}).get("addresses") or []
                 dns = " / ".join(dns_list) if dns_list else "—"
                 status_rec = statuses.get(iface_name) or {}
-                status = (status_rec.get("status") or "—").replace("not connected", "standby")
+                live_status = (status_rec.get("status") or "—").lower()
+                # Annotate IP cell with status if not active
+                if live_status and live_status not in ("active", "ready"):
+                    ip_addr = f"{ip_addr} ({live_status})"
                 wan_rows.append([dev_name, net_name, iface_name.upper(),
                                  assignment, ip_addr, gateway, dns])
                 dev_name = ""  # blank on continuation rows for same device

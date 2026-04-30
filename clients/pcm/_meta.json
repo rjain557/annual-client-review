@@ -3,6 +3,7 @@
   "DirID": 114,
   "Location_Name": "180 Medical, Inc.",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.PCM",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": true,
@@ -17,9 +18,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 23,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 4791,
+    "Contract_Name": "Monthly Service Contract (copy)",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": null,
+    "Signed_DirID": null
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

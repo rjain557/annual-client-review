@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_bc2fc4fd",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_bc2fc4fd.mp4",
+  "analyzed_at": "2026-04-30T19:48:38Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to TE-DC-ND-NC-02 and attempted to troubleshoot a Nextcloud Docker container. Initial attempts to execute a shell inside the 'nextcloud_aio_nextcloud' container failed because it was not running, and further attempts to use 'vim' within the container environment reported the executable was not found. The technician also encountered a password issue when trying to use `sudo`.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to execute a bash shell inside the 'nextcloud_aio_nextcloud' Docker container using `sudo docker exec -it`.\",\n    \"Navigated to the `/mnt/VAF-MD-NC` directory.\",\n    \"Listed directory contents (`ls -l`) of `/mnt/VAF-MD-NC` and `/mnt/VAF-MD-NC/groupfolders`.\",\n    \"Attempted to use `sudo` commands which failed due to an incorrect password.\"\n  ],\n  \"applications_used\": [\n    \"Terminal (likely over SSH or WSL)\",\n    \"Docker (via command line)\"\n  ],\n  \"issues_observed\": [\n    \"Docker container 'nextcloud_aio_nextcloud' was reported as 'not running'.\",\n    \"The 'vim' executable was 'not found in $PATH' inside the Docker container.\",\n    \"`sudo` command failed due to an incorrect password for 'technician'.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-ND-NC-02\"\n  ],\n  \"notable_events\": [\n    \"Repeated attempts to access the Docker container indicate a persistent issue.\",\n    \"The missing 'vim' executable suggests an incomplete or minimal container image.\",\n    \"The password failure prevented further privileged actions.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"Within the very short duration of the clip, the technician appeared to proceed methodically, attempting to access the container, then changing directories to investigate, and re-attempting commands after initial failures. However, no progress was made on the core issue within this segment.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to TE-DC-ND-NC-02 and attempted to troubleshoot a Nextcloud Docker container. Initial attempts to execute a shell inside the 'nextcloud_aio_nextcloud' container failed because it was not running, and further attempts to use 'vim' within the container environment reported the executable was not found. The technician also encountered a password issue when trying to use `sudo`.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to execute a bash shell inside the 'nextcloud_aio_nextcloud' Docker container using `sudo docker exec -it`.",
+      "Navigated to the `/mnt/VAF-MD-NC` directory.",
+      "Listed directory contents (`ls -l`) of `/mnt/VAF-MD-NC` and `/mnt/VAF-MD-NC/groupfolders`.",
+      "Attempted to use `sudo` commands which failed due to an incorrect password."
+    ],
+    "applications_used": [
+      "Terminal (likely over SSH or WSL)",
+      "Docker (via command line)"
+    ],
+    "issues_observed": [
+      "Docker container 'nextcloud_aio_nextcloud' was reported as 'not running'.",
+      "The 'vim' executable was 'not found in $PATH' inside the Docker container.",
+      "`sudo` command failed due to an incorrect password for 'technician'."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-ND-NC-02"
+    ],
+    "notable_events": [
+      "Repeated attempts to access the Docker container indicate a persistent issue.",
+      "The missing 'vim' executable suggests an incomplete or minimal container image.",
+      "The password failure prevented further privileged actions."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "Within the very short duration of the clip, the technician appeared to proceed methodically, attempting to access the container, then changing directories to investigate, and re-attempting commands after initial failures. However, no progress was made on the core issue within this segment.",
+      "coaching_flags": []
+    }
+  }
+}

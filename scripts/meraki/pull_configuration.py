@@ -118,21 +118,42 @@ def main() -> int:
             continue
         org_dir = output_root / client_folder(slug) / "meraki"
         hist_org_dir = org_dir / "config_history" / today
-        write_json(org_dir / "org_meta.json", org)
-        write_json(hist_org_dir / "org_meta.json", org)
 
         try:
             networks = m.list_networks(org["id"])
             devices = m.list_devices(org["id"])
         except m.MerakiError as e:
             print(f"  [{slug}] org-level fetch failed: HTTP {e.status} — skipping")
-            err_snap = {
-                "snapshot_at": iso_utc(datetime.now(timezone.utc)),
-                "error": f"HTTP {e.status} on org-level enumeration",
-            }
-            write_json(org_dir / "config_snapshot_at.json", err_snap)
-            write_json(hist_org_dir / "config_snapshot_at.json", err_snap)
+            # Dormant org or 403 — DO NOT overwrite an active org's metadata
+            # if another org has already populated this folder (e.g.,
+            # technijian_inc + technijian both map to clients/technijian/).
+            if not (org_dir / "org_meta.json").exists():
+                err_snap = {
+                    "snapshot_at": iso_utc(datetime.now(timezone.utc)),
+                    "error": f"HTTP {e.status} on org-level enumeration",
+                }
+                write_json(org_dir / "org_meta.json", org)
+                write_json(org_dir / "config_snapshot_at.json", err_snap)
+                write_json(hist_org_dir / "org_meta.json", org)
+                write_json(hist_org_dir / "config_snapshot_at.json", err_snap)
             continue
+
+        # Skip overwriting if this is a dormant org sharing a folder with an
+        # active one (no networks AND folder already has populated data).
+        if not networks and not devices:
+            existing_meta = org_dir / "org_meta.json"
+            if existing_meta.exists():
+                try:
+                    existing = json.loads(existing_meta.read_text(encoding="utf-8"))
+                    if existing.get("id") and existing["id"] != org["id"]:
+                        print(f"  [{slug}] dormant — folder already populated by "
+                              f"{existing.get('name', existing['id'])}; skipping overwrite")
+                        continue
+                except Exception:
+                    pass
+
+        write_json(org_dir / "org_meta.json", org)
+        write_json(hist_org_dir / "org_meta.json", org)
         write_json(org_dir / "networks.json", networks)
         write_json(org_dir / "devices.json", devices)
         write_json(hist_org_dir / "networks.json", networks)

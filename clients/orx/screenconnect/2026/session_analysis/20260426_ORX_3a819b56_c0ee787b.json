@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260426_ORX_3a819b56_c0ee787b",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260426_ORX_3a819b56_c0ee787b.mp4",
+  "analyzed_at": "2026-04-30T18:52:24Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician connected to the client computer to perform Windows Updates. They navigated to the Update & Security settings, checked for updates, and proceeded to download and install a Security Intelligence Update for Microsoft Defender Antivirus. The session concluded with the technician initiating a system restart after the update installation was complete.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Opened Windows Settings.\",\n    \"Navigated to 'Update & Security'.\",\n    \"Clicked 'Check for updates'.\",\n    \"Waited for 'Security Intelligence Update for Microsoft Defender Antivirus' to download.\",\n    \"Waited for 'Security Intelligence Update for Microsoft Defender Antivirus' to install.\",\n    \"Closed the Settings window.\",\n    \"Initiated a system restart via the Start Menu power options.\"\n  ],\n  \"applications_used\": [\n    \"Windows Settings\",\n    \"Windows Update\"\n  ],\n  \"issues_observed\": [\n    \"An available 'Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.401.218.0)' was detected.\"\n  ],\n  \"issues_resolved\": [\n    \"The detected 'Security Intelligence Update for Microsoft Defender Antivirus' was successfully downloaded and installed, requiring a system restart.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The entire session was dedicated to checking and applying a Windows Defender update, which then required a system restart.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"0:15 - 2:05 (110 seconds) - Waiting for the update to download.\",\n      \"2:05 - 3:47 (102 seconds) - Waiting for the update to install.\"\n    ],\n    \"idle_gap_count\": 2,\n    \"longest_idle_seconds\": 110,\n    \"total_idle_estimate_seconds\": 212,\n    \"efficiency_notes\": \"The technician efficiently navigated to Windows Update, initiated the update process, and performed a system restart once the update was pending. The majority of the session time was spent waiting for the update to download and install.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician connected to the client computer to perform Windows Updates. They navigated to the Update & Security settings, checked for updates, and proceeded to download and install a Security Intelligence Update for Microsoft Defender Antivirus. The session concluded with the technician initiating a system restart after the update installation was complete.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Opened Windows Settings.",
+      "Navigated to 'Update & Security'.",
+      "Clicked 'Check for updates'.",
+      "Waited for 'Security Intelligence Update for Microsoft Defender Antivirus' to download.",
+      "Waited for 'Security Intelligence Update for Microsoft Defender Antivirus' to install.",
+      "Closed the Settings window.",
+      "Initiated a system restart via the Start Menu power options."
+    ],
+    "applications_used": [
+      "Windows Settings",
+      "Windows Update"
+    ],
+    "issues_observed": [
+      "An available 'Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.401.218.0)' was detected."
+    ],
+    "issues_resolved": [
+      "The detected 'Security Intelligence Update for Microsoft Defender Antivirus' was successfully downloaded and installed, requiring a system restart."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The entire session was dedicated to checking and applying a Windows Defender update, which then required a system restart."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "0:15 - 2:05 (110 seconds) - Waiting for the update to download.",
+        "2:05 - 3:47 (102 seconds) - Waiting for the update to install."
+      ],
+      "idle_gap_count": 2,
+      "longest_idle_seconds": 110,
+      "total_idle_estimate_seconds": 212,
+      "efficiency_notes": "The technician efficiently navigated to Windows Update, initiated the update process, and performed a system restart once the update was pending. The majority of the session time was spent waiting for the update to download and install.",
+      "coaching_flags": []
+    }
+  }
+}

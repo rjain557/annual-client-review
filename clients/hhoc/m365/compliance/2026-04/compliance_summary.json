@@ -1,0 +1,49 @@
+{
+  "client_code": "HHOC",
+  "tenant_id": "d57b79ab-c770-4c4a-9b2d-36c90c710b6d",
+  "month": "2026-04",
+  "errors": [],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 3,
+    "warn_count": 2,
+    "checks": [
+      {
+        "check": "MFA Registration",
+        "status": "fail",
+        "value": "7.5% (18/239 users)",
+        "detail": "Target: 100% of users registered for MFA"
+      },
+      {
+        "check": "Conditional Access Policies",
+        "status": "warn",
+        "value": "1 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "fail",
+        "value": "Not blocked",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Global Administrator Count",
+        "status": "pass",
+        "value": "2 Global Admins",
+        "detail": "Best practice: 2-3 Global Admins maximum"
+      },
+      {
+        "check": "Microsoft Secure Score",
+        "status": "warn",
+        "value": "146.16/278.0 (52.6%)",
+        "detail": "Target: >60% of available score"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "fail",
+        "value": "222 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

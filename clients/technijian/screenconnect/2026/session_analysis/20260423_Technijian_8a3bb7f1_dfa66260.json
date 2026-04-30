@@ -1,0 +1,42 @@
+{
+  "filename_stem": "20260423_Technijian_8a3bb7f1_dfa66260",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_8a3bb7f1_dfa66260.mp4",
+  "analyzed_at": "2026-04-30T19:40:51Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to configure an Ethernet port (Port 31) on Fabric Interconnect B as an FCoE Storage Port within the UCS Manager web interface. Immediately after selecting the configuration option, a connection error occurred, causing the application to exit.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Navigated to Fabric Interconnect B (primary) and its Ethernet Ports.\",\n    \"Right-clicked on Port 31.\",\n    \"Selected 'Configure as FCoE Storage Port'.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome (displaying UCS Manager web interface)\"\n  ],\n  \"issues_observed\": [\n    \"Connection Error: Unable to connect to the server. The application will now exit.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"172.19.3.20 (UCS Manager instance)\"\n  ],\n  \"notable_events\": [\n    \"The UCS Manager web application crashed with a connection error immediately after attempting a port configuration, preventing the task from being completed.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician performed a direct, targeted action within the interface. The session ended prematurely due to a system error, not indecision or inefficiency from the technician.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to configure an Ethernet port (Port 31) on Fabric Interconnect B as an FCoE Storage Port within the UCS Manager web interface. Immediately after selecting the configuration option, a connection error occurred, causing the application to exit.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Navigated to Fabric Interconnect B (primary) and its Ethernet Ports.",
+      "Right-clicked on Port 31.",
+      "Selected 'Configure as FCoE Storage Port'."
+    ],
+    "applications_used": [
+      "Google Chrome (displaying UCS Manager web interface)"
+    ],
+    "issues_observed": [
+      "Connection Error: Unable to connect to the server. The application will now exit."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "172.19.3.20 (UCS Manager instance)"
+    ],
+    "notable_events": [
+      "The UCS Manager web application crashed with a connection error immediately after attempting a port configuration, preventing the task from being completed."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician performed a direct, targeted action within the interface. The session ended prematurely due to a system error, not indecision or inefficiency from the technician.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "client_code": "NOR",
+  "tenant_id": "61d9b3ff-5962-4628-b32f-d840822545ce",
+  "window_start": "2026-03-31T18:09:40Z",
+  "window_end": "2026-04-30T18:09:40Z",
+  "counts": {
+    "total_signins": 0,
+    "failed_signins": 0,
+    "risky_signins": 0,
+    "risky_users": 0
+  },
+  "errors": [
+    {
+      "source": "signin_logs_chunks",
+      "error": "30 chunk(s) failed",
+      "details": [
+        "[2026-03-31..2026-04-01] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-01T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+        "[2026-04-01..2026-04-02] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-01T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-02T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+        "[2026-04-02..2026-04-03] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-02T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-03T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+        "[2026-04-03..2026-04-04] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-03T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-04T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+        "[2026-04-04..2026-04-05] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-04T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-05T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\""
+      ]
+    }
+  ],
+  "flags": {
+    "has_brute_force": false,
+    "has_password_spray": false,
+    "has_foreign_success": false,
+    "has_legacy_auth": false,
+    "high_mfa_failures": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "filename_stem": "20260423_Technijian_8a3bb7f1_076ad4e3",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_8a3bb7f1_076ad4e3.mp4",
+  "analyzed_at": "2026-04-30T19:31:38Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician initiated a remote support session, reviewing network device configurations in PuTTY. A significant portion of the session involved troubleshooting access to Microsoft Word and Microsoft Teams, requiring multiple sign-in attempts and a Multi-Factor Authentication (MFA) process to open a runbook document. After successfully downloading the document and dismissing a location prompt in Teams, the technician briefly inspected device drivers in Device Manager, focusing on network adapters and USB controllers.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to sign into Microsoft Word to open a document.\",\n    \"Searched for runbook documents using Windows Search.\",\n    \"Navigated to the file location of a runbook document within OneDrive/Microsoft Teams Chat Files.\",\n    \"Signed into Microsoft Teams, providing email and password.\",\n    \"Completed Multi-Factor Authentication (MFA) for Microsoft Teams via text message code.\",\n    \"Dismissed a location access prompt for Microsoft Teams.\",\n    \"Opened Device Manager.\",\n    \"Expanded and reviewed details under 'Network adapters' and 'Universal Serial Bus controllers' in Device Manager.\"\n  ],\n  \"applications_used\": [\n    \"Microsoft Word\",\n    \"PuTTY\",\n    \"Windows Search\",\n    \"File Explorer\",\n    \"Microsoft Teams\",\n    \"Device Manager\",\n    \"ChatGPT (visible in background)\"\n  ],\n  \"issues_observed\": [\n    \"Microsoft Word prompted for sign-in to access the document.\",\n    \"Microsoft Teams required sign-in and Multi-Factor Authentication.\",\n    \"Initial delay/stall at 0% during a file download from Microsoft Teams.\",\n    \"Microsoft Teams prompted for location access permission.\"\n  ],\n  \"issues_resolved\": [\n    \"Successfully signed into Microsoft Teams and completed MFA.\",\n    \"Successfully downloaded a document via Microsoft Teams.\",\n    \"Dismissed the Teams location prompt.\"\n  ],\n  \"machines_touched\": [\n    \"TE-HQ-LAB-02 (network device hostname visible in PuTTY and Word document)\",\n    \"172.16.9.3 (PuTTY session IP address)\",\n    \"VM-A-10.6.9.101/24 (IP configuration visible in Word document screenshot)\"\n  ],\n  \"notable_events\": [\n    \"Extended authentication process for Microsoft services involving both password entry and MFA.\",\n    \"A document from Microsoft Teams Chat Files showed a 'Protected View' warning.\",\n    \"File download from Teams was briefly stuck at 0% before completing.\"\n  ],\n  \"concerns\": [\n    \"The Word document displayed a 'Protected View' warning regarding potential viruses from internet files; proceeding with sign-in (potentially enabling editing) on such a document without explicit confirmation of its safety could pose a minor security risk, though the source (Teams Chat Files from Technijian, Inc) mitigates this.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically to overcome authentication hurdles for Microsoft applications. The time spent was primarily due to the multi-step sign-in and MFA process, not a lack of clear direction. The navigation within Windows Search and Device Manager was also direct and purposeful.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician initiated a remote support session, reviewing network device configurations in PuTTY. A significant portion of the session involved troubleshooting access to Microsoft Word and Microsoft Teams, requiring multiple sign-in attempts and a Multi-Factor Authentication (MFA) process to open a runbook document. After successfully downloading the document and dismissing a location prompt in Teams, the technician briefly inspected device drivers in Device Manager, focusing on network adapters and USB controllers.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to sign into Microsoft Word to open a document.",
+      "Searched for runbook documents using Windows Search.",
+      "Navigated to the file location of a runbook document within OneDrive/Microsoft Teams Chat Files.",
+      "Signed into Microsoft Teams, providing email and password.",
+      "Completed Multi-Factor Authentication (MFA) for Microsoft Teams via text message code.",
+      "Dismissed a location access prompt for Microsoft Teams.",
+      "Opened Device Manager.",
+      "Expanded and reviewed details under 'Network adapters' and 'Universal Serial Bus controllers' in Device Manager."
+    ],
+    "applications_used": [
+      "Microsoft Word",
+      "PuTTY",
+      "Windows Search",
+      "File Explorer",
+      "Microsoft Teams",
+      "Device Manager",
+      "ChatGPT (visible in background)"
+    ],
+    "issues_observed": [
+      "Microsoft Word prompted for sign-in to access the document.",
+      "Microsoft Teams required sign-in and Multi-Factor Authentication.",
+      "Initial delay/stall at 0% during a file download from Microsoft Teams.",
+      "Microsoft Teams prompted for location access permission."
+    ],
+    "issues_resolved": [
+      "Successfully signed into Microsoft Teams and completed MFA.",
+      "Successfully downloaded a document via Microsoft Teams.",
+      "Dismissed the Teams location prompt."
+    ],
+    "machines_touched": [
+      "TE-HQ-LAB-02 (network device hostname visible in PuTTY and Word document)",
+      "172.16.9.3 (PuTTY session IP address)",
+      "VM-A-10.6.9.101/24 (IP configuration visible in Word document screenshot)"
+    ],
+    "notable_events": [
+      "Extended authentication process for Microsoft services involving both password entry and MFA.",
+      "A document from Microsoft Teams Chat Files showed a 'Protected View' warning.",
+      "File download from Teams was briefly stuck at 0% before completing."
+    ],
+    "concerns": [
+      "The Word document displayed a 'Protected View' warning regarding potential viruses from internet files; proceeding with sign-in (potentially enabling editing) on such a document without explicit confirmation of its safety could pose a minor security risk, though the source (Teams Chat Files from Technijian, Inc) mitigates this."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically to overcome authentication hurdles for Microsoft applications. The time spent was primarily due to the multi-step sign-in and MFA process, not a lack of clear direction. The navigation within Windows Search and Device Manager was also direct and purposeful.",
+      "coaching_flags": []
+    }
+  }
+}

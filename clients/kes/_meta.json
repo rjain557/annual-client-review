@@ -3,6 +3,7 @@
   "DirID": 7930,
   "Location_Name": "KES Homes",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.KES",
   "Data_Signals": [
     "cp",
     "huntress",
@@ -21,9 +22,18 @@
   "Time_Entries_This_Month": 1,
   "Total_Active_Users": 1,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5364,
+    "Contract_Name": "Monthly Support - 2025 india contracted",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2025-04-02T13:45:07.2830000",
+    "Signed_DirID": 7932
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

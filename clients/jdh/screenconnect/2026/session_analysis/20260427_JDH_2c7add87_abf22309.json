@@ -1,0 +1,45 @@
+{
+  "filename_stem": "20260427_JDH_2c7add87_abf22309",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260427_JDH_2c7add87_abf22309.mp4",
+  "analyzed_at": "2026-04-30T18:23:53Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician accessed the web interface of a Konica Minolta bizhub C554e printer/copier to review its configuration summary and current status. They refreshed one of the browser windows to get updated toner levels, observing significant changes in some of the toner percentages.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Observed Konica Minolta printer/copier configuration and status (model, serial, type, toner levels, paper tray status)\",\n    \"Refreshed web page in the right browser window to update status information\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"Konica Minolta bizhub C554e web interface (10.0.5.155)\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Konica Minolta bizhub C554e (IP: 10.0.5.155)\"\n  ],\n  \"notable_events\": [\n    \"A significant drop in Cyan toner level was observed after refreshing the page in the right browser window (from 69% to 6%), while other toner levels also changed (Magenta 64% to 76%, Black 65% to 56%, Yellow remained 29%). The left browser window, not refreshed, continued to display older toner levels.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"0:09-0:44 (35 seconds) - Screen static after page refresh; no mouse movement or further interaction observed.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 35,\n    \"total_idle_estimate_seconds\": 35,\n    \"efficiency_notes\": \"The technician quickly performed the action of refreshing the page to view updated status. No other tasks were shown in this short clip.\",\n    \"coaching_flags\": [\n      \"Did not explicitly acknowledge or investigate the significant drop in Cyan toner (from 69% to 6%) after the refresh, which could indicate a recent cartridge replacement or a potential issue.\",\n      \"Did not refresh the left browser window, resulting in two simultaneously displayed, but differing, sets of toner level information.\"\n    ]\n  }\n}",
+  "analysis": {
+    "summary": "The technician accessed the web interface of a Konica Minolta bizhub C554e printer/copier to review its configuration summary and current status. They refreshed one of the browser windows to get updated toner levels, observing significant changes in some of the toner percentages.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Observed Konica Minolta printer/copier configuration and status (model, serial, type, toner levels, paper tray status)",
+      "Refreshed web page in the right browser window to update status information"
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "Konica Minolta bizhub C554e web interface (10.0.5.155)"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Konica Minolta bizhub C554e (IP: 10.0.5.155)"
+    ],
+    "notable_events": [
+      "A significant drop in Cyan toner level was observed after refreshing the page in the right browser window (from 69% to 6%), while other toner levels also changed (Magenta 64% to 76%, Black 65% to 56%, Yellow remained 29%). The left browser window, not refreshed, continued to display older toner levels."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "0:09-0:44 (35 seconds) - Screen static after page refresh; no mouse movement or further interaction observed."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 35,
+      "total_idle_estimate_seconds": 35,
+      "efficiency_notes": "The technician quickly performed the action of refreshing the page to view updated status. No other tasks were shown in this short clip.",
+      "coaching_flags": [
+        "Did not explicitly acknowledge or investigate the significant drop in Cyan toner (from 69% to 6%) after the refresh, which could indicate a recent cartridge replacement or a potential issue.",
+        "Did not refresh the left browser window, resulting in two simultaneously displayed, but differing, sets of toner level information."
+      ]
+    }
+  }
+}

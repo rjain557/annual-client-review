@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260425_NOR_7b559eae_20ca2a9b",
+  "client_code": "NOR",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\NOR-2026-04\\20260425_NOR_7b559eae_20ca2a9b.mp4",
+  "analyzed_at": "2026-04-30T18:33:43Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into the Saflok Client software, which appears to be used for hotel key management. They proceeded to create a new Grand Master Key, selecting all available 178 locks for the key and confirming its validity for staff use. The process involved interacting with an external key encoder to physically create the key, after which the technician logged out.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Logged into Saflok Client using specific credentials (User ID: AR)\",\n    \"Initiated the 'Make User Keys' function\",\n    \"Selected 'GRAND MASTER KEYS' from the key group options\",\n    \"Confirmed the Key ID (entering '0' for a duplicate/new key)\",\n    \"Selected all 178 available locks to be opened by the master key\",\n    \"Configured the key's details, including 'STAFF' designation, all days of the week, and an expiration date (07/20/2020 11:53 PM)\",\n    \"Executed the key creation process, which required inserting a keycard into an encoder\",\n    \"Logged out of the Saflok Client application\"\n  ],\n  \"applications_used\": [\n    \"Saflok Client (version 5.06 build 8)\",\n    \"A hotel Property Management System (PMS) - visible in the background\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client machine running the Saflok Client software (no specific name visible)\"\n  ],\n  \"notable_events\": [\n    \"The 'Make a Key' dialog appeared, indicating a waiting period for a physical action (inserting a keycard into an encoder) at the client's end.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"~0:17 - ~0:21 (approx 4 seconds): Waiting for the 'Make a Key' dialog to clear, likely for a physical keycard encoding action.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 4,\n    \"total_idle_estimate_seconds\": 4,\n    \"efficiency_notes\": \"The technician worked very methodically, navigating directly to the required functions within the Saflok Client and executing the key creation process efficiently. This suggests clear familiarity with the software and the task.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into the Saflok Client software, which appears to be used for hotel key management. They proceeded to create a new Grand Master Key, selecting all available 178 locks for the key and confirming its validity for staff use. The process involved interacting with an external key encoder to physically create the key, after which the technician logged out.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Logged into Saflok Client using specific credentials (User ID: AR)",
+      "Initiated the 'Make User Keys' function",
+      "Selected 'GRAND MASTER KEYS' from the key group options",
+      "Confirmed the Key ID (entering '0' for a duplicate/new key)",
+      "Selected all 178 available locks to be opened by the master key",
+      "Configured the key's details, including 'STAFF' designation, all days of the week, and an expiration date (07/20/2020 11:53 PM)",
+      "Executed the key creation process, which required inserting a keycard into an encoder",
+      "Logged out of the Saflok Client application"
+    ],
+    "applications_used": [
+      "Saflok Client (version 5.06 build 8)",
+      "A hotel Property Management System (PMS) - visible in the background"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client machine running the Saflok Client software (no specific name visible)"
+    ],
+    "notable_events": [
+      "The 'Make a Key' dialog appeared, indicating a waiting period for a physical action (inserting a keycard into an encoder) at the client's end."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "~0:17 - ~0:21 (approx 4 seconds): Waiting for the 'Make a Key' dialog to clear, likely for a physical keycard encoding action."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 4,
+      "total_idle_estimate_seconds": 4,
+      "efficiency_notes": "The technician worked very methodically, navigating directly to the required functions within the Saflok Client and executing the key creation process efficiently. This suggests clear familiarity with the software and the task.",
+      "coaching_flags": []
+    }
+  }
+}

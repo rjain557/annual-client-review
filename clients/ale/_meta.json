@@ -3,6 +3,7 @@
   "DirID": 7988,
   "Location_Name": "Alera Group",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.ALE",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": false,
@@ -15,9 +16,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 2,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5422,
+    "Contract_Name": "Hourly - 2025",
+    "ContractType": "Hourly Rate",
+    "ContractStatusTxt": "Active",
+    "DateSigned": "2025-06-16T16:30:07.5700000",
+    "Signed_DirID": 7993
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

@@ -3,6 +3,7 @@
   "DirID": 5483,
   "Location_Name": "Law Offices of Stephen Abraham",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.FAL",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": false,
@@ -15,9 +16,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 1,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 4597,
+    "Contract_Name": "Hourly Support Contract",
+    "ContractType": "Hourly Rate",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": null,
+    "Signed_DirID": null
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_a2b4be2e",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_a2b4be2e.mp4",
+  "analyzed_at": "2026-04-30T19:28:53Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to configure iSCSI on a Linux machine by performing target discovery and then trying to log in to a specific iSCSI target. The iSCSI login attempts repeatedly failed with 'No records found' errors, and the technician subsequently exited the terminal. A Windows Administrator Command Prompt running 'iperf3 -s' was briefly visible during the session.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Executed `lsblk` to list block devices and their mount points on the Linux system.\",\n    \"Performed iSCSI target discovery using `sudo iscsiadm --mode discovery --type sendtargets --portal 10.7.9.250`.\",\n    \"Attempted to log in to an iSCSI target (iqn.2004-04.com.qnap:ts-ec880uiscsi.vmf-md-nc.2cb4de) multiple times using `sudo iscsiadm --mode node --targetname ... --login`, once explicitly specifying the portal.\",\n    \"Opened and quickly minimized an Administrator Command Prompt running `iperf3 -s` on a Windows machine.\",\n    \"Exited the Linux terminal session.\"\n  ],\n  \"applications_used\": [\n    \"Linux Terminal (Bash)\",\n    \"Administrator Command Prompt (Windows)\"\n  ],\n  \"issues_observed\": [\n    \"iSCSI login attempts failed with the error message `iscsiadm: No records found`.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02 (Linux client machine)\",\n    \"10.7.9.250 (iSCSI portal IP)\",\n    \"iqn.2004-04.com.qnap:ts-ec880uiscsi.vmf-md-nc.2cb4de (iSCSI target name)\"\n  ],\n  \"notable_events\": [\n    \"The technician briefly switched context to a Windows desktop showing an 'iperf3 -s' command prompt while primarily working on iSCSI configuration on a Linux machine.\",\n    \"Repeated failed iSCSI login attempts without visible intervening diagnostic steps.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician attempted the same iSCSI login command multiple times with minor variations after an error, without visible intermediate troubleshooting steps (e.g., checking iSCSI service status, relevant logs, or network connectivity beyond discovery) before exiting the terminal.\",\n    \"coaching_flags\": [\n      \"Review the troubleshooting methodology for iSCSI login failures, emphasizing diagnostic checks (e.g., service status, logs, firewall) prior to re-attempting commands.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to configure iSCSI on a Linux machine by performing target discovery and then trying to log in to a specific iSCSI target. The iSCSI login attempts repeatedly failed with 'No records found' errors, and the technician subsequently exited the terminal. A Windows Administrator Command Prompt running 'iperf3 -s' was briefly visible during the session.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Executed `lsblk` to list block devices and their mount points on the Linux system.",
+      "Performed iSCSI target discovery using `sudo iscsiadm --mode discovery --type sendtargets --portal 10.7.9.250`.",
+      "Attempted to log in to an iSCSI target (iqn.2004-04.com.qnap:ts-ec880uiscsi.vmf-md-nc.2cb4de) multiple times using `sudo iscsiadm --mode node --targetname ... --login`, once explicitly specifying the portal.",
+      "Opened and quickly minimized an Administrator Command Prompt running `iperf3 -s` on a Windows machine.",
+      "Exited the Linux terminal session."
+    ],
+    "applications_used": [
+      "Linux Terminal (Bash)",
+      "Administrator Command Prompt (Windows)"
+    ],
+    "issues_observed": [
+      "iSCSI login attempts failed with the error message `iscsiadm: No records found`."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02 (Linux client machine)",
+      "10.7.9.250 (iSCSI portal IP)",
+      "iqn.2004-04.com.qnap:ts-ec880uiscsi.vmf-md-nc.2cb4de (iSCSI target name)"
+    ],
+    "notable_events": [
+      "The technician briefly switched context to a Windows desktop showing an 'iperf3 -s' command prompt while primarily working on iSCSI configuration on a Linux machine.",
+      "Repeated failed iSCSI login attempts without visible intervening diagnostic steps."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician attempted the same iSCSI login command multiple times with minor variations after an error, without visible intermediate troubleshooting steps (e.g., checking iSCSI service status, relevant logs, or network connectivity beyond discovery) before exiting the terminal.",
+      "coaching_flags": [
+        "Review the troubleshooting methodology for iSCSI login failures, emphasizing diagnostic checks (e.g., service status, logs, firewall) prior to re-attempting commands."
+      ]
+    }
+  }
+}

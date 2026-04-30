@@ -1,0 +1,46 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_2afd2f92",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_2afd2f92.mp4",
+  "analyzed_at": "2026-04-30T18:42:29Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed the Windows Services console to manage background processes. They specifically located the Microsoft Edge Update Service, stopped it, and changed its startup type to 'Disabled', likely to prevent automatic updates or unwanted background activity related to Microsoft Edge.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Opened Windows Search bar and typed 'services'\",\n    \"Opened the Services application (services.msc)\",\n    \"Scrolled through the list of local services\",\n    \"Located and opened the properties for 'Microsoft Edge Update Service'\",\n    \"Clicked 'Stop' to terminate the running service\",\n    \"Changed the 'Startup type' of 'Microsoft Edge Update Service' from 'Automatic (Delayed Start, Trigger Start)' to 'Disabled'\",\n    \"Applied the changes and closed the service properties window\",\n    \"Closed the Services application\"\n  ],\n  \"applications_used\": [\n    \"Windows Services (services.msc)\",\n    \"Windows Search\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Local Computer\"\n  ],\n  \"notable_events\": [\n    \"A pop-up message appeared stating 'The Microsoft Edge Update Service helpedgeupdate (name on Local Computer) started and then stopped. Some services stop automatically if they are not in use by other services or programs.' after attempting to stop the service.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and directly, navigating to the Services console and performing the intended action without hesitation or visible uncertainty.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed the Windows Services console to manage background processes. They specifically located the Microsoft Edge Update Service, stopped it, and changed its startup type to 'Disabled', likely to prevent automatic updates or unwanted background activity related to Microsoft Edge.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Opened Windows Search bar and typed 'services'",
+      "Opened the Services application (services.msc)",
+      "Scrolled through the list of local services",
+      "Located and opened the properties for 'Microsoft Edge Update Service'",
+      "Clicked 'Stop' to terminate the running service",
+      "Changed the 'Startup type' of 'Microsoft Edge Update Service' from 'Automatic (Delayed Start, Trigger Start)' to 'Disabled'",
+      "Applied the changes and closed the service properties window",
+      "Closed the Services application"
+    ],
+    "applications_used": [
+      "Windows Services (services.msc)",
+      "Windows Search"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Local Computer"
+    ],
+    "notable_events": [
+      "A pop-up message appeared stating 'The Microsoft Edge Update Service helpedgeupdate (name on Local Computer) started and then stopped. Some services stop automatically if they are not in use by other services or programs.' after attempting to stop the service."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and directly, navigating to the Services console and performing the intended action without hesitation or visible uncertainty.",
+      "coaching_flags": []
+    }
+  }
+}

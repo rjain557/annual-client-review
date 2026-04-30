@@ -1,0 +1,55 @@
+{
+  "filename_stem": "20260422_ORX_1fddfada_5a105a3b",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260422_ORX_1fddfada_5a105a3b.mp4",
+  "analyzed_at": "2026-04-30T18:34:36Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to connect to a SQL Server instance (ORX-DC-TS-04) but encountered a connection timeout. They investigated SQL Server Reporting Services (SSRS) configuration files, suspecting binding issues after an upgrade, but was unable to resolve the connection problem within the recording.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to connect to SQL Server (ORX-DC-TS-04) using SSMS, resulting in a connection timeout.\",\n    \"Accessed the SSRS web portal (`orx-dc-ts-04/Reports/error`) and confirmed a 'Report server can't connect to its database' error.\",\n    \"Navigated in File Explorer to the SSRS installation directory (D:\\\\Program Files\\\\Microsoft SQL Server Reporting Services\\\\SSRS).\",\n    \"Reviewed multiple SSRS configuration files in Notepad: `RSManagement.exe.config`, `RSHostingService.exe.config`, `RS.exe.config`, and `RSKeyMgmt.exe.config`.\",\n    \"Retried connecting to the SQL Server instance via SSMS, which again timed out.\"\n  ],\n  \"applications_used\": [\n    \"Microsoft SQL Server Management Studio (SSMS)\",\n    \"Microsoft Edge\",\n    \"File Explorer\",\n    \"Notepad\"\n  ],\n  \"issues_observed\": [\n    \"SQL Server connection timeout error (Connection Timeout Expired during post-login phase).\",\n    \"SQL Server Reporting Services (SSRS) web portal showing 'Report server can't connect to its database.'\",\n    \"Specific assembly binding redirect found in RSManagement.exe.config from Microsoft.SqlServer.Types version 10.0.0.0 to 15.0.0.0, indicating a potential version mismatch issue after a SQL Server upgrade.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"ORX-DC-TS-04 (SQL Server instance)\",\n    \"ORX-DC-APP-04 (likely the host for the Q drive and SSRS installation)\"\n  ],\n  \"notable_events\": [\n    \"The connection error details (`pre-login initialization = 230; handshake=0] (login) initialization=15000; post-login = [0] (login)`) suggest the server accepted the initial connection but failed during the login/post-login phase, which could be due to authentication, resource contention, or misconfiguration.\",\n    \"The inspection of SSRS config files, especially the assembly binding redirect to a newer SQL Server Types version, is a logical step for diagnosing issues after a SQL Server upgrade or patching.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"00:08 - 00:20 (approx 12 seconds): Browser open with spinning loader on SSRS error page.\",\n      \"01:16 - 01:22 (approx 6 seconds): SSMS connection dialog open, no interaction.\",\n      \"01:26 - 01:55 (approx 29 seconds): SSMS connection attempt with loading bar, waiting for timeout.\"\n    ],\n    \"idle_gap_count\": 3,\n    \"longest_idle_seconds\": 29,\n    \"total_idle_estimate_seconds\": 47,\n    \"efficiency_notes\": \"The technician worked methodically, first confirming the connection issue, then verifying the SSRS symptom, and proceeding to check relevant configuration files. The idle times were mostly spent waiting for system responses (browser loading, connection timeouts).\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to connect to a SQL Server instance (ORX-DC-TS-04) but encountered a connection timeout. They investigated SQL Server Reporting Services (SSRS) configuration files, suspecting binding issues after an upgrade, but was unable to resolve the connection problem within the recording.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to connect to SQL Server (ORX-DC-TS-04) using SSMS, resulting in a connection timeout.",
+      "Accessed the SSRS web portal (`orx-dc-ts-04/Reports/error`) and confirmed a 'Report server can't connect to its database' error.",
+      "Navigated in File Explorer to the SSRS installation directory (D:\\Program Files\\Microsoft SQL Server Reporting Services\\SSRS).",
+      "Reviewed multiple SSRS configuration files in Notepad: `RSManagement.exe.config`, `RSHostingService.exe.config`, `RS.exe.config`, and `RSKeyMgmt.exe.config`.",
+      "Retried connecting to the SQL Server instance via SSMS, which again timed out."
+    ],
+    "applications_used": [
+      "Microsoft SQL Server Management Studio (SSMS)",
+      "Microsoft Edge",
+      "File Explorer",
+      "Notepad"
+    ],
+    "issues_observed": [
+      "SQL Server connection timeout error (Connection Timeout Expired during post-login phase).",
+      "SQL Server Reporting Services (SSRS) web portal showing 'Report server can't connect to its database.'",
+      "Specific assembly binding redirect found in RSManagement.exe.config from Microsoft.SqlServer.Types version 10.0.0.0 to 15.0.0.0, indicating a potential version mismatch issue after a SQL Server upgrade."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "ORX-DC-TS-04 (SQL Server instance)",
+      "ORX-DC-APP-04 (likely the host for the Q drive and SSRS installation)"
+    ],
+    "notable_events": [
+      "The connection error details (`pre-login initialization = 230; handshake=0] (login) initialization=15000; post-login = [0] (login)`) suggest the server accepted the initial connection but failed during the login/post-login phase, which could be due to authentication, resource contention, or misconfiguration.",
+      "The inspection of SSRS config files, especially the assembly binding redirect to a newer SQL Server Types version, is a logical step for diagnosing issues after a SQL Server upgrade or patching."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "00:08 - 00:20 (approx 12 seconds): Browser open with spinning loader on SSRS error page.",
+        "01:16 - 01:22 (approx 6 seconds): SSMS connection dialog open, no interaction.",
+        "01:26 - 01:55 (approx 29 seconds): SSMS connection attempt with loading bar, waiting for timeout."
+      ],
+      "idle_gap_count": 3,
+      "longest_idle_seconds": 29,
+      "total_idle_estimate_seconds": 47,
+      "efficiency_notes": "The technician worked methodically, first confirming the connection issue, then verifying the SSRS symptom, and proceeding to check relevant configuration files. The idle times were mostly spent waiting for system responses (browser loading, connection timeouts).",
+      "coaching_flags": []
+    }
+  }
+}

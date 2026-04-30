@@ -1,0 +1,68 @@
+{
+  "filename_stem": "20260427_ORX_7b6afdfa_d698c14f",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260427_ORX_7b6afdfa_d698c14f.mp4",
+  "analyzed_at": "2026-04-30T19:01:25Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician addressed a client's report of a missing printer. Initial investigation in Windows settings revealed no printers. After confirming the printer was expected via RDP redirection, the technician tested printing from Microsoft Word and an accounting application, both showing no available RDP printers. The session concluded with the client stating they would investigate the RDP server.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Responded to client chat regarding a missing printer.\",\n    \"Navigated to Windows Settings > Printers & scanners to check for printers.\",\n    \"Attempted to refresh the printer list multiple times.\",\n    \"Communicated with the client to clarify the printer type (RDP redirected).\",\n    \"Opened and tested printing from Microsoft Word to check available printers.\",\n    \"Opened and tested printing from a QuickBooks-like accounting application to check available printers.\",\n    \"Communicated with the client about further steps on the server side.\",\n    \"Opened Microsoft Outlook and scrolled through emails.\"\n  ],\n  \"applications_used\": [\n    \"ScreenConnect (chat)\",\n    \"Windows Settings\",\n    \"Microsoft Word\",\n    \"QuickBooks (or similar accounting software)\",\n    \"Microsoft Outlook\"\n  ],\n  \"issues_observed\": [\n    \"Printer was missing from Windows 'Printers & scanners' settings.\",\n    \"No RDP redirected printer (named 'rdp side word print') was available when attempting to print from applications.\",\n    \"The client explicitly stated the printer was on the 'rdp side', indicating a redirection issue.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client Workstation (no specific name visible)\"\n  ],\n  \"notable_events\": [\n    \"The technician spent a considerable amount of time repeatedly clicking refresh in printer settings without effect.\",\n    \"The client clarified late in the session that the missing printer was an RDP redirected printer.\",\n    \"The session ended without a resolution, with the client indicating they would check the server.\",\n    \"The technician spent over a minute scrolling through emails in Outlook at the end of the session, which appeared unrelated to the troubleshooting task.\"\n  ],\n  \"concerns\": [\n    \"Efficiency: Technician spent excessive time (approx. 27 seconds) repeatedly clicking 'Refresh' in printer settings without a visible change, indicating a lack of immediate alternative troubleshooting steps.\",\n    \"Communication Timing: The crucial information about the printer being an RDP redirected printer was only clearly established after initial local troubleshooting efforts, potentially wasting time.\",\n    \"Unrelated Activity: The technician spent a significant amount of time (over 1 minute) scrolling through emails in Outlook at the end of the session, which was not relevant to the printer issue and might be considered unproductive time.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"The technician repeatedly clicked the 'Refresh' button in the 'Printers & scanners' settings at least 10 times between 0:17 and 0:44 (approx. 27 seconds) without any change in the listed devices. This repetitive action did not yield results and continued until they minimized the Settings window.\"\n    ],\n    \"idle_gaps\": [\n      \"2:37 - 3:59 (approx 82 seconds): After closing the Purchase Order form, the technician opened Microsoft Outlook and scrolled through emails, which seemed unrelated to the active troubleshooting task.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 82,\n    \"total_idle_estimate_seconds\": 82,\n    \"efficiency_notes\": \"The technician's initial approach to troubleshooting was inefficient, relying on repetitive 'Refresh' actions without quickly clarifying the printer's nature (local vs. RDP). A significant portion of time at the end was spent on an unrelated activity (browsing Outlook), further indicating low efficiency for the primary task.\",\n    \"coaching_flags\": [\n      \"Advise on quickly clarifying printer type (local, network, RDP) at the start of printer-related issues to streamline troubleshooting.\",\n      \"Coach on avoiding prolonged repetitive actions that yield no results, and instead pivot to alternative diagnostic methods.\",\n      \"Review the practice of engaging in unrelated activities (e.g., checking personal emails) during active client support sessions.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician addressed a client's report of a missing printer. Initial investigation in Windows settings revealed no printers. After confirming the printer was expected via RDP redirection, the technician tested printing from Microsoft Word and an accounting application, both showing no available RDP printers. The session concluded with the client stating they would investigate the RDP server.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Responded to client chat regarding a missing printer.",
+      "Navigated to Windows Settings > Printers & scanners to check for printers.",
+      "Attempted to refresh the printer list multiple times.",
+      "Communicated with the client to clarify the printer type (RDP redirected).",
+      "Opened and tested printing from Microsoft Word to check available printers.",
+      "Opened and tested printing from a QuickBooks-like accounting application to check available printers.",
+      "Communicated with the client about further steps on the server side.",
+      "Opened Microsoft Outlook and scrolled through emails."
+    ],
+    "applications_used": [
+      "ScreenConnect (chat)",
+      "Windows Settings",
+      "Microsoft Word",
+      "QuickBooks (or similar accounting software)",
+      "Microsoft Outlook"
+    ],
+    "issues_observed": [
+      "Printer was missing from Windows 'Printers & scanners' settings.",
+      "No RDP redirected printer (named 'rdp side word print') was available when attempting to print from applications.",
+      "The client explicitly stated the printer was on the 'rdp side', indicating a redirection issue."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client Workstation (no specific name visible)"
+    ],
+    "notable_events": [
+      "The technician spent a considerable amount of time repeatedly clicking refresh in printer settings without effect.",
+      "The client clarified late in the session that the missing printer was an RDP redirected printer.",
+      "The session ended without a resolution, with the client indicating they would check the server.",
+      "The technician spent over a minute scrolling through emails in Outlook at the end of the session, which appeared unrelated to the troubleshooting task."
+    ],
+    "concerns": [
+      "Efficiency: Technician spent excessive time (approx. 27 seconds) repeatedly clicking 'Refresh' in printer settings without a visible change, indicating a lack of immediate alternative troubleshooting steps.",
+      "Communication Timing: The crucial information about the printer being an RDP redirected printer was only clearly established after initial local troubleshooting efforts, potentially wasting time.",
+      "Unrelated Activity: The technician spent a significant amount of time (over 1 minute) scrolling through emails in Outlook at the end of the session, which was not relevant to the printer issue and might be considered unproductive time."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "The technician repeatedly clicked the 'Refresh' button in the 'Printers & scanners' settings at least 10 times between 0:17 and 0:44 (approx. 27 seconds) without any change in the listed devices. This repetitive action did not yield results and continued until they minimized the Settings window."
+      ],
+      "idle_gaps": [
+        "2:37 - 3:59 (approx 82 seconds): After closing the Purchase Order form, the technician opened Microsoft Outlook and scrolled through emails, which seemed unrelated to the active troubleshooting task."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 82,
+      "total_idle_estimate_seconds": 82,
+      "efficiency_notes": "The technician's initial approach to troubleshooting was inefficient, relying on repetitive 'Refresh' actions without quickly clarifying the printer's nature (local vs. RDP). A significant portion of time at the end was spent on an unrelated activity (browsing Outlook), further indicating low efficiency for the primary task.",
+      "coaching_flags": [
+        "Advise on quickly clarifying printer type (local, network, RDP) at the start of printer-related issues to streamline troubleshooting.",
+        "Coach on avoiding prolonged repetitive actions that yield no results, and instead pivot to alternative diagnostic methods.",
+        "Review the practice of engaging in unrelated activities (e.g., checking personal emails) during active client support sessions."
+      ]
+    }
+  }
+}

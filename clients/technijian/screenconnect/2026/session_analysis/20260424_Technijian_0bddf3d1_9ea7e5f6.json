@@ -1,0 +1,73 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_9ea7e5f6",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_9ea7e5f6.mp4",
+  "analyzed_at": "2026-04-30T19:45:52Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Linux server and performed diagnostic checks on the file system and a Docker container. They successfully started a Nextcloud Docker container, accessed its shell, and inspected key configuration directories after resolving initial access and authentication issues.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Inspected disk and partition information using `lsblk`.\",\n    \"Navigated various file system directories (e.g., `/mnt/VAF-MD-NC`, `/home/technijian`, `groupfolders`).\",\n    \"Listed directory contents using `ls -lhrt`.\",\n    \"Attempted to execute a command within the `nextcloud_aio_nextcloud` Docker container, which initially failed because the container was stopped.\",\n    \"Started the `nextcloud_aio_nextcloud` Docker container using `sudo docker start`.\",\n    \"Attempted to access the Docker container's shell via `sudo docker exec`, encountering an OCI runtime error related to 'vim'.\",\n    \"Successfully gained shell access to the `nextcloud_aio_nextcloud` Docker container after correcting a password entry for `sudo`.\",\n    \"Listed contents of `/var/www/html/` and `/var/www/html/config` from within the Docker container.\",\n    \"Attempted to list host file system paths from within the Docker container's shell.\",\n    \"Exited the Docker container shell.\"\n  ],\n  \"applications_used\": [\n    \"Terminal (Bash)\",\n    \"sudo\",\n    \"lsblk\",\n    \"cd\",\n    \"ls\",\n    \"docker\"\n  ],\n  \"issues_observed\": [\n    \"The `nextcloud_aio_nextcloud` Docker container was initially not running.\",\n    \"An `OCI runtime exec failed` error occurred, specifically mentioning `exec: \\\"vim\\\": executable file not found in $PATH` during an attempt to `docker exec` into the container with `bash`.\",\n    \"Incorrect `sudo` password was entered once, leading to a retry.\",\n    \"The technician attempted to `ls` an external host path (`/mnt/VAF-MD-NC/groupfolders`) while inside the Docker container's isolated file system.\"\n  ],\n  \"issues_resolved\": [\n    \"The `nextcloud_aio_nextcloud` Docker container was successfully started.\",\n    \"Shell access to the `nextcloud_aio_nextcloud` Docker container was achieved after initial failures.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"nextcloud_aio_nextcloud (Docker container)\"\n  ],\n  \"notable_events\": [\n    \"Multiple attempts were required to access the Docker container's shell, including starting the container, an unusual 'vim' related error, and a failed password attempt.\",\n    \"The technician attempted to access a host file path while operating within a Docker container's shell, indicating a misunderstanding of container isolation.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"0:02 - 0:03: The technician struggled to `docker exec` into the container due to it being stopped, then an unexpected `vim` error message, and finally an incorrect password attempt. This sequence took approximately 30 seconds until successful.\",\n      \"0:03 - 0:04: Inside the Docker container, the technician repeatedly attempted to list the contents of a host path (`/mnt/VAF-MD-NC/groupfolders`) which is not accessible from within the container, interspersed with correct commands. This repetition lasted about 20 seconds.\"\n    ],\n    \"idle_gaps\": [\n      \"0:00 - 0:01: Screen static after `lsblk` output (approx. 10 seconds).\",\n      \"0:01 - 0:02: Screen static after `ls -lhrt` output (approx. 5 seconds).\",\n      \"0:04 - 0:05: Screen static after exiting Docker container (approx. 10 seconds).\"\n    ],\n    \"idle_gap_count\": 3,\n    \"longest_idle_seconds\": 10,\n    \"total_idle_estimate_seconds\": 25,\n    \"efficiency_notes\": \"The technician methodically checked disk and file system information. However, they displayed some inefficiency by repeatedly trying to access the Docker container (due to it being stopped and a password issue) and by attempting to list host paths from within the container shell, indicating a lack of clarity on container file system isolation.\",\n    \"coaching_flags\": [\n      \"Review Docker container troubleshooting steps, particularly error message interpretation (e.g., the 'vim' error during `docker exec bash`).\",\n      \"Reinforce the understanding of Docker container filesystem isolation versus the host filesystem.\",\n      \"Emphasize efficient password entry to avoid retries.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Linux server and performed diagnostic checks on the file system and a Docker container. They successfully started a Nextcloud Docker container, accessed its shell, and inspected key configuration directories after resolving initial access and authentication issues.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Inspected disk and partition information using `lsblk`.",
+      "Navigated various file system directories (e.g., `/mnt/VAF-MD-NC`, `/home/technijian`, `groupfolders`).",
+      "Listed directory contents using `ls -lhrt`.",
+      "Attempted to execute a command within the `nextcloud_aio_nextcloud` Docker container, which initially failed because the container was stopped.",
+      "Started the `nextcloud_aio_nextcloud` Docker container using `sudo docker start`.",
+      "Attempted to access the Docker container's shell via `sudo docker exec`, encountering an OCI runtime error related to 'vim'.",
+      "Successfully gained shell access to the `nextcloud_aio_nextcloud` Docker container after correcting a password entry for `sudo`.",
+      "Listed contents of `/var/www/html/` and `/var/www/html/config` from within the Docker container.",
+      "Attempted to list host file system paths from within the Docker container's shell.",
+      "Exited the Docker container shell."
+    ],
+    "applications_used": [
+      "Terminal (Bash)",
+      "sudo",
+      "lsblk",
+      "cd",
+      "ls",
+      "docker"
+    ],
+    "issues_observed": [
+      "The `nextcloud_aio_nextcloud` Docker container was initially not running.",
+      "An `OCI runtime exec failed` error occurred, specifically mentioning `exec: \"vim\": executable file not found in $PATH` during an attempt to `docker exec` into the container with `bash`.",
+      "Incorrect `sudo` password was entered once, leading to a retry.",
+      "The technician attempted to `ls` an external host path (`/mnt/VAF-MD-NC/groupfolders`) while inside the Docker container's isolated file system."
+    ],
+    "issues_resolved": [
+      "The `nextcloud_aio_nextcloud` Docker container was successfully started.",
+      "Shell access to the `nextcloud_aio_nextcloud` Docker container was achieved after initial failures."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "nextcloud_aio_nextcloud (Docker container)"
+    ],
+    "notable_events": [
+      "Multiple attempts were required to access the Docker container's shell, including starting the container, an unusual 'vim' related error, and a failed password attempt.",
+      "The technician attempted to access a host file path while operating within a Docker container's shell, indicating a misunderstanding of container isolation."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "0:02 - 0:03: The technician struggled to `docker exec` into the container due to it being stopped, then an unexpected `vim` error message, and finally an incorrect password attempt. This sequence took approximately 30 seconds until successful.",
+        "0:03 - 0:04: Inside the Docker container, the technician repeatedly attempted to list the contents of a host path (`/mnt/VAF-MD-NC/groupfolders`) which is not accessible from within the container, interspersed with correct commands. This repetition lasted about 20 seconds."
+      ],
+      "idle_gaps": [
+        "0:00 - 0:01: Screen static after `lsblk` output (approx. 10 seconds).",
+        "0:01 - 0:02: Screen static after `ls -lhrt` output (approx. 5 seconds).",
+        "0:04 - 0:05: Screen static after exiting Docker container (approx. 10 seconds)."
+      ],
+      "idle_gap_count": 3,
+      "longest_idle_seconds": 10,
+      "total_idle_estimate_seconds": 25,
+      "efficiency_notes": "The technician methodically checked disk and file system information. However, they displayed some inefficiency by repeatedly trying to access the Docker container (due to it being stopped and a password issue) and by attempting to list host paths from within the container shell, indicating a lack of clarity on container file system isolation.",
+      "coaching_flags": [
+        "Review Docker container troubleshooting steps, particularly error message interpretation (e.g., the 'vim' error during `docker exec bash`).",
+        "Reinforce the understanding of Docker container filesystem isolation versus the host filesystem.",
+        "Emphasize efficient password entry to avoid retries."
+      ]
+    }
+  }
+}

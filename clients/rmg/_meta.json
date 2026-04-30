@@ -3,6 +3,7 @@
   "DirID": 5779,
   "Location_Name": "Roddel Marketing Group, Inc",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.RMG",
   "Data_Signals": [
     "huntress",
     "crowdstrike"
@@ -18,9 +19,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 3,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 4701,
+    "Contract_Name": "Monthly Support - 2021",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2021-07-28T05:51:38.3400000",
+    "Signed_DirID": 3198
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

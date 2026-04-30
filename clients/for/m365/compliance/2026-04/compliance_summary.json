@@ -1,0 +1,56 @@
+{
+  "client_code": "FOR",
+  "tenant_id": "d57b79ab-c770-4c4a-9b2d-36c90c710b6d",
+  "month": "2026-04",
+  "errors": [
+    {
+      "source": "secure_score",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    },
+    {
+      "source": "conditional_access",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    },
+    {
+      "source": "mfa_registration",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    },
+    {
+      "source": "admin_roles",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    },
+    {
+      "source": "guest_users",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    },
+    {
+      "source": "subscribed_skus",
+      "error": "Token request failed for tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6d: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant d57b79ab-c770-4c4a-9b2d-36c90c710b6'"
+    }
+  ],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 2,
+    "warn_count": 0,
+    "checks": [
+      {
+        "check": "Conditional Access Policies",
+        "status": "fail",
+        "value": "0 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "fail",
+        "value": "Not blocked",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "pass",
+        "value": "0 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

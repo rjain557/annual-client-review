@@ -1,0 +1,45 @@
+{
+  "filename_stem": "20260428_ANI_4f5b0489_e6983677",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260428_ANI_4f5b0489_e6983677.mp4",
+  "analyzed_at": "2026-04-30T17:46:34Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to run a custom 'Run Order Report Script' within the 'Optimization Agent Launch' application. The script failed to execute due to a 'No such file or directory' error, indicating a required temporary CSV file was missing or inaccessible. The technician acknowledged the error but did not proceed with troubleshooting within the recorded session.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Navigated to 'Custom' section in the 'Optimization Agent Launch' application.\",\n    \"Executed the 'Run Order Report Script'.\",\n    \"Dismissed an error message by clicking 'OK'.\"\n  ],\n  \"applications_used\": [\n    \"Optimization Agent Launch (Ambisense Industries)\",\n    \"Microsoft Excel (icon visible, file open)\"\n  ],\n  \"issues_observed\": [\n    \"Script execution failed with an error: 'Error: Cannot stat 'C:\\\\programfilesx86\\\\PRODUCT_041720.csv.tmp': No such file or directory'.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"A custom script failed to run due to a missing temporary file, indicating a potential configuration or data issue with the application or script.\"\n  ],\n  \"concerns\": [\n    \"The technician did not initiate any troubleshooting steps (e.g., checking the file path, examining script logs) after the script failed, only dismissing the error.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved directly to the intended script and executed it. The error was promptly dismissed, but no further investigative action was taken within the short recording.\",\n    \"coaching_flags\": [\n      \"Did not investigate the root cause of the 'No such file or directory' error after the script failed, which is crucial for troubleshooting.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to run a custom 'Run Order Report Script' within the 'Optimization Agent Launch' application. The script failed to execute due to a 'No such file or directory' error, indicating a required temporary CSV file was missing or inaccessible. The technician acknowledged the error but did not proceed with troubleshooting within the recorded session.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Navigated to 'Custom' section in the 'Optimization Agent Launch' application.",
+      "Executed the 'Run Order Report Script'.",
+      "Dismissed an error message by clicking 'OK'."
+    ],
+    "applications_used": [
+      "Optimization Agent Launch (Ambisense Industries)",
+      "Microsoft Excel (icon visible, file open)"
+    ],
+    "issues_observed": [
+      "Script execution failed with an error: 'Error: Cannot stat 'C:\\programfilesx86\\PRODUCT_041720.csv.tmp': No such file or directory'."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [],
+    "notable_events": [
+      "A custom script failed to run due to a missing temporary file, indicating a potential configuration or data issue with the application or script."
+    ],
+    "concerns": [
+      "The technician did not initiate any troubleshooting steps (e.g., checking the file path, examining script logs) after the script failed, only dismissing the error."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved directly to the intended script and executed it. The error was promptly dismissed, but no further investigative action was taken within the short recording.",
+      "coaching_flags": [
+        "Did not investigate the root cause of the 'No such file or directory' error after the script failed, which is crucial for troubleshooting."
+      ]
+    }
+  }
+}

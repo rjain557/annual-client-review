@@ -3,6 +3,7 @@
   "DirID": 8007,
   "Location_Name": "George Dai",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.R_GD",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": false,
@@ -15,9 +16,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 1,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5435,
+    "Contract_Name": "Monthly Support",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "Active",
+    "DateSigned": "2025-06-26T14:30:08.6830000",
+    "Signed_DirID": 8009
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

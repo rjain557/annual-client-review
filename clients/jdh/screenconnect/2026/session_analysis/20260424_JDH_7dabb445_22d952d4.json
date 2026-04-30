@@ -1,0 +1,62 @@
+{
+  "filename_stem": "20260424_JDH_7dabb445_22d952d4",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260424_JDH_7dabb445_22d952d4.mp4",
+  "analyzed_at": "2026-04-30T18:18:25Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician opened a PDF credit application and then created a new Microsoft Word document, manually transcribing the fields from the PDF to create a template. Initial attempts to directly fill the PDF were unsuccessful. The session involved careful, but slow, document creation and formatting based on a source PDF.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Opened and reviewed a PDF credit application document.\",\n    \"Attempted to directly input text into PDF form fields, but deleted inputs.\",\n    \"Opened multiple blank Microsoft Word documents.\",\n    \"Manually typed out field names from the PDF document into a new Word document to create a template.\",\n    \"Adjusted formatting and order of fields within the Word document.\",\n    \"Used Microsoft Word's basic text editing and formatting features (bolding, numbering, styles).\"\n  ],\n  \"applications_used\": [\n    \"Adobe Acrobat Reader (or similar PDF viewer)\",\n    \"Microsoft Word\"\n  ],\n  \"issues_observed\": [\n    \"A 'PassBox Client' error (0x8000) briefly appeared at 00:01 related to the remote session.\",\n    \"An 'Inventory Scanning is In Progress' notification from ManageEngine appeared at 06:05.\"\n  ],\n  \"issues_resolved\": [\n    \"The 'PassBox Client' error resolved itself shortly after appearing.\"\n  ],\n  \"machines_touched\": [\n    \"WEST-GOSC5 (from PassBox Client error message)\"\n  ],\n  \"notable_events\": [\n    \"The technician spent a significant amount of time manually transcribing fields from a PDF to a Word document, which is an inefficient process.\",\n    \"Multiple attempts were made to type directly into the PDF form fields before switching to a Word document, indicating initial struggle with PDF editing functionality.\",\n    \"Minor back-and-forth formatting changes were made in Word (e.g., trying numbering/styles then reverting).\"\n  ],\n  \"concerns\": [\n    \"The primary concern is efficiency. Manually recreating a document's field structure by typing from a PDF into Word is very time-consuming and prone to human error. Better tools or methods (e.g., advanced PDF editors, form extraction tools, or more efficient copy-pasting strategies) could have been used.\",\n    \"The technician's repeated actions and indecision regarding formatting suggest a lack of familiarity with efficient document handling workflows for this type of task.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"00:51 - 01:16 (approx. 25 seconds): Repeatedly attempted to type into a non-interactive field in the PDF, deleting the input each time, before abandoning the direct PDF editing approach.\",\n      \"04:51 - 04:55 (approx. 4 seconds): Tried to apply numbering and 'Title' style to a heading in Word, then reverted, showing indecision.\",\n      \"06:37 - 06:44 (approx. 7 seconds): Repeatedly applied and reverted formatting styles (centering, title style, numbering) to headings in Word.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician lacked a clear, efficient plan for extracting information from the PDF. They initially tried direct PDF editing unsuccessfully, then reverted to a very manual and time-consuming process of typing out each field from the PDF into a new Word document. There was noticeable hesitation and re-evaluation of formatting choices in Word.\",\n    \"coaching_flags\": [\n      \"Review efficient methods for extracting structured data from PDFs (e.g., advanced PDF editor features, text extraction tools).\",\n      \"Improve workflow planning for document-related tasks to avoid repeated attempts and manual data entry where automation or semi-automation is possible.\",\n      \"Enhance familiarity with advanced Microsoft Word formatting and structuring features to improve document creation efficiency.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician opened a PDF credit application and then created a new Microsoft Word document, manually transcribing the fields from the PDF to create a template. Initial attempts to directly fill the PDF were unsuccessful. The session involved careful, but slow, document creation and formatting based on a source PDF.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Opened and reviewed a PDF credit application document.",
+      "Attempted to directly input text into PDF form fields, but deleted inputs.",
+      "Opened multiple blank Microsoft Word documents.",
+      "Manually typed out field names from the PDF document into a new Word document to create a template.",
+      "Adjusted formatting and order of fields within the Word document.",
+      "Used Microsoft Word's basic text editing and formatting features (bolding, numbering, styles)."
+    ],
+    "applications_used": [
+      "Adobe Acrobat Reader (or similar PDF viewer)",
+      "Microsoft Word"
+    ],
+    "issues_observed": [
+      "A 'PassBox Client' error (0x8000) briefly appeared at 00:01 related to the remote session.",
+      "An 'Inventory Scanning is In Progress' notification from ManageEngine appeared at 06:05."
+    ],
+    "issues_resolved": [
+      "The 'PassBox Client' error resolved itself shortly after appearing."
+    ],
+    "machines_touched": [
+      "WEST-GOSC5 (from PassBox Client error message)"
+    ],
+    "notable_events": [
+      "The technician spent a significant amount of time manually transcribing fields from a PDF to a Word document, which is an inefficient process.",
+      "Multiple attempts were made to type directly into the PDF form fields before switching to a Word document, indicating initial struggle with PDF editing functionality.",
+      "Minor back-and-forth formatting changes were made in Word (e.g., trying numbering/styles then reverting)."
+    ],
+    "concerns": [
+      "The primary concern is efficiency. Manually recreating a document's field structure by typing from a PDF into Word is very time-consuming and prone to human error. Better tools or methods (e.g., advanced PDF editors, form extraction tools, or more efficient copy-pasting strategies) could have been used.",
+      "The technician's repeated actions and indecision regarding formatting suggest a lack of familiarity with efficient document handling workflows for this type of task."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "00:51 - 01:16 (approx. 25 seconds): Repeatedly attempted to type into a non-interactive field in the PDF, deleting the input each time, before abandoning the direct PDF editing approach.",
+        "04:51 - 04:55 (approx. 4 seconds): Tried to apply numbering and 'Title' style to a heading in Word, then reverted, showing indecision.",
+        "06:37 - 06:44 (approx. 7 seconds): Repeatedly applied and reverted formatting styles (centering, title style, numbering) to headings in Word."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician lacked a clear, efficient plan for extracting information from the PDF. They initially tried direct PDF editing unsuccessfully, then reverted to a very manual and time-consuming process of typing out each field from the PDF into a new Word document. There was noticeable hesitation and re-evaluation of formatting choices in Word.",
+      "coaching_flags": [
+        "Review efficient methods for extracting structured data from PDFs (e.g., advanced PDF editor features, text extraction tools).",
+        "Improve workflow planning for document-related tasks to avoid repeated attempts and manual data entry where automation or semi-automation is possible.",
+        "Enhance familiarity with advanced Microsoft Word formatting and structuring features to improve document creation efficiency."
+      ]
+    }
+  }
+}

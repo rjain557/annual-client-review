@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260422_Technijian_1fbf7d73_f349260e",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_1fbf7d73_f349260e.mp4",
+  "analyzed_at": "2026-04-30T19:16:42Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into a Windows Administrator account. They initially faced repeated 'incorrect password' errors and attempted a password reset before realizing that Caps Lock was enabled, leading to a successful login.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to log in to the Administrator account multiple times with an incorrect password.\",\n    \"Clicked 'Reset password' on the login screen.\",\n    \"Dismissed a 'No Drive' error message when attempting to reset the password.\",\n    \"Realized Caps Lock was enabled, then entered the correct password to successfully log in.\"\n  ],\n  \"applications_used\": [\n    \"Windows Login screen\"\n  ],\n  \"issues_observed\": [\n    \"Repeated 'The password is incorrect. Try again.' errors.\",\n    \"A 'No Drive' error when trying to reset the password without a USB flash drive.\",\n    \"Caps Lock was inadvertently on, causing password entry issues.\"\n  ],\n  \"issues_resolved\": [\n    \"The login issue caused by incorrect password entry (due to Caps Lock) was resolved, allowing access to the system.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The technician spent multiple attempts entering the password incorrectly before noticing the 'Caps Lock is on' warning, which was the root cause of the login failures.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician struggled with a basic login issue for several seconds, repeatedly entering the password incorrectly. It took the explicit 'Caps Lock is on' warning to identify the problem, indicating a lack of methodical troubleshooting for common login challenges.\",\n    \"coaching_flags\": [\n      \"Coach on systematically checking common login issues (e.g., Caps Lock, Num Lock, keyboard layout) when facing repeated 'incorrect password' errors.\",\n      \"Recommend confirming the availability of necessary media or prerequisites before attempting features like 'Reset password' that require them.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into a Windows Administrator account. They initially faced repeated 'incorrect password' errors and attempted a password reset before realizing that Caps Lock was enabled, leading to a successful login.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to log in to the Administrator account multiple times with an incorrect password.",
+      "Clicked 'Reset password' on the login screen.",
+      "Dismissed a 'No Drive' error message when attempting to reset the password.",
+      "Realized Caps Lock was enabled, then entered the correct password to successfully log in."
+    ],
+    "applications_used": [
+      "Windows Login screen"
+    ],
+    "issues_observed": [
+      "Repeated 'The password is incorrect. Try again.' errors.",
+      "A 'No Drive' error when trying to reset the password without a USB flash drive.",
+      "Caps Lock was inadvertently on, causing password entry issues."
+    ],
+    "issues_resolved": [
+      "The login issue caused by incorrect password entry (due to Caps Lock) was resolved, allowing access to the system."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The technician spent multiple attempts entering the password incorrectly before noticing the 'Caps Lock is on' warning, which was the root cause of the login failures."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician struggled with a basic login issue for several seconds, repeatedly entering the password incorrectly. It took the explicit 'Caps Lock is on' warning to identify the problem, indicating a lack of methodical troubleshooting for common login challenges.",
+      "coaching_flags": [
+        "Coach on systematically checking common login issues (e.g., Caps Lock, Num Lock, keyboard layout) when facing repeated 'incorrect password' errors.",
+        "Recommend confirming the availability of necessary media or prerequisites before attempting features like 'Reset password' that require them."
+      ]
+    }
+  }
+}

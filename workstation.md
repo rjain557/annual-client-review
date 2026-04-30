@@ -835,12 +835,34 @@ After the third command, expect output at:
 
 Where `<code>` is the existing client folder name (`technijian`, `arnd`, `aoc`, `bwh`, `orx`, `vaf`, `vg`). Mapping from Meraki org slug to client code lives in `scripts\meraki\_org_mapping.py`.
 
-## 30. Schedule the daily Meraki pull (recommended)
+## 30. Schedule the Meraki pulls (recommended)
 
-The Python scripts have no `.cmd` wrapper yet — register a Task Scheduler
-job that runs `python scripts\meraki\pull_all.py --skip technijian,gsc`
-**every day at 5:00 AM local**. 1 AM = Huntress, 2 AM = Umbrella, 3 AM =
-CrowdStrike, 4 AM = Teramind; 5 AM avoids contention with all four.
+With India running 24×7, run **two separate cadences** for Meraki:
+
+| Task | Cadence | What it runs | Why |
+|---|---|---|---|
+| `Technijian-MerakiSecurityPull` | Every 4 hours | `pull_security_events.py` | IDS/IPS + AMP detections — 24×7 team can respond within one watch rotation |
+| `Technijian-DailyMerakiPull` | Daily 05:00 | `pull_all.py` (network events + config) | Network events and config snapshots don't require intraday cadence |
+
+### Task 1 — every-4-hour security events pull
+
+Register a task that fires daily at midnight and repeats every 4 hours:
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-MerakiSecurityPull" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\scripts\meraki\pull_security_events.py --skip technijian,gsc --days 1" ^
+  /sc DAILY ^
+  /st 00:00 ^
+  /ri 240 ^
+  /du 0024:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+The `--days 1` flag means each run refreshes today's IDS/IPS event file. Reruns are idempotent — same-day files are overwritten. If an org has an active intrusion, India sees the updated event list within 4 hours of the alert appearing in the Meraki Dashboard.
+
+### Task 2 — daily full pull (network events + config)
 
 ```cmd
 schtasks /create ^
@@ -852,10 +874,14 @@ schtasks /create ^
   /f
 ```
 
+1 AM = Huntress, 2 AM = Umbrella, 3 AM = CrowdStrike, 4 AM = Teramind, 5 AM = Meraki full pull.
+
 Verify / run on demand:
 
 ```cmd
-schtasks /query /tn "Technijian-DailyMerakiPull" /v /fo LIST
+schtasks /query /tn "Technijian-MerakiSecurityPull" /v /fo LIST
+schtasks /query /tn "Technijian-DailyMerakiPull"    /v /fo LIST
+schtasks /run   /tn "Technijian-MerakiSecurityPull"
 schtasks /run   /tn "Technijian-DailyMerakiPull"
 ```
 
@@ -941,3 +967,281 @@ scripts use stdlib only.
 | Report fails proofread "Missing section: 'X'" | Section name in `EXPECTED_SECTIONS` doesn't match rendered text | Open the doc, find the actual heading, update the constant in `generate_monthly_docx.py`. |
 | Monthly report shows "0" for events but daily files exist | Day boundaries: monthly aggregation uses YYYY-MM-DD prefix; verify file names match | Check `clients\<code>\meraki\security_events\` filenames are `YYYY-MM-DD.json`, not Excel-style or anything else. |
 | Scheduled task ran but per-org folders are absent | Task ran as `SYSTEM` (no OneDrive sync for keyfile) | Run the task as the workstation user (`/ru "%USERNAME%"`), not SYSTEM. |
+
+---
+
+## 35. Microsoft 365 / Graph API credentials
+
+The M365 pull scripts (`technijian\m365-pull\scripts\`) authenticate via an
+Azure AD **application registration** using the client-credentials flow
+(app-only, no interactive login). Each client tenant must have admin-consented
+this app before data can be pulled.
+
+### App registration details
+
+| Field | Value |
+|---|---|
+| App name | Technijian-Partner-Graph-Read |
+| App (client) ID | `5cbc8ba3-2795-4129-9258-b41102cac82e` |
+| Tenant | Technijian (`cab8077a-3f42-4277-b7bd-5c9023e826d8`) |
+| Auth flow | Client credentials (app-only) |
+| Redirect URI | `https://login.microsoftonline.com/common/oauth2/nativeclient` (Mobile and desktop) |
+
+### Credentials — Option A: environment variables (recommended for headless)
+
+```cmd
+setx M365_CLIENT_ID     "5cbc8ba3-2795-4129-9258-b41102cac82e"
+setx M365_CLIENT_SECRET "<secret from Azure AD>"
+setx M365_TENANT_ID     "cab8077a-3f42-4277-b7bd-5c9023e826d8"
+```
+
+### Credentials — Option B: OneDrive keyvault file
+
+```text
+%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\m365.md
+```
+
+Must contain:
+
+```markdown
+**Client ID:** 5cbc8ba3-2795-4129-9258-b41102cac82e
+**Client Secret:** <secret>
+**Tenant ID:** cab8077a-3f42-4277-b7bd-5c9023e826d8
+```
+
+`m365_api.py` reads env vars first; falls back to this file via regex.
+
+### GDAP client list
+
+`technijian\m365-pull\state\gdap_status.csv` is the single source of truth
+for which client tenants to pull. Each row requires `status=approved` and a
+valid `tenant_id`. Remove a row to skip a client; set `status=pending` to
+pause without deleting.
+
+**Tenants approved and consented (as of 2026-04-30):** TECHNIJIAN, B2I, CBI,
+NOR, VAF, SAS, AOC, ACU, BWH, HHOC, ORX (11 tenants).
+
+**Tenants approved but pending app consent:** CBL, CCC, JRM, MRM, KES, JDH,
+RMG (7 tenants). Run `consent_clients.ps1` to grant consent interactively
+(see section 36).
+
+## 36. Granting app consent to new client tenants
+
+Admin consent must be granted once per tenant before the app can read that
+tenant's Graph data. The consent URL opens a browser tab; a GA for that
+tenant must accept.
+
+```powershell
+# Run from the repo root — opens one browser tab per tenant, prompts Enter between each
+.\technijian\m365-pull\scripts\consent_clients.ps1
+```
+
+For GDAP tenants (where Technijian has Global Administrator via Partner
+Center), sign in as the Technijian admin first, then run the script. For
+Cloud Reseller tenants, the client's own GA must accept.
+
+After consenting, verify access:
+
+```cmd
+python technijian\m365-pull\scripts\check_access.py
+```
+
+Expected output: `HAVE_ACCESS` for every newly consented tenant. Tenants that
+still show `NO_ACCESS` need re-consent or a GDAP relationship check.
+
+## 37. M365 pull smoke test
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+
+REM Access probe — token + subscribed SKUs for each approved tenant
+python technijian\m365-pull\scripts\check_access.py
+
+REM Compliance dry-run — shows which tenants would be pulled, no API calls
+python technijian\m365-pull\scripts\pull_m365_compliance.py --dry-run
+
+REM Security dry-run
+python technijian\m365-pull\scripts\pull_m365_security.py --dry-run
+
+REM One tenant, compliance only — confirms write paths
+python technijian\m365-pull\scripts\pull_m365_compliance.py --only BWH --month 2026-04
+
+REM One tenant, last 6h security
+python technijian\m365-pull\scripts\pull_m365_security.py --only BWH --hours 6
+```
+
+Files land at `clients\bwh\m365\compliance\2026-04\` (9 files) and
+`clients\bwh\m365\<YYYY-MM-DD>\` (3 files). Run logs at
+`technijian\m365-pull\state\`.
+
+## 38. Schedule the M365 security pull (every 4 hours)
+
+India runs 24×7. Every-4-hour cadence means the team sees new sign-in
+threats within one watch rotation (≤4h detection lag).
+
+**Standard cadence — all tenants, every 4 hours:**
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-M365SecurityPull" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py --hours 6 --workers 6" ^
+  /sc DAILY ^
+  /st 00:00 ^
+  /ri 240 ^
+  /du 0024:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+`--hours 6` gives a 6-hour window with 2h overlap on each end to avoid
+missing events at the seam between runs.
+
+**Escalation cadence — active-attack tenants only, every 2 hours:**
+
+Use this when a tenant is under an active credential-stuffing or password-
+spray campaign (e.g., AAOC at 82% failure rate, BWH at 68%). Remove the
+`--only` flag once the failure rate drops below 10% in consecutive pulls.
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-M365SecurityPull-ActiveThreats" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py --only AAOC,BWH --hours 3 --workers 2" ^
+  /sc DAILY ^
+  /st 00:00 ^
+  /ri 120 ^
+  /du 0024:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-M365SecurityPull"               /v /fo LIST
+schtasks /query /tn "Technijian-M365SecurityPull-ActiveThreats" /v /fo LIST
+schtasks /run   /tn "Technijian-M365SecurityPull"
+```
+
+## 39. Schedule the M365 compliance pull (weekly)
+
+Compliance posture (MFA %, CA policies, admin roles, Secure Score) does not
+change intraday — weekly is the right cadence.
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-WeeklyM365CompliancePull" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_compliance.py --workers 6" ^
+  /sc WEEKLY ^
+  /d MON ^
+  /st 07:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-WeeklyM365CompliancePull" /v /fo LIST
+schtasks /run   /tn "Technijian-WeeklyM365CompliancePull"
+```
+
+## 40. Schedule the M365 storage pull (weekly)
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-WeeklyM365StoragePull" ^
+  /tr "C:\Python314\python.exe c:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_storage.py --period D7 --workers 6" ^
+  /sc WEEKLY ^
+  /d MON ^
+  /st 07:30 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Storage runs 30 minutes after compliance to avoid API rate-limit contention
+on the same tenants.
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-WeeklyM365StoragePull" /v /fo LIST
+schtasks /run   /tn "Technijian-WeeklyM365StoragePull"
+```
+
+## 41. Generate M365 monthly reports
+
+After compliance + storage data is on disk for the target month:
+
+```cmd
+cd /d c:\vscode\annual-client-review\annual-client-review
+
+REM Build all reports for the current month
+python technijian\m365-pull\scripts\build_m365_monthly_report.py
+
+REM Specific month
+python technijian\m365-pull\scripts\build_m365_monthly_report.py --month 2026-04
+
+REM One client only
+python technijian\m365-pull\scripts\build_m365_monthly_report.py --only BWH,ORX
+```
+
+Each report is automatically proofread (8/8 checks) before being written to
+`clients\<code>\m365\reports\<YYYY-MM>\<CODE>-M365-Activity-<YYYY-MM>.docx`.
+The generator exits non-zero if any report fails the gate.
+
+Tenants with `pending app consent` in their `gdap_status.csv` notes row are
+skipped automatically — they have no real data on disk yet.
+
+## 42. What the M365 pulls write
+
+```text
+clients\<code>\m365\
+  compliance\<YYYY-MM>\
+    secure_score.json
+    conditional_access.json
+    security_defaults.json
+    mfa_registration.json
+    admin_roles.json
+    guest_users.json
+    subscribed_skus.json
+    user_licenses.json          per-user SKU assignments (license inventory)
+    compliance_summary.json     posture checks: pass/warn/fail per item
+
+  storage\<YYYY-Wnn>\
+    mailbox_usage.json
+    onedrive_usage.json
+    sharepoint_usage.json
+    storage_summary.json        alerts at >=75% / >=90% quota
+
+  <YYYY-MM-DD>\                 security pull output (one dir per run date)
+    signins.json                sign-in events for the window
+    threat_summary.json         brute-force targets, spray IPs, flags
+    risky_signins.json          atRisk / remediated events (P2 only)
+    pull_summary.json           counts, window, errors
+
+  reports\<YYYY-MM>\
+    <CODE>-M365-Activity-<YYYY-MM>.docx
+
+technijian\m365-pull\state\
+  gdap_status.csv               source of truth: approved tenants + tenant IDs
+  compliance-<YYYY-MM>.json     compliance run log
+  storage-<YYYY-Wnn>.json       storage run log
+  security-<YYYY-MM-DD>.json    security run log
+  tickets-<YYYY-MM>-<ts>.json   CP ticket creation receipt
+```
+
+## 43. Troubleshooting (M365 pulls)
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| `M365 credentials not found` | Env vars unset and `m365.md` keyfile missing | Set env vars (section 35) or create the keyfile. |
+| `AADSTS7000229: Service principal not found` | App has not been admin-consented in this tenant | Run `consent_clients.ps1` (section 36) for that tenant. |
+| `AADSTS500113: No reply address registered` | Redirect URI missing from the Azure app registration | In Azure Portal → App registrations → Authentication → Add platform → Mobile and desktop → add `https://login.microsoftonline.com/common/oauth2/nativeclient`. |
+| `AADSTS65001: User has not consented` | Consent URL used wrong tenant GUID | Verify `tenant_id` in `gdap_status.csv` matches the client's actual Azure tenant ID (check Partner Center or Azure AD). |
+| `HTTP 403` on sign-in log endpoint | Tenant does not have Azure AD Premium P1 | Sign-in audit logs require P1 or above. The compliance and storage pulls still work. The security pull records the 403 in `errors[]` and continues. |
+| `HTTP 403` on risky sign-in / risky user endpoint | Requires Azure AD Premium P2 | Expected for tenants without P2. Section omitted from the report automatically. |
+| `HTTP 403` on usage reports | Report anonymization enabled on tenant | `m365_api.py` auto-falls back to CSV format. Display names appear as hashed values — toggle anonymization off in M365 Admin Center → Reports → Settings to restore real names. |
+| Chunked sign-in pull times out for large tenants | Tenant has 10k+ sign-ins in the window | Add `--chunk-hours 12` (or lower) to the security pull command. Default is 24h per chunk; TECHNIJIAN and BWH needed 24h chunks to complete. |
+| One tenant shows `errors[]` but others succeeded | Partial API failure for that tenant | Re-run `--only <CODE>` once the issue clears. |
+| `pending app consent` tenant keeps being skipped | Notes field in `gdap_status.csv` still has the phrase | Update or remove the phrase after consent is granted and `check_access.py` confirms `HAVE_ACCESS`. |
+| Scheduled task ran but folders are absent | Task ran as `SYSTEM` (no OneDrive sync for keyfile) | Run the task as the workstation user, not SYSTEM. |

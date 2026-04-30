@@ -1,0 +1,56 @@
+{
+  "filename_stem": "20260427_JDH_2c7add87_b2acd753",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260427_JDH_2c7add87_b2acd753.mp4",
+  "analyzed_at": "2026-04-30T18:24:45Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician compared the web interface configurations of two Konica Minolta devices, 10.0.0.105 and 10.0.0.156, to address an 'Error No. Not inputted' issue on device 10.0.0.105. They identified missing default subject and text entries, and an anomalous program entry on 10.0.0.105, which were then corrected or deleted.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Compared network setting information between two devices (10.0.0.105 and 10.0.0.156).\",\n    \"Compared address book entries between the two devices.\",\n    \"Compared program lists, deleting a 'nancyh' entry from 10.0.0.105.\",\n    \"Compared subject lists, adding 'Scan' as an email default subject to 10.0.0.105.\",\n    \"Compared text lists, adding 'Scan Attached' as an email default text to 10.0.0.105.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Initial error: 'Error No. Not inputted' when attempting to register an address book entry on 10.0.0.105.\",\n    \"Address Book on 10.0.0.105 was empty.\",\n    \"A 'nancyh' program entry was present on 10.0.0.105.\",\n    \"Subject List on 10.0.0.105 was empty, while 10.0.0.156 had 'Scan'.\",\n    \"Text List on 10.0.0.105 was empty, while 10.0.0.156 had 'Scan Attached'.\"\n  ],\n  \"issues_resolved\": [\n    \"The 'nancyh' program entry on 10.0.0.105 was deleted.\",\n    \"The 'Scan' subject was added to the Subject List on 10.0.0.105.\",\n    \"The 'Scan Attached' text was added to the Text List on 10.0.0.105.\"\n  ],\n  \"machines_touched\": [\n    \"10.0.0.105\",\n    \"10.0.0.156\"\n  ],\n  \"notable_events\": [\n    \"The technician used one working device (10.0.0.156) as a reference to configure another (10.0.0.105).\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"01:06-01:12 (6 seconds)\",\n      \"02:20-02:22 (2 seconds)\"\n    ],\n    \"idle_gap_count\": 2,\n    \"longest_idle_seconds\": 6,\n    \"total_idle_estimate_seconds\": 8,\n    \"efficiency_notes\": \"The technician worked methodically, using a known good configuration from one device to correct discrepancies on another. The approach was structured and efficient for configuration comparison and adjustment.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician compared the web interface configurations of two Konica Minolta devices, 10.0.0.105 and 10.0.0.156, to address an 'Error No. Not inputted' issue on device 10.0.0.105. They identified missing default subject and text entries, and an anomalous program entry on 10.0.0.105, which were then corrected or deleted.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Compared network setting information between two devices (10.0.0.105 and 10.0.0.156).",
+      "Compared address book entries between the two devices.",
+      "Compared program lists, deleting a 'nancyh' entry from 10.0.0.105.",
+      "Compared subject lists, adding 'Scan' as an email default subject to 10.0.0.105.",
+      "Compared text lists, adding 'Scan Attached' as an email default text to 10.0.0.105."
+    ],
+    "applications_used": [
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Initial error: 'Error No. Not inputted' when attempting to register an address book entry on 10.0.0.105.",
+      "Address Book on 10.0.0.105 was empty.",
+      "A 'nancyh' program entry was present on 10.0.0.105.",
+      "Subject List on 10.0.0.105 was empty, while 10.0.0.156 had 'Scan'.",
+      "Text List on 10.0.0.105 was empty, while 10.0.0.156 had 'Scan Attached'."
+    ],
+    "issues_resolved": [
+      "The 'nancyh' program entry on 10.0.0.105 was deleted.",
+      "The 'Scan' subject was added to the Subject List on 10.0.0.105.",
+      "The 'Scan Attached' text was added to the Text List on 10.0.0.105."
+    ],
+    "machines_touched": [
+      "10.0.0.105",
+      "10.0.0.156"
+    ],
+    "notable_events": [
+      "The technician used one working device (10.0.0.156) as a reference to configure another (10.0.0.105)."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "01:06-01:12 (6 seconds)",
+        "02:20-02:22 (2 seconds)"
+      ],
+      "idle_gap_count": 2,
+      "longest_idle_seconds": 6,
+      "total_idle_estimate_seconds": 8,
+      "efficiency_notes": "The technician worked methodically, using a known good configuration from one device to correct discrepancies on another. The approach was structured and efficient for configuration comparison and adjustment.",
+      "coaching_flags": []
+    }
+  }
+}

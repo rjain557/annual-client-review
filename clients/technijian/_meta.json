@@ -1,0 +1,21 @@
+{
+  "LocationCode": "Technijian",
+  "DirID": 139,
+  "Location_Name": "TECHNIJIAN, INC",
+  "Active": true,
+  "Internal": true,
+  "LocationTopFilter": "Tech.Clients.Technijian",
+  "Note": "Service-provider identity \u2014 does NOT appear in /api/clients/active. Use this DirID + ContractID for tickets that bill against Technijian's internal cost center (house infrastructure, automation, R&D), NOT for client work.",
+  "ActiveContract": {
+    "ContractID": 3977,
+    "Contract_Name": "Internal Contract",
+    "ContractType": "",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2016-10-23T21:29:22.3870000"
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
+  "_source": {
+    "dir": "stp_Get_All_Dir (DirID=139, DirectoryType=Client)",
+    "contracts": "GetAllContracts (Contract_ID=3977, 'Internal Contract')"
+  }
+}

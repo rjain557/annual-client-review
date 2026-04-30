@@ -1,0 +1,44 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_330bcc12",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_330bcc12.mp4",
+  "analyzed_at": "2026-04-30T19:26:19Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician initiated a network performance test using iperf3 in server mode on the client machine. They observed the real-time bandwidth results from a connected client, which showed fluctuating speeds over several intervals.\",\n  \"session_type\": \"monitoring\",\n  \"actions_taken\": [\n    \"Opened a command prompt.\",\n    \"Executed 'iperf3 -s' to start an iperf3 server.\",\n    \"Monitored the network performance test results displayed in the command prompt.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"iperf3\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"10.100.7.173 (client machine running iperf3 server)\",\n    \"10.100.7.171 (remote sender)\"\n  ],\n  \"notable_events\": [\n    \"The primary activity was running and observing a network performance benchmark.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"0:01 - 2:35 (approx 154 seconds): Mouse inactive while observing live iperf3 network test results. While the mouse was static, the screen content was actively updating with test data, indicating active monitoring rather than unproductive idleness.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 154,\n    \"total_idle_estimate_seconds\": 154,\n    \"efficiency_notes\": \"The technician efficiently launched the iperf3 server and passively monitored the network test results without any wasted steps or apparent uncertainty.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician initiated a network performance test using iperf3 in server mode on the client machine. They observed the real-time bandwidth results from a connected client, which showed fluctuating speeds over several intervals.",
+    "session_type": "monitoring",
+    "actions_taken": [
+      "Opened a command prompt.",
+      "Executed 'iperf3 -s' to start an iperf3 server.",
+      "Monitored the network performance test results displayed in the command prompt."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "iperf3"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "10.100.7.173 (client machine running iperf3 server)",
+      "10.100.7.171 (remote sender)"
+    ],
+    "notable_events": [
+      "The primary activity was running and observing a network performance benchmark."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [
+        "0:01 - 2:35 (approx 154 seconds): Mouse inactive while observing live iperf3 network test results. While the mouse was static, the screen content was actively updating with test data, indicating active monitoring rather than unproductive idleness."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 154,
+      "total_idle_estimate_seconds": 154,
+      "efficiency_notes": "The technician efficiently launched the iperf3 server and passively monitored the network test results without any wasted steps or apparent uncertainty.",
+      "coaching_flags": []
+    }
+  }
+}

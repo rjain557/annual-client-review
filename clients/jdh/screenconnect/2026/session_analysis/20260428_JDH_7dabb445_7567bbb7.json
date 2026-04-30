@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260428_JDH_7dabb445_7567bbb7",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260428_JDH_7dabb445_7567bbb7.mp4",
+  "analyzed_at": "2026-04-30T18:29:27Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected remotely to the client's workstation, then used Remote Desktop to access two different domain controllers, PRTFILESERVER and 10.10.10.25. On both servers, the technician opened Active Directory Users and Computers, located the user 'Paul', and unchecked the 'Account is disabled' option to enable the user account. The technician concluded by re-verifying the user account status on PRTFILESERVER.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Connected to PRTFILESERVER via Remote Desktop Connection\",\n    \"Opened Server Manager and Active Directory Users and Computers (ADUC)\",\n    \"Located user 'Paul' in ADUC and accessed properties\",\n    \"Unchecked 'Account is disabled' for user 'Paul'\",\n    \"Connected to 10.10.10.25 via Remote Desktop Connection\",\n    \"Opened Server Manager and Active Directory Users and Computers (ADUC)\",\n    \"Located user 'Paul' in ADUC and accessed properties\",\n    \"Unchecked 'Account is disabled' for user 'Paul' (duplicate action)\",\n    \"Connected to PRTFILESERVER via Remote Desktop Connection to verify change\"\n  ],\n  \"applications_used\": [\n    \"Remote Desktop Connection\",\n    \"Server Manager\",\n    \"Active Directory Users and Computers\",\n    \"This PC\"\n  ],\n  \"issues_observed\": [\n    \"User 'Paul' account was disabled in Active Directory\"\n  ],\n  \"issues_resolved\": [\n    \"User 'Paul' account was enabled in Active Directory\"\n  ],\n  \"machines_touched\": [\n    \"PRTFILESERVER\",\n    \"10.10.10.25\"\n  ],\n  \"notable_events\": [\n    \"The technician performed the exact same user account enabling action on two different domain controllers (PRTFILESERVER and 10.10.10.25) before re-verifying on the first.\",\n    \"The 'This PC' window was briefly opened and closed without any apparent action.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, knowing exactly where to navigate to perform the required action. However, the task of enabling a single user account was performed on two separate domain controllers and then re-verified, which could be considered redundant for a straightforward AD change, indicating a cautious but potentially less efficient approach.\",\n    \"coaching_flags\": [\n      \"For simple Active Directory user account changes, trust in AD replication across domain controllers; performing the exact same change on multiple DCs might be unnecessary unless specific replication issues are suspected or for verification of a problematic replication topology.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected remotely to the client's workstation, then used Remote Desktop to access two different domain controllers, PRTFILESERVER and 10.10.10.25. On both servers, the technician opened Active Directory Users and Computers, located the user 'Paul', and unchecked the 'Account is disabled' option to enable the user account. The technician concluded by re-verifying the user account status on PRTFILESERVER.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Connected to PRTFILESERVER via Remote Desktop Connection",
+      "Opened Server Manager and Active Directory Users and Computers (ADUC)",
+      "Located user 'Paul' in ADUC and accessed properties",
+      "Unchecked 'Account is disabled' for user 'Paul'",
+      "Connected to 10.10.10.25 via Remote Desktop Connection",
+      "Opened Server Manager and Active Directory Users and Computers (ADUC)",
+      "Located user 'Paul' in ADUC and accessed properties",
+      "Unchecked 'Account is disabled' for user 'Paul' (duplicate action)",
+      "Connected to PRTFILESERVER via Remote Desktop Connection to verify change"
+    ],
+    "applications_used": [
+      "Remote Desktop Connection",
+      "Server Manager",
+      "Active Directory Users and Computers",
+      "This PC"
+    ],
+    "issues_observed": [
+      "User 'Paul' account was disabled in Active Directory"
+    ],
+    "issues_resolved": [
+      "User 'Paul' account was enabled in Active Directory"
+    ],
+    "machines_touched": [
+      "PRTFILESERVER",
+      "10.10.10.25"
+    ],
+    "notable_events": [
+      "The technician performed the exact same user account enabling action on two different domain controllers (PRTFILESERVER and 10.10.10.25) before re-verifying on the first.",
+      "The 'This PC' window was briefly opened and closed without any apparent action."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, knowing exactly where to navigate to perform the required action. However, the task of enabling a single user account was performed on two separate domain controllers and then re-verified, which could be considered redundant for a straightforward AD change, indicating a cautious but potentially less efficient approach.",
+      "coaching_flags": [
+        "For simple Active Directory user account changes, trust in AD replication across domain controllers; performing the exact same change on multiple DCs might be unnecessary unless specific replication issues are suspected or for verification of a problematic replication topology."
+      ]
+    }
+  }
+}

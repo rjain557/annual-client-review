@@ -1,0 +1,71 @@
+{
+  "filename_stem": "20260429_JDH_5b6482f2_41d5c010",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260429_JDH_5b6482f2_41d5c010.mp4",
+  "analyzed_at": "2026-04-30T18:32:12Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive diagnostic check on a Windows 10 Pro workstation. This involved reviewing network configurations, checking disk health, inspecting running services and processes, reviewing firewall settings, examining system information and event logs, and conducting an internet speed test. The session concluded with a system restart.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Opened Command Prompt as administrator and ran network diagnostics (ipconfig /all, ping, nslookup, tracert)\",\n    \"Reviewed network adapter properties (Ethernet 2, Ethernet 3) for TCP/IPv4 settings\",\n    \"Checked C: drive properties, performed error checking, optimized the drive, and attempted Disk Cleanup\",\n    \"Stopped and started 'Print Spooler' and 'Windows Update' services\",\n    \"Reviewed Task Manager processes, performance, startup items, and services\",\n    \"Inspected Windows Defender Firewall settings\",\n    \"Checked System 'About' information in Windows Settings\",\n    \"Reviewed Event Viewer logs (System and Application), filtering for Critical/Error/Warning events\",\n    \"Ran DirectX Diagnostic Tool (dxdiag) for system and display information\",\n    \"Ran System Information (msinfo32) for a detailed system summary\",\n    \"Performed an internet speed test using fast.com\",\n    \"Initiated a system restart\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Network Connections (ncpa.cpl)\",\n    \"File Explorer\",\n    \"Disk Cleanup\",\n    \"Optimize Drives\",\n    \"Services\",\n    \"Task Manager\",\n    \"Control Panel\",\n    \"Windows Security\",\n    \"Settings\",\n    \"Event Viewer\",\n    \"DirectX Diagnostic Tool (dxdiag)\",\n    \"System Information (msinfo32)\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"nslookup command showed 'Default Server: localhost, Address: 127.0.0.1' which is an unusual configuration for a primary DNS server in a typical network setup.\",\n    \"Internet speed test via fast.com consistently reported very low download and upload speeds (around 1.0 - 1.1 Mbps).\",\n    \"Event Viewer showed several warnings in System and Application logs (e.g., DistributedCOM, TPM, DNS Client, Bonjour Service, ESENT).\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"DESKTOP-R7T729J\"\n  ],\n  \"notable_events\": [\n    \"The extremely low internet speed (1.0 Mbps) observed during the fast.com test is a significant issue that was not further investigated or addressed before the session concluded with a restart.\",\n    \"Disk Cleanup on the C: drive reported '0 bytes' for all categories, which is unusual and might indicate a very clean or recently reinstalled system.\",\n    \"The DNS configuration showing 'localhost' as the default server via nslookup is also a notable point that might warrant further investigation, especially in context of the low internet speed.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically through a comprehensive checklist of diagnostic tools and system checks, covering network, disk, services, system performance, and information. The approach was thorough for a general system health check.\",\n    \"coaching_flags\": [\n      \"The technician identified a significantly low internet speed (1.0 Mbps) but did not attempt to troubleshoot the issue or provide any further action regarding it before restarting the system. This leaves a major potential problem unaddressed if the session's goal was to diagnose or fix performance issues.\",\n      \"The observation of 'localhost' as the default DNS server via nslookup was also not explored further, which could be related to network performance or configuration.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive diagnostic check on a Windows 10 Pro workstation. This involved reviewing network configurations, checking disk health, inspecting running services and processes, reviewing firewall settings, examining system information and event logs, and conducting an internet speed test. The session concluded with a system restart.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Opened Command Prompt as administrator and ran network diagnostics (ipconfig /all, ping, nslookup, tracert)",
+      "Reviewed network adapter properties (Ethernet 2, Ethernet 3) for TCP/IPv4 settings",
+      "Checked C: drive properties, performed error checking, optimized the drive, and attempted Disk Cleanup",
+      "Stopped and started 'Print Spooler' and 'Windows Update' services",
+      "Reviewed Task Manager processes, performance, startup items, and services",
+      "Inspected Windows Defender Firewall settings",
+      "Checked System 'About' information in Windows Settings",
+      "Reviewed Event Viewer logs (System and Application), filtering for Critical/Error/Warning events",
+      "Ran DirectX Diagnostic Tool (dxdiag) for system and display information",
+      "Ran System Information (msinfo32) for a detailed system summary",
+      "Performed an internet speed test using fast.com",
+      "Initiated a system restart"
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Network Connections (ncpa.cpl)",
+      "File Explorer",
+      "Disk Cleanup",
+      "Optimize Drives",
+      "Services",
+      "Task Manager",
+      "Control Panel",
+      "Windows Security",
+      "Settings",
+      "Event Viewer",
+      "DirectX Diagnostic Tool (dxdiag)",
+      "System Information (msinfo32)",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "nslookup command showed 'Default Server: localhost, Address: 127.0.0.1' which is an unusual configuration for a primary DNS server in a typical network setup.",
+      "Internet speed test via fast.com consistently reported very low download and upload speeds (around 1.0 - 1.1 Mbps).",
+      "Event Viewer showed several warnings in System and Application logs (e.g., DistributedCOM, TPM, DNS Client, Bonjour Service, ESENT)."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "DESKTOP-R7T729J"
+    ],
+    "notable_events": [
+      "The extremely low internet speed (1.0 Mbps) observed during the fast.com test is a significant issue that was not further investigated or addressed before the session concluded with a restart.",
+      "Disk Cleanup on the C: drive reported '0 bytes' for all categories, which is unusual and might indicate a very clean or recently reinstalled system.",
+      "The DNS configuration showing 'localhost' as the default server via nslookup is also a notable point that might warrant further investigation, especially in context of the low internet speed."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically through a comprehensive checklist of diagnostic tools and system checks, covering network, disk, services, system performance, and information. The approach was thorough for a general system health check.",
+      "coaching_flags": [
+        "The technician identified a significantly low internet speed (1.0 Mbps) but did not attempt to troubleshoot the issue or provide any further action regarding it before restarting the system. This leaves a major potential problem unaddressed if the session's goal was to diagnose or fix performance issues.",
+        "The observation of 'localhost' as the default DNS server via nslookup was also not explored further, which could be related to network performance or configuration."
+      ]
+    }
+  }
+}

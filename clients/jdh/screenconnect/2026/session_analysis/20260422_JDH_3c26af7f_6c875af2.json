@@ -1,0 +1,63 @@
+{
+  "filename_stem": "20260422_JDH_3c26af7f_6c875af2",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260422_JDH_3c26af7f_6c875af2.mp4",
+  "analyzed_at": "2026-04-30T18:08:34Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician successfully installed a Konica Minolta bizhub c284e printer on the client's Windows 10 computer by its IP address. The printer was named 'KONICA MINOLTA bizhub c284e - Warehouse', configured for network sharing, and a test page was printed. The technician also verified its availability in Microsoft Word and communicated with the client about the successful setup.\",\n  \"session_type\": \"installation\",\n  \"actions_taken\": [\n    \"Navigated to Windows Settings > Bluetooth & devices > Printers & scanners.\",\n    \"Accessed the Konica Minolta bizhub c284e printer's web interface via IP address (10.0.0.123) in Google Chrome to confirm model and status.\",\n    \"Manually added the printer using its TCP/IP address (10.0.0.123).\",\n    \"Selected the recommended existing driver (KONICA MINOLTA Universal V4 PCL).\",\n    \"Renamed the printer to 'KONICA MINOLTA bizhub c284e - Warehouse' as requested by the client.\",\n    \"Enabled printer sharing on the network.\",\n    \"Printed a test page to confirm functionality and communicated success to the client.\",\n    \"Opened Microsoft Word to verify the new printer was listed and selectable.\",\n    \"Communicated with the client via chat throughout the installation process.\"\n  ],\n  \"applications_used\": [\n    \"Windows Settings\",\n    \"Google Chrome\",\n    \"Microsoft Outlook\",\n    \"Microsoft Word\"\n  ],\n  \"issues_observed\": [\n    \"The printer was not initially installed on the client's machine.\",\n    \"An unrelated HP OfficeJet printer was briefly auto-detected during the 'Add device' process.\",\n    \"Some Konica Minolta printers were listed as 'Offline' in settings, indicating existing issues not addressed in this session.\"\n  ],\n  \"issues_resolved\": [\n    \"Konica Minolta bizhub c284e printer was successfully installed, named, and configured for network use.\",\n    \"A successful test page print was confirmed.\"\n  ],\n  \"machines_touched\": [\n    \"JDH-HQ-PC-02\",\n    \"10.0.0.123 (Konica Minolta bizhub c284e printer)\"\n  ],\n  \"notable_events\": [\n    \"The technician initially fumbled with Windows search bar, typing 'ipscan' and 'instagram', before successfully finding the printer IP via direct browser navigation.\",\n    \"A fragmented self-reminder message, 'too put warehouse) at the end please', was accidentally sent to the client via chat during the process, leading the client to reconfirm the naming request.\",\n    \"An Outlook notification briefly interrupted the technician during the printer naming step.\"\n  ],\n  \"concerns\": [\n    \"Accidental sending of a fragmented message to the client via chat could lead to miscommunication or confusion.\"\n  ],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, quickly adapting from initial search bar fumbling to directly access the printer's web interface using its IP. The installation, naming, and sharing steps were executed efficiently and accurately according to the client's request.\",\n    \"coaching_flags\": [\n      \"Technician accidentally sent a fragmented self-reminder message ('too put warehouse) at the end please') to the client via chat. This highlights a need for more careful review of messages before sending to avoid client confusion.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician successfully installed a Konica Minolta bizhub c284e printer on the client's Windows 10 computer by its IP address. The printer was named 'KONICA MINOLTA bizhub c284e - Warehouse', configured for network sharing, and a test page was printed. The technician also verified its availability in Microsoft Word and communicated with the client about the successful setup.",
+    "session_type": "installation",
+    "actions_taken": [
+      "Navigated to Windows Settings > Bluetooth & devices > Printers & scanners.",
+      "Accessed the Konica Minolta bizhub c284e printer's web interface via IP address (10.0.0.123) in Google Chrome to confirm model and status.",
+      "Manually added the printer using its TCP/IP address (10.0.0.123).",
+      "Selected the recommended existing driver (KONICA MINOLTA Universal V4 PCL).",
+      "Renamed the printer to 'KONICA MINOLTA bizhub c284e - Warehouse' as requested by the client.",
+      "Enabled printer sharing on the network.",
+      "Printed a test page to confirm functionality and communicated success to the client.",
+      "Opened Microsoft Word to verify the new printer was listed and selectable.",
+      "Communicated with the client via chat throughout the installation process."
+    ],
+    "applications_used": [
+      "Windows Settings",
+      "Google Chrome",
+      "Microsoft Outlook",
+      "Microsoft Word"
+    ],
+    "issues_observed": [
+      "The printer was not initially installed on the client's machine.",
+      "An unrelated HP OfficeJet printer was briefly auto-detected during the 'Add device' process.",
+      "Some Konica Minolta printers were listed as 'Offline' in settings, indicating existing issues not addressed in this session."
+    ],
+    "issues_resolved": [
+      "Konica Minolta bizhub c284e printer was successfully installed, named, and configured for network use.",
+      "A successful test page print was confirmed."
+    ],
+    "machines_touched": [
+      "JDH-HQ-PC-02",
+      "10.0.0.123 (Konica Minolta bizhub c284e printer)"
+    ],
+    "notable_events": [
+      "The technician initially fumbled with Windows search bar, typing 'ipscan' and 'instagram', before successfully finding the printer IP via direct browser navigation.",
+      "A fragmented self-reminder message, 'too put warehouse) at the end please', was accidentally sent to the client via chat during the process, leading the client to reconfirm the naming request.",
+      "An Outlook notification briefly interrupted the technician during the printer naming step."
+    ],
+    "concerns": [
+      "Accidental sending of a fragmented message to the client via chat could lead to miscommunication or confusion."
+    ],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, quickly adapting from initial search bar fumbling to directly access the printer's web interface using its IP. The installation, naming, and sharing steps were executed efficiently and accurately according to the client's request.",
+      "coaching_flags": [
+        "Technician accidentally sent a fragmented self-reminder message ('too put warehouse) at the end please') to the client via chat. This highlights a need for more careful review of messages before sending to avoid client confusion."
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "filename_stem": "20260427_ORX_7b6afdfa_ced63544",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260427_ORX_7b6afdfa_ced63544.mp4",
+  "analyzed_at": "2026-04-30T19:00:29Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to troubleshoot a persistent printing issue with a Dell S2830dn printer. They attempted to print from multiple applications and Windows settings, and restarted the print spooler, but all print jobs failed. The session concluded with the technician recommending a machine reboot to the client as the next step.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to print a Purchase Order from QuickBooks to 'Dell S2830dn (3)'\",\n    \"Navigated Windows Settings to 'Printers & scanners' and accessed printer properties for 'Dell S2830dn (3)'\",\n    \"Attempted to print a test page from the printer properties\",\n    \"Opened Microsoft Word and attempted to print a blank document\",\n    \"Communicated with the client via chat regarding printer issues and troubleshooting steps\",\n    \"Accessed Windows Services and restarted the 'Print Spooler' service\",\n    \"Re-attempted to print from QuickBooks after restarting the spooler\",\n    \"Checked network connection details (though not directly related to printer troubleshooting during this session)\",\n    \"Recommended rebooting the machine to the client\"\n  ],\n  \"applications_used\": [\n    \"QuickBooks\",\n    \"Windows Settings\",\n    \"Microsoft Word\",\n    \"Windows Search\",\n    \"Remote Support Chat (ScreenConnect client)\",\n    \"Windows Services\",\n    \"Network Connections\"\n  ],\n  \"issues_observed\": [\n    \"Printer 'Dell S2830dn (3)' failed to print a Purchase Order from QuickBooks\",\n    \"Printer 'Dell S2830dn (3)' failed to print a Windows test page\",\n    \"Printer 'Dell S2830dn (3)' failed to print a document from Microsoft Word\",\n    \"Print errors persisted even after restarting the Print Spooler service\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Dell S2830dn (3) (printer)\"\n  ],\n  \"notable_events\": [\n    \"The client explicitly requested a printer check via chat at 3:27 and later a machine reboot at 5:04.\",\n    \"Multiple attempts to print from different sources (QuickBooks, Windows test page, Word) consistently failed.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician followed a methodical troubleshooting process, attempting various print sources and restarting the print spooler, while also communicating with the client throughout the session.\",\n    \"coaching_flags\": [\n      \"The technician did not explicitly check the printer's physical connection or network status beyond reviewing generic network connection details, which could be an initial diagnostic step for network printers.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to troubleshoot a persistent printing issue with a Dell S2830dn printer. They attempted to print from multiple applications and Windows settings, and restarted the print spooler, but all print jobs failed. The session concluded with the technician recommending a machine reboot to the client as the next step.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to print a Purchase Order from QuickBooks to 'Dell S2830dn (3)'",
+      "Navigated Windows Settings to 'Printers & scanners' and accessed printer properties for 'Dell S2830dn (3)'",
+      "Attempted to print a test page from the printer properties",
+      "Opened Microsoft Word and attempted to print a blank document",
+      "Communicated with the client via chat regarding printer issues and troubleshooting steps",
+      "Accessed Windows Services and restarted the 'Print Spooler' service",
+      "Re-attempted to print from QuickBooks after restarting the spooler",
+      "Checked network connection details (though not directly related to printer troubleshooting during this session)",
+      "Recommended rebooting the machine to the client"
+    ],
+    "applications_used": [
+      "QuickBooks",
+      "Windows Settings",
+      "Microsoft Word",
+      "Windows Search",
+      "Remote Support Chat (ScreenConnect client)",
+      "Windows Services",
+      "Network Connections"
+    ],
+    "issues_observed": [
+      "Printer 'Dell S2830dn (3)' failed to print a Purchase Order from QuickBooks",
+      "Printer 'Dell S2830dn (3)' failed to print a Windows test page",
+      "Printer 'Dell S2830dn (3)' failed to print a document from Microsoft Word",
+      "Print errors persisted even after restarting the Print Spooler service"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Dell S2830dn (3) (printer)"
+    ],
+    "notable_events": [
+      "The client explicitly requested a printer check via chat at 3:27 and later a machine reboot at 5:04.",
+      "Multiple attempts to print from different sources (QuickBooks, Windows test page, Word) consistently failed."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician followed a methodical troubleshooting process, attempting various print sources and restarting the print spooler, while also communicating with the client throughout the session.",
+      "coaching_flags": [
+        "The technician did not explicitly check the printer's physical connection or network status beyond reviewing generic network connection details, which could be an initial diagnostic step for network printers."
+      ]
+    }
+  }
+}

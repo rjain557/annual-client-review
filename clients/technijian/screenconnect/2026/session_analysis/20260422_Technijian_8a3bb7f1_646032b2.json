@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260422_Technijian_8a3bb7f1_646032b2",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_8a3bb7f1_646032b2.mp4",
+  "analyzed_at": "2026-04-30T19:21:16Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician reviewed the running configuration of a Cisco Nexus device (TE-HQ-LAB-01) from a saved text file. The review involved scrolling through extensive network configurations including access lists, VLANs, HSRP, VRFs, and interface settings. Additionally, the technician briefly browsed other files on the desktop.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Reviewed the running configuration of a Cisco Nexus device (TE-HQ-LAB-01) from a text file ('Nexus-1txt').\",\n    \"Scrolled through detailed network configurations, including ACLs (access-lists), VLAN definitions, HSRP (Hot Standby Router Protocol) settings, VRF (Virtual Routing and Forwarding) contexts, and static routes.\",\n    \"Browsed files and folders in the 'Desktop' directory using File Explorer.\"\n  ],\n  \"applications_used\": [\n    \"Notepad\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-HQ-LAB-01 (network device, configuration reviewed)\",\n    \"Client computer (remote session host)\",\n    \"IP addresses mentioned in config: 10.180.107.2, 172.16.9.5, 172.16.9.4, various 10.100.X.X/24, 10.6.9.252/24, 10.7.9.252/24, 172.16.9.2/24, 10.180.49.254, 10.180.11.1, 172.16.9.122, 10.180.103.250, 192.168.1.0/16, 10.180.186.250.\"\n  ],\n  \"notable_events\": [\n    \"The reviewed configuration file was very large, indicating a complex network environment with numerous VLANs, HSRP groups, and VRF contexts.\",\n    \"The configuration included SNMP v3 authentication and privacy keys, as well as a hashed user password.\"\n  ],\n  \"concerns\": [\n    \"Storing network device configuration files containing sensitive data like SNMP v3 authentication/privacy keys and hashed passwords in unencrypted text files on a local desktop could pose a security risk if the desktop is compromised or the files are accessible to unauthorized individuals.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, systematically scrolling through the extensive configuration file and browsing local files without noticeable hesitation or uncertainty.\",\n    \"coaching_flags\": [\n      \"Review best practices for secure storage of network device configuration files containing sensitive information (e.g., SNMP v3 keys, hashed passwords) on local workstations.\"\n    ]\n  }\n}",
+  "analysis": {
+    "summary": "The technician reviewed the running configuration of a Cisco Nexus device (TE-HQ-LAB-01) from a saved text file. The review involved scrolling through extensive network configurations including access lists, VLANs, HSRP, VRFs, and interface settings. Additionally, the technician briefly browsed other files on the desktop.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Reviewed the running configuration of a Cisco Nexus device (TE-HQ-LAB-01) from a text file ('Nexus-1txt').",
+      "Scrolled through detailed network configurations, including ACLs (access-lists), VLAN definitions, HSRP (Hot Standby Router Protocol) settings, VRF (Virtual Routing and Forwarding) contexts, and static routes.",
+      "Browsed files and folders in the 'Desktop' directory using File Explorer."
+    ],
+    "applications_used": [
+      "Notepad",
+      "File Explorer"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-HQ-LAB-01 (network device, configuration reviewed)",
+      "Client computer (remote session host)",
+      "IP addresses mentioned in config: 10.180.107.2, 172.16.9.5, 172.16.9.4, various 10.100.X.X/24, 10.6.9.252/24, 10.7.9.252/24, 172.16.9.2/24, 10.180.49.254, 10.180.11.1, 172.16.9.122, 10.180.103.250, 192.168.1.0/16, 10.180.186.250."
+    ],
+    "notable_events": [
+      "The reviewed configuration file was very large, indicating a complex network environment with numerous VLANs, HSRP groups, and VRF contexts.",
+      "The configuration included SNMP v3 authentication and privacy keys, as well as a hashed user password."
+    ],
+    "concerns": [
+      "Storing network device configuration files containing sensitive data like SNMP v3 authentication/privacy keys and hashed passwords in unencrypted text files on a local desktop could pose a security risk if the desktop is compromised or the files are accessible to unauthorized individuals."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, systematically scrolling through the extensive configuration file and browsing local files without noticeable hesitation or uncertainty.",
+      "coaching_flags": [
+        "Review best practices for secure storage of network device configuration files containing sensitive information (e.g., SNMP v3 keys, hashed passwords) on local workstations."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "filename_stem": "20260428_ORX_7fab553e_dae5b5a4",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260428_ORX_7fab553e_dae5b5a4.mp4",
+  "analyzed_at": "2026-04-30T19:08:57Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician logged into a Windows 11 machine and performed system configurations. This involved disabling USB selective suspend and preventing the computer from turning off power to various USB devices in Device Manager, as well as increasing the display refresh rate from 60Hz to 144Hz. The session concluded with a system restart.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Logged into the Windows 11 machine.\",\n    \"Navigated to Power Options and disabled 'USB selective suspend setting' for both 'On battery' and 'Plugged in' modes.\",\n    \"Opened Device Manager, expanded 'Universal Serial Bus controllers' and 'Human Interface Devices'.\",\n    \"Disabled the 'Allow the computer to turn off this device to save power' setting for multiple 'USB Root Hub (USB 3.0)', 'Generic USB Hub', and 'USB Input Device' entries.\",\n    \"Accessed Display settings and changed the screen refresh rate from 60 Hertz to 144 Hertz.\",\n    \"Restarted the computer.\"\n  ],\n  \"applications_used\": [\n    \"Power Options (Control Panel)\",\n    \"Device Manager\",\n    \"Settings (Display)\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The technician methodically applied the 'Allow the computer to turn off this device to save power' setting change to a large number of USB devices (8 USB Root Hubs, 2 Generic USB Hubs, and 18 USB Input Devices), indicating a thorough attempt to address potential USB connectivity issues.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, navigating directly to the required settings and making the changes without hesitation. The repetitive actions in Device Manager were performed quickly and accurately.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician logged into a Windows 11 machine and performed system configurations. This involved disabling USB selective suspend and preventing the computer from turning off power to various USB devices in Device Manager, as well as increasing the display refresh rate from 60Hz to 144Hz. The session concluded with a system restart.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Logged into the Windows 11 machine.",
+      "Navigated to Power Options and disabled 'USB selective suspend setting' for both 'On battery' and 'Plugged in' modes.",
+      "Opened Device Manager, expanded 'Universal Serial Bus controllers' and 'Human Interface Devices'.",
+      "Disabled the 'Allow the computer to turn off this device to save power' setting for multiple 'USB Root Hub (USB 3.0)', 'Generic USB Hub', and 'USB Input Device' entries.",
+      "Accessed Display settings and changed the screen refresh rate from 60 Hertz to 144 Hertz.",
+      "Restarted the computer."
+    ],
+    "applications_used": [
+      "Power Options (Control Panel)",
+      "Device Manager",
+      "Settings (Display)"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [],
+    "notable_events": [
+      "The technician methodically applied the 'Allow the computer to turn off this device to save power' setting change to a large number of USB devices (8 USB Root Hubs, 2 Generic USB Hubs, and 18 USB Input Devices), indicating a thorough attempt to address potential USB connectivity issues."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, navigating directly to the required settings and making the changes without hesitation. The repetitive actions in Device Manager were performed quickly and accurately.",
+      "coaching_flags": []
+    }
+  }
+}

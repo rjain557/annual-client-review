@@ -1,0 +1,52 @@
+{
+  "filename_stem": "20260426_ORX_2d35dd78_542ad235",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260426_ORX_2d35dd78_542ad235.mp4",
+  "analyzed_at": "2026-04-30T18:51:48Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client computer, which displayed the Windows lock screen. They scrolled through some default lock screen content, briefly brought up the login prompt for the user 'Workman', but then the system reverted to the lock screen before any credentials could be entered or work could begin. The session ended shortly after without the technician successfully logging in.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Initiated remote connection to client machine\",\n    \"Scrolled through content on the Windows lock screen\",\n    \"Dismissed the lock screen to reveal the user login prompt\",\n    \"Scrolled through lock screen content again after login prompt disappeared\"\n  ],\n  \"applications_used\": [\n    \"Windows Lock Screen UI\"\n  ],\n  \"issues_observed\": [\n    \"Technician failed to progress past the Windows login screen\",\n    \"Login prompt for user 'Workman' appeared briefly but was dismissed or reverted without input\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client machine (User: Workman)\"\n  ],\n  \"notable_events\": [\n    \"The remote session ended after approximately 9 seconds without any discernible IT work being performed.\"\n  ],\n  \"concerns\": [\n    \"Quality concern: The technician did not successfully log into the remote machine to begin work.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"After bringing up the login prompt for 'Workman' (0:04-0:05), the technician did not enter any credentials or click the 'sign in' arrow. The screen reverted to the lock screen around 0:07-0:08, indicating an inability to proceed with login.\"\n    ],\n    \"idle_gaps\": [\n      \"0:05-0:07 (approx. 2 seconds): The login prompt was displayed, but the mouse remained mostly static and no input was provided before the screen reverted to the lock screen.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 2,\n    \"total_idle_estimate_seconds\": 2,\n    \"efficiency_notes\": \"The technician did not progress past the initial login screen, resulting in an unproductive session.\",\n    \"coaching_flags\": [\n      \"Review the process for initiating a remote session and ensuring readiness with login credentials or next steps to avoid immediate disengagement from the login screen.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client computer, which displayed the Windows lock screen. They scrolled through some default lock screen content, briefly brought up the login prompt for the user 'Workman', but then the system reverted to the lock screen before any credentials could be entered or work could begin. The session ended shortly after without the technician successfully logging in.",
+    "session_type": "other",
+    "actions_taken": [
+      "Initiated remote connection to client machine",
+      "Scrolled through content on the Windows lock screen",
+      "Dismissed the lock screen to reveal the user login prompt",
+      "Scrolled through lock screen content again after login prompt disappeared"
+    ],
+    "applications_used": [
+      "Windows Lock Screen UI"
+    ],
+    "issues_observed": [
+      "Technician failed to progress past the Windows login screen",
+      "Login prompt for user 'Workman' appeared briefly but was dismissed or reverted without input"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client machine (User: Workman)"
+    ],
+    "notable_events": [
+      "The remote session ended after approximately 9 seconds without any discernible IT work being performed."
+    ],
+    "concerns": [
+      "Quality concern: The technician did not successfully log into the remote machine to begin work."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "After bringing up the login prompt for 'Workman' (0:04-0:05), the technician did not enter any credentials or click the 'sign in' arrow. The screen reverted to the lock screen around 0:07-0:08, indicating an inability to proceed with login."
+      ],
+      "idle_gaps": [
+        "0:05-0:07 (approx. 2 seconds): The login prompt was displayed, but the mouse remained mostly static and no input was provided before the screen reverted to the lock screen."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 2,
+      "total_idle_estimate_seconds": 2,
+      "efficiency_notes": "The technician did not progress past the initial login screen, resulting in an unproductive session.",
+      "coaching_flags": [
+        "Review the process for initiating a remote session and ensuring readiness with login credentials or next steps to avoid immediate disengagement from the login screen."
+      ]
+    }
+  }
+}

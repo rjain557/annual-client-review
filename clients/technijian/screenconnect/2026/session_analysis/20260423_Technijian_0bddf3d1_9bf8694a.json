@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_9bf8694a",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_9bf8694a.mp4",
+  "analyzed_at": "2026-04-30T19:27:58Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician performed a series of diagnostic checks on a Windows 11 Home laptop. These checks included verifying network connectivity and configuration, reviewing system hardware and software information, inspecting device drivers, checking system services, and verifying firewall status. The session concluded with a system restart.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Command Prompt as administrator.\",\n    \"Executed `ipconfig /all` to review network adapter configurations.\",\n    \"Performed network connectivity tests using `ping` to the default gateway (10.10.10.1), a public DNS server (8.8.8.8), and a website (google.com).\",\n    \"Accessed Network Connections (`ncpa.cpl`) to review Wi-Fi adapter properties (TCP/IPv4 settings).\",\n    \"Opened System Information to check OS version, processor, and memory details.\",\n    \"Opened Device Manager to inspect various device categories, focusing on network adapters.\",\n    \"Opened Services to review running system services.\",\n    \"Opened Windows Defender Firewall with Advanced Security to verify firewall profiles.\",\n    \"Initiated a system restart.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Network Connections (ncpa.cpl)\",\n    \"System Information\",\n    \"Device Manager\",\n    \"Services\",\n    \"Windows Defender Firewall with Advanced Security\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client PC (IPs: 10.10.10.147)\",\n    \"Default Gateway (IP: 10.10.10.1)\",\n    \"DNS Server (IP: 10.10.10.1)\"\n  ],\n  \"notable_events\": [\n    \"The session concluded with a system restart, suggesting either the completion of a diagnostic phase or a preparatory step for further action.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, opening relevant tools directly and systematically checking different system components. There was a clear, directed approach to gathering system information without hesitation.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician performed a series of diagnostic checks on a Windows 11 Home laptop. These checks included verifying network connectivity and configuration, reviewing system hardware and software information, inspecting device drivers, checking system services, and verifying firewall status. The session concluded with a system restart.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Command Prompt as administrator.",
+      "Executed `ipconfig /all` to review network adapter configurations.",
+      "Performed network connectivity tests using `ping` to the default gateway (10.10.10.1), a public DNS server (8.8.8.8), and a website (google.com).",
+      "Accessed Network Connections (`ncpa.cpl`) to review Wi-Fi adapter properties (TCP/IPv4 settings).",
+      "Opened System Information to check OS version, processor, and memory details.",
+      "Opened Device Manager to inspect various device categories, focusing on network adapters.",
+      "Opened Services to review running system services.",
+      "Opened Windows Defender Firewall with Advanced Security to verify firewall profiles.",
+      "Initiated a system restart."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Network Connections (ncpa.cpl)",
+      "System Information",
+      "Device Manager",
+      "Services",
+      "Windows Defender Firewall with Advanced Security"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client PC (IPs: 10.10.10.147)",
+      "Default Gateway (IP: 10.10.10.1)",
+      "DNS Server (IP: 10.10.10.1)"
+    ],
+    "notable_events": [
+      "The session concluded with a system restart, suggesting either the completion of a diagnostic phase or a preparatory step for further action."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, opening relevant tools directly and systematically checking different system components. There was a clear, directed approach to gathering system information without hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

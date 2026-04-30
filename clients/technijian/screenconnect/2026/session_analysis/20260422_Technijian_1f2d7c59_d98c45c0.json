@@ -1,0 +1,54 @@
+{
+  "filename_stem": "20260422_Technijian_1f2d7c59_d98c45c0",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_1f2d7c59_d98c45c0.mp4",
+  "analyzed_at": "2026-04-30T19:15:06Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client computer and used Veeam Backup & Replication Explorer to restore the 'Administrator' mailbox from a backup of 'SRV01' using Veeam Explorer for Microsoft Exchange. The restore process completed successfully.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Logged into the client computer as Administrator\",\n    \"Opened File Explorer and navigated to the Veeam Backup & Replication installation directory\",\n    \"Launched Veeam Backup & Replication Explorer\",\n    \"Connected to the backup server using Administrator credentials\",\n    \"Selected 'SRV01' from the backup inventory\",\n    \"Initiated 'Restore application items' for 'Microsoft Exchange' for SRV01\",\n    \"Launched Veeam Explorer for Microsoft Exchange and connected to the backup server\",\n    \"Used the 'Find mailboxes' feature to locate the 'Administrator' mailbox\",\n    \"Selected the 'Inbox' folder of the 'Administrator' mailbox\",\n    \"Performed a 'Restore to original location' for the Inbox to SRV01\",\n    \"Provided Administrator credentials for SRV01 to complete the restore\",\n    \"Monitored the restore session until successful completion\",\n    \"Closed Veeam Explorer for Microsoft Exchange and Veeam Backup & Replication Explorer\",\n    \"Closed File Explorer\"\n  ],\n  \"applications_used\": [\n    \"ScreenConnect (remote session client)\",\n    \"File Explorer\",\n    \"Veeam Backup & Replication Explorer\",\n    \"Veeam Explorer for Microsoft Exchange\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [\n    \"Mailbox data for the 'Administrator' user on 'SRV01' was successfully restored from a Veeam backup.\"\n  ],\n  \"machines_touched\": [\n    \"SRV01\"\n  ],\n  \"notable_events\": [],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and directly, navigating the Veeam interfaces efficiently to perform the mailbox restore without hesitation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client computer and used Veeam Backup & Replication Explorer to restore the 'Administrator' mailbox from a backup of 'SRV01' using Veeam Explorer for Microsoft Exchange. The restore process completed successfully.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Logged into the client computer as Administrator",
+      "Opened File Explorer and navigated to the Veeam Backup & Replication installation directory",
+      "Launched Veeam Backup & Replication Explorer",
+      "Connected to the backup server using Administrator credentials",
+      "Selected 'SRV01' from the backup inventory",
+      "Initiated 'Restore application items' for 'Microsoft Exchange' for SRV01",
+      "Launched Veeam Explorer for Microsoft Exchange and connected to the backup server",
+      "Used the 'Find mailboxes' feature to locate the 'Administrator' mailbox",
+      "Selected the 'Inbox' folder of the 'Administrator' mailbox",
+      "Performed a 'Restore to original location' for the Inbox to SRV01",
+      "Provided Administrator credentials for SRV01 to complete the restore",
+      "Monitored the restore session until successful completion",
+      "Closed Veeam Explorer for Microsoft Exchange and Veeam Backup & Replication Explorer",
+      "Closed File Explorer"
+    ],
+    "applications_used": [
+      "ScreenConnect (remote session client)",
+      "File Explorer",
+      "Veeam Backup & Replication Explorer",
+      "Veeam Explorer for Microsoft Exchange"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [
+      "Mailbox data for the 'Administrator' user on 'SRV01' was successfully restored from a Veeam backup."
+    ],
+    "machines_touched": [
+      "SRV01"
+    ],
+    "notable_events": [],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and directly, navigating the Veeam interfaces efficiently to perform the mailbox restore without hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

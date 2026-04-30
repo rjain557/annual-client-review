@@ -1,0 +1,60 @@
+{
+  "filename_stem": "20260429_ANI_4f5b0489_941a7b8f",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260429_ANI_4f5b0489_941a7b8f.mp4",
+  "analyzed_at": "2026-04-30T17:58:54Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into Neil Andersen's computer and performed a comprehensive series of system maintenance and optimization tasks. This included clearing Windows Update components, restarting associated services, initiating Windows Update checks, and running Disk Cleanup. The technician also optimized the drive, tested internet connectivity, and concluded the session with a system restart.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Logged into the user account 'Neil Andersen'.\",\n    \"Examined Windows Event Logs (System and Administrative events) using Event Viewer.\",\n    \"Reviewed running Windows Services.\",\n    \"Stopped Windows Update, Cryptographic Services, BITS, and Windows Installer services via Command Prompt.\",\n    \"Deleted the 'Download' and 'DataStore' folders within C:\\\\Windows\\\\SoftwareDistribution.\",\n    \"Deleted the contents of the C:\\\\Windows\\\\System32\\\\Catroot2 folder.\",\n    \"Started Windows Update, Cryptographic Services, BITS, and Windows Installer services via Command Prompt.\",\n    \"Initiated a check for and download/installation of Windows Updates.\",\n    \"Performed Disk Cleanup, specifically targeting Windows Update Cleanup files, Temporary Internet Files, and Recycle Bin contents.\",\n    \"Optimized the C: drive using 'Defragment and Optimize Drives'.\",\n    \"Tested internet connectivity by browsing to Google and Bing using Microsoft Edge.\",\n    \"Briefly reviewed Display settings.\",\n    \"Restarted the computer.\"\n  ],\n  \"applications_used\": [\n    \"Event Viewer\",\n    \"Services\",\n    \"File Explorer\",\n    \"Command Prompt\",\n    \"Windows Update settings\",\n    \"System Information\",\n    \"Disk Cleanup\",\n    \"Defragment and Optimize Drives\",\n    \"Microsoft Edge\",\n    \"Display settings\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Neil Andersen's computer\"\n  ],\n  \"notable_events\": [\n    \"The technician systematically cleared Windows Update caches and components (SoftwareDistribution and Catroot2 folders) which is a common fix for update issues.\",\n    \"The drive optimization completed almost instantly, suggesting the C: drive is an SSD.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, moving from one task to the next without hesitation. The sequence of actions demonstrated a clear and well-planned approach to system maintenance.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into Neil Andersen's computer and performed a comprehensive series of system maintenance and optimization tasks. This included clearing Windows Update components, restarting associated services, initiating Windows Update checks, and running Disk Cleanup. The technician also optimized the drive, tested internet connectivity, and concluded the session with a system restart.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Logged into the user account 'Neil Andersen'.",
+      "Examined Windows Event Logs (System and Administrative events) using Event Viewer.",
+      "Reviewed running Windows Services.",
+      "Stopped Windows Update, Cryptographic Services, BITS, and Windows Installer services via Command Prompt.",
+      "Deleted the 'Download' and 'DataStore' folders within C:\\Windows\\SoftwareDistribution.",
+      "Deleted the contents of the C:\\Windows\\System32\\Catroot2 folder.",
+      "Started Windows Update, Cryptographic Services, BITS, and Windows Installer services via Command Prompt.",
+      "Initiated a check for and download/installation of Windows Updates.",
+      "Performed Disk Cleanup, specifically targeting Windows Update Cleanup files, Temporary Internet Files, and Recycle Bin contents.",
+      "Optimized the C: drive using 'Defragment and Optimize Drives'.",
+      "Tested internet connectivity by browsing to Google and Bing using Microsoft Edge.",
+      "Briefly reviewed Display settings.",
+      "Restarted the computer."
+    ],
+    "applications_used": [
+      "Event Viewer",
+      "Services",
+      "File Explorer",
+      "Command Prompt",
+      "Windows Update settings",
+      "System Information",
+      "Disk Cleanup",
+      "Defragment and Optimize Drives",
+      "Microsoft Edge",
+      "Display settings"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Neil Andersen's computer"
+    ],
+    "notable_events": [
+      "The technician systematically cleared Windows Update caches and components (SoftwareDistribution and Catroot2 folders) which is a common fix for update issues.",
+      "The drive optimization completed almost instantly, suggesting the C: drive is an SSD."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, moving from one task to the next without hesitation. The sequence of actions demonstrated a clear and well-planned approach to system maintenance.",
+      "coaching_flags": []
+    }
+  }
+}

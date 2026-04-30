@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260424_ORX_0a005afe_6b774793",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_0a005afe_6b774793.mp4",
+  "analyzed_at": "2026-04-30T18:39:43Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into a local Windows 11 machine, then established a Remote Desktop Connection to a server at 10.10.1.10. On the remote server, the technician opened File Explorer and browsed through several standard user folders and the C: drive before disconnecting the RDP session and logging off the local machine.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Logged into local Windows 11 machine (user Quintana).\",\n    \"Opened Remote Desktop Connection application.\",\n    \"Initiated an RDP session to 10.10.1.10 and logged in as Administrator.\",\n    \"Opened File Explorer on the remote machine.\",\n    \"Navigated through C: drive, Desktop, Documents, Downloads, Pictures, Videos, and Music folders on the remote machine.\",\n    \"Closed File Explorer on the remote machine.\",\n    \"Disconnected the RDP session.\",\n    \"Signed out of the local Windows 11 machine.\"\n  ],\n  \"applications_used\": [\n    \"Remote Desktop Connection\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Quintana's local machine (Windows 11)\",\n    \"10.10.1.10 (remote Windows 10 machine)\"\n  ],\n  \"notable_events\": [\n    \"The local machine's lock screen time (07:07 AM) remained unchanged from the start to the end of the video, which might indicate a recording artifact or extremely short real-time duration of the session.\",\n    \"The remote machine's lock screen showed 11:24 PM, indicating a different time of day or timezone from the local machine.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, moving directly from login to establishing the RDP connection and then navigating folders without visible hesitation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into a local Windows 11 machine, then established a Remote Desktop Connection to a server at 10.10.1.10. On the remote server, the technician opened File Explorer and browsed through several standard user folders and the C: drive before disconnecting the RDP session and logging off the local machine.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Logged into local Windows 11 machine (user Quintana).",
+      "Opened Remote Desktop Connection application.",
+      "Initiated an RDP session to 10.10.1.10 and logged in as Administrator.",
+      "Opened File Explorer on the remote machine.",
+      "Navigated through C: drive, Desktop, Documents, Downloads, Pictures, Videos, and Music folders on the remote machine.",
+      "Closed File Explorer on the remote machine.",
+      "Disconnected the RDP session.",
+      "Signed out of the local Windows 11 machine."
+    ],
+    "applications_used": [
+      "Remote Desktop Connection",
+      "File Explorer"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Quintana's local machine (Windows 11)",
+      "10.10.1.10 (remote Windows 10 machine)"
+    ],
+    "notable_events": [
+      "The local machine's lock screen time (07:07 AM) remained unchanged from the start to the end of the video, which might indicate a recording artifact or extremely short real-time duration of the session.",
+      "The remote machine's lock screen showed 11:24 PM, indicating a different time of day or timezone from the local machine."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, moving directly from login to establishing the RDP connection and then navigating folders without visible hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

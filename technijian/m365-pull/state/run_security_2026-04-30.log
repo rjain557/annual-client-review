@@ -1,0 +1,251 @@
+M365 Security Pull | window: 2026-03-31T17:49:34Z → 2026-04-30T17:49:34Z | tenants: 11
+  TECHNIJIAN (cab8077a...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 146, in _paginate
+    resp = _get(next_url, tenant_id)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 487, in open
+    response = self._open(req, data)
+  File "C:\Python314\Lib\urllib\request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 1369, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 1325, in do_open
+    r = h.getresponse()
+  File "C:\Python314\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python314\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+OK  clean
+  BIS (b752f922...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 493, in open
+    response = meth(req, response)
+  File "C:\Python314\Lib\urllib\request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Python314\Lib\urllib\request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 143, in _paginate
+    resp = _get(url, tenant_id, params)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 137, in _get
+    raise RuntimeError(f"Graph GET {url} => {exc.code}: {body}") from exc
+RuntimeError: Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T17%3A49%3A34Z+and+createdDateTime+lt+2026-04-30T17%3A49%3A34Z&%24top=999 => 403: {"error":{"code":"Authentication_RequestFromNonPremiumTenantOrB2CTenant","message":"Tenant is not a B2C tenant and doesn't have premium license","innerError":{"date":"2026-04-30T17:53:52","request-id":"c7c24e64-a039-4916-928e-928d4f1724f8","client-request-id":"c7c24e64-a039-4916-928e-928d4f1724f8"}}
+OK  clean
+  CBI (d8a53075...)  OK  alerts=['has_brute_force', 'has_foreign_success']
+  NOR (61d9b3ff...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 493, in open
+    response = meth(req, response)
+  File "C:\Python314\Lib\urllib\request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Python314\Lib\urllib\request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 143, in _paginate
+    resp = _get(url, tenant_id, params)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 137, in _get
+    raise RuntimeError(f"Graph GET {url} => {exc.code}: {body}") from exc
+RuntimeError: Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T17%3A49%3A34Z+and+createdDateTime+lt+2026-04-30T17%3A49%3A34Z&%24top=999 => 403: {"error":{"code":"Authentication_RequestFromNonPremiumTenantOrB2CTenant","message":"Tenant is not a B2C tenant and doesn't have premium license","innerError":{"date":"2026-04-30T17:54:52","request-id":"910b6620-1502-4bea-abda-3c4a0d43d586","client-request-id":"910b6620-1502-4bea-abda-3c4a0d43d586"}}
+OK  clean
+  VAF (9cb538a1...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 143, in _paginate
+    resp = _get(url, tenant_id, params)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 487, in open
+    response = self._open(req, data)
+  File "C:\Python314\Lib\urllib\request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 1369, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 1325, in do_open
+    r = h.getresponse()
+  File "C:\Python314\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python314\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+OK  clean
+  SAS (9fcc5c06...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 493, in open
+    response = meth(req, response)
+  File "C:\Python314\Lib\urllib\request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Python314\Lib\urllib\request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 143, in _paginate
+    resp = _get(url, tenant_id, params)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 137, in _get
+    raise RuntimeError(f"Graph GET {url} => {exc.code}: {body}") from exc
+RuntimeError: Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T17%3A49%3A34Z+and+createdDateTime+lt+2026-04-30T17%3A49%3A34Z&%24top=999 => 403: {"error":{"code":"Authentication_RequestFromNonPremiumTenantOrB2CTenant","message":"Tenant is not a B2C tenant and doesn't have premium license","innerError":{"date":"2026-04-30T17:55:56","request-id":"066f20ba-db73-4460-a60d-4dd0595b1847","client-request-id":"066f20ba-db73-4460-a60d-4dd0595b1847"}}
+OK  clean
+  AAOC (047f7c77...)  OK  alerts=['has_brute_force', 'has_password_spray', 'has_foreign_success', 'has_legacy_auth']
+  ACU (f46aeae4...)  OK  alerts=['has_foreign_success']
+  BWH (c68196d0...)  Traceback (most recent call last):
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\pull_m365_security.py", line 171, in pull_client
+    signins = mapi.get_signin_logs(tenant_id, win_start, win_end)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 158, in get_signin_logs
+    return list(_paginate(url, tenant_id, {"$filter": filt, "$top": "999"}))
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 143, in _paginate
+    resp = _get(url, tenant_id, params)
+  File "C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\scripts\m365_api.py", line 126, in _get
+    with urlrequest.urlopen(req, timeout=DEFAULT_TIMEOUT) as resp:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 487, in open
+    response = self._open(req, data)
+  File "C:\Python314\Lib\urllib\request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Python314\Lib\urllib\request.py", line 464, in _call_chain
+    result = func(*args)
+  File "C:\Python314\Lib\urllib\request.py", line 1369, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\urllib\request.py", line 1325, in do_open
+    r = h.getresponse()
+  File "C:\Python314\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python314\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+OK  clean
+  HHOC (d57b79ab...)  OK  clean
+  ORX (9f0d3ee8...)  OK  alerts=['has_brute_force', 'has_password_spray', 'has_foreign_success', 'has_legacy_auth']
+
+Done. 11 OK, 0 errors. Log: C:\vscode\annual-client-review\annual-client-review\technijian\m365-pull\state\security-2026-03-31.json

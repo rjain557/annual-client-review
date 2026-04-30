@@ -1,0 +1,43 @@
+{
+  "filename_stem": "20260426_ORX_1fddfada_685404b3",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260426_ORX_1fddfada_685404b3.mp4",
+  "analyzed_at": "2026-04-30T18:50:12Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed the Windows lock screen, then entered credentials for the OXP\\\\administrator user. The system then displayed a 'Please wait for the User Profile Service' message and remained in that state until the end of the recording, indicating a delay in profile loading.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Unlocked the Windows lock screen\",\n    \"Typed 'OXP\\\\administrator' into the username field\",\n    \"Entered a password\",\n    \"Attempted to log in\"\n  ],\n  \"applications_used\": [\n    \"Windows Login Screen\"\n  ],\n  \"issues_observed\": [\n    \"Prolonged waiting for 'User Profile Service' after login attempt\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"A Windows computer associated with the OXP domain/workgroup\"\n  ],\n  \"notable_events\": [\n    \"The system displayed a 'Please wait for the User Profile Service' message and remained in that state for the remainder of the recording after login attempt.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician methodically proceeded through the login process. The subsequent waiting period was due to system response rather than technician inefficiency.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed the Windows lock screen, then entered credentials for the OXP\\administrator user. The system then displayed a 'Please wait for the User Profile Service' message and remained in that state until the end of the recording, indicating a delay in profile loading.",
+    "session_type": "other",
+    "actions_taken": [
+      "Unlocked the Windows lock screen",
+      "Typed 'OXP\\administrator' into the username field",
+      "Entered a password",
+      "Attempted to log in"
+    ],
+    "applications_used": [
+      "Windows Login Screen"
+    ],
+    "issues_observed": [
+      "Prolonged waiting for 'User Profile Service' after login attempt"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "A Windows computer associated with the OXP domain/workgroup"
+    ],
+    "notable_events": [
+      "The system displayed a 'Please wait for the User Profile Service' message and remained in that state for the remainder of the recording after login attempt."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician methodically proceeded through the login process. The subsequent waiting period was due to system response rather than technician inefficiency.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_d1c2ef34",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_d1c2ef34.mp4",
+  "analyzed_at": "2026-04-30T18:46:00Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician opened the Windows Services management console, reviewed the list of running and disabled services, and attempted to start the 'Microsoft Edge Update Service (edgeupdate)'. The service failed to start, displaying an informational message that it started and then immediately stopped.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Windows Services management console.\",\n    \"Scrolled through the list of local services, reviewing their status and startup types.\",\n    \"Attempted to start the 'Microsoft Edge Update Service (edgeupdate)'.\",\n    \"Acknowledged the informational message regarding the service failure to remain running.\",\n    \"Closed Windows Services.\"\n  ],\n  \"applications_used\": [\n    \"Services (Windows Management Console)\"\n  ],\n  \"issues_observed\": [\n    \"The 'Microsoft Edge Update Service (edgeupdate)' was not running and failed to start when manually initiated. The system reported: 'The Microsoft Edge Update Service (edgeupdate) service on Local Computer started and then stopped. Some services stop automatically if they are not in use by other services or programs.'\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Local Computer\"\n  ],\n  \"notable_events\": [\n    \"The 'Microsoft Edge Update Service (edgeupdate)' failed to start, indicating a potential underlying issue with the service or its dependencies.\"\n  ],\n  \"concerns\": [\n    \"The technician did not investigate further after the 'Microsoft Edge Update Service (edgeupdate)' failed to start, which could indicate incomplete troubleshooting or a lack of follow-up on the issue.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically by opening the Services console and navigating the list. However, the session lacked further investigative steps after the initial attempt to start the service failed.\",\n    \"coaching_flags\": [\n      \"The technician did not investigate the reason for the 'Microsoft Edge Update Service (edgeupdate)' failure to start (e.g., checking Event Viewer, service dependencies, or service logs) before closing the Services console.\"\n    ]\n  }\n}",
+  "analysis": {
+    "summary": "The technician opened the Windows Services management console, reviewed the list of running and disabled services, and attempted to start the 'Microsoft Edge Update Service (edgeupdate)'. The service failed to start, displaying an informational message that it started and then immediately stopped.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Windows Services management console.",
+      "Scrolled through the list of local services, reviewing their status and startup types.",
+      "Attempted to start the 'Microsoft Edge Update Service (edgeupdate)'.",
+      "Acknowledged the informational message regarding the service failure to remain running.",
+      "Closed Windows Services."
+    ],
+    "applications_used": [
+      "Services (Windows Management Console)"
+    ],
+    "issues_observed": [
+      "The 'Microsoft Edge Update Service (edgeupdate)' was not running and failed to start when manually initiated. The system reported: 'The Microsoft Edge Update Service (edgeupdate) service on Local Computer started and then stopped. Some services stop automatically if they are not in use by other services or programs.'"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Local Computer"
+    ],
+    "notable_events": [
+      "The 'Microsoft Edge Update Service (edgeupdate)' failed to start, indicating a potential underlying issue with the service or its dependencies."
+    ],
+    "concerns": [
+      "The technician did not investigate further after the 'Microsoft Edge Update Service (edgeupdate)' failed to start, which could indicate incomplete troubleshooting or a lack of follow-up on the issue."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically by opening the Services console and navigating the list. However, the session lacked further investigative steps after the initial attempt to start the service failed.",
+      "coaching_flags": [
+        "The technician did not investigate the reason for the 'Microsoft Edge Update Service (edgeupdate)' failure to start (e.g., checking Event Viewer, service dependencies, or service logs) before closing the Services console."
+      ]
+    }
+  }
+}

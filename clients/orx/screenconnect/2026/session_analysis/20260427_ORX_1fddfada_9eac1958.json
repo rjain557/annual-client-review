@@ -1,0 +1,47 @@
+{
+  "filename_stem": "20260427_ORX_1fddfada_9eac1958",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260427_ORX_1fddfada_9eac1958.mp4",
+  "analyzed_at": "2026-04-30T18:55:04Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician repeatedly attempted to log into a Windows machine using different administrator credentials (both local/domain and UPN format), but failed each time with an incorrect username or password error. No successful login or further actions were observed.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Attempted login using 'Administrator' username against domain 'ORX-DC-TS-04' with two different passwords.\",\n    \"Attempted login using 'admin@ORX365.onmicrosoft.com' username against domain 'ORX365.onmicrosoft.com' with two different passwords.\"\n  ],\n  \"applications_used\": [],\n  \"issues_observed\": [\n    \"Repeated 'The user name or password is incorrect' error message on login attempts.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"ORX-DC-TS-04\"\n  ],\n  \"notable_events\": [\n    \"All login attempts failed.\"\n  ],\n  \"concerns\": [\n    \"Technician repeatedly failed to log in, indicating incorrect credentials or a misunderstanding of the login method, which impacts efficiency and could suggest a security risk if multiple incorrect password attempts lead to account lockout or are part of a credential-guessing attempt.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"Attempted login with 'Administrator' and a password, failed at 0:11. Re-attempted with a different password for 'Administrator', failed at 0:17.\",\n      \"Attempted login with 'admin@ORX365.onmicrosoft.com' and a password, failed at 0:29. Re-attempted with a different password for 'admin@ORX365.onmicrosoft.com', failed at 0:36.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician seemed to be trying different known credentials but without success. This indicates they did not have the correct credentials readily available or had an incorrect understanding of the required login format, leading to repeated failed attempts.\",\n    \"coaching_flags\": [\n      \"Always verify credentials and expected login format (local, domain, UPN) before initiating remote access attempts.\",\n      \"Have a clear escalation plan or alternative access method when initial login attempts fail.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician repeatedly attempted to log into a Windows machine using different administrator credentials (both local/domain and UPN format), but failed each time with an incorrect username or password error. No successful login or further actions were observed.",
+    "session_type": "other",
+    "actions_taken": [
+      "Attempted login using 'Administrator' username against domain 'ORX-DC-TS-04' with two different passwords.",
+      "Attempted login using 'admin@ORX365.onmicrosoft.com' username against domain 'ORX365.onmicrosoft.com' with two different passwords."
+    ],
+    "applications_used": [],
+    "issues_observed": [
+      "Repeated 'The user name or password is incorrect' error message on login attempts."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "ORX-DC-TS-04"
+    ],
+    "notable_events": [
+      "All login attempts failed."
+    ],
+    "concerns": [
+      "Technician repeatedly failed to log in, indicating incorrect credentials or a misunderstanding of the login method, which impacts efficiency and could suggest a security risk if multiple incorrect password attempts lead to account lockout or are part of a credential-guessing attempt."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "Attempted login with 'Administrator' and a password, failed at 0:11. Re-attempted with a different password for 'Administrator', failed at 0:17.",
+        "Attempted login with 'admin@ORX365.onmicrosoft.com' and a password, failed at 0:29. Re-attempted with a different password for 'admin@ORX365.onmicrosoft.com', failed at 0:36."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician seemed to be trying different known credentials but without success. This indicates they did not have the correct credentials readily available or had an incorrect understanding of the required login format, leading to repeated failed attempts.",
+      "coaching_flags": [
+        "Always verify credentials and expected login format (local, domain, UPN) before initiating remote access attempts.",
+        "Have a clear escalation plan or alternative access method when initial login attempts fail."
+      ]
+    }
+  }
+}

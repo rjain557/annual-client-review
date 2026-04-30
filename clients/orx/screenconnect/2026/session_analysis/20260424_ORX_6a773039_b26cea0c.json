@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260424_ORX_6a773039_b26cea0c",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_6a773039_b26cea0c.mp4",
+  "analyzed_at": "2026-04-30T18:48:46Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a Windows Server machine and disabled the 'Google Update Service (gupdate)' and the 'Remote Registry' service, likely for system hardening or performance optimization. They began by dismissing an 'Unexpected Shutdown Event Tracker' dialog and then navigated to the Services console via the Start Menu.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Dismissed 'Shutdown Event Tracker' dialog\",\n    \"Attempted to open 'Server Manager' (though it did not fully launch, leading to Services console)\",\n    \"Opened 'Services' management console\",\n    \"Disabled 'Google Update Service (gupdate)'\",\n    \"Disabled 'Remote Registry' service\"\n  ],\n  \"applications_used\": [\n    \"Start Menu\",\n    \"Server Manager (splash screen)\",\n    \"Services (services.msc)\"\n  ],\n  \"issues_observed\": [\n    \"A 'Shutdown Event Tracker' dialog indicating an unexpected shutdown prior to the session\",\n    \"OneDrive notification regarding re-opening backups\",\n    \"Windows Update notification indicating a pending update\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Windows Server\"\n  ],\n  \"notable_events\": [\n    \"The 'Server Manager' application was clicked from the Start Menu but did not fully load its main console, instead the 'Services' management console appeared on screen.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, directly navigating to the Services console and performing the intended configuration changes. Initial loading times for the server and applications were present but did not indicate technician uncertainty.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a Windows Server machine and disabled the 'Google Update Service (gupdate)' and the 'Remote Registry' service, likely for system hardening or performance optimization. They began by dismissing an 'Unexpected Shutdown Event Tracker' dialog and then navigated to the Services console via the Start Menu.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Dismissed 'Shutdown Event Tracker' dialog",
+      "Attempted to open 'Server Manager' (though it did not fully launch, leading to Services console)",
+      "Opened 'Services' management console",
+      "Disabled 'Google Update Service (gupdate)'",
+      "Disabled 'Remote Registry' service"
+    ],
+    "applications_used": [
+      "Start Menu",
+      "Server Manager (splash screen)",
+      "Services (services.msc)"
+    ],
+    "issues_observed": [
+      "A 'Shutdown Event Tracker' dialog indicating an unexpected shutdown prior to the session",
+      "OneDrive notification regarding re-opening backups",
+      "Windows Update notification indicating a pending update"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Windows Server"
+    ],
+    "notable_events": [
+      "The 'Server Manager' application was clicked from the Start Menu but did not fully load its main console, instead the 'Services' management console appeared on screen."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, directly navigating to the Services console and performing the intended configuration changes. Initial loading times for the server and applications were present but did not indicate technician uncertainty.",
+      "coaching_flags": []
+    }
+  }
+}

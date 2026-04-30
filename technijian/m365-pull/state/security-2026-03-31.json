@@ -1,0 +1,268 @@
+{
+  "run_at": "2026-04-30T18:09:40Z",
+  "window_start": "2026-03-31T18:09:40Z",
+  "window_end": "2026-04-30T18:09:40Z",
+  "workers": 11,
+  "chunk_hours": 24,
+  "tenants_ok": 8,
+  "tenants_partial": 3,
+  "tenants_error": 0,
+  "summaries": [
+    {
+      "client_code": "NOR",
+      "tenant_id": "61d9b3ff-5962-4628-b32f-d840822545ce",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 0,
+        "failed_signins": 0,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [
+        {
+          "source": "signin_logs_chunks",
+          "error": "30 chunk(s) failed",
+          "details": [
+            "[2026-03-31..2026-04-01] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-01T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-01..2026-04-02] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-01T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-02T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-02..2026-04-03] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-02T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-03T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-03..2026-04-04] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-03T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-04T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-04..2026-04-05] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-04T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-05T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\""
+          ]
+        }
+      ],
+      "flags": {
+        "has_brute_force": false,
+        "has_password_spray": false,
+        "has_foreign_success": false,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "SAS",
+      "tenant_id": "9fcc5c06-4146-406c-ab7f-4ec8c5583c65",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 0,
+        "failed_signins": 0,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [
+        {
+          "source": "signin_logs_chunks",
+          "error": "30 chunk(s) failed",
+          "details": [
+            "[2026-03-31..2026-04-01] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-01T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-01..2026-04-02] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-01T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-02T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-02..2026-04-03] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-02T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-03T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-03..2026-04-04] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-03T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-04T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-04..2026-04-05] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-04T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-05T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\""
+          ]
+        }
+      ],
+      "flags": {
+        "has_brute_force": false,
+        "has_password_spray": false,
+        "has_foreign_success": false,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "BIS",
+      "tenant_id": "b752f922-8e39-4b45-b1ed-d22a423a9b7b",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 0,
+        "failed_signins": 0,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [
+        {
+          "source": "signin_logs_chunks",
+          "error": "30 chunk(s) failed",
+          "details": [
+            "[2026-03-31..2026-04-01] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-03-31T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-01T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-01..2026-04-02] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-01T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-02T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-02..2026-04-03] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-02T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-03T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-03..2026-04-04] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-03T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-04T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\"",
+            "[2026-04-04..2026-04-05] Graph GET https://graph.microsoft.com/v1.0/auditLogs/signIns?%24filter=createdDateTime+ge+2026-04-04T18%3A09%3A40Z+and+createdDateTime+lt+2026-04-05T18%3A09%3A40Z&%24top=999 => 403: {\"error\":{\"code\":\""
+          ]
+        }
+      ],
+      "flags": {
+        "has_brute_force": false,
+        "has_password_spray": false,
+        "has_foreign_success": false,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "ACU",
+      "tenant_id": "f46aeae4-8c63-4a52-9431-0a5a38cef4bf",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 20,
+        "failed_signins": 7,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": false,
+        "has_password_spray": false,
+        "has_foreign_success": true,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "CBI",
+      "tenant_id": "d8a53075-5e10-4bf9-84ac-7f4595d67295",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 429,
+        "failed_signins": 116,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": false,
+        "has_foreign_success": true,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "BWH",
+      "tenant_id": "c68196d0-806d-495a-b5f4-5ab22adfc845",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 2406,
+        "failed_signins": 1642,
+        "risky_signins": 2,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": true,
+        "has_foreign_success": true,
+        "has_legacy_auth": true,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "AAOC",
+      "tenant_id": "047f7c77-f0d5-4d53-8d99-e827f436a425",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 3589,
+        "failed_signins": 2961,
+        "risky_signins": 0,
+        "risky_users": 3
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": true,
+        "has_foreign_success": true,
+        "has_legacy_auth": true,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "HHOC",
+      "tenant_id": "d57b79ab-c770-4c4a-9b2d-36c90c710b6d",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 2561,
+        "failed_signins": 16,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": false,
+        "has_password_spray": false,
+        "has_foreign_success": false,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "VAF",
+      "tenant_id": "9cb538a1-6c4a-4cef-87d9-d131d2eaa1df",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 1892,
+        "failed_signins": 184,
+        "risky_signins": 0,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": true,
+        "has_foreign_success": true,
+        "has_legacy_auth": false,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "ORX",
+      "tenant_id": "9f0d3ee8-4412-48da-9b80-69badb68b429",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 24625,
+        "failed_signins": 2700,
+        "risky_signins": 8,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": true,
+        "has_foreign_success": true,
+        "has_legacy_auth": true,
+        "high_mfa_failures": false
+      }
+    },
+    {
+      "client_code": "TECHNIJIAN",
+      "tenant_id": "cab8077a-3f42-4277-b7bd-5c9023e826d8",
+      "window_start": "2026-03-31T18:09:40Z",
+      "window_end": "2026-04-30T18:09:40Z",
+      "counts": {
+        "total_signins": 42802,
+        "failed_signins": 9597,
+        "risky_signins": 11,
+        "risky_users": 0
+      },
+      "errors": [],
+      "flags": {
+        "has_brute_force": true,
+        "has_password_spray": true,
+        "has_foreign_success": true,
+        "has_legacy_auth": true,
+        "high_mfa_failures": false
+      }
+    }
+  ]
+}

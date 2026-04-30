@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_941da5b3",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_941da5b3.mp4",
+  "analyzed_at": "2026-04-30T19:27:31Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician made two separate attempts to adjust the display resolution on the client's Windows machine. Between these display adjustments, the technician briefly accessed a remote Linux machine via PuTTY, viewing network connectivity and disk usage information, while an iperf3 server was observed running on the client machine.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Changed the client's display resolution to 1920x868 and confirmed the change.\",\n    \"Connected to a remote Linux machine (IT-DC-MO-CLI-01) via PuTTY, viewing output from 'df -h' and 'ping 10.7.0.250', then closed the session.\",\n    \"Initiated another display resolution change on the client machine to 1280x960 (unconfirmed due to video end).\"\n  ],\n  \"applications_used\": [\n    \"Windows Settings (Display)\",\n    \"PuTTY\",\n    \"Administrator Command Prompt (running iperf3)\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [\n    \"Repeated display resolution changes suggest a potential issue with display settings or user preference, though no explicit problem was stated.\",\n    \"An iperf3 server was running on the client machine, having accepted a connection, implying prior or ongoing network testing.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client machine (recorded desktop)\",\n    \"IT-DC-MO-CLI-01 (Linux machine accessed via PuTTY)\",\n    \"10.7.0.250 (IP address pinged from IT-DC-MO-CLI-01)\",\n    \"10.100.7.173 (IP address connected to iperf3 server on client)\"\n  ],\n  \"notable_events\": [\n    \"The technician performed multiple seemingly unrelated actions (display changes, remote Linux access, iperf3 server) within a very short timeframe without a clear, single objective.\"\n  ],\n  \"concerns\": [\n    \"The 'iperf3 -s' command prompt was left open with administrator privileges on the client machine, potentially consuming resources or posing a security risk if not intended for ongoing use.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"The technician changed the display resolution (0:00-0:03), then opened and closed a PuTTY session (0:11-0:14), and then immediately returned to display settings (0:19) to change the resolution again (0:24) to a different setting. This cycle of revisiting the same task area without a clear resolution indicates indecision or an unclear strategy.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician's actions were disjointed and lacked a methodical approach. The quick transitions between unrelated tasks (display settings and remote server access for network/disk checks) without visible problem statements or resolutions indicate poor session planning or execution.\",\n    \"coaching_flags\": [\n      \"Improve session planning and focus: The technician switched between disparate tasks (display settings, remote Linux terminal, iperf3 server) without a clear, stated objective, suggesting a lack of focus.\",\n      \"Confirm closure of administrative tools: The iperf3 server running in an Administrator Command Prompt was left open without apparent reason or cleanup.\",\n      \"Clumsy window management: The technician showed some minor difficulty in efficiently closing the PuTTY window (0:11-0:14).\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician made two separate attempts to adjust the display resolution on the client's Windows machine. Between these display adjustments, the technician briefly accessed a remote Linux machine via PuTTY, viewing network connectivity and disk usage information, while an iperf3 server was observed running on the client machine.",
+    "session_type": "other",
+    "actions_taken": [
+      "Changed the client's display resolution to 1920x868 and confirmed the change.",
+      "Connected to a remote Linux machine (IT-DC-MO-CLI-01) via PuTTY, viewing output from 'df -h' and 'ping 10.7.0.250', then closed the session.",
+      "Initiated another display resolution change on the client machine to 1280x960 (unconfirmed due to video end)."
+    ],
+    "applications_used": [
+      "Windows Settings (Display)",
+      "PuTTY",
+      "Administrator Command Prompt (running iperf3)",
+      "File Explorer"
+    ],
+    "issues_observed": [
+      "Repeated display resolution changes suggest a potential issue with display settings or user preference, though no explicit problem was stated.",
+      "An iperf3 server was running on the client machine, having accepted a connection, implying prior or ongoing network testing."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client machine (recorded desktop)",
+      "IT-DC-MO-CLI-01 (Linux machine accessed via PuTTY)",
+      "10.7.0.250 (IP address pinged from IT-DC-MO-CLI-01)",
+      "10.100.7.173 (IP address connected to iperf3 server on client)"
+    ],
+    "notable_events": [
+      "The technician performed multiple seemingly unrelated actions (display changes, remote Linux access, iperf3 server) within a very short timeframe without a clear, single objective."
+    ],
+    "concerns": [
+      "The 'iperf3 -s' command prompt was left open with administrator privileges on the client machine, potentially consuming resources or posing a security risk if not intended for ongoing use."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "The technician changed the display resolution (0:00-0:03), then opened and closed a PuTTY session (0:11-0:14), and then immediately returned to display settings (0:19) to change the resolution again (0:24) to a different setting. This cycle of revisiting the same task area without a clear resolution indicates indecision or an unclear strategy."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician's actions were disjointed and lacked a methodical approach. The quick transitions between unrelated tasks (display settings and remote server access for network/disk checks) without visible problem statements or resolutions indicate poor session planning or execution.",
+      "coaching_flags": [
+        "Improve session planning and focus: The technician switched between disparate tasks (display settings, remote Linux terminal, iperf3 server) without a clear, stated objective, suggesting a lack of focus.",
+        "Confirm closure of administrative tools: The iperf3 server running in an Administrator Command Prompt was left open without apparent reason or cleanup.",
+        "Clumsy window management: The technician showed some minor difficulty in efficiently closing the PuTTY window (0:11-0:14)."
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_fd1ce890",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_fd1ce890.mp4",
+  "analyzed_at": "2026-04-30T18:47:01Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician investigated Remote Desktop Services (RDS) issues on server ORX-DC-TS-04 by reviewing IIS logging and server certificates, checking the RD Gateway Manager, and examining RDPClient operational logs in Server Manager for authentication and SSL errors (error code 0x8009030C). The status of Remote Desktop related services was also verified.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Reviewed RDPClient operational logs in Server Manager for RDP authentication and SSL errors.\",\n    \"Examined Server Certificates in IIS Manager, checking their validity periods and issuers.\",\n    \"Checked IIS logging configuration on the server.\",\n    \"Reviewed Remote Desktop Gateway Manager.\",\n    \"Verified the running status and startup type of Remote Desktop related services.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Internet Information Services (IIS) Manager\",\n    \"RD Gateway Manager\",\n    \"Server Manager\",\n    \"Services (Local)\"\n  ],\n  \"issues_observed\": [\n    \"Server Manager indicated 'Online - Performance counters not started' for ORX-DC-TS-04.\",\n    \"Multiple RDPClient operational warnings/errors visible in Server Manager events, specifically:\",\n    \"- 'RDPClient TCP: An error was encountered when transitioning from TopStateFrontAuth to TopStateFailure in response to TopEventFrontAuthFailed (error code 0x8009030C).'\",\n    \"- 'RDPClient SSL: An error was encountered when transitioning from TlsStateHandshakeStart to TlsStateDisconnecting in response to TlsEventClientHandshakeFailed (error code 0x8009030C).'\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"ORX-DC-TS-04 (10.100.106.73)\"\n  ],\n  \"notable_events\": [\n    \"The technician identified specific RDPClient authentication and SSL errors in Server Manager logs, indicating a potential issue with Remote Desktop connections and certificate validation. The subsequent checks of IIS server certificates and RD Gateway Manager were directly related to diagnosing these errors.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, following a logical diagnostic path from the observed RDP errors in Server Manager to relevant tools like IIS Manager for certificate review and RD Gateway Manager, indicating a clear understanding of the issue being investigated.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician investigated Remote Desktop Services (RDS) issues on server ORX-DC-TS-04 by reviewing IIS logging and server certificates, checking the RD Gateway Manager, and examining RDPClient operational logs in Server Manager for authentication and SSL errors (error code 0x8009030C). The status of Remote Desktop related services was also verified.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Reviewed RDPClient operational logs in Server Manager for RDP authentication and SSL errors.",
+      "Examined Server Certificates in IIS Manager, checking their validity periods and issuers.",
+      "Checked IIS logging configuration on the server.",
+      "Reviewed Remote Desktop Gateway Manager.",
+      "Verified the running status and startup type of Remote Desktop related services."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Internet Information Services (IIS) Manager",
+      "RD Gateway Manager",
+      "Server Manager",
+      "Services (Local)"
+    ],
+    "issues_observed": [
+      "Server Manager indicated 'Online - Performance counters not started' for ORX-DC-TS-04.",
+      "Multiple RDPClient operational warnings/errors visible in Server Manager events, specifically:",
+      "- 'RDPClient TCP: An error was encountered when transitioning from TopStateFrontAuth to TopStateFailure in response to TopEventFrontAuthFailed (error code 0x8009030C).'",
+      "- 'RDPClient SSL: An error was encountered when transitioning from TlsStateHandshakeStart to TlsStateDisconnecting in response to TlsEventClientHandshakeFailed (error code 0x8009030C).'"
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "ORX-DC-TS-04 (10.100.106.73)"
+    ],
+    "notable_events": [
+      "The technician identified specific RDPClient authentication and SSL errors in Server Manager logs, indicating a potential issue with Remote Desktop connections and certificate validation. The subsequent checks of IIS server certificates and RD Gateway Manager were directly related to diagnosing these errors."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, following a logical diagnostic path from the observed RDP errors in Server Manager to relevant tools like IIS Manager for certificate review and RD Gateway Manager, indicating a clear understanding of the issue being investigated.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "filename_stem": "20260426_ANI_0d0f3a40_f1f948d0",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260426_ANI_0d0f3a40_f1f948d0.mp4",
+  "analyzed_at": "2026-04-30T17:44:30Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed the Windows Services console, then opened Veeam Backup and Replication to review a backup job that was in a 'Stopped' state. After reviewing the Veeam interface, the technician initiated a system restart.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Windows Services console and scrolled through the list of services.\",\n    \"Opened Veeam Backup and Replication application.\",\n    \"Observed the status of the 'Bkp_ANI' VMware Backup job was 'Stopped'.\",\n    \"Initiated a system restart.\"\n  ],\n  \"applications_used\": [\n    \"Services (Windows administrative tool)\",\n    \"Veeam Backup and Replication\"\n  ],\n  \"issues_observed\": [\n    \"The 'Bkp_ANI' VMware Backup job in Veeam was in a 'Stopped' state.\",\n    \"Veeam license expires in 50 days.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"localhost\",\n    \"Bkp_ANI_10G\"\n  ],\n  \"notable_events\": [\n    \"System restart initiated by the technician.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved methodically from checking system services to reviewing the Veeam application, then initiating a restart, suggesting a clear plan for initial diagnosis or resolution.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed the Windows Services console, then opened Veeam Backup and Replication to review a backup job that was in a 'Stopped' state. After reviewing the Veeam interface, the technician initiated a system restart.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Windows Services console and scrolled through the list of services.",
+      "Opened Veeam Backup and Replication application.",
+      "Observed the status of the 'Bkp_ANI' VMware Backup job was 'Stopped'.",
+      "Initiated a system restart."
+    ],
+    "applications_used": [
+      "Services (Windows administrative tool)",
+      "Veeam Backup and Replication"
+    ],
+    "issues_observed": [
+      "The 'Bkp_ANI' VMware Backup job in Veeam was in a 'Stopped' state.",
+      "Veeam license expires in 50 days."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "localhost",
+      "Bkp_ANI_10G"
+    ],
+    "notable_events": [
+      "System restart initiated by the technician."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved methodically from checking system services to reviewing the Veeam application, then initiating a restart, suggesting a clear plan for initial diagnosis or resolution.",
+      "coaching_flags": []
+    }
+  }
+}

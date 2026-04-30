@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260424_ORX_0a005afe_3d959b52",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_0a005afe_3d959b52.mp4",
+  "analyzed_at": "2026-04-30T18:39:17Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into the client's Windows session, accessed Paychex Flex, navigated through OneDrive, and then opened Microsoft Teams. During the session, the Microsoft Teams application briefly became unresponsive, and a Windows Security notification regarding the firewall being off was dismissed without further action.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Logged into Windows using user 'Quintana'.\",\n    \"Opened Google Chrome.\",\n    \"Navigated to Paychex Flex and logged in using username 'jgquintana19'.\",\n    \"Opened and navigated through the OneDrive desktop application.\",\n    \"Opened Microsoft Teams desktop application.\",\n    \"Dismissed a Windows Security notification about the firewall being off.\",\n    \"Reviewed chat history within Microsoft Teams.\",\n    \"Reloaded the Paychex Flex website.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"Paychex Flex (web application)\",\n    \"OneDrive (desktop application)\",\n    \"Microsoft Teams (desktop application)\",\n    \"Windows Security\"\n  ],\n  \"issues_observed\": [\n    \"Microsoft Teams briefly became unresponsive ('Microsoft Teams (Not Responding)').\",\n    \"Windows Security notification indicating Windows Firewall was turned off.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"client computer (user: Quintana, company: West Coast DME & Supplies LLC)\"\n  ],\n  \"notable_events\": [\n    \"Microsoft Teams experienced a brief period of unresponsiveness.\",\n    \"A Windows Security notification indicated the Windows Firewall was off.\"\n  ],\n  \"concerns\": [\n    \"Security: The technician dismissed the Windows Security notification indicating the firewall was off without attempting to resolve the issue, leaving the system potentially vulnerable.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved methodically through opening and navigating the required applications, without visible hesitation or unnecessary repeated actions for tasks that were responsive. The brief hang in Teams was a system issue, not a sign of the tech being stuck.\",\n    \"coaching_flags\": [\n      \"Did not address the critical security concern of the Windows Firewall being off; simply dismissed the notification.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into the client's Windows session, accessed Paychex Flex, navigated through OneDrive, and then opened Microsoft Teams. During the session, the Microsoft Teams application briefly became unresponsive, and a Windows Security notification regarding the firewall being off was dismissed without further action.",
+    "session_type": "other",
+    "actions_taken": [
+      "Logged into Windows using user 'Quintana'.",
+      "Opened Google Chrome.",
+      "Navigated to Paychex Flex and logged in using username 'jgquintana19'.",
+      "Opened and navigated through the OneDrive desktop application.",
+      "Opened Microsoft Teams desktop application.",
+      "Dismissed a Windows Security notification about the firewall being off.",
+      "Reviewed chat history within Microsoft Teams.",
+      "Reloaded the Paychex Flex website."
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "Paychex Flex (web application)",
+      "OneDrive (desktop application)",
+      "Microsoft Teams (desktop application)",
+      "Windows Security"
+    ],
+    "issues_observed": [
+      "Microsoft Teams briefly became unresponsive ('Microsoft Teams (Not Responding)').",
+      "Windows Security notification indicating Windows Firewall was turned off."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "client computer (user: Quintana, company: West Coast DME & Supplies LLC)"
+    ],
+    "notable_events": [
+      "Microsoft Teams experienced a brief period of unresponsiveness.",
+      "A Windows Security notification indicated the Windows Firewall was off."
+    ],
+    "concerns": [
+      "Security: The technician dismissed the Windows Security notification indicating the firewall was off without attempting to resolve the issue, leaving the system potentially vulnerable."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved methodically through opening and navigating the required applications, without visible hesitation or unnecessary repeated actions for tasks that were responsive. The brief hang in Teams was a system issue, not a sign of the tech being stuck.",
+      "coaching_flags": [
+        "Did not address the critical security concern of the Windows Firewall being off; simply dismissed the notification."
+      ]
+    }
+  }
+}

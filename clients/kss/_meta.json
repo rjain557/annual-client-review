@@ -3,6 +3,7 @@
   "DirID": 5110,
   "Location_Name": "Kabuki Springs and Spa",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.KSS",
   "Data_Signals": [
     "cp",
     "huntress",
@@ -19,9 +20,18 @@
   "Time_Entries_This_Month": 26,
   "Total_Active_Users": 4,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 4458,
+    "Contract_Name": "Monthly Services Contract - KSS",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": null,
+    "Signed_DirID": null
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

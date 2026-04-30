@@ -1,0 +1,60 @@
+{
+  "filename_stem": "20260426_ORX_7b6afdfa_07e65696",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260426_ORX_7b6afdfa_07e65696.mp4",
+  "analyzed_at": "2026-04-30T18:53:37Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive clean uninstallation of AnyDesk version 7.0.8, which included removing the program via Control Panel, deleting the installer file from the downloads folder, emptying the Recycle Bin, and manually removing associated registry keys. Following the clean-up, the technician downloaded and successfully installed the latest version of AnyDesk (8.0.8) from the official website, confirming its proper installation.\",\n  \"session_type\": \"installation\",\n  \"actions_taken\": [\n    \"Uninstalled AnyDesk 7.0.8 via Programs and Features.\",\n    \"Deleted the AnyDesk.exe installer file from the user's Downloads folder.\",\n    \"Emptied the Recycle Bin to permanently remove the deleted installer.\",\n    \"Manually deleted AnyDesk registry keys from HKEY_LOCAL_MACHINE\\\\SOFTWARE and HKEY_CURRENT_USER\\\\SOFTWARE.\",\n    \"Checked for AnyDesk services, scheduled tasks, and startup entries (found none).\",\n    \"Downloaded the latest AnyDesk installer (version 8.0.8) from anydesk.com using Google Chrome.\",\n    \"Installed the latest AnyDesk version on the client machine.\",\n    \"Verified the successful installation by launching AnyDesk and confirming its presence in Programs and Features.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Control Panel (Programs and Features)\",\n    \"Recycle Bin\",\n    \"Registry Editor (regedit.exe)\",\n    \"Services (services.msc)\",\n    \"Task Scheduler (taskschd.msc)\",\n    \"Task Manager\",\n    \"Google Chrome\",\n    \"AnyDesk (installer and application)\",\n    \"Windows Settings\"\n  ],\n  \"issues_observed\": [\n    \"An outdated version of AnyDesk (7.0.8) was installed.\",\n    \"The AnyDesk installer executable was present in a user's Downloads folder.\"\n  ],\n  \"issues_resolved\": [\n    \"The outdated AnyDesk version (7.0.8) was completely removed.\",\n    \"The latest AnyDesk version (8.0.8) was successfully installed and verified.\"\n  ],\n  \"machines_touched\": [\n    \"Client machine (identified by user profile 'TEST')\"\n  ],\n  \"notable_events\": [\n    \"The technician performed a very thorough clean-up of the old AnyDesk installation, including registry keys and file remnants, before reinstalling the new version. This demonstrates excellent attention to detail for software reinstallation best practices.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, following a clear sequence of steps for a complete software removal and reinstallation. They systematically checked various system components (Control Panel, File Explorer, Registry Editor, Services, Task Scheduler, Task Manager) to ensure a clean slate before installing the new software.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive clean uninstallation of AnyDesk version 7.0.8, which included removing the program via Control Panel, deleting the installer file from the downloads folder, emptying the Recycle Bin, and manually removing associated registry keys. Following the clean-up, the technician downloaded and successfully installed the latest version of AnyDesk (8.0.8) from the official website, confirming its proper installation.",
+    "session_type": "installation",
+    "actions_taken": [
+      "Uninstalled AnyDesk 7.0.8 via Programs and Features.",
+      "Deleted the AnyDesk.exe installer file from the user's Downloads folder.",
+      "Emptied the Recycle Bin to permanently remove the deleted installer.",
+      "Manually deleted AnyDesk registry keys from HKEY_LOCAL_MACHINE\\SOFTWARE and HKEY_CURRENT_USER\\SOFTWARE.",
+      "Checked for AnyDesk services, scheduled tasks, and startup entries (found none).",
+      "Downloaded the latest AnyDesk installer (version 8.0.8) from anydesk.com using Google Chrome.",
+      "Installed the latest AnyDesk version on the client machine.",
+      "Verified the successful installation by launching AnyDesk and confirming its presence in Programs and Features."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Control Panel (Programs and Features)",
+      "Recycle Bin",
+      "Registry Editor (regedit.exe)",
+      "Services (services.msc)",
+      "Task Scheduler (taskschd.msc)",
+      "Task Manager",
+      "Google Chrome",
+      "AnyDesk (installer and application)",
+      "Windows Settings"
+    ],
+    "issues_observed": [
+      "An outdated version of AnyDesk (7.0.8) was installed.",
+      "The AnyDesk installer executable was present in a user's Downloads folder."
+    ],
+    "issues_resolved": [
+      "The outdated AnyDesk version (7.0.8) was completely removed.",
+      "The latest AnyDesk version (8.0.8) was successfully installed and verified."
+    ],
+    "machines_touched": [
+      "Client machine (identified by user profile 'TEST')"
+    ],
+    "notable_events": [
+      "The technician performed a very thorough clean-up of the old AnyDesk installation, including registry keys and file remnants, before reinstalling the new version. This demonstrates excellent attention to detail for software reinstallation best practices."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, following a clear sequence of steps for a complete software removal and reinstallation. They systematically checked various system components (Control Panel, File Explorer, Registry Editor, Services, Task Scheduler, Task Manager) to ensure a clean slate before installing the new software.",
+      "coaching_flags": []
+    }
+  }
+}

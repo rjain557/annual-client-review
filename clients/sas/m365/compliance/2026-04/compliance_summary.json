@@ -1,0 +1,43 @@
+{
+  "client_code": "SAS",
+  "tenant_id": "9fcc5c06-4146-406c-ab7f-4ec8c5583c65",
+  "month": "2026-04",
+  "errors": [],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 3,
+    "warn_count": 0,
+    "checks": [
+      {
+        "check": "Conditional Access Policies",
+        "status": "fail",
+        "value": "0 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "fail",
+        "value": "Not blocked",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Global Administrator Count",
+        "status": "pass",
+        "value": "3 Global Admins",
+        "detail": "Best practice: 2-3 Global Admins maximum"
+      },
+      {
+        "check": "Microsoft Secure Score",
+        "status": "fail",
+        "value": "90.0/272.0 (33.1%)",
+        "detail": "Target: >60% of available score"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "pass",
+        "value": "0 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

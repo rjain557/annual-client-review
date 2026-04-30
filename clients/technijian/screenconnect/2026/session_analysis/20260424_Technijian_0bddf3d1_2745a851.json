@@ -1,0 +1,67 @@
+{
+  "filename_stem": "20260424_Technijian_0bddf3d1_2745a851",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0bddf3d1_2745a851.mp4",
+  "analyzed_at": "2026-04-30T19:43:18Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician initially attempted to troubleshoot iSCSI and Nextcloud-related issues on a Linux machine via PuTTY, encountering several errors and a network disconnection. Subsequently, the technician started an iperf3 server on a Windows machine to perform network performance testing, which ran for the remainder of the session without further direct interaction.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted to discover iSCSI targets using `iscsiadm`.\",\n    \"Attempted to stop `apache2` service using `systemctl`.\",\n    \"Attempted to edit Nextcloud configuration file `/var/www/nextcloud/config/config.php` using `nano`.\",\n    \"Attempted to stop the `nextcloud` Docker container.\",\n    \"Checked for existence of `/nextcloud/data` and `/var/www/nextcloud` paths.\",\n    \"Started `iperf3` in server mode (`-s`) on a Windows machine to listen for network connections and measure bandwidth.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"iscsiadm\",\n    \"systemctl\",\n    \"nano\",\n    \"docker\",\n    \"lsblk\",\n    \"partprobe\",\n    \"iperf3\",\n    \"Administrator: Command Prompt\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [\n    \"PuTTY Fatal Error: \\\"Network error: Software caused connection abort\\\".\",\n    \"iSCSI discovery reported \\\"No records found\\\".\",\n    \"Failed to stop `apache2.service`: \\\"Unit apache2.service not loaded\\\".\",\n    \"Docker command failed with \\\"permission denied while trying to connect to the docker daemon\\\".\",\n    \"Paths `/nextcloud/data` and `/var/www/nextcloud` reported \\\"No such file or directory\\\".\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02 (Linux machine)\",\n    \"10.7.5.250 (iSCSI portal IP)\",\n    \"10.100.7.171 (iperf3 server IP - Windows machine)\",\n    \"10.100.7.173 (iperf3 client IP)\"\n  ],\n  \"notable_events\": [\n    \"The PuTTY SSH session disconnected unexpectedly due to a 'Network error'.\",\n    \"Transition from Linux-based troubleshooting to a Windows-based network performance test.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"00:12 - 02:02 (approx 1 minute 50 seconds): After launching the iperf3 server and confirming it was running, the technician ceased all discernible interaction with the remote desktop, leaving the iperf3 output window as the primary focus until the end of the recording.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 110,\n    \"total_idle_estimate_seconds\": 110,\n    \"efficiency_notes\": \"The initial troubleshooting attempts on the Linux machine were executed quickly but encountered several failures and ultimately a connection loss. The technician then swiftly moved to initiate an iperf3 network test on a Windows machine. However, after setting up the test, there was a prolonged period of inactivity where no further actions were observed.\",\n    \"coaching_flags\": [\n      \"No apparent attempt was made to reconnect the PuTTY session after the 'Network error' forced disconnection within the recorded timeframe.\",\n      \"Extended period of inactivity after initiating the iperf3 network test, suggesting the technician may have left the session unattended while the test was running.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician initially attempted to troubleshoot iSCSI and Nextcloud-related issues on a Linux machine via PuTTY, encountering several errors and a network disconnection. Subsequently, the technician started an iperf3 server on a Windows machine to perform network performance testing, which ran for the remainder of the session without further direct interaction.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted to discover iSCSI targets using `iscsiadm`.",
+      "Attempted to stop `apache2` service using `systemctl`.",
+      "Attempted to edit Nextcloud configuration file `/var/www/nextcloud/config/config.php` using `nano`.",
+      "Attempted to stop the `nextcloud` Docker container.",
+      "Checked for existence of `/nextcloud/data` and `/var/www/nextcloud` paths.",
+      "Started `iperf3` in server mode (`-s`) on a Windows machine to listen for network connections and measure bandwidth."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "iscsiadm",
+      "systemctl",
+      "nano",
+      "docker",
+      "lsblk",
+      "partprobe",
+      "iperf3",
+      "Administrator: Command Prompt",
+      "File Explorer"
+    ],
+    "issues_observed": [
+      "PuTTY Fatal Error: \"Network error: Software caused connection abort\".",
+      "iSCSI discovery reported \"No records found\".",
+      "Failed to stop `apache2.service`: \"Unit apache2.service not loaded\".",
+      "Docker command failed with \"permission denied while trying to connect to the docker daemon\".",
+      "Paths `/nextcloud/data` and `/var/www/nextcloud` reported \"No such file or directory\"."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02 (Linux machine)",
+      "10.7.5.250 (iSCSI portal IP)",
+      "10.100.7.171 (iperf3 server IP - Windows machine)",
+      "10.100.7.173 (iperf3 client IP)"
+    ],
+    "notable_events": [
+      "The PuTTY SSH session disconnected unexpectedly due to a 'Network error'.",
+      "Transition from Linux-based troubleshooting to a Windows-based network performance test."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "00:12 - 02:02 (approx 1 minute 50 seconds): After launching the iperf3 server and confirming it was running, the technician ceased all discernible interaction with the remote desktop, leaving the iperf3 output window as the primary focus until the end of the recording."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 110,
+      "total_idle_estimate_seconds": 110,
+      "efficiency_notes": "The initial troubleshooting attempts on the Linux machine were executed quickly but encountered several failures and ultimately a connection loss. The technician then swiftly moved to initiate an iperf3 network test on a Windows machine. However, after setting up the test, there was a prolonged period of inactivity where no further actions were observed.",
+      "coaching_flags": [
+        "No apparent attempt was made to reconnect the PuTTY session after the 'Network error' forced disconnection within the recorded timeframe.",
+        "Extended period of inactivity after initiating the iperf3 network test, suggesting the technician may have left the session unattended while the test was running."
+      ]
+    }
+  }
+}

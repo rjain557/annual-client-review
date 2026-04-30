@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260424_ORX_5f50b897_a8ed3875",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_5f50b897_a8ed3875.mp4",
+  "analyzed_at": "2026-04-30T18:47:42Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician began by reviewing disk management, then encountered an unexpected shutdown prompt which was dismissed. Subsequently, the technician attempted to start two different services, \\\"ClsistaService\\\" and \\\"Microsoft .NET Framework NGEN v4.0.30319_X64\\\", both of which failed to start.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Server Manager and navigated to Disk Management.\",\n    \"Canceled the 'Shutdown Event Tracker' dialog.\",\n    \"Opened the Services management console.\",\n    \"Attempted to start the 'ClsistaService', which failed with a 'file not found' error.\",\n    \"Attempted to start the 'Microsoft .NET Framework NGEN v4.0.30319_X64' service, which started and then immediately stopped.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager (Disk Management)\",\n    \"Services (Local)\",\n    \"Run dialog\",\n    \"Shutdown Event Tracker\"\n  ],\n  \"issues_observed\": [\n    \"Unexpected system shutdown (indicated by 'Shutdown Event Tracker').\",\n    \"Failure to start 'ClsistaService' due to 'Error 2: The system cannot find the file specified'.\",\n    \"Failure to keep 'Microsoft .NET Framework NGEN v4.0.30319_X64' service running (started and then stopped).\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"SERVER2003R2\"\n  ],\n  \"notable_events\": [\n    \"The system experienced an unexpected shutdown.\",\n    \"Two critical services failed to start, one due to a missing executable.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved directly to troubleshooting steps (checking services after the unexpected shutdown prompt) but did not resolve any issues within this short clip. The initial check of Disk Management might have been a preliminary diagnostic. The scrolling through services was swift and purposeful.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician began by reviewing disk management, then encountered an unexpected shutdown prompt which was dismissed. Subsequently, the technician attempted to start two different services, \"ClsistaService\" and \"Microsoft .NET Framework NGEN v4.0.30319_X64\", both of which failed to start.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Server Manager and navigated to Disk Management.",
+      "Canceled the 'Shutdown Event Tracker' dialog.",
+      "Opened the Services management console.",
+      "Attempted to start the 'ClsistaService', which failed with a 'file not found' error.",
+      "Attempted to start the 'Microsoft .NET Framework NGEN v4.0.30319_X64' service, which started and then immediately stopped."
+    ],
+    "applications_used": [
+      "Server Manager (Disk Management)",
+      "Services (Local)",
+      "Run dialog",
+      "Shutdown Event Tracker"
+    ],
+    "issues_observed": [
+      "Unexpected system shutdown (indicated by 'Shutdown Event Tracker').",
+      "Failure to start 'ClsistaService' due to 'Error 2: The system cannot find the file specified'.",
+      "Failure to keep 'Microsoft .NET Framework NGEN v4.0.30319_X64' service running (started and then stopped)."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "SERVER2003R2"
+    ],
+    "notable_events": [
+      "The system experienced an unexpected shutdown.",
+      "Two critical services failed to start, one due to a missing executable."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved directly to troubleshooting steps (checking services after the unexpected shutdown prompt) but did not resolve any issues within this short clip. The initial check of Disk Management might have been a preliminary diagnostic. The scrolling through services was swift and purposeful.",
+      "coaching_flags": []
+    }
+  }
+}

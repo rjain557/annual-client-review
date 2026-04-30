@@ -1,0 +1,54 @@
+{
+  "filename_stem": "20260422_Technijian_8a3bb7f1_a23deb76",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260422_Technijian_8a3bb7f1_a23deb76.mp4",
+  "analyzed_at": "2026-04-30T19:22:42Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician reviewed the configuration of virtual Network Interface Cards (vNICs) for \\\"Service Profile Server-5\\\" in Cisco UCS Manager. This included inspecting VLANs, QoS policies, and adapter settings. They also investigated the status and configuration of physical ports on Fabric Interconnect B and observed fault indicators on Fabric Interconnect A.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Navigated to Service Profile Server-5 to inspect vNIC configurations.\",\n    \"Opened and reviewed 'Modify VNIC' dialogs for vNICs, checking general properties, VLANs, MTU, and associated policies.\",\n    \"Opened and reviewed 'Properties for vNIC' dialogs for vNIC 2-BKP-B-1 and vNIC 2-STR-A-1, examining general settings, VLANs, VLAN Groups, Statistics, Faults, and Events.\",\n    \"Drilled down into the 'QoS Policy 40GbpsLimitPolic' to review its properties (Priority, Burst, Rate) and check its Finite State Machine (FSM) status and events.\",\n    \"Navigated the 'Equipment' tab to 'Server 5' to review general status and motherboard inventory.\",\n    \"Navigated the 'Equipment' tab to 'Fabric Interconnect B (primary)' and reviewed its 'Physical Ports', specifically Ethernet Port configurations (roles, states).\",\n    \"Observed configuration options in context menus for physical Ethernet ports on Fabric Interconnect B without making changes.\"\n  ],\n  \"applications_used\": [\n    \"Cisco UCS Manager (web interface)\"\n  ],\n  \"issues_observed\": [\n    \"QoS Policy '40GbpsLimitPolic' showed an 'FSM Status: In Progress' with 'Progress Status 46%' when reviewed.\",\n    \"Fabric Interconnect A was labeled as '(inapplicable)' and displayed multiple fault indicators (critical, major, minor).\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"UCS Manager\",\n    \"Service Profile Server-5\",\n    \"Server 5\",\n    \"Fabric Interconnect B (primary)\",\n    \"Fabric Interconnect A (inapplicable)\",\n    \"vNIC 2-BKP-B-1\",\n    \"vNIC 2-STR-A-1\"\n  ],\n  \"notable_events\": [\n    \"The QoS policy deployment for '40GbpsLimitPolic' appeared to be stuck or ongoing at 46% completion.\",\n    \"Fabric Interconnect A showed significant faults and was marked as 'inapplicable'.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, systematically reviewing various configuration aspects of the service profile and its associated network components. Navigation was purposeful, and time was spent observing relevant details.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician reviewed the configuration of virtual Network Interface Cards (vNICs) for \"Service Profile Server-5\" in Cisco UCS Manager. This included inspecting VLANs, QoS policies, and adapter settings. They also investigated the status and configuration of physical ports on Fabric Interconnect B and observed fault indicators on Fabric Interconnect A.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Navigated to Service Profile Server-5 to inspect vNIC configurations.",
+      "Opened and reviewed 'Modify VNIC' dialogs for vNICs, checking general properties, VLANs, MTU, and associated policies.",
+      "Opened and reviewed 'Properties for vNIC' dialogs for vNIC 2-BKP-B-1 and vNIC 2-STR-A-1, examining general settings, VLANs, VLAN Groups, Statistics, Faults, and Events.",
+      "Drilled down into the 'QoS Policy 40GbpsLimitPolic' to review its properties (Priority, Burst, Rate) and check its Finite State Machine (FSM) status and events.",
+      "Navigated the 'Equipment' tab to 'Server 5' to review general status and motherboard inventory.",
+      "Navigated the 'Equipment' tab to 'Fabric Interconnect B (primary)' and reviewed its 'Physical Ports', specifically Ethernet Port configurations (roles, states).",
+      "Observed configuration options in context menus for physical Ethernet ports on Fabric Interconnect B without making changes."
+    ],
+    "applications_used": [
+      "Cisco UCS Manager (web interface)"
+    ],
+    "issues_observed": [
+      "QoS Policy '40GbpsLimitPolic' showed an 'FSM Status: In Progress' with 'Progress Status 46%' when reviewed.",
+      "Fabric Interconnect A was labeled as '(inapplicable)' and displayed multiple fault indicators (critical, major, minor)."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "UCS Manager",
+      "Service Profile Server-5",
+      "Server 5",
+      "Fabric Interconnect B (primary)",
+      "Fabric Interconnect A (inapplicable)",
+      "vNIC 2-BKP-B-1",
+      "vNIC 2-STR-A-1"
+    ],
+    "notable_events": [
+      "The QoS policy deployment for '40GbpsLimitPolic' appeared to be stuck or ongoing at 46% completion.",
+      "Fabric Interconnect A showed significant faults and was marked as 'inapplicable'."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, systematically reviewing various configuration aspects of the service profile and its associated network components. Navigation was purposeful, and time was spent observing relevant details.",
+      "coaching_flags": []
+    }
+  }
+}

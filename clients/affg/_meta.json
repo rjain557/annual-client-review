@@ -3,6 +3,7 @@
   "DirID": 8141,
   "Location_Name": "American Fundstars Financial Group LLC",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.AFFG",
   "Data_Signals": [
     "cp",
     "huntress",
@@ -21,9 +22,18 @@
   "Time_Entries_This_Month": 6,
   "Total_Active_Users": 2,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5513,
+    "Contract_Name": "2026 - Monthly Support / Compliance",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "Active",
+    "DateSigned": "2026-03-11T15:05:23.5600000",
+    "Signed_DirID": 8143
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

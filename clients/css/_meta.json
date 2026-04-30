@@ -3,6 +3,7 @@
   "DirID": 7093,
   "Location_Name": "Custom Silicon Solutions",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.CSS",
   "Data_Signals": [
     "cp"
   ],
@@ -17,9 +18,18 @@
   "Time_Entries_This_Month": 39,
   "Total_Active_Users": 2,
   "CP_Only": true,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5349,
+    "Contract_Name": "Contract for Estimate",
+    "ContractType": "Hourly Rate",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": null,
+    "Signed_DirID": null
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

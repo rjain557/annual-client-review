@@ -1,0 +1,69 @@
+{
+  "filename_stem": "20260424_CBI_0a5dc171_888bb799",
+  "client_code": "CBI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\CBI-2026-04\\20260424_CBI_0a5dc171_888bb799.mp4",
+  "analyzed_at": "2026-04-30T18:01:55Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician worked on a client computer, first troubleshooting an offline Konica Minolta printer by checking its network status and web interface, then performing test prints. Subsequently, they accessed the Studio Chateau website, navigated through project details, viewed floor estimates, and successfully printed a floor plan diagram using the same Konica Minolta printer.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Used Advanced IP Scanner to list network devices.\",\n    \"Pinging Konica Minolta printer (192.168.4.22) from Command Prompt.\",\n    \"Accessed the Konica Minolta printer's web interface in Google Chrome.\",\n    \"Checked printer status and initiated test print pages from Windows Settings.\",\n    \"Logged into the Studio Chateau web application.\",\n    \"Navigated to a specific lot (Lot 45, Plan 4 4L54) within Studio Chateau.\",\n    \"Accessed and viewed 'Floor Estimates' and associated diagrams for the selected lot.\",\n    \"Downloaded a PDF file named 'Quartz Trail 48 Final Flooring.pdf'.\",\n    \"Printed the 'Flooring Diagram' PDF to the Konica Minolta printer.\"\n  ],\n  \"applications_used\": [\n    \"Advanced IP Scanner\",\n    \"Command Prompt\",\n    \"Google Chrome\",\n    \"Windows Settings\",\n    \"PDF Viewer (default)\"\n  ],\n  \"issues_observed\": [\n    \"DNS lookup for printer IP (192.168.4.22) failed.\",\n    \"Konica Minolta printer reported as 'Offline' in Windows Settings initially, though it was pingable and its web interface was accessible.\",\n    \"Intermittent 'This site can't be reached' error when attempting to access the printer's web interface.\",\n    \"Brief 'Selected Lot has no estimates' error on Studio Chateau website.\",\n    \"Long loading times and spinner displays when accessing floor plan diagrams on Studio Chateau.\",\n    \"Error message 'No Floor Plan / Diagram exists to create placement orders' when navigating to Diagrams tab in Studio Chateau for specific selections.\"\n  ],\n  \"issues_resolved\": [\n    \"The Konica Minolta printer was successfully utilized to print a document, addressing the immediate printing need, despite unresolved inconsistencies in its reported status within Windows Settings.\"\n  ],\n  \"machines_touched\": [\n    \"CBILT11\",\n    \"192.168.4.22 (Konica Minolta printer)\"\n  ],\n  \"notable_events\": [\n    \"Discrepancy between printer status reported in Windows (Offline) and its actual network availability (pingable, web interface accessible).\",\n    \"The printer's web interface sometimes failed to load after an initial successful connection, suggesting intermittent network or device-side issues.\",\n    \"Repetitive selection of the same lot/plan multiple times in Studio Chateau website navigation.\"\n  ],\n  \"concerns\": [\n    \"The underlying cause of the printer reporting 'Offline' in Windows was not fully diagnosed or resolved, potentially leading to future issues.\",\n    \"The intermittent web connectivity to the printer was not fully investigated, which could indicate network instability or device issues that were bypassed rather than fixed.\",\n    \"The technician did not explicitly confirm with the client that the physical print job was successfully received by the printer.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician systematically approached the printer issue by using multiple diagnostic tools. However, there was some repetition in checking printer functionality and navigating the Studio Chateau website. Several instances of waiting for web pages to load impacted overall session flow.\",\n    \"coaching_flags\": [\n      \"Improve efficiency in web application navigation to minimize redundant selections and clicks.\",\n      \"For printer issues, if time permits, pursue a deeper diagnosis to resolve conflicting status reports in Windows for a more robust fix, rather than just achieving a successful print.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician worked on a client computer, first troubleshooting an offline Konica Minolta printer by checking its network status and web interface, then performing test prints. Subsequently, they accessed the Studio Chateau website, navigated through project details, viewed floor estimates, and successfully printed a floor plan diagram using the same Konica Minolta printer.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Used Advanced IP Scanner to list network devices.",
+      "Pinging Konica Minolta printer (192.168.4.22) from Command Prompt.",
+      "Accessed the Konica Minolta printer's web interface in Google Chrome.",
+      "Checked printer status and initiated test print pages from Windows Settings.",
+      "Logged into the Studio Chateau web application.",
+      "Navigated to a specific lot (Lot 45, Plan 4 4L54) within Studio Chateau.",
+      "Accessed and viewed 'Floor Estimates' and associated diagrams for the selected lot.",
+      "Downloaded a PDF file named 'Quartz Trail 48 Final Flooring.pdf'.",
+      "Printed the 'Flooring Diagram' PDF to the Konica Minolta printer."
+    ],
+    "applications_used": [
+      "Advanced IP Scanner",
+      "Command Prompt",
+      "Google Chrome",
+      "Windows Settings",
+      "PDF Viewer (default)"
+    ],
+    "issues_observed": [
+      "DNS lookup for printer IP (192.168.4.22) failed.",
+      "Konica Minolta printer reported as 'Offline' in Windows Settings initially, though it was pingable and its web interface was accessible.",
+      "Intermittent 'This site can't be reached' error when attempting to access the printer's web interface.",
+      "Brief 'Selected Lot has no estimates' error on Studio Chateau website.",
+      "Long loading times and spinner displays when accessing floor plan diagrams on Studio Chateau.",
+      "Error message 'No Floor Plan / Diagram exists to create placement orders' when navigating to Diagrams tab in Studio Chateau for specific selections."
+    ],
+    "issues_resolved": [
+      "The Konica Minolta printer was successfully utilized to print a document, addressing the immediate printing need, despite unresolved inconsistencies in its reported status within Windows Settings."
+    ],
+    "machines_touched": [
+      "CBILT11",
+      "192.168.4.22 (Konica Minolta printer)"
+    ],
+    "notable_events": [
+      "Discrepancy between printer status reported in Windows (Offline) and its actual network availability (pingable, web interface accessible).",
+      "The printer's web interface sometimes failed to load after an initial successful connection, suggesting intermittent network or device-side issues.",
+      "Repetitive selection of the same lot/plan multiple times in Studio Chateau website navigation."
+    ],
+    "concerns": [
+      "The underlying cause of the printer reporting 'Offline' in Windows was not fully diagnosed or resolved, potentially leading to future issues.",
+      "The intermittent web connectivity to the printer was not fully investigated, which could indicate network instability or device issues that were bypassed rather than fixed.",
+      "The technician did not explicitly confirm with the client that the physical print job was successfully received by the printer."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician systematically approached the printer issue by using multiple diagnostic tools. However, there was some repetition in checking printer functionality and navigating the Studio Chateau website. Several instances of waiting for web pages to load impacted overall session flow.",
+      "coaching_flags": [
+        "Improve efficiency in web application navigation to minimize redundant selections and clicks.",
+        "For printer issues, if time permits, pursue a deeper diagnosis to resolve conflicting status reports in Windows for a more robust fix, rather than just achieving a successful print."
+      ]
+    }
+  }
+}

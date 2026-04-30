@@ -1,0 +1,130 @@
+[
+  {
+    "id": "54b05870-4dea-445e-bf89-da1125180e83",
+    "displayName": "Whitelisted IP's for O365 in VAF-HQ",
+    "createdDateTime": "2026-04-11T09:34:50.7202305Z",
+    "modifiedDateTime": "2026-04-13T16:10:38.1072073Z",
+    "state": "enabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "all"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "Office365"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "53d3833d-4add-4712-a241-f19e2513db3b",
+          "b9a5ac76-acbd-4e8c-8445-20633fa2cd25",
+          "4ed327dc-8769-4e54-919b-49ddb190e5de",
+          "73824949-b972-42e1-b891-bfc7bbf67d19",
+          "41d24a3a-3f94-4457-8f70-b16a53d43bc8",
+          "e334716d-255a-49e1-b378-24bbcbb18daf",
+          "9e927118-331f-48a3-b6bd-bf5b7804e591",
+          "bb8d6c50-ffc8-42b1-a846-abb4bc8086f4",
+          "ca6c4ae2-9ef9-42ed-b6d4-d867bc61ceb5",
+          "30f387e7-26fa-4ce5-b106-a995000727e9",
+          "8bec5814-bb72-4065-a0df-8c012235fd34"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      },
+      "locations": {
+        "includeLocations": [
+          "All"
+        ],
+        "excludeLocations": [
+          "054856d3-550e-435e-a529-0aa500cdb6c7"
+        ]
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "mfa"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('54b05870-4dea-445e-bf89-da1125180e83')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  },
+  {
+    "id": "d74ce38a-c69e-4f2c-8a08-140c4b189a54",
+    "displayName": "Block Legacy Authentication",
+    "createdDateTime": "2026-04-14T09:45:51.1434187Z",
+    "modifiedDateTime": "2026-04-16T06:21:03.1514783Z",
+    "state": "enabled",
+    "sessionControls": null,
+    "conditions": {
+      "userRiskLevels": [],
+      "signInRiskLevels": [],
+      "clientAppTypes": [
+        "exchangeActiveSync",
+        "other"
+      ],
+      "servicePrincipalRiskLevels": [],
+      "insiderRiskLevels": null,
+      "platforms": null,
+      "locations": null,
+      "devices": null,
+      "clientApplications": null,
+      "authenticationFlows": null,
+      "applications": {
+        "includeApplications": [
+          "All"
+        ],
+        "excludeApplications": [],
+        "includeUserActions": [],
+        "includeAuthenticationContextClassReferences": [],
+        "applicationFilter": null
+      },
+      "users": {
+        "includeUsers": [
+          "All"
+        ],
+        "excludeUsers": [
+          "fb91d024-da5e-49e3-add5-5c9aabdd3638"
+        ],
+        "includeGroups": [],
+        "excludeGroups": [],
+        "includeRoles": [],
+        "excludeRoles": [],
+        "includeGuestsOrExternalUsers": null,
+        "excludeGuestsOrExternalUsers": null
+      }
+    },
+    "grantControls": {
+      "operator": "OR",
+      "builtInControls": [
+        "block"
+      ],
+      "customAuthenticationFactors": [],
+      "termsOfUse": [],
+      "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('d74ce38a-c69e-4f2c-8a08-140c4b189a54')/grantControls/authenticationStrength/$entity",
+      "authenticationStrength": null
+    }
+  }
+]

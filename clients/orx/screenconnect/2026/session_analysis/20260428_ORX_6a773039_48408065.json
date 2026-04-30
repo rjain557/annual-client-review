@@ -1,0 +1,68 @@
+{
+  "filename_stem": "20260428_ORX_6a773039_48408065",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260428_ORX_6a773039_48408065.mp4",
+  "analyzed_at": "2026-04-30T19:02:40Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive system maintenance session on a Windows 10 Pro machine. This included optimizing startup items, running system cleanup tools, checking for Windows updates, reviewing system logs, and disabling the Connected User Experiences and Telemetry service to improve performance and privacy.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Restarted the computer\",\n    \"Created a desktop shortcut for Outlook 2016\",\n    \"Emptied the Recycle Bin (multiple times)\",\n    \"Initiated `sfc /scannow` but canceled it prematurely\",\n    \"Reviewed Task Manager for processes, performance, startup items, and services\",\n    \"Disabled 'Adobe Reader Speed Launcher' and 'Java(TM) Update Scheduler' from startup\",\n    \"Reviewed installed programs in Control Panel\",\n    \"Reviewed various Windows Settings, including system information (Device name: DESKTOP-8QJ23F2)\",\n    \"Reviewed System Configuration for startup options and services\",\n    \"Reviewed Windows Event Viewer for System and Application errors/warnings\",\n    \"Performed Disk Cleanup, including system files\",\n    \"Checked for Windows Updates (system reported as up to date)\",\n    \"Disabled the 'Connected User Experiences and Telemetry' service\",\n    \"Deleted temporary files from `%TEMP%` and `C:\\\\Windows\\\\Prefetch` folders\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Command Prompt\",\n    \"Task Manager\",\n    \"Control Panel\",\n    \"Settings\",\n    \"System Configuration (msconfig)\",\n    \"Event Viewer (eventvwr.msc)\",\n    \"Disk Cleanup (cleanmgr)\",\n    \"Services (services.msc)\"\n  ],\n  \"issues_observed\": [\n    \"Missing Outlook 2016 desktop shortcut\"\n  ],\n  \"issues_resolved\": [\n    \"Outlook 2016 desktop shortcut created\"\n  ],\n  \"machines_touched\": [\n    \"DESKTOP-8QJ23F2\"\n  ],\n  \"notable_events\": [\n    \"The session began with a Windows shutdown screen indicating the 'Connected User Experiences and Telemetry' service was shutting down, which the technician later disabled during the session.\",\n    \"`sfc /scannow` was started but stopped at 3% completion without allowing it to finish.\"\n  ],\n  \"concerns\": [\n    \"The technician prematurely canceled the `sfc /scannow` command, rendering the system file check incomplete and ineffective. This indicates a potential lack of understanding of the command's function or insufficient patience for its completion.\"\n  ],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"total_idle_estimate_seconds\": 0,\n    \"longest_idle_seconds\": 0,\n    \"idle_gap_count\": 0,\n    \"efficiency_notes\": \"The technician worked methodically and efficiently, moving through various system optimization and diagnostic tools at a brisk pace with a clear sense of purpose. Actions were performed with minimal hesitation.\",\n    \"coaching_flags\": [\n      \"Review the importance of allowing `sfc /scannow` to complete if it is initiated, as canceling it renders the diagnostic useless.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive system maintenance session on a Windows 10 Pro machine. This included optimizing startup items, running system cleanup tools, checking for Windows updates, reviewing system logs, and disabling the Connected User Experiences and Telemetry service to improve performance and privacy.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Restarted the computer",
+      "Created a desktop shortcut for Outlook 2016",
+      "Emptied the Recycle Bin (multiple times)",
+      "Initiated `sfc /scannow` but canceled it prematurely",
+      "Reviewed Task Manager for processes, performance, startup items, and services",
+      "Disabled 'Adobe Reader Speed Launcher' and 'Java(TM) Update Scheduler' from startup",
+      "Reviewed installed programs in Control Panel",
+      "Reviewed various Windows Settings, including system information (Device name: DESKTOP-8QJ23F2)",
+      "Reviewed System Configuration for startup options and services",
+      "Reviewed Windows Event Viewer for System and Application errors/warnings",
+      "Performed Disk Cleanup, including system files",
+      "Checked for Windows Updates (system reported as up to date)",
+      "Disabled the 'Connected User Experiences and Telemetry' service",
+      "Deleted temporary files from `%TEMP%` and `C:\\Windows\\Prefetch` folders"
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Command Prompt",
+      "Task Manager",
+      "Control Panel",
+      "Settings",
+      "System Configuration (msconfig)",
+      "Event Viewer (eventvwr.msc)",
+      "Disk Cleanup (cleanmgr)",
+      "Services (services.msc)"
+    ],
+    "issues_observed": [
+      "Missing Outlook 2016 desktop shortcut"
+    ],
+    "issues_resolved": [
+      "Outlook 2016 desktop shortcut created"
+    ],
+    "machines_touched": [
+      "DESKTOP-8QJ23F2"
+    ],
+    "notable_events": [
+      "The session began with a Windows shutdown screen indicating the 'Connected User Experiences and Telemetry' service was shutting down, which the technician later disabled during the session.",
+      "`sfc /scannow` was started but stopped at 3% completion without allowing it to finish."
+    ],
+    "concerns": [
+      "The technician prematurely canceled the `sfc /scannow` command, rendering the system file check incomplete and ineffective. This indicates a potential lack of understanding of the command's function or insufficient patience for its completion."
+    ],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "total_idle_estimate_seconds": 0,
+      "longest_idle_seconds": 0,
+      "idle_gap_count": 0,
+      "efficiency_notes": "The technician worked methodically and efficiently, moving through various system optimization and diagnostic tools at a brisk pace with a clear sense of purpose. Actions were performed with minimal hesitation.",
+      "coaching_flags": [
+        "Review the importance of allowing `sfc /scannow` to complete if it is initiated, as canceling it renders the diagnostic useless."
+      ]
+    }
+  }
+}

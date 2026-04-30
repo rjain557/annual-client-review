@@ -1,0 +1,54 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_2ee09a74",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_2ee09a74.mp4",
+  "analyzed_at": "2026-04-30T18:42:58Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive removal of Microsoft OneDrive from the client computer. This involved uninstalling the application, disabling its associated services, deleting program and user data files, and cleaning up relevant registry entries and startup items. The process was thorough and systematically executed to ensure complete uninstallation.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Uninstalled Microsoft OneDrive via Control Panel.\",\n    \"Disabled the 'OneDrive Update Service' in Windows Services.\",\n    \"Manually deleted OneDrive folders from user profile's AppData (Local and Roaming).\",\n    \"Deleted OneDrive-related registry keys from HKEY_CURRENT_USER and HKEY_CLASSES_ROOT.\",\n    \"Removed the OneDrive startup entry from HKEY_CURRENT_USER\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run.\",\n    \"Terminated any running 'OneDrive.exe' processes using Command Prompt.\",\n    \"Attempted to delete OneDrive user profile and local app data folders via Command Prompt (redundant with manual deletion but thorough).\",\n    \"Verified OneDrive's disabled startup status in Task Manager.\",\n    \"Reviewed System Configuration for any other remaining OneDrive traces.\"\n  ],\n  \"applications_used\": [\n    \"Control Panel\",\n    \"Services\",\n    \"File Explorer\",\n    \"Registry Editor (regedit)\",\n    \"Command Prompt (cmd)\",\n    \"System Configuration (msconfig)\",\n    \"Task Manager\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [\n    \"Microsoft OneDrive was completely removed from the system.\"\n  ],\n  \"machines_touched\": [\n    \"Client PC (user profile 'Technijian')\"\n  ],\n  \"notable_events\": [\n    \"The technician performed an exceptionally thorough removal of OneDrive, going beyond standard uninstallation to include services, registry entries, and application data folders.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, following a clear and comprehensive plan for a thorough software removal. Each step flowed logically into the next without hesitation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive removal of Microsoft OneDrive from the client computer. This involved uninstalling the application, disabling its associated services, deleting program and user data files, and cleaning up relevant registry entries and startup items. The process was thorough and systematically executed to ensure complete uninstallation.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Uninstalled Microsoft OneDrive via Control Panel.",
+      "Disabled the 'OneDrive Update Service' in Windows Services.",
+      "Manually deleted OneDrive folders from user profile's AppData (Local and Roaming).",
+      "Deleted OneDrive-related registry keys from HKEY_CURRENT_USER and HKEY_CLASSES_ROOT.",
+      "Removed the OneDrive startup entry from HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run.",
+      "Terminated any running 'OneDrive.exe' processes using Command Prompt.",
+      "Attempted to delete OneDrive user profile and local app data folders via Command Prompt (redundant with manual deletion but thorough).",
+      "Verified OneDrive's disabled startup status in Task Manager.",
+      "Reviewed System Configuration for any other remaining OneDrive traces."
+    ],
+    "applications_used": [
+      "Control Panel",
+      "Services",
+      "File Explorer",
+      "Registry Editor (regedit)",
+      "Command Prompt (cmd)",
+      "System Configuration (msconfig)",
+      "Task Manager"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [
+      "Microsoft OneDrive was completely removed from the system."
+    ],
+    "machines_touched": [
+      "Client PC (user profile 'Technijian')"
+    ],
+    "notable_events": [
+      "The technician performed an exceptionally thorough removal of OneDrive, going beyond standard uninstallation to include services, registry entries, and application data folders."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, following a clear and comprehensive plan for a thorough software removal. Each step flowed logically into the next without hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

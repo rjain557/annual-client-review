@@ -1,0 +1,55 @@
+{
+  "filename_stem": "20260423_ANI_4f5b0489_e0e92277",
+  "client_code": "ANI",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ANI-2026-04\\20260423_ANI_4f5b0489_e0e92277.mp4",
+  "analyzed_at": "2026-04-30T17:40:32Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to the client's computer using GoToAssist, navigated to a specific directory on a local drive, deleted an old script file, and presumably transferred a new script file. After some hesitation, the technician launched an application named 'Agent Launch' and then ended the remote session.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Established a remote support connection via GoToAssist.\",\n    \"Navigated the file system to the 'Optimization\\\\opti\\\\O005\\\\utils' directory on the 'Data (F:)' drive.\",\n    \"Deleted the file 'new_script_old.sh'.\",\n    \"Closed File Explorer.\",\n    \"Launched the 'Agent Launch' application (part of the Optimization software).\",\n    \"Clicked 'OK' on the 'Agent Launch' application window.\",\n    \"Terminated the remote support session.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"GoToAssist\",\n    \"File Explorer\",\n    \"Optimization (Agent Launch)\"\n  ],\n  \"issues_observed\": [\n    \"The technician repeatedly right-clicked on 'new_script.sh' without taking action after deleting the old script, suggesting momentary uncertainty.\"\n  ],\n  \"issues_resolved\": [\n    \"An old script file ('new_script_old.sh') was replaced with a new one ('new_script.sh'), which likely resolved an issue or provided an update related to the 'Optimization' software.\"\n  ],\n  \"machines_touched\": [\n    \"Client Desktop (remote machine)\",\n    \"V:\\\\MAMMOFT1 (local drive or network share)\"\n  ],\n  \"notable_events\": [\n    \"The use of a complex URL (`link.edgepilot.com/v/id8d40031/f/uAjQpAyBEITw=/?u=https://flashsupport.gotoassist.com/678201007`) to initiate the remote session.\",\n    \"The technician appeared uncertain for a period after deleting the old script, repeatedly right-clicking the new script without action.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician efficiently initiated the remote session and navigated to the target directory. However, there was a noticeable period of hesitation/uncertainty (approx. 18 seconds) after deleting the old script, where the technician repeatedly right-clicked the new script without selecting an action, and a subsequent period of low activity before launching the application.\",\n    \"coaching_flags\": [\n      \"Review the period of indecision (1:26 - 1:44) and the subsequent low activity (1:44 - 2:06) to ensure clarity on next steps during file replacement tasks.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to the client's computer using GoToAssist, navigated to a specific directory on a local drive, deleted an old script file, and presumably transferred a new script file. After some hesitation, the technician launched an application named 'Agent Launch' and then ended the remote session.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Established a remote support connection via GoToAssist.",
+      "Navigated the file system to the 'Optimization\\opti\\O005\\utils' directory on the 'Data (F:)' drive.",
+      "Deleted the file 'new_script_old.sh'.",
+      "Closed File Explorer.",
+      "Launched the 'Agent Launch' application (part of the Optimization software).",
+      "Clicked 'OK' on the 'Agent Launch' application window.",
+      "Terminated the remote support session."
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "GoToAssist",
+      "File Explorer",
+      "Optimization (Agent Launch)"
+    ],
+    "issues_observed": [
+      "The technician repeatedly right-clicked on 'new_script.sh' without taking action after deleting the old script, suggesting momentary uncertainty."
+    ],
+    "issues_resolved": [
+      "An old script file ('new_script_old.sh') was replaced with a new one ('new_script.sh'), which likely resolved an issue or provided an update related to the 'Optimization' software."
+    ],
+    "machines_touched": [
+      "Client Desktop (remote machine)",
+      "V:\\MAMMOFT1 (local drive or network share)"
+    ],
+    "notable_events": [
+      "The use of a complex URL (`link.edgepilot.com/v/id8d40031/f/uAjQpAyBEITw=/?u=https://flashsupport.gotoassist.com/678201007`) to initiate the remote session.",
+      "The technician appeared uncertain for a period after deleting the old script, repeatedly right-clicking the new script without action."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician efficiently initiated the remote session and navigated to the target directory. However, there was a noticeable period of hesitation/uncertainty (approx. 18 seconds) after deleting the old script, where the technician repeatedly right-clicked the new script without selecting an action, and a subsequent period of low activity before launching the application.",
+      "coaching_flags": [
+        "Review the period of indecision (1:26 - 1:44) and the subsequent low activity (1:44 - 2:06) to ensure clarity on next steps during file replacement tasks."
+      ]
+    }
+  }
+}

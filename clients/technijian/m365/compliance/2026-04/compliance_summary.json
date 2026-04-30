@@ -1,0 +1,49 @@
+{
+  "client_code": "TECHNIJIAN",
+  "tenant_id": "cab8077a-3f42-4277-b7bd-5c9023e826d8",
+  "month": "2026-04",
+  "errors": [],
+  "posture": {
+    "overall": "fail",
+    "fail_count": 4,
+    "warn_count": 1,
+    "checks": [
+      {
+        "check": "MFA Registration",
+        "status": "fail",
+        "value": "9.1% (149/1644 users)",
+        "detail": "Target: 100% of users registered for MFA"
+      },
+      {
+        "check": "Conditional Access Policies",
+        "status": "pass",
+        "value": "3 enabled policies",
+        "detail": "Minimum: block legacy auth + require MFA for admins"
+      },
+      {
+        "check": "Legacy Authentication Blocked",
+        "status": "fail",
+        "value": "Not blocked",
+        "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+      },
+      {
+        "check": "Global Administrator Count",
+        "status": "fail",
+        "value": "8 Global Admins",
+        "detail": "Best practice: 2-3 Global Admins maximum"
+      },
+      {
+        "check": "Microsoft Secure Score",
+        "status": "warn",
+        "value": "475.48/1116.0 (42.6%)",
+        "detail": "Target: >60% of available score"
+      },
+      {
+        "check": "Guest User Count",
+        "status": "fail",
+        "value": "1388 guest accounts",
+        "detail": "Review external guest access regularly"
+      }
+    ]
+  }
+}

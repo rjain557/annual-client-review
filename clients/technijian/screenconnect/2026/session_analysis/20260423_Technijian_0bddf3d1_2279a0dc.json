@@ -1,0 +1,63 @@
+{
+  "filename_stem": "20260423_Technijian_0bddf3d1_2279a0dc",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260423_Technijian_0bddf3d1_2279a0dc.mp4",
+  "analyzed_at": "2026-04-30T19:25:25Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a network stack performance test on a Windows machine using iperf3, then connected via SSH to a Linux server to inspect Docker Nextcloud AIO volumes, check disk space, and verify network connectivity with a ping test. The technician also briefly checked the display resolution settings on the Windows machine.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Initiated and reviewed iperf3 server results for a network stack performance test on the Windows machine (client and server on 10.100.7.173).\",\n    \"Navigated browser to files.budman.pw, potentially to verify or download iperf3 binaries.\",\n    \"Connected to a Linux server via SSH using PuTTY.\",\n    \"Inspected Docker Nextcloud AIO volumes on the Linux server, noting an error for a specific volume name.\",\n    \"Checked disk space utilization on the Linux server using `df -h`.\",\n    \"Performed a successful ping test from the Linux server to IP address 10.7.3.250.\",\n    \"Accessed Windows Display settings to observe the current screen resolution (1920x868).\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt (iperf3)\",\n    \"Google Chrome\",\n    \"File Explorer\",\n    \"PuTTY\",\n    \"Windows Settings\"\n  ],\n  \"issues_observed\": [\n    \"iperf3 bandwidth varied significantly (1.15 to 3.07 Gbits/sec) during the network stack performance test.\",\n    \"Error 'No such volume' when inspecting a Docker volume with a specific name (`nextcloud_aio_*`).\",\n    \"Unusual or incomplete `df -h` output on the Linux server showing very small mount points for `/dev/root`, `/dev/sda15`, and `/dev/sdb1`.\",\n    \"Windows display resolution was set to 1920x868 instead of the recommended 1920x1080.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Windows client machine (IP 10.100.7.173 observed in iperf3 logs)\",\n    \"Linux server (SSH login to 10.100.1.205, pinged 10.7.3.250)\"\n  ],\n  \"notable_events\": [\n    \"The iperf3 test was conducted as a loopback test on the same machine (client and server on 10.100.7.173), measuring the local network stack performance.\",\n    \"An error was encountered during Docker volume inspection, indicating a potential misconfiguration or typo in the volume name.\",\n    \"The `df -h` command showed a potentially unusual disk partitioning setup on the Linux server.\",\n    \"The technician observed the non-native display resolution on the Windows machine but did not change it within the recording.\"\n  ],\n  \"concerns\": [\n    \"The 'No such volume' error in Docker was not explicitly resolved or investigated further within the recording, potentially leaving a configuration issue unresolved.\",\n    \"The non-native display resolution was observed but not corrected, which might impact user experience or display quality.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician moved methodically between different systems and diagnostic tools (iperf3, Docker, df -h, ping, display settings). The workflow was logical, addressing various potential areas of concern. However, some observed issues (Docker error, display resolution) were not fully resolved within the captured segment.\",\n    \"coaching_flags\": [\n      \"Follow up on observed Docker 'No such volume' errors to ensure complete resolution of configuration issues.\",\n      \"Address identified non-native display resolution settings to improve user experience, if applicable to the issue being troubleshooted.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a network stack performance test on a Windows machine using iperf3, then connected via SSH to a Linux server to inspect Docker Nextcloud AIO volumes, check disk space, and verify network connectivity with a ping test. The technician also briefly checked the display resolution settings on the Windows machine.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Initiated and reviewed iperf3 server results for a network stack performance test on the Windows machine (client and server on 10.100.7.173).",
+      "Navigated browser to files.budman.pw, potentially to verify or download iperf3 binaries.",
+      "Connected to a Linux server via SSH using PuTTY.",
+      "Inspected Docker Nextcloud AIO volumes on the Linux server, noting an error for a specific volume name.",
+      "Checked disk space utilization on the Linux server using `df -h`.",
+      "Performed a successful ping test from the Linux server to IP address 10.7.3.250.",
+      "Accessed Windows Display settings to observe the current screen resolution (1920x868)."
+    ],
+    "applications_used": [
+      "Command Prompt (iperf3)",
+      "Google Chrome",
+      "File Explorer",
+      "PuTTY",
+      "Windows Settings"
+    ],
+    "issues_observed": [
+      "iperf3 bandwidth varied significantly (1.15 to 3.07 Gbits/sec) during the network stack performance test.",
+      "Error 'No such volume' when inspecting a Docker volume with a specific name (`nextcloud_aio_*`).",
+      "Unusual or incomplete `df -h` output on the Linux server showing very small mount points for `/dev/root`, `/dev/sda15`, and `/dev/sdb1`.",
+      "Windows display resolution was set to 1920x868 instead of the recommended 1920x1080."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Windows client machine (IP 10.100.7.173 observed in iperf3 logs)",
+      "Linux server (SSH login to 10.100.1.205, pinged 10.7.3.250)"
+    ],
+    "notable_events": [
+      "The iperf3 test was conducted as a loopback test on the same machine (client and server on 10.100.7.173), measuring the local network stack performance.",
+      "An error was encountered during Docker volume inspection, indicating a potential misconfiguration or typo in the volume name.",
+      "The `df -h` command showed a potentially unusual disk partitioning setup on the Linux server.",
+      "The technician observed the non-native display resolution on the Windows machine but did not change it within the recording."
+    ],
+    "concerns": [
+      "The 'No such volume' error in Docker was not explicitly resolved or investigated further within the recording, potentially leaving a configuration issue unresolved.",
+      "The non-native display resolution was observed but not corrected, which might impact user experience or display quality."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician moved methodically between different systems and diagnostic tools (iperf3, Docker, df -h, ping, display settings). The workflow was logical, addressing various potential areas of concern. However, some observed issues (Docker error, display resolution) were not fully resolved within the captured segment.",
+      "coaching_flags": [
+        "Follow up on observed Docker 'No such volume' errors to ensure complete resolution of configuration issues.",
+        "Address identified non-native display resolution settings to improve user experience, if applicable to the issue being troubleshooted."
+      ]
+    }
+  }
+}

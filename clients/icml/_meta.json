@@ -3,6 +3,7 @@
   "DirID": 70,
   "Location_Name": "ICM Lending",
   "Active": true,
+  "LocationTopFilter": "Tech.Clients.ICML",
   "Data_Signals": [],
   "Has_Legal_File": true,
   "Has_Designated_Recipient": true,
@@ -17,9 +18,18 @@
   "Time_Entries_This_Month": 0,
   "Total_Active_Users": 4,
   "CP_Only": false,
-  "updated_at": "2026-04-29T21:52:45+00:00",
+  "ActiveContract": {
+    "ContractID": 5095,
+    "Contract_Name": "Monthly Services Contract (copy)",
+    "ContractType": "Monthly Service",
+    "ContractStatusTxt": "ACTIVE",
+    "DateSigned": "2024-02-09T11:30:08.1370000",
+    "Signed_DirID": 259
+  },
+  "updated_at": "2026-04-30T19:04:00+00:00",
   "_source": {
     "cp": "/api/clients/active",
+    "contracts": "GetAllContracts",
     "recipients_csv": "technijian/contacts/active_client_recipients.csv"
   }
 }

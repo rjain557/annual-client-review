@@ -1,0 +1,56 @@
+{
+  "filename_stem": "20260424_ORX_1fddfada_92467ec5",
+  "client_code": "ORX",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\ORX-2026-04\\20260424_ORX_1fddfada_92467ec5.mp4",
+  "analyzed_at": "2026-04-30T18:44:11Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a remote Windows Server via RDP to configure network adapters. They reviewed existing IP configurations for multiple Ethernet adapters, enabled two previously disconnected adapters, and then successfully created a new NIC team named 'LAN Team' using LACP and dynamic load balancing.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Connected to remote server 'RDS' via Remote Desktop Protocol (RDP)\",\n    \"Opened Server Manager and navigated to Network Connections\",\n    \"Reviewed IPv4 properties for 'Ethernet', 'Ethernet 2', and 'iSCSI' adapters\",\n    \"Opened the NIC Teaming interface\",\n    \"Enabled the 'Ethernet' and 'Ethernet 2' adapters\",\n    \"Created a new NIC Team named 'LAN Team' using 'Ethernet' and 'Ethernet 2' adapters\",\n    \"Configured the 'LAN Team' with LACP teaming mode and Dynamic load balancing mode\",\n    \"Closed Server Manager and disconnected the RDP session\",\n    \"Disconnected the ScreenConnect session\"\n  ],\n  \"applications_used\": [\n    \"ScreenConnect Client\",\n    \"Remote Desktop Connection (mstsc.exe)\",\n    \"Server Manager\",\n    \"Network Connections (ncpa.cpl)\",\n    \"NIC Teaming GUI\"\n  ],\n  \"issues_observed\": [\n    \"One network adapter ('Ethernet') was in a 'Disconnected' state\",\n    \"No NIC Team was configured on the server prior to the session\"\n  ],\n  \"issues_resolved\": [\n    \"Both 'Ethernet' and 'Ethernet 2' adapters were brought into a 'Connected' state\",\n    \"A NIC team ('LAN Team') was successfully created and configured on the server\"\n  ],\n  \"machines_touched\": [\n    \"RDS\"\n  ],\n  \"notable_events\": [\n    \"When enabling 'Ethernet 2' (00:41-00:42), its status briefly changed from 'Connected' to 'Disconnected' and then immediately back to 'Connected', suggesting a transient network or driver re-initialization during the process.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically, reviewing existing configurations thoroughly before proceeding with the NIC team creation. Navigation was direct and purposeful, indicating a clear understanding of the task.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a remote Windows Server via RDP to configure network adapters. They reviewed existing IP configurations for multiple Ethernet adapters, enabled two previously disconnected adapters, and then successfully created a new NIC team named 'LAN Team' using LACP and dynamic load balancing.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Connected to remote server 'RDS' via Remote Desktop Protocol (RDP)",
+      "Opened Server Manager and navigated to Network Connections",
+      "Reviewed IPv4 properties for 'Ethernet', 'Ethernet 2', and 'iSCSI' adapters",
+      "Opened the NIC Teaming interface",
+      "Enabled the 'Ethernet' and 'Ethernet 2' adapters",
+      "Created a new NIC Team named 'LAN Team' using 'Ethernet' and 'Ethernet 2' adapters",
+      "Configured the 'LAN Team' with LACP teaming mode and Dynamic load balancing mode",
+      "Closed Server Manager and disconnected the RDP session",
+      "Disconnected the ScreenConnect session"
+    ],
+    "applications_used": [
+      "ScreenConnect Client",
+      "Remote Desktop Connection (mstsc.exe)",
+      "Server Manager",
+      "Network Connections (ncpa.cpl)",
+      "NIC Teaming GUI"
+    ],
+    "issues_observed": [
+      "One network adapter ('Ethernet') was in a 'Disconnected' state",
+      "No NIC Team was configured on the server prior to the session"
+    ],
+    "issues_resolved": [
+      "Both 'Ethernet' and 'Ethernet 2' adapters were brought into a 'Connected' state",
+      "A NIC team ('LAN Team') was successfully created and configured on the server"
+    ],
+    "machines_touched": [
+      "RDS"
+    ],
+    "notable_events": [
+      "When enabling 'Ethernet 2' (00:41-00:42), its status briefly changed from 'Connected' to 'Disconnected' and then immediately back to 'Connected', suggesting a transient network or driver re-initialization during the process."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically, reviewing existing configurations thoroughly before proceeding with the NIC team creation. Navigation was direct and purposeful, indicating a clear understanding of the task.",
+      "coaching_flags": []
+    }
+  }
+}

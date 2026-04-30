@@ -1,0 +1,950 @@
+{
+  "run_at": "2026-04-30T18:52:51Z",
+  "month": "2026-04",
+  "workers": 6,
+  "tenants_ok": 18,
+  "tenants_error": 0,
+  "summaries": [
+    {
+      "client_code": "CBL",
+      "tenant_id": "7f514a44-48f6-4400-a30e-c68d563bee28",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant 7f514a44-48f6-4400-a30e-c68d563bee28: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 7f514a44-48f6-4400-a30e-c68d563bee2'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "CBI",
+      "tenant_id": "d8a53075-5e10-4bf9-84ac-7f4595d67295",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 1,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "warn",
+            "value": "88.2% (15/17 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "2 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "1 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "pass",
+            "value": "182.53/278.0 (65.7%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "VAF",
+      "tenant_id": "9cb538a1-6c4a-4cef-87d9-d131d2eaa1df",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "50.6% (42/83 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "2 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "3 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "pass",
+            "value": "283.0/283.0 (100.0%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "warn",
+            "value": "1 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "NOR",
+      "tenant_id": "61d9b3ff-5962-4628-b32f-d840822545ce",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 1,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "pass",
+            "value": "Security defaults enabled",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "1 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "pass",
+            "value": "50.0/56.0 (89.3%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "B2I",
+      "tenant_id": "b752f922-8e39-4b45-b1ed-d22a423a9b7b",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 1,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "pass",
+            "value": "Security defaults enabled",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "1 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "warn",
+            "value": "121.0/264.0 (45.8%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "CCC",
+      "tenant_id": "c9367da3-01f5-4b8d-9461-82eb18a57409",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant c9367da3-01f5-4b8d-9461-82eb18a57409: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant c9367da3-01f5-4b8d-9461-82eb18a5740'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "SAS",
+      "tenant_id": "9fcc5c06-4146-406c-ab7f-4ec8c5583c65",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 3,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "3 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "fail",
+            "value": "90.0/272.0 (33.1%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "TECHNIJIAN",
+      "tenant_id": "cab8077a-3f42-4277-b7bd-5c9023e826d8",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 4,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "9.1% (149/1644 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "3 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "fail",
+            "value": "8 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "warn",
+            "value": "475.48/1116.0 (42.6%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "fail",
+            "value": "1388 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "ACU",
+      "tenant_id": "f46aeae4-8c63-4a52-9431-0a5a38cef4bf",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 3,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "50.0% (9/18 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "3 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "fail",
+            "value": "6 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "pass",
+            "value": "231.94/278.0 (83.4%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "warn",
+            "value": "1 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "JRM",
+      "tenant_id": "449cd620-98d9-4f32-9dde-e263485e8dcd",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant 449cd620-98d9-4f32-9dde-e263485e8dcd: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 449cd620-98d9-4f32-9dde-e263485e8dc'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "AOC",
+      "tenant_id": "047f7c77-f0d5-4d53-8d99-e827f436a425",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "30.4% (14/46 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "3 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "3 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "pass",
+            "value": "217.52/278.0 (78.2%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "HHOC",
+      "tenant_id": "d57b79ab-c770-4c4a-9b2d-36c90c710b6d",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 3,
+        "warn_count": 2,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "7.5% (18/239 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "warn",
+            "value": "1 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "2 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "warn",
+            "value": "146.16/278.0 (52.6%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "fail",
+            "value": "222 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "BWH",
+      "tenant_id": "c68196d0-806d-495a-b5f4-5ab22adfc845",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 3,
+        "warn_count": 2,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "42.1% (77/183 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "3 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "warn",
+            "value": "4 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "warn",
+            "value": "124.77/278.0 (44.9%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "fail",
+            "value": "77 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "MRM",
+      "tenant_id": "5631631f-6b02-408b-af52-6b1bac470f59",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant 5631631f-6b02-408b-af52-6b1bac470f59: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 5631631f-6b02-408b-af52-6b1bac470f5'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "KES",
+      "tenant_id": "325e6986-c171-4e39-83a3-c6fcbf9dc0f9",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f9: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 325e6986-c171-4e39-83a3-c6fcbf9dc0f'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "JDH",
+      "tenant_id": "e5cb8b12-8729-4105-b4f0-1520d78a3260",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant e5cb8b12-8729-4105-b4f0-1520d78a3260: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant e5cb8b12-8729-4105-b4f0-1520d78a326'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "ORX",
+      "tenant_id": "9f0d3ee8-4412-48da-9b80-69badb68b429",
+      "month": "2026-04",
+      "errors": [],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 3,
+        "warn_count": 1,
+        "checks": [
+          {
+            "check": "MFA Registration",
+            "status": "fail",
+            "value": "40.3% (151/375 users)",
+            "detail": "Target: 100% of users registered for MFA"
+          },
+          {
+            "check": "Conditional Access Policies",
+            "status": "pass",
+            "value": "3 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Global Administrator Count",
+            "status": "pass",
+            "value": "3 Global Admins",
+            "detail": "Best practice: 2-3 Global Admins maximum"
+          },
+          {
+            "check": "Microsoft Secure Score",
+            "status": "fail",
+            "value": "97.61/283.0 (34.5%)",
+            "detail": "Target: >60% of available score"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "warn",
+            "value": "8 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    },
+    {
+      "client_code": "RMG",
+      "tenant_id": "6df1ff80-b028-45d0-82b3-4da67fbc0fc0",
+      "month": "2026-04",
+      "errors": [
+        {
+          "source": "secure_score",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "conditional_access",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "mfa_registration",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "admin_roles",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "guest_users",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "subscribed_skus",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        },
+        {
+          "source": "user_licenses",
+          "error": "Token request failed for tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc0: 401 b'{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000229: The client application 5cbc8ba3-2795-4129-9258-b41102cac82e is missing service principal in the tenant 6df1ff80-b028-45d0-82b3-4da67fbc0fc'"
+        }
+      ],
+      "posture": {
+        "overall": "fail",
+        "fail_count": 2,
+        "warn_count": 0,
+        "checks": [
+          {
+            "check": "Conditional Access Policies",
+            "status": "fail",
+            "value": "0 enabled policies",
+            "detail": "Minimum: block legacy auth + require MFA for admins"
+          },
+          {
+            "check": "Legacy Authentication Blocked",
+            "status": "fail",
+            "value": "Not blocked",
+            "detail": "Legacy auth bypasses MFA \u2014 must be blocked"
+          },
+          {
+            "check": "Guest User Count",
+            "status": "pass",
+            "value": "0 guest accounts",
+            "detail": "Review external guest access regularly"
+          }
+        ]
+      }
+    }
+  ]
+}

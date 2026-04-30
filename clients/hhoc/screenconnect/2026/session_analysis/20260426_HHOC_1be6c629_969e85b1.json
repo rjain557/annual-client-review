@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260426_HHOC_1be6c629_969e85b1",
+  "client_code": "HHOC",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\HHOC-2026-04\\20260426_HHOC_1be6c629_969e85b1.mp4",
+  "analyzed_at": "2026-04-30T18:06:33Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician addressed an issue with the Adobe Creative Cloud desktop application where the home screen appeared blank. They applied a common fix by renaming a core executable file, then performed a test to confirm the fix worked and that reverting it brought the issue back, ultimately reapplying the fix to resolve the problem.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Renamed 'home.exe' to 'home.exe.bak' within the Adobe Creative Cloud installation directory.\",\n    \"Terminated the 'Adobe Desktop Service' process via Task Manager.\",\n    \"Launched Adobe Creative Cloud to confirm the home screen was functional.\",\n    \"Renamed 'home.exe.bak' back to 'home.exe' to observe the re-emergence of the blank home screen, confirming the efficacy of the initial fix.\",\n    \"Reapplied the fix by renaming 'home.exe' to 'home.exe.bak'.\",\n    \"Launched Adobe Creative Cloud one final time to ensure the home screen was functional after the permanent fix.\",\n    \"Closed the remote session.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Task Manager\",\n    \"Adobe Creative Cloud desktop application\"\n  ],\n  \"issues_observed\": [\n    \"Blank home screen in the Adobe Creative Cloud desktop application.\"\n  ],\n  \"issues_resolved\": [\n    \"The blank home screen issue in the Adobe Creative Cloud desktop application was resolved.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The technician performed a deliberate test by reverting the fix to confirm it was the direct cause of the resolution, then reapplied it.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically, applying a known fix and then performing a valuable test by temporarily reverting the change to confirm its effectiveness. This demonstrates a clear understanding of the problem and solution.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician addressed an issue with the Adobe Creative Cloud desktop application where the home screen appeared blank. They applied a common fix by renaming a core executable file, then performed a test to confirm the fix worked and that reverting it brought the issue back, ultimately reapplying the fix to resolve the problem.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Renamed 'home.exe' to 'home.exe.bak' within the Adobe Creative Cloud installation directory.",
+      "Terminated the 'Adobe Desktop Service' process via Task Manager.",
+      "Launched Adobe Creative Cloud to confirm the home screen was functional.",
+      "Renamed 'home.exe.bak' back to 'home.exe' to observe the re-emergence of the blank home screen, confirming the efficacy of the initial fix.",
+      "Reapplied the fix by renaming 'home.exe' to 'home.exe.bak'.",
+      "Launched Adobe Creative Cloud one final time to ensure the home screen was functional after the permanent fix.",
+      "Closed the remote session."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Task Manager",
+      "Adobe Creative Cloud desktop application"
+    ],
+    "issues_observed": [
+      "Blank home screen in the Adobe Creative Cloud desktop application."
+    ],
+    "issues_resolved": [
+      "The blank home screen issue in the Adobe Creative Cloud desktop application was resolved."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The technician performed a deliberate test by reverting the fix to confirm it was the direct cause of the resolution, then reapplied it."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically, applying a known fix and then performing a valuable test by temporarily reverting the change to confirm its effectiveness. This demonstrates a clear understanding of the problem and solution.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260427_JDH_2c7add87_7908fef5",
+  "client_code": "JDH",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\JDH-2026-04\\20260427_JDH_2c7add87_7908fef5.mp4",
+  "analyzed_at": "2026-04-30T18:23:31Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed the web interfaces of two Konica Minolta bizhub C554e printers (10.0.0.105 and 10.0.0.156) to compare their network settings, job histories, and address books. It was observed that printer 10.0.0.105 had an empty address book, while printer 10.0.0.156 had a populated one. The technician navigated to the 'New Registration' page for an email address book entry on both printers but did not input any data, suggesting an initial assessment of the registration process rather than actual data transfer within the recording.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Accessed Konica Minolta bizhub C554e web interfaces for two different printers (10.0.0.105 and 10.0.0.156).\",\n    \"Compared 'Network Setting Information' on both printers.\",\n    \"Accessed 'Job History List' on both printers, noting they were empty.\",\n    \"Accessed 'Address Book List' on both printers, observing one was populated and the other empty.\",\n    \"Initiated 'New Registration' for an E-mail address book entry on both printers.\",\n    \"Canceled 'New Registration' on both printers without entering data.\",\n    \"Reviewed 'Device Information' for printer 10.0.0.105.\"\n  ],\n  \"applications_used\": [\n    \"Chrome web browser\"\n  ],\n  \"issues_observed\": [\n    \"Printer 10.0.0.105 had an empty address book while 10.0.0.156 had entries, implying a need to transfer or configure addresses.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Konica Minolta bizhub C554e (IP: 10.0.0.105)\",\n    \"Konica Minolta bizhub C554e (IP: 10.0.0.156)\"\n  ],\n  \"notable_events\": [\n    \"A significant idle period of 46 seconds occurred while blank address book registration forms were open on both browser tabs without any user input or activity.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"From approximately 0:30 to 1:16, the technician left the blank 'Address Book (E-mail)' registration forms open on both browser windows without interacting with them. This 46-second period showed no visible progress or clear next steps.\"\n    ],\n    \"idle_gaps\": [\n      \"0:30 - 1:16 (46 seconds) - Screen static on address book registration forms without interaction.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 46,\n    \"total_idle_estimate_seconds\": 46,\n    \"efficiency_notes\": \"The technician navigated to the relevant sections methodically but exhibited a prolonged period of inactivity (46 seconds) on blank data entry forms, which suggests uncertainty about the next step or a pause without clear intent for a significant portion of the recording.\",\n    \"coaching_flags\": [\n      \"Review the cause of the prolonged idle period (46 seconds) while on data entry forms. Encourage proactive data gathering or clearer next steps when encountering a configuration task that might require external information or a moment of thought.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed the web interfaces of two Konica Minolta bizhub C554e printers (10.0.0.105 and 10.0.0.156) to compare their network settings, job histories, and address books. It was observed that printer 10.0.0.105 had an empty address book, while printer 10.0.0.156 had a populated one. The technician navigated to the 'New Registration' page for an email address book entry on both printers but did not input any data, suggesting an initial assessment of the registration process rather than actual data transfer within the recording.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Accessed Konica Minolta bizhub C554e web interfaces for two different printers (10.0.0.105 and 10.0.0.156).",
+      "Compared 'Network Setting Information' on both printers.",
+      "Accessed 'Job History List' on both printers, noting they were empty.",
+      "Accessed 'Address Book List' on both printers, observing one was populated and the other empty.",
+      "Initiated 'New Registration' for an E-mail address book entry on both printers.",
+      "Canceled 'New Registration' on both printers without entering data.",
+      "Reviewed 'Device Information' for printer 10.0.0.105."
+    ],
+    "applications_used": [
+      "Chrome web browser"
+    ],
+    "issues_observed": [
+      "Printer 10.0.0.105 had an empty address book while 10.0.0.156 had entries, implying a need to transfer or configure addresses."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Konica Minolta bizhub C554e (IP: 10.0.0.105)",
+      "Konica Minolta bizhub C554e (IP: 10.0.0.156)"
+    ],
+    "notable_events": [
+      "A significant idle period of 46 seconds occurred while blank address book registration forms were open on both browser tabs without any user input or activity."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "From approximately 0:30 to 1:16, the technician left the blank 'Address Book (E-mail)' registration forms open on both browser windows without interacting with them. This 46-second period showed no visible progress or clear next steps."
+      ],
+      "idle_gaps": [
+        "0:30 - 1:16 (46 seconds) - Screen static on address book registration forms without interaction."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 46,
+      "total_idle_estimate_seconds": 46,
+      "efficiency_notes": "The technician navigated to the relevant sections methodically but exhibited a prolonged period of inactivity (46 seconds) on blank data entry forms, which suggests uncertainty about the next step or a pause without clear intent for a significant portion of the recording.",
+      "coaching_flags": [
+        "Review the cause of the prolonged idle period (46 seconds) while on data entry forms. Encourage proactive data gathering or clearer next steps when encountering a configuration task that might require external information or a moment of thought."
+      ]
+    }
+  }
+}

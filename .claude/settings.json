@@ -6,7 +6,22 @@
       "Read(//c/Program Files \\(x86\\)/LibreOffice/program/**)",
       "Bash(pandoc \"c:/VSCode/annual-client-review/annual-client-review-1/clients/taly/2025/TALY - Response to Robert Evans - Detailed Evidence.docx\" -t plain -o /tmp/taly_check.txt)",
       "Read(//tmp/**)",
-      "Bash(pandoc \"c:/VSCode/annual-client-review/annual-client-review-1/clients/taly/2025/TALY - Response to Robert Evans - Detailed Evidence.docx\" -t plain)"
+      "Bash(pandoc \"c:/VSCode/annual-client-review/annual-client-review-1/clients/taly/2025/TALY - Response to Robert Evans - Detailed Evidence.docx\" -t plain)",
+      "Read(//c/Users/rjain/AppData/Local/Temp/claude/c--vscode-annual-client-review-annual-client-review/96731b6c-49cb-4934-b755-9e641095bb95/tasks/**)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(f\\\\\" [{a['severity']}] {a['service']}: {a['displayName']} {a['storageUsedGB']:.1f}/{a['quotaGB']:.0f}GB \\({a['pctUsed']:.1f}%\\)\\\\\"\\) for a in d['alerts']]\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(f\\\\\"  [{a['severity']}] {a['service']}: {a['displayName']} {a['storageUsedGB']:.1f}/{a['quotaGB']:.0f}GB \\({a['pctUsed']:.1f}%\\)\\\\\"\\) for a in d['alerts']]\")",
+      "Bash(python3 -c ' *)",
+      "PowerShell($out = \"C:\\\\Users\\\\rjain\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--vscode-annual-client-review-annual-client-review\\\\96731b6c-49cb-4934-b755-9e641095bb95\\\\tasks\\\\b0p2wohdz.output\"; $content = Get-Content $out; $okLines = $content | Select-String -Pattern '\\\\bOK\\\\b' | ForEach-Object { $_.Line }; Write-Output \"OK lines so far:\"; $okLines | Select-Object -Last 10; Write-Output \"---last 5 lines---\"; Get-Content $out -Tail 5)",
+      "PowerShell($out = \"C:\\\\Users\\\\rjain\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--vscode-annual-client-review-annual-client-review\\\\96731b6c-49cb-4934-b755-9e641095bb95\\\\tasks\\\\b0p2wohdz.output\"; $content = Get-Content $out; $okLines = $content | Select-String -Pattern '\\\\bOK\\\\b\\\\s+\\(alerts|clean\\)' | ForEach-Object { $_.Line }; Write-Output \"Tenants completed:\"; $content | Select-String -Pattern '^\\\\s+\\(TECHNIJIAN|BIS|CBI|NOR|VAF|SAS|AAOC|ACU|BWH|HHOC|ORX\\)\\\\s+' | ForEach-Object { $_.Line }; Write-Output \"\"; Write-Output \"---last 3 lines---\"; Get-Content $out -Tail 3)",
+      "Bash(PYTHONIOENCODING=utf-8 python technijian/m365-pull/scripts/pull_m365_security.py --dry-run --only TECHNIJIAN,BIS,CBI)",
+      "Bash(PYTHONIOENCODING=utf-8 python technijian/m365-pull/scripts/pull_m365_security.py --hours 720 --workers 11 --chunk-hours 24 --only TECHNIJIAN,BIS,CBI,NOR,VAF,SAS,AAOC,ACU,BWH,HHOC,ORX)",
+      "Bash(tee technijian/m365-pull/state/run_security_parallel_2026-04-30.log)",
+      "Bash(python -c ' *)",
+      "Bash(PYTHONIOENCODING=utf-8 python technijian/m365-pull/scripts/build_m365_monthly_report.py --month 2026-04 --dry-run)",
+      "Bash(PYTHONIOENCODING=utf-8 python technijian/m365-pull/scripts/build_m365_monthly_report.py --month 2026-04)",
+      "Bash(PYTHONIOENCODING=utf-8 python technijian/m365-pull/scripts/create_m365_tickets.py --month 2026-04 --dry-run)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/clientportal/build_client_meta.py --only BIS,AAOC)",
+      "Bash(git mv *)"
     ]
   }
 }
