@@ -1,0 +1,81 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_04293141",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_04293141.mp4",
+  "analyzed_at": "2026-04-30T20:34:32Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician troubleshooted network connectivity and DNS resolution issues within a Nextcloud Docker container by installing missing network utilities like 'ping' and 'dnsutils'. They also reviewed Nextcloud's initialization messages and confirmed external connectivity from within the container.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Edited '/etc/docker/daemon.json' (contents not fully visible).\",\n    \"Restarted the Docker service.\",\n    \"Attempted to ping 'google.com' from within the 'nextcloud_aio_nextcloud' Docker container, which initially failed due to 'ping' command not found.\",\n    \"Accessed a bash shell inside the Docker container.\",\n    \"Updated package lists ('apt update') within the container.\",\n    \"Installed 'inetutils-ping' within the container.\",\n    \"Successfully pinged 'google.com' from within the container.\",\n    \"Attempted 'nslookup google.com' within the container, which failed due to 'nslookup' command not found.\",\n    \"Exited the container bash session.\",\n    \"Updated package lists ('apt update') again from outside the container.\",\n    \"Attempted to view Nextcloud application logs at '/var/www/nextcloud/data/nextcloud.log', which were not found.\",\n    \"Viewed the 'nextcloud_aio_nextcloud' Docker container logs, which showed Nextcloud initialization messages and Apache warnings.\",\n    \"Re-attempted to ping 'google.com' from within the container (successful).\",\n    \"Attempted 'nslookup login.microsoftonline.com' from within the container, which failed as 'nslookup' was not found in the container's PATH for direct 'docker exec'.\",\n    \"Re-accessed a bash shell inside the Docker container.\",\n    \"Updated package lists ('apt update') again within the container.\",\n    \"Installed 'dnsutils' within the container.\",\n    \"Successfully performed 'nslookup' for 'google.com' from within the container.\",\n    \"Used 'curl' to confirm HTTP connectivity to 'https://login.microsoftonline.com' from within the container.\"\n  ],\n  \"applications_used\": [\n    \"Windows Terminal\",\n    \"sudo\",\n    \"vim\",\n    \"systemctl\",\n    \"docker\",\n    \"apt\",\n    \"ping\",\n    \"nslookup\",\n    \"tail\",\n    \"curl\",\n    \"bash\"\n  ],\n  \"issues_observed\": [\n    \"OCI runtime exec failed: 'ping' executable file not found in $PATH inside Docker container.\",\n    \"Bash: 'nslookup' command not found inside Docker container.\",\n    \"Connection timed out warnings during 'apt update' (indicating intermittent network reachability for package repositories).\",\n    \"Nextcloud log file '/var/www/nextcloud/data/nextcloud.log' not found.\",\n    \"AH00558: apache2: Could not reliably determine the server's fully qualified domain name (Apache warning).\",\n    \"Nextcloud was in an 'initializing' state, prompting for web-based installation.\"\n  ],\n  \"issues_resolved\": [\n    \"'ping' command successfully installed and functional within the container.\",\n    \"'nslookup' command successfully installed and functional within the container.\",\n    \"Network connectivity from inside the Nextcloud container to external sites (google.com, microsoftonline.com) was confirmed.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02 (host machine)\",\n    \"nextcloud_aio_nextcloud (Docker container)\",\n    \"google.com\",\n    \"login.microsoftonline.com\"\n  ],\n  \"notable_events\": [\n    \"The technician had to install basic networking tools ('ping', 'nslookup') inside the Nextcloud Docker container to diagnose connectivity issues.\",\n    \"The Nextcloud instance was in an initial setup phase, as indicated by its logs.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, first attempting to use common network diagnostic tools, then identifying they were missing within the Docker environment. They then proceeded to install these tools and successfully used them to confirm network and DNS functionality. The technician also effectively switched to viewing Docker container logs when the expected application log file was not found.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician troubleshooted network connectivity and DNS resolution issues within a Nextcloud Docker container by installing missing network utilities like 'ping' and 'dnsutils'. They also reviewed Nextcloud's initialization messages and confirmed external connectivity from within the container.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Edited '/etc/docker/daemon.json' (contents not fully visible).",
+      "Restarted the Docker service.",
+      "Attempted to ping 'google.com' from within the 'nextcloud_aio_nextcloud' Docker container, which initially failed due to 'ping' command not found.",
+      "Accessed a bash shell inside the Docker container.",
+      "Updated package lists ('apt update') within the container.",
+      "Installed 'inetutils-ping' within the container.",
+      "Successfully pinged 'google.com' from within the container.",
+      "Attempted 'nslookup google.com' within the container, which failed due to 'nslookup' command not found.",
+      "Exited the container bash session.",
+      "Updated package lists ('apt update') again from outside the container.",
+      "Attempted to view Nextcloud application logs at '/var/www/nextcloud/data/nextcloud.log', which were not found.",
+      "Viewed the 'nextcloud_aio_nextcloud' Docker container logs, which showed Nextcloud initialization messages and Apache warnings.",
+      "Re-attempted to ping 'google.com' from within the container (successful).",
+      "Attempted 'nslookup login.microsoftonline.com' from within the container, which failed as 'nslookup' was not found in the container's PATH for direct 'docker exec'.",
+      "Re-accessed a bash shell inside the Docker container.",
+      "Updated package lists ('apt update') again within the container.",
+      "Installed 'dnsutils' within the container.",
+      "Successfully performed 'nslookup' for 'google.com' from within the container.",
+      "Used 'curl' to confirm HTTP connectivity to 'https://login.microsoftonline.com' from within the container."
+    ],
+    "applications_used": [
+      "Windows Terminal",
+      "sudo",
+      "vim",
+      "systemctl",
+      "docker",
+      "apt",
+      "ping",
+      "nslookup",
+      "tail",
+      "curl",
+      "bash"
+    ],
+    "issues_observed": [
+      "OCI runtime exec failed: 'ping' executable file not found in $PATH inside Docker container.",
+      "Bash: 'nslookup' command not found inside Docker container.",
+      "Connection timed out warnings during 'apt update' (indicating intermittent network reachability for package repositories).",
+      "Nextcloud log file '/var/www/nextcloud/data/nextcloud.log' not found.",
+      "AH00558: apache2: Could not reliably determine the server's fully qualified domain name (Apache warning).",
+      "Nextcloud was in an 'initializing' state, prompting for web-based installation."
+    ],
+    "issues_resolved": [
+      "'ping' command successfully installed and functional within the container.",
+      "'nslookup' command successfully installed and functional within the container.",
+      "Network connectivity from inside the Nextcloud container to external sites (google.com, microsoftonline.com) was confirmed."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02 (host machine)",
+      "nextcloud_aio_nextcloud (Docker container)",
+      "google.com",
+      "login.microsoftonline.com"
+    ],
+    "notable_events": [
+      "The technician had to install basic networking tools ('ping', 'nslookup') inside the Nextcloud Docker container to diagnose connectivity issues.",
+      "The Nextcloud instance was in an initial setup phase, as indicated by its logs."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, first attempting to use common network diagnostic tools, then identifying they were missing within the Docker environment. They then proceeded to install these tools and successfully used them to confirm network and DNS functionality. The technician also effectively switched to viewing Docker container logs when the expected application log file was not found.",
+      "coaching_flags": []
+    }
+  }
+}

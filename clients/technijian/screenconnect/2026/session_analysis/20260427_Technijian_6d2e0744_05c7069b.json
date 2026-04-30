@@ -1,0 +1,69 @@
+{
+  "filename_stem": "20260427_Technijian_6d2e0744_05c7069b",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260427_Technijian_6d2e0744_05c7069b.mp4",
+  "analyzed_at": "2026-04-30T20:50:45Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into a Windows Server, initially with an incorrect password. They then attempted to access a Veeam Self-Service Portal URL via Google Chrome, but the site was unreachable. Further investigation involved checking Veeam services in Server Manager and launching the local Veeam Backup & Replication console, which connected but showed an expired license and support contract. Finally, the technician reviewed the IPv4 configuration of the server's primary network adapter.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Logged into the Windows Server as Administrator (after one incorrect password attempt).\",\n    \"Opened Google Chrome and navigated to a specified Veeam portal URL, which resulted in a 'This site can't be reached' error.\",\n    \"Closed Chrome's 'Restore pages?' dialog.\",\n    \"Opened Server Manager and reviewed the status of services, specifically looking at Veeam-related services.\",\n    \"Launched the Veeam Backup & Replication application from the desktop.\",\n    \"Attempted to connect to the Veeam backup server, which eventually succeeded but displayed an expired license and support contract message.\",\n    \"Accessed Network Connections and reviewed the IPv4 properties (IP address, subnet mask, default gateway, DNS servers) of the 'Ethernet0 2' adapter.\",\n    \"Closed all open windows without making any changes to network settings.\"\n  ],\n  \"applications_used\": [\n    \"Windows Server 2022 Standard\",\n    \"Google Chrome\",\n    \"Server Manager\",\n    \"Veeam Backup & Replication 13\",\n    \"Network Connections (Control Panel)\"\n  ],\n  \"issues_observed\": [\n    \"Initial login attempt failed due to incorrect password.\",\n    \"Veeam Self-Service Portal URL was unreachable in Google Chrome.\",\n    \"Chrome displayed a 'Restore pages?' dialog upon opening.\",\n    \"Veeam Backup & Replication console indicated an expired license and support contract.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-BKP-VSPC-01\"\n  ],\n  \"notable_events\": [\n    \"The Veeam Backup & Replication license (rja@technijian.com) was reported as expired, with only 17 days of grace period remaining, and the support contract also expired. This is a critical operational alert.\",\n    \"The Chrome 'Restore pages?' dialog suggested Chrome might have crashed or been improperly shut down previously.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"0:17 - 0:23 (6s) - static screen after opening Chrome, before typing URL.\",\n      \"0:36 - 0:58 (22s) - static screen in Chrome after typing URL, before clicking restore.\",\n      \"1:05 - 1:07 (2s) - static screen in Chrome after restore, before closing pop-up.\",\n      \"1:18 - 1:29 (11s) - static screen in Chrome, looking at 'site unreachable' page.\",\n      \"1:31 - 1:39 (8s) - static screen in Chrome, looking at 'site unreachable' page.\",\n      \"1:40 - 1:49 (9s) - static screen in Chrome, looking at 'site unreachable' page.\",\n      \"2:07 - 2:12 (5s) - static screen in Server Manager after closing services detail.\",\n      \"2:16 - 2:19 (3s) - static screen in Server Manager after closing services detail.\",\n      \"2:21 - 2:25 (4s) - Veeam app loading after launch.\",\n      \"2:26 - 2:28 (2s) - Veeam app loading/connecting.\",\n      \"2:31 - 2:38 (7s) - Veeam app connected, showing license information.\",\n      \"2:44 - 2:47 (3s) - static screen in Server Manager, reviewing network details.\",\n      \"2:55 - 2:59 (4s) - static screen in Network Connections, reviewing IPv4 properties.\"\n    ],\n    \"idle_gap_count\": 13,\n    \"longest_idle_seconds\": 22,\n    \"total_idle_estimate_seconds\": 88,\n    \"efficiency_notes\": \"The technician followed a logical troubleshooting path, moving from web access issues to checking services and the local application, then to network configuration. The pauses were generally for reviewing information.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into a Windows Server, initially with an incorrect password. They then attempted to access a Veeam Self-Service Portal URL via Google Chrome, but the site was unreachable. Further investigation involved checking Veeam services in Server Manager and launching the local Veeam Backup & Replication console, which connected but showed an expired license and support contract. Finally, the technician reviewed the IPv4 configuration of the server's primary network adapter.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Logged into the Windows Server as Administrator (after one incorrect password attempt).",
+      "Opened Google Chrome and navigated to a specified Veeam portal URL, which resulted in a 'This site can't be reached' error.",
+      "Closed Chrome's 'Restore pages?' dialog.",
+      "Opened Server Manager and reviewed the status of services, specifically looking at Veeam-related services.",
+      "Launched the Veeam Backup & Replication application from the desktop.",
+      "Attempted to connect to the Veeam backup server, which eventually succeeded but displayed an expired license and support contract message.",
+      "Accessed Network Connections and reviewed the IPv4 properties (IP address, subnet mask, default gateway, DNS servers) of the 'Ethernet0 2' adapter.",
+      "Closed all open windows without making any changes to network settings."
+    ],
+    "applications_used": [
+      "Windows Server 2022 Standard",
+      "Google Chrome",
+      "Server Manager",
+      "Veeam Backup & Replication 13",
+      "Network Connections (Control Panel)"
+    ],
+    "issues_observed": [
+      "Initial login attempt failed due to incorrect password.",
+      "Veeam Self-Service Portal URL was unreachable in Google Chrome.",
+      "Chrome displayed a 'Restore pages?' dialog upon opening.",
+      "Veeam Backup & Replication console indicated an expired license and support contract."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-BKP-VSPC-01"
+    ],
+    "notable_events": [
+      "The Veeam Backup & Replication license (rja@technijian.com) was reported as expired, with only 17 days of grace period remaining, and the support contract also expired. This is a critical operational alert.",
+      "The Chrome 'Restore pages?' dialog suggested Chrome might have crashed or been improperly shut down previously."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [
+        "0:17 - 0:23 (6s) - static screen after opening Chrome, before typing URL.",
+        "0:36 - 0:58 (22s) - static screen in Chrome after typing URL, before clicking restore.",
+        "1:05 - 1:07 (2s) - static screen in Chrome after restore, before closing pop-up.",
+        "1:18 - 1:29 (11s) - static screen in Chrome, looking at 'site unreachable' page.",
+        "1:31 - 1:39 (8s) - static screen in Chrome, looking at 'site unreachable' page.",
+        "1:40 - 1:49 (9s) - static screen in Chrome, looking at 'site unreachable' page.",
+        "2:07 - 2:12 (5s) - static screen in Server Manager after closing services detail.",
+        "2:16 - 2:19 (3s) - static screen in Server Manager after closing services detail.",
+        "2:21 - 2:25 (4s) - Veeam app loading after launch.",
+        "2:26 - 2:28 (2s) - Veeam app loading/connecting.",
+        "2:31 - 2:38 (7s) - Veeam app connected, showing license information.",
+        "2:44 - 2:47 (3s) - static screen in Server Manager, reviewing network details.",
+        "2:55 - 2:59 (4s) - static screen in Network Connections, reviewing IPv4 properties."
+      ],
+      "idle_gap_count": 13,
+      "longest_idle_seconds": 22,
+      "total_idle_estimate_seconds": 88,
+      "efficiency_notes": "The technician followed a logical troubleshooting path, moving from web access issues to checking services and the local application, then to network configuration. The pauses were generally for reviewing information.",
+      "coaching_flags": []
+    }
+  }
+}

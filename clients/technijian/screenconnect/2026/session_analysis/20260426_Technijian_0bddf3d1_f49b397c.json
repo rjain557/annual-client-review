@@ -1,0 +1,58 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_f49b397c",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_f49b397c.mp4",
+  "analyzed_at": "2026-04-30T20:41:34Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician addressed a blocked Nextcloud AIO login by stopping and restarting the `nextcloud-aio-apache` Docker container. They then attempted to locate the Nextcloud AIO passphrase, which was unsuccessful using a broad file search within the master container, and subsequently restarted several other Nextcloud AIO Docker containers to ensure system stability.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Stopped the `nextcloud-aio-apache` Docker container using `sudo docker stop nextcloud-aio-apache`.\",\n    \"Refreshed the Nextcloud AIO login page in the browser to confirm the block was removed.\",\n    \"Examined logs of `nextcloud-aio-mastercontainer` using `sudo docker logs nextcloud-aio-mastercontainer`.\",\n    \"Attempted to find Nextcloud AIO passphrase using `grep` on master container logs and a recursive file search within the master container.\",\n    \"Restarted multiple Nextcloud AIO Docker containers: `nextcloud-aio-redis`, `nextcloud-aio-database`, `nextcloud-aio-notify-push`, `nextcloud-aio-collabora`, `nextcloud-aio-mastercontainer`.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"Windows Terminal (WSL)\"\n  ],\n  \"issues_observed\": [\n    \"Nextcloud AIO login page was blocked with a message indicating Nextcloud was running.\",\n    \"Numerous 'Permission denied' errors observed during file searches in the terminal (unrelated to Nextcloud AIO issue).\",\n    \"Multiple 'Could not resolve host: ghcr.io (DNS server returned general failure)' messages in Docker logs.\",\n    \"PHP Slim Application Error (Code: 404, 'No such container: nextcloud-aio-nextcloud') in Docker logs.\",\n    \"Docker API permission denied error when running `docker ps` without `sudo`.\"\n  ],\n  \"issues_resolved\": [\n    \"The initial Nextcloud AIO login page block was resolved by stopping the `nextcloud-aio-apache` container.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"10.100.254.241 (Nextcloud IP)\"\n  ],\n  \"notable_events\": [\n    \"The technician spent a significant amount of time unsuccessfully searching for the AIO passphrase within the master container using a resource-intensive `find` and `grep` command.\",\n    \"Multiple healthy Docker containers were restarted after resolving the primary login issue, possibly as a general troubleshooting step or in response to log entries, but without a clear immediate trigger.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"The technician appeared stuck between 00:56 and 01:40 (approx. 44 seconds) when attempting to find the AIO passphrase using `find / -type f -exec grep -l \\\"passphrase\\\" {} +` inside the `nextcloud-aio-mastercontainer`. This command ran for a long time, produced many 'Permission denied' errors, and ultimately returned the same HTML snippet as `docker logs`, not the actual passphrase.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician efficiently resolved the primary Nextcloud login issue. However, their subsequent attempt to locate the AIO passphrase was inefficient, involving a broad and lengthy file search. The decision to restart multiple already-healthy Docker containers after the initial fix also suggested a degree of uncertainty about underlying system health rather than a direct, targeted resolution.\",\n    \"coaching_flags\": [\n      \"Improve efficiency in finding configuration details; avoid broad, recursive searches in containers when alternative methods (e.g., specific environment variables, known config files, or documentation) might be more effective.\",\n      \"Clarify the necessity of restarting multiple healthy Docker containers if no active issues are observed, to avoid unnecessary service interruptions.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician addressed a blocked Nextcloud AIO login by stopping and restarting the `nextcloud-aio-apache` Docker container. They then attempted to locate the Nextcloud AIO passphrase, which was unsuccessful using a broad file search within the master container, and subsequently restarted several other Nextcloud AIO Docker containers to ensure system stability.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Stopped the `nextcloud-aio-apache` Docker container using `sudo docker stop nextcloud-aio-apache`.",
+      "Refreshed the Nextcloud AIO login page in the browser to confirm the block was removed.",
+      "Examined logs of `nextcloud-aio-mastercontainer` using `sudo docker logs nextcloud-aio-mastercontainer`.",
+      "Attempted to find Nextcloud AIO passphrase using `grep` on master container logs and a recursive file search within the master container.",
+      "Restarted multiple Nextcloud AIO Docker containers: `nextcloud-aio-redis`, `nextcloud-aio-database`, `nextcloud-aio-notify-push`, `nextcloud-aio-collabora`, `nextcloud-aio-mastercontainer`."
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "Windows Terminal (WSL)"
+    ],
+    "issues_observed": [
+      "Nextcloud AIO login page was blocked with a message indicating Nextcloud was running.",
+      "Numerous 'Permission denied' errors observed during file searches in the terminal (unrelated to Nextcloud AIO issue).",
+      "Multiple 'Could not resolve host: ghcr.io (DNS server returned general failure)' messages in Docker logs.",
+      "PHP Slim Application Error (Code: 404, 'No such container: nextcloud-aio-nextcloud') in Docker logs.",
+      "Docker API permission denied error when running `docker ps` without `sudo`."
+    ],
+    "issues_resolved": [
+      "The initial Nextcloud AIO login page block was resolved by stopping the `nextcloud-aio-apache` container."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "10.100.254.241 (Nextcloud IP)"
+    ],
+    "notable_events": [
+      "The technician spent a significant amount of time unsuccessfully searching for the AIO passphrase within the master container using a resource-intensive `find` and `grep` command.",
+      "Multiple healthy Docker containers were restarted after resolving the primary login issue, possibly as a general troubleshooting step or in response to log entries, but without a clear immediate trigger."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "The technician appeared stuck between 00:56 and 01:40 (approx. 44 seconds) when attempting to find the AIO passphrase using `find / -type f -exec grep -l \"passphrase\" {} +` inside the `nextcloud-aio-mastercontainer`. This command ran for a long time, produced many 'Permission denied' errors, and ultimately returned the same HTML snippet as `docker logs`, not the actual passphrase."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician efficiently resolved the primary Nextcloud login issue. However, their subsequent attempt to locate the AIO passphrase was inefficient, involving a broad and lengthy file search. The decision to restart multiple already-healthy Docker containers after the initial fix also suggested a degree of uncertainty about underlying system health rather than a direct, targeted resolution.",
+      "coaching_flags": [
+        "Improve efficiency in finding configuration details; avoid broad, recursive searches in containers when alternative methods (e.g., specific environment variables, known config files, or documentation) might be more effective.",
+        "Clarify the necessity of restarting multiple healthy Docker containers if no active issues are observed, to avoid unnecessary service interruptions."
+      ]
+    }
+  }
+}

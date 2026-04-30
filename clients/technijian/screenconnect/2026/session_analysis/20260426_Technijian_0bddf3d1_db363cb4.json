@@ -1,0 +1,76 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_db363cb4",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_db363cb4.mp4",
+  "analyzed_at": "2026-04-30T20:39:34Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician troubleshooted network connectivity and DNS resolution for an internal domain, `vaf-mydisk2.technijian.com`. They attempted to restart `nginx` and `apache2` services, but found them not installed as system services. The technician then successfully restarted a `nextcloud_aio_nextcloud` Docker container and inspected an Apache configuration file, likely as part of investigating the Nextcloud environment.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Performed ping tests to various IP addresses and hostnames.\",\n    \"Used `nslookup` and `dig` to resolve DNS for `vaf-mydisk2.technijian.com`.\",\n    \"Attempted to execute a complex `curl` command targeting a Microsoft Online authentication endpoint.\",\n    \"Attempted to restart `nginx` and `apache2` services using `systemctl`.\",\n    \"Successfully restarted the `nextcloud_aio_nextcloud` Docker container.\",\n    \"Reviewed logs for the `nextcloud_aio_nextcloud` Docker container.\",\n    \"Navigated the file system to `/etc/apache2/conf-available`.\",\n    \"Opened and viewed the `javascript-common.conf` file using `vim`.\"\n  ],\n  \"applications_used\": [\n    \"Terminal (likely Bash or Zsh)\",\n    \"ping\",\n    \"nslookup\",\n    \"dig\",\n    \"curl\",\n    \"sudo\",\n    \"systemctl\",\n    \"docker\",\n    \"ls\",\n    \"cd\",\n    \"vim\"\n  ],\n  \"issues_observed\": [\n    \"Initial `ping` attempts with `https://` prefix failed with 'Name or service not known' or 'usage error'.\",\n    \"Repeated `curl` command failures with 'Malformed input to a URL function' error before a successful (but unanalyzed) execution.\",\n    \"`nginx.service not found` when attempting to restart.\",\n    \"`apache2.service not found` when attempting to restart.\",\n    \"Nextcloud logs showed 'apache2: Could not reliably determine the server's fully qualified domain name...' messages during restart.\"\n  ],\n  \"issues_resolved\": [\n    \"DNS resolution for `vaf-mydisk2.technijian.com` was confirmed to `10.100.254.241`.\",\n    \"The `nextcloud_aio_nextcloud` Docker container was successfully restarted.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"vaf-mydisk2.technijian.com\",\n    \"10.100.254.171\",\n    \"127.0.0.53\",\n    \"8.8.8.8\"\n  ],\n  \"notable_events\": [\n    \"The technician made several incorrect `ping` attempts using `https://` prefixes.\",\n    \"A lengthy `curl` command for a Microsoft Online authentication endpoint was repeatedly debugged for syntax, eventually executing and printing a large HTML output that was not visibly analyzed.\",\n    \"It was discovered that `nginx` and `apache2` services were not installed as standalone system services, but Apache was running as part of the Nextcloud Docker container.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [\n      \"Approximately 30 seconds (0:01-0:02) were spent trying to `ping` URLs with `https://` prefixes, which is an incorrect usage of the command.\",\n      \"Approximately 8 seconds (0:03-0:11) were spent repeatedly modifying and re-executing a `curl` command due to 'Malformed input to a URL function' errors.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically in checking network connectivity and identifying service status. However, some time was spent on incorrect command syntax for `ping` and debugging a `curl` command. The final action of viewing a basic Apache configuration file was not clearly linked to a broader troubleshooting goal for Nextcloud.\",\n    \"coaching_flags\": [\n      \"Review basic network utility command usage (e.g., `ping` does not use `https://` prefixes; `curl` commands with complex URLs often require proper quoting or escaping).\",\n      \"Encourage clearly defining the purpose of actions when investigating system configurations (e.g., why was `javascript-common.conf` viewed after Nextcloud restart?).\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician troubleshooted network connectivity and DNS resolution for an internal domain, `vaf-mydisk2.technijian.com`. They attempted to restart `nginx` and `apache2` services, but found them not installed as system services. The technician then successfully restarted a `nextcloud_aio_nextcloud` Docker container and inspected an Apache configuration file, likely as part of investigating the Nextcloud environment.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Performed ping tests to various IP addresses and hostnames.",
+      "Used `nslookup` and `dig` to resolve DNS for `vaf-mydisk2.technijian.com`.",
+      "Attempted to execute a complex `curl` command targeting a Microsoft Online authentication endpoint.",
+      "Attempted to restart `nginx` and `apache2` services using `systemctl`.",
+      "Successfully restarted the `nextcloud_aio_nextcloud` Docker container.",
+      "Reviewed logs for the `nextcloud_aio_nextcloud` Docker container.",
+      "Navigated the file system to `/etc/apache2/conf-available`.",
+      "Opened and viewed the `javascript-common.conf` file using `vim`."
+    ],
+    "applications_used": [
+      "Terminal (likely Bash or Zsh)",
+      "ping",
+      "nslookup",
+      "dig",
+      "curl",
+      "sudo",
+      "systemctl",
+      "docker",
+      "ls",
+      "cd",
+      "vim"
+    ],
+    "issues_observed": [
+      "Initial `ping` attempts with `https://` prefix failed with 'Name or service not known' or 'usage error'.",
+      "Repeated `curl` command failures with 'Malformed input to a URL function' error before a successful (but unanalyzed) execution.",
+      "`nginx.service not found` when attempting to restart.",
+      "`apache2.service not found` when attempting to restart.",
+      "Nextcloud logs showed 'apache2: Could not reliably determine the server's fully qualified domain name...' messages during restart."
+    ],
+    "issues_resolved": [
+      "DNS resolution for `vaf-mydisk2.technijian.com` was confirmed to `10.100.254.241`.",
+      "The `nextcloud_aio_nextcloud` Docker container was successfully restarted."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "vaf-mydisk2.technijian.com",
+      "10.100.254.171",
+      "127.0.0.53",
+      "8.8.8.8"
+    ],
+    "notable_events": [
+      "The technician made several incorrect `ping` attempts using `https://` prefixes.",
+      "A lengthy `curl` command for a Microsoft Online authentication endpoint was repeatedly debugged for syntax, eventually executing and printing a large HTML output that was not visibly analyzed.",
+      "It was discovered that `nginx` and `apache2` services were not installed as standalone system services, but Apache was running as part of the Nextcloud Docker container."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [
+        "Approximately 30 seconds (0:01-0:02) were spent trying to `ping` URLs with `https://` prefixes, which is an incorrect usage of the command.",
+        "Approximately 8 seconds (0:03-0:11) were spent repeatedly modifying and re-executing a `curl` command due to 'Malformed input to a URL function' errors."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically in checking network connectivity and identifying service status. However, some time was spent on incorrect command syntax for `ping` and debugging a `curl` command. The final action of viewing a basic Apache configuration file was not clearly linked to a broader troubleshooting goal for Nextcloud.",
+      "coaching_flags": [
+        "Review basic network utility command usage (e.g., `ping` does not use `https://` prefixes; `curl` commands with complex URLs often require proper quoting or escaping).",
+        "Encourage clearly defining the purpose of actions when investigating system configurations (e.g., why was `javascript-common.conf` viewed after Nextcloud restart?)."
+      ]
+    }
+  }
+}

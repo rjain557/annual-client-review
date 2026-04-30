@@ -1,0 +1,62 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_3cfe1d03",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_3cfe1d03.mp4",
+  "analyzed_at": "2026-04-30T20:35:29Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Debian Docker container running Nextcloud to troubleshoot a configuration issue. They verified network connectivity, inspected Nextcloud's file structure and configuration directories, and attempted to execute a Nextcloud command-line utility (`occ`) which indicated the application was not fully installed. To further investigate, the technician installed the `vim` text editor within the container.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Verified DNS resolution using `nslookup google.com`.\",\n    \"Tested external network connectivity with `curl https://login.microsoftonline.com`.\",\n    \"Attempted to view Nextcloud's configuration file (`config.php`) using `cat`.\",\n    \"Navigated to and listed contents of Nextcloud data directories (`/var/www/data`, `/mnt/VAF-HD-NC/groupfolders/`).\",\n    \"Executed `php occ app:list` inside the Nextcloud Docker container.\",\n    \"Installed `vim` text editor within the Nextcloud Docker container using `apt install vim`.\",\n    \"Navigated to the Nextcloud configuration directory (`/var/www/html/config`).\"\n  ],\n  \"applications_used\": [\n    \"Terminal/Shell (bash)\",\n    \"nslookup\",\n    \"curl\",\n    \"cat\",\n    \"cd\",\n    \"ls\",\n    \"pwd\",\n    \"docker exec\",\n    \"php occ (Nextcloud command-line utility)\",\n    \"apt (package manager)\",\n    \"vim (installed during session)\"\n  ],\n  \"issues_observed\": [\n    \"Initial `cat /var/www/nextcloud/config/config.php` failed with \\\"No such file or directory\\\".\",\n    \"`php occ app:list` command failed with \\\"Nextcloud is not installed - only a limited number of commands are available\\\" and \\\"There are no commands defined in the 'app' namespace.\\\"\",\n    \"`vim` command not found within the Nextcloud container.\"\n  ],\n  \"issues_resolved\": [\n    \"The `vim` command not found issue was resolved by installing `vim`.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02 (host machine)\",\n    \"05f426569076bi (Docker container ID)\",\n    \"nextcloud_aio_nextcloud (Docker container name)\"\n  ],\n  \"notable_events\": [\n    \"The `php occ app:list` command's failure suggests a deeper issue with the Nextcloud installation or its configuration state within the Docker container.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, starting with network diagnostics, then investigating Nextcloud file paths and configuration, attempting to use the `occ` command, and proactively installing a missing tool (`vim`) to continue the troubleshooting process.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Debian Docker container running Nextcloud to troubleshoot a configuration issue. They verified network connectivity, inspected Nextcloud's file structure and configuration directories, and attempted to execute a Nextcloud command-line utility (`occ`) which indicated the application was not fully installed. To further investigate, the technician installed the `vim` text editor within the container.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Verified DNS resolution using `nslookup google.com`.",
+      "Tested external network connectivity with `curl https://login.microsoftonline.com`.",
+      "Attempted to view Nextcloud's configuration file (`config.php`) using `cat`.",
+      "Navigated to and listed contents of Nextcloud data directories (`/var/www/data`, `/mnt/VAF-HD-NC/groupfolders/`).",
+      "Executed `php occ app:list` inside the Nextcloud Docker container.",
+      "Installed `vim` text editor within the Nextcloud Docker container using `apt install vim`.",
+      "Navigated to the Nextcloud configuration directory (`/var/www/html/config`)."
+    ],
+    "applications_used": [
+      "Terminal/Shell (bash)",
+      "nslookup",
+      "curl",
+      "cat",
+      "cd",
+      "ls",
+      "pwd",
+      "docker exec",
+      "php occ (Nextcloud command-line utility)",
+      "apt (package manager)",
+      "vim (installed during session)"
+    ],
+    "issues_observed": [
+      "Initial `cat /var/www/nextcloud/config/config.php` failed with \"No such file or directory\".",
+      "`php occ app:list` command failed with \"Nextcloud is not installed - only a limited number of commands are available\" and \"There are no commands defined in the 'app' namespace.\"",
+      "`vim` command not found within the Nextcloud container."
+    ],
+    "issues_resolved": [
+      "The `vim` command not found issue was resolved by installing `vim`."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02 (host machine)",
+      "05f426569076bi (Docker container ID)",
+      "nextcloud_aio_nextcloud (Docker container name)"
+    ],
+    "notable_events": [
+      "The `php occ app:list` command's failure suggests a deeper issue with the Nextcloud installation or its configuration state within the Docker container."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, starting with network diagnostics, then investigating Nextcloud file paths and configuration, attempting to use the `occ` command, and proactively installing a missing tool (`vim`) to continue the troubleshooting process.",
+      "coaching_flags": []
+    }
+  }
+}

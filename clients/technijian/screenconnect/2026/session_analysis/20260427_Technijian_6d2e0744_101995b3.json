@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260427_Technijian_6d2e0744_101995b3",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260427_Technijian_6d2e0744_101995b3.mp4",
+  "analyzed_at": "2026-04-30T20:51:13Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to configure static IPv4 settings, including IP address, subnet mask, default gateway, and DNS servers, on a client computer. Initially, the configuration was attempted on the 'Ethernet3' adapter. After encountering an erroneous 'Multiple default gateways' warning and cancelling the changes, the technician identified 'Ethernet0' as the active network adapter and re-attempted the same configuration. The same warning appeared, and the changes were again cancelled, leaving the network adapter configuration unsaved.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Attempted to configure static IPv4 settings (IP: 10.100.254.109, Subnet: 255.255.255.0, Gateway: 10.100.254.1, Preferred DNS: 10.100.254.11, Alternate DNS: 10.100.254.12) for 'Ethernet3'.\",\n    \"Cancelled configuration changes for 'Ethernet3' due to 'Multiple default gateways' warning.\",\n    \"Verified the status and network details of 'Ethernet0' (current DHCP-assigned IP: 10.100.254.201, Gateway: 10.100.254.1, DNS: 10.100.254.11, 10.100.254.12).\",\n    \"Attempted to configure the same static IPv4 settings for 'Ethernet0'.\",\n    \"Cancelled configuration changes for 'Ethernet0' due to the same 'Multiple default gateways' warning.\"\n  ],\n  \"applications_used\": [\n    \"Control Panel (Network Connections)\"\n  ],\n  \"issues_observed\": [\n    \"Initial attempt to configure the wrong network adapter ('Ethernet3' instead of 'Ethernet0').\",\n    \"A 'Multiple default gateways' warning dialog appeared twice when attempting to save static IP/DNS configuration, preventing the changes from being applied, despite only one default gateway being specified in the TCP/IPv4 properties.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-BKP-VSPC-01\",\n    \"technijian.local\"\n  ],\n  \"notable_events\": [\n    \"The 'Multiple default gateways' warning appeared twice and prevented the saving of network configuration changes, even though the configuration only specified a single default gateway.\",\n    \"The technician initially attempted to configure 'Ethernet3', which was not the active network adapter.\"\n  ],\n  \"concerns\": [\n    \"The technician did not successfully complete the primary task of setting a static IP address, as the changes were not saved.\",\n    \"The technician did not attempt to diagnose or troubleshoot the 'Multiple default gateways' warning, instead choosing to cancel the changes twice.\",\n    \"The technician initially tried to apply settings to the incorrect network adapter.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"The technician encountered the 'Multiple default gateways' warning at 00:04 after configuring Ethernet3, clicked 'No', and then encountered the exact same warning at 00:40 after configuring Ethernet0, clicking 'No' again. This indicates a repeated failure to save configuration without troubleshooting the warning itself.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician initially selected the incorrect network adapter for configuration. After correcting this, they proceeded with the intended configuration but repeatedly encountered a blocking error message which was not investigated or resolved, leading to the task being incomplete.\",\n    \"coaching_flags\": [\n      \"Did not verify the active network adapter before initiating configuration changes.\",\n      \"Did not troubleshoot or investigate the 'Multiple default gateways' warning, which prevented network configuration changes from being saved. Instead, cancelled the changes twice.\",\n      \"Repeated the same configuration attempt without addressing the root cause of the blocking error.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to configure static IPv4 settings, including IP address, subnet mask, default gateway, and DNS servers, on a client computer. Initially, the configuration was attempted on the 'Ethernet3' adapter. After encountering an erroneous 'Multiple default gateways' warning and cancelling the changes, the technician identified 'Ethernet0' as the active network adapter and re-attempted the same configuration. The same warning appeared, and the changes were again cancelled, leaving the network adapter configuration unsaved.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Attempted to configure static IPv4 settings (IP: 10.100.254.109, Subnet: 255.255.255.0, Gateway: 10.100.254.1, Preferred DNS: 10.100.254.11, Alternate DNS: 10.100.254.12) for 'Ethernet3'.",
+      "Cancelled configuration changes for 'Ethernet3' due to 'Multiple default gateways' warning.",
+      "Verified the status and network details of 'Ethernet0' (current DHCP-assigned IP: 10.100.254.201, Gateway: 10.100.254.1, DNS: 10.100.254.11, 10.100.254.12).",
+      "Attempted to configure the same static IPv4 settings for 'Ethernet0'.",
+      "Cancelled configuration changes for 'Ethernet0' due to the same 'Multiple default gateways' warning."
+    ],
+    "applications_used": [
+      "Control Panel (Network Connections)"
+    ],
+    "issues_observed": [
+      "Initial attempt to configure the wrong network adapter ('Ethernet3' instead of 'Ethernet0').",
+      "A 'Multiple default gateways' warning dialog appeared twice when attempting to save static IP/DNS configuration, preventing the changes from being applied, despite only one default gateway being specified in the TCP/IPv4 properties."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-BKP-VSPC-01",
+      "technijian.local"
+    ],
+    "notable_events": [
+      "The 'Multiple default gateways' warning appeared twice and prevented the saving of network configuration changes, even though the configuration only specified a single default gateway.",
+      "The technician initially attempted to configure 'Ethernet3', which was not the active network adapter."
+    ],
+    "concerns": [
+      "The technician did not successfully complete the primary task of setting a static IP address, as the changes were not saved.",
+      "The technician did not attempt to diagnose or troubleshoot the 'Multiple default gateways' warning, instead choosing to cancel the changes twice.",
+      "The technician initially tried to apply settings to the incorrect network adapter."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "The technician encountered the 'Multiple default gateways' warning at 00:04 after configuring Ethernet3, clicked 'No', and then encountered the exact same warning at 00:40 after configuring Ethernet0, clicking 'No' again. This indicates a repeated failure to save configuration without troubleshooting the warning itself."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician initially selected the incorrect network adapter for configuration. After correcting this, they proceeded with the intended configuration but repeatedly encountered a blocking error message which was not investigated or resolved, leading to the task being incomplete.",
+      "coaching_flags": [
+        "Did not verify the active network adapter before initiating configuration changes.",
+        "Did not troubleshoot or investigate the 'Multiple default gateways' warning, which prevented network configuration changes from being saved. Instead, cancelled the changes twice.",
+        "Repeated the same configuration attempt without addressing the root cause of the blocking error."
+      ]
+    }
+  }
+}

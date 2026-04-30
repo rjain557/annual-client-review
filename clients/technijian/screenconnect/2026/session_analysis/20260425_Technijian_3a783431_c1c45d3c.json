@@ -1,0 +1,66 @@
+{
+  "filename_stem": "20260425_Technijian_3a783431_c1c45d3c",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_3a783431_c1c45d3c.mp4",
+  "analyzed_at": "2026-04-30T20:34:00Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed system diagnostics and maintenance on a Windows 10 Pro computer, addressing potential stability and network connectivity issues. Actions included checking for Windows updates, running SFC and DISM scans, reviewing Event Viewer for errors, adjusting critical service startup types, and resetting network configurations. The session concluded after verifying network connectivity and reviewing system logs post-remediation.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Checked Windows Update status (found system up to date).\",\n    \"Initiated `sfc /scannow` from an elevated Command Prompt.\",\n    \"Initiated `DISM /Online /Cleanup-Image /RestoreHealth` from an elevated Command Prompt.\",\n    \"Reviewed System logs in Event Viewer, filtering for Critical, Warning, and Error events.\",\n    \"Changed 'Windows Update' service startup type from 'Manual' to 'Automatic (Delayed Start)'.\",\n    \"Changed 'Background Intelligent Transfer Service (BITS)' startup type from 'Manual' to 'Automatic (Delayed Start)'.\",\n    \"Executed `ipconfig /flushdns`, `ipconfig /registerdns`, `netsh winsock reset`, and `netsh int ip reset` commands.\",\n    \"Verified internet connectivity using `ping google.com`.\",\n    \"Changed 'Windows Time' service startup type from 'Manual' to 'Automatic'.\",\n    \"Performed multiple system restarts throughout the troubleshooting process.\"\n  ],\n  \"applications_used\": [\n    \"Windows Settings\",\n    \"Command Prompt\",\n    \"Event Viewer\",\n    \"Services\"\n  ],\n  \"issues_observed\": [\n    \"Repeated 'Getting Windows ready' and 'Please wait' screens during multiple reboots, suggesting pending updates or system instability.\",\n    \"EventLog Error 6008 (unexpected shutdowns).\",\n    \"DistributedCOM Error 10010.\",\n    \"VSS Error 8193 (Volume Shadow Copy Service error).\",\n    \"e1i60x64 Warning 27 (Intel network adapter driver: 'Network link is disconnected').\",\n    \"Time-Service Warning 129 ('NTP client has no connectivity to any active peer').\",\n    \"UserPnp Error 20001 (driver failed to load).\",\n    \"Windows Update, BITS, and Windows Time services were set to 'Manual' startup type.\"\n  ],\n  \"issues_resolved\": [\n    \"Changed startup types for Windows Update, BITS, and Windows Time services to 'Automatic' or 'Automatic (Delayed Start)' to ensure proper background operation and potentially resolve update/time sync issues.\",\n    \"Successfully reset network configuration components (DNS cache, Winsock, IP stack) and verified active internet connectivity with `ping google.com`.\",\n    \"No new Time-Service warnings or critical errors were immediately observed in Event Viewer after the final changes and restart related to time synchronization or network connectivity.\"\n  ],\n  \"machines_touched\": [\n    \"DESKTOP-5M2F17C\"\n  ],\n  \"notable_events\": [\n    \"The computer experienced multiple 'Getting Windows ready' screens during restarts, indicating ongoing system processing or updates.\",\n    \"Several system, DCOM, and network-related errors and warnings were identified in the Event Viewer, which the technician systematically addressed.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, systematically checking system health (updates, Event Viewer), running repair commands (SFC, DISM), adjusting critical services, and performing network troubleshooting. Each major step was followed by a restart to assess the impact. The workflow was logical and purposeful.\",\n    \"coaching_flags\": [\n      \"The technician initiated 'sfc /scannow' and 'DISM /Online /Cleanup-Image /RestoreHealth' commands but immediately closed the Command Prompt window. These commands typically need to run to completion in an open window to be effective, which can take considerable time. Closing the window likely terminated the scans before they could finish, potentially rendering these steps ineffective.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed system diagnostics and maintenance on a Windows 10 Pro computer, addressing potential stability and network connectivity issues. Actions included checking for Windows updates, running SFC and DISM scans, reviewing Event Viewer for errors, adjusting critical service startup types, and resetting network configurations. The session concluded after verifying network connectivity and reviewing system logs post-remediation.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Checked Windows Update status (found system up to date).",
+      "Initiated `sfc /scannow` from an elevated Command Prompt.",
+      "Initiated `DISM /Online /Cleanup-Image /RestoreHealth` from an elevated Command Prompt.",
+      "Reviewed System logs in Event Viewer, filtering for Critical, Warning, and Error events.",
+      "Changed 'Windows Update' service startup type from 'Manual' to 'Automatic (Delayed Start)'.",
+      "Changed 'Background Intelligent Transfer Service (BITS)' startup type from 'Manual' to 'Automatic (Delayed Start)'.",
+      "Executed `ipconfig /flushdns`, `ipconfig /registerdns`, `netsh winsock reset`, and `netsh int ip reset` commands.",
+      "Verified internet connectivity using `ping google.com`.",
+      "Changed 'Windows Time' service startup type from 'Manual' to 'Automatic'.",
+      "Performed multiple system restarts throughout the troubleshooting process."
+    ],
+    "applications_used": [
+      "Windows Settings",
+      "Command Prompt",
+      "Event Viewer",
+      "Services"
+    ],
+    "issues_observed": [
+      "Repeated 'Getting Windows ready' and 'Please wait' screens during multiple reboots, suggesting pending updates or system instability.",
+      "EventLog Error 6008 (unexpected shutdowns).",
+      "DistributedCOM Error 10010.",
+      "VSS Error 8193 (Volume Shadow Copy Service error).",
+      "e1i60x64 Warning 27 (Intel network adapter driver: 'Network link is disconnected').",
+      "Time-Service Warning 129 ('NTP client has no connectivity to any active peer').",
+      "UserPnp Error 20001 (driver failed to load).",
+      "Windows Update, BITS, and Windows Time services were set to 'Manual' startup type."
+    ],
+    "issues_resolved": [
+      "Changed startup types for Windows Update, BITS, and Windows Time services to 'Automatic' or 'Automatic (Delayed Start)' to ensure proper background operation and potentially resolve update/time sync issues.",
+      "Successfully reset network configuration components (DNS cache, Winsock, IP stack) and verified active internet connectivity with `ping google.com`.",
+      "No new Time-Service warnings or critical errors were immediately observed in Event Viewer after the final changes and restart related to time synchronization or network connectivity."
+    ],
+    "machines_touched": [
+      "DESKTOP-5M2F17C"
+    ],
+    "notable_events": [
+      "The computer experienced multiple 'Getting Windows ready' screens during restarts, indicating ongoing system processing or updates.",
+      "Several system, DCOM, and network-related errors and warnings were identified in the Event Viewer, which the technician systematically addressed."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, systematically checking system health (updates, Event Viewer), running repair commands (SFC, DISM), adjusting critical services, and performing network troubleshooting. Each major step was followed by a restart to assess the impact. The workflow was logical and purposeful.",
+      "coaching_flags": [
+        "The technician initiated 'sfc /scannow' and 'DISM /Online /Cleanup-Image /RestoreHealth' commands but immediately closed the Command Prompt window. These commands typically need to run to completion in an open window to be effective, which can take considerable time. Closing the window likely terminated the scans before they could finish, potentially rendering these steps ineffective."
+      ]
+    }
+  }
+}

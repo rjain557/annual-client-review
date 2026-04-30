@@ -1,0 +1,55 @@
+{
+  "filename_stem": "20260425_Technijian_3a0eb39e_62ff85d7",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_3a0eb39e_62ff85d7.mp4",
+  "analyzed_at": "2026-04-30T20:31:04Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Windows Server via ScreenConnect, observed that 8 services were stopped according to the Server Manager Dashboard. The technician then opened the Services detail view and manually started each of the 8 services to resolve the issue, confirming service health before locking the session.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Opened Server Manager.\",\n    \"Identified alerts on the Server Manager Dashboard indicating 8 stopped services.\",\n    \"Accessed the 'All Servers - Services Detail View' to list the specific stopped services.\",\n    \"Reviewed the list of services.\",\n    \"Started the 'User Access Logging Service'.\",\n    \"Started the 'Diagnostic Policy Service'.\",\n    \"Started the 'Huntress Updater Service'.\",\n    \"Started the 'Google Updater Internal Service'.\",\n    \"Started the 'Clipboard User Service, 185d90'.\",\n    \"Started the 'Update Orchestrator Service'.\",\n    \"Started the 'Google Updater Service'.\",\n    \"Started the 'Huntress Agent Service'.\",\n    \"Verified that all previously stopped services were running and health indicators in Server Manager were green.\",\n    \"Locked the remote session.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\"\n  ],\n  \"issues_observed\": [\n    \"Server Manager Dashboard showed red alerts for 'Manageability' and 'Services' for both 'Local Server' and 'All Servers'.\",\n    \"Eight services were in a stopped state on the server 'VMTECHMSS'.\"\n  ],\n  \"issues_resolved\": [\n    \"The 8 identified services were successfully started.\",\n    \"The Server Manager Dashboard alerts were cleared, showing green health indicators for 'Manageability' and 'Services'.\"\n  ],\n  \"machines_touched\": [\n    \"VMTECHMSS\"\n  ],\n  \"notable_events\": [],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, quickly identifying the issue via Server Manager alerts and systematically starting each of the stopped services.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Windows Server via ScreenConnect, observed that 8 services were stopped according to the Server Manager Dashboard. The technician then opened the Services detail view and manually started each of the 8 services to resolve the issue, confirming service health before locking the session.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Opened Server Manager.",
+      "Identified alerts on the Server Manager Dashboard indicating 8 stopped services.",
+      "Accessed the 'All Servers - Services Detail View' to list the specific stopped services.",
+      "Reviewed the list of services.",
+      "Started the 'User Access Logging Service'.",
+      "Started the 'Diagnostic Policy Service'.",
+      "Started the 'Huntress Updater Service'.",
+      "Started the 'Google Updater Internal Service'.",
+      "Started the 'Clipboard User Service, 185d90'.",
+      "Started the 'Update Orchestrator Service'.",
+      "Started the 'Google Updater Service'.",
+      "Started the 'Huntress Agent Service'.",
+      "Verified that all previously stopped services were running and health indicators in Server Manager were green.",
+      "Locked the remote session."
+    ],
+    "applications_used": [
+      "Server Manager"
+    ],
+    "issues_observed": [
+      "Server Manager Dashboard showed red alerts for 'Manageability' and 'Services' for both 'Local Server' and 'All Servers'.",
+      "Eight services were in a stopped state on the server 'VMTECHMSS'."
+    ],
+    "issues_resolved": [
+      "The 8 identified services were successfully started.",
+      "The Server Manager Dashboard alerts were cleared, showing green health indicators for 'Manageability' and 'Services'."
+    ],
+    "machines_touched": [
+      "VMTECHMSS"
+    ],
+    "notable_events": [],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, quickly identifying the issue via Server Manager alerts and systematically starting each of the stopped services.",
+      "coaching_flags": []
+    }
+  }
+}

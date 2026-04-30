@@ -1,0 +1,59 @@
+{
+  "filename_stem": "20260428_Technijian_7bd5417f_47212bce",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260428_Technijian_7bd5417f_47212bce.mp4",
+  "analyzed_at": "2026-04-30T20:53:43Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician remotely accessed a server, started two previously stopped services ('WmsInstaller' and 'Clipboard User Service') using Server Manager, and briefly opened a web browser. The session concluded with the services running, but without a comment in the 'Shutdown Event Tracker' or addressing a pending Windows Update notification.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Acknowledged Shutdown Event Tracker by clicking OK without providing a comment\",\n    \"Launched Google Chrome and attempted to navigate to 'dev-vds.technijian.com'\",\n    \"Accessed the Server Manager application\",\n    \"Opened the Services Detail View to inspect server services\",\n    \"Started the 'WmsInstaller' service which was in a stopped state\",\n    \"Started the 'Clipboard User Service' which was in a stopped state\",\n    \"Closed the Services Detail View\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Unplanned server shutdown was detected, prompting the Shutdown Event Tracker dialog\",\n    \"Two critical services ('WmsInstaller' and 'Clipboard User Service') were found in a 'Stopped' state\",\n    \"A Windows Update notification indicated that updates were available and required installation\"\n  ],\n  \"issues_resolved\": [\n    \"The 'WmsInstaller' service was successfully started.\",\n    \"The 'Clipboard User Service' was successfully started.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-TS-NBIN\"\n  ],\n  \"notable_events\": [\n    \"The 'Shutdown Event Tracker' dialog appeared at the start of the session due to an unplanned shutdown, but the technician did not enter a comment.\",\n    \"A 'Windows Update' notification appeared, indicating required updates, but was not addressed during the session.\"\n  ],\n  \"concerns\": [\n    \"The technician bypassed the comment field in the 'Shutdown Event Tracker', potentially missing an opportunity to document the shutdown reason.\",\n    \"The technician did not address the visible 'Windows Update' notification, which could leave the system vulnerable or unstable.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician efficiently located and started the two stopped services within Server Manager. However, the session included a brief, seemingly unrelated web browser interaction, and two system alerts (unplanned shutdown report and pending Windows updates) were not fully addressed or investigated.\",\n    \"coaching_flags\": [\n      \"Ensure all system prompts, such as the 'Shutdown Event Tracker', are fully completed with appropriate comments.\",\n      \"Incorporate a check for and address any pending system updates (e.g., Windows Update) as a standard procedure during remote support sessions to ensure system health and security.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician remotely accessed a server, started two previously stopped services ('WmsInstaller' and 'Clipboard User Service') using Server Manager, and briefly opened a web browser. The session concluded with the services running, but without a comment in the 'Shutdown Event Tracker' or addressing a pending Windows Update notification.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Acknowledged Shutdown Event Tracker by clicking OK without providing a comment",
+      "Launched Google Chrome and attempted to navigate to 'dev-vds.technijian.com'",
+      "Accessed the Server Manager application",
+      "Opened the Services Detail View to inspect server services",
+      "Started the 'WmsInstaller' service which was in a stopped state",
+      "Started the 'Clipboard User Service' which was in a stopped state",
+      "Closed the Services Detail View"
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Unplanned server shutdown was detected, prompting the Shutdown Event Tracker dialog",
+      "Two critical services ('WmsInstaller' and 'Clipboard User Service') were found in a 'Stopped' state",
+      "A Windows Update notification indicated that updates were available and required installation"
+    ],
+    "issues_resolved": [
+      "The 'WmsInstaller' service was successfully started.",
+      "The 'Clipboard User Service' was successfully started."
+    ],
+    "machines_touched": [
+      "TE-DC-TS-NBIN"
+    ],
+    "notable_events": [
+      "The 'Shutdown Event Tracker' dialog appeared at the start of the session due to an unplanned shutdown, but the technician did not enter a comment.",
+      "A 'Windows Update' notification appeared, indicating required updates, but was not addressed during the session."
+    ],
+    "concerns": [
+      "The technician bypassed the comment field in the 'Shutdown Event Tracker', potentially missing an opportunity to document the shutdown reason.",
+      "The technician did not address the visible 'Windows Update' notification, which could leave the system vulnerable or unstable."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician efficiently located and started the two stopped services within Server Manager. However, the session included a brief, seemingly unrelated web browser interaction, and two system alerts (unplanned shutdown report and pending Windows updates) were not fully addressed or investigated.",
+      "coaching_flags": [
+        "Ensure all system prompts, such as the 'Shutdown Event Tracker', are fully completed with appropriate comments.",
+        "Incorporate a check for and address any pending system updates (e.g., Windows Update) as a standard procedure during remote support sessions to ensure system health and security."
+      ]
+    }
+  }
+}

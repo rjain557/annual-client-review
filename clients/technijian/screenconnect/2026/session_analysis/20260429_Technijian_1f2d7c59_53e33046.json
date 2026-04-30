@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260429_Technijian_1f2d7c59_53e33046",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260429_Technijian_1f2d7c59_53e33046.mp4",
+  "analyzed_at": "2026-04-30T20:56:11Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to log into the 'Administrator' account on a Windows machine but failed multiple times due to an incorrect password. The session ended prematurely as the login issue was not resolved, and no further work could be performed.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Attempted to unlock the Windows lock screen.\",\n    \"Entered a password for the 'Administrator' account.\",\n    \"Cleared the password and re-entered it after the first failed attempt.\",\n    \"Acknowledged the 'incorrect password' error message.\",\n    \"Attempted to re-enter the password a third time, briefly revealing it before the recording ended.\"\n  ],\n  \"applications_used\": [],\n  \"issues_observed\": [\n    \"The password for the 'Administrator' account was incorrect, preventing login.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Administrator (user account)\"\n  ],\n  \"notable_events\": [\n    \"Multiple failed login attempts for the Administrator account.\",\n    \"The technician briefly revealed the entered password on screen.\"\n  ],\n  \"concerns\": [\n    \"The technician briefly revealed the entered password on screen by clicking the 'eye' icon during a login attempt. This is a security risk as the password could be captured in the recording.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically in attempting to log in, but encountered issues due to incorrect credentials rather than a lack of method.\",\n    \"coaching_flags\": [\n      \"Avoid revealing passwords on screen, even briefly, by clicking the 'eye' icon in recorded remote sessions to prevent security risks.\",\n      \"Ensure correct login credentials are confirmed prior to remote connection to prevent delays and failed attempts.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to log into the 'Administrator' account on a Windows machine but failed multiple times due to an incorrect password. The session ended prematurely as the login issue was not resolved, and no further work could be performed.",
+    "session_type": "other",
+    "actions_taken": [
+      "Attempted to unlock the Windows lock screen.",
+      "Entered a password for the 'Administrator' account.",
+      "Cleared the password and re-entered it after the first failed attempt.",
+      "Acknowledged the 'incorrect password' error message.",
+      "Attempted to re-enter the password a third time, briefly revealing it before the recording ended."
+    ],
+    "applications_used": [],
+    "issues_observed": [
+      "The password for the 'Administrator' account was incorrect, preventing login."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Administrator (user account)"
+    ],
+    "notable_events": [
+      "Multiple failed login attempts for the Administrator account.",
+      "The technician briefly revealed the entered password on screen."
+    ],
+    "concerns": [
+      "The technician briefly revealed the entered password on screen by clicking the 'eye' icon during a login attempt. This is a security risk as the password could be captured in the recording."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically in attempting to log in, but encountered issues due to incorrect credentials rather than a lack of method.",
+      "coaching_flags": [
+        "Avoid revealing passwords on screen, even briefly, by clicking the 'eye' icon in recorded remote sessions to prevent security risks.",
+        "Ensure correct login credentials are confirmed prior to remote connection to prevent delays and failed attempts."
+      ]
+    }
+  }
+}

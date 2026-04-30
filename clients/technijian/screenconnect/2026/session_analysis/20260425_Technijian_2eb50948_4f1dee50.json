@@ -1,0 +1,68 @@
+{
+  "filename_stem": "20260425_Technijian_2eb50948_4f1dee50",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_2eb50948_4f1dee50.mp4",
+  "analyzed_at": "2026-04-30T20:30:06Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a comprehensive health check on a Windows 10 client computer. This involved reviewing system information, installed software, disk usage, running services, scheduled tasks, and event logs. They also performed a disk cleanup, checked network performance with a speed test, and reviewed system startup items and user accounts.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Performed Disk Cleanup, removing approximately 4GB of temporary files.\",\n    \"Reviewed Windows system specifications (OS version, build) and device name.\",\n    \"Examined installed programs via Control Panel's Programs and Features.\",\n    \"Checked disk space usage for Program Files, Program Files (x86), and user profile folders.\",\n    \"Reviewed the list of running services and their startup types.\",\n    \"Inspected scheduled tasks in Task Scheduler Library.\",\n    \"Filtered and reviewed System and Application event logs for critical, error, and warning events.\",\n    \"Conducted an internet speed test using Speedtest.net.\",\n    \"Restarted the client computer.\",\n    \"Monitored system performance and active processes via Task Manager.\",\n    \"Checked boot options, services, and startup items using System Configuration (msconfig).\",\n    \"Used Command Prompt to check network configuration (ipconfig /all), ping, tracert, and user account details (net user, whoami /groups).\",\n    \"Reviewed startup entries in the Registry Editor.\",\n    \"Re-checked Event Viewer for recent system events after the restart.\"\n  ],\n  \"applications_used\": [\n    \"Settings\",\n    \"Control Panel\",\n    \"File Explorer\",\n    \"Disk Cleanup\",\n    \"Services\",\n    \"Task Scheduler\",\n    \"Event Viewer\",\n    \"Google Chrome\",\n    \"Task Manager\",\n    \"System Configuration (msconfig)\",\n    \"Command Prompt (cmd)\",\n    \"Registry Editor (regedit)\"\n  ],\n  \"issues_observed\": [\n    \"Approximately 3.97 GB of temporary files present before disk cleanup.\",\n    \"Multiple 'DistributedCOM' errors observed in the System Event Log (before and after restart).\",\n    \"Some 'Service Control Manager' errors and 'MsiInstaller' warnings in the Event Logs.\"\n  ],\n  \"issues_resolved\": [\n    \"Approximately 3.97 GB of temporary files were successfully removed through Disk Cleanup.\"\n  ],\n  \"machines_touched\": [\n    \"DESKTOP-5M47J8A\"\n  ],\n  \"notable_events\": [\n    \"The computer was restarted during the session to apply changes or refresh the system (at 01:03).\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically and efficiently, performing a wide range of system diagnostics and maintenance steps without hesitation or visible delays. Actions were logical and comprehensive for a general system health check.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a comprehensive health check on a Windows 10 client computer. This involved reviewing system information, installed software, disk usage, running services, scheduled tasks, and event logs. They also performed a disk cleanup, checked network performance with a speed test, and reviewed system startup items and user accounts.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Performed Disk Cleanup, removing approximately 4GB of temporary files.",
+      "Reviewed Windows system specifications (OS version, build) and device name.",
+      "Examined installed programs via Control Panel's Programs and Features.",
+      "Checked disk space usage for Program Files, Program Files (x86), and user profile folders.",
+      "Reviewed the list of running services and their startup types.",
+      "Inspected scheduled tasks in Task Scheduler Library.",
+      "Filtered and reviewed System and Application event logs for critical, error, and warning events.",
+      "Conducted an internet speed test using Speedtest.net.",
+      "Restarted the client computer.",
+      "Monitored system performance and active processes via Task Manager.",
+      "Checked boot options, services, and startup items using System Configuration (msconfig).",
+      "Used Command Prompt to check network configuration (ipconfig /all), ping, tracert, and user account details (net user, whoami /groups).",
+      "Reviewed startup entries in the Registry Editor.",
+      "Re-checked Event Viewer for recent system events after the restart."
+    ],
+    "applications_used": [
+      "Settings",
+      "Control Panel",
+      "File Explorer",
+      "Disk Cleanup",
+      "Services",
+      "Task Scheduler",
+      "Event Viewer",
+      "Google Chrome",
+      "Task Manager",
+      "System Configuration (msconfig)",
+      "Command Prompt (cmd)",
+      "Registry Editor (regedit)"
+    ],
+    "issues_observed": [
+      "Approximately 3.97 GB of temporary files present before disk cleanup.",
+      "Multiple 'DistributedCOM' errors observed in the System Event Log (before and after restart).",
+      "Some 'Service Control Manager' errors and 'MsiInstaller' warnings in the Event Logs."
+    ],
+    "issues_resolved": [
+      "Approximately 3.97 GB of temporary files were successfully removed through Disk Cleanup."
+    ],
+    "machines_touched": [
+      "DESKTOP-5M47J8A"
+    ],
+    "notable_events": [
+      "The computer was restarted during the session to apply changes or refresh the system (at 01:03)."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically and efficiently, performing a wide range of system diagnostics and maintenance steps without hesitation or visible delays. Actions were logical and comprehensive for a general system health check.",
+      "coaching_flags": []
+    }
+  }
+}

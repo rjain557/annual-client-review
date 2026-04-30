@@ -1,0 +1,51 @@
+{
+  "filename_stem": "20260425_Technijian_3a783431_a52d6906",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_3a783431_a52d6906.mp4",
+  "analyzed_at": "2026-04-30T20:32:35Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Windows Server, addressed initial system prompts, and then investigated a network adapter driver. An attempt to automatically update the Mellanox Ethernet adapter driver failed due to a hash corruption error, leading the technician to successfully roll back the driver to its previous version.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Canceled the 'Shutdown Event Tracker' dialog.\",\n    \"Declined network discoverability on the 'Networks' prompt.\",\n    \"Navigated to 'Network Connections' via Server Manager.\",\n    \"Accessed the properties of the Mellanox ConnectX-4 Lx Ethernet Adapter.\",\n    \"Attempted to automatically update the network adapter driver.\",\n    \"Rolled back the Mellanox Ethernet adapter driver to the previous version.\",\n    \"Closed all open application windows.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Network Connections\",\n    \"Device Manager (via network adapter properties)\"\n  ],\n  \"issues_observed\": [\n    \"Unexpected shutdown indicated by 'Shutdown Event Tracker' dialog.\",\n    \"Failed driver update for 'Mellanox ConnectX-4 Lx Ethernet Adapter' with error: 'The driver installation failed. Hash for the file is not present in the specified catalog file. The file is likely corrupt or has been tampered with.'\"\n  ],\n  \"issues_resolved\": [\n    \"The immediate issue of the failed driver update was mitigated by successfully rolling back to the previous stable driver version.\"\n  ],\n  \"machines_touched\": [\n    \"Local Server (as indicated by Server Manager navigation)\"\n  ],\n  \"notable_events\": [\n    \"The specific driver update failure error regarding a corrupt or tampered file hash.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, quickly navigating to the network adapter properties, attempting a standard driver update, and efficiently performing a rollback when the update failed. The workflow was direct and purposeful.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Windows Server, addressed initial system prompts, and then investigated a network adapter driver. An attempt to automatically update the Mellanox Ethernet adapter driver failed due to a hash corruption error, leading the technician to successfully roll back the driver to its previous version.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Canceled the 'Shutdown Event Tracker' dialog.",
+      "Declined network discoverability on the 'Networks' prompt.",
+      "Navigated to 'Network Connections' via Server Manager.",
+      "Accessed the properties of the Mellanox ConnectX-4 Lx Ethernet Adapter.",
+      "Attempted to automatically update the network adapter driver.",
+      "Rolled back the Mellanox Ethernet adapter driver to the previous version.",
+      "Closed all open application windows."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Network Connections",
+      "Device Manager (via network adapter properties)"
+    ],
+    "issues_observed": [
+      "Unexpected shutdown indicated by 'Shutdown Event Tracker' dialog.",
+      "Failed driver update for 'Mellanox ConnectX-4 Lx Ethernet Adapter' with error: 'The driver installation failed. Hash for the file is not present in the specified catalog file. The file is likely corrupt or has been tampered with.'"
+    ],
+    "issues_resolved": [
+      "The immediate issue of the failed driver update was mitigated by successfully rolling back to the previous stable driver version."
+    ],
+    "machines_touched": [
+      "Local Server (as indicated by Server Manager navigation)"
+    ],
+    "notable_events": [
+      "The specific driver update failure error regarding a corrupt or tampered file hash."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, quickly navigating to the network adapter properties, attempting a standard driver update, and efficiently performing a rollback when the update failed. The workflow was direct and purposeful.",
+      "coaching_flags": []
+    }
+  }
+}

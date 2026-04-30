@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260429_Technijian_1f2d7c59_22657837",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260429_Technijian_1f2d7c59_22657837.mp4",
+  "analyzed_at": "2026-04-30T20:55:53Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into the client's computer, checked the display adapter driver status, and attempted an automatic update. Subsequently, they initiated Windows Update, which downloaded and installed pending updates, and then restarted the machine to complete the process.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Logged into the Windows Administrator account.\",\n    \"Accessed Display settings.\",\n    \"Navigated to Advanced display settings.\",\n    \"Checked Display adapter properties for the 'Microsoft Basic Display Adapter'.\",\n    \"Attempted to update the display driver automatically (reported 'best drivers already installed').\",\n    \"Reviewed installed applications in Apps & features.\",\n    \"Initiated a Windows Update check.\",\n    \"Downloaded and installed Windows updates.\",\n    \"Restarted the computer to finalize updates.\"\n  ],\n  \"applications_used\": [\n    \"Windows Settings\",\n    \"Device Manager (accessed via Display Adapter Properties)\"\n  ],\n  \"issues_observed\": [\n    \"The computer was utilizing the generic 'Microsoft Basic Display Adapter' with an outdated driver date (June 21, 2006).\",\n    \"Windows updates were not fully up-to-date prior to the technician's intervention.\"\n  ],\n  \"issues_resolved\": [\n    \"Pending Windows updates were downloaded and installed.\"\n  ],\n  \"machines_touched\": [\n    \"Client computer\"\n  ],\n  \"notable_events\": [\n    \"The system was running with a generic 'Microsoft Basic Display Adapter', indicating a potential lack of specific graphics drivers or a virtualized environment.\",\n    \"Windows Update successfully identified and installed new updates that were previously pending.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, first investigating a potential driver issue and then proceeding to a comprehensive system update, demonstrating a clear and efficient approach.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into the client's computer, checked the display adapter driver status, and attempted an automatic update. Subsequently, they initiated Windows Update, which downloaded and installed pending updates, and then restarted the machine to complete the process.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Logged into the Windows Administrator account.",
+      "Accessed Display settings.",
+      "Navigated to Advanced display settings.",
+      "Checked Display adapter properties for the 'Microsoft Basic Display Adapter'.",
+      "Attempted to update the display driver automatically (reported 'best drivers already installed').",
+      "Reviewed installed applications in Apps & features.",
+      "Initiated a Windows Update check.",
+      "Downloaded and installed Windows updates.",
+      "Restarted the computer to finalize updates."
+    ],
+    "applications_used": [
+      "Windows Settings",
+      "Device Manager (accessed via Display Adapter Properties)"
+    ],
+    "issues_observed": [
+      "The computer was utilizing the generic 'Microsoft Basic Display Adapter' with an outdated driver date (June 21, 2006).",
+      "Windows updates were not fully up-to-date prior to the technician's intervention."
+    ],
+    "issues_resolved": [
+      "Pending Windows updates were downloaded and installed."
+    ],
+    "machines_touched": [
+      "Client computer"
+    ],
+    "notable_events": [
+      "The system was running with a generic 'Microsoft Basic Display Adapter', indicating a potential lack of specific graphics drivers or a virtualized environment.",
+      "Windows Update successfully identified and installed new updates that were previously pending."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, first investigating a potential driver issue and then proceeding to a comprehensive system update, demonstrating a clear and efficient approach.",
+      "coaching_flags": []
+    }
+  }
+}

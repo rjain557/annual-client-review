@@ -1,0 +1,64 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_0429476a",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_0429476a.mp4",
+  "analyzed_at": "2026-04-30T20:35:04Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to troubleshoot a Nextcloud All-in-One (AIO) Docker installation by inspecting files and running commands within the Nextcloud container. They successfully located and viewed the main configuration file but encountered permission issues and an error indicating Nextcloud was not fully installed within the container's CLI context. The session ended without a clear resolution, with the Nextcloud AIO login page suggesting an action the technician had not yet taken.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Navigated directory structure on the host machine (`TE-DC-MD-NC-02`).\",\n    \"Accessed the Nextcloud AIO Docker container via `sudo docker exec -it nextcloud_aio_nextcloud bash`.\",\n    \"Searched for `config.php` within the Nextcloud container, encountering permission denied errors using `find`.\",\n    \"Successfully located and opened `/var/lib/docker/volumes/nextcloud_aio_nextcloud/_data/config/config.php` using `vim` on the host machine.\",\n    \"Copied the Nextcloud configuration file to the host's `/home/technijian/` directory.\",\n    \"Attempted to run `php occ` commands within the Nextcloud container, receiving 'Nextcloud is not installed' errors.\",\n    \"Listed running Docker containers using `sudo docker ps`.\",\n    \"Attempted to access the Nextcloud AIO web interface via browser, which displayed a 'Nextcloud AIO Login' blocked page with an instruction to stop the apache container.\"\n  ],\n  \"applications_used\": [\n    \"Terminal (Ubuntu-like shell)\",\n    \"Vim\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Multiple 'Permission denied' errors when using the `find` command inside the Nextcloud Docker container and directly on the host.\",\n    \"Error message 'Nextcloud is not installed - only a limited number of commands are available' when attempting to run `php occ` commands.\",\n    \"Browser privacy error 'Your connection is not private' when accessing the Nextcloud AIO IP.\",\n    \"Nextcloud AIO Login page stating 'The login is blocked since Nextcloud is running.' and suggesting to run `sudo docker stop nextcloud-aio-apache`.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"nextcloud_aio_nextcloud (Docker container)\",\n    \"nextcloud-aio-apache (Docker container, mentioned in browser message)\"\n  ],\n  \"notable_events\": [\n    \"The technician spent significant time attempting to find `config.php` and then viewed it multiple times in `vim` without making changes, suggesting uncertainty about what to modify.\",\n    \"The explicit instruction on the Nextcloud AIO login page (`sudo docker stop nextcloud-aio-apache`) was presented but not acted upon by the end of the recording.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"0:48-0:56: Technician repeatedly ran `find / -name config.php` within the Nextcloud container and on the host, receiving numerous 'Permission denied' errors, without adjusting the search scope or permissions. This was repeated after exiting the container, then re-entering and running `find` again.\",\n      \"1:14-1:38: Technician opened `config.php` in `vim`, scrolled through it, closed it, then immediately re-copied it (twice) to their home directory, and then re-opened it in `vim` again, scrolling through it without making any visible changes. This suggests indecision or not knowing what specific information they were looking for or how to apply it.\",\n      \"2:27-2:32: Technician attempted two variations of `php occ app:list` after receiving an explicit error 'Nextcloud is not installed - only a limited number of commands are available', indicating a lack of understanding or troubleshooting for that specific error context.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician seemed to be exploring options and searching for information but lacked a clear, methodical approach to troubleshooting. Repetitive commands and viewing of files without action suggest uncertainty. The failure to address the clear instruction on the Nextcloud AIO login page before the session ended further indicates inefficiency.\",\n    \"coaching_flags\": [\n      \"Improve systematic troubleshooting: address explicit error messages (e.g., 'Nextcloud is not installed' or the browser's recommendation) directly.\",\n      \"Avoid repetitive commands: if `find` yields many permission errors, consider alternative methods or narrower scopes instead of repeating the same command.\",\n      \"Clarify objective before inspecting files: know what information is being sought in configuration files to avoid aimless scrolling and multiple re-reads.\",\n      \"Prioritize instructions from the application itself: the Nextcloud AIO login page provided a direct command to potentially resolve the login issue.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to troubleshoot a Nextcloud All-in-One (AIO) Docker installation by inspecting files and running commands within the Nextcloud container. They successfully located and viewed the main configuration file but encountered permission issues and an error indicating Nextcloud was not fully installed within the container's CLI context. The session ended without a clear resolution, with the Nextcloud AIO login page suggesting an action the technician had not yet taken.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Navigated directory structure on the host machine (`TE-DC-MD-NC-02`).",
+      "Accessed the Nextcloud AIO Docker container via `sudo docker exec -it nextcloud_aio_nextcloud bash`.",
+      "Searched for `config.php` within the Nextcloud container, encountering permission denied errors using `find`.",
+      "Successfully located and opened `/var/lib/docker/volumes/nextcloud_aio_nextcloud/_data/config/config.php` using `vim` on the host machine.",
+      "Copied the Nextcloud configuration file to the host's `/home/technijian/` directory.",
+      "Attempted to run `php occ` commands within the Nextcloud container, receiving 'Nextcloud is not installed' errors.",
+      "Listed running Docker containers using `sudo docker ps`.",
+      "Attempted to access the Nextcloud AIO web interface via browser, which displayed a 'Nextcloud AIO Login' blocked page with an instruction to stop the apache container."
+    ],
+    "applications_used": [
+      "Terminal (Ubuntu-like shell)",
+      "Vim",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Multiple 'Permission denied' errors when using the `find` command inside the Nextcloud Docker container and directly on the host.",
+      "Error message 'Nextcloud is not installed - only a limited number of commands are available' when attempting to run `php occ` commands.",
+      "Browser privacy error 'Your connection is not private' when accessing the Nextcloud AIO IP.",
+      "Nextcloud AIO Login page stating 'The login is blocked since Nextcloud is running.' and suggesting to run `sudo docker stop nextcloud-aio-apache`."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "nextcloud_aio_nextcloud (Docker container)",
+      "nextcloud-aio-apache (Docker container, mentioned in browser message)"
+    ],
+    "notable_events": [
+      "The technician spent significant time attempting to find `config.php` and then viewed it multiple times in `vim` without making changes, suggesting uncertainty about what to modify.",
+      "The explicit instruction on the Nextcloud AIO login page (`sudo docker stop nextcloud-aio-apache`) was presented but not acted upon by the end of the recording."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "0:48-0:56: Technician repeatedly ran `find / -name config.php` within the Nextcloud container and on the host, receiving numerous 'Permission denied' errors, without adjusting the search scope or permissions. This was repeated after exiting the container, then re-entering and running `find` again.",
+        "1:14-1:38: Technician opened `config.php` in `vim`, scrolled through it, closed it, then immediately re-copied it (twice) to their home directory, and then re-opened it in `vim` again, scrolling through it without making any visible changes. This suggests indecision or not knowing what specific information they were looking for or how to apply it.",
+        "2:27-2:32: Technician attempted two variations of `php occ app:list` after receiving an explicit error 'Nextcloud is not installed - only a limited number of commands are available', indicating a lack of understanding or troubleshooting for that specific error context."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician seemed to be exploring options and searching for information but lacked a clear, methodical approach to troubleshooting. Repetitive commands and viewing of files without action suggest uncertainty. The failure to address the clear instruction on the Nextcloud AIO login page before the session ended further indicates inefficiency.",
+      "coaching_flags": [
+        "Improve systematic troubleshooting: address explicit error messages (e.g., 'Nextcloud is not installed' or the browser's recommendation) directly.",
+        "Avoid repetitive commands: if `find` yields many permission errors, consider alternative methods or narrower scopes instead of repeating the same command.",
+        "Clarify objective before inspecting files: know what information is being sought in configuration files to avoid aimless scrolling and multiple re-reads.",
+        "Prioritize instructions from the application itself: the Nextcloud AIO login page provided a direct command to potentially resolve the login issue."
+      ]
+    }
+  }
+}

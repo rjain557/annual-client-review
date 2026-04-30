@@ -1,0 +1,66 @@
+{
+  "filename_stem": "20260422_VAF_6dfe2885_bcc7c1b5",
+  "client_code": "VAF",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\VAF-2026-04\\20260422_VAF_6dfe2885_bcc7c1b5.mp4",
+  "analyzed_at": "2026-04-30T20:59:18Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician remotely connected to a client computer, copied a new Cisco Secure Client installer (version 5.1.16.194) to the C:\\\\Users directory, and initiated its installation. They attempted to selectively install components, choosing 'Umbrella' and 'Diagnostic And Reporting Tool', but the installation process also began removing older versions of 'AnyConnect VPN', indicating an upgrade.\",\n  \"session_type\": \"installation\",\n  \"actions_taken\": [\n    \"Copied 'cisco-secure-client-win-5.1.16.194-predeploy-k9.zip' to 'C:\\\\Users' directory.\",\n    \"Opened the copied ZIP file to access its contents.\",\n    \"Executed 'Setup.exe' from the extracted contents.\",\n    \"Configured the installation to select 'Umbrella' and 'Diagnostic And Reporting Tool' modules.\",\n    \"Accepted the Cisco Secure Client End User License Agreement (EULA).\",\n    \"Initiated the installation of the selected modules.\"\n  ],\n  \"applications_used\": [\n    \"ScreenConnect File Manager\",\n    \"Cisco Secure Client Install Selector\",\n    \"Cisco Secure Client EULA window\",\n    \"Cisco Secure Client - Diagnostics and Reporting Tool installer\",\n    \"Cisco Secure Client - AnyConnect VPN installer\"\n  ],\n  \"issues_observed\": [\n    \"The 'Cisco Secure Client - AnyConnect VPN' installer appeared despite 'Core & AnyConnect VPN' being explicitly deselected in the install selector. This could be an intended part of an upgrade process to remove older versions, or an unexpected behavior for the technician's selection.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Local machine (implied by 'This PC > OS (C:)' in ScreenConnect File Manager)\"\n  ],\n  \"notable_events\": [\n    \"The file copy operation for the 135 MB ZIP file took approximately 43 seconds.\",\n    \"The technician changed component selections in the installer multiple times (initially all selected, then tried to select only Diagnostic And Reporting Tool, then Umbrella and Diagnostic And Reporting Tool).\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      {\n        \"timestamp\": \"0:04\",\n        \"duration\": 43,\n        \"details\": \"Waiting for the Cisco Secure Client zip file to copy to C:\\\\Users.\"\n      },\n      {\n        \"timestamp\": \"1:06\",\n        \"duration\": 1,\n        \"details\": \"Waiting for 'Cisco Secure Client - Diagnostics and Reporting Tool' to configure.\"\n      },\n      {\n        \"timestamp\": \"1:08\",\n        \"duration\": 4,\n        \"details\": \"Waiting for 'Cisco Secure Client - AnyConnect VPN' to configure/remove older versions.\"\n      }\n    ],\n    \"idle_gap_count\": 3,\n    \"longest_idle_seconds\": 43,\n    \"total_idle_estimate_seconds\": 48,\n    \"efficiency_notes\": \"The technician proceeded methodically with the file transfer and installation initiation. There was a brief moment of indecision when choosing installer components, but the overall task flow was clear and direct.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician remotely connected to a client computer, copied a new Cisco Secure Client installer (version 5.1.16.194) to the C:\\Users directory, and initiated its installation. They attempted to selectively install components, choosing 'Umbrella' and 'Diagnostic And Reporting Tool', but the installation process also began removing older versions of 'AnyConnect VPN', indicating an upgrade.",
+    "session_type": "installation",
+    "actions_taken": [
+      "Copied 'cisco-secure-client-win-5.1.16.194-predeploy-k9.zip' to 'C:\\Users' directory.",
+      "Opened the copied ZIP file to access its contents.",
+      "Executed 'Setup.exe' from the extracted contents.",
+      "Configured the installation to select 'Umbrella' and 'Diagnostic And Reporting Tool' modules.",
+      "Accepted the Cisco Secure Client End User License Agreement (EULA).",
+      "Initiated the installation of the selected modules."
+    ],
+    "applications_used": [
+      "ScreenConnect File Manager",
+      "Cisco Secure Client Install Selector",
+      "Cisco Secure Client EULA window",
+      "Cisco Secure Client - Diagnostics and Reporting Tool installer",
+      "Cisco Secure Client - AnyConnect VPN installer"
+    ],
+    "issues_observed": [
+      "The 'Cisco Secure Client - AnyConnect VPN' installer appeared despite 'Core & AnyConnect VPN' being explicitly deselected in the install selector. This could be an intended part of an upgrade process to remove older versions, or an unexpected behavior for the technician's selection."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Local machine (implied by 'This PC > OS (C:)' in ScreenConnect File Manager)"
+    ],
+    "notable_events": [
+      "The file copy operation for the 135 MB ZIP file took approximately 43 seconds.",
+      "The technician changed component selections in the installer multiple times (initially all selected, then tried to select only Diagnostic And Reporting Tool, then Umbrella and Diagnostic And Reporting Tool)."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [
+        {
+          "timestamp": "0:04",
+          "duration": 43,
+          "details": "Waiting for the Cisco Secure Client zip file to copy to C:\\Users."
+        },
+        {
+          "timestamp": "1:06",
+          "duration": 1,
+          "details": "Waiting for 'Cisco Secure Client - Diagnostics and Reporting Tool' to configure."
+        },
+        {
+          "timestamp": "1:08",
+          "duration": 4,
+          "details": "Waiting for 'Cisco Secure Client - AnyConnect VPN' to configure/remove older versions."
+        }
+      ],
+      "idle_gap_count": 3,
+      "longest_idle_seconds": 43,
+      "total_idle_estimate_seconds": 48,
+      "efficiency_notes": "The technician proceeded methodically with the file transfer and installation initiation. There was a brief moment of indecision when choosing installer components, but the overall task flow was clear and direct.",
+      "coaching_flags": []
+    }
+  }
+}

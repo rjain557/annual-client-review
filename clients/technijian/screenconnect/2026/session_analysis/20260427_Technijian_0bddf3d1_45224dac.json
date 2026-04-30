@@ -1,0 +1,50 @@
+{
+  "filename_stem": "20260427_Technijian_0bddf3d1_45224dac",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260427_Technijian_0bddf3d1_45224dac.mp4",
+  "analyzed_at": "2026-04-30T20:48:02Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician first inspected Docker container statuses on a VM named TE-DC-MD-NC-02, noting several unhealthy Nextcloud AIO containers. They then used vSphere Client to rename the powered-off TE-DC-MD-NC-02 VM to TE-DC-MD-NC-02-DONT-TURNON and briefly checked the unresponsive console of another VM, TE-DC-MD-NC-02.1.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Inspected Docker container statuses on TE-DC-MD-NC-02 using `sudo docker ps`.\",\n    \"Accessed vSphere Client for virtual machine management.\",\n    \"Navigated to the TE-DC-MD-NC-02 VM within vSphere.\",\n    \"Renamed the powered-off TE-DC-MD-NC-02 VM to TE-DC-MD-NC-02-DONT-TURNON.\",\n    \"Checked the web console and summary for TE-DC-MD-NC-02.1 VM.\"\n  ],\n  \"applications_used\": [\n    \"Terminal/Shell\",\n    \"Web Browser (for vSphere Client)\"\n  ],\n  \"issues_observed\": [\n    \"Three Docker containers (`nextcloud-aio-nextcloud`, `nextcloud-aio-notify-push`, `nextcloud-aio-all-in-one-latest`) on TE-DC-MD-NC-02 were reported as 'unhealthy'.\",\n    \"The TE-DC-MD-NC-02.1 VM console displayed a black/unresponsive screen.\",\n    \"An alert indicated that 'VMware Tools is not installed' on TE-DC-MD-NC-02.1.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"TE-DC-MD-NC-02.1\",\n    \"172.16.9.252 (vSphere host/vCenter)\"\n  ],\n  \"notable_events\": [\n    \"Renaming a VM with 'DONT-TURNON' clearly indicates a specific operational instruction or status for that VM.\",\n    \"Observation of unhealthy Docker containers on TE-DC-MD-NC-02 before its renaming.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, quickly navigating to the required interfaces and performing the VM rename without hesitation. The initial Docker check was also direct.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician first inspected Docker container statuses on a VM named TE-DC-MD-NC-02, noting several unhealthy Nextcloud AIO containers. They then used vSphere Client to rename the powered-off TE-DC-MD-NC-02 VM to TE-DC-MD-NC-02-DONT-TURNON and briefly checked the unresponsive console of another VM, TE-DC-MD-NC-02.1.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Inspected Docker container statuses on TE-DC-MD-NC-02 using `sudo docker ps`.",
+      "Accessed vSphere Client for virtual machine management.",
+      "Navigated to the TE-DC-MD-NC-02 VM within vSphere.",
+      "Renamed the powered-off TE-DC-MD-NC-02 VM to TE-DC-MD-NC-02-DONT-TURNON.",
+      "Checked the web console and summary for TE-DC-MD-NC-02.1 VM."
+    ],
+    "applications_used": [
+      "Terminal/Shell",
+      "Web Browser (for vSphere Client)"
+    ],
+    "issues_observed": [
+      "Three Docker containers (`nextcloud-aio-nextcloud`, `nextcloud-aio-notify-push`, `nextcloud-aio-all-in-one-latest`) on TE-DC-MD-NC-02 were reported as 'unhealthy'.",
+      "The TE-DC-MD-NC-02.1 VM console displayed a black/unresponsive screen.",
+      "An alert indicated that 'VMware Tools is not installed' on TE-DC-MD-NC-02.1."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "TE-DC-MD-NC-02.1",
+      "172.16.9.252 (vSphere host/vCenter)"
+    ],
+    "notable_events": [
+      "Renaming a VM with 'DONT-TURNON' clearly indicates a specific operational instruction or status for that VM.",
+      "Observation of unhealthy Docker containers on TE-DC-MD-NC-02 before its renaming."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, quickly navigating to the required interfaces and performing the VM rename without hesitation. The initial Docker check was also direct.",
+      "coaching_flags": []
+    }
+  }
+}

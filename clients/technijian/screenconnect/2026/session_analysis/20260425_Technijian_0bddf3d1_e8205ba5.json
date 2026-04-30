@@ -1,0 +1,87 @@
+{
+  "filename_stem": "20260425_Technijian_0bddf3d1_e8205ba5",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_0bddf3d1_e8205ba5.mp4",
+  "analyzed_at": "2026-04-30T20:25:04Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a general system maintenance session on a Windows 11 laptop. Tasks included checking for Office and Windows updates, running various system diagnostic tools, performing disk cleanup and drive optimization, and adjusting numerous privacy, performance, and power settings. The technician also configured Storage Sense to aggressively delete old files.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Checked for Microsoft Office updates using OfficeClickToRun.exe.\",\n    \"Ran `ipconfig /all` in Command Prompt.\",\n    \"Initiated `sfc /scannow` but closed the command prompt before completion.\",\n    \"Reviewed System and Application logs in Event Viewer, filtered by time.\",\n    \"Inspected running services in the Services application.\",\n    \"Reviewed system hardware and software details using System Information (msinfo32).\",\n    \"Performed diagnostics using DirectX Diagnostic Tool (dxdiag).\",\n    \"Checked for Windows updates.\",\n    \"Created and deleted a temporary folder on the desktop.\",\n    \"Reviewed Display settings.\",\n    \"Monitored system performance and processes in Task Manager.\",\n    \"Reviewed installed programs in Control Panel.\",\n    \"Checked Windows version (winver).\",\n    \"Performed Disk Cleanup, including system files (Windows Update Cleanup, Defender Antivirus, Temporary files, Delivery Optimization Files).\",\n    \"Optimized/Trimmed the C: drive (SSD).\",\n    \"Adjusted various Privacy & Security settings (Activity history, Search permissions, General app permissions, Speech, Inking & typing personalization, Diagnostics & feedback).\",\n    \"Adjusted System Notifications.\",\n    \"Set Power & battery settings to 'Never' for screen and sleep on both battery and plugged-in power.\",\n    \"Manually removed temporary files via Storage settings.\",\n    \"Enabled and configured Storage Sense to run daily and delete Recycle Bin and Downloads folder files after 1 day.\",\n    \"Verified functionality of Microsoft Edge and Google Chrome browsers.\",\n    \"Typed 'Finished' in Notepad and closed without saving.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"OfficeClickToRun.exe\",\n    \"Command Prompt\",\n    \"Event Viewer\",\n    \"Services\",\n    \"System Information (msinfo32)\",\n    \"DirectX Diagnostic Tool (dxdiag)\",\n    \"Windows Update Settings\",\n    \"Settings App\",\n    \"Task Manager\",\n    \"Control Panel\",\n    \"About Windows (winver)\",\n    \"Disk Cleanup\",\n    \"Optimize Drives\",\n    \"Microsoft Edge\",\n    \"Google Chrome\",\n    \"Notepad\"\n  ],\n  \"issues_observed\": [\n    \"The `sfc /scannow` command was started but the Command Prompt window was closed within ~3 seconds, preventing the scan from completing.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"LAPTOP-002138L9\"\n  ],\n  \"notable_events\": [\n    \"A user profile named 'Technijian' was observed on the client machine, which the technician navigated through.\",\n    \"The Storage Sense setting was configured to delete files from the Downloads folder after only 1 day of inactivity, which is an aggressive setting that could lead to unexpected data loss for the user if not communicated clearly.\",\n    \"Power settings were changed to 'Never' for screen and sleep, which is unusual for a laptop and might impact battery life if not explicitly requested by the client.\"\n  ],\n  \"concerns\": [\n    \"The `sfc /scannow` command was not allowed to complete, leaving a potential system file integrity check unfinished.\",\n    \"The aggressive Storage Sense configuration (1-day deletion for Downloads folder) could lead to unintended data loss for the client.\",\n    \"Changing screen/sleep settings to 'Never' on a laptop could lead to increased power consumption and screen burn-in if not specifically requested or understood by the client.\"\n  ],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, navigating quickly between various system tools and settings to perform a comprehensive maintenance routine. There was no apparent hesitation or uncertainty in their actions.\",\n    \"coaching_flags\": [\n      \"Ensure `sfc /scannow` is allowed to complete when initiated, or document the reason for prematurely closing it.\",\n      \"Advise clients on the implications of aggressive Storage Sense settings (e.g., 1-day deletion for Downloads) to prevent accidental data loss.\",\n      \"Confirm client's explicit preference before setting screen/sleep power options to 'Never', especially on a laptop.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a general system maintenance session on a Windows 11 laptop. Tasks included checking for Office and Windows updates, running various system diagnostic tools, performing disk cleanup and drive optimization, and adjusting numerous privacy, performance, and power settings. The technician also configured Storage Sense to aggressively delete old files.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Checked for Microsoft Office updates using OfficeClickToRun.exe.",
+      "Ran `ipconfig /all` in Command Prompt.",
+      "Initiated `sfc /scannow` but closed the command prompt before completion.",
+      "Reviewed System and Application logs in Event Viewer, filtered by time.",
+      "Inspected running services in the Services application.",
+      "Reviewed system hardware and software details using System Information (msinfo32).",
+      "Performed diagnostics using DirectX Diagnostic Tool (dxdiag).",
+      "Checked for Windows updates.",
+      "Created and deleted a temporary folder on the desktop.",
+      "Reviewed Display settings.",
+      "Monitored system performance and processes in Task Manager.",
+      "Reviewed installed programs in Control Panel.",
+      "Checked Windows version (winver).",
+      "Performed Disk Cleanup, including system files (Windows Update Cleanup, Defender Antivirus, Temporary files, Delivery Optimization Files).",
+      "Optimized/Trimmed the C: drive (SSD).",
+      "Adjusted various Privacy & Security settings (Activity history, Search permissions, General app permissions, Speech, Inking & typing personalization, Diagnostics & feedback).",
+      "Adjusted System Notifications.",
+      "Set Power & battery settings to 'Never' for screen and sleep on both battery and plugged-in power.",
+      "Manually removed temporary files via Storage settings.",
+      "Enabled and configured Storage Sense to run daily and delete Recycle Bin and Downloads folder files after 1 day.",
+      "Verified functionality of Microsoft Edge and Google Chrome browsers.",
+      "Typed 'Finished' in Notepad and closed without saving."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "OfficeClickToRun.exe",
+      "Command Prompt",
+      "Event Viewer",
+      "Services",
+      "System Information (msinfo32)",
+      "DirectX Diagnostic Tool (dxdiag)",
+      "Windows Update Settings",
+      "Settings App",
+      "Task Manager",
+      "Control Panel",
+      "About Windows (winver)",
+      "Disk Cleanup",
+      "Optimize Drives",
+      "Microsoft Edge",
+      "Google Chrome",
+      "Notepad"
+    ],
+    "issues_observed": [
+      "The `sfc /scannow` command was started but the Command Prompt window was closed within ~3 seconds, preventing the scan from completing."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "LAPTOP-002138L9"
+    ],
+    "notable_events": [
+      "A user profile named 'Technijian' was observed on the client machine, which the technician navigated through.",
+      "The Storage Sense setting was configured to delete files from the Downloads folder after only 1 day of inactivity, which is an aggressive setting that could lead to unexpected data loss for the user if not communicated clearly.",
+      "Power settings were changed to 'Never' for screen and sleep, which is unusual for a laptop and might impact battery life if not explicitly requested by the client."
+    ],
+    "concerns": [
+      "The `sfc /scannow` command was not allowed to complete, leaving a potential system file integrity check unfinished.",
+      "The aggressive Storage Sense configuration (1-day deletion for Downloads folder) could lead to unintended data loss for the client.",
+      "Changing screen/sleep settings to 'Never' on a laptop could lead to increased power consumption and screen burn-in if not specifically requested or understood by the client."
+    ],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, navigating quickly between various system tools and settings to perform a comprehensive maintenance routine. There was no apparent hesitation or uncertainty in their actions.",
+      "coaching_flags": [
+        "Ensure `sfc /scannow` is allowed to complete when initiated, or document the reason for prematurely closing it.",
+        "Advise clients on the implications of aggressive Storage Sense settings (e.g., 1-day deletion for Downloads) to prevent accidental data loss.",
+        "Confirm client's explicit preference before setting screen/sleep power options to 'Never', especially on a laptop."
+      ]
+    }
+  }
+}

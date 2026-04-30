@@ -1,0 +1,47 @@
+{
+  "filename_stem": "20260426_Technijian_7b41ae21_60cd50f3",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_7b41ae21_60cd50f3.mp4",
+  "analyzed_at": "2026-04-30T20:44:47Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a client computer and opened File Explorer to the Downloads folder. They right-clicked on a Sophos firewall backup file but did not perform any further action on it before closing File Explorer. Throughout the session, a browser window was open displaying a Sophos Firewall login page.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Opened File Explorer\",\n    \"Navigated to the Downloads folder\",\n    \"Right-clicked on a Sophos firewall backup file ('TE-H2_Backup_C200107V074RF1_XMFS-21.5-MR-1-Build201_26Apr2024.tar')\",\n    \"Closed File Explorer\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"The Sophos Firewall login page was flagged as 'Not secure' in the browser, indicating a potential security concern with the connection to the firewall's administrative interface.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"VAF-HQ-UCS-01\",\n    \"192.168.1.1 (Sophos Firewall)\"\n  ],\n  \"notable_events\": [\n    \"The technician right-clicked on a backup file in the Downloads folder but did not select any action from the context menu before closing File Explorer.\"\n  ],\n  \"concerns\": [\n    \"Accessing the Sophos Firewall administrative interface via a 'Not secure' connection (HTTP or untrusted HTTPS certificate) poses a security risk.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician performed a few quick, direct actions within File Explorer, indicating a clear, albeit brief, intent.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a client computer and opened File Explorer to the Downloads folder. They right-clicked on a Sophos firewall backup file but did not perform any further action on it before closing File Explorer. Throughout the session, a browser window was open displaying a Sophos Firewall login page.",
+    "session_type": "other",
+    "actions_taken": [
+      "Opened File Explorer",
+      "Navigated to the Downloads folder",
+      "Right-clicked on a Sophos firewall backup file ('TE-H2_Backup_C200107V074RF1_XMFS-21.5-MR-1-Build201_26Apr2024.tar')",
+      "Closed File Explorer"
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "The Sophos Firewall login page was flagged as 'Not secure' in the browser, indicating a potential security concern with the connection to the firewall's administrative interface."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "VAF-HQ-UCS-01",
+      "192.168.1.1 (Sophos Firewall)"
+    ],
+    "notable_events": [
+      "The technician right-clicked on a backup file in the Downloads folder but did not select any action from the context menu before closing File Explorer."
+    ],
+    "concerns": [
+      "Accessing the Sophos Firewall administrative interface via a 'Not secure' connection (HTTP or untrusted HTTPS certificate) poses a security risk."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician performed a few quick, direct actions within File Explorer, indicating a clear, albeit brief, intent.",
+      "coaching_flags": []
+    }
+  }
+}

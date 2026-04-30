@@ -1,0 +1,72 @@
+{
+  "filename_stem": "20260426_Technijian_0c8be608_97863bb8",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0c8be608_97863bb8.mp4",
+  "analyzed_at": "2026-04-30T20:42:58Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician reviewed multiple SQL server backup directories stored in OneDrive, systematically checking daily zipped backup files. They observed several instances of unusually small (e.g., 1KB) backup files across different SQL instances, indicating potential backup failures. OneDrive notifications about recently deleted files were also briefly visible.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened File Explorer.\",\n    \"Navigated to the 'OneDrive - Technijian, Inc' root folder.\",\n    \"Inspected the contents of the 'Backup Repo - 3CX Backups' folder.\",\n    \"Navigated to the 'Documents' folder within OneDrive.\",\n    \"Systematically opened and reviewed daily SQL backup files (zipped) in multiple subfolders (CCC-DC-SQL-02, ORX-DC-SQL-02, ORX-DC-SQL-03, SQL Server Management Studio, TE-CI-SQL-01, TE-OC-CP-SQL, TE-OC-CP-SQL-01, TE-OC-CP-SQL-02, TE-DC-HRZ-SQ1-01, TE-DC-MYRMM-SQL, TE-DC-OPSDB-01, TE-DC-TL-SQL, TE-DC-TL-SQL-02, TE-DC-VOSQL-01, TE-HQ-SQL-01).\",\n    \"Sorted backup files by size in 'ORX-DC-SQL-02' and 'TE-DC-VOSQL-01' folders to identify size anomalies.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"OneDrive\"\n  ],\n  \"issues_observed\": [\n    \"Multiple SQL backup files (zipped) were found to be extremely small (e.g., 1KB) in folders such as 'TE-CI-SQL-01', 'TE-DC-HRZ-SQ1-01', 'TE-DC-MYRMM-SQL', and 'TE-DC-VOSQL-01', strongly indicating failed or incomplete backups.\",\n    \"Folders named 'SQL Server Management Studio' and 'TE-DC-OPSDB-01' within the Documents directory were empty.\",\n    \"OneDrive notifications briefly appeared, indicating recent deletion of backup files.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Client computer (desktop)\",\n    \"CCC-DC-SQL-02\",\n    \"ORX-DC-SQL-02\",\n    \"ORX-DC-SQL-03\",\n    \"TE-CI-SQL-01\",\n    \"TE-OC-CP-SQL\",\n    \"TE-OC-CP-SQL-01\",\n    \"TE-OC-CP-SQL-02\",\n    \"TE-DC-HRZ-SQ1-01\",\n    \"TE-DC-MYRMM-SQL\",\n    \"TE-DC-OPSDB-01\",\n    \"TE-DC-TL-SQL\",\n    \"TE-DC-TL-SQL-02\",\n    \"TE-DC-VOSQL-01\",\n    \"TE-HQ-SQL-01\",\n    \"tartano (mentioned in OneDrive notification)\"\n  ],\n  \"notable_events\": [\n    \"Numerous backup files were observed with an anomalous size of 1KB, indicating potential data integrity issues with the backup process.\",\n    \"OneDrive notifications appeared on screen mentioning 'Deleted from tartano...' for several backup files, raising questions about data retention or unintended deletions.\",\n    \"All backup file timestamps and names consistently included the year '2026', implying the system clock is set to a future date or the recording is a historical capture.\"\n  ],\n  \"concerns\": [\n    \"Data Integrity/Loss: The prevalence of 1KB backup files suggests severe data loss risk due to failed or incomplete SQL backups, requiring immediate investigation and remediation.\",\n    \"Backup Monitoring: The continued presence of these clearly problematic backup files implies that existing backup monitoring mechanisms might be insufficient or not properly alerting to these critical failures.\",\n    \"Data Retention/Deletion: The OneDrive notifications about deleted backup files could indicate an issue with retention policies, accidental deletions, or an unmanaged automated process.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, systematically navigating through various backup folders and applying sorting by size to efficiently identify potential issues.\",\n    \"coaching_flags\": [\n      \"The technician did not visibly acknowledge or initiate immediate follow-up action on the critical observation of numerous 1KB backup files, which are strong indicators of backup failures. This issue should ideally trigger further investigation within the session or a documented plan for next steps.\",\n      \"The OneDrive notifications about deleted backup files were not addressed or acknowledged, despite their potential relevance to backup integrity.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician reviewed multiple SQL server backup directories stored in OneDrive, systematically checking daily zipped backup files. They observed several instances of unusually small (e.g., 1KB) backup files across different SQL instances, indicating potential backup failures. OneDrive notifications about recently deleted files were also briefly visible.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened File Explorer.",
+      "Navigated to the 'OneDrive - Technijian, Inc' root folder.",
+      "Inspected the contents of the 'Backup Repo - 3CX Backups' folder.",
+      "Navigated to the 'Documents' folder within OneDrive.",
+      "Systematically opened and reviewed daily SQL backup files (zipped) in multiple subfolders (CCC-DC-SQL-02, ORX-DC-SQL-02, ORX-DC-SQL-03, SQL Server Management Studio, TE-CI-SQL-01, TE-OC-CP-SQL, TE-OC-CP-SQL-01, TE-OC-CP-SQL-02, TE-DC-HRZ-SQ1-01, TE-DC-MYRMM-SQL, TE-DC-OPSDB-01, TE-DC-TL-SQL, TE-DC-TL-SQL-02, TE-DC-VOSQL-01, TE-HQ-SQL-01).",
+      "Sorted backup files by size in 'ORX-DC-SQL-02' and 'TE-DC-VOSQL-01' folders to identify size anomalies."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "OneDrive"
+    ],
+    "issues_observed": [
+      "Multiple SQL backup files (zipped) were found to be extremely small (e.g., 1KB) in folders such as 'TE-CI-SQL-01', 'TE-DC-HRZ-SQ1-01', 'TE-DC-MYRMM-SQL', and 'TE-DC-VOSQL-01', strongly indicating failed or incomplete backups.",
+      "Folders named 'SQL Server Management Studio' and 'TE-DC-OPSDB-01' within the Documents directory were empty.",
+      "OneDrive notifications briefly appeared, indicating recent deletion of backup files."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Client computer (desktop)",
+      "CCC-DC-SQL-02",
+      "ORX-DC-SQL-02",
+      "ORX-DC-SQL-03",
+      "TE-CI-SQL-01",
+      "TE-OC-CP-SQL",
+      "TE-OC-CP-SQL-01",
+      "TE-OC-CP-SQL-02",
+      "TE-DC-HRZ-SQ1-01",
+      "TE-DC-MYRMM-SQL",
+      "TE-DC-OPSDB-01",
+      "TE-DC-TL-SQL",
+      "TE-DC-TL-SQL-02",
+      "TE-DC-VOSQL-01",
+      "TE-HQ-SQL-01",
+      "tartano (mentioned in OneDrive notification)"
+    ],
+    "notable_events": [
+      "Numerous backup files were observed with an anomalous size of 1KB, indicating potential data integrity issues with the backup process.",
+      "OneDrive notifications appeared on screen mentioning 'Deleted from tartano...' for several backup files, raising questions about data retention or unintended deletions.",
+      "All backup file timestamps and names consistently included the year '2026', implying the system clock is set to a future date or the recording is a historical capture."
+    ],
+    "concerns": [
+      "Data Integrity/Loss: The prevalence of 1KB backup files suggests severe data loss risk due to failed or incomplete SQL backups, requiring immediate investigation and remediation.",
+      "Backup Monitoring: The continued presence of these clearly problematic backup files implies that existing backup monitoring mechanisms might be insufficient or not properly alerting to these critical failures.",
+      "Data Retention/Deletion: The OneDrive notifications about deleted backup files could indicate an issue with retention policies, accidental deletions, or an unmanaged automated process."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, systematically navigating through various backup folders and applying sorting by size to efficiently identify potential issues.",
+      "coaching_flags": [
+        "The technician did not visibly acknowledge or initiate immediate follow-up action on the critical observation of numerous 1KB backup files, which are strong indicators of backup failures. This issue should ideally trigger further investigation within the session or a documented plan for next steps.",
+        "The OneDrive notifications about deleted backup files were not addressed or acknowledged, despite their potential relevance to backup integrity."
+      ]
+    }
+  }
+}

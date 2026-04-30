@@ -1,0 +1,59 @@
+{
+  "filename_stem": "20260428_Technijian_7bd5417f_b261ee0e",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260428_Technijian_7bd5417f_b261ee0e.mp4",
+  "analyzed_at": "2026-04-30T20:54:35Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician launched Server Manager, closed it without making changes, then launched Docker Desktop. After waiting for the Docker engine to start, they attempted to access a local Docker container (`n8n-docker`) via a web browser, which resulted in a connection error (`ERR_EMPTY_RESPONSE`). The technician then closed the browser and Docker Desktop.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Opened Server Manager and accepted network discovery prompt.\",\n    \"Closed Server Manager.\",\n    \"Opened Docker Desktop application.\",\n    \"Waited for Docker Engine to start and load containers.\",\n    \"Clicked on the forwarded port link (8443:8443) for the `n8n-docker` container, opening a browser tab to `http://localhost:8443`.\",\n    \"Observed a browser error page ('This page isn't working').\",\n    \"Closed the browser tab.\",\n    \"Closed Docker Desktop application.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Docker Desktop\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Docker Desktop displayed a notification that a new version (4.7.1.0) was available and the current version was 88 days old.\",\n    \"Accessing `http://localhost:8443` (for the `n8n-docker` container) in Google Chrome resulted in an 'ERR_EMPTY_RESPONSE' error, stating 'This page isn't working localhost didn't send any data'.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"localhost\"\n  ],\n  \"notable_events\": [\n    \"The Docker Desktop update notification was present but not acted upon.\",\n    \"The web page error for the Docker container was encountered but no troubleshooting steps were initiated to resolve it.\"\n  ],\n  \"concerns\": [\n    \"The technician opened Server Manager but performed no relevant actions within it, suggesting an unnecessary step or an accidental opening.\",\n    \"The observed `ERR_EMPTY_RESPONSE` issue with the Docker container was not investigated or resolved.\",\n    \"The available Docker Desktop update was ignored.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician seemed to follow a direct sequence of actions (open Docker, click link, observe result), but did not perform any diagnostic steps or attempt to resolve the observed issue. The initial opening of Server Manager was an unexplained and unproductive action.\",\n    \"coaching_flags\": [\n      \"Did not investigate or attempt to resolve the 'ERR_EMPTY_RESPONSE' encountered when accessing the Docker container.\",\n      \"Did not address the visible Docker Desktop update notification.\",\n      \"Opened Server Manager but closed it without performing any meaningful work or configuration within it.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician launched Server Manager, closed it without making changes, then launched Docker Desktop. After waiting for the Docker engine to start, they attempted to access a local Docker container (`n8n-docker`) via a web browser, which resulted in a connection error (`ERR_EMPTY_RESPONSE`). The technician then closed the browser and Docker Desktop.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Opened Server Manager and accepted network discovery prompt.",
+      "Closed Server Manager.",
+      "Opened Docker Desktop application.",
+      "Waited for Docker Engine to start and load containers.",
+      "Clicked on the forwarded port link (8443:8443) for the `n8n-docker` container, opening a browser tab to `http://localhost:8443`.",
+      "Observed a browser error page ('This page isn't working').",
+      "Closed the browser tab.",
+      "Closed Docker Desktop application."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Docker Desktop",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Docker Desktop displayed a notification that a new version (4.7.1.0) was available and the current version was 88 days old.",
+      "Accessing `http://localhost:8443` (for the `n8n-docker` container) in Google Chrome resulted in an 'ERR_EMPTY_RESPONSE' error, stating 'This page isn't working localhost didn't send any data'."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "localhost"
+    ],
+    "notable_events": [
+      "The Docker Desktop update notification was present but not acted upon.",
+      "The web page error for the Docker container was encountered but no troubleshooting steps were initiated to resolve it."
+    ],
+    "concerns": [
+      "The technician opened Server Manager but performed no relevant actions within it, suggesting an unnecessary step or an accidental opening.",
+      "The observed `ERR_EMPTY_RESPONSE` issue with the Docker container was not investigated or resolved.",
+      "The available Docker Desktop update was ignored."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician seemed to follow a direct sequence of actions (open Docker, click link, observe result), but did not perform any diagnostic steps or attempt to resolve the observed issue. The initial opening of Server Manager was an unexplained and unproductive action.",
+      "coaching_flags": [
+        "Did not investigate or attempt to resolve the 'ERR_EMPTY_RESPONSE' encountered when accessing the Docker container.",
+        "Did not address the visible Docker Desktop update notification.",
+        "Opened Server Manager but closed it without performing any meaningful work or configuration within it."
+      ]
+    }
+  }
+}

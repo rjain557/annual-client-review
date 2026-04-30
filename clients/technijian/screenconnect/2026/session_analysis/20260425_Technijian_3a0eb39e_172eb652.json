@@ -1,0 +1,66 @@
+{
+  "filename_stem": "20260425_Technijian_3a0eb39e_172eb652",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_3a0eb39e_172eb652.mp4",
+  "analyzed_at": "2026-04-30T20:30:37Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed a general system maintenance check-up on a client computer. This included verifying Windows updates, reviewing system information, installed applications, network configuration, and event logs. The technician also ensured the TeamViewer service was set to automatic startup and changed the network profile from public to private.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Changed TeamViewer service startup type to 'Automatic' and started the service.\",\n    \"Changed network profile from 'Public network' to 'Private network'.\",\n    \"Reviewed Windows Update status (found system up to date).\",\n    \"Checked system information via 'msinfo32'.\",\n    \"Reviewed installed programs in Control Panel.\",\n    \"Verified network configuration using 'ipconfig /all'.\",\n    \"Filtered and reviewed System and Application Event Logs for Warnings and Errors.\",\n    \"Rebooted the computer to confirm changes and re-verified TeamViewer service status.\",\n    \"Checked Windows Defender Firewall status.\",\n    \"Attempted Disk Cleanup (found no files to clean).\",\n    \"Opened and closed various system settings and applications for inspection (e.g., Chrome, File Explorer, Display/Personalization settings, Taskbar settings).\"\n  ],\n  \"applications_used\": [\n    \"Services\",\n    \"Windows Update\",\n    \"System Information (msinfo32)\",\n    \"Control Panel\",\n    \"Programs and Features\",\n    \"Command Prompt (cmd)\",\n    \"Disk Cleanup\",\n    \"Event Viewer\",\n    \"Google Chrome\",\n    \"File Explorer\",\n    \"Windows Settings (Display, Personalization, Network & Internet, Taskbar)\",\n    \"TeamViewer\",\n    \"Windows Defender Firewall\"\n  ],\n  \"issues_observed\": [\n    \"TeamViewer service was initially not set to 'Automatic' startup and was not running.\",\n    \"Network profile was set to 'Public network' initially.\"\n  ],\n  \"issues_resolved\": [\n    \"TeamViewer service startup type changed to 'Automatic' and service started successfully.\",\n    \"Network profile changed from 'Public' to 'Private'.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The computer displayed 'Getting Windows ready' at the start of the session and again after a technician-initiated reboot, indicating system updates or pending tasks.\",\n    \"The Disk Cleanup utility found no files to clean, suggesting the system was already well-maintained.\",\n    \"The technician performed a reboot (2:23-2:33) to ensure changes took effect and to re-verify system state.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, proceeding through a clear checklist of system checks and adjustments without hesitation or wasted time.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed a general system maintenance check-up on a client computer. This included verifying Windows updates, reviewing system information, installed applications, network configuration, and event logs. The technician also ensured the TeamViewer service was set to automatic startup and changed the network profile from public to private.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Changed TeamViewer service startup type to 'Automatic' and started the service.",
+      "Changed network profile from 'Public network' to 'Private network'.",
+      "Reviewed Windows Update status (found system up to date).",
+      "Checked system information via 'msinfo32'.",
+      "Reviewed installed programs in Control Panel.",
+      "Verified network configuration using 'ipconfig /all'.",
+      "Filtered and reviewed System and Application Event Logs for Warnings and Errors.",
+      "Rebooted the computer to confirm changes and re-verified TeamViewer service status.",
+      "Checked Windows Defender Firewall status.",
+      "Attempted Disk Cleanup (found no files to clean).",
+      "Opened and closed various system settings and applications for inspection (e.g., Chrome, File Explorer, Display/Personalization settings, Taskbar settings)."
+    ],
+    "applications_used": [
+      "Services",
+      "Windows Update",
+      "System Information (msinfo32)",
+      "Control Panel",
+      "Programs and Features",
+      "Command Prompt (cmd)",
+      "Disk Cleanup",
+      "Event Viewer",
+      "Google Chrome",
+      "File Explorer",
+      "Windows Settings (Display, Personalization, Network & Internet, Taskbar)",
+      "TeamViewer",
+      "Windows Defender Firewall"
+    ],
+    "issues_observed": [
+      "TeamViewer service was initially not set to 'Automatic' startup and was not running.",
+      "Network profile was set to 'Public network' initially."
+    ],
+    "issues_resolved": [
+      "TeamViewer service startup type changed to 'Automatic' and service started successfully.",
+      "Network profile changed from 'Public' to 'Private'."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The computer displayed 'Getting Windows ready' at the start of the session and again after a technician-initiated reboot, indicating system updates or pending tasks.",
+      "The Disk Cleanup utility found no files to clean, suggesting the system was already well-maintained.",
+      "The technician performed a reboot (2:23-2:33) to ensure changes took effect and to re-verify system state."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, proceeding through a clear checklist of system checks and adjustments without hesitation or wasted time.",
+      "coaching_flags": []
+    }
+  }
+}

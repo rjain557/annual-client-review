@@ -1,0 +1,65 @@
+{
+  "filename_stem": "20260426_Technijian_1b1e1358_d8545779",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_1b1e1358_d8545779.mp4",
+  "analyzed_at": "2026-04-30T20:44:02Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a Windows Server to manually execute a PowerShell backup script. The script compressed SQL backup files and then initiated their synchronization to a OneDrive folder. The technician monitored the file compression and subsequent upload progress within File Explorer.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Navigated to Server Manager and dismissed the Shutdown Event Tracker.\",\n    \"Opened File Explorer and navigated to the 'BACK UP TASK FOLDER' on drive F:.\",\n    \"Executed the 'backup-script' PowerShell script from 'Step-2 Task Scheduler Script' folder.\",\n    \"Monitored the PowerShell script output indicating backup job start and zip file creation.\",\n    \"Navigated to the target OneDrive folder (F:\\\\OneDrive - Technijian, Inc\\\\Documents\\\\TE-DC-TL-SQL-02) to observe the newly created zip file's size increasing as it synced.\",\n    \"After the initial file completed syncing, the technician identified an older backup file in the source folder and monitored its transfer to OneDrive.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"File Explorer\",\n    \"Windows PowerShell\",\n    \"OneDrive\"\n  ],\n  \"issues_observed\": [\n    \"A 'Shutdown Event Tracker' dialog appeared upon desktop load, indicating an unexpected previous shutdown.\",\n    \"OneDrive was actively syncing large files in the background, which impacted the speed of file upload observed during the session.\"\n  ],\n  \"issues_resolved\": [\n    \"The 'Shutdown Event Tracker' dialog was dismissed.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-TL-SQL-02\",\n    \"TE-DC-VOSQL-01\",\n    \"TE-HQ-SQL-01\",\n    \"CCC-DC-SQL-02\",\n    \"ORX-DC-SQL-02\",\n    \"ORX-DC-SQL-03\",\n    \"TE-CL-SQL-01\",\n    \"TE-DC-CP-SQL-01\",\n    \"TE-DC-CP-SQL-02\",\n    \"TE-DC-CP-SQL-03\",\n    \"TE-DC-HRZ-SQL-01\",\n    \"TE-DC-HZXMM-SQL\",\n    \"TE-DC-TL-SQL-01\",\n    \"TE-DC-TL-SQL\"\n  ],\n  \"notable_events\": [\n    \"The session included significant periods of waiting for large compressed backup files (up to ~7 GB) to be uploaded and synced by OneDrive.\",\n    \"The OneDrive sync process was observed updating file sizes in real-time within File Explorer.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician efficiently navigated to the required script and executed it. The majority of the session involved actively monitoring the file compression and subsequent OneDrive synchronization process, which is inherent to the task and not indicative of inefficiency.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a Windows Server to manually execute a PowerShell backup script. The script compressed SQL backup files and then initiated their synchronization to a OneDrive folder. The technician monitored the file compression and subsequent upload progress within File Explorer.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Navigated to Server Manager and dismissed the Shutdown Event Tracker.",
+      "Opened File Explorer and navigated to the 'BACK UP TASK FOLDER' on drive F:.",
+      "Executed the 'backup-script' PowerShell script from 'Step-2 Task Scheduler Script' folder.",
+      "Monitored the PowerShell script output indicating backup job start and zip file creation.",
+      "Navigated to the target OneDrive folder (F:\\OneDrive - Technijian, Inc\\Documents\\TE-DC-TL-SQL-02) to observe the newly created zip file's size increasing as it synced.",
+      "After the initial file completed syncing, the technician identified an older backup file in the source folder and monitored its transfer to OneDrive."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "File Explorer",
+      "Windows PowerShell",
+      "OneDrive"
+    ],
+    "issues_observed": [
+      "A 'Shutdown Event Tracker' dialog appeared upon desktop load, indicating an unexpected previous shutdown.",
+      "OneDrive was actively syncing large files in the background, which impacted the speed of file upload observed during the session."
+    ],
+    "issues_resolved": [
+      "The 'Shutdown Event Tracker' dialog was dismissed."
+    ],
+    "machines_touched": [
+      "TE-DC-TL-SQL-02",
+      "TE-DC-VOSQL-01",
+      "TE-HQ-SQL-01",
+      "CCC-DC-SQL-02",
+      "ORX-DC-SQL-02",
+      "ORX-DC-SQL-03",
+      "TE-CL-SQL-01",
+      "TE-DC-CP-SQL-01",
+      "TE-DC-CP-SQL-02",
+      "TE-DC-CP-SQL-03",
+      "TE-DC-HRZ-SQL-01",
+      "TE-DC-HZXMM-SQL",
+      "TE-DC-TL-SQL-01",
+      "TE-DC-TL-SQL"
+    ],
+    "notable_events": [
+      "The session included significant periods of waiting for large compressed backup files (up to ~7 GB) to be uploaded and synced by OneDrive.",
+      "The OneDrive sync process was observed updating file sizes in real-time within File Explorer."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician efficiently navigated to the required script and executed it. The majority of the session involved actively monitoring the file compression and subsequent OneDrive synchronization process, which is inherent to the task and not indicative of inefficiency.",
+      "coaching_flags": []
+    }
+  }
+}

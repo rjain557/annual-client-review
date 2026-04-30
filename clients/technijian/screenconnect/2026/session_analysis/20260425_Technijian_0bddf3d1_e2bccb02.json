@@ -1,0 +1,44 @@
+{
+  "filename_stem": "20260425_Technijian_0bddf3d1_e2bccb02",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_0bddf3d1_e2bccb02.mp4",
+  "analyzed_at": "2026-04-30T20:24:15Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician reviewed the network adapter settings for a virtual machine named TE-DC-MD-NC-02.1, checking parameters like the connected network, adapter type, and DirectPath I/O settings for both Network Adapter 1 and Network Adapter 2. Subsequently, they briefly navigated between two virtual machines, TE-DC-MD-NC-02.1 and TE-DC-MD-NC-02, within the vSphere client.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Opened 'Edit Settings' for virtual machine TE-DC-MD-NC-02.1\",\n    \"Reviewed detailed settings for Network adapter 1 (DPG-254-Technijan)\",\n    \"Reviewed detailed settings for Network adapter 2 (DPG-iSCSI-B)\",\n    \"Closed the 'Edit Settings' dialog\",\n    \"Navigated to the summary page of virtual machine TE-DC-MD-NC-02\",\n    \"Navigated back to the summary page of virtual machine TE-DC-MD-NC-02.1\"\n  ],\n  \"applications_used\": [\n    \"vSphere Client (web interface)\"\n  ],\n  \"issues_observed\": [\n    \"A warning indicating 'VMware Tools is not installed on this virtual machine' was visible for both TE-DC-MD-NC-02.1 and TE-DC-MD-NC-02.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02.1\",\n    \"TE-DC-MD-NC-02\"\n  ],\n  \"notable_events\": [],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician methodically reviewed the network adapter settings for the VM and then navigated between two virtual machines in a straightforward manner.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician reviewed the network adapter settings for a virtual machine named TE-DC-MD-NC-02.1, checking parameters like the connected network, adapter type, and DirectPath I/O settings for both Network Adapter 1 and Network Adapter 2. Subsequently, they briefly navigated between two virtual machines, TE-DC-MD-NC-02.1 and TE-DC-MD-NC-02, within the vSphere client.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Opened 'Edit Settings' for virtual machine TE-DC-MD-NC-02.1",
+      "Reviewed detailed settings for Network adapter 1 (DPG-254-Technijan)",
+      "Reviewed detailed settings for Network adapter 2 (DPG-iSCSI-B)",
+      "Closed the 'Edit Settings' dialog",
+      "Navigated to the summary page of virtual machine TE-DC-MD-NC-02",
+      "Navigated back to the summary page of virtual machine TE-DC-MD-NC-02.1"
+    ],
+    "applications_used": [
+      "vSphere Client (web interface)"
+    ],
+    "issues_observed": [
+      "A warning indicating 'VMware Tools is not installed on this virtual machine' was visible for both TE-DC-MD-NC-02.1 and TE-DC-MD-NC-02."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02.1",
+      "TE-DC-MD-NC-02"
+    ],
+    "notable_events": [],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician methodically reviewed the network adapter settings for the VM and then navigated between two virtual machines in a straightforward manner.",
+      "coaching_flags": []
+    }
+  }
+}

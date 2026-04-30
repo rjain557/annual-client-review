@@ -1,0 +1,45 @@
+{
+  "filename_stem": "20260428_Technijian_0bddf3d1_a205b72e",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260428_Technijian_0bddf3d1_a205b72e.mp4",
+  "analyzed_at": "2026-04-30T20:52:14Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a Nextcloud AIO Docker container to inspect its configuration file using `vim`. They verified external network connectivity from within the container using `curl` to `login.microsoftonline.com`. The session concluded with the technician opening the Downloads folder on the local machine.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Opened a shell inside the 'nextcloud-aio-nextcloud' Docker container using `docker exec`.\",\n    \"Opened and reviewed the `config.php` file of Nextcloud using `vim`.\",\n    \"Tested external network connectivity from within the Docker container using the `curl` command to a Microsoft login URL.\",\n    \"Opened File Explorer on the local machine and navigated to the Downloads folder.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"vim\",\n    \"curl\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02\",\n    \"nextcloud-aio-nextcloud\"\n  ],\n  \"notable_events\": [\n    \"The technician specifically reviewed the 'overwritehost', 'overwriteprotocol', and 'datadirectory' parameters within the Nextcloud `config.php` file.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically and purposefully, executing commands and reviewing output without noticeable hesitation or inefficiency.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a Nextcloud AIO Docker container to inspect its configuration file using `vim`. They verified external network connectivity from within the container using `curl` to `login.microsoftonline.com`. The session concluded with the technician opening the Downloads folder on the local machine.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Opened a shell inside the 'nextcloud-aio-nextcloud' Docker container using `docker exec`.",
+      "Opened and reviewed the `config.php` file of Nextcloud using `vim`.",
+      "Tested external network connectivity from within the Docker container using the `curl` command to a Microsoft login URL.",
+      "Opened File Explorer on the local machine and navigated to the Downloads folder."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "vim",
+      "curl",
+      "File Explorer"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-MD-NC-02",
+      "nextcloud-aio-nextcloud"
+    ],
+    "notable_events": [
+      "The technician specifically reviewed the 'overwritehost', 'overwriteprotocol', and 'datadirectory' parameters within the Nextcloud `config.php` file."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically and purposefully, executing commands and reviewing output without noticeable hesitation or inefficiency.",
+      "coaching_flags": []
+    }
+  }
+}

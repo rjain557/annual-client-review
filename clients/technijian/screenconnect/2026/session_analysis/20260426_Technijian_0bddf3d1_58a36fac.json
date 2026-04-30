@@ -1,0 +1,57 @@
+{
+  "filename_stem": "20260426_Technijian_0bddf3d1_58a36fac",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260426_Technijian_0bddf3d1_58a36fac.mp4",
+  "analyzed_at": "2026-04-30T20:36:28Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client's Linux virtual machine (VM) via SSH using PuTTY, reviewed running Docker containers, and then accessed the vSphere Client to rename another VM. The VM was renamed with a 'DO-NOT-TURN-ON' prefix, and the technician then corrected the naming format to append the prefix instead.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Re-established an SSH connection to a Linux VM (`10.100.254.241`) using PuTTY after an initial connection abort.\",\n    \"Executed `sudo docker ps` to list running Docker containers on the Linux VM.\",\n    \"Renamed the vSphere VM `TE-DC-MD-NC-02` to `DO-NOT-TURN-ON-TE-DC-MD-NC-02`.\",\n    \"Further renamed the vSphere VM to `TE-DC-MD-NC-02-DO-NOT-TURN-ON` to adjust the naming convention.\",\n    \"Navigated through the vSphere client to select and view details for various VMs, including `TE-DC-MD-NC-02.1`.\"\n  ],\n  \"applications_used\": [\n    \"Chrome\",\n    \"vSphere Client\",\n    \"PuTTY\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [\n    \"PuTTY Fatal Error: 'Network error: Software caused connection abort' during an initial SSH session attempt.\",\n    \"VMware Tools is not installed on the virtual machine `TE-DC-MD-NC-02`.\"\n  ],\n  \"issues_resolved\": [\n    \"Successfully re-established an SSH connection after the initial network error.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-MD-NC-02 (vSphere VM)\",\n    \"10.100.254.241 (Linux VM IP, identified as TE-DC-MD-NC-02 in PuTTY banner)\",\n    \"TE-DC-MD-NC-02.1 (vSphere VM)\"\n  ],\n  \"notable_events\": [\n    \"The initial PuTTY SSH connection failed with a 'Network error: Software caused connection abort', requiring the technician to close and reopen PuTTY.\",\n    \"The technician renamed the `TE-DC-MD-NC-02` VM twice to achieve the desired naming format, indicating a slight adjustment during the task.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"The technician encountered a 'PuTTY Fatal Error: Network error: Software caused connection abort' at 00:03. After acknowledging the error and briefly observing the non-responsive terminal, they closed PuTTY and reopened it via File Explorer to re-establish the connection, recovering in approximately 24 seconds (00:05-00:27).\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked efficiently, quickly recovering from a network error with PuTTY. The VM renaming process was completed methodically, including a rapid correction to the naming convention.\",\n    \"coaching_flags\": [\n      \"The VM `TE-DC-MD-NC-02` was renamed twice to refine the naming convention. This minor re-work could be a point of discussion to ensure clear naming standards are followed from the first attempt.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client's Linux virtual machine (VM) via SSH using PuTTY, reviewed running Docker containers, and then accessed the vSphere Client to rename another VM. The VM was renamed with a 'DO-NOT-TURN-ON' prefix, and the technician then corrected the naming format to append the prefix instead.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Re-established an SSH connection to a Linux VM (`10.100.254.241`) using PuTTY after an initial connection abort.",
+      "Executed `sudo docker ps` to list running Docker containers on the Linux VM.",
+      "Renamed the vSphere VM `TE-DC-MD-NC-02` to `DO-NOT-TURN-ON-TE-DC-MD-NC-02`.",
+      "Further renamed the vSphere VM to `TE-DC-MD-NC-02-DO-NOT-TURN-ON` to adjust the naming convention.",
+      "Navigated through the vSphere client to select and view details for various VMs, including `TE-DC-MD-NC-02.1`."
+    ],
+    "applications_used": [
+      "Chrome",
+      "vSphere Client",
+      "PuTTY",
+      "File Explorer"
+    ],
+    "issues_observed": [
+      "PuTTY Fatal Error: 'Network error: Software caused connection abort' during an initial SSH session attempt.",
+      "VMware Tools is not installed on the virtual machine `TE-DC-MD-NC-02`."
+    ],
+    "issues_resolved": [
+      "Successfully re-established an SSH connection after the initial network error."
+    ],
+    "machines_touched": [
+      "TE-DC-MD-NC-02 (vSphere VM)",
+      "10.100.254.241 (Linux VM IP, identified as TE-DC-MD-NC-02 in PuTTY banner)",
+      "TE-DC-MD-NC-02.1 (vSphere VM)"
+    ],
+    "notable_events": [
+      "The initial PuTTY SSH connection failed with a 'Network error: Software caused connection abort', requiring the technician to close and reopen PuTTY.",
+      "The technician renamed the `TE-DC-MD-NC-02` VM twice to achieve the desired naming format, indicating a slight adjustment during the task."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "The technician encountered a 'PuTTY Fatal Error: Network error: Software caused connection abort' at 00:03. After acknowledging the error and briefly observing the non-responsive terminal, they closed PuTTY and reopened it via File Explorer to re-establish the connection, recovering in approximately 24 seconds (00:05-00:27)."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked efficiently, quickly recovering from a network error with PuTTY. The VM renaming process was completed methodically, including a rapid correction to the naming convention.",
+      "coaching_flags": [
+        "The VM `TE-DC-MD-NC-02` was renamed twice to refine the naming convention. This minor re-work could be a point of discussion to ensure clear naming standards are followed from the first attempt."
+      ]
+    }
+  }
+}
