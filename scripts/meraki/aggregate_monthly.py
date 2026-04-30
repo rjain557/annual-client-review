@@ -256,6 +256,34 @@ def aggregate_configuration(meraki_dir: Path) -> dict:
     devices = load_json(meraki_dir / "devices.json") or []
     snap = load_json(meraki_dir / "config_snapshot_at.json") or {}
 
+    net_id_to_name = {n.get("id"): n.get("name") for n in networks if n.get("id")}
+
+    # Load uplink statuses (current WAN IPs per device)
+    uplink_statuses_raw = load_json(meraki_dir / "uplink_statuses.json") or []
+    serial_to_uplinks: dict[str, list] = {}
+    for entry in uplink_statuses_raw:
+        serial_to_uplinks[entry.get("serial", "")] = entry.get("uplinks") or []
+
+    device_rows = []
+    for d in sorted(devices, key=lambda x: (x.get("productType") or "", x.get("name") or "")):
+        serial = d.get("serial") or ""
+        # Per-device uplink settings (WAN config: static/DHCP, IP, gateway, DNS)
+        uplink_cfg = load_json(meraki_dir / "devices" / serial / "uplink_settings.json") or {}
+        uplink_row = {
+            "name":        d.get("name") or "—",
+            "model":       d.get("model") or "—",
+            "serial":      serial or "—",
+            "firmware":    d.get("firmware") or "—",
+            "lanIp":       d.get("lanIp") or "—",
+            "productType": d.get("productType") or "—",
+            "network":     net_id_to_name.get(d.get("networkId") or "") or "—",
+        }
+        if uplink_cfg.get("interfaces"):
+            uplink_row["uplink_settings"] = uplink_cfg["interfaces"]
+        if serial in serial_to_uplinks:
+            uplink_row["uplink_status"] = serial_to_uplinks[serial]
+        device_rows.append(uplink_row)
+
     summary = {
         "org": org_meta.get("name"),
         "snapshot_at": snap.get("snapshot_at"),
@@ -263,6 +291,7 @@ def aggregate_configuration(meraki_dir: Path) -> dict:
         "device_count": len(devices),
         "device_models": dict(Counter(d.get("model") for d in devices)),
         "device_product_types": dict(Counter(d.get("productType") for d in devices)),
+        "devices": device_rows,
         "networks": [],
     }
 
@@ -278,15 +307,17 @@ def aggregate_configuration(meraki_dir: Path) -> dict:
                 "productTypes": net_meta.get("productTypes"),
                 "timeZone": net_meta.get("timeZone"),
             }
-            for fname, key in [
-                ("firewall_l3.json", "firewall_l3_rule_count"),
-                ("firewall_l7.json", "firewall_l7_rule_count"),
-                ("firewall_inbound.json", "firewall_inbound_rule_count"),
-                ("firewall_port_forwarding.json", "port_forward_count"),
-                ("firewall_1to1_nat.json", "one_to_one_nat_count"),
+            for fname, key, detail_key in [
+                ("firewall_l3.json",           "firewall_l3_rule_count",       "firewall_l3_rules"),
+                ("firewall_l7.json",           "firewall_l7_rule_count",       "firewall_l7_rules"),
+                ("firewall_inbound.json",      "firewall_inbound_rule_count",  "firewall_inbound_rules"),
+                ("firewall_port_forwarding.json", "port_forward_count",        "port_forward_rules"),
+                ("firewall_1to1_nat.json",     "one_to_one_nat_count",         "nat_1to1_rules"),
             ]:
                 d = load_json(n / fname) or {}
-                net_summary[key] = len(d.get("rules", []))
+                rules = d.get("rules", [])
+                net_summary[key] = len(rules)
+                net_summary[detail_key] = rules
             ids = load_json(n / "security_intrusion.json")
             if ids:
                 net_summary["intrusion"] = {
@@ -304,15 +335,37 @@ def aggregate_configuration(meraki_dir: Path) -> dict:
                 "allowed_url_patterns_count": len(cf.get("allowedUrlPatterns") or []),
             }
             vlans = load_json(n / "vlans.json")
-            net_summary["vlan_count"] = len(vlans) if isinstance(vlans, list) else 0
+            vlan_list = vlans if isinstance(vlans, list) else []
+            net_summary["vlan_count"] = len(vlan_list)
+            net_summary["vlans"] = [
+                {"id": v.get("id"), "name": v.get("name"), "subnet": v.get("subnet"),
+                 "applianceIp": v.get("applianceIp"), "dhcpHandling": v.get("dhcpHandling")}
+                for v in vlan_list
+            ]
             ssids = load_json(n / "wireless_ssids.json") or []
-            if isinstance(ssids, list):
-                net_summary["ssid_count"] = sum(1 for s in ssids if s.get("enabled"))
+            enabled_ssids = [s for s in (ssids if isinstance(ssids, list) else []) if s.get("enabled")]
+            net_summary["ssid_count"] = len(enabled_ssids)
+            net_summary["ssids"] = [
+                {"number": s.get("number"), "name": s.get("name"),
+                 "authMode": s.get("authMode"), "encryptionMode": s.get("encryptionMode")}
+                for s in enabled_ssids
+            ]
             vpn = load_json(n / "vpn_s2s.json") or {}
             net_summary["s2s_vpn_mode"] = vpn.get("mode")
             net_summary["s2s_vpn_peer_count"] = len(vpn.get("hubs") or [])
+            net_summary["s2s_vpn_hubs"] = vpn.get("hubs") or []
+            net_summary["s2s_vpn_subnets"] = vpn.get("subnets") or []
+            cf = load_json(n / "content_filtering.json") or {}
+            net_summary["content_filtering"]["blocked_categories"] = [
+                c.get("name") or c.get("id") for c in (cf.get("blockedUrlCategories") or [])
+            ]
+            net_summary["content_filtering"]["blocked_url_patterns"] = cf.get("blockedUrlPatterns") or []
+            ts = load_json(n / "traffic_shaping.json") or {}
+            net_summary["bandwidth_limit_up"]   = (ts.get("globalBandwidthLimits") or {}).get("limitUp", 0)
+            net_summary["bandwidth_limit_down"] = (ts.get("globalBandwidthLimits") or {}).get("limitDown", 0)
             sysl = load_json(n / "syslog_servers.json") or {}
             net_summary["syslog_destination_count"] = len(sysl.get("servers") or [])
+            net_summary["syslog_servers"] = sysl.get("servers") or []
             summary["networks"].append(net_summary)
 
     return summary

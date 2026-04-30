@@ -12,10 +12,11 @@ Checks performed
   4. Cover page: first non-empty paragraph contains a title (not placeholder)
   5. Section headers: expected sections are present (case-insensitive)
   6. Tables: each table has at least a header row
-  7. Placeholder guard: no TODO / TBD / [placeholder] / [Your Name] text
-  8. Mojibake guard: no common cp1252 encoding artifacts (A--- A,,"  etc.)
-  9. Callout boxes: at least one callout table present (single-cell table)
- 10. Metric cards row: at least one multi-cell table in first half of doc
+  7. Table widths: no table exceeds the usable page width (6.5" for letter/1" margins)
+  8. Placeholder guard: no TODO / TBD / [placeholder] / [Your Name] text
+  9. Mojibake guard: no common cp1252 encoding artifacts (A--- A,,"  etc.)
+ 10. Callout boxes: at least one callout table present (single-cell table)
+ 11. Metric cards row: at least one multi-cell table in first half of doc
 
 Usage
 -----
@@ -49,6 +50,14 @@ try:
 except ImportError:
     print(json.dumps({"error": "python-docx not installed", "passed": False}))
     sys.exit(2)
+
+# ── layout constants ──────────────────────────────────────────────────────────
+
+# 1 inch = 914 400 EMU (English Metric Units, the python-docx internal unit).
+# Standard US Letter (8.5") with 1" left + 1" right margins → 6.5" usable.
+_ONE_INCH_EMU = 914_400
+_USABLE_PAGE_INCHES = 6.5
+_USABLE_PAGE_EMU = int(_USABLE_PAGE_INCHES * _ONE_INCH_EMU)
 
 # ── placeholder patterns ───────────────────────────────────────────────────────
 
@@ -193,6 +202,41 @@ def check_tables(doc):
     return issues, warnings
 
 
+def check_table_widths(doc):
+    """Fail if any data table's column widths sum to more than the usable page
+    width (6.5"). Overflow causes content to be cut off when printed or viewed
+    at page width.
+
+    Skips:
+      - Decorative color-bar tables (single cell, no text)
+      - Section-header tables (2 cells: empty bar + title text)
+      - Tables where no cell has an explicit width set
+    """
+    issues = []
+    warnings = []
+    for i, table in enumerate(doc.tables):
+        if not table.rows:
+            continue
+        if _is_color_bar_table(table):
+            continue
+        row0 = table.rows[0]
+        # Skip section-header bar+title tables
+        if len(row0.cells) == 2 and not row0.cells[0].text.strip():
+            continue
+        cell_widths = [c.width for c in row0.cells if c.width is not None]
+        if not cell_widths:
+            continue
+        total_emu = sum(cell_widths)
+        if total_emu > _USABLE_PAGE_EMU:
+            total_in = total_emu / _ONE_INCH_EMU
+            issues.append(
+                f"Table {i+1} ({len(row0.cells)} columns, {total_in:.2f}\" wide) "
+                f"overflows the {_USABLE_PAGE_INCHES:.1f}\" usable page width — "
+                "content will be cut off when printed or viewed at full-page width"
+            )
+    return issues, warnings
+
+
 def check_placeholders(doc):
     issues = []
     warnings = []
@@ -292,6 +336,7 @@ def proofread(path: Path, expected_sections, min_kb: float, strict: bool):
         ("cover page",        check_cover(doc)),
         ("section headers",   check_sections(doc, expected_sections)),
         ("table structure",   check_tables(doc)),
+        ("table widths",      check_table_widths(doc)),
         ("placeholder text",  check_placeholders(doc)),
         ("mojibake",          check_mojibake(doc)),
         ("callout boxes",     check_callout_boxes(doc)),

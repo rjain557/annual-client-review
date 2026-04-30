@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T15:44:21Z",
+  "generated_at": "2026-04-30T16:49:23Z",
   "client_code": "orx",
   "month": "2026-02",
   "configuration": {
     "org": "ORX",
-    "snapshot_at": "2026-04-30T15:40:32Z",
+    "snapshot_at": "2026-04-30T16:49:05Z",
     "network_count": 1,
     "device_count": 1,
     "device_models": {
@@ -13,6 +13,17 @@
     "device_product_types": {
       "wireless": 1
     },
+    "devices": [
+      {
+        "name": "ORX-RIV-HQ-01",
+        "model": "MR36",
+        "serial": "Q3AJ-4C67-SDCE",
+        "firmware": "wireless-32-1-6",
+        "lanIp": "192.168.0.68",
+        "productType": "wireless",
+        "network": "ORX-HQ"
+      }
+    ],
     "networks": [
       {
         "slug": "orx_hq",
@@ -22,20 +33,47 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 0,
+        "firewall_l3_rules": [],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 0,
+        "firewall_inbound_rules": [],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 0,
+        "vlans": [],
         "ssid_count": 2,
+        "ssids": [
+          {
+            "number": 0,
+            "name": "Orthokinetix Riv HQ",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          },
+          {
+            "number": 1,
+            "name": "Orthokinetix Guest",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          }
+        ],
         "s2s_vpn_mode": null,
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       }
     ]
   },

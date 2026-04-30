@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T15:44:21Z",
+  "generated_at": "2026-04-30T16:49:23Z",
   "client_code": "arnd",
   "month": "2026-03",
   "configuration": {
     "org": "Aranda Tooling",
-    "snapshot_at": "2026-04-30T15:40:09Z",
+    "snapshot_at": "2026-04-30T16:48:40Z",
     "network_count": 1,
     "device_count": 4,
     "device_models": {
@@ -15,6 +15,135 @@
       "appliance": 1,
       "switch": 3
     },
+    "devices": [
+      {
+        "name": "\u2014",
+        "model": "MX85",
+        "serial": "Q2YN-DL9C-NJLH",
+        "firmware": "wired-19-1-11",
+        "lanIp": "\u2014",
+        "productType": "appliance",
+        "network": "Aranda Tooling",
+        "uplink_settings": {
+          "wan1": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "76.80.219.185",
+                "address": "76.80.219.186/29",
+                "nameservers": {
+                  "addresses": [
+                    "8.8.8.8",
+                    "8.8.4.4"
+                  ]
+                }
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan2": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "static",
+                "gateway": "47.179.43.49",
+                "address": "47.179.43.50/29",
+                "nameservers": {
+                  "addresses": [
+                    "74.40.74.40",
+                    "8.8.8.8"
+                  ]
+                }
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          },
+          "wan3": {
+            "enabled": true,
+            "vlanTagging": {
+              "enabled": false
+            },
+            "svis": {
+              "ipv4": {
+                "assignmentMode": "dynamic"
+              },
+              "ipv6": {
+                "assignmentMode": "dynamic"
+              }
+            },
+            "pppoe": {
+              "enabled": false
+            }
+          }
+        },
+        "uplink_status": [
+          {
+            "interface": "wan1",
+            "status": "active",
+            "ip": "76.80.219.186",
+            "gateway": "76.80.219.185",
+            "publicIp": "76.80.219.186",
+            "primaryDns": "8.8.8.8",
+            "secondaryDns": "8.8.4.4",
+            "ipAssignedBy": "static"
+          },
+          {
+            "interface": "wan2",
+            "status": "ready",
+            "ip": "47.179.43.50",
+            "gateway": "47.179.43.49",
+            "publicIp": "47.179.43.50",
+            "primaryDns": "74.40.74.40",
+            "secondaryDns": "8.8.8.8",
+            "ipAssignedBy": "static"
+          }
+        ]
+      },
+      {
+        "name": "IDF 1",
+        "model": "MS130-24P",
+        "serial": "Q4CF-NZXH-RBF9",
+        "firmware": "switch-17-2-2",
+        "lanIp": "10.28.0.20",
+        "productType": "switch",
+        "network": "Aranda Tooling"
+      },
+      {
+        "name": "IDF 2",
+        "model": "MS130-24P",
+        "serial": "Q4CF-3WSW-SPDC",
+        "firmware": "switch-17-2-2",
+        "lanIp": "10.28.0.30",
+        "productType": "switch",
+        "network": "Aranda Tooling"
+      },
+      {
+        "name": "IDF 3",
+        "model": "MS130-24P",
+        "serial": "Q4CF-QSCK-MCQD",
+        "firmware": "switch-17-2-2",
+        "lanIp": "10.28.0.40",
+        "productType": "switch",
+        "network": "Aranda Tooling"
+      }
+    ],
     "networks": [
       {
         "slug": "aranda_tooling",
@@ -25,20 +154,226 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 2,
+        "firewall_l3_rules": [
+          {
+            "comment": "SMTP",
+            "policy": "allow",
+            "protocol": "tcp",
+            "srcPort": "587",
+            "srcCidr": "10.10.7.50/32",
+            "destPort": "587",
+            "destCidr": "smtp.office365.com",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Default rule",
+            "policy": "allow",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 1,
+        "firewall_inbound_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "deny",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 14,
+        "vlans": [
+          {
+            "id": 1,
+            "name": "Untagged",
+            "subnet": "10.10.0.0/16",
+            "applianceIp": "10.10.0.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 2,
+            "name": "Config VLAN",
+            "subnet": "192.168.254.0/24",
+            "applianceIp": "192.168.254.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 3,
+            "name": "Config VLAN2",
+            "subnet": "192.168.0.0/24",
+            "applianceIp": "192.168.0.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 10,
+            "name": "Office Management VLAN",
+            "subnet": "172.28.0.0/23",
+            "applianceIp": "172.28.0.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 20,
+            "name": "Office Wired Network",
+            "subnet": "172.28.2.0/23",
+            "applianceIp": "172.28.2.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 30,
+            "name": "Office Wi-Fi Network",
+            "subnet": "172.28.4.0/23",
+            "applianceIp": "172.28.4.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 40,
+            "name": "Office Wi-Fi Guest",
+            "subnet": "172.28.6.0/23",
+            "applianceIp": "172.28.6.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 50,
+            "name": "Office Services",
+            "subnet": "172.28.8.0/23",
+            "applianceIp": "172.28.8.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 60,
+            "name": "Office IoT",
+            "subnet": "172.28.10.0/23",
+            "applianceIp": "172.28.10.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 70,
+            "name": "Office Printers VLAN",
+            "subnet": "172.28.12.0/23",
+            "applianceIp": "172.28.12.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 100,
+            "name": "OT Management VLAN",
+            "subnet": "10.28.0.0/23",
+            "applianceIp": "10.28.0.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 110,
+            "name": "OT Wired Network",
+            "subnet": "10.28.2.0/23",
+            "applianceIp": "10.28.2.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 120,
+            "name": "OT Printers",
+            "subnet": "10.28.4.0/23",
+            "applianceIp": "10.28.4.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 200,
+            "name": "BGP",
+            "subnet": "198.19.0.64/30",
+            "applianceIp": "198.19.0.66",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          }
+        ],
         "ssid_count": 0,
+        "ssids": [],
         "s2s_vpn_mode": "hub",
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [
+          {
+            "localSubnet": "17.28.20.0/24",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "10.10.0.0/16",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "192.168.254.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "192.168.0.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.28.0.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.28.2.0/23",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "172.28.4.0/23",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "172.28.6.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.28.8.0/23",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "172.28.10.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.28.12.0/23",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "10.28.0.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.28.2.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.28.4.0/23",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "198.19.0.64/30",
+            "useVpn": false
+          }
+        ],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       }
     ]
   },

@@ -1,14 +1,15 @@
 {
-  "generated_at": "2026-04-30T15:44:21Z",
+  "generated_at": "2026-04-30T16:49:24Z",
   "client_code": "technijian",
   "month": "2026-01",
   "configuration": {
     "org": "Technijian",
-    "snapshot_at": "2026-04-30T15:39:58Z",
+    "snapshot_at": "2026-04-30T16:48:31Z",
     "network_count": 0,
     "device_count": 0,
     "device_models": {},
     "device_product_types": {},
+    "devices": [],
     "networks": [
       {
         "slug": "01_technijian_dc",
@@ -18,10 +19,2571 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 7,
+        "firewall_l3_rules": [
+          {
+            "comment": "SSH to 3850 \u2013 mgmt IP",
+            "policy": "allow",
+            "protocol": "tcp",
+            "srcPort": "Any",
+            "srcCidr": "10.95.10.0/24",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Blocked Malicious website outbound connection",
+            "policy": "deny",
+            "protocol": "any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "cvc.7766.org",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Blocked Malicious website IP outbound connection",
+            "policy": "deny",
+            "protocol": "any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "209.141.33.145/32",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Blocked Malicious website IP outbound connection",
+            "policy": "deny",
+            "protocol": "any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "209.141.45.118/32",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "cavelo.com",
+            "policy": "allow",
+            "protocol": "any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "3.218.175.179/32",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Whitelist Domains",
+            "policy": "allow",
+            "protocol": "tcp",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "api.anthropic.com,claude.ai,api.openai.com,codex.openai.com,generativelanguage.googleapis.com,api.moonshot.ai,api.deepseek.com,api.z.ai,api.minimax.io,z.ai",
+            "syslogEnabled": false
+          },
+          {
+            "comment": "Default rule",
+            "policy": "allow",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "firewall_l7_rule_count": 1,
+        "firewall_l7_rules": [
+          {
+            "policy": "deny",
+            "type": "allowedCountries",
+            "value": [
+              "AU",
+              "CA",
+              "FR",
+              "DE",
+              "IN",
+              "ID",
+              "IE",
+              "IL",
+              "MX",
+              "PH",
+              "KR",
+              "SE",
+              "GB",
+              "US"
+            ]
+          }
+        ],
         "firewall_inbound_rule_count": 0,
+        "firewall_inbound_rules": [],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 87,
+        "nat_1to1_rules": [
+          {
+            "name": "alpha-mysms.technijian.com",
+            "publicIp": "66.81.19.83",
+            "lanIp": "10.100.254.71",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-TS-04 (ts01.orx.technijian.com)",
+            "publicIp": "66.81.19.98",
+            "lanIp": "10.100.106.73",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-SQL-03",
+            "publicIp": "66.81.19.10",
+            "lanIp": "10.100.109.60",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "98.153.69.211",
+                  "182.72.80.174",
+                  "12.79.8.230",
+                  "172.248.94.141",
+                  "14.99.194.2",
+                  "193.37.208.196",
+                  "69.75.150.2",
+                  "79.89.124.64",
+                  "172.58.20.188",
+                  "208.57.124.195",
+                  "76.89.124.64",
+                  "111.93.125.14",
+                  "184.188.121.57"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "OXPLIVE (https://oxplive.orthoxpress.com)",
+            "publicIp": "66.81.19.41",
+            "lanIp": "10.100.106.65",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-APP-01",
+            "publicIp": "66.81.19.46",
+            "lanIp": "10.100.106.53",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VMTECHMSCAS-HTTPS-IMAP-IMAPS-LDAP",
+            "publicIp": "66.81.19.33",
+            "lanIp": "10.100.240.75",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "110",
+                  "143",
+                  "389",
+                  "443",
+                  "636",
+                  "993",
+                  "995",
+                  "8470",
+                  "8471",
+                  "8472",
+                  "8473",
+                  "8474"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "389",
+                  "636"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-CL-CP-01-HTTPS",
+            "publicIp": "66.81.19.18",
+            "lanIp": "10.100.240.74",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-CL-IIS-02",
+            "publicIp": "66.81.19.29",
+            "lanIp": "10.100.240.65",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "50000-55000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "21"
+                ],
+                "allowedIps": [
+                  "68.6.149.234",
+                  "72.207.5.248",
+                  "216.93.198.108",
+                  "173.247.179.34",
+                  "208.57.124.194",
+                  "173.58.206.168",
+                  "113.30.138.192",
+                  "180.211.97.50",
+                  "98.189.115.130",
+                  "50.194.179.217",
+                  "50.153.234.138",
+                  "50.153.233.130",
+                  "73.166.116.174",
+                  "111.93.125.14",
+                  "72.199.172.252",
+                  "75.83.157.43",
+                  "110.28.131.66"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-SFTP-01",
+            "publicIp": "66.81.19.43",
+            "lanIp": "10.100.106.21",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "21",
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-12(pcp.technijian.com)",
+            "publicIp": "66.81.19.62",
+            "lanIp": "10.100.250.51",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-CP-IIS-01",
+            "publicIp": "66.81.19.66",
+            "lanIp": "10.100.254.107",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "44351"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TM-01 (myaudit2.technijian.com)",
+            "publicIp": "66.81.19.54",
+            "lanIp": "10.100.254.67",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "10000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-OL-WEB-03",
+            "publicIp": "66.81.19.30",
+            "lanIp": "10.100.240.56",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22",
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "21"
+                ],
+                "allowedIps": [
+                  "111.93.125.14",
+                  "39.9.126.103",
+                  "76.116.207.73",
+                  "208.57.124.194",
+                  "68.132.224.11",
+                  "34.211.180.66",
+                  "54.70.65.107",
+                  "34.210.224.7",
+                  "52.41.5.108",
+                  "52.35.72.129",
+                  "54.191.137.17",
+                  "35.162.254.253",
+                  "52.11.12.231",
+                  "52.11.29.70",
+                  "52.11.54.161",
+                  "52.24.142.159",
+                  "52.25.191.255",
+                  "52.34.126.117",
+                  "52.34.254.47",
+                  "52.35.82.99",
+                  "52.36.28.80",
+                  "52.39.177.152",
+                  "52.41.237.12",
+                  "52.43.13.71",
+                  "52.43.76.224",
+                  "52.88.96.110",
+                  "52.89.155.51",
+                  "54.187.92.57",
+                  "54.191.32.65",
+                  "54.191.67.23",
+                  "54.191.80.119",
+                  "54.191.135.209",
+                  "54.191.136.176",
+                  "54.191.148.85",
+                  "54.191.149.8",
+                  "52.26.122.21",
+                  "52.24.187.29",
+                  "52.89.85.107",
+                  "54.186.128.167",
+                  "54.191.40.136",
+                  "52.88.119.122",
+                  "52.89.94.121",
+                  "52.25.116.116",
+                  "52.88.215.225",
+                  "54.186.143.184",
+                  "52.88.197.180",
+                  "52.27.171.126",
+                  "34.211.178.241",
+                  "52.24.232.158",
+                  "52.26.187.210",
+                  "52.42.189.119",
+                  "54.186.244.128",
+                  "54.71.54.102",
+                  "34.210.35.214",
+                  "34.213.77.188",
+                  "34.218.121.176",
+                  "52.10.190.191",
+                  "52.10.225.96",
+                  "52.11.187.168",
+                  "52.25.139.76",
+                  "52.43.127.200",
+                  "54.191.108.9",
+                  "54.70.201.228",
+                  "44.224.174.169",
+                  "52.32.57.81",
+                  "44.225.177.160",
+                  "34.223.186.249",
+                  "44.224.135.238",
+                  "44.226.111.14",
+                  "44.225.203.104",
+                  "44.226.100.122",
+                  "44.224.250.144",
+                  "44.225.118.211",
+                  "54.189.93.69",
+                  "44.231.184.112",
+                  "44.238.10.27",
+                  "54.185.116.30",
+                  "44.238.58.95",
+                  "52.13.23.154",
+                  "54.149.16.35",
+                  "44.226.97.20",
+                  "54.244.242.144",
+                  "44.238.67.135",
+                  "208.57.124.194",
+                  "178.128.221.203",
+                  "67.253.24.194",
+                  "62.201.120.116",
+                  "102.129.154.54",
+                  "34.94.23.70"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "1024-65535"
+                ],
+                "allowedIps": [
+                  "111.93.125.14",
+                  "39.9.126.103",
+                  "76.116.207.73",
+                  "208.57.124.194",
+                  "68.132.224.11",
+                  "34.211.180.66",
+                  "54.70.65.107",
+                  "34.210.224.7",
+                  "52.41.5.108",
+                  "52.35.72.129",
+                  "54.191.137.17",
+                  "35.162.254.253",
+                  "52.11.12.231",
+                  "52.11.29.70",
+                  "52.11.54.161",
+                  "52.24.142.159",
+                  "52.25.191.255",
+                  "52.34.126.117",
+                  "52.34.254.47",
+                  "52.35.82.99",
+                  "52.36.28.80",
+                  "52.39.177.152",
+                  "52.41.237.12",
+                  "52.43.13.71",
+                  "52.43.76.224",
+                  "52.88.96.110",
+                  "52.89.155.51",
+                  "54.187.92.57",
+                  "54.191.32.65",
+                  "54.191.67.23",
+                  "54.191.80.119",
+                  "54.191.135.209",
+                  "54.191.136.176",
+                  "54.191.148.85",
+                  "54.191.149.8",
+                  "52.26.122.21",
+                  "52.24.187.29",
+                  "52.89.85.107",
+                  "54.186.128.167",
+                  "54.191.40.136",
+                  "52.88.119.122",
+                  "52.89.94.121",
+                  "52.25.116.116",
+                  "52.88.215.225",
+                  "54.186.143.184",
+                  "52.88.197.180",
+                  "52.27.171.126",
+                  "34.211.178.241",
+                  "52.24.232.158",
+                  "52.26.187.210",
+                  "52.42.189.119",
+                  "54.186.244.128",
+                  "54.71.54.102",
+                  "34.210.35.214",
+                  "34.213.77.188",
+                  "34.218.121.176",
+                  "52.10.190.191",
+                  "52.10.225.96",
+                  "52.11.187.168",
+                  "52.25.139.76",
+                  "52.43.127.200",
+                  "54.191.108.9",
+                  "54.70.201.228",
+                  "44.224.174.169",
+                  "52.32.57.81",
+                  "44.225.177.160",
+                  "34.223.186.249",
+                  "44.224.135.238",
+                  "44.226.111.14",
+                  "44.225.203.104",
+                  "44.226.100.122",
+                  "44.224.250.144",
+                  "44.225.118.211",
+                  "54.189.93.69",
+                  "44.231.184.112",
+                  "44.238.10.27",
+                  "54.185.116.30",
+                  "44.238.58.95",
+                  "52.13.23.154",
+                  "54.149.16.35",
+                  "44.226.97.20",
+                  "54.244.242.144",
+                  "44.238.67.135",
+                  "208.57.124.194",
+                  "178.128.221.203",
+                  "62.201.120.116",
+                  "102.129.154.54"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-APP-01",
+            "publicIp": "66.81.19.95",
+            "lanIp": "10.100.254.97",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MYRMM",
+            "publicIp": "66.81.19.55",
+            "lanIp": "10.100.13.10",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8041",
+                  "8045",
+                  "8057",
+                  "8047"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "8041",
+                  "8045",
+                  "8057",
+                  "8047"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VAF-DC-3CX-01 (old)",
+            "publicIp": "66.81.19.97",
+            "lanIp": "10.100.103.54",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "2528",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5000",
+                  "5015",
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-10999"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MYRMT-01 (myremote2.technijian.com)",
+            "publicIp": "66.81.19.105",
+            "lanIp": "10.100.14.10",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8041",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VAF-DC-SFTP-01",
+            "publicIp": "66.81.19.90",
+            "lanIp": "10.100.103.112",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VMTESTRDP3",
+            "publicIp": "66.81.19.93",
+            "lanIp": "10.100.253.65",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-HRZUAG-02",
+            "publicIp": "66.81.19.87",
+            "lanIp": "10.100.104.20",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "8443",
+                  "4172",
+                  "22443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "8443",
+                  "4172"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-BKP-VSPC (myveeamspc.technijian.com)",
+            "publicIp": "66.81.19.56",
+            "lanIp": "10.7.9.224",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "1280",
+                  "443",
+                  "1989",
+                  "6180"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "1280",
+                  "1989",
+                  "6180"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-VONE-01 (myveeamone.technijian.com)",
+            "publicIp": "66.81.19.47",
+            "lanIp": "10.7.9.135",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "1239",
+                  "139",
+                  "445",
+                  "4443",
+                  "135"
+                ],
+                "allowedIps": [
+                  "97.93.171.50",
+                  "174.64.56.242",
+                  "98.174.153.35",
+                  "173.197.117.190",
+                  "104.173.200.37",
+                  "173.205.178.138",
+                  "182.72.80.174",
+                  "70.165.51.118",
+                  "14.194.155.42",
+                  "136.52.78.46",
+                  "49.43.101.158"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "137"
+                ],
+                "allowedIps": [
+                  "97.93.171.50",
+                  "174.64.56.242",
+                  "98.174.153.35",
+                  "173.197.117.190",
+                  "104.173.200.37",
+                  "173.205.178.138",
+                  "136.52.78.46",
+                  "70.165.51.118"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VAF-DC-TS-01",
+            "publicIp": "66.81.19.106",
+            "lanIp": "10.100.103.53",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-02(beta.technijian.com)",
+            "publicIp": "66.81.19.94",
+            "lanIp": "10.100.240.104",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-3CX-01 (old)",
+            "publicIp": "66.81.19.73",
+            "lanIp": "10.100.254.80",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090",
+                  "5001"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-10999"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-01(alpha.technijian.com)",
+            "publicIp": "66.81.19.100",
+            "lanIp": "10.100.250.105",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-APP-02",
+            "publicIp": "66.81.19.96",
+            "lanIp": "10.100.254.96",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-03(Technijian.com)",
+            "publicIp": "66.81.19.45",
+            "lanIp": "10.100.251.106",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "66.81.19.126",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-10(alpha.technijian.in)",
+            "publicIp": "66.81.19.49",
+            "lanIp": "10.100.250.178",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "66.81.19.126",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TL-IIS",
+            "publicIp": "66.81.19.50",
+            "lanIp": "10.100.253.51",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TL-TFS",
+            "publicIp": "66.81.19.51",
+            "lanIp": "10.100.253.53",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "8080"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-CP-IIS",
+            "publicIp": "66.81.19.52",
+            "lanIp": "10.100.240.81",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-06 (ecasys.com)",
+            "publicIp": "66.81.19.53",
+            "lanIp": "10.100.251.109",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "66.81.19.126",
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "OXPTEST",
+            "publicIp": "66.81.19.42",
+            "lanIp": "10.100.106.66",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MYARCHIVE",
+            "publicIp": "66.81.19.85",
+            "lanIp": "10.100.254.167",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "110",
+                  "143",
+                  "389",
+                  "443",
+                  "636",
+                  "993",
+                  "995",
+                  "8470",
+                  "8471",
+                  "8472",
+                  "8473",
+                  "8474",
+                  "8460",
+                  "8462"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "389",
+                  "636"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-OPS-01 (ops.technijian.com)",
+            "publicIp": "66.81.19.102",
+            "lanIp": "10.100.254.171",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "8060",
+                  "8061",
+                  "9090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-LOG360-01 (logs.technijian.com)",
+            "publicIp": "66.81.19.103",
+            "lanIp": "10.100.254.120",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "8095",
+                  "8458"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-CL-WP-02 (cbldev.technijian.com)",
+            "publicIp": "66.81.19.84",
+            "lanIp": "10.100.240.101",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "173.247.179.34",
+                  "182.72.80.174",
+                  "14.194.155.42",
+                  "182.72.80.174"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-CL-CRM-01 (crm.technijian.com)",
+            "publicIp": "66.81.19.88",
+            "lanIp": "10.100.240.151",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-SFOSBKP",
+            "publicIp": "66.81.19.4",
+            "lanIp": "10.100.254.111",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "21"
+                ],
+                "allowedIps": [
+                  "70.165.51.118",
+                  "12.79.8.230",
+                  "98.154.36.202",
+                  "97.93.171.50",
+                  "64.58.151.18",
+                  "12.231.12.100",
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "107.128.45.252",
+                  "173.197.117.190",
+                  "98.189.212.122",
+                  "64.58.142.218",
+                  "50.247.89.142",
+                  "70.183.16.95",
+                  "69.230.152.250"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "49152-65534"
+                ],
+                "allowedIps": [
+                  "70.165.51.118",
+                  "12.79.8.230",
+                  "98.154.36.202",
+                  "97.93.171.50",
+                  "64.58.151.18",
+                  "12.231.12.100",
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "107.128.45.252",
+                  "173.197.117.190",
+                  "98.189.212.122",
+                  "64.58.142.218",
+                  "50.247.89.142",
+                  "70.183.16.95",
+                  "69.230.152.250"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-09 (alpha.technijian.ae)",
+            "publicIp": "66.81.19.86",
+            "lanIp": "10.100.250.176",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-CP-SQL-01",
+            "publicIp": "66.81.19.89",
+            "lanIp": "10.100.240.63",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "1433",
+                  "443"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "14.194.155.42"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VG-DC-3CX-01",
+            "publicIp": "66.81.19.63",
+            "lanIp": "10.100.105.101",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700",
+                  "2528"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-10999"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-11 (ESAOC.org)",
+            "publicIp": "66.81.19.91",
+            "lanIp": "10.100.240.161",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-QNAP-02 (s3.technijian.com)",
+            "publicIp": "66.81.19.70",
+            "lanIp": "10.7.9.225",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8899",
+                  "443",
+                  "8081",
+                  "8082",
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "49.43.104.60",
+                  "98.174.159.42",
+                  "97.93.171.50",
+                  "64.58.160.218"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-3CX-01",
+            "publicIp": "66.81.19.36",
+            "lanIp": "10.100.1.195",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700",
+                  "2528"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-20000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TL-IIS (alpha.logger.technijian.com_",
+            "publicIp": "66.81.19.44",
+            "lanIp": "10.100.253.51",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-JRSRV-01(jrmed.rdp)",
+            "publicIp": "66.81.19.79",
+            "lanIp": "10.100.106.75",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80",
+                  "3389"
+                ],
+                "allowedIps": [
+                  "136.52.78.46",
+                  "182.72.80.174",
+                  "12.79.8.230",
+                  "173.247.179.34"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "443",
+                  "80",
+                  "3389"
+                ],
+                "allowedIps": [
+                  "136.52.78.46",
+                  "182.72.80.174",
+                  "12.79.8.230",
+                  "173.247.179.34"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-QNAP-01 (mycloudbackup)",
+            "publicIp": "66.81.19.69",
+            "lanIp": "172.16.9.80",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8899",
+                  "443",
+                  "8081"
+                ],
+                "allowedIps": [
+                  "69.75.214.10",
+                  "104.189.9.89",
+                  "182.72.80.174",
+                  "49.43.104.60",
+                  "162.228.135.162"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "8899",
+                  "443",
+                  "8081"
+                ],
+                "allowedIps": [
+                  "69.75.214.10",
+                  "104.189.9.89",
+                  "182.72.80.174",
+                  "49.43.104.60",
+                  "162.228.135.162"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-VC-01",
+            "publicIp": "66.81.19.82",
+            "lanIp": "172.16.9.65",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80"
+                ],
+                "allowedIps": [
+                  "66.81.19.70"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-CAM-01",
+            "publicIp": "66.81.19.59",
+            "lanIp": "10.100.254.95",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "173.247.179.34",
+                  "173.247.179.62",
+                  "49.43.101.42",
+                  "182.72.80.174"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-IIS1 (OXPLIVENG & Beta)",
+            "publicIp": "66.81.19.11",
+            "lanIp": "10.100.106.75",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-NLOG-01 (nlog.technijian.com)",
+            "publicIp": "66.81.19.74",
+            "lanIp": "10.100.254.132",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80",
+                  "1443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-05 (cartoonkidstv.com)",
+            "publicIp": "66.81.19.58",
+            "lanIp": "10.100.251.152",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MCP-01 (mcp.technijian.com)",
+            "publicIp": "66.81.19.113",
+            "lanIp": "10.100.254.229",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-CHRM-01 (rag.technijian.com)",
+            "publicIp": "66.81.19.114",
+            "lanIp": "10.100.254.198",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "8080"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-NGINX-01 (ngx.technijian.com)",
+            "publicIp": "66.81.19.107",
+            "lanIp": "10.100.254.103",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "81",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WORDP-04 (technijian.in)",
+            "publicIp": "66.81.19.72",
+            "lanIp": "10.100.251.154",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Te-DC-WORDP-08 (technijian.ae)",
+            "publicIp": "66.81.19.60",
+            "lanIp": "10.100.240.156",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CSS-DC-WORDP-01",
+            "publicIp": "66.81.19.68",
+            "lanIp": "10.100.251.99",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "66.81.19.126",
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-IIS2(Alpha and Alpha-test)-IIS",
+            "publicIp": "66.81.19.104",
+            "lanIp": "10.100.109.75",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CSS-DC-WORDP-02",
+            "publicIp": "66.81.19.78",
+            "lanIp": "10.100.250.100",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "66.81.19.126",
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-N8N-01",
+            "publicIp": "66.81.19.112",
+            "lanIp": "10.100.254.213",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "15.220.19.76",
+                  "15.254.10.200",
+                  "15.220.136.147",
+                  "140.245.18.15"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RFPS-DC-WORDP-(drface.technijian.com)",
+            "publicIp": "66.81.19.61",
+            "lanIp": "10.100.115.231",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "3306"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "66.81.19.126",
+                  "49.43.97.22"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TOR-DC-WORDP-02",
+            "publicIp": "66.81.19.32",
+            "lanIp": "10.100.251.226",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "66.81.19.126"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FOR-DC-WORDP-01",
+            "publicIp": "66.81.19.34",
+            "lanIp": "10.100.251.225",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "66.81.19.126"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-IIS-01(sms.technijian.com)",
+            "publicIp": "66.81.19.111",
+            "lanIp": "10.100.254.71",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ORX-DC-3CX-01 (New)",
+            "publicIp": "66.81.19.57",
+            "lanIp": "10.100.106.56",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700",
+                  "2528"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-20000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VAF-DC-3CX-01 (New)",
+            "publicIp": "66.81.19.64",
+            "lanIp": "10.100.103.60",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700",
+                  "2528"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-20000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-3CX-01 (New)",
+            "publicIp": "66.81.19.67",
+            "lanIp": "10.100.254.80",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443",
+                  "5000",
+                  "5001",
+                  "5060",
+                  "5090",
+                  "5061",
+                  "4516",
+                  "5015",
+                  "8700",
+                  "2528"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "5060",
+                  "5061",
+                  "5090"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "9000-20000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RFPS-DC-WORDP-1 (New drface.com)",
+            "publicIp": "66.81.19.75",
+            "lanIp": "10.100.251.41",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-WP-02 (technijian)",
+            "publicIp": "66.81.19.76",
+            "lanIp": "10.100.254.77",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TM-01(NEW)(myaudit2)",
+            "publicIp": "66.81.19.25",
+            "lanIp": "10.100.254.67",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "10000"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-APP-01(New)(Mydisk.technijian.com)",
+            "publicIp": "66.81.19.99",
+            "lanIp": "10.100.254.61",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-APP-02(New)(Mydisk.technijian.com)",
+            "publicIp": "66.81.19.109",
+            "lanIp": "10.100.254.60",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RALF-DC-SQL-01(udtracker.richardcalterlawfirm.com)",
+            "publicIp": "66.81.19.110",
+            "lanIp": "10.100.254.52",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-HRZ-UG-01",
+            "publicIp": "66.81.19.71",
+            "lanIp": "10.100.104.101",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "8443",
+                  "4172",
+                  "22443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "udp",
+                "destinationPorts": [
+                  "8443",
+                  "4172"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FOR-DC-WORDP-02",
+            "publicIp": "66.81.19.115",
+            "lanIp": "10.100.250.125",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TOR-DC-WORDP-01",
+            "publicIp": "66.81.19.116",
+            "lanIp": "10.100.250.130",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "182.72.80.174",
+                  "137.97.207.6",
+                  "49.43.106.134"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TL-IIS-01",
+            "publicIp": "66.81.19.108",
+            "lanIp": "10.100.253.131",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-TL-N8N",
+            "publicIp": "66.81.19.117",
+            "lanIp": "10.100.252.65",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "15.220.19.76",
+                  "15.254.10.200",
+                  "15.220.136.147",
+                  "140.245.18.15"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-SEO-N8N",
+            "publicIp": "66.81.19.118",
+            "lanIp": "10.100.250.218",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "15.220.19.76",
+                  "15.254.10.200",
+                  "15.220.136.147",
+                  "140.245.18.15"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "8443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-SFTP-01",
+            "publicIp": "66.81.19.122",
+            "lanIp": "10.100.254.51",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-NC-01(mydisk2.technijian.com)",
+            "publicIp": "66.81.19.101",
+            "lanIp": "10.100.254.237",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80",
+                  "8080",
+                  "8443",
+                  "8081",
+                  "11001",
+                  "3479"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-MD-NC-02(vaf-mydisk2.technijian.com)",
+            "publicIp": "66.81.19.119",
+            "lanIp": "10.100.254.241",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443",
+                  "80",
+                  "8080",
+                  "8443",
+                  "8081",
+                  "11001",
+                  "3479"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "VAF-DC-SFTP-01(mysftp.technijian.com)",
+            "publicIp": "66.81.18.200",
+            "lanIp": "10.100.103.111",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              },
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "443"
+                ],
+                "allowedIps": [
+                  "15.220.19.76",
+                  "15.254.10.200",
+                  "15.220.136.147",
+                  "140.245.18.15"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-DC-SYSLOG-01 (syslog.technijian.com)",
+            "publicIp": "66.81.18.201",
+            "lanIp": "10.100.254.170",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "22",
+                  "443",
+                  "6514",
+                  "80"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          }
+        ],
         "intrusion": {
           "mode": "detection",
           "rulesetGenerated": "balanced",
@@ -33,13 +2595,195 @@
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 1,
-          "allowed_url_patterns_count": 2
+          "allowed_url_patterns_count": 2,
+          "blocked_categories": [],
+          "blocked_url_patterns": [
+            "cvc.7766.org"
+          ]
         },
         "vlan_count": 7,
+        "vlans": [
+          {
+            "id": 1,
+            "name": "VLAN-001-MNG",
+            "subnet": "10.100.1.0/24",
+            "applianceIp": "10.100.1.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 49,
+            "name": "VLAN-049-Transist",
+            "subnet": "10.100.49.0/24",
+            "applianceIp": "10.100.49.254",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 115,
+            "name": "VLAN-115-ISOLATION TEST",
+            "subnet": "10.100.115.0/24",
+            "applianceIp": "10.100.115.1",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 116,
+            "name": "VLAN-116-ISOLATION TEST",
+            "subnet": "10.100.116.0/24",
+            "applianceIp": "10.100.116.4",
+            "dhcpHandling": "Run a DHCP server"
+          },
+          {
+            "id": 250,
+            "name": "VLAN-250-SEO-TEST",
+            "subnet": "10.100.250.0/24",
+            "applianceIp": "10.100.250.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 251,
+            "name": "VLAN-251-SEO-PROD",
+            "subnet": "10.100.251.0/24",
+            "applianceIp": "10.100.251.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 252,
+            "name": "VLAN-252-DEV-TEST",
+            "subnet": "10.100.252.0/24",
+            "applianceIp": "10.100.252.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          }
+        ],
         "ssid_count": 0,
+        "ssids": [],
         "s2s_vpn_mode": "hub",
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [
+          {
+            "localSubnet": "10.100.10.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.1.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.49.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.115.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.116.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.250.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.251.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.252.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.16.5.252/30",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.240.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.103.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.104.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.105.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.106.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.109.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.100.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.110.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "66.81.19.108/32",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.112.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.113.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.114.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "172.16.9.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.254.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.5.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.12.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.13.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.14.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.7.9.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.101.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.100.253.0/24",
+            "useVpn": false
+          }
+        ],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       },
       {
         "slug": "02_technijian_hq",
@@ -51,20 +2795,53 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 0,
+        "firewall_l3_rules": [],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 0,
+        "firewall_inbound_rules": [],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 0,
+        "vlans": [],
         "ssid_count": 3,
+        "ssids": [
+          {
+            "number": 0,
+            "name": "TechnijianSecure",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          },
+          {
+            "number": 2,
+            "name": "Technijian HQ",
+            "authMode": "8021x-radius",
+            "encryptionMode": "wpa-eap"
+          },
+          {
+            "number": 3,
+            "name": "TechnijianGuest",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          }
+        ],
         "s2s_vpn_mode": null,
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       },
       {
         "slug": "03_technijian_lv",
@@ -75,10 +2852,26 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 1,
+        "firewall_l3_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "allow",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 0,
+        "firewall_inbound_rules": [],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "intrusion": {
           "mode": "disabled",
           "rulesetGenerated": null,
@@ -90,13 +2883,134 @@
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 10,
+        "vlans": [
+          {
+            "id": 1,
+            "name": "VLAN-001-MNG",
+            "subnet": "10.110.1.0/24",
+            "applianceIp": "10.110.1.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 2,
+            "name": "VLAN-002-OTB",
+            "subnet": "10.110.2.0/24",
+            "applianceIp": "10.110.2.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 3,
+            "name": "VLAN-003-VOI",
+            "subnet": "10.110.3.0/24",
+            "applianceIp": "10.110.3.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 4,
+            "name": "VLAN-004-IOT",
+            "subnet": "10.110.4.0/24",
+            "applianceIp": "10.110.4.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 5,
+            "name": "VLAN-005-RSV",
+            "subnet": "10.110.5.0/24",
+            "applianceIp": "10.110.5.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 6,
+            "name": "VLAN-006-STR",
+            "subnet": "10.110.6.0/24",
+            "applianceIp": "10.110.6.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 7,
+            "name": "VLAN-007-BKP",
+            "subnet": "10.110.7.0/24",
+            "applianceIp": "10.110.7.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 8,
+            "name": "VLAN-008-VMT",
+            "subnet": "10.110.8.0/24",
+            "applianceIp": "10.110.8.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 9,
+            "name": "VLAN-009-VHA",
+            "subnet": "10.110.9.0/24",
+            "applianceIp": "10.110.9.1",
+            "dhcpHandling": "Do not respond to DHCP requests"
+          },
+          {
+            "id": 254,
+            "name": "VLAN-254-TECHNIJIAN",
+            "subnet": "10.110.254.0/24",
+            "applianceIp": "10.110.254.1",
+            "dhcpHandling": "Run a DHCP server"
+          }
+        ],
         "ssid_count": 0,
+        "ssids": [],
         "s2s_vpn_mode": "hub",
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [
+          {
+            "localSubnet": "10.110.1.0/24",
+            "useVpn": true
+          },
+          {
+            "localSubnet": "10.110.2.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.3.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.4.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.5.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.6.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.7.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.8.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.9.0/24",
+            "useVpn": false
+          },
+          {
+            "localSubnet": "10.110.254.0/24",
+            "useVpn": true
+          }
+        ],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       },
       {
         "slug": "04_technijian_mdm",
@@ -106,20 +3020,34 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 0,
+        "firewall_l3_rules": [],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 0,
+        "firewall_inbound_rules": [],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 0,
+        "vlans": [],
         "ssid_count": 0,
+        "ssids": [],
         "s2s_vpn_mode": null,
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       },
       {
         "slug": "05_technijian_lab",
@@ -129,10 +3057,92 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 1,
+        "firewall_l3_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "allow",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 1,
+        "firewall_inbound_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "deny",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 3,
+        "nat_1to1_rules": [
+          {
+            "name": "TE-HQ-LAB-IIS",
+            "publicIp": "10.120.50.200",
+            "lanIp": "10.100.254.21",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-LAB-SQL-01",
+            "publicIp": "10.120.50.201",
+            "lanIp": "10.100.109.21",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TE-LAB-OXPLIVE",
+            "publicIp": "10.120.50.202",
+            "lanIp": "10.100.106.21",
+            "uplink": "internet1",
+            "allowedInbound": [
+              {
+                "protocol": "tcp",
+                "destinationPorts": [
+                  "80",
+                  "443"
+                ],
+                "allowedIps": [
+                  "any"
+                ]
+              }
+            ]
+          }
+        ],
         "intrusion": {
           "mode": "disabled",
           "rulesetGenerated": null,
@@ -144,13 +3154,30 @@
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 1,
+        "vlans": [
+          {
+            "id": 49,
+            "name": "VLAN - 49",
+            "subnet": "10.100.49.0/24",
+            "applianceIp": "10.100.49.254",
+            "dhcpHandling": "Run a DHCP server"
+          }
+        ],
         "ssid_count": 0,
+        "ssids": [],
         "s2s_vpn_mode": "none",
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       }
     ]
   },

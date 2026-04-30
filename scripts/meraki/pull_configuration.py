@@ -137,8 +137,33 @@ def main() -> int:
         write_json(org_dir / "devices.json", devices)
         write_json(hist_org_dir / "networks.json", networks)
         write_json(hist_org_dir / "devices.json", devices)
+
+        # Org-wide uplink statuses (current WAN IPs, status, gateway, DNS)
+        try:
+            uplink_statuses = m.get(f"/organizations/{org['id']}/uplinks/statuses",
+                                    allow_403=True, allow_404=True) or []
+            write_json(org_dir / "uplink_statuses.json", uplink_statuses)
+            write_json(hist_org_dir / "uplink_statuses.json", uplink_statuses)
+        except Exception:
+            uplink_statuses = []
+
+        # Per-device uplink settings (static/DHCP config, VLAN tagging) for appliances
+        appliance_devices = [d for d in devices if d.get("productType") == "appliance"]
+        for dev in appliance_devices:
+            serial = dev["serial"]
+            try:
+                dev_uplink = m.get(f"/devices/{serial}/appliance/uplinks/settings",
+                                   allow_403=True, allow_404=True)
+                if dev_uplink:
+                    dev_dir = org_dir / "devices" / serial
+                    write_json(dev_dir / "uplink_settings.json", dev_uplink)
+                    write_json(hist_org_dir / "devices" / serial / "uplink_settings.json", dev_uplink)
+            except Exception:
+                pass
+
         pulled_orgs += 1
-        print(f"  [{slug}] {len(networks)} networks, {len(devices)} devices")
+        print(f"  [{slug}] {len(networks)} networks, {len(devices)} devices, "
+              f"{len(appliance_devices)} appliances with uplink data")
 
         org_coverage = []
         for net in networks:

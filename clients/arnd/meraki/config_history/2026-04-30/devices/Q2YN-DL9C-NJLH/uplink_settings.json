@@ -1,0 +1,71 @@
+{
+  "interfaces": {
+    "wan1": {
+      "enabled": true,
+      "vlanTagging": {
+        "enabled": false
+      },
+      "svis": {
+        "ipv4": {
+          "assignmentMode": "static",
+          "gateway": "76.80.219.185",
+          "address": "76.80.219.186/29",
+          "nameservers": {
+            "addresses": [
+              "8.8.8.8",
+              "8.8.4.4"
+            ]
+          }
+        },
+        "ipv6": {
+          "assignmentMode": "dynamic"
+        }
+      },
+      "pppoe": {
+        "enabled": false
+      }
+    },
+    "wan2": {
+      "enabled": true,
+      "vlanTagging": {
+        "enabled": false
+      },
+      "svis": {
+        "ipv4": {
+          "assignmentMode": "static",
+          "gateway": "47.179.43.49",
+          "address": "47.179.43.50/29",
+          "nameservers": {
+            "addresses": [
+              "74.40.74.40",
+              "8.8.8.8"
+            ]
+          }
+        },
+        "ipv6": {
+          "assignmentMode": "dynamic"
+        }
+      },
+      "pppoe": {
+        "enabled": false
+      }
+    },
+    "wan3": {
+      "enabled": true,
+      "vlanTagging": {
+        "enabled": false
+      },
+      "svis": {
+        "ipv4": {
+          "assignmentMode": "dynamic"
+        },
+        "ipv6": {
+          "assignmentMode": "dynamic"
+        }
+      },
+      "pppoe": {
+        "enabled": false
+      }
+    }
+  }
+}

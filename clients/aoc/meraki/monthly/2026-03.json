@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T15:44:21Z",
+  "generated_at": "2026-04-30T16:49:23Z",
   "client_code": "aoc",
   "month": "2026-03",
   "configuration": {
     "org": "AOC",
-    "snapshot_at": "2026-04-30T15:40:18Z",
+    "snapshot_at": "2026-04-30T16:48:48Z",
     "network_count": 1,
     "device_count": 1,
     "device_models": {
@@ -13,6 +13,17 @@
     "device_product_types": {
       "wireless": 1
     },
+    "devices": [
+      {
+        "name": "AAOC-AP-01",
+        "model": "MR36",
+        "serial": "Q3KA-3XSD-MC3U",
+        "firmware": "wireless-31-1-7",
+        "lanIp": "10.1.1.106",
+        "productType": "wireless",
+        "network": "AOC-HQ"
+      }
+    ],
     "networks": [
       {
         "slug": "aoc_hq",
@@ -27,20 +38,69 @@
         ],
         "timeZone": "America/Los_Angeles",
         "firewall_l3_rule_count": 1,
+        "firewall_l3_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "allow",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "firewall_l7_rule_count": 0,
+        "firewall_l7_rules": [],
         "firewall_inbound_rule_count": 1,
+        "firewall_inbound_rules": [
+          {
+            "comment": "Default rule",
+            "policy": "deny",
+            "protocol": "Any",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "destPort": "Any",
+            "destCidr": "Any",
+            "syslogEnabled": false
+          }
+        ],
         "port_forward_count": 0,
+        "port_forward_rules": [],
         "one_to_one_nat_count": 0,
+        "nat_1to1_rules": [],
         "content_filtering": {
           "blocked_categories_count": 0,
           "blocked_url_patterns_count": 0,
-          "allowed_url_patterns_count": 0
+          "allowed_url_patterns_count": 0,
+          "blocked_categories": [],
+          "blocked_url_patterns": []
         },
         "vlan_count": 0,
+        "vlans": [],
         "ssid_count": 2,
+        "ssids": [
+          {
+            "number": 0,
+            "name": "AAOC(secure)",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          },
+          {
+            "number": 1,
+            "name": "AAOC(guest)",
+            "authMode": "psk",
+            "encryptionMode": "wpa"
+          }
+        ],
         "s2s_vpn_mode": "none",
         "s2s_vpn_peer_count": 0,
-        "syslog_destination_count": 0
+        "s2s_vpn_hubs": [],
+        "s2s_vpn_subnets": [],
+        "bandwidth_limit_up": 0,
+        "bandwidth_limit_down": 0,
+        "syslog_destination_count": 0,
+        "syslog_servers": []
       }
     ]
   },

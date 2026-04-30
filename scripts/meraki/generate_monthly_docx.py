@@ -41,6 +41,7 @@ CLIENTS_ROOT = REPO_ROOT / "clients"
 EXPECTED_SECTIONS = [
     "Executive Summary",
     "Network & Device Inventory",
+    "Firewall Configuration",
     "Security Posture",
     "Configuration Changes",
     "IDS/IPS & AMP Events",
@@ -143,17 +144,36 @@ def section_executive_summary(doc, payload: dict) -> None:
 def section_inventory(doc, cfg: dict) -> None:
     brand.add_section_header(doc, "Network & Device Inventory")
 
-    brand.add_body(doc, "Devices by model:", bold=True)
-    rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_models") or {}).items()),
-                  key=lambda x: -x[1]) or [("—", 0)]
-    brand.styled_table(doc, ["Model", "Count"], [[m, fmt_int(c)] for m, c in rows],
-                       col_widths=[3.5, 1.5])
+    devices = cfg.get("devices") or []
+    if devices:
+        brand.add_body(doc, "Device inventory:", bold=True)
+        rows = [[
+            d.get("name") or "—",
+            d.get("network") or "—",
+            d.get("model") or "—",
+            d.get("serial") or "—",
+            d.get("firmware") or "—",
+            d.get("lanIp") or "—",
+            (d.get("productType") or "—").replace("cellularGateway", "cellular"),
+        ] for d in devices]
+        brand.styled_table(
+            doc,
+            ["Device", "Network", "Model", "Serial", "Firmware", "LAN IP", "Type"],
+            rows,
+            col_widths=[1.2, 0.8, 0.8, 1.0, 1.0, 0.9, 0.8],
+        )
+    else:
+        brand.add_body(doc, "Devices by model:", bold=True)
+        rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_models") or {}).items()),
+                      key=lambda x: -x[1]) or [("—", 0)]
+        brand.styled_table(doc, ["Model", "Count"], [[m, fmt_int(c)] for m, c in rows],
+                           col_widths=[3.5, 1.5])
 
-    brand.add_body(doc, "Devices by product type:", bold=True)
-    rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_product_types") or {}).items()),
-                  key=lambda x: -x[1]) or [("—", 0)]
-    brand.styled_table(doc, ["Product type", "Count"], [[m, fmt_int(c)] for m, c in rows],
-                       col_widths=[3.5, 1.5])
+        brand.add_body(doc, "Devices by product type:", bold=True)
+        rows = sorted(((m or "(unknown)", c) for m, c in (cfg.get("device_product_types") or {}).items()),
+                      key=lambda x: -x[1]) or [("—", 0)]
+        brand.styled_table(doc, ["Product type", "Count"], [[m, fmt_int(c)] for m, c in rows],
+                           col_widths=[3.5, 1.5])
 
     brand.add_body(doc, "Networks under management:", bold=True)
     headers = ["Network", "Product types", "VLANs", "L3 rules", "L7 rules", "Inbound", "Port fwd"]
@@ -171,7 +191,204 @@ def section_inventory(doc, cfg: dict) -> None:
     if not rows:
         rows = [["(no networks)", "—", "0", "0", "0", "0", "0"]]
     brand.styled_table(doc, headers, rows,
-                       col_widths=[2.0, 1.6, 0.7, 0.8, 0.8, 0.8, 0.8])
+                       col_widths=[1.7, 1.3, 0.6, 0.65, 0.65, 0.65, 0.65])
+
+
+def _fmt_src(rule: dict) -> str:
+    cidr = rule.get("srcCidr") or "Any"
+    port = rule.get("srcPort") or "Any"
+    return cidr if port == "Any" else f"{cidr}:{port}"
+
+
+def _fmt_dst(rule: dict) -> str:
+    cidr = rule.get("destCidr") or "Any"
+    port = rule.get("destPort") or "Any"
+    return cidr if port == "Any" else f"{cidr}:{port}"
+
+
+def section_firewall_config(doc, cfg: dict) -> None:
+    brand.add_section_header(doc, "Firewall Configuration")
+    brand.add_body(
+        doc,
+        "Full configuration snapshot of WAN interfaces, firewall rules, VLANs, "
+        "port-forwarding, wireless SSIDs, and site-to-site VPN per network. "
+        "Values reflect the most recent configuration pull.",
+    )
+
+    # ── WAN Interface Configuration (appliances only) ──────────────────────
+    appliances = [d for d in (cfg.get("devices") or []) if d.get("productType") == "appliance"]
+    if appliances:
+        brand.add_body(doc, "WAN Interface Configuration:", bold=True)
+        wan_rows = []
+        for dev in appliances:
+            dev_name = dev.get("name") or dev.get("serial") or "—"
+            net_name = dev.get("network") or "—"
+            interfaces = dev.get("uplink_settings") or {}
+            statuses = {ul.get("interface"): ul for ul in (dev.get("uplink_status") or [])}
+            if not interfaces:
+                wan_rows.append([dev_name, net_name, "—", "—", "—", "—", "—"])
+                continue
+            for iface_name, iface_cfg in sorted(interfaces.items()):
+                if not iface_cfg.get("enabled", True):
+                    continue
+                svi = ((iface_cfg.get("svis") or {}).get("ipv4") or {})
+                assignment = (svi.get("assignmentMode") or "dhcp").title()
+                ip_addr = svi.get("address") or "—"
+                gateway = svi.get("gateway") or "—"
+                dns_list = (svi.get("nameservers") or {}).get("addresses") or []
+                dns = " / ".join(dns_list) if dns_list else "—"
+                status_rec = statuses.get(iface_name) or {}
+                status = (status_rec.get("status") or "—").replace("not connected", "standby")
+                wan_rows.append([dev_name, net_name, iface_name.upper(),
+                                 assignment, ip_addr, gateway, dns])
+                dev_name = ""  # blank on continuation rows for same device
+                net_name = ""
+        brand.styled_table(
+            doc,
+            ["Device", "Network", "Interface", "Mode", "IP / Subnet", "Gateway", "DNS"],
+            wan_rows,
+            col_widths=[1.2, 0.9, 0.75, 0.65, 1.2, 1.1, 0.7],
+        )
+
+    for n in cfg.get("networks", []) or []:
+        net_name = n.get("name") or n.get("slug") or "Network"
+        brand.add_body(doc, net_name, bold=True)
+
+        # ── L3 Firewall Rules ──────────────────────────────────────────────
+        l3_rules = n.get("firewall_l3_rules") or []
+        if l3_rules:
+            brand.add_body(doc, "L3 Outbound Firewall Rules:", bold=False)
+            rows = []
+            for r in l3_rules:
+                rows.append([
+                    (r.get("policy") or "—").title(),
+                    (r.get("protocol") or "Any").upper(),
+                    _fmt_src(r),
+                    _fmt_dst(r),
+                    r.get("comment") or "—",
+                ])
+            brand.styled_table(
+                doc,
+                ["Policy", "Proto", "Source", "Destination", "Comment"],
+                rows,
+                col_widths=[0.6, 0.65, 1.5, 1.5, 2.2],
+                status_col=0,
+            )
+
+        # ── Inbound Rules ──────────────────────────────────────────────────
+        inbound = n.get("firewall_inbound_rules") or []
+        real_inbound = [r for r in inbound if (r.get("policy") or "").lower() != "allow"
+                        or (r.get("destCidr") or "Any") != "Any"]
+        if real_inbound:
+            brand.add_body(doc, "Inbound Firewall Rules:", bold=False)
+            rows = [[
+                (r.get("policy") or "—").title(),
+                (r.get("protocol") or "Any").upper(),
+                _fmt_src(r),
+                _fmt_dst(r),
+                r.get("comment") or "—",
+            ] for r in real_inbound]
+            brand.styled_table(
+                doc,
+                ["Policy", "Proto", "Source", "Destination", "Comment"],
+                rows,
+                col_widths=[0.6, 0.65, 1.5, 1.5, 2.2],
+                status_col=0,
+            )
+
+        # ── Port Forwarding ────────────────────────────────────────────────
+        pf_rules = n.get("port_forward_rules") or []
+        if pf_rules:
+            brand.add_body(doc, "Port Forwarding Rules:", bold=False)
+            rows = [[
+                r.get("name") or "—",
+                (r.get("protocol") or "—").upper(),
+                r.get("publicPort") or "—",
+                r.get("lanIp") or "—",
+                r.get("localPort") or "—",
+            ] for r in pf_rules]
+            brand.styled_table(
+                doc,
+                ["Name", "Proto", "Public Port", "LAN IP", "LAN Port"],
+                rows,
+                col_widths=[1.5, 0.65, 0.85, 1.5, 0.9],
+            )
+
+        # ── VLANs ──────────────────────────────────────────────────────────
+        vlans = n.get("vlans") or []
+        if vlans:
+            brand.add_body(doc, "VLANs:", bold=False)
+            rows = [[
+                str(v.get("id") or "—"),
+                v.get("name") or "—",
+                v.get("subnet") or "—",
+                v.get("applianceIp") or "—",
+                (v.get("dhcpHandling") or "—").replace("Run a DHCP server", "DHCP server")
+                                               .replace("Do not respond to DHCP requests", "Disabled"),
+            ] for v in vlans]
+            brand.styled_table(
+                doc,
+                ["ID", "Name", "Subnet", "Gateway", "DHCP"],
+                rows,
+                col_widths=[0.45, 1.5, 1.5, 1.25, 1.8],
+            )
+
+        # ── SSIDs ──────────────────────────────────────────────────────────
+        ssids = n.get("ssids") or []
+        if ssids:
+            brand.add_body(doc, "Wireless SSIDs (enabled):", bold=False)
+            rows = [[
+                str(s.get("number") or "—"),
+                s.get("name") or "—",
+                (s.get("authMode") or "—").replace("8021x-meraki", "802.1X").replace("psk", "PSK"),
+            ] for s in ssids]
+            brand.styled_table(
+                doc,
+                ["#", "SSID Name", "Auth Mode"],
+                rows,
+                col_widths=[0.4, 3.0, 2.0],
+            )
+
+        # ── S2S VPN ────────────────────────────────────────────────────────
+        vpn_mode = (n.get("s2s_vpn_mode") or "none").title()
+        hubs = n.get("s2s_vpn_hubs") or []
+        subnets = n.get("s2s_vpn_subnets") or []
+        if vpn_mode.lower() != "none" or hubs or subnets:
+            brand.add_body(doc, f"Site-to-Site VPN — Mode: {vpn_mode}", bold=False)
+            if hubs:
+                hub_rows = [[h.get("hubId") or "—", "Yes" if h.get("useDefaultRoute") else "No"]
+                            for h in hubs]
+                brand.styled_table(doc, ["Hub ID", "Default Route"], hub_rows,
+                                   col_widths=[4.5, 1.5])
+            if subnets:
+                sub_rows = [[s.get("localSubnet") or "—", "Yes" if s.get("useVpn") else "No"]
+                            for s in subnets]
+                brand.styled_table(doc, ["Local Subnet", "In VPN"], sub_rows,
+                                   col_widths=[4.5, 1.5])
+
+        # ── Content Filtering ──────────────────────────────────────────────
+        cf = n.get("content_filtering") or {}
+        cats = cf.get("blocked_categories") or []
+        patterns = cf.get("blocked_url_patterns") or []
+        if cats or patterns:
+            brand.add_body(doc, "Content Filtering:", bold=False)
+            if cats:
+                brand.styled_table(doc, ["Blocked URL Category"], [[c] for c in cats],
+                                   col_widths=[6.0])
+            if patterns:
+                brand.styled_table(doc, ["Blocked URL Pattern"], [[p] for p in patterns],
+                                   col_widths=[6.0])
+
+        # ── Bandwidth Limits ───────────────────────────────────────────────
+        bw_up   = n.get("bandwidth_limit_up", 0) or 0
+        bw_down = n.get("bandwidth_limit_down", 0) or 0
+        if bw_up or bw_down:
+            def _bw(kbps):
+                return f"{kbps // 1000:,} Mbps" if kbps >= 1000 else f"{kbps} Kbps"
+            brand.add_body(
+                doc,
+                f"Global bandwidth limits — Upload: {_bw(bw_up)}  Download: {_bw(bw_down)}",
+            )
 
 
 def section_security_posture(doc, cfg: dict) -> None:
@@ -206,7 +423,7 @@ def section_security_posture(doc, cfg: dict) -> None:
     # status_col uses `IDS/IPS mode` column. brand.styled_table colors by
     # text content: "prevention" -> green via "active"-like match, "detection"
     # -> teal via "medium" match, "disabled" -> red.
-    brand.styled_table(doc, headers, rows, col_widths=[1.8, 1.0, 0.8, 0.9, 1.0, 0.7, 0.7],
+    brand.styled_table(doc, headers, rows, col_widths=[1.5, 0.9, 0.75, 0.85, 0.9, 0.7, 0.65],
                        status_col=1)
 
 
@@ -266,23 +483,27 @@ def section_config_changes(doc, chg: dict) -> None:
     if recent:
         brand.add_body(doc, f"Change detail (most recent {len(recent)}):",
                        bold=True)
+        def _trunc(v, n=80):
+            s = str(v) if v is not None else "—"
+            return s if len(s) <= n else s[:n - 1] + "…"
+
         rows = []
         for c in recent:
             ts_raw = c.get("ts") or ""
             ts_short = ts_raw[:16].replace("T", " ") if ts_raw else "—"
             admin = c.get("adminEmail") or c.get("adminName") or "—"
-            net = c.get("networkName") or c.get("networkId") or "—"
             area = c.get("page") or "—"
-            label = c.get("label") or "—"
-            old_val = str(c.get("oldValue") or "—")[:60]
-            new_val = str(c.get("newValue") or "—")[:60]
-            rows.append([ts_short, admin, net, area, label,
-                         old_val, new_val])
+            label = c.get("label") or ""
+            area_label = f"{area}: {label}" if label else area
+            rows.append([ts_short, admin, area_label,
+                         _trunc(c.get("oldValue")),
+                         _trunc(c.get("newValue"))])
+        # 5 columns, total width 6.4" — fits within the 6.5" usable page
         brand.styled_table(
             doc,
-            ["Timestamp", "Admin", "Network", "Area", "Label", "Old value", "New value"],
+            ["Date / Time", "Administrator", "Area: Setting", "Before", "After"],
             rows,
-            col_widths=[1.2, 1.4, 1.0, 0.9, 1.0, 1.25, 1.25],
+            col_widths=[1.1, 1.5, 1.5, 1.1, 1.2],
         )
 
 
@@ -532,6 +753,7 @@ def build_report(payload: dict, out_path: Path) -> None:
 
     section_executive_summary(doc, payload)
     section_inventory(doc, payload["configuration"])
+    section_firewall_config(doc, payload["configuration"])
     section_security_posture(doc, payload["configuration"])
     section_config_changes(doc, payload.get("config_changes") or {})
     section_security_events(doc, payload["security_events"])
