@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260424_Technijian_1f2d7c59_80f8e634",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_1f2d7c59_80f8e634.mp4",
+  "analyzed_at": "2026-04-30T19:57:50Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a Windows Server machine, dismissed an unexpected shutdown tracker, and opened Server Manager. They identified a stopped 'Clipboard User Service' on the server TE-CL-TECHDC-01 but did not take any action to resolve it before opening the Start Menu and locking the session.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Dismissed the 'Shutdown Event Tracker' dialog.\",\n    \"Observed server roles and service status in Server Manager.\",\n    \"Opened the 'Services Detail View' twice from the Server Manager dashboard.\",\n    \"Opened the Windows Start Menu.\",\n    \"Locked the server session.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Windows Server Start Menu\"\n  ],\n  \"issues_observed\": [\n    \"The server experienced an unexpected shutdown, as indicated by the 'Shutdown Event Tracker'.\",\n    \"A red alert was present next to 'Services' under both 'Local Server' and 'All Servers' in Server Manager.\",\n    \"The 'Clipboard User Service_82aefd' on server 'TE-CL-TECHDC-01' was in a 'Stopped' status, despite its 'Start Type' being 'Automatic (Delayed Start)'.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-CL-TECHDC-01\"\n  ],\n  \"notable_events\": [\n    \"The technician repeatedly opened the same 'All Servers - Services Detail View' dialog to observe the stopped service without taking any further diagnostic or corrective action on it.\",\n    \"The session was locked without addressing the identified stopped service.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"The technician repeatedly clicked on the 'Services' link within the 'Roles and Server Groups' section (under 'All Servers' then 'Local Server') from 0:13 to 0:21. Each click opened the 'All Servers - Services Detail View' dialog showing the same stopped 'Clipboard User Service', but no action was taken on this service before the dialog was closed and the action was repeated, suggesting a momentary hesitation or lack of clear next steps. (Approx. 8 seconds)\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician quickly identified a stopped service through Server Manager. However, they appeared to get stuck repeatedly observing the same service detail without taking any action or progressing to further troubleshooting, before abruptly locking the session.\",\n    \"coaching_flags\": [\n      \"Repeatedly observing an issue (stopped service) without taking any action, such as attempting to start it, checking event logs, or documenting, before ending the session.\",\n      \"Locking the session with an identified issue (stopped service) left unresolved and no indication of next steps.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a Windows Server machine, dismissed an unexpected shutdown tracker, and opened Server Manager. They identified a stopped 'Clipboard User Service' on the server TE-CL-TECHDC-01 but did not take any action to resolve it before opening the Start Menu and locking the session.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Dismissed the 'Shutdown Event Tracker' dialog.",
+      "Observed server roles and service status in Server Manager.",
+      "Opened the 'Services Detail View' twice from the Server Manager dashboard.",
+      "Opened the Windows Start Menu.",
+      "Locked the server session."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Windows Server Start Menu"
+    ],
+    "issues_observed": [
+      "The server experienced an unexpected shutdown, as indicated by the 'Shutdown Event Tracker'.",
+      "A red alert was present next to 'Services' under both 'Local Server' and 'All Servers' in Server Manager.",
+      "The 'Clipboard User Service_82aefd' on server 'TE-CL-TECHDC-01' was in a 'Stopped' status, despite its 'Start Type' being 'Automatic (Delayed Start)'."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-CL-TECHDC-01"
+    ],
+    "notable_events": [
+      "The technician repeatedly opened the same 'All Servers - Services Detail View' dialog to observe the stopped service without taking any further diagnostic or corrective action on it.",
+      "The session was locked without addressing the identified stopped service."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "The technician repeatedly clicked on the 'Services' link within the 'Roles and Server Groups' section (under 'All Servers' then 'Local Server') from 0:13 to 0:21. Each click opened the 'All Servers - Services Detail View' dialog showing the same stopped 'Clipboard User Service', but no action was taken on this service before the dialog was closed and the action was repeated, suggesting a momentary hesitation or lack of clear next steps. (Approx. 8 seconds)"
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician quickly identified a stopped service through Server Manager. However, they appeared to get stuck repeatedly observing the same service detail without taking any action or progressing to further troubleshooting, before abruptly locking the session.",
+      "coaching_flags": [
+        "Repeatedly observing an issue (stopped service) without taking any action, such as attempting to start it, checking event logs, or documenting, before ending the session.",
+        "Locking the session with an identified issue (stopped service) left unresolved and no indication of next steps."
+      ]
+    }
+  }
+}

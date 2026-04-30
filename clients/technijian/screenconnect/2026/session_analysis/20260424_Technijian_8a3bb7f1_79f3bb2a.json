@@ -1,0 +1,45 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_79f3bb2a",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_79f3bb2a.mp4",
+  "analyzed_at": "2026-04-30T20:08:20Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician reviewed the vPC status on a Cisco Nexus device using the `show vpc brief` command via PuTTY, observing that port-channels Po30 and Po31 were in a 'down' state. Concurrently, the technician was browsing a ChatGPT conversation that provided configuration examples for Nexus Switch Port-Channels.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Reviewed `show vpc brief` output on a Cisco Nexus device.\",\n    \"Identified vPC port-channels Po30 and Po31 as being in a 'down' state.\",\n    \"Scrolled through a ChatGPT conversation related to Nexus Switch Port-Channel configuration details.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"vPC port-channels Po30 and Po31 were in a 'down*' state according to `show vpc brief` output.\",\n    \"The system prompted to check `show vpc consistency-parameters vpc <vpc-num>` for more details on the down vPCs.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"172.16.9.2\",\n    \"TE-HQ-LAB-01\"\n  ],\n  \"notable_events\": [\n    \"Technician used ChatGPT as a resource for Cisco Nexus configuration and troubleshooting.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician methodically reviewed diagnostic output and simultaneously referenced AI-generated information, suggesting a focused approach to problem-solving or configuration.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician reviewed the vPC status on a Cisco Nexus device using the `show vpc brief` command via PuTTY, observing that port-channels Po30 and Po31 were in a 'down' state. Concurrently, the technician was browsing a ChatGPT conversation that provided configuration examples for Nexus Switch Port-Channels.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Reviewed `show vpc brief` output on a Cisco Nexus device.",
+      "Identified vPC port-channels Po30 and Po31 as being in a 'down' state.",
+      "Scrolled through a ChatGPT conversation related to Nexus Switch Port-Channel configuration details."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "vPC port-channels Po30 and Po31 were in a 'down*' state according to `show vpc brief` output.",
+      "The system prompted to check `show vpc consistency-parameters vpc <vpc-num>` for more details on the down vPCs."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "172.16.9.2",
+      "TE-HQ-LAB-01"
+    ],
+    "notable_events": [
+      "Technician used ChatGPT as a resource for Cisco Nexus configuration and troubleshooting."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician methodically reviewed diagnostic output and simultaneously referenced AI-generated information, suggesting a focused approach to problem-solving or configuration.",
+      "coaching_flags": []
+    }
+  }
+}

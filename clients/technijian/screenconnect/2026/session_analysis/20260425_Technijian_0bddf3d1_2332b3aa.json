@@ -1,0 +1,62 @@
+{
+  "filename_stem": "20260425_Technijian_0bddf3d1_2332b3aa",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_0bddf3d1_2332b3aa.mp4",
+  "analyzed_at": "2026-04-30T20:19:46Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician performed system maintenance and cleanup tasks on a Windows computer. This included disabling the Windows Update service, uninstalling and then reinstalling Google Chrome, uninstalling Microsoft OneDrive, and reviewing various system logs and network configurations before restarting the machine.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Logged into the Windows machine.\",\n    \"Opened Command Prompt as administrator and executed `netstat -ano`, `tasklist`, and `ipconfig /all` to gather system information.\",\n    \"Accessed Services, located the \\\"Windows Update\\\" service, stopped it, and set its startup type to \\\"Disabled\\\".\",\n    \"Used Control Panel > Programs and Features to uninstall Google Chrome and Microsoft OneDrive.\",\n    \"Used Microsoft Edge to download and reinstall Google Chrome.\",\n    \"Opened PowerShell as administrator and ran `Get-WindowsUpdateLog` to generate the Windows Update log file.\",\n    \"Reviewed `WindowsUpdate.log` using Notepad.\",\n    \"Reviewed System and Application logs in Event Viewer.\",\n    \"Initiated a system restart.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Services\",\n    \"Control Panel\",\n    \"Programs and Features\",\n    \"Microsoft Edge\",\n    \"Google Chrome (installer/uninstaller)\",\n    \"Notepad\",\n    \"File Explorer\",\n    \"PowerShell\",\n    \"Event Viewer\"\n  ],\n  \"issues_observed\": [\n    \"Initial boot sequence displayed \\\"Getting Windows ready\\\" and \\\"Please wait\\\" messages for approximately 35 seconds, potentially indicating pending updates or a slow startup.\"\n  ],\n  \"issues_resolved\": [\n    \"Google Chrome was reinstalled, effectively refreshing the browser installation.\",\n    \"Microsoft OneDrive was uninstalled.\",\n    \"Windows Update service was disabled.\"\n  ],\n  \"machines_touched\": [],\n  \"notable_events\": [\n    \"The computer took approximately 35 seconds to reach the login screen from the start of the recording, showing \\\"Getting Windows ready\\\" and \\\"Please wait\\\" messages.\",\n    \"Windows Update service was permanently disabled by setting its startup type to 'Disabled'.\"\n  ],\n  \"concerns\": [\n    \"Disabling Windows Update can have security implications if not temporary or managed by an alternative update system.\"\n  ],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked very methodically and efficiently, moving directly from one task to the next without hesitation or apparent difficulty. Appropriate tools were used for each diagnostic and maintenance step.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician performed system maintenance and cleanup tasks on a Windows computer. This included disabling the Windows Update service, uninstalling and then reinstalling Google Chrome, uninstalling Microsoft OneDrive, and reviewing various system logs and network configurations before restarting the machine.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Logged into the Windows machine.",
+      "Opened Command Prompt as administrator and executed `netstat -ano`, `tasklist`, and `ipconfig /all` to gather system information.",
+      "Accessed Services, located the \"Windows Update\" service, stopped it, and set its startup type to \"Disabled\".",
+      "Used Control Panel > Programs and Features to uninstall Google Chrome and Microsoft OneDrive.",
+      "Used Microsoft Edge to download and reinstall Google Chrome.",
+      "Opened PowerShell as administrator and ran `Get-WindowsUpdateLog` to generate the Windows Update log file.",
+      "Reviewed `WindowsUpdate.log` using Notepad.",
+      "Reviewed System and Application logs in Event Viewer.",
+      "Initiated a system restart."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Services",
+      "Control Panel",
+      "Programs and Features",
+      "Microsoft Edge",
+      "Google Chrome (installer/uninstaller)",
+      "Notepad",
+      "File Explorer",
+      "PowerShell",
+      "Event Viewer"
+    ],
+    "issues_observed": [
+      "Initial boot sequence displayed \"Getting Windows ready\" and \"Please wait\" messages for approximately 35 seconds, potentially indicating pending updates or a slow startup."
+    ],
+    "issues_resolved": [
+      "Google Chrome was reinstalled, effectively refreshing the browser installation.",
+      "Microsoft OneDrive was uninstalled.",
+      "Windows Update service was disabled."
+    ],
+    "machines_touched": [],
+    "notable_events": [
+      "The computer took approximately 35 seconds to reach the login screen from the start of the recording, showing \"Getting Windows ready\" and \"Please wait\" messages.",
+      "Windows Update service was permanently disabled by setting its startup type to 'Disabled'."
+    ],
+    "concerns": [
+      "Disabling Windows Update can have security implications if not temporary or managed by an alternative update system."
+    ],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked very methodically and efficiently, moving directly from one task to the next without hesitation or apparent difficulty. Appropriate tools were used for each diagnostic and maintenance step.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_87521328",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_87521328.mp4",
+  "analyzed_at": "2026-04-30T20:11:27Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician was examining the Virtual Port-Channel (vPC) status on a Cisco Nexus switch, using PuTTY to view the `show vpc consistency-parameters` output. The output showed two vPCs (IDs 30 and 31) in a 'down' status, while vPC 10 was 'up'. A web browser with Cisco documentation and ChatGPT was also open in the background, likely for reference.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Reviewed Cisco Nexus `show vpc consistency-parameters` output for vPC status\",\n    \"Identified 'down' status for vPC IDs 30 and 31\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Google Chrome\"\n  ],\n  \"issues_observed\": [\n    \"Cisco Nexus vPC IDs 30 and 31 reported 'down' status in `show vpc consistency-parameters` output.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"172.16.9.2 (Cisco Nexus switch, target of PuTTY session)\"\n  ],\n  \"notable_events\": [\n    \"Use of ChatGPT for potential assistance or documentation during troubleshooting.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician had relevant tools (PuTTY, browser with network configuration tabs, ChatGPT) open, suggesting a methodical approach to troubleshooting. However, the short clip primarily shows a static screen, making it difficult to fully assess efficiency.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician was examining the Virtual Port-Channel (vPC) status on a Cisco Nexus switch, using PuTTY to view the `show vpc consistency-parameters` output. The output showed two vPCs (IDs 30 and 31) in a 'down' status, while vPC 10 was 'up'. A web browser with Cisco documentation and ChatGPT was also open in the background, likely for reference.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Reviewed Cisco Nexus `show vpc consistency-parameters` output for vPC status",
+      "Identified 'down' status for vPC IDs 30 and 31"
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Google Chrome"
+    ],
+    "issues_observed": [
+      "Cisco Nexus vPC IDs 30 and 31 reported 'down' status in `show vpc consistency-parameters` output."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "172.16.9.2 (Cisco Nexus switch, target of PuTTY session)"
+    ],
+    "notable_events": [
+      "Use of ChatGPT for potential assistance or documentation during troubleshooting."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician had relevant tools (PuTTY, browser with network configuration tabs, ChatGPT) open, suggesting a methodical approach to troubleshooting. However, the short clip primarily shows a static screen, making it difficult to fully assess efficiency.",
+      "coaching_flags": []
+    }
+  }
+}

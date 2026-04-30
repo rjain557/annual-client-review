@@ -1,0 +1,45 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_f6d0cda0",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_f6d0cda0.mp4",
+  "analyzed_at": "2026-04-30T20:18:16Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician is diagnosing a Virtual Port-Channel (vPC) consistency issue on a Cisco Nexus switch, evidenced by two vPCs (Po30 and Po31) being in a 'down' state. They are using PuTTY to execute `show vpc consistency-parameters` commands and reviewing the output, potentially with the aid of ChatGPT for reference or solutions.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Executed `show vpc consistency-parameters vpc 2` command on a Cisco Nexus switch (172.16.9.2) via PuTTY.\",\n    \"Reviewed the vPC status and consistency parameters in the command output.\",\n    \"Accessed ChatGPT, possibly for research related to Nexus switch port-channel configuration or troubleshooting.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Google Chrome (ChatGPT)\"\n  ],\n  \"issues_observed\": [\n    \"Two vPCs (Po30 and Po31) on the Cisco Nexus switch are in a 'down' state.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Cisco Nexus switch (IP: 172.16.9.2)\"\n  ],\n  \"notable_events\": [\n    \"The technician is utilizing ChatGPT as a potential resource for troubleshooting or configuration commands.\"\n  ],\n  \"concerns\": [\n    \"Using ChatGPT for live production network troubleshooting or configuration could pose a compliance or security risk if sensitive network details are entered or if AI-generated commands are not thoroughly vetted before execution.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician immediately ran a relevant diagnostic command (`show vpc consistency-parameters`) for the observed 'down' vPC status, indicating a methodical approach to troubleshooting.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician is diagnosing a Virtual Port-Channel (vPC) consistency issue on a Cisco Nexus switch, evidenced by two vPCs (Po30 and Po31) being in a 'down' state. They are using PuTTY to execute `show vpc consistency-parameters` commands and reviewing the output, potentially with the aid of ChatGPT for reference or solutions.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Executed `show vpc consistency-parameters vpc 2` command on a Cisco Nexus switch (172.16.9.2) via PuTTY.",
+      "Reviewed the vPC status and consistency parameters in the command output.",
+      "Accessed ChatGPT, possibly for research related to Nexus switch port-channel configuration or troubleshooting."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Google Chrome (ChatGPT)"
+    ],
+    "issues_observed": [
+      "Two vPCs (Po30 and Po31) on the Cisco Nexus switch are in a 'down' state."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Cisco Nexus switch (IP: 172.16.9.2)"
+    ],
+    "notable_events": [
+      "The technician is utilizing ChatGPT as a potential resource for troubleshooting or configuration commands."
+    ],
+    "concerns": [
+      "Using ChatGPT for live production network troubleshooting or configuration could pose a compliance or security risk if sensitive network details are entered or if AI-generated commands are not thoroughly vetted before execution."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician immediately ran a relevant diagnostic command (`show vpc consistency-parameters`) for the observed 'down' vPC status, indicating a methodical approach to troubleshooting.",
+      "coaching_flags": []
+    }
+  }
+}

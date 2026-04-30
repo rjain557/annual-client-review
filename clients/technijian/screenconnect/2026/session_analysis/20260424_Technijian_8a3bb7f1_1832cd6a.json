@@ -1,0 +1,51 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_1832cd6a",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_1832cd6a.mp4",
+  "analyzed_at": "2026-04-30T20:02:58Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into Microsoft Teams as a specific user, overcoming a multi-factor authentication prompt. They then navigated to a chat with another user and successfully shared two text files by dragging them from the desktop into the chat window. After confirming the files were sent, the technician signed out of the Teams application.\",\n  \"session_type\": \"other\",\n  \"actions_taken\": [\n    \"Logged into Microsoft Teams using gkumar@technijan.com.\",\n    \"Approved Multi-Factor Authentication (MFA) request (off-screen).\",\n    \"Selected 'No, this app only' for device sign-in.\",\n    \"Navigated to 'Parveen Biswal' chat in Teams.\",\n    \"Dragged and dropped 'Lab-01.txt' and 'Lab-02 (2).txt' from the Desktop into the Teams chat.\",\n    \"Confirmed file sharing.\",\n    \"Signed out of Microsoft Teams.\"\n  ],\n  \"applications_used\": [\n    \"Microsoft Teams\",\n    \"File Explorer\"\n  ],\n  \"issues_observed\": [],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-DC-CHAT-RG1 (weaviate) 10.100.254.216 (mentioned in chat)\",\n    \"192.168.1.10 (mentioned in chat)\"\n  ],\n  \"notable_events\": [\n    \"Multi-factor authentication was required for Teams login.\",\n    \"Files were shared using drag-and-drop directly into the Teams chat.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"01:31 - 03:00 (approx. 89 seconds): After sending the files, the technician remained on the chat screen without further interaction before initiating sign-out.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 89,\n    \"total_idle_estimate_seconds\": 89,\n    \"efficiency_notes\": \"The technician worked methodically to log in and share the requested files. There was a noticeable pause after the files were sent before signing out, which slightly impacted overall efficiency for this simple task.\",\n    \"coaching_flags\": [\n      \"Consider signing out of applications promptly after completing tasks, especially when the primary action is complete and no further immediate work is required in the application.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into Microsoft Teams as a specific user, overcoming a multi-factor authentication prompt. They then navigated to a chat with another user and successfully shared two text files by dragging them from the desktop into the chat window. After confirming the files were sent, the technician signed out of the Teams application.",
+    "session_type": "other",
+    "actions_taken": [
+      "Logged into Microsoft Teams using gkumar@technijan.com.",
+      "Approved Multi-Factor Authentication (MFA) request (off-screen).",
+      "Selected 'No, this app only' for device sign-in.",
+      "Navigated to 'Parveen Biswal' chat in Teams.",
+      "Dragged and dropped 'Lab-01.txt' and 'Lab-02 (2).txt' from the Desktop into the Teams chat.",
+      "Confirmed file sharing.",
+      "Signed out of Microsoft Teams."
+    ],
+    "applications_used": [
+      "Microsoft Teams",
+      "File Explorer"
+    ],
+    "issues_observed": [],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-DC-CHAT-RG1 (weaviate) 10.100.254.216 (mentioned in chat)",
+      "192.168.1.10 (mentioned in chat)"
+    ],
+    "notable_events": [
+      "Multi-factor authentication was required for Teams login.",
+      "Files were shared using drag-and-drop directly into the Teams chat."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [
+        "01:31 - 03:00 (approx. 89 seconds): After sending the files, the technician remained on the chat screen without further interaction before initiating sign-out."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 89,
+      "total_idle_estimate_seconds": 89,
+      "efficiency_notes": "The technician worked methodically to log in and share the requested files. There was a noticeable pause after the files were sent before signing out, which slightly impacted overall efficiency for this simple task.",
+      "coaching_flags": [
+        "Consider signing out of applications promptly after completing tasks, especially when the primary action is complete and no further immediate work is required in the application."
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_87347319",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_87347319.mp4",
+  "analyzed_at": "2026-04-30T20:11:08Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician accessed a Cisco Nexus device via PuTTY to check its vPC status, observing that two vPC links (30 and 31) were in a 'down*' state. The session then moved to display the running configuration of the device, but the video ended before the full output could be reviewed.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Executed 'show vpc brief' to check vPC status.\",\n    \"Observed vPC links 30 and 31 in a 'down*' status.\",\n    \"Executed 'show running-config' to review device configuration.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"ScreenConnect Client\"\n  ],\n  \"issues_observed\": [\n    \"vPC links 30 and 31 were in a 'down*' state.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-HQ-LAB-01 (Cisco Nexus device hostname)\",\n    \"172.16.9.2 (IP address of the Cisco Nexus device)\",\n    \"TE-HQ-LAB-02 (mentioned in crypto key label in running-config)\",\n    \"TE-HQ-LPT-42 (local machine running ScreenConnect Client)\"\n  ],\n  \"notable_events\": [],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician directly entered commands relevant to diagnosing network issues, suggesting a methodical approach to initial troubleshooting.\",\n    \"coaching_flags\": []\n  }\n}",
+  "analysis": {
+    "summary": "The technician accessed a Cisco Nexus device via PuTTY to check its vPC status, observing that two vPC links (30 and 31) were in a 'down*' state. The session then moved to display the running configuration of the device, but the video ended before the full output could be reviewed.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Executed 'show vpc brief' to check vPC status.",
+      "Observed vPC links 30 and 31 in a 'down*' status.",
+      "Executed 'show running-config' to review device configuration."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "ScreenConnect Client"
+    ],
+    "issues_observed": [
+      "vPC links 30 and 31 were in a 'down*' state."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-HQ-LAB-01 (Cisco Nexus device hostname)",
+      "172.16.9.2 (IP address of the Cisco Nexus device)",
+      "TE-HQ-LAB-02 (mentioned in crypto key label in running-config)",
+      "TE-HQ-LPT-42 (local machine running ScreenConnect Client)"
+    ],
+    "notable_events": [],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician directly entered commands relevant to diagnosing network issues, suggesting a methodical approach to initial troubleshooting.",
+      "coaching_flags": []
+    }
+  }
+}

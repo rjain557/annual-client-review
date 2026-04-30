@@ -1,0 +1,69 @@
+{
+  "filename_stem": "20260424_Technijian_0c8be608_fd3890ea",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0c8be608_fd3890ea.mp4",
+  "analyzed_at": "2026-04-30T19:57:08Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician logged into OneDrive to set up file synchronization on a client's machine, encountering an 'incorrect password' error initially, followed by a 'device deleted' error after MFA. They then successfully configured OneDrive to use an existing folder on the F: drive, bypassing default folder backups. The session concluded with OneDrive initiating file synchronization and the technician reviewing a SQL backup PowerShell script.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Attempted OneDrive sign-in using provided credentials.\",\n    \"Troubleshot incorrect password during initial login.\",\n    \"Completed multifactor authentication (MFA) via text message.\",\n    \"Reviewed and acknowledged 'Your organization has deleted this device' error.\",\n    \"Manually selected an existing OneDrive folder on the F: drive for synchronization.\",\n    \"Disabled backup for Pictures and Desktop folders during OneDrive setup.\",\n    \"Opened and reviewed a PowerShell script related to SQL backups.\",\n    \"Confirmed OneDrive began processing file changes for synchronization.\"\n  ],\n  \"applications_used\": [\n    \"Microsoft OneDrive\",\n    \"File Explorer\",\n    \"Windows PowerShell ISE\"\n  ],\n  \"issues_observed\": [\n    \"Incorrect password error during initial OneDrive login.\",\n    \"'Your organization has deleted this device' error (code 700003) after successful MFA.\",\n    \"Windows PowerShell ISE reported that its previous session did not close normally.\"\n  ],\n  \"issues_resolved\": [\n    \"OneDrive login was successfully completed after correcting the password and using MFA.\",\n    \"OneDrive synchronization was successfully configured and initiated to the specified local folder.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-CP-SQL-01 (visible in file paths and script)\",\n    \"CCC-DC-SQL-02 (mentioned in OneDrive sync notifications)\"\n  ],\n  \"notable_events\": [\n    \"The 'Your organization has deleted this device' error (code 700003) did not prevent the OneDrive setup from proceeding by using an existing local folder.\",\n    \"Significant periods of inactivity observed while waiting for Microsoft processes to complete.\"\n  ],\n  \"concerns\": [\n    \"Password 'Support92618!' was briefly visible on screen during password entry.\",\n    \"Prolonged idle time where no active troubleshooting or other tasks were being performed.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"01:09 - 01:20: Technician re-entered password after an 'incorrect password' error, showing the password in plain text before signing in again (approx. 11 seconds).\",\n      \"01:38 - 04:32: The screen was static on a 'Just a moment...' loading message after an error for nearly 3 minutes without any visible interaction from the technician (174 seconds).\",\n      \"06:16 - 12:00: After OneDrive setup, the technician remained idle, with the OneDrive sync notification visible on the screen, for the remaining duration of the video (344 seconds).\"\n    ],\n    \"idle_gaps\": [\n      \"01:38 - 04:32 (174 seconds)\",\n      \"06:16 - 12:00 (344 seconds)\"\n    ],\n    \"idle_gap_count\": 2,\n    \"longest_idle_seconds\": 344,\n    \"total_idle_estimate_seconds\": 518,\n    \"efficiency_notes\": \"The technician initially showed some uncertainty with password entry but then proceeded methodically through the OneDrive setup. However, there were very long idle periods where no other tasks were initiated, significantly impacting overall efficiency.\",\n    \"coaching_flags\": [\n      \"Avoid showing passwords in plain text, even briefly, during remote sessions.\",\n      \"Utilize idle time more effectively by addressing other pending tasks or communicating progress/wait times to the client. The long waits could be perceived as unproductive if not clearly explained.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician logged into OneDrive to set up file synchronization on a client's machine, encountering an 'incorrect password' error initially, followed by a 'device deleted' error after MFA. They then successfully configured OneDrive to use an existing folder on the F: drive, bypassing default folder backups. The session concluded with OneDrive initiating file synchronization and the technician reviewing a SQL backup PowerShell script.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Attempted OneDrive sign-in using provided credentials.",
+      "Troubleshot incorrect password during initial login.",
+      "Completed multifactor authentication (MFA) via text message.",
+      "Reviewed and acknowledged 'Your organization has deleted this device' error.",
+      "Manually selected an existing OneDrive folder on the F: drive for synchronization.",
+      "Disabled backup for Pictures and Desktop folders during OneDrive setup.",
+      "Opened and reviewed a PowerShell script related to SQL backups.",
+      "Confirmed OneDrive began processing file changes for synchronization."
+    ],
+    "applications_used": [
+      "Microsoft OneDrive",
+      "File Explorer",
+      "Windows PowerShell ISE"
+    ],
+    "issues_observed": [
+      "Incorrect password error during initial OneDrive login.",
+      "'Your organization has deleted this device' error (code 700003) after successful MFA.",
+      "Windows PowerShell ISE reported that its previous session did not close normally."
+    ],
+    "issues_resolved": [
+      "OneDrive login was successfully completed after correcting the password and using MFA.",
+      "OneDrive synchronization was successfully configured and initiated to the specified local folder."
+    ],
+    "machines_touched": [
+      "TE-DC-CP-SQL-01 (visible in file paths and script)",
+      "CCC-DC-SQL-02 (mentioned in OneDrive sync notifications)"
+    ],
+    "notable_events": [
+      "The 'Your organization has deleted this device' error (code 700003) did not prevent the OneDrive setup from proceeding by using an existing local folder.",
+      "Significant periods of inactivity observed while waiting for Microsoft processes to complete."
+    ],
+    "concerns": [
+      "Password 'Support92618!' was briefly visible on screen during password entry.",
+      "Prolonged idle time where no active troubleshooting or other tasks were being performed."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "01:09 - 01:20: Technician re-entered password after an 'incorrect password' error, showing the password in plain text before signing in again (approx. 11 seconds).",
+        "01:38 - 04:32: The screen was static on a 'Just a moment...' loading message after an error for nearly 3 minutes without any visible interaction from the technician (174 seconds).",
+        "06:16 - 12:00: After OneDrive setup, the technician remained idle, with the OneDrive sync notification visible on the screen, for the remaining duration of the video (344 seconds)."
+      ],
+      "idle_gaps": [
+        "01:38 - 04:32 (174 seconds)",
+        "06:16 - 12:00 (344 seconds)"
+      ],
+      "idle_gap_count": 2,
+      "longest_idle_seconds": 344,
+      "total_idle_estimate_seconds": 518,
+      "efficiency_notes": "The technician initially showed some uncertainty with password entry but then proceeded methodically through the OneDrive setup. However, there were very long idle periods where no other tasks were initiated, significantly impacting overall efficiency.",
+      "coaching_flags": [
+        "Avoid showing passwords in plain text, even briefly, during remote sessions.",
+        "Utilize idle time more effectively by addressing other pending tasks or communicating progress/wait times to the client. The long waits could be perceived as unproductive if not clearly explained."
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "filename_stem": "20260425_Technijian_0bddf3d1_ab0d51be",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_0bddf3d1_ab0d51be.mp4",
+  "analyzed_at": "2026-04-30T20:21:30Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a client machine, identified that the 'ManageEngine Applications Manager Admin' service was stopped, and manually started it. After confirming the service was running and its web interface accessible, the technician signed out.\",\n  \"session_type\": \"maintenance\",\n  \"actions_taken\": [\n    \"Accessed the remote desktop session.\",\n    \"Opened Server Manager.\",\n    \"Used Windows Search to find and open the Services management console.\",\n    \"Located the 'ManageEngine Applications Manager Admin' service.\",\n    \"Initiated the startup of the 'ManageEngine Applications Manager Admin' service.\",\n    \"Observed the service starting and its web interface loading in a browser.\",\n    \"Signed out of the remote session.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Services (Microsoft Management Console)\",\n    \"Windows Search\",\n    \"Web Browser (to display the application's webclient)\"\n  ],\n  \"issues_observed\": [\n    \"The 'ManageEngine Applications Manager Admin' service was not running.\"\n  ],\n  \"issues_resolved\": [\n    \"The 'ManageEngine Applications Manager Admin' service was successfully started.\"\n  ],\n  \"machines_touched\": [\n    \"Client machine (referred to as 'localhost' in the service URL)\"\n  ],\n  \"notable_events\": [\n    \"Successful manual startup of a key application service.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"false\",\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked efficiently and directly, navigating to the Services console and starting the required service without any visible delays or uncertainties.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a client machine, identified that the 'ManageEngine Applications Manager Admin' service was stopped, and manually started it. After confirming the service was running and its web interface accessible, the technician signed out.",
+    "session_type": "maintenance",
+    "actions_taken": [
+      "Accessed the remote desktop session.",
+      "Opened Server Manager.",
+      "Used Windows Search to find and open the Services management console.",
+      "Located the 'ManageEngine Applications Manager Admin' service.",
+      "Initiated the startup of the 'ManageEngine Applications Manager Admin' service.",
+      "Observed the service starting and its web interface loading in a browser.",
+      "Signed out of the remote session."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Services (Microsoft Management Console)",
+      "Windows Search",
+      "Web Browser (to display the application's webclient)"
+    ],
+    "issues_observed": [
+      "The 'ManageEngine Applications Manager Admin' service was not running."
+    ],
+    "issues_resolved": [
+      "The 'ManageEngine Applications Manager Admin' service was successfully started."
+    ],
+    "machines_touched": [
+      "Client machine (referred to as 'localhost' in the service URL)"
+    ],
+    "notable_events": [
+      "Successful manual startup of a key application service."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": "false",
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked efficiently and directly, navigating to the Services console and starting the required service without any visible delays or uncertainties.",
+      "coaching_flags": []
+    }
+  }
+}

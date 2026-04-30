@@ -1,0 +1,48 @@
+{
+  "filename_stem": "20260424_Technijian_1fbf7d73_38581bbc",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_1fbf7d73_38581bbc.mp4",
+  "analyzed_at": "2026-04-30T19:58:10Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician observed network performance test results using iperf3, then opened the Windows Services console to stop and restart the 'ManageEngine OpManager MSP' service. The session concluded with the Services console closed and the iperf3 output still visible in the command prompt.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Observed iperf3 network performance test results (e.g., 3.70 Gbits/sec).\",\n    \"Opened the Windows Services management console.\",\n    \"Located and right-clicked on the 'ManageEngine OpManager MSP_TE_DC_DPSPBB_01' service.\",\n    \"Stopped the 'ManageEngine OpManager MSP' service.\",\n    \"Started the 'ManageEngine OpManager MSP' service.\",\n    \"Closed the Services management console.\"\n  ],\n  \"applications_used\": [\n    \"Command Prompt\",\n    \"Services (services.msc)\",\n    \"iperf3\"\n  ],\n  \"issues_observed\": [\n    \"No explicit issue was stated or error message shown, but the actions suggest potential network performance investigation or troubleshooting of a service impacting system behavior.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"Local machine (where Services.msc was opened)\",\n    \"10.100.7.171 (iperf3 target)\"\n  ],\n  \"notable_events\": [\n    \"The restart of the 'ManageEngine OpManager MSP' service without visible prior diagnosis in the recording.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, directly navigating to the Services console and performing the service restart without apparent hesitation.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician observed network performance test results using iperf3, then opened the Windows Services console to stop and restart the 'ManageEngine OpManager MSP' service. The session concluded with the Services console closed and the iperf3 output still visible in the command prompt.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Observed iperf3 network performance test results (e.g., 3.70 Gbits/sec).",
+      "Opened the Windows Services management console.",
+      "Located and right-clicked on the 'ManageEngine OpManager MSP_TE_DC_DPSPBB_01' service.",
+      "Stopped the 'ManageEngine OpManager MSP' service.",
+      "Started the 'ManageEngine OpManager MSP' service.",
+      "Closed the Services management console."
+    ],
+    "applications_used": [
+      "Command Prompt",
+      "Services (services.msc)",
+      "iperf3"
+    ],
+    "issues_observed": [
+      "No explicit issue was stated or error message shown, but the actions suggest potential network performance investigation or troubleshooting of a service impacting system behavior."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "Local machine (where Services.msc was opened)",
+      "10.100.7.171 (iperf3 target)"
+    ],
+    "notable_events": [
+      "The restart of the 'ManageEngine OpManager MSP' service without visible prior diagnosis in the recording."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, directly navigating to the Services console and performing the service restart without apparent hesitation.",
+      "coaching_flags": []
+    }
+  }
+}

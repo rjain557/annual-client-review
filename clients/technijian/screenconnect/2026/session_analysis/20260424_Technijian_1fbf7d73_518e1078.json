@@ -1,0 +1,52 @@
+{
+  "filename_stem": "20260424_Technijian_1fbf7d73_518e1078",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_1fbf7d73_518e1078.mp4",
+  "analyzed_at": "2026-04-30T19:58:35Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "{\n  \"summary\": \"The technician performed network performance diagnostics on a client machine using iperf3, testing connectivity to 10.100.7.171 with varying numbers of parallel streams. An unrelated browser window showing a Namecheap login error was closed at the beginning of the session.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Closed Chrome browser window showing a Namecheap login page with an error.\",\n    \"Opened Command Prompt.\",\n    \"Executed `iperf3 -c 10.100.7.171 -P 16` multiple times to measure network bandwidth with 16 parallel streams.\",\n    \"Executed `iperf3 -c 10.100.7.171 -P 8` multiple times to measure network bandwidth with 8 parallel streams.\",\n    \"Executed `iperf3 -c 10.100.7.171` (defaulting to 1 parallel stream) multiple times to measure network bandwidth.\"\n  ],\n  \"applications_used\": [\n    \"Chrome\",\n    \"Command Prompt\",\n    \"iperf3\"\n  ],\n  \"issues_observed\": [\n    \"Namecheap login page displayed an error: 'You have made 5 consecutive failed attempts to login within the past 24 hours. This is your LAST try.' (This appeared unrelated to the primary support task).\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"10.100.7.171\"\n  ],\n  \"notable_events\": [\n    \"The session began with an unrelated Namecheap login error page open, which was immediately closed by the technician.\",\n    \"Multiple `iperf3` commands were run with slightly varying parameters to test network throughput.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": \"true\",\n    \"stuck_details\": [\n      \"Around 00:16-00:25, the technician ran `iperf3 -c 10.100.7.171 -P 16` twice consecutively without visible analysis or modification, taking approximately 9 seconds.\",\n      \"Around 00:44-00:55, the technician ran `iperf3 -c 10.100.7.171 -P 8` twice consecutively without visible analysis or modification, taking approximately 11 seconds.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically in performing iperf3 tests with different parameters, indicating a clear plan for network diagnostics. However, there were instances of running the exact same command multiple times consecutively without apparent reason or analysis, which reduced efficiency for those brief periods.\",\n    \"coaching_flags\": [\n      \"Repeated identical `iperf3` commands consecutively without clear justification or an observable interval for analyzing results.\"\n    ]\n  }\n}",
+  "analysis": {
+    "summary": "The technician performed network performance diagnostics on a client machine using iperf3, testing connectivity to 10.100.7.171 with varying numbers of parallel streams. An unrelated browser window showing a Namecheap login error was closed at the beginning of the session.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Closed Chrome browser window showing a Namecheap login page with an error.",
+      "Opened Command Prompt.",
+      "Executed `iperf3 -c 10.100.7.171 -P 16` multiple times to measure network bandwidth with 16 parallel streams.",
+      "Executed `iperf3 -c 10.100.7.171 -P 8` multiple times to measure network bandwidth with 8 parallel streams.",
+      "Executed `iperf3 -c 10.100.7.171` (defaulting to 1 parallel stream) multiple times to measure network bandwidth."
+    ],
+    "applications_used": [
+      "Chrome",
+      "Command Prompt",
+      "iperf3"
+    ],
+    "issues_observed": [
+      "Namecheap login page displayed an error: 'You have made 5 consecutive failed attempts to login within the past 24 hours. This is your LAST try.' (This appeared unrelated to the primary support task)."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "10.100.7.171"
+    ],
+    "notable_events": [
+      "The session began with an unrelated Namecheap login error page open, which was immediately closed by the technician.",
+      "Multiple `iperf3` commands were run with slightly varying parameters to test network throughput."
+    ],
+    "concerns": [],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": "true",
+      "stuck_details": [
+        "Around 00:16-00:25, the technician ran `iperf3 -c 10.100.7.171 -P 16` twice consecutively without visible analysis or modification, taking approximately 9 seconds.",
+        "Around 00:44-00:55, the technician ran `iperf3 -c 10.100.7.171 -P 8` twice consecutively without visible analysis or modification, taking approximately 11 seconds."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically in performing iperf3 tests with different parameters, indicating a clear plan for network diagnostics. However, there were instances of running the exact same command multiple times consecutively without apparent reason or analysis, which reduced efficiency for those brief periods.",
+      "coaching_flags": [
+        "Repeated identical `iperf3` commands consecutively without clear justification or an observable interval for analyzing results."
+      ]
+    }
+  }
+}

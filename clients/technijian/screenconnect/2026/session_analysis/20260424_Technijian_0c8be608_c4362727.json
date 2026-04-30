@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260424_Technijian_0c8be608_c4362727",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0c8be608_c4362727.mp4",
+  "analyzed_at": "2026-04-30T19:55:59Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician attempted to log into a Windows computer, first as 'Technijian Support' and then as 'Administrator'. After encountering 'incorrect password' errors on the initial attempts for both accounts and a second attempt for 'Technijian Support', the technician successfully logged in using the 'Administrator' account on the second try.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Attempted login as 'Technijian Support' (password incorrect)\",\n    \"Attempted login as 'Administrator' (password incorrect)\",\n    \"Returned to lock screen and re-attempted login as 'Technijian Support' (password incorrect)\",\n    \"Successfully logged in as 'Administrator'\"\n  ],\n  \"applications_used\": [\n    \"Windows Login\"\n  ],\n  \"issues_observed\": [\n    \"Incorrect password errors for 'Technijian Support' account (twice)\",\n    \"Incorrect password error for 'Administrator' account (once)\"\n  ],\n  \"issues_resolved\": [\n    \"Successful login to the 'Administrator' account was achieved after initial failures\"\n  ],\n  \"machines_touched\": [\n    \"Local Windows computer\"\n  ],\n  \"notable_events\": [\n    \"Multiple password attempts were required to gain access to the system.\"\n  ],\n  \"concerns\": [\n    \"Repeated incorrect password attempts for different accounts could indicate issues with credential management or careful typing, though it could also stem from incorrect information provided by the client.\"\n  ],\n  \"estimated_productivity\": \"low\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"The technician repeatedly attempted login with incorrect passwords for both the 'Technijian Support' account (0:03-0:05 and 0:11-0:12) and the 'Administrator' account (0:06-0:08). This repetition of failed login attempts for the same accounts before finding the correct one suggests a temporary lack of the right credentials or a typing error. The total duration of these failed attempts and retries spanned most of the short recording.\"\n    ],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician struggled with login credentials, requiring multiple attempts across two different user accounts before successfully logging in. This indicates a less efficient approach to gaining system access.\",\n    \"coaching_flags\": [\n      \"Verify credentials for multiple accounts before initiating login attempts to avoid repeated failures.\",\n      \"Consider a more systematic approach to troubleshooting login failures rather than immediately retrying the same credentials or account.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician attempted to log into a Windows computer, first as 'Technijian Support' and then as 'Administrator'. After encountering 'incorrect password' errors on the initial attempts for both accounts and a second attempt for 'Technijian Support', the technician successfully logged in using the 'Administrator' account on the second try.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Attempted login as 'Technijian Support' (password incorrect)",
+      "Attempted login as 'Administrator' (password incorrect)",
+      "Returned to lock screen and re-attempted login as 'Technijian Support' (password incorrect)",
+      "Successfully logged in as 'Administrator'"
+    ],
+    "applications_used": [
+      "Windows Login"
+    ],
+    "issues_observed": [
+      "Incorrect password errors for 'Technijian Support' account (twice)",
+      "Incorrect password error for 'Administrator' account (once)"
+    ],
+    "issues_resolved": [
+      "Successful login to the 'Administrator' account was achieved after initial failures"
+    ],
+    "machines_touched": [
+      "Local Windows computer"
+    ],
+    "notable_events": [
+      "Multiple password attempts were required to gain access to the system."
+    ],
+    "concerns": [
+      "Repeated incorrect password attempts for different accounts could indicate issues with credential management or careful typing, though it could also stem from incorrect information provided by the client."
+    ],
+    "estimated_productivity": "low",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "The technician repeatedly attempted login with incorrect passwords for both the 'Technijian Support' account (0:03-0:05 and 0:11-0:12) and the 'Administrator' account (0:06-0:08). This repetition of failed login attempts for the same accounts before finding the correct one suggests a temporary lack of the right credentials or a typing error. The total duration of these failed attempts and retries spanned most of the short recording."
+      ],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician struggled with login credentials, requiring multiple attempts across two different user accounts before successfully logging in. This indicates a less efficient approach to gaining system access.",
+      "coaching_flags": [
+        "Verify credentials for multiple accounts before initiating login attempts to avoid repeated failures.",
+        "Consider a more systematic approach to troubleshooting login failures rather than immediately retrying the same credentials or account."
+      ]
+    }
+  }
+}

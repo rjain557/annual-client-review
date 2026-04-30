@@ -1,0 +1,49 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_8cc942e8",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_8cc942e8.mp4",
+  "analyzed_at": "2026-04-30T20:12:10Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician connected to a Cisco Nexus network device via PuTTY to inspect its Virtual Port Channel (vPC) status. The `show vpc` command was executed, revealing that two vPCs (Po30 and Po31) were in a 'down' state, while Po10 was 'up'.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Opened PuTTY application.\",\n    \"Attempted to establish an SSH connection to IP address 10.100.1.2, then closed the session.\",\n    \"Established an SSH connection to IP address 172.16.9.2.\",\n    \"Accepted a new SSH host key for 172.16.9.2.\",\n    \"Logged into the Cisco Nexus device (PE-HQ-LAB-01) as 'admin'.\",\n    \"Executed the 'show vpc' command.\"\n  ],\n  \"applications_used\": [\n    \"Google Chrome\",\n    \"PuTTY\"\n  ],\n  \"issues_observed\": [\n    \"PuTTY Security Alert indicating a host key mismatch for 172.16.9.2.\",\n    \"Two vPC instances (ID 30, Port Po30 and ID 31, Port Po31) on the Cisco Nexus device were reported as 'down' in the 'show vpc' output.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"10.100.1.2 (connection attempted)\",\n    \"172.16.9.2 (Cisco Nexus device, hostname PE-HQ-LAB-01)\"\n  ],\n  \"notable_events\": [\n    \"The initial SSH connection attempt to 10.100.1.2 was immediately closed without login.\",\n    \"A PuTTY Security Alert about a host key mismatch was encountered and accepted for 172.16.9.2.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically, quickly correcting an initial IP entry error and proceeding to log in and execute the necessary command to gather configuration status information.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician connected to a Cisco Nexus network device via PuTTY to inspect its Virtual Port Channel (vPC) status. The `show vpc` command was executed, revealing that two vPCs (Po30 and Po31) were in a 'down' state, while Po10 was 'up'.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Opened PuTTY application.",
+      "Attempted to establish an SSH connection to IP address 10.100.1.2, then closed the session.",
+      "Established an SSH connection to IP address 172.16.9.2.",
+      "Accepted a new SSH host key for 172.16.9.2.",
+      "Logged into the Cisco Nexus device (PE-HQ-LAB-01) as 'admin'.",
+      "Executed the 'show vpc' command."
+    ],
+    "applications_used": [
+      "Google Chrome",
+      "PuTTY"
+    ],
+    "issues_observed": [
+      "PuTTY Security Alert indicating a host key mismatch for 172.16.9.2.",
+      "Two vPC instances (ID 30, Port Po30 and ID 31, Port Po31) on the Cisco Nexus device were reported as 'down' in the 'show vpc' output."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "10.100.1.2 (connection attempted)",
+      "172.16.9.2 (Cisco Nexus device, hostname PE-HQ-LAB-01)"
+    ],
+    "notable_events": [
+      "The initial SSH connection attempt to 10.100.1.2 was immediately closed without login.",
+      "A PuTTY Security Alert about a host key mismatch was encountered and accepted for 172.16.9.2."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically, quickly correcting an initial IP entry error and proceeding to log in and execute the necessary command to gather configuration status information.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_a1a236fe",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_a1a236fe.mp4",
+  "analyzed_at": "2026-04-30T20:13:59Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician accessed a network device, TE-HQ-LAB-01, via PuTTY to review its running configuration. During the session, they configured PuTTY to log all session output to a new text file named \\\"Lab-01\\\" created on the desktop. Subsequently, they attempted to connect to other network devices, encountering a connection timeout to 10.100.1.3 before initiating a new session to 172.16.9.3.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Reviewed the running configuration of network device TE-HQ-LAB-01.\",\n    \"Configured PuTTY to log all session output.\",\n    \"Created a new log file named \\\"Lab-01\\\" on the desktop.\",\n    \"Attempted to establish a new SSH connection to 10.100.1.3, which timed out.\",\n    \"Initiated a new SSH connection to 172.16.9.3.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Windows File Explorer\",\n    \"Google Chrome (ChatGPT)\"\n  ],\n  \"issues_observed\": [\n    \"Network error: Connection timed out when attempting to connect to 10.100.1.3 via PuTTY.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"TE-HQ-LAB-01 (172.16.9.2)\",\n    \"10.100.1.3 (attempted connection)\",\n    \"172.16.9.3 (attempted connection)\"\n  ],\n  \"notable_events\": [\n    \"The technician enabled comprehensive session logging for the PuTTY session.\",\n    \"A new log file was created and saved directly to the desktop.\",\n    \"Used ChatGPT briefly for reviewing Cisco configuration examples.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked methodically to set up session logging for the initial device. While there was a connection timeout, the technician promptly moved to attempt connection to another IP. Brief browsing of ChatGPT may have been for reference but its direct impact on the tasks performed was not evident.\",\n    \"coaching_flags\": [\n      \"Saving log files directly to the desktop might not adhere to organizational best practices for file management; consider advising the use of a dedicated folder.\",\n      \"The relevance of the ChatGPT content to the immediate tasks was not explicitly clear, suggesting potential for more focused research or an explanation of its purpose if relevant to the client.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician accessed a network device, TE-HQ-LAB-01, via PuTTY to review its running configuration. During the session, they configured PuTTY to log all session output to a new text file named \"Lab-01\" created on the desktop. Subsequently, they attempted to connect to other network devices, encountering a connection timeout to 10.100.1.3 before initiating a new session to 172.16.9.3.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Reviewed the running configuration of network device TE-HQ-LAB-01.",
+      "Configured PuTTY to log all session output.",
+      "Created a new log file named \"Lab-01\" on the desktop.",
+      "Attempted to establish a new SSH connection to 10.100.1.3, which timed out.",
+      "Initiated a new SSH connection to 172.16.9.3."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Windows File Explorer",
+      "Google Chrome (ChatGPT)"
+    ],
+    "issues_observed": [
+      "Network error: Connection timed out when attempting to connect to 10.100.1.3 via PuTTY."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "TE-HQ-LAB-01 (172.16.9.2)",
+      "10.100.1.3 (attempted connection)",
+      "172.16.9.3 (attempted connection)"
+    ],
+    "notable_events": [
+      "The technician enabled comprehensive session logging for the PuTTY session.",
+      "A new log file was created and saved directly to the desktop.",
+      "Used ChatGPT briefly for reviewing Cisco configuration examples."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked methodically to set up session logging for the initial device. While there was a connection timeout, the technician promptly moved to attempt connection to another IP. Brief browsing of ChatGPT may have been for reference but its direct impact on the tasks performed was not evident.",
+      "coaching_flags": [
+        "Saving log files directly to the desktop might not adhere to organizational best practices for file management; consider advising the use of a dedicated folder.",
+        "The relevance of the ChatGPT content to the immediate tasks was not explicitly clear, suggesting potential for more focused research or an explanation of its purpose if relevant to the client."
+      ]
+    }
+  }
+}

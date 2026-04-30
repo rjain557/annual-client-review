@@ -1,0 +1,56 @@
+{
+  "filename_stem": "20260425_Technijian_0bddf3d1_74d957bc",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260425_Technijian_0bddf3d1_74d957bc.mp4",
+  "analyzed_at": "2026-04-30T20:20:33Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician reconfigured the network adapter of a virtual machine (TE-DC-BK-VBR-01) within the vSphere Client. The adapter was changed from DPG-254-Technijian to DPG-iSCSI-B. This process involved powering off and then powering on the VM to apply the changes.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Closed a remote console connection warning in Server Manager.\",\n    \"Observed services listed in Server Manager.\",\n    \"Navigated to the 'TE-DC-BK-VBR-01' VM within the vSphere Client.\",\n    \"Opened the 'Edit Settings' for 'TE-DC-BK-VBR-01'.\",\n    \"Changed Network adapter 1 from 'DPG-254-Technijian' to 'DPG-iSCSI-B'.\",\n    \"Powered off the 'TE-DC-BK-VBR-01' VM.\",\n    \"Powered on the 'TE-DC-BK-VBR-01' VM.\",\n    \"Launched the web console for 'TE-DC-BK-VBR-01'.\",\n    \"Sent Ctrl+Alt+Delete to the VM console.\"\n  ],\n  \"applications_used\": [\n    \"Server Manager\",\n    \"Google Chrome\",\n    \"vSphere Client\",\n    \"VMware Web Console\"\n  ],\n  \"issues_observed\": [\n    \"Initial Server Manager warning about existing remote console connections.\",\n    \"VM's Network adapter 1 was connected to 'DPG-254-Technijian' instead of the intended 'DPG-iSCSI-B'.\"\n  ],\n  \"issues_resolved\": [\n    \"The network adapter setting for 'TE-DC-BK-VBR-01' was successfully reconfigured to 'DPG-iSCSI-B'.\"\n  ],\n  \"machines_touched\": [\n    \"TE-DC-BK-365-01\",\n    \"TE-DC-BK-VBR-01\",\n    \"172.16.9.252\"\n  ],\n  \"notable_events\": [\n    \"The VM required a power cycle (off and then on) to apply the network adapter configuration change.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"high\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [],\n    \"idle_gap_count\": 0,\n    \"longest_idle_seconds\": 0,\n    \"total_idle_estimate_seconds\": 0,\n    \"efficiency_notes\": \"The technician worked efficiently and methodically, directly navigating to the target VM and executing the required network configuration change, including the necessary power cycle.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician reconfigured the network adapter of a virtual machine (TE-DC-BK-VBR-01) within the vSphere Client. The adapter was changed from DPG-254-Technijian to DPG-iSCSI-B. This process involved powering off and then powering on the VM to apply the changes.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Closed a remote console connection warning in Server Manager.",
+      "Observed services listed in Server Manager.",
+      "Navigated to the 'TE-DC-BK-VBR-01' VM within the vSphere Client.",
+      "Opened the 'Edit Settings' for 'TE-DC-BK-VBR-01'.",
+      "Changed Network adapter 1 from 'DPG-254-Technijian' to 'DPG-iSCSI-B'.",
+      "Powered off the 'TE-DC-BK-VBR-01' VM.",
+      "Powered on the 'TE-DC-BK-VBR-01' VM.",
+      "Launched the web console for 'TE-DC-BK-VBR-01'.",
+      "Sent Ctrl+Alt+Delete to the VM console."
+    ],
+    "applications_used": [
+      "Server Manager",
+      "Google Chrome",
+      "vSphere Client",
+      "VMware Web Console"
+    ],
+    "issues_observed": [
+      "Initial Server Manager warning about existing remote console connections.",
+      "VM's Network adapter 1 was connected to 'DPG-254-Technijian' instead of the intended 'DPG-iSCSI-B'."
+    ],
+    "issues_resolved": [
+      "The network adapter setting for 'TE-DC-BK-VBR-01' was successfully reconfigured to 'DPG-iSCSI-B'."
+    ],
+    "machines_touched": [
+      "TE-DC-BK-365-01",
+      "TE-DC-BK-VBR-01",
+      "172.16.9.252"
+    ],
+    "notable_events": [
+      "The VM required a power cycle (off and then on) to apply the network adapter configuration change."
+    ],
+    "concerns": [],
+    "estimated_productivity": "high",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [],
+      "idle_gap_count": 0,
+      "longest_idle_seconds": 0,
+      "total_idle_estimate_seconds": 0,
+      "efficiency_notes": "The technician worked efficiently and methodically, directly navigating to the target VM and executing the required network configuration change, including the necessary power cycle.",
+      "coaching_flags": []
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "filename_stem": "20260424_Technijian_8a3bb7f1_e9d75ed4",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_8a3bb7f1_e9d75ed4.mp4",
+  "analyzed_at": "2026-04-30T20:17:20Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician is troubleshooting Cisco Nexus Virtual Port-Channel (vPC) configuration, observing `show vpc status` output in PuTTY which indicates two vPCs (Po30, Po31) are in a 'down*' state. They are using ChatGPT to assist with understanding the output and potential configuration commands, referencing a prompt to check consistency parameters.\",\n  \"session_type\": \"troubleshooting\",\n  \"actions_taken\": [\n    \"Accessed a network device (likely a Cisco Nexus switch) via PuTTY.\",\n    \"Executed `show vpc status` command.\",\n    \"Observed vPC status, noting Po30 and Po31 are in a 'down*' state.\",\n    \"Reviewed recommendations from the device to check `show vpc consistency-parameters vpc <vpc-num>`.\",\n    \"Interacted with ChatGPT, likely seeking assistance with vPC troubleshooting or configuration.\",\n    \"Reviewed Cisco Nexus vPC configuration snippets (e.g., `switchport mode trunk`, `vpc peer-link`) provided by ChatGPT.\"\n  ],\n  \"applications_used\": [\n    \"PuTTY\",\n    \"Google Chrome\",\n    \"ChatGPT\",\n    \"Cisco UCS Manager (tab open)\",\n    \"VMware ESXi (tab open)\"\n  ],\n  \"issues_observed\": [\n    \"Two Virtual Port-Channels (Po30 and Po31) are reported as 'down*' in the `show vpc status` output on the network device.\",\n    \"The 'Consistency Reason' for the down vPCs is 'success', which indicates a need for further investigation using `show vpc consistency-parameters`.\"\n  ],\n  \"issues_resolved\": [],\n  \"machines_touched\": [\n    \"172.16.9.2 (via PuTTY, likely a Cisco Nexus switch)\",\n    \"Client's desktop computer\"\n  ],\n  \"notable_events\": [\n    \"Active use of ChatGPT as a troubleshooting and configuration reference tool.\"\n  ],\n  \"concerns\": [],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": false,\n    \"stuck_details\": [],\n    \"idle_gaps\": [\n      \"00:00 - 00:02 (2 seconds): The screen remained static with no visible mouse movement or typing.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 2,\n    \"total_idle_estimate_seconds\": 2,\n    \"efficiency_notes\": \"The technician appears to be working methodically, leveraging both direct device interaction and AI assistance (ChatGPT) to diagnose a network issue.\",\n    \"coaching_flags\": []\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician is troubleshooting Cisco Nexus Virtual Port-Channel (vPC) configuration, observing `show vpc status` output in PuTTY which indicates two vPCs (Po30, Po31) are in a 'down*' state. They are using ChatGPT to assist with understanding the output and potential configuration commands, referencing a prompt to check consistency parameters.",
+    "session_type": "troubleshooting",
+    "actions_taken": [
+      "Accessed a network device (likely a Cisco Nexus switch) via PuTTY.",
+      "Executed `show vpc status` command.",
+      "Observed vPC status, noting Po30 and Po31 are in a 'down*' state.",
+      "Reviewed recommendations from the device to check `show vpc consistency-parameters vpc <vpc-num>`.",
+      "Interacted with ChatGPT, likely seeking assistance with vPC troubleshooting or configuration.",
+      "Reviewed Cisco Nexus vPC configuration snippets (e.g., `switchport mode trunk`, `vpc peer-link`) provided by ChatGPT."
+    ],
+    "applications_used": [
+      "PuTTY",
+      "Google Chrome",
+      "ChatGPT",
+      "Cisco UCS Manager (tab open)",
+      "VMware ESXi (tab open)"
+    ],
+    "issues_observed": [
+      "Two Virtual Port-Channels (Po30 and Po31) are reported as 'down*' in the `show vpc status` output on the network device.",
+      "The 'Consistency Reason' for the down vPCs is 'success', which indicates a need for further investigation using `show vpc consistency-parameters`."
+    ],
+    "issues_resolved": [],
+    "machines_touched": [
+      "172.16.9.2 (via PuTTY, likely a Cisco Nexus switch)",
+      "Client's desktop computer"
+    ],
+    "notable_events": [
+      "Active use of ChatGPT as a troubleshooting and configuration reference tool."
+    ],
+    "concerns": [],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": false,
+      "stuck_details": [],
+      "idle_gaps": [
+        "00:00 - 00:02 (2 seconds): The screen remained static with no visible mouse movement or typing."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 2,
+      "total_idle_estimate_seconds": 2,
+      "efficiency_notes": "The technician appears to be working methodically, leveraging both direct device interaction and AI assistance (ChatGPT) to diagnose a network issue.",
+      "coaching_flags": []
+    }
+  }
+}
