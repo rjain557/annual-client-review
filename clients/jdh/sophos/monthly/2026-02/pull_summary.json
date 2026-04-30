@@ -1,0 +1,27 @@
+{
+  "LocationCode": "JDH",
+  "sophos_tenant_id": "13fe54af-2aef-4e6c-819c-9478e9b9e26c",
+  "sophos_tenant_name": "JDH Pacific",
+  "year_month": "2026-02",
+  "alerts_total": 6,
+  "alerts_by_severity": {
+    "high": 2,
+    "medium": 0,
+    "low": 4,
+    "informational": 0
+  },
+  "alerts_by_category": {
+    "connectivity": 5,
+    "updating": 1
+  },
+  "alerts_by_product": {
+    "firewall": 5,
+    "other": 1
+  },
+  "data_caveats": {
+    "scope": "Open alerts only \u2014 Sophos /common/v1/alerts does not return resolved/closed alerts.",
+    "siem_events": "Not backfilled \u2014 Partner SIEM /events has 24h max lookback.",
+    "ips_ids": "Not in this dataset \u2014 captured via syslog receiver, not Partner API."
+  },
+  "run_at": "2026-04-29T21:34:59+00:00"
+}

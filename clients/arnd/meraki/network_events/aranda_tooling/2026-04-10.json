@@ -1,0 +1,5676 @@
+{
+  "org": {
+    "id": "1549341",
+    "name": "Aranda Tooling"
+  },
+  "network": {
+    "id": "L_686235993220607281",
+    "name": "Aranda Tooling",
+    "productTypes": [
+      "appliance",
+      "switch"
+    ]
+  },
+  "productType": "appliance",
+  "window": {
+    "t0": "2026-04-10T00:00:00Z",
+    "t1": "2026-04-10T23:59:59Z"
+  },
+  "fetched_at": "2026-04-30T00:20:32Z",
+  "count": 302,
+  "events": [
+    {
+      "occurredAt": "2026-04-10T23:58:20.198075Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k46dc1c",
+      "clientDescription": "9491cbcb-34e9-4809-8830-aa9268c9218d",
+      "clientMac": "ec:4c:8c:72:15:50",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.165",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:56:44.938064Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k8ff74e",
+      "clientDescription": "cfb49e9f-ee34-4b28-bf28-7e3d2ef7490b",
+      "clientMac": "f8:ce:72:fe:42:52",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.247",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:54:34.448755Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[174.81.51.173.64445] Prot[UDP] Conn-ID[10249] Sess-ID[36] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:54:34.448594Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[36] Peer IP=174.81.51.173 User[pearl.davis@us.dsbj.com]: Session disconnected. Session Type: SSL, Duration: 0d:07h:28m:03s, Bytes xmt: 0, Bytes rcv: 0, Reason: User Requested "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:54:34.448080Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_disconnect",
+      "description": "AnyConnect VPN client disconnected",
+      "clientId": "kf9a1e9",
+      "clientDescription": "03:64:d0:3e:f8:7c",
+      "clientMac": "03:64:d0:3e:f8:7c",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.111",
+        "user_id": "pearl.davis@us.dsbj.com",
+        "remote_ip": "174.81.51.173"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:54:34.447933Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[36] Peer IP=174.81.51.173 User[pearl.davis@us.dsbj.com]: Deleted DTLS tunnel[36.2] from DB. Reason: User Requested "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:54:34.447819Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[36] Peer IP=174.81.51.173 User[pearl.davis@us.dsbj.com]: Deleted TLS tunnel[36.1] from DB. Reason: User Requested "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:50:15.439269Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k524f80",
+      "clientDescription": "ATI-PC45",
+      "clientMac": "70:85:c2:35:df:52",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.173",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:49:24.533493Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k55ceed",
+      "clientDescription": "ATI-PC88",
+      "clientMac": "b0:4f:13:10:c1:d6",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.56",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:45:46.465250Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k0c9659",
+      "clientDescription": "ATI-Laptop76",
+      "clientMac": "a0:29:42:c8:20:a3",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.37",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:44:49.963897Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6b74c9",
+      "clientDescription": "926604ba-378d-47d1-8d5e-ee46e4d3bb59",
+      "clientMac": "f8:ce:72:1d:e6:f3",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.190",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:43:15.533091Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kc50525",
+      "clientDescription": "ATI-Laptop61",
+      "clientMac": "28:6b:35:dd:30:fb",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.192",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:43:12.364890Z",
+      "networkId": "L_686235993220607281",
+      "type": "events_dropped2",
+      "description": "Events dropped",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "dropped",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "n": "42",
+        "type": "anyconnect_vpn_baykok"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:43.618757Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.39128] Prot[TCP] Conn-ID[10410] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:35.447210Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.39126] Prot[TCP] Conn-ID[10409] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:27.387861Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.44886] Prot[TCP] Conn-ID[10407] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:27.206798Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.44884] Prot[TCP] Conn-ID[10406] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:19.057210Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36530] Prot[TCP] Conn-ID[10403] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:19.045409Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36532] Prot[TCP] Conn-ID[10404] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:18.971184Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36526] Prot[TCP] Conn-ID[10402] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:18.959363Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36528] Prot[TCP] Conn-ID[10401] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:17.998348Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36524] Prot[TCP] Conn-ID[10400] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:17.043446Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36522] Prot[TCP] Conn-ID[10399] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:16.092149Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36520] Prot[TCP] Conn-ID[10398] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:15.137876Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36518] Prot[TCP] Conn-ID[10397] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:14.190726Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.36516] Prot[TCP] Conn-ID[10396] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:13.234472Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47070] Prot[TCP] Conn-ID[10395] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:12.272703Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47068] Prot[TCP] Conn-ID[10394] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:11.300651Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47066] Prot[TCP] Conn-ID[10393] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:10.341810Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47064] Prot[TCP] Conn-ID[10392] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:09.355895Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47062] Prot[TCP] Conn-ID[10391] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:08.302558Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47060] Prot[TCP] Conn-ID[10390] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:07.328524Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47058] Prot[TCP] Conn-ID[10389] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:06.337059Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47056] Prot[TCP] Conn-ID[10388] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:05.292854Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47054] Prot[TCP] Conn-ID[10387] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:04.320262Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.47052] Prot[TCP] Conn-ID[10386] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:03.265366Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55144] Prot[TCP] Conn-ID[10385] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:03.097213Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k46723e",
+      "clientDescription": "234bcf8a-25c3-4c8e-a4bf-5ec9e226ab42",
+      "clientMac": "6a:e4:66:7b:63:62",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.187",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:02.309582Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55142] Prot[TCP] Conn-ID[10384] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:01.359426Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55140] Prot[TCP] Conn-ID[10383] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:41:00.404849Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55138] Prot[TCP] Conn-ID[10382] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:59.415271Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55136] Prot[TCP] Conn-ID[10381] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:58.361371Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55134] Prot[TCP] Conn-ID[10380] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:57.414784Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55132] Prot[TCP] Conn-ID[10379] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:56.437959Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55130] Prot[TCP] Conn-ID[10378] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:55.382972Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55128] Prot[TCP] Conn-ID[10377] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:54.411293Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.55126] Prot[TCP] Conn-ID[10376] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:53.454973Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.43790] Prot[TCP] Conn-ID[10375] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:52.500300Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.43788] Prot[TCP] Conn-ID[10374] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:46.938216Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.43786] Prot[TCP] Conn-ID[10373] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:45.875885Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.43784] Prot[TCP] Conn-ID[10372] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:44.887603Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.43782] Prot[TCP] Conn-ID[10371] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:40:33.273601Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.227.78.3.45882] Prot[TCP] Conn-ID[10370] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:39:40.660959Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[35] Peer IP=72.219.179.100 User[yash.jadav@us.dsbj.com]: Deleted TLS tunnel[35.7] from DB. Reason: DPD kill "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:37:40.928117Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[35] Peer IP=72.219.179.100 User[yash.jadav@us.dsbj.com]: conn_id[10368] Added TLS tunnel[35.7] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:37:40.926060Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k14d101",
+      "clientDescription": "03:a6:e1:e6:da:21",
+      "clientMac": "03:a6:e1:e6:da:21",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.218",
+        "user_id": "yash.jadav@us.dsbj.com",
+        "remote_ip": "72.219.179.100"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:37:40.857866Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[72.219.179.100.64397] Prot[TCP] Conn-ID[10368] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:37:40.573930Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[72.219.179.100.64396] Prot[TCP] Conn-ID[10367] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:36:59.466972Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.22.163.13.51127] Prot[TCP] Conn-ID[10366] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:33:12.424494Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k58b5de",
+      "clientDescription": "Android_5SYZQ2B9",
+      "clientMac": "86:c8:50:31:3e:44",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.92",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:30:48.586533Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10365] Added DTLS tunnel[32.22] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:30:48.586389Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.59002] Prot[UDP] Conn-ID[10365] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:30:46.788969Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10364] Added TLS tunnel[32.21] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:30:46.786915Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:30:46.676558Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.32882] Prot[TCP] Conn-ID[10364] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:29:28.516424Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k450949",
+      "clientDescription": "DESKTOP-QUFBV1M",
+      "clientMac": "30:14:4a:3f:d3:95",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.243",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:25:51.769723Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kc466cb",
+      "clientDescription": "SIP-T41P",
+      "clientMac": "80:5e:c0:18:f7:24",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.165",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:24:38.908543Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k37c910",
+      "clientDescription": "99c85927-23dc-4504-80fb-f0b6eb814956",
+      "clientMac": "ac:19:8e:97:d3:17",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.227",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:16:30.414613Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k690e87",
+      "clientDescription": "5ebca6b5-518f-40fb-97c6-5d4294b426e7",
+      "clientMac": "78:af:08:1c:6d:b7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.29",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:16:16.336585Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k82d5bc",
+      "clientDescription": "2738f973-0671-43cd-8046-53daf1d80bda",
+      "clientMac": "62:8a:78:25:34:bb",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.49",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:13:24.352304Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[46.151.178.13.41462] Prot[TCP] Conn-ID[10363] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:13:23.300034Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.59.161.79.31799] Prot[TCP] Conn-ID[10362] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:09:27.309740Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[45.55.92.5.54810] Prot[TCP] Conn-ID[10361] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:06:46.635407Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[93.123.72.166.53120] Prot[TCP] Conn-ID[10360] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:06:25.059717Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k9fac5a",
+      "clientDescription": "ATI-TABLET02",
+      "clientMac": "4c:0f:3e:2c:9d:6d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.39",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:03:07.974731Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6703a6",
+      "clientDescription": "f4bfe4c1-deb4-4110-ab9b-5d9ed9dbb48f",
+      "clientMac": "a0:29:42:c8:85:de",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.184",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T23:00:28.997848Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k4b8803",
+      "clientDescription": "b0d3c7b1-1b84-4e0c-a546-f75510ef3351",
+      "clientMac": "d0:f4:05:fa:39:0e",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.248",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:58:18.576277Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k1a5a29",
+      "clientDescription": "iPhone",
+      "clientMac": "1a:3e:59:f3:33:9e",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.51",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:57:08.490677Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb970d8",
+      "clientDescription": "4844f964-d6e4-4ed7-8301-ce1168db51e3",
+      "clientMac": "3e:18:09:66:8c:47",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.188",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:54:42.524333Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6a628c",
+      "clientDescription": "Materials",
+      "clientMac": "d0:21:f9:bf:4f:3c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.68",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:47:14.964307Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k520acf",
+      "clientDescription": "fb3e47d4-5137-4160-8b08-1f25feec3b11",
+      "clientMac": "14:ac:60:d0:82:9b",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.38",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:43:07.132181Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[152.42.169.39.59132] Prot[TCP] Conn-ID[10359] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:42:41.847899Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.50061] Prot[UDP] Conn-ID[10356] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:42:41.847744Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.20] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:42:41.847629Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.19] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:40:49.950169Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ka61855",
+      "clientDescription": "DESKTOP-37BBR2E",
+      "clientMac": "30:14:4a:3f:dd:ec",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.244",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:39:46.497689Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd2bebe",
+      "clientDescription": "c37f6108-8984-4d92-85c2-8ccfda206e9f",
+      "clientMac": "78:af:08:1c:0c:3c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.180",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:39:46.467010Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ka1887a",
+      "clientDescription": "ATI-LAPTOP93",
+      "clientMac": "e4:a4:71:4e:31:ee",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.126",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:39:46.379605Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k1e4c54",
+      "clientDescription": "49342cfa-3de5-4696-9fe1-693817c474fb",
+      "clientMac": "28:6b:35:dc:49:52",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.107",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:35:15.292893Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k62f449",
+      "clientDescription": "DSC023C20232",
+      "clientMac": "04:cf:4b:a7:24:a2",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.25",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:34:06.373333Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd35150",
+      "clientDescription": "1483b28c-6e6c-4ab2-af4e-9f1231fb8f9f",
+      "clientMac": "76:e8:e8:69:5b:a3",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.8",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:31:08.074908Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf84227",
+      "clientDescription": "AT-WAC1-F2C7",
+      "clientMac": "b8:27:eb:e4:f2:c7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.89",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:30:06.609066Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10356] Added DTLS tunnel[32.20] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:30:06.608925Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.50061] Prot[UDP] Conn-ID[10356] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:30:04.590168Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10355] Added TLS tunnel[32.19] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:30:04.588068Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:30:04.523263Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.1500] Prot[TCP] Conn-ID[10355] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:28:24.739264Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k92423a",
+      "clientDescription": "21ab6680-667e-4314-91dc-b4faabf54928",
+      "clientMac": "70:d8:23:02:52:8d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.198",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:15:07.611407Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kc122f7",
+      "clientDescription": "ATI-LAPTOP65",
+      "clientMac": "70:d8:23:02:ab:39",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.213",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:14:51.858856Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k0dce1b",
+      "clientDescription": "06961fdd-798d-49f6-8576-e207f1c67d83",
+      "clientMac": "c2:96:df:af:ee:30",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.178",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:14:02.054976Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k1eef58",
+      "clientDescription": "68:47:49:83:f4:f5",
+      "clientMac": "68:47:49:83:f4:f5",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.14",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:11:11.373977Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k8acfeb",
+      "clientDescription": "ATI-LAPTOP74",
+      "clientMac": "70:d8:23:05:de:bc",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.215",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:10:15.153295Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb91e10",
+      "clientDescription": "e29a70df-102a-463f-8656-8b4d8f8fe8c6",
+      "clientMac": "62:53:f4:91:04:cc",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.27",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:02:49.096560Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k022fbc",
+      "clientDescription": "1fee048d-2321-470b-850e-95ab6942a63c",
+      "clientMac": "f6:df:c7:f1:e5:d1",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.175",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:01:40.020589Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7cf13a",
+      "clientDescription": "8f4a536f-4168-4f31-9419-b4b63ab32793",
+      "clientMac": "70:d8:23:05:e3:03",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.151",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T22:00:51.831239Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb6298d",
+      "clientDescription": "ATI-Laptop31",
+      "clientMac": "ac:67:5d:72:81:0c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.124",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:59:43.710057Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kfb8a24",
+      "clientDescription": "IPCAM",
+      "clientMac": "a0:9f:10:34:15:01",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.1",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:59:17.248889Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k01a8f3",
+      "clientDescription": "iPhone",
+      "clientMac": "72:b6:ab:a2:4e:95",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.24",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:56:46.585648Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k52f884",
+      "clientDescription": "9847d19b-b2f5-4708-ba6e-836b2a4259bb",
+      "clientMac": "d0:f4:05:fa:39:dc",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.246",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:53:21.547149Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k863a73",
+      "clientDescription": "0a8efe59-06c3-4a8d-a6f6-2dc7159026bf",
+      "clientMac": "78:a7:c7:60:de:ed",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.203",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:50:55.749392Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[161.35.190.246.57480] Prot[TCP] Conn-ID[10354] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:50:40.984307Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k4abc55",
+      "clientDescription": "1a1d77f0-7da8-4337-8e3b-094e99016a76",
+      "clientMac": "72:be:3a:9e:a3:8d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.113",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:48:28.227170Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd9d34a",
+      "clientDescription": "ATI-LASER01",
+      "clientMac": "00:15:5d:64:69:14",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.158",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:46:12.288299Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k52a72c",
+      "clientDescription": "d8a4279c-4a5a-4697-ac99-2f156b3e46cb",
+      "clientMac": "ac:19:8e:8b:e9:17",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.206",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:45:59.220330Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ka4ddca",
+      "clientDescription": "Android_D5T440UB",
+      "clientMac": "0e:16:b0:a1:12:33",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.195",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:43:29.561359Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k707ed4",
+      "clientDescription": "26:1e:33:6e:a7:a0",
+      "clientMac": "26:1e:33:6e:a7:a0",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.240",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:42:59.418598Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kc663f7",
+      "clientDescription": "7ab9e6ea-0660-4617-ba98-1ba07b8b7065",
+      "clientMac": "b6:bf:2f:1d:85:a7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.38",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:42:41.066989Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k4e898c",
+      "clientDescription": "822091fc-dd53-48a7-870e-8428786ae70a",
+      "clientMac": "e6:b3:4a:81:cf:1d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.48",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:42:39.683981Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf6d0eb",
+      "clientDescription": "c004fa36-e4a8-4ee1-849b-b59830e79614",
+      "clientMac": "e6:4d:64:02:6b:9f",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.47",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:42:38.680399Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ka6e041",
+      "clientDescription": "iPhone-7",
+      "clientMac": "62:00:1a:e8:0b:e8",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.204",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:41:13.970038Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf8cd99",
+      "clientDescription": "DSC001C2024A",
+      "clientMac": "4c:b0:4a:81:70:90",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.32",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:41:02.461920Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kcca67e",
+      "clientDescription": "DSC010C20218",
+      "clientMac": "f0:9e:4a:85:85:04",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.218",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:39:18.126717Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd56b33",
+      "clientDescription": "JosesAppleWatch",
+      "clientMac": "06:11:69:72:1d:1d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.36",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:38:07.081036Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf3f83c",
+      "clientDescription": "a14bc790-3610-42ac-b395-1d4ad53e09bd",
+      "clientMac": "0a:ff:d4:81:44:c8",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.31",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:37:48.720221Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[46.151.178.13.33782] Prot[TCP] Conn-ID[10352] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:33:38.162010Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[167.250.224.25.60941] Prot[TCP] Conn-ID[10351] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:32:46.599066Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.65043] Prot[UDP] Conn-ID[10315] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:32:46.598915Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.18] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:32:46.598798Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.17] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:29:12.402534Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf38b67",
+      "clientDescription": "eb430557-c7e8-4e7b-b7c4-0cbedc3d00be",
+      "clientMac": "f8:ce:72:fe:3d:1b",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.2.9",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:28:26.731323Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ke51d8e",
+      "clientDescription": "2e131132-df80-4cd6-abd5-70da7656cec4",
+      "clientMac": "72:a2:02:7e:2f:3c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.193",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:28:05.702662Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7f770a",
+      "clientDescription": "trellix-3D-6B-9E",
+      "clientMac": "48:21:0b:3d:6b:9e",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.255",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:24:39.269649Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k9149ac",
+      "clientDescription": "74fdaaca-15b2-4bbb-afab-0e2fba4c4f43",
+      "clientMac": "a0:29:42:ca:a2:f6",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.119",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:24:39.156574Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb07a8b",
+      "clientDescription": "b8fa7151-6ca8-4b1a-a425-d07def303263",
+      "clientMac": "78:af:08:1c:6e:4d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.164",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:24:39.044357Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k055316",
+      "clientDescription": "DYC009C20255",
+      "clientMac": "9c:67:d6:74:e7:a8",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.23",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:22:05.132812Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kfd26f9",
+      "clientDescription": "Watch",
+      "clientMac": "ae:e6:e4:ea:0f:d2",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.59",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:21:56.652587Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ke5a842",
+      "clientDescription": "d1384057-78ad-4fe1-b06b-162eb3285f65",
+      "clientMac": "f8:ce:72:fc:8e:6d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.196",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:20:04.372016Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k2b0f16",
+      "clientDescription": "7eb08952-d058-42e9-9236-2a976614baa0",
+      "clientMac": "4a:22:76:ac:c4:f8",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.60",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:18:50.927588Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf2e1aa",
+      "clientDescription": "8a763f5b-4b49-46b0-a70a-f46a30b8539e",
+      "clientMac": "28:6b:35:a3:a4:58",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.35",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:17:54.068897Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k06c71d",
+      "clientDescription": "ATI-LAPTOP102",
+      "clientMac": "e4:0d:36:68:6f:87",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.169",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:58.920562Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.33046] Prot[TCP] Conn-ID[10350] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:53.231770Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.32790] Prot[TCP] Conn-ID[10349] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:49.361857Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.32628] Prot[TCP] Conn-ID[10348] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:47.549659Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.32580] Prot[TCP] Conn-ID[10343] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:47.426136Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.32568] Prot[TCP] Conn-ID[10342] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:15:47.257891Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[106.75.156.235.32556] Prot[TCP] Conn-ID[10340] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:12:31.920854Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k48bd28",
+      "clientDescription": "Arandas-iPad",
+      "clientMac": "ca:c1:fc:91:fe:4c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.3",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:11:40.639338Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k3d4e9d",
+      "clientDescription": "AT-WAC2-A178",
+      "clientMac": "b8:27:eb:43:a1:78",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.15",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:11:11.500457Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kbbc31a",
+      "clientDescription": "iPhone",
+      "clientMac": "0a:dd:6c:ba:c5:67",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.125",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:10:16.035145Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kebc3e4",
+      "clientDescription": "963965dc-3726-43d2-b3bf-0ea846277977",
+      "clientMac": "70:d8:23:02:a5:49",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.100",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:09:15.638128Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7a6a39",
+      "clientDescription": "02:34:e3:56:35:43",
+      "clientMac": "02:34:e3:56:35:43",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.106",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:08:47.442059Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k8b0f74",
+      "clientDescription": "1af78eaa-c32b-4346-bd5d-43e49b467711",
+      "clientMac": "a8:8f:d9:77:d6:30",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.90",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:06:50.096549Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.236.228.197.21416] Prot[TCP] Conn-ID[10338] TLSv1.2 connection established. Cipher: ECDHE-RSA-AES128-GCM-SHA256(49199) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:06:33.384526Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7c309a",
+      "clientDescription": "Austins-iPhone",
+      "clientMac": "86:37:dd:9e:99:b2",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.57",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T21:01:53.425174Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kbd8f82",
+      "clientDescription": "ATI-LAPTOP114",
+      "clientMac": "d8:b3:2f:12:44:27",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.42",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:58:21.388550Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k10fe07",
+      "clientDescription": "ATI-PC91",
+      "clientMac": "cc:96:e5:22:53:be",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.2.50",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:57:32.516685Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k115bba",
+      "clientDescription": "dc4725fc-a945-4fec-bffc-2cb039390fcc",
+      "clientMac": "f8:ce:72:fe:3d:b6",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "20",
+        "ip": "172.28.3.167",
+        "router": "172.28.2.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.2.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:57:30.011795Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6d779b",
+      "clientDescription": "f4dbe1f4-88d4-4a0f-95a1-dbb3c41a5a7e",
+      "clientMac": "4c:0f:3e:0b:a9:55",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.243",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:56:51.015968Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[5.61.209.107.60700] Prot[TCP] Conn-ID[10337] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:56:41.150517Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k4309c9",
+      "clientDescription": "EPSONAAF6D6",
+      "clientMac": "38:9d:92:aa:f6:d6",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.211",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:56:24.655605Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k536ca1",
+      "clientDescription": "40075a4e-f781-4e7d-bbbd-511333df6988",
+      "clientMac": "66:9f:4e:be:26:2d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.227",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:52:26.200294Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k2af86c",
+      "clientDescription": "ATI-PC64",
+      "clientMac": "70:85:c2:c5:42:62",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.198",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:51:15.638441Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ke9130c",
+      "clientDescription": "f33e350d-7bc5-4f62-8366-cf95516b52d3",
+      "clientMac": "d0:f4:05:fa:3c:10",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.214",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:44:40.032994Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb98efb",
+      "clientDescription": "ATI-PC55",
+      "clientMac": "4c:ed:fb:75:1d:fa",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.108",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:36:49.657589Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k57bf5c",
+      "clientDescription": "Watch",
+      "clientMac": "9a:2e:98:37:d5:b1",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.171",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:34:19.071450Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k1efbc1",
+      "clientDescription": "50de0ae5-9c21-4844-8b60-736c8ab8d7a2",
+      "clientMac": "80:54:e3:23:da:37",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.181",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:34:07.303963Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k91ab8c",
+      "clientDescription": "eabac156-9967-414b-b79c-96658316ca8c",
+      "clientMac": "5c:ad:ba:2b:3d:39",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.148",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:31:03.744025Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k075f0a",
+      "clientDescription": "DESKTOP-QUFBV1M",
+      "clientMac": "30:14:4a:3f:dc:90",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.246",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:26:57.043941Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k922e2b",
+      "clientDescription": "ATI-TABLET02",
+      "clientMac": "d0:57:7e:35:98:cd",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.207",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:25:15.461529Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf5213c",
+      "clientDescription": "ATI-PC100",
+      "clientMac": "40:d1:33:0f:63:01",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.141",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:25:09.371442Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kcb71d0",
+      "clientDescription": "SIP-T46G",
+      "clientMac": "80:5e:c0:08:08:90",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.163",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:24:33.428148Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k8286d7",
+      "clientDescription": "iPhone",
+      "clientMac": "12:c9:28:52:a9:b0",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.5",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:23:59.063889Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6649d7",
+      "clientDescription": "CP860",
+      "clientMac": "80:5e:c0:06:fa:2f",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.166",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:23:27.390089Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k363a35",
+      "clientDescription": "0ef95205-0d6d-4fdb-967b-439e52f6a810",
+      "clientMac": "54:32:c7:5f:5c:a9",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.103",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:23:14.669341Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k523296",
+      "clientDescription": "57da28d4-05c0-40c3-8cb4-83df183a1500",
+      "clientMac": "70:d8:23:05:e1:1e",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.130",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:57.242240Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.15192] Prot[TCP] Conn-ID[10333] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:52.235131Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.15060] Prot[TCP] Conn-ID[10332] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:51.569370Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.15058] Prot[TCP] Conn-ID[10331] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:46.562895Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.14978] Prot[TCP] Conn-ID[10330] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:40.448461Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.14864] Prot[TCP] Conn-ID[10329] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:21:35.451560Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.14772] Prot[TCP] Conn-ID[10328] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:20:46.430381Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.12502] Prot[TCP] Conn-ID[10327] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:18:46.380357Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.20820] Prot[TCP] Conn-ID[10326] TLSv1.2 connection established. Cipher: ECDHE-RSA-AES256-GCM-SHA384(49200) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:18:46.367897Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.20818] Prot[TCP] Conn-ID[10325] TLSv1.2 connection established. Cipher: ECDHE-RSA-AES256-GCM-SHA384(49200) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:18:44.679117Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[42.240.132.51.20784] Prot[TCP] Conn-ID[10324] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:17:44.082139Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kfaba78",
+      "clientDescription": "4187e70a-11bf-4e91-ae9a-45455b2f163d",
+      "clientMac": "ee:c1:aa:9a:a7:d3",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.44",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:13:08.856431Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k072164",
+      "clientDescription": "ATI-Laptop85",
+      "clientMac": "ac:19:8e:98:ad:c8",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.166",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:05:15.600420Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k5b66de",
+      "clientDescription": "7de4d611-94ff-4757-8658-2b9c2f2e4ecc",
+      "clientMac": "2e:73:2c:f2:ae:e4",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.174",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:05:02.057646Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf038f9",
+      "clientDescription": "4a18ef97-e330-485e-b7ec-b53867b2498f",
+      "clientMac": "c2:6e:f2:8e:0b:c7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.168",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:03:52.365888Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_problem",
+      "description": "DHCP problem",
+      "clientId": "k967dfa",
+      "clientDescription": null,
+      "clientMac": "00:0c:29:e3:d3:e7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "extra": "no_offers_received",
+        "vap": "0",
+        "vlan": "10"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T20:02:06.845304Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k689a30",
+      "clientDescription": "ATI-PROD1",
+      "clientMac": "e0:c2:64:df:0c:46",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.0",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:54:59.095268Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6466c3",
+      "clientDescription": "cbd835c7-c1bb-4728-bf99-1a82fdb1e537",
+      "clientMac": "8a:13:f0:56:22:28",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.158",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:53:42.020184Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k17cee7",
+      "clientDescription": "0a7b88d4-a87e-415e-a506-d379956b881d",
+      "clientMac": "0a:a6:59:c1:0c:28",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.182",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:53:38.584841Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6e36ce",
+      "clientDescription": "iPhone",
+      "clientMac": "26:a6:39:67:ba:76",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.10",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:53:28.506752Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k3b204c",
+      "clientDescription": "Android",
+      "clientMac": "44:91:60:71:6b:b1",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.157",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:53:01.611155Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd405ad",
+      "clientDescription": "8a:e3:82:1e:75:be",
+      "clientMac": "8a:e3:82:1e:75:be",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.21",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:52:52.370052Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_problem",
+      "description": "DHCP problem",
+      "clientId": "kcb17aa",
+      "clientDescription": null,
+      "clientMac": "00:0c:29:c4:f9:36",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "extra": "no_offers_received",
+        "vap": "0",
+        "vlan": "10"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:50:17.654727Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[15.156.110.125.28526] Prot[TCP] Conn-ID[10321] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:50:17.552525Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[15.156.110.125.30607] Prot[TCP] Conn-ID[10320] TLSv1.2 connection established. Cipher: ECDHE-RSA-AES256-GCM-SHA384(49200) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:48:16.447268Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ka56101",
+      "clientDescription": "c2d5c2e7-c03d-4c73-b433-06fc66d19508",
+      "clientMac": "92:3d:71:09:94:89",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.192",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:43.608058Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k189d03",
+      "clientDescription": "ATI-PC63",
+      "clientMac": "00:e0:4c:68:23:25",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.172",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:36.478483Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10315] Added DTLS tunnel[32.18] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:36.478343Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.65043] Prot[UDP] Conn-ID[10315] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:34.790390Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10314] Added TLS tunnel[32.17] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:34.788357Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:34.135984Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.7577] Prot[TCP] Conn-ID[10314] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:31.856156Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k256a30",
+      "clientDescription": "ATI-PC63",
+      "clientMac": "d4:3b:04:64:bb:0d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.245",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:46:05.367408Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[46.151.178.13.47808] Prot[TCP] Conn-ID[10313] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:44:07.105061Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.53973] Prot[UDP] Conn-ID[10310] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:44:07.104907Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.16] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:44:07.104793Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.15] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:43:41.153434Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k002245",
+      "clientDescription": "000015",
+      "clientMac": "00:40:58:1d:f8:95",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.164",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:40:06.820662Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.94.9.253.42648] Prot[TCP] Conn-ID[10311] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:35:00.614494Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kcc1c7e",
+      "clientDescription": "Watch",
+      "clientMac": "ee:e3:ce:cf:90:3a",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.50",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:12.010139Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10310] Added DTLS tunnel[32.16] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:12.010059Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.53973] Prot[UDP] Conn-ID[10310] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:10.798091Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10309] Added TLS tunnel[32.15] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:10.796066Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:10.555144Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6cfed2",
+      "clientDescription": "kanemanianxingdayun",
+      "clientMac": "b2:c5:76:9f:86:23",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.61",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:27:10.554791Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.18663] Prot[TCP] Conn-ID[10309] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:24:36.474078Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k6398d6",
+      "clientDescription": "92e124b8-2b7c-4f79-afc8-6b3ec8c621fb",
+      "clientMac": "d6:de:fa:de:9d:d7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.44",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:24:05.205621Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k86ca65",
+      "clientDescription": "9400df88-013d-4478-8f91-1bad9149164b",
+      "clientMac": "06:88:e3:62:13:2c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.16",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:24:02.732027Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[171.8.138.156.24192] Prot[TCP] Conn-ID[10308] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:23:50.824757Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[223.166.22.4.29830] Prot[TCP] Conn-ID[10307] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:23:29.234745Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[59.52.102.85.34404] Prot[TCP] Conn-ID[10306] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:23:14.454209Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[60.16.203.39.13359] Prot[TCP] Conn-ID[10305] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:22:40.549608Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[182.242.169.83.31280] Prot[TCP] Conn-ID[10304] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:22:32.335058Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[58.19.82.79.59788] Prot[TCP] Conn-ID[10302] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:21:00.697844Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k5f60dc",
+      "clientDescription": "iPhone",
+      "clientMac": "22:4c:20:b9:1a:34",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.152",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:18:53.200042Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[111.22.163.13.53332] Prot[TCP] Conn-ID[10301] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:17:04.575375Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.56817] Prot[UDP] Conn-ID[10299] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:17:04.575220Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.14] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:17:04.575104Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.13] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:15:43.689356Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k1c5c5f",
+      "clientDescription": "68f2c3b4-9463-45aa-9778-9c70dc71522e",
+      "clientMac": "94:ad:23:35:b0:a7",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.162",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:14:35.352508Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k06c8b9",
+      "clientDescription": "c0383a49-27f3-423e-89f0-d91c727dc577",
+      "clientMac": "5a:6b:28:f4:a9:42",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.41",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:13:05.517069Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf497c0",
+      "clientDescription": "ATI-LAPTOP110",
+      "clientMac": "d8:b3:2f:12:32:49",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.224",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:12:13.600475Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k92411a",
+      "clientDescription": "ATI-Laptop33",
+      "clientMac": "8e:c8:26:3d:cd:f5",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.146",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:12:13.009175Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7346ac",
+      "clientDescription": "f51e07fe-940f-4b66-ab28-653e8e1fd7da",
+      "clientMac": "4c:d5:77:78:15:e1",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.128",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:12:03.266063Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k88971c",
+      "clientDescription": "ATI-Laptop28",
+      "clientMac": "ac:67:5d:79:bd:8c",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.206",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:10:46.695892Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kd214bd",
+      "clientDescription": "Jesuss-iPhone",
+      "clientMac": "b2:2d:30:35:13:24",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.144",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:09:56.717746Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kada56c",
+      "clientDescription": "df7d9527-60a5-4010-8a22-e94f4cf833fe",
+      "clientMac": "40:d1:33:0f:4f:dd",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.123",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:06:12.134560Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k186a52",
+      "clientDescription": "ATI-LAPTOP72",
+      "clientMac": "a0:29:42:cc:af:10",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.251",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:06:01.872905Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kdbc63d",
+      "clientDescription": "000009",
+      "clientMac": "00:40:58:14:d6:20",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.72",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:04:08.032345Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.118.243.21.53431] Prot[UDP] Conn-ID[10296] Sess-ID[34] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:04:08.032191Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[34] Peer IP=172.118.243.21 User[shelley.tan@us.dsbj.com]: Deleted DTLS tunnel[34.4] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T19:04:08.032078Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[34] Peer IP=172.118.243.21 User[shelley.tan@us.dsbj.com]: Deleted TLS tunnel[34.3] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:56:25.437586Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k70e51a",
+      "clientDescription": "000008",
+      "clientMac": "00:40:58:13:47:07",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.73",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:56:05.272334Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kb5341f",
+      "clientDescription": "SIP-T41P",
+      "clientMac": "80:5e:c0:18:ee:17",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.31.162",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:53:30.425076Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10299] Added DTLS tunnel[32.14] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:53:30.424923Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.56817] Prot[UDP] Conn-ID[10299] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:53:28.926465Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10298] Added TLS tunnel[32.13] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:53:28.925313Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:53:28.756676Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.32609] Prot[TCP] Conn-ID[10298] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:49:52.613404Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[18.211.190.157.16867] Prot[TCP] Conn-ID[10297] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:30.497976Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[34] Peer IP=172.118.243.21 User[shelley.tan@us.dsbj.com]: conn_id[10296] Added DTLS tunnel[34.4] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:30.497834Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.118.243.21.53431] Prot[UDP] Conn-ID[10296] Sess-ID[34] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:28.646400Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[34] Peer IP=172.118.243.21 User[shelley.tan@us.dsbj.com]: conn_id[10295] Added TLS tunnel[34.3] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:28.645479Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "kfdde78",
+      "clientDescription": "03:73:ed:cc:b2:68",
+      "clientMac": "03:73:ed:cc:b2:68",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.163",
+        "user_id": "shelley.tan@us.dsbj.com",
+        "remote_ip": "172.118.243.21"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:28.576286Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.118.243.21.62144] Prot[TCP] Conn-ID[10295] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:46:28.326026Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[172.118.243.21.62143] Prot[TCP] Conn-ID[10294] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:43:41.623240Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.50601] Prot[UDP] Conn-ID[10293] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:43:41.623080Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.12] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:43:41.622951Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.11] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:43:22.574958Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k52b3fd",
+      "clientDescription": "5add185e-4373-4c91-8c37-2e6325c895b7",
+      "clientMac": "f8:7d:76:b0:2d:9b",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.148",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:42:46.579216Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k5d27d3",
+      "clientDescription": "ad376568-6cd2-405b-8b09-bf9ed2c058d0",
+      "clientMac": "70:d8:23:01:9e:47",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.30",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:42:45.374854Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "ke4b3fb",
+      "clientDescription": "ATI-OT01",
+      "clientMac": "20:bd:1d:cb:c2:e9",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.129",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:42:45.119335Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k950fe0",
+      "clientDescription": "91bafd3f-edf8-4506-8e90-227cd1f1eb86",
+      "clientMac": "78:af:08:1c:7c:0d",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.163",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:42:45.087415Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k853364",
+      "clientDescription": "ATI-LAPTOP100",
+      "clientMac": "e4:0d:36:66:f7:0b",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.150",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:42:44.935791Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kde4cf5",
+      "clientDescription": "a21bb1d1-4d97-4e45-aca0-87cc1d2a8b27",
+      "clientMac": "ac:19:8e:98:b7:32",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.142",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:41:06.222521Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kc3f86c",
+      "clientDescription": "000006",
+      "clientMac": "00:40:58:1b:87:39",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.75",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:41:03.728482Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k7d0627",
+      "clientDescription": "967294e3-df95-4052-aa31-9d75acbaa8b2",
+      "clientMac": "70:d8:23:03:34:05",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.5.7",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:41:01.855967Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf29418",
+      "clientDescription": "5a7c0d19-a805-45a9-966f-dffc1abf2d9c",
+      "clientMac": "70:d8:23:01:34:7f",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.109",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:41:01.676790Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k5ea95a",
+      "clientDescription": "902465f6-c778-4143-96e5-fc4e178e65b3",
+      "clientMac": "70:d8:23:03:2d:25",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.111",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:37:34.896847Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[72.219.179.100.60009] Prot[UDP] Conn-ID[10269] Sess-ID[35] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:37:34.896588Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[35] Peer IP=72.219.179.100 User[yash.jadav@us.dsbj.com]: Deleted DTLS tunnel[35.6] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:37:34.896462Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[35] Peer IP=72.219.179.100 User[yash.jadav@us.dsbj.com]: Deleted TLS tunnel[35.5] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:36:32.000873Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kbdf37e",
+      "clientDescription": "62:4f:ae:68:ca:10",
+      "clientMac": "62:4f:ae:68:ca:10",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "30",
+        "ip": "172.28.4.149",
+        "router": "172.28.4.1",
+        "subnet": "255.255.254.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.4.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:34:33.430546Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "k910983",
+      "clientDescription": "MSC-9GQVC14",
+      "clientMac": "a8:3c:a5:20:7b:d6",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.170",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:31:49.003222Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10293] Added DTLS tunnel[32.12] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:31:49.003078Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.50601] Prot[UDP] Conn-ID[10293] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:31:47.810180Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10292] Added TLS tunnel[32.11] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:31:47.808063Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:31:47.685286Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.6618] Prot[TCP] Conn-ID[10292] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:29:34.715444Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kcd41a7",
+      "clientDescription": "GS108Tv3",
+      "clientMac": "94:18:65:7a:ee:bd",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "70",
+        "ip": "10.10.30.55",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "172.28.12.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:28:13.397115Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.58654] Prot[UDP] Conn-ID[10290] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:28:13.396961Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.10] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:28:13.396847Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.9] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:17.040388Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10290] Added DTLS tunnel[32.10] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:17.040245Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.58654] Prot[UDP] Conn-ID[10290] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:15.123615Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10289] Added TLS tunnel[32.9] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:15.121289Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:15.077558Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.55015] Prot[TCP] Conn-ID[10289] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:11.336066Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.63271] Prot[UDP] Conn-ID[10288] Sess-ID[32] Connection closed. "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:11.335913Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted DTLS tunnel[32.8] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:17:11.335799Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: Deleted TLS tunnel[32.7] from DB. Reason: Socket close event "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:16:44.882466Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10288] Added DTLS tunnel[32.8] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:16:44.882244Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.63271] Prot[UDP] Conn-ID[10288] Sess-ID[32] DTLSv1.2 connection established. Cipher: ECDHE-ECDSA-AES256-GCM-SHA384(49196) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:16:42.289019Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_session_manager",
+      "description": "AnyConnect VPN session event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Sess-ID[32] Peer IP=47.28.103.255 User[robbyb@us.dsbj.com]: conn_id[10287] Added TLS tunnel[32.7] to DB "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:16:42.286933Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connect",
+      "description": "AnyConnect VPN client connected",
+      "clientId": "k16783f",
+      "clientDescription": "03:3d:94:27:ff:52",
+      "clientMac": "03:3d:94:27:ff:52",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "local_ip": "172.28.20.134",
+        "user_id": "robbyb@us.dsbj.com",
+        "remote_ip": "47.28.103.255"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:16:42.227494Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[47.28.103.255.7345] Prot[TCP] Conn-ID[10287] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:14:33.659828Z",
+      "networkId": "L_686235993220607281",
+      "type": "dhcp_lease",
+      "description": "DHCP lease",
+      "clientId": "kf719d1",
+      "clientDescription": "000013",
+      "clientMac": "00:40:58:11:2e:cf",
+      "category": "dhcp",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "vap": "0",
+        "vlan": "1",
+        "ip": "10.10.30.74",
+        "router": "10.10.0.1",
+        "subnet": "255.255.0.0",
+        "dns": "10.10.1.20 172.16.94.253",
+        "duration": "86400",
+        "server_ip": "10.10.0.1",
+        "mx_mac": "0C:7B:C8:CD:28:E8"
+      }
+    },
+    {
+      "occurredAt": "2026-04-10T18:11:36.397027Z",
+      "networkId": "L_686235993220607281",
+      "type": "anyconnect_vpn_connection_success",
+      "description": "AnyConnect VPN connection event",
+      "clientId": null,
+      "clientDescription": null,
+      "clientMac": "",
+      "category": "anyconnect_vpn",
+      "deviceSerial": "Q2YN-DL9C-NJLH",
+      "deviceName": "",
+      "eventData": {
+        "msg": "Local[76.80.219.186.443] Peer[46.151.178.13.40236] Prot[TCP] Conn-ID[10286] TLSv1.3 connection established. Cipher: TLS_AES_256_GCM_SHA384(4866) "
+      }
+    }
+  ]
+}

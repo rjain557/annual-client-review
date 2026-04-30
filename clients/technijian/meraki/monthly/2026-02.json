@@ -1,0 +1,614 @@
+{
+  "generated_at": "2026-04-30T00:33:18Z",
+  "client_code": "technijian",
+  "month": "2026-02",
+  "configuration": {
+    "org": "Technijian Inc",
+    "snapshot_at": "2026-04-29T21:36:06Z",
+    "network_count": 5,
+    "device_count": 12,
+    "device_models": {
+      "MR66": 1,
+      "MS42": 2,
+      "MS42P": 1,
+      "MX100": 2,
+      "MR42": 3,
+      "MX105": 3
+    },
+    "device_product_types": {
+      "wireless": 4,
+      "switch": 3,
+      "appliance": 5
+    },
+    "networks": [
+      {
+        "slug": "01_technijian_dc",
+        "name": "01-Technijian DC",
+        "productTypes": [
+          "appliance"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 7,
+        "firewall_l7_rule_count": 1,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 86,
+        "intrusion": {
+          "mode": "detection",
+          "rulesetGenerated": "balanced",
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "enabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 1,
+          "allowed_url_patterns_count": 2
+        },
+        "vlan_count": 7,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "hub",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "02_technijian_hq",
+        "name": "02-Technijian HQ",
+        "productTypes": [
+          "sensor",
+          "switch",
+          "wireless"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 0,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 0,
+        "ssid_count": 3,
+        "s2s_vpn_mode": null,
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "03_technijian_lv",
+        "name": "03-Technijian LV",
+        "productTypes": [
+          "appliance",
+          "switch"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 1,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "intrusion": {
+          "mode": "disabled",
+          "rulesetGenerated": null,
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "disabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 10,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "hub",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "04_technijian_mdm",
+        "name": "04-Technijian MDM",
+        "productTypes": [
+          "systemsManager"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 0,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 0,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 0,
+        "ssid_count": 0,
+        "s2s_vpn_mode": null,
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      },
+      {
+        "slug": "05_technijian_lab",
+        "name": "05-Technijian LAB",
+        "productTypes": [
+          "appliance"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 1,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 1,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 3,
+        "intrusion": {
+          "mode": "disabled",
+          "rulesetGenerated": null,
+          "protectedNetworks": null
+        },
+        "malware": {
+          "mode": "disabled"
+        },
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 1,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "none",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      }
+    ]
+  },
+  "security_events": {
+    "total": 0,
+    "days_with_events": 0,
+    "daily_counts": [
+      {
+        "date": "2026-02-01",
+        "count": 0
+      },
+      {
+        "date": "2026-02-02",
+        "count": 0
+      },
+      {
+        "date": "2026-02-03",
+        "count": 0
+      },
+      {
+        "date": "2026-02-04",
+        "count": 0
+      },
+      {
+        "date": "2026-02-05",
+        "count": 0
+      },
+      {
+        "date": "2026-02-06",
+        "count": 0
+      },
+      {
+        "date": "2026-02-07",
+        "count": 0
+      },
+      {
+        "date": "2026-02-08",
+        "count": 0
+      },
+      {
+        "date": "2026-02-09",
+        "count": 0
+      },
+      {
+        "date": "2026-02-10",
+        "count": 0
+      },
+      {
+        "date": "2026-02-11",
+        "count": 0
+      },
+      {
+        "date": "2026-02-12",
+        "count": 0
+      },
+      {
+        "date": "2026-02-13",
+        "count": 0
+      },
+      {
+        "date": "2026-02-14",
+        "count": 0
+      },
+      {
+        "date": "2026-02-15",
+        "count": 0
+      },
+      {
+        "date": "2026-02-16",
+        "count": 0
+      },
+      {
+        "date": "2026-02-17",
+        "count": 0
+      },
+      {
+        "date": "2026-02-18",
+        "count": 0
+      },
+      {
+        "date": "2026-02-19",
+        "count": 0
+      },
+      {
+        "date": "2026-02-20",
+        "count": 0
+      },
+      {
+        "date": "2026-02-21",
+        "count": 0
+      },
+      {
+        "date": "2026-02-22",
+        "count": 0
+      },
+      {
+        "date": "2026-02-23",
+        "count": 0
+      },
+      {
+        "date": "2026-02-24",
+        "count": 0
+      },
+      {
+        "date": "2026-02-25",
+        "count": 0
+      },
+      {
+        "date": "2026-02-26",
+        "count": 0
+      },
+      {
+        "date": "2026-02-27",
+        "count": 0
+      },
+      {
+        "date": "2026-02-28",
+        "count": 0
+      }
+    ],
+    "by_signature_top": [],
+    "by_priority": {},
+    "by_blocked": {},
+    "top_sources": [],
+    "top_destinations": [],
+    "top_internal_clients": [],
+    "sample_events": []
+  },
+  "network_events": {
+    "total": 5806,
+    "networks_with_events": 1,
+    "by_network": {
+      "05_technijian_lab": {
+        "name": "05-Technijian LAB",
+        "total": 5806,
+        "by_type_top": [
+          [
+            "martian_vlan",
+            4906
+          ],
+          [
+            "ip_conflict",
+            566
+          ],
+          [
+            "events_dropped2",
+            101
+          ],
+          [
+            "dhcp_lease",
+            100
+          ],
+          [
+            "route_connection_change",
+            83
+          ],
+          [
+            "carrier_event",
+            27
+          ],
+          [
+            "dhcp_release",
+            15
+          ],
+          [
+            "dhcp_problem",
+            7
+          ],
+          [
+            "rogue_dhcp",
+            1
+          ]
+        ],
+        "daily_counts": [
+          {
+            "date": "2026-02-01",
+            "count": 318
+          },
+          {
+            "date": "2026-02-02",
+            "count": 320
+          },
+          {
+            "date": "2026-02-03",
+            "count": 292
+          },
+          {
+            "date": "2026-02-04",
+            "count": 216
+          },
+          {
+            "date": "2026-02-05",
+            "count": 194
+          },
+          {
+            "date": "2026-02-06",
+            "count": 192
+          },
+          {
+            "date": "2026-02-07",
+            "count": 192
+          },
+          {
+            "date": "2026-02-08",
+            "count": 192
+          },
+          {
+            "date": "2026-02-09",
+            "count": 192
+          },
+          {
+            "date": "2026-02-10",
+            "count": 196
+          },
+          {
+            "date": "2026-02-11",
+            "count": 223
+          },
+          {
+            "date": "2026-02-12",
+            "count": 127
+          },
+          {
+            "date": "2026-02-13",
+            "count": 161
+          },
+          {
+            "date": "2026-02-14",
+            "count": 244
+          },
+          {
+            "date": "2026-02-15",
+            "count": 239
+          },
+          {
+            "date": "2026-02-16",
+            "count": 245
+          },
+          {
+            "date": "2026-02-17",
+            "count": 198
+          },
+          {
+            "date": "2026-02-18",
+            "count": 103
+          },
+          {
+            "date": "2026-02-19",
+            "count": 170
+          },
+          {
+            "date": "2026-02-20",
+            "count": 13
+          },
+          {
+            "date": "2026-02-21",
+            "count": 114
+          },
+          {
+            "date": "2026-02-22",
+            "count": 77
+          },
+          {
+            "date": "2026-02-23",
+            "count": 133
+          },
+          {
+            "date": "2026-02-24",
+            "count": 192
+          },
+          {
+            "date": "2026-02-25",
+            "count": 210
+          },
+          {
+            "date": "2026-02-26",
+            "count": 331
+          },
+          {
+            "date": "2026-02-27",
+            "count": 358
+          },
+          {
+            "date": "2026-02-28",
+            "count": 364
+          }
+        ]
+      }
+    },
+    "by_type_top": [
+      [
+        "martian_vlan",
+        4906
+      ],
+      [
+        "ip_conflict",
+        566
+      ],
+      [
+        "events_dropped2",
+        101
+      ],
+      [
+        "dhcp_lease",
+        100
+      ],
+      [
+        "route_connection_change",
+        83
+      ],
+      [
+        "carrier_event",
+        27
+      ],
+      [
+        "dhcp_release",
+        15
+      ],
+      [
+        "dhcp_problem",
+        7
+      ],
+      [
+        "rogue_dhcp",
+        1
+      ]
+    ],
+    "by_category": {
+      "ip_conflicts": 5472,
+      "node_state": 27,
+      "dhcp": 123,
+      "dropped": 101,
+      "route_tracking": 83
+    },
+    "daily_counts": [
+      {
+        "date": "2026-02-01",
+        "count": 318
+      },
+      {
+        "date": "2026-02-02",
+        "count": 320
+      },
+      {
+        "date": "2026-02-03",
+        "count": 292
+      },
+      {
+        "date": "2026-02-04",
+        "count": 216
+      },
+      {
+        "date": "2026-02-05",
+        "count": 194
+      },
+      {
+        "date": "2026-02-06",
+        "count": 192
+      },
+      {
+        "date": "2026-02-07",
+        "count": 192
+      },
+      {
+        "date": "2026-02-08",
+        "count": 192
+      },
+      {
+        "date": "2026-02-09",
+        "count": 192
+      },
+      {
+        "date": "2026-02-10",
+        "count": 196
+      },
+      {
+        "date": "2026-02-11",
+        "count": 223
+      },
+      {
+        "date": "2026-02-12",
+        "count": 127
+      },
+      {
+        "date": "2026-02-13",
+        "count": 161
+      },
+      {
+        "date": "2026-02-14",
+        "count": 244
+      },
+      {
+        "date": "2026-02-15",
+        "count": 239
+      },
+      {
+        "date": "2026-02-16",
+        "count": 245
+      },
+      {
+        "date": "2026-02-17",
+        "count": 198
+      },
+      {
+        "date": "2026-02-18",
+        "count": 103
+      },
+      {
+        "date": "2026-02-19",
+        "count": 170
+      },
+      {
+        "date": "2026-02-20",
+        "count": 13
+      },
+      {
+        "date": "2026-02-21",
+        "count": 114
+      },
+      {
+        "date": "2026-02-22",
+        "count": 77
+      },
+      {
+        "date": "2026-02-23",
+        "count": 133
+      },
+      {
+        "date": "2026-02-24",
+        "count": 192
+      },
+      {
+        "date": "2026-02-25",
+        "count": 210
+      },
+      {
+        "date": "2026-02-26",
+        "count": 331
+      },
+      {
+        "date": "2026-02-27",
+        "count": 358
+      },
+      {
+        "date": "2026-02-28",
+        "count": 364
+      }
+    ]
+  }
+}

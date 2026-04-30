@@ -1,0 +1,536 @@
+{
+  "generated_at": "2026-04-30T00:33:18Z",
+  "client_code": "arnd",
+  "month": "2026-04",
+  "configuration": {
+    "org": "Aranda Tooling",
+    "snapshot_at": "2026-04-29T21:36:17Z",
+    "network_count": 1,
+    "device_count": 4,
+    "device_models": {
+      "MX85": 1,
+      "MS130-24P": 3
+    },
+    "device_product_types": {
+      "appliance": 1,
+      "switch": 3
+    },
+    "networks": [
+      {
+        "slug": "aranda_tooling",
+        "name": "Aranda Tooling",
+        "productTypes": [
+          "appliance",
+          "switch"
+        ],
+        "timeZone": "America/Los_Angeles",
+        "firewall_l3_rule_count": 2,
+        "firewall_l7_rule_count": 0,
+        "firewall_inbound_rule_count": 1,
+        "port_forward_count": 0,
+        "one_to_one_nat_count": 0,
+        "content_filtering": {
+          "blocked_categories_count": 0,
+          "blocked_url_patterns_count": 0,
+          "allowed_url_patterns_count": 0
+        },
+        "vlan_count": 14,
+        "ssid_count": 0,
+        "s2s_vpn_mode": "hub",
+        "s2s_vpn_peer_count": 0,
+        "syslog_destination_count": 0
+      }
+    ]
+  },
+  "security_events": {
+    "total": 0,
+    "days_with_events": 0,
+    "daily_counts": [
+      {
+        "date": "2026-04-01",
+        "count": 0
+      },
+      {
+        "date": "2026-04-02",
+        "count": 0
+      },
+      {
+        "date": "2026-04-03",
+        "count": 0
+      },
+      {
+        "date": "2026-04-04",
+        "count": 0
+      },
+      {
+        "date": "2026-04-05",
+        "count": 0
+      },
+      {
+        "date": "2026-04-06",
+        "count": 0
+      },
+      {
+        "date": "2026-04-07",
+        "count": 0
+      },
+      {
+        "date": "2026-04-08",
+        "count": 0
+      },
+      {
+        "date": "2026-04-09",
+        "count": 0
+      },
+      {
+        "date": "2026-04-10",
+        "count": 0
+      },
+      {
+        "date": "2026-04-11",
+        "count": 0
+      },
+      {
+        "date": "2026-04-12",
+        "count": 0
+      },
+      {
+        "date": "2026-04-13",
+        "count": 0
+      },
+      {
+        "date": "2026-04-14",
+        "count": 0
+      },
+      {
+        "date": "2026-04-15",
+        "count": 0
+      },
+      {
+        "date": "2026-04-16",
+        "count": 0
+      },
+      {
+        "date": "2026-04-17",
+        "count": 0
+      },
+      {
+        "date": "2026-04-18",
+        "count": 0
+      },
+      {
+        "date": "2026-04-19",
+        "count": 0
+      },
+      {
+        "date": "2026-04-20",
+        "count": 0
+      },
+      {
+        "date": "2026-04-21",
+        "count": 0
+      },
+      {
+        "date": "2026-04-22",
+        "count": 0
+      },
+      {
+        "date": "2026-04-23",
+        "count": 0
+      },
+      {
+        "date": "2026-04-24",
+        "count": 0
+      },
+      {
+        "date": "2026-04-25",
+        "count": 0
+      },
+      {
+        "date": "2026-04-26",
+        "count": 0
+      },
+      {
+        "date": "2026-04-27",
+        "count": 0
+      },
+      {
+        "date": "2026-04-28",
+        "count": 0
+      },
+      {
+        "date": "2026-04-29",
+        "count": 0
+      }
+    ],
+    "by_signature_top": [],
+    "by_priority": {},
+    "by_blocked": {},
+    "top_sources": [],
+    "top_destinations": [],
+    "top_internal_clients": [],
+    "sample_events": []
+  },
+  "network_events": {
+    "total": 19996,
+    "networks_with_events": 1,
+    "by_network": {
+      "aranda_tooling": {
+        "name": "Aranda Tooling",
+        "total": 19996,
+        "by_type_top": [
+          [
+            "anyconnect_vpn_connection_success",
+            10778
+          ],
+          [
+            "dhcp_lease",
+            6649
+          ],
+          [
+            "anyconnect_vpn_session_manager",
+            1509
+          ],
+          [
+            "anyconnect_vpn_connect",
+            406
+          ],
+          [
+            "events_dropped2",
+            336
+          ],
+          [
+            "martian_src",
+            90
+          ],
+          [
+            "dhcp_problem",
+            60
+          ],
+          [
+            "anyconnect_vpn_auth_success",
+            56
+          ],
+          [
+            "anyconnect_vpn_disconnect",
+            50
+          ],
+          [
+            "dhcp_release",
+            17
+          ]
+        ],
+        "daily_counts": [
+          {
+            "date": "2026-04-01",
+            "count": 0
+          },
+          {
+            "date": "2026-04-02",
+            "count": 0
+          },
+          {
+            "date": "2026-04-03",
+            "count": 0
+          },
+          {
+            "date": "2026-04-04",
+            "count": 0
+          },
+          {
+            "date": "2026-04-05",
+            "count": 0
+          },
+          {
+            "date": "2026-04-06",
+            "count": 0
+          },
+          {
+            "date": "2026-04-07",
+            "count": 0
+          },
+          {
+            "date": "2026-04-08",
+            "count": 0
+          },
+          {
+            "date": "2026-04-09",
+            "count": 0
+          },
+          {
+            "date": "2026-04-10",
+            "count": 302
+          },
+          {
+            "date": "2026-04-11",
+            "count": 1165
+          },
+          {
+            "date": "2026-04-12",
+            "count": 816
+          },
+          {
+            "date": "2026-04-13",
+            "count": 789
+          },
+          {
+            "date": "2026-04-14",
+            "count": 882
+          },
+          {
+            "date": "2026-04-15",
+            "count": 1197
+          },
+          {
+            "date": "2026-04-16",
+            "count": 2878
+          },
+          {
+            "date": "2026-04-17",
+            "count": 2332
+          },
+          {
+            "date": "2026-04-18",
+            "count": 439
+          },
+          {
+            "date": "2026-04-19",
+            "count": 439
+          },
+          {
+            "date": "2026-04-20",
+            "count": 678
+          },
+          {
+            "date": "2026-04-21",
+            "count": 888
+          },
+          {
+            "date": "2026-04-22",
+            "count": 1756
+          },
+          {
+            "date": "2026-04-23",
+            "count": 1137
+          },
+          {
+            "date": "2026-04-24",
+            "count": 1401
+          },
+          {
+            "date": "2026-04-25",
+            "count": 434
+          },
+          {
+            "date": "2026-04-26",
+            "count": 333
+          },
+          {
+            "date": "2026-04-27",
+            "count": 598
+          },
+          {
+            "date": "2026-04-28",
+            "count": 792
+          },
+          {
+            "date": "2026-04-29",
+            "count": 740
+          }
+        ]
+      }
+    },
+    "by_type_top": [
+      [
+        "anyconnect_vpn_connection_success",
+        10778
+      ],
+      [
+        "dhcp_lease",
+        6649
+      ],
+      [
+        "anyconnect_vpn_session_manager",
+        1509
+      ],
+      [
+        "anyconnect_vpn_connect",
+        406
+      ],
+      [
+        "events_dropped2",
+        336
+      ],
+      [
+        "martian_src",
+        90
+      ],
+      [
+        "dhcp_problem",
+        60
+      ],
+      [
+        "anyconnect_vpn_auth_success",
+        56
+      ],
+      [
+        "anyconnect_vpn_disconnect",
+        50
+      ],
+      [
+        "dhcp_release",
+        17
+      ],
+      [
+        "anyconnect_vpn_auth_failure",
+        14
+      ],
+      [
+        "martian_vlan",
+        12
+      ],
+      [
+        "vpn_registry_change",
+        8
+      ],
+      [
+        "ip_conflict",
+        8
+      ],
+      [
+        "anyconnect_vpn_general",
+        2
+      ],
+      [
+        "non_meraki_vpn",
+        1
+      ]
+    ],
+    "by_category": {
+      "dhcp": 6726,
+      "anyconnect_vpn": 12815,
+      "dropped": 336,
+      "ip_conflicts": 110,
+      "shared_vpn": 8,
+      "wired_only_non_meraki_vpn": 1
+    },
+    "daily_counts": [
+      {
+        "date": "2026-04-01",
+        "count": 0
+      },
+      {
+        "date": "2026-04-02",
+        "count": 0
+      },
+      {
+        "date": "2026-04-03",
+        "count": 0
+      },
+      {
+        "date": "2026-04-04",
+        "count": 0
+      },
+      {
+        "date": "2026-04-05",
+        "count": 0
+      },
+      {
+        "date": "2026-04-06",
+        "count": 0
+      },
+      {
+        "date": "2026-04-07",
+        "count": 0
+      },
+      {
+        "date": "2026-04-08",
+        "count": 0
+      },
+      {
+        "date": "2026-04-09",
+        "count": 0
+      },
+      {
+        "date": "2026-04-10",
+        "count": 302
+      },
+      {
+        "date": "2026-04-11",
+        "count": 1165
+      },
+      {
+        "date": "2026-04-12",
+        "count": 816
+      },
+      {
+        "date": "2026-04-13",
+        "count": 789
+      },
+      {
+        "date": "2026-04-14",
+        "count": 882
+      },
+      {
+        "date": "2026-04-15",
+        "count": 1197
+      },
+      {
+        "date": "2026-04-16",
+        "count": 2878
+      },
+      {
+        "date": "2026-04-17",
+        "count": 2332
+      },
+      {
+        "date": "2026-04-18",
+        "count": 439
+      },
+      {
+        "date": "2026-04-19",
+        "count": 439
+      },
+      {
+        "date": "2026-04-20",
+        "count": 678
+      },
+      {
+        "date": "2026-04-21",
+        "count": 888
+      },
+      {
+        "date": "2026-04-22",
+        "count": 1756
+      },
+      {
+        "date": "2026-04-23",
+        "count": 1137
+      },
+      {
+        "date": "2026-04-24",
+        "count": 1401
+      },
+      {
+        "date": "2026-04-25",
+        "count": 434
+      },
+      {
+        "date": "2026-04-26",
+        "count": 333
+      },
+      {
+        "date": "2026-04-27",
+        "count": 598
+      },
+      {
+        "date": "2026-04-28",
+        "count": 792
+      },
+      {
+        "date": "2026-04-29",
+        "count": 740
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "LocationCode": "VAF",
+  "sophos_tenant_id": "bf8baf88-14a1-4712-9ba5-d72db4a538e2",
+  "sophos_tenant_name": "VAF",
+  "year_month": "2026-04",
+  "alerts_total": 2,
+  "alerts_by_severity": {
+    "high": 1,
+    "medium": 0,
+    "low": 1,
+    "informational": 0
+  },
+  "alerts_by_category": {
+    "connectivity": 2
+  },
+  "alerts_by_product": {
+    "firewall": 2
+  },
+  "data_caveats": {
+    "scope": "Open alerts only \u2014 Sophos /common/v1/alerts does not return resolved/closed alerts.",
+    "siem_events": "Not backfilled \u2014 Partner SIEM /events has 24h max lookback.",
+    "ips_ids": "Not in this dataset \u2014 captured via syslog receiver, not Partner API."
+  },
+  "run_at": "2026-04-29T21:35:01+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "comment": "SMTP",
+      "policy": "allow",
+      "protocol": "tcp",
+      "srcPort": "587",
+      "srcCidr": "10.10.7.50/32",
+      "destPort": "587",
+      "destCidr": "smtp.office365.com",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Default rule",
+      "policy": "allow",
+      "protocol": "Any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "Any",
+      "syslogEnabled": false
+    }
+  ]
+}
