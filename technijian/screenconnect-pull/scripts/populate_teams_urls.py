@@ -30,12 +30,12 @@ STATE_DIR   = SCRIPTS_DIR.parent / "state"
 sys.path.insert(0, str(SCRIPTS_DIR))
 from _sc_secrets import get_teams_credentials  # noqa: E402
 
-GRAPH      = "https://graph.microsoft.com/v1.0"
-DEST_CFG   = STATE_DIR / "teams-destination.json"
-AUDIT_LOG  = STATE_DIR / "_audit" / "audit_log.json"
+GRAPH         = "https://graph.microsoft.com/v1.0"
+DEST_CFG      = STATE_DIR / "teams-destination.json"
 ONEDRIVE_ROOT = Path(
     r"C:\Users\rjain\OneDrive - Technijian, Inc\Technijian - My Remote - FileCabinet"
 )
+AUDIT_LOG     = ONEDRIVE_ROOT / "_audit" / "audit_log.json"
 
 
 # ---------------------------------------------------------------------------
