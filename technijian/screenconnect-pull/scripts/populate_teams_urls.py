@@ -71,15 +71,18 @@ def resolve_channel_drive(token: str, team_id: str, channel_id: str) -> tuple[st
     return pr.get("driveId", ""), info.get("id", "")
 
 
-def get_item_web_url(token: str, drive_id: str, relative_path: str) -> str | None:
-    """Return webUrl for a file at relative_path inside the channel drive root.
+def get_item_web_url(token: str, drive_id: str, folder_id: str,
+                     relative_path: str) -> str | None:
+    """Return webUrl for a file at relative_path inside the channel filesFolder.
 
     relative_path should be like 'BWH-2026-04/20260401_BWH_abc12345_def67890.mp4'
+    Uses folder_id (the filesFolder item ID) as the base — not the drive root —
+    because the FileCabinet folder sits one level below the SharePoint drive root.
     Returns None if the file is not found (may not be synced yet).
     """
     encoded = quote(relative_path.replace("\\", "/"), safe="/")
     try:
-        item = graph_get(token, f"/drives/{drive_id}/root:/{encoded}")
+        item = graph_get(token, f"/drives/{drive_id}/items/{folder_id}:/{encoded}")
         return item.get("webUrl")
     except HTTPError as e:
         if e.code == 404:
@@ -142,7 +145,7 @@ def main() -> int:
 
     print("Authenticating to Microsoft Graph ...")
     token = get_token()
-    drive_id, _ = resolve_channel_drive(token, team_id, channel_id)
+    drive_id, folder_id = resolve_channel_drive(token, team_id, channel_id)
     print(f"Channel drive: {drive_id}\n")
 
     updated = 0
@@ -164,7 +167,7 @@ def main() -> int:
             # Fallback: use parent folder name + filename
             relative = f"{mp4.parent.name}/{mp4.name}"
 
-        web_url = get_item_web_url(token, drive_id, relative)
+        web_url = get_item_web_url(token, drive_id, folder_id, relative)
         if web_url:
             r["teams_url"] = web_url
             updated += 1
