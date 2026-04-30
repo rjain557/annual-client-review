@@ -1,0 +1,66 @@
+{
+  "filename_stem": "20260424_Technijian_0c8be608_81e22dd8",
+  "client_code": "TECHNIJIAN",
+  "mp4_path": "C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Technijian - My Remote - FileCabinet\\Technijian-2026-04\\20260424_Technijian_0c8be608_81e22dd8.mp4",
+  "analyzed_at": "2026-04-30T19:54:37Z",
+  "model": "gemini-2.5-flash",
+  "raw_response": "```json\n{\n  \"summary\": \"The technician worked on configuring OneDrive synchronization for the client's F: drive, specifically ensuring the `OneDrive - Technijian, Inc` folder was correctly set as the sync root. The process involved multiple unlinking and relinking operations of the OneDrive account, and navigating through folder selection dialogs.\",\n  \"session_type\": \"configuration\",\n  \"actions_taken\": [\n    \"Unlinked and relinked the OneDrive account from the PC multiple times.\",\n    \"Attempted to set the OneDrive sync folder location to `F:\\\\SQL Backup (F:)\\\\OneDrive\\\\OneDrive - Technijian, Inc`.\",\n    \"Managed OneDrive's 'Choose folders' settings, deselecting several subfolders to make them online-only.\",\n    \"Initiated PC folder backup for the 'Documents' folder to OneDrive.\",\n    \"Navigated through various local and OneDrive folders to verify sync status and file presence.\",\n    \"Attempted to delete a synced folder locally, observing its status change to online-only.\"\n  ],\n  \"applications_used\": [\n    \"File Explorer\",\n    \"Microsoft OneDrive\",\n    \"Microsoft Edge\"\n  ],\n  \"issues_observed\": [\n    \"Initial 'Apps' folder within OneDrive was empty (likely due to misconfiguration).\",\n    \"OneDrive reporting 'OneDrive isn't connected' after unlinking the account.\",\n    \"Prompt 'A OneDrive folder already exists on this PC' when trying to reconfigure the sync location (due to selecting an already managed or nested folder).\"\n  ],\n  \"issues_resolved\": [\n    \"The primary OneDrive folder (`F:\\\\SQL Backup (F:)\\\\OneDrive\\\\OneDrive - Technijian, Inc`) and its contents, including `Documents`, appear to be correctly synced with local copies by the end of the session.\"\n  ],\n  \"machines_touched\": [\n    \"Client PC\"\n  ],\n  \"notable_events\": [\n    \"The technician repeatedly unlinked and relinked the OneDrive account, seemingly struggling with the initial setup of the sync folder location.\",\n    \"There were several attempts to designate a subfolder (e.g., 'Documents' or 'TE-OC-CP-SQL-01') as the main OneDrive sync root, which is an incorrect approach and led to redundant steps.\",\n    \"A brief, seemingly unrelated search on Microsoft Edge was performed.\"\n  ],\n  \"concerns\": [\n    \"The technician demonstrated a lack of clear understanding of OneDrive's fundamental sync folder configuration, leading to inefficient and repetitive actions.\",\n    \"The repeated attempts to set a subfolder as the main sync root could have caused nested OneDrive folders or data conflicts if not managed correctly.\"\n  ],\n  \"estimated_productivity\": \"medium\",\n  \"tech_performance\": {\n    \"appeared_stuck\": true,\n    \"stuck_details\": [\n      \"0:32-0:49: Spent time deselecting many folders for selective sync, which was not the primary task of setting the sync root, and didn't clearly advance the overall goal.\",\n      \"1:08-1:25: Repetitive navigation within File Explorer without a clear next action before deciding to unlink OneDrive.\",\n      \"4:44-5:00 & 6:01-6:19: Repeatedly attempted to select a subfolder (like 'Documents' or 'TE-OC-CP-SQL-01') as the main OneDrive sync location after relinking, indicating confusion about how OneDrive handles its root folder and selective sync.\"\n    ],\n    \"idle_gaps\": [\n      \"5:10 - 5:41 (31 seconds): Screen static after closing Microsoft Edge browser, with no mouse or keyboard activity.\"\n    ],\n    \"idle_gap_count\": 1,\n    \"longest_idle_seconds\": 31,\n    \"total_idle_estimate_seconds\": 31,\n    \"efficiency_notes\": \"The technician exhibited uncertainty in configuring OneDrive, resorting to multiple unlinking/relinking cycles and making incorrect attempts to define the sync root. The process was not methodical, leading to several inefficient and repetitive steps.\",\n    \"coaching_flags\": [\n      \"Reinforce understanding of OneDrive's core synchronization mechanics, specifically the difference between setting the primary sync folder and managing selective folder sync.\",\n      \"Emphasize the importance of planning the configuration steps to avoid redundant actions and potential data hierarchy issues.\",\n      \"Advise against opening web browsers for casual searches during a focused configuration task unless directly relevant and necessary for troubleshooting.\"\n    ]\n  }\n}\n```",
+  "analysis": {
+    "summary": "The technician worked on configuring OneDrive synchronization for the client's F: drive, specifically ensuring the `OneDrive - Technijian, Inc` folder was correctly set as the sync root. The process involved multiple unlinking and relinking operations of the OneDrive account, and navigating through folder selection dialogs.",
+    "session_type": "configuration",
+    "actions_taken": [
+      "Unlinked and relinked the OneDrive account from the PC multiple times.",
+      "Attempted to set the OneDrive sync folder location to `F:\\SQL Backup (F:)\\OneDrive\\OneDrive - Technijian, Inc`.",
+      "Managed OneDrive's 'Choose folders' settings, deselecting several subfolders to make them online-only.",
+      "Initiated PC folder backup for the 'Documents' folder to OneDrive.",
+      "Navigated through various local and OneDrive folders to verify sync status and file presence.",
+      "Attempted to delete a synced folder locally, observing its status change to online-only."
+    ],
+    "applications_used": [
+      "File Explorer",
+      "Microsoft OneDrive",
+      "Microsoft Edge"
+    ],
+    "issues_observed": [
+      "Initial 'Apps' folder within OneDrive was empty (likely due to misconfiguration).",
+      "OneDrive reporting 'OneDrive isn't connected' after unlinking the account.",
+      "Prompt 'A OneDrive folder already exists on this PC' when trying to reconfigure the sync location (due to selecting an already managed or nested folder)."
+    ],
+    "issues_resolved": [
+      "The primary OneDrive folder (`F:\\SQL Backup (F:)\\OneDrive\\OneDrive - Technijian, Inc`) and its contents, including `Documents`, appear to be correctly synced with local copies by the end of the session."
+    ],
+    "machines_touched": [
+      "Client PC"
+    ],
+    "notable_events": [
+      "The technician repeatedly unlinked and relinked the OneDrive account, seemingly struggling with the initial setup of the sync folder location.",
+      "There were several attempts to designate a subfolder (e.g., 'Documents' or 'TE-OC-CP-SQL-01') as the main OneDrive sync root, which is an incorrect approach and led to redundant steps.",
+      "A brief, seemingly unrelated search on Microsoft Edge was performed."
+    ],
+    "concerns": [
+      "The technician demonstrated a lack of clear understanding of OneDrive's fundamental sync folder configuration, leading to inefficient and repetitive actions.",
+      "The repeated attempts to set a subfolder as the main sync root could have caused nested OneDrive folders or data conflicts if not managed correctly."
+    ],
+    "estimated_productivity": "medium",
+    "tech_performance": {
+      "appeared_stuck": true,
+      "stuck_details": [
+        "0:32-0:49: Spent time deselecting many folders for selective sync, which was not the primary task of setting the sync root, and didn't clearly advance the overall goal.",
+        "1:08-1:25: Repetitive navigation within File Explorer without a clear next action before deciding to unlink OneDrive.",
+        "4:44-5:00 & 6:01-6:19: Repeatedly attempted to select a subfolder (like 'Documents' or 'TE-OC-CP-SQL-01') as the main OneDrive sync location after relinking, indicating confusion about how OneDrive handles its root folder and selective sync."
+      ],
+      "idle_gaps": [
+        "5:10 - 5:41 (31 seconds): Screen static after closing Microsoft Edge browser, with no mouse or keyboard activity."
+      ],
+      "idle_gap_count": 1,
+      "longest_idle_seconds": 31,
+      "total_idle_estimate_seconds": 31,
+      "efficiency_notes": "The technician exhibited uncertainty in configuring OneDrive, resorting to multiple unlinking/relinking cycles and making incorrect attempts to define the sync root. The process was not methodical, leading to several inefficient and repetitive steps.",
+      "coaching_flags": [
+        "Reinforce understanding of OneDrive's core synchronization mechanics, specifically the difference between setting the primary sync folder and managing selective folder sync.",
+        "Emphasize the importance of planning the configuration steps to avoid redundant actions and potential data hierarchy issues.",
+        "Advise against opening web browsers for casual searches during a focused configuration task unless directly relevant and necessary for troubleshooting."
+      ]
+    }
+  }
+}
