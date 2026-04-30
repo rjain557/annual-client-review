@@ -217,6 +217,39 @@ def aggregate_network(meraki_dir: Path, month: str) -> dict:
     }
 
 
+def aggregate_change_log(meraki_dir: Path, month: str) -> dict:
+    """Summarize the admin configuration-change log for a given month."""
+    empty = {"total": 0, "by_admin": [], "by_network": [], "by_page": [],
+             "recent": []}
+    change_file = meraki_dir / "change_log" / f"{month}.json"
+    data = load_json(change_file) or {}
+    changes: list[dict] = data.get("changes") or []
+    if not changes:
+        return empty
+
+    by_admin: Counter = Counter()
+    by_network: Counter = Counter()
+    by_page: Counter = Counter()
+    for c in changes:
+        admin = c.get("adminEmail") or c.get("adminName") or "(unknown)"
+        by_admin[admin] += 1
+        net = c.get("networkName") or c.get("networkId") or "(org-wide)"
+        by_network[net] += 1
+        page = c.get("page") or "(unknown)"
+        by_page[page] += 1
+
+    return {
+        "total": len(changes),
+        "by_admin": [{"admin": k, "count": v}
+                     for k, v in by_admin.most_common()],
+        "by_network": [{"network": k, "count": v}
+                       for k, v in by_network.most_common()],
+        "by_page": [{"page": k, "count": v}
+                    for k, v in by_page.most_common()],
+        "recent": changes[:25],
+    }
+
+
 def aggregate_configuration(meraki_dir: Path) -> dict:
     org_meta = load_json(meraki_dir / "org_meta.json") or {}
     networks = load_json(meraki_dir / "networks.json") or []
@@ -311,6 +344,7 @@ def main() -> int:
         for m in months:
             sec = aggregate_security(meraki_dir, m)
             net = aggregate_network(meraki_dir, m)
+            chg = aggregate_change_log(meraki_dir, m)
             payload = {
                 "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "client_code": client_code,
@@ -318,14 +352,17 @@ def main() -> int:
                 "configuration": config_summary,
                 "security_events": sec,
                 "network_events": net,
+                "config_changes": chg,
             }
             out = out_dir / f"{m}.json"
             out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
             total_files += 1
             index.append({"client_code": client_code, "month": m,
                           "security_events_total": sec["total"],
-                          "network_events_total": net["total"]})
-            print(f"  [{client_code}] {m}: sec={sec['total']:>6}  net={net['total']:>6}")
+                          "network_events_total": net["total"],
+                          "config_changes_total": chg["total"]})
+            print(f"  [{client_code}] {m}: sec={sec['total']:>6}  "
+                  f"net={net['total']:>6}  chg={chg['total']:>4}")
 
     log_dir = root / "_meraki_logs"
     log_dir.mkdir(parents=True, exist_ok=True)

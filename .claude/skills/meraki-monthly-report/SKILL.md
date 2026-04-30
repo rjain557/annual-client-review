@@ -60,17 +60,21 @@ the Word generator.
 
 ## Sections in the report
 
-1. **Executive Summary** — KPI table: networks, devices, total IDS/IPS events,
-   total activity events, days with activity.
+1. **Executive Summary** — KPI strip: networks, devices, IDS/IPS events,
+   activity events, config changes count.
 2. **Network & Device Inventory** — Devices by model, devices by product type,
    per-network rule counts.
 3. **Security Posture** — IDS/IPS mode per network, AMP mode, content
    filtering categories, S2S VPN mode, syslog destinations.
-4. **IDS/IPS & AMP Events** — Top signatures, top sources/destinations,
+4. **Configuration Changes** — Who changed what this month: total changes,
+   by-admin table, by-network table, by configuration-area table, and a full
+   before/after detail table of the 25 most-recent changes for compliance review.
+   Green callout when no changes recorded ("baseline is intact").
+5. **IDS/IPS & AMP Events** — Top signatures, top sources/destinations,
    blocked vs alerted breakdown, priority distribution.
-5. **Firewall / Network Activity** — Top event types, by category, per-network
+6. **Firewall / Network Activity** — Top event types, by category, per-network
    rollup with most-frequent event types.
-6. **Daily Trend** — Day-by-day count of security events vs activity events.
+7. **Daily Trend** — Day-by-day count of security events vs activity events.
 
 ## Brand styling
 
@@ -96,9 +100,11 @@ have no active licenses and produce empty reports if forced.
   for the month, the aggregator emits an empty summary. Run the pull first.
   The aggregator does NOT distinguish these in v1; treat empty months with
   suspicion until the corresponding daily files are present.
-- **Configuration is point-in-time.** All months show the *current* config,
-  not the config as it was at month-end. To track config drift across
-  months, snapshot directory needs to be archived per-month (future work).
+- **Configuration is the most-recent snapshot.** All months show the latest
+  pulled config. Versioned daily snapshots are now stored under
+  `config_history/<YYYY-MM-DD>/` — use those to compare any two dates.
+  Admin-initiated changes are tracked in the **Configuration Changes** section
+  via the `configurationChanges` API with full before/after values.
 - **Org name vs slug.** Word doc titles use the human org name from
   `org_meta.json`; file paths use the slug. If they diverge (mid-period
   rename), regenerate the affected month after the next config pull.

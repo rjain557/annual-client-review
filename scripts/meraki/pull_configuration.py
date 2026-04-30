@@ -108,6 +108,7 @@ def main() -> int:
 
     pulled_orgs = 0
     pulled_nets = 0
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     coverage_summary = []
     for org in orgs:
         slug = m.slugify(org["name"])
@@ -116,20 +117,26 @@ def main() -> int:
         if slug in skip:
             continue
         org_dir = output_root / client_folder(slug) / "meraki"
+        hist_org_dir = org_dir / "config_history" / today
         write_json(org_dir / "org_meta.json", org)
+        write_json(hist_org_dir / "org_meta.json", org)
 
         try:
             networks = m.list_networks(org["id"])
             devices = m.list_devices(org["id"])
         except m.MerakiError as e:
             print(f"  [{slug}] org-level fetch failed: HTTP {e.status} — skipping")
-            write_json(org_dir / "config_snapshot_at.json", {
+            err_snap = {
                 "snapshot_at": iso_utc(datetime.now(timezone.utc)),
                 "error": f"HTTP {e.status} on org-level enumeration",
-            })
+            }
+            write_json(org_dir / "config_snapshot_at.json", err_snap)
+            write_json(hist_org_dir / "config_snapshot_at.json", err_snap)
             continue
         write_json(org_dir / "networks.json", networks)
         write_json(org_dir / "devices.json", devices)
+        write_json(hist_org_dir / "networks.json", networks)
+        write_json(hist_org_dir / "devices.json", devices)
         pulled_orgs += 1
         print(f"  [{slug}] {len(networks)} networks, {len(devices)} devices")
 
@@ -138,6 +145,7 @@ def main() -> int:
             net_slug = m.slugify(net["name"])
             net_dir = org_dir / "networks" / net_slug
             write_json(net_dir / "meta.json", net)
+            write_json(hist_org_dir / "networks" / net_slug / "meta.json", net)
 
             endpoint_set: list[tuple[str, str]] = []
             endpoint_set += list(m.NETWORK_WIDE_CONFIG_ENDPOINTS)
@@ -156,19 +164,22 @@ def main() -> int:
                 net_coverage["endpoints"][fname] = status
                 if status == "ok":
                     write_json(net_dir / fname, body)
+                    write_json(hist_org_dir / "networks" / net_slug / fname, body)
             ok = sum(1 for v in net_coverage["endpoints"].values() if v == "ok")
             total = len(net_coverage["endpoints"])
             print(f"    {net_slug}: {ok}/{total} endpoints captured")
             org_coverage.append(net_coverage)
             pulled_nets += 1
 
-        write_json(org_dir / "config_snapshot_at.json", {
+        snap_meta = {
             "snapshot_at": iso_utc(datetime.now(timezone.utc)),
             "org": {"id": org["id"], "name": org["name"]},
             "network_count": len(networks),
             "device_count": len(devices),
             "coverage": org_coverage,
-        })
+        }
+        write_json(org_dir / "config_snapshot_at.json", snap_meta)
+        write_json(hist_org_dir / "config_snapshot_at.json", snap_meta)
         coverage_summary.append({"org": org["name"], "slug": slug,
                                  "networks": len(networks),
                                  "devices": len(devices)})

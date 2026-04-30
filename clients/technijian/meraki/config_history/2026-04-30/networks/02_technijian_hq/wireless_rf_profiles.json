@@ -1,0 +1,486 @@
+[
+  {
+    "id": "indoor",
+    "networkId": "L_3710403142999867950",
+    "name": "Basic Indoor Profile",
+    "clientBalancingEnabled": true,
+    "minBitrateType": "ssid",
+    "bandSelectionType": "ap",
+    "apBandSettings": {
+      "bandOperationMode": "multi",
+      "bands": {
+        "enabled": [
+          "2.4",
+          "5",
+          "6"
+        ]
+      },
+      "bandSteeringEnabled": true
+    },
+    "twoFourGhzSettings": {
+      "maxPower": 30,
+      "minPower": 30,
+      "minBitrate": 11,
+      "rxsop": null,
+      "validAutoChannels": [
+        1,
+        6,
+        11
+      ],
+      "axEnabled": true
+    },
+    "fiveGhzSettings": {
+      "maxPower": 30,
+      "minPower": 30,
+      "minBitrate": 12,
+      "rxsop": null,
+      "validAutoChannels": [
+        36,
+        40,
+        44,
+        48,
+        149,
+        153,
+        157,
+        161
+      ],
+      "channelWidth": "auto"
+    },
+    "transmission": {
+      "enabled": true
+    },
+    "perSsidSettings": {
+      "0": {
+        "name": "TechnijianSecure",
+        "minBitrate": 5.5,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "1": {
+        "name": "TechnijianLocks",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "2": {
+        "name": "Technijian HQ",
+        "minBitrate": 6,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "3": {
+        "name": "TechnijianGuest",
+        "minBitrate": 6,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "4": {
+        "name": "Technijian-Corp",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "5": {
+        "name": "TESTSSID",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "6": {
+        "name": "TechnijianRadiusServer",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "7": {
+        "name": "Unconfigured SSID 8",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "8": {
+        "name": "Unconfigured SSID 9",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "9": {
+        "name": "Unconfigured SSID 10",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "10": {
+        "name": "Unconfigured SSID 11",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "11": {
+        "name": "Unconfigured SSID 12",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "12": {
+        "name": "Unconfigured SSID 13",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "13": {
+        "name": "Unconfigured SSID 14",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "14": {
+        "name": "Unconfigured SSID 15",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      }
+    },
+    "isIndoorDefault": true,
+    "isOutdoorDefault": false,
+    "antennas": {
+      "beam": {
+        "mode": "boresight"
+      }
+    },
+    "isMixedDefault": false
+  },
+  {
+    "id": "outdoor",
+    "networkId": "L_3710403142999867950",
+    "name": "Basic Outdoor Profile",
+    "clientBalancingEnabled": true,
+    "minBitrateType": "ssid",
+    "bandSelectionType": "ap",
+    "apBandSettings": {
+      "bandOperationMode": "dual",
+      "bands": {
+        "enabled": [
+          "2.4",
+          "5"
+        ]
+      },
+      "bandSteeringEnabled": true
+    },
+    "twoFourGhzSettings": {
+      "maxPower": 30,
+      "minPower": 30,
+      "minBitrate": 11,
+      "rxsop": null,
+      "validAutoChannels": [
+        1,
+        6,
+        11
+      ],
+      "axEnabled": true
+    },
+    "fiveGhzSettings": {
+      "maxPower": 30,
+      "minPower": 30,
+      "minBitrate": 12,
+      "rxsop": null,
+      "validAutoChannels": [
+        36,
+        40,
+        44,
+        48,
+        149,
+        153,
+        157,
+        161,
+        169,
+        173,
+        177
+      ],
+      "channelWidth": "auto"
+    },
+    "transmission": {
+      "enabled": true
+    },
+    "perSsidSettings": {
+      "0": {
+        "name": "TechnijianSecure",
+        "minBitrate": 5.5,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "1": {
+        "name": "TechnijianLocks",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "2": {
+        "name": "Technijian HQ",
+        "minBitrate": 6,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "3": {
+        "name": "TechnijianGuest",
+        "minBitrate": 6,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "4": {
+        "name": "Technijian-Corp",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "5": {
+        "name": "TESTSSID",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "6": {
+        "name": "TechnijianRadiusServer",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": true,
+        "bandOperationMode": "dual"
+      },
+      "7": {
+        "name": "Unconfigured SSID 8",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "8": {
+        "name": "Unconfigured SSID 9",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "9": {
+        "name": "Unconfigured SSID 10",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "10": {
+        "name": "Unconfigured SSID 11",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "11": {
+        "name": "Unconfigured SSID 12",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "12": {
+        "name": "Unconfigured SSID 13",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "13": {
+        "name": "Unconfigured SSID 14",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      },
+      "14": {
+        "name": "Unconfigured SSID 15",
+        "minBitrate": 1,
+        "bands": {
+          "enabled": [
+            "2.4",
+            "5"
+          ]
+        },
+        "bandSteeringEnabled": false,
+        "bandOperationMode": "dual"
+      }
+    },
+    "isIndoorDefault": false,
+    "isOutdoorDefault": true,
+    "antennas": {
+      "beam": {
+        "mode": "boresight"
+      }
+    },
+    "isMixedDefault": false
+  }
+]

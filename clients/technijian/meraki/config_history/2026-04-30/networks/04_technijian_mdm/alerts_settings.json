@@ -1,0 +1,112 @@
+{
+  "defaultDestinations": {
+    "emails": [
+      "support@technijian.com"
+    ],
+    "snmp": false,
+    "allAdmins": false,
+    "httpServerIds": []
+  },
+  "alerts": [
+    {
+      "type": "swFound",
+      "enabled": false,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {
+        "regex": ""
+      }
+    },
+    {
+      "type": "pccOutage",
+      "enabled": false,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {
+        "timeout": 60,
+        "tag": "- any -"
+      }
+    },
+    {
+      "type": "pccUnmanaged",
+      "enabled": true,
+      "alertDestinations": {
+        "emails": [
+          "support@technijian.com"
+        ],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {}
+    },
+    {
+      "type": "geofencingOut",
+      "enabled": false,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {}
+    },
+    {
+      "type": "geofencingIn",
+      "enabled": false,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {}
+    },
+    {
+      "type": "pccEnrollment",
+      "enabled": true,
+      "alertDestinations": {
+        "emails": [
+          "support@technijian.com"
+        ],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {}
+    },
+    {
+      "type": "pccExpiredApnsCert",
+      "enabled": true,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {
+        "threshold": 45
+      }
+    },
+    {
+      "type": "settingsChanged",
+      "enabled": false,
+      "alertDestinations": {
+        "emails": [],
+        "snmp": false,
+        "allAdmins": false,
+        "httpServerIds": []
+      },
+      "filters": {}
+    }
+  ],
+  "muting": {}
+}

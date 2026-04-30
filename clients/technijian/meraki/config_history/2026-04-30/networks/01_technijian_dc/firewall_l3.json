@@ -1,0 +1,74 @@
+{
+  "rules": [
+    {
+      "comment": "SSH to 3850 \u2013 mgmt IP",
+      "policy": "allow",
+      "protocol": "tcp",
+      "srcPort": "Any",
+      "srcCidr": "10.95.10.0/24",
+      "destPort": "Any",
+      "destCidr": "Any",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Blocked Malicious website outbound connection",
+      "policy": "deny",
+      "protocol": "any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "cvc.7766.org",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Blocked Malicious website IP outbound connection",
+      "policy": "deny",
+      "protocol": "any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "209.141.33.145/32",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Blocked Malicious website IP outbound connection",
+      "policy": "deny",
+      "protocol": "any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "209.141.45.118/32",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "cavelo.com",
+      "policy": "allow",
+      "protocol": "any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "3.218.175.179/32",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Whitelist Domains",
+      "policy": "allow",
+      "protocol": "tcp",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "api.anthropic.com,claude.ai,api.openai.com,codex.openai.com,generativelanguage.googleapis.com,api.moonshot.ai,api.deepseek.com,api.z.ai,api.minimax.io,z.ai",
+      "syslogEnabled": false
+    },
+    {
+      "comment": "Default rule",
+      "policy": "allow",
+      "protocol": "Any",
+      "srcPort": "Any",
+      "srcCidr": "Any",
+      "destPort": "Any",
+      "destCidr": "Any",
+      "syslogEnabled": false
+    }
+  ]
+}

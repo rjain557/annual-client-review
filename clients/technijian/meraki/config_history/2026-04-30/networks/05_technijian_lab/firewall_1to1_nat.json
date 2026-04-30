@@ -1,0 +1,58 @@
+{
+  "rules": [
+    {
+      "name": "TE-HQ-LAB-IIS",
+      "publicIp": "10.120.50.200",
+      "lanIp": "10.100.254.21",
+      "uplink": "internet1",
+      "allowedInbound": [
+        {
+          "protocol": "tcp",
+          "destinationPorts": [
+            "80",
+            "443"
+          ],
+          "allowedIps": [
+            "any"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TE-LAB-SQL-01",
+      "publicIp": "10.120.50.201",
+      "lanIp": "10.100.109.21",
+      "uplink": "internet1",
+      "allowedInbound": [
+        {
+          "protocol": "tcp",
+          "destinationPorts": [
+            "80",
+            "443"
+          ],
+          "allowedIps": [
+            "any"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TE-LAB-OXPLIVE",
+      "publicIp": "10.120.50.202",
+      "lanIp": "10.100.106.21",
+      "uplink": "internet1",
+      "allowedInbound": [
+        {
+          "protocol": "tcp",
+          "destinationPorts": [
+            "80",
+            "443"
+          ],
+          "allowedIps": [
+            "any"
+          ]
+        }
+      ]
+    }
+  ]
+}

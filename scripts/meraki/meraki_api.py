@@ -373,6 +373,32 @@ NETWORK_WIDE_CONFIG_ENDPOINTS = [
 ]
 
 
+def get_configuration_changes(org_id: str, *, t0: Optional[str] = None,
+                              t1: Optional[str] = None,
+                              timespan: Optional[int] = None,
+                              per_page: int = 1000) -> list[dict]:
+    """GET /organizations/{id}/configurationChanges — admin change audit log.
+
+    Returns every configuration change made via Dashboard, API, or mobile app
+    within the requested window. Fields per record:
+      ts, adminName, adminEmail, networkId, networkName, page, label,
+      oldValue, newValue
+    """
+    params: dict[str, Any] = {"perPage": per_page}
+    if timespan is not None:
+        params["timespan"] = timespan
+    else:
+        if t0:
+            params["t0"] = t0
+        if t1:
+            params["t1"] = t1
+    return get_paginated(
+        f"/organizations/{org_id}/configurationChanges",
+        params,
+        per_page_default=per_page,
+    ) or []
+
+
 def network_has_product(network: dict, product: str) -> bool:
     pts = network.get("productTypes") or []
     return product in pts
@@ -395,6 +421,7 @@ __all__ = [
     "list_devices",
     "get_security_events_org",
     "get_network_events",
+    "get_configuration_changes",
     "APPLIANCE_CONFIG_ENDPOINTS",
     "WIRELESS_CONFIG_ENDPOINTS",
     "SWITCH_CONFIG_ENDPOINTS",

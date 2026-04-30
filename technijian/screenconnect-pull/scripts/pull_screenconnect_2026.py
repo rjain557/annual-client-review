@@ -156,12 +156,20 @@ def _resolve_converter() -> Path | None:
 
 
 def _resolve_ffmpeg() -> str | None:
-    import subprocess
-    try:
-        subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
-        return 'ffmpeg'
-    except Exception:
-        return None
+    import subprocess, os
+    candidates = [
+        'ffmpeg',
+        str(Path(os.environ.get('LOCALAPPDATA', '')) / 'Microsoft' / 'WinGet' / 'Links' / 'ffmpeg.exe'),
+        r'C:\ffmpeg\bin\ffmpeg.exe',
+        r'C:\Program Files\ffmpeg\bin\ffmpeg.exe',
+    ]
+    for exe in candidates:
+        try:
+            subprocess.run([exe, '-version'], capture_output=True, check=True)
+            return exe
+        except Exception:
+            continue
+    return None
 
 
 def convert_recording(rec: dict, out_dir: Path, *,
@@ -414,6 +422,8 @@ def main() -> None:
     ap.add_argument('--no-refresh-db', action='store_true', help='Use existing local DB copy (skip copy step)')
     ap.add_argument('--recordings-dir', default=None,       help='Override recordings source dir (default: R:\\ then UNC fallback)')
     ap.add_argument('--from-avi-dir',  default=None,        help='Skip CRV step: compress pre-downloaded AVIs from this dir to MP4')
+    ap.add_argument('--preset',        default='medium',    help='ffmpeg preset (default: medium). Use slow for better compression, ultrafast for speed.')
+    ap.add_argument('--crf',           default=28, type=int, help='ffmpeg CRF quality (default: 28). Lower = better quality/larger file.')
     args = ap.parse_args()
 
     out_dir = Path(args.output_dir)
@@ -441,6 +451,7 @@ def main() -> None:
         recs = process_avi_dir(
             avi_dir, session_map, out_dir, ffmpeg,
             client_filter=args.client, year_filter=args.year,
+            crf=args.crf, preset=args.preset,
             dry_run=args.dry_run,
         )
         ok      = sum(1 for r in recs if 'mp4_path' in r and not r.get('error') and not r.get('skipped') and not r.get('dry_run'))

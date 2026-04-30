@@ -1,0 +1,1757 @@
+{
+  "month": "2026-01",
+  "org": "Aranda Tooling",
+  "org_id": "1549341",
+  "change_count": 92,
+  "pulled_at": "2026-04-30T15:41:16Z",
+  "changes": [
+    {
+      "ts": "2026-01-31T00:05:31.939640Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 20",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T23:56:53.338721Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 20",
+      "oldValue": "{\"Native VLAN\":100}",
+      "newValue": "{\"Native VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T21:34:07.406434Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "VPN settings",
+      "label": "VPN subnets",
+      "oldValue": "[{\"name\":\"Untagged\",\"vlan_id\":\"1\",\"subnet\":\"10.10.0.0/16\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.10.0.0/16\",\"mx_ip\":\"10.10.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":1},{\"name\":\"Config VLAN\",\"vlan_id\":\"2\",\"subnet\":\"192.168.254.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.254.0/24\",\"mx_ip\":\"192.168.254.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":2},{\"name\":\"Config VLAN2\",\"vlan_id\":\"3\",\"subnet\":\"192.168.0.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.0.0/24\",\"mx_ip\":\"192.168.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":3},{\"name\":\"Office Management VLAN\",\"vlan_id\":\"10\",\"subnet\":\"172.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.0.0/23\",\"mx_ip\":\"172.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":10},{\"name\":\"Office Wired Network\",\"vlan_id\":\"20\",\"subnet\":\"172.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.2.0/23\",\"mx_ip\":\"172.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":20},{\"name\":\"Office Wi-Fi Network\",\"vlan_id\":\"30\",\"subnet\":\"172.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.4.0/23\",\"mx_ip\":\"172.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":30},{\"name\":\"Office Wi-Fi Guest\",\"vlan_id\":\"40\",\"subnet\":\"172.28.6.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.6.0/23\",\"mx_ip\":\"172.28.6.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":40},{\"name\":\"Office Services\",\"vlan_id\":\"50\",\"subnet\":\"172.28.8.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.8.0/23\",\"mx_ip\":\"172.28.8.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":50},{\"name\":\"Office IoT\",\"vlan_id\":\"60\",\"subnet\":\"172.28.10.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.10.0/23\",\"mx_ip\":\"172.28.10.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":60},{\"name\":\"Office Printers VLAN\",\"vlan_id\":\"70\",\"subnet\":\"172.28.12.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.12.0/23\",\"mx_ip\":\"172.28.12.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":70},{\"name\":\"OT Management VLAN\",\"vlan_id\":\"100\",\"subnet\":\"10.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.0.0/23\",\"mx_ip\":\"10.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":100},{\"name\":\"OT Wired Network\",\"vlan_id\":\"110\",\"subnet\":\"10.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.2.0/23\",\"mx_ip\":\"10.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":110},{\"name\":\"OT Printers\",\"vlan_id\":\"120\",\"subnet\":\"10.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.4.0/23\",\"mx_ip\":\"10.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":120},{\"name\":\"BGP\",\"vlan_id\":\"200\",\"subnet\":\"198.19.0.64/30\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"198.19.0.64/30\",\"mx_ip\":\"198.19.0.66\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":200},{\"name\":\"Client VPN\",\"subnet\":\"17.28.20.0/24\",\"subnets\":[{\"ip_version\":4,\"subnet\":\"17.28.20.0/24\"}],\"vpn_mode\":\"on\",\"vpn_nat_subnet\":null,\"entry_type\":\"client_vpn\",\"vpn_nat_enabled\":\"off\",\"unremovable",
+      "newValue": "[{\"name\":\"Untagged\",\"vlan_id\":\"1\",\"subnet\":\"10.10.0.0/16\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.10.0.0/16\",\"mx_ip\":\"10.10.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":1},{\"name\":\"Config VLAN\",\"vlan_id\":\"2\",\"subnet\":\"192.168.254.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.254.0/24\",\"mx_ip\":\"192.168.254.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":2},{\"name\":\"Config VLAN2\",\"vlan_id\":\"3\",\"subnet\":\"192.168.0.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.0.0/24\",\"mx_ip\":\"192.168.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":3},{\"name\":\"Office Management VLAN\",\"vlan_id\":\"10\",\"subnet\":\"172.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.0.0/23\",\"mx_ip\":\"172.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":10},{\"name\":\"Office Wired Network\",\"vlan_id\":\"20\",\"subnet\":\"172.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.2.0/23\",\"mx_ip\":\"172.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":20},{\"name\":\"Office Wi-Fi Network\",\"vlan_id\":\"30\",\"subnet\":\"172.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.4.0/23\",\"mx_ip\":\"172.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":30},{\"name\":\"Office Wi-Fi Guest\",\"vlan_id\":\"40\",\"subnet\":\"172.28.6.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.6.0/23\",\"mx_ip\":\"172.28.6.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":40},{\"name\":\"Office Services\",\"vlan_id\":\"50\",\"subnet\":\"172.28.8.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.8.0/23\",\"mx_ip\":\"172.28.8.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":50},{\"name\":\"Office IoT\",\"vlan_id\":\"60\",\"subnet\":\"172.28.10.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.10.0/23\",\"mx_ip\":\"172.28.10.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":60},{\"name\":\"Office Printers VLAN\",\"vlan_id\":\"70\",\"subnet\":\"172.28.12.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.12.0/23\",\"mx_ip\":\"172.28.12.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":70},{\"name\":\"OT Management VLAN\",\"vlan_id\":\"100\",\"subnet\":\"10.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.0.0/23\",\"mx_ip\":\"10.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":100},{\"name\":\"OT Wired Network\",\"vlan_id\":\"110\",\"subnet\":\"10.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.2.0/23\",\"mx_ip\":\"10.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":110},{\"name\":\"OT Printers\",\"vlan_id\":\"120\",\"subnet\":\"10.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.4.0/23\",\"mx_ip\":\"10.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":120},{\"name\":\"BGP\",\"vlan_id\":\"200\",\"subnet\":\"198.19.0.64/30\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"198.19.0.64/30\",\"mx_ip\":\"198.19.0.66\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":200},{\"name\":\"Client VPN\",\"subnet\":\"17.28.20.0/24\",\"subnets\":[{\"ip_version\":4,\"subnet\":\"17.28.20.0/24\"}],\"vpn_mode\":\"on\",\"vpn_nat_subnet\":null,\"entry_type\":\"client_vpn\",\"vpn_nat_enabled\":\"off\",\"unremovable",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T21:32:51.923866Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "VPN settings",
+      "label": "VPN subnets",
+      "oldValue": "[{\"name\":\"Untagged\",\"vlan_id\":\"1\",\"subnet\":\"10.10.0.0/16\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.10.0.0/16\",\"mx_ip\":\"10.10.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":1},{\"name\":\"Config VLAN\",\"vlan_id\":\"2\",\"subnet\":\"192.168.254.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.254.0/24\",\"mx_ip\":\"192.168.254.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":2},{\"name\":\"Config VLAN2\",\"vlan_id\":\"3\",\"subnet\":\"192.168.0.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.0.0/24\",\"mx_ip\":\"192.168.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":3},{\"name\":\"Office Management VLAN\",\"vlan_id\":\"10\",\"subnet\":\"172.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.0.0/23\",\"mx_ip\":\"172.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":10},{\"name\":\"Office Wired Network\",\"vlan_id\":\"20\",\"subnet\":\"172.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.2.0/23\",\"mx_ip\":\"172.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":20},{\"name\":\"Office Wi-Fi Network\",\"vlan_id\":\"30\",\"subnet\":\"172.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.4.0/23\",\"mx_ip\":\"172.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":30},{\"name\":\"Office Wi-Fi Guest\",\"vlan_id\":\"40\",\"subnet\":\"172.28.6.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.6.0/23\",\"mx_ip\":\"172.28.6.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":40},{\"name\":\"Office Services\",\"vlan_id\":\"50\",\"subnet\":\"172.28.8.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.8.0/23\",\"mx_ip\":\"172.28.8.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":50},{\"name\":\"Office IoT\",\"vlan_id\":\"60\",\"subnet\":\"172.28.10.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.10.0/23\",\"mx_ip\":\"172.28.10.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":60},{\"name\":\"Office Printers VLAN\",\"vlan_id\":\"70\",\"subnet\":\"172.28.12.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.12.0/23\",\"mx_ip\":\"172.28.12.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":70},{\"name\":\"OT Management VLAN\",\"vlan_id\":\"100\",\"subnet\":\"10.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.0.0/23\",\"mx_ip\":\"10.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":100},{\"name\":\"OT Wired Network\",\"vlan_id\":\"110\",\"subnet\":\"10.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.2.0/23\",\"mx_ip\":\"10.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":110},{\"name\":\"OT Printers\",\"vlan_id\":\"120\",\"subnet\":\"10.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.4.0/23\",\"mx_ip\":\"10.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":120},{\"name\":\"BGP\",\"vlan_id\":\"200\",\"subnet\":\"198.19.0.64/30\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"198.19.0.64/30\",\"mx_ip\":\"198.19.0.66\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":200},{\"name\":\"Client VPN\",\"subnet\":\"17.28.20.0/24\",\"subnets\":[{\"ip_version\":4,\"subnet\":\"17.28.20.0/24\"}],\"vpn_mode\":\"off\",\"vpn_nat_subnet\":null,\"entry_type\":\"client_vpn\",\"vpn_nat_enabled\":\"off\",\"unremovabl",
+      "newValue": "[{\"name\":\"Untagged\",\"vlan_id\":\"1\",\"subnet\":\"10.10.0.0/16\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.10.0.0/16\",\"mx_ip\":\"10.10.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":1},{\"name\":\"Config VLAN\",\"vlan_id\":\"2\",\"subnet\":\"192.168.254.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.254.0/24\",\"mx_ip\":\"192.168.254.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":2},{\"name\":\"Config VLAN2\",\"vlan_id\":\"3\",\"subnet\":\"192.168.0.0/24\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"192.168.0.0/24\",\"mx_ip\":\"192.168.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":3},{\"name\":\"Office Management VLAN\",\"vlan_id\":\"10\",\"subnet\":\"172.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.0.0/23\",\"mx_ip\":\"172.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":10},{\"name\":\"Office Wired Network\",\"vlan_id\":\"20\",\"subnet\":\"172.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.2.0/23\",\"mx_ip\":\"172.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":20},{\"name\":\"Office Wi-Fi Network\",\"vlan_id\":\"30\",\"subnet\":\"172.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.4.0/23\",\"mx_ip\":\"172.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":30},{\"name\":\"Office Wi-Fi Guest\",\"vlan_id\":\"40\",\"subnet\":\"172.28.6.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.6.0/23\",\"mx_ip\":\"172.28.6.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":40},{\"name\":\"Office Services\",\"vlan_id\":\"50\",\"subnet\":\"172.28.8.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.8.0/23\",\"mx_ip\":\"172.28.8.1\",\"origin\":\"any\"}],\"vpn_mode\":\"on\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":50},{\"name\":\"Office IoT\",\"vlan_id\":\"60\",\"subnet\":\"172.28.10.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.10.0/23\",\"mx_ip\":\"172.28.10.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":60},{\"name\":\"Office Printers VLAN\",\"vlan_id\":\"70\",\"subnet\":\"172.28.12.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"172.28.12.0/23\",\"mx_ip\":\"172.28.12.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":70},{\"name\":\"OT Management VLAN\",\"vlan_id\":\"100\",\"subnet\":\"10.28.0.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.0.0/23\",\"mx_ip\":\"10.28.0.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":100},{\"name\":\"OT Wired Network\",\"vlan_id\":\"110\",\"subnet\":\"10.28.2.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.2.0/23\",\"mx_ip\":\"10.28.2.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":110},{\"name\":\"OT Printers\",\"vlan_id\":\"120\",\"subnet\":\"10.28.4.0/23\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"10.28.4.0/23\",\"mx_ip\":\"10.28.4.1\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":120},{\"name\":\"BGP\",\"vlan_id\":\"200\",\"subnet\":\"198.19.0.64/30\",\"subnets\":[{\"ip_version\":4,\"type\":\"Inet\",\"subnet\":\"198.19.0.64/30\",\"mx_ip\":\"198.19.0.66\",\"origin\":\"any\"}],\"vpn_mode\":\"off\",\"entry_type\":\"vlan\",\"vpn_nat_enabled\":\"off\",\"vpn_nat_subnet\":\"10.0.0.0/8\",\"identifier\":200},{\"name\":\"Client VPN\",\"subnet\":\"17.28.20.0/24\",\"subnets\":[{\"ip_version\":4,\"subnet\":\"17.28.20.0/24\"}],\"vpn_mode\":\"on\",\"vpn_nat_subnet\":null,\"entry_type\":\"client_vpn\",\"vpn_nat_enabled\":\"off\",\"unremovable",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T19:34:17.934798Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 1 / 2",
+      "oldValue": "{\"Native VLAN\":100}",
+      "newValue": "{\"Native VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:24:31.849097Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 20",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:24:21.200392Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:23:04.644774Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Native VLAN\":100}",
+      "newValue": "{\"Native VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:22:52.727190Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 20",
+      "oldValue": "{\"Native VLAN\":100}",
+      "newValue": "{\"Native VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:16:34.628532Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:15:40.396733Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 20",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T18:15:02.684429Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 1 / 2",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-30T15:13:34.157669Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 22",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:33:39.091737Z",
+      "adminName": "William Chin",
+      "adminEmail": "wchin@mflex.com",
+      "adminId": "686235993220867788",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Client VPN settings",
+      "label": "User's list",
+      "oldValue": "[]",
+      "newValue": "[{\"User description\":\"William\",\"User email\":\"wmch@mflex.com\",\"Account type\":\"guest\",\"User authorized\":true,\"Authorized by\":\"William Chin wchin@mflex.com\",\"Expires at\":\"never\",\"User password\":\"password changed\"}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:33:39.090884Z",
+      "adminName": "William Chin",
+      "adminEmail": "wchin@mflex.com",
+      "adminId": "686235993220867788",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Client VPN settings",
+      "label": "User's list",
+      "oldValue": "{\"User description\":\"William Chin\",\"User email\":\"wchin@mflex.com\",\"Account type\":\"admin\",\"User authorized\":true,\"Authorized by\":\"William Chin wchin@mflex.com\",\"Expires at\":\"never\",\"User password\":\"password hidden\"}",
+      "newValue": "{\"User description\":\"William Chin\",\"User email\":\"wchin@mflex.com\",\"Account type\":\"admin\",\"User authorized\":false,\"User password\":\"password hidden\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:31:19.118083Z",
+      "adminName": "William Chin",
+      "adminEmail": "wchin@mflex.com",
+      "adminId": "686235993220867788",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Client VPN settings",
+      "label": "User's list",
+      "oldValue": "[]",
+      "newValue": "[]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:31:19.116339Z",
+      "adminName": "William Chin",
+      "adminEmail": "wchin@mflex.com",
+      "adminId": "686235993220867788",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Client VPN settings",
+      "label": "User's list",
+      "oldValue": "{\"User description\":\"William Chin\",\"User email\":\"wchin@mflex.com\",\"Account type\":\"admin\",\"User authorized\":false,\"User password\":\"password hidden\"}",
+      "newValue": "{\"User description\":\"William Chin\",\"User email\":\"wchin@mflex.com\",\"Account type\":\"admin\",\"User authorized\":true,\"Authorized by\":\"William Chin wchin@mflex.com\",\"Expires at\":\"never\",\"User password\":\"password hidden\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:24:04.477478Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:24:04.476732Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting allowed VLANs was changed with port: ",
+      "oldValue": "[\"all\"]",
+      "newValue": "[\"686235993221225951\"]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T17:13:18.789441Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 16",
+      "oldValue": "{\"VLAN\":20}",
+      "newValue": "{\"VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T07:24:15.587416Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 14",
+      "oldValue": "{\"Type\":\"trunk\",\"Native VLAN\":1,\"Allowed VLANs\":\"1-4094\"}",
+      "newValue": "{\"Type\":\"access\",\"VLAN\":20}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T07:23:29.639175Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 1 / 20",
+      "oldValue": "{\"Type\":\"trunk\",\"Native VLAN\":20}",
+      "newValue": "{\"Type\":\"access\",\"VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T07:23:11.400005Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 16",
+      "oldValue": "{\"Type\":\"trunk\",\"Native VLAN\":1}",
+      "newValue": "{\"Type\":\"access\",\"VLAN\":20}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T07:22:25.824935Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 1 / 20",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":20}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T04:26:32.743401Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T04:26:32.742351Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting native VLAN was changed with port: ",
+      "oldValue": "VLAN 1",
+      "newValue": "VLAN 100",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:07:52.783365Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Mis configured prefixes with ID: ",
+      "oldValue": "",
+      "newValue": "{}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:07:52.782440Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Vpn mode with ID: ",
+      "oldValue": "on",
+      "newValue": "off",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:03:16.515928Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "via API",
+      "label": "Update bgp",
+      "oldValue": "{\"enabled\":true,\"asNumber\":65203,\"ibgpHoldTimer\":90,\"neighbors\":[{\"ip\":\"198.19.0.65\",\"remoteAsNumber\":65202,\"allowTransit\":false,\"ebgpHoldTimer\":90,\"ebgpMultihop\":1,\"sourceInterface\":\"vlan200\",\"ttlSecurity\":{\"enabled\":false}}]}",
+      "newValue": "{\"enabled\":true,\"asNumber\":65202,\"ibgpHoldTimer\":90,\"neighbors\":[{\"ip\":\"198.19.0.65\",\"remoteAsNumber\":9929,\"allowTransit\":false,\"ebgpHoldTimer\":90,\"ebgpMultihop\":1,\"sourceInterface\":\"vlan200\",\"ttlSecurity\":{\"enabled\":false}}]}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.931139Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.930843Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting native VLAN was changed with port: ",
+      "oldValue": "VLAN 1",
+      "newValue": "VLAN 100",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.930557Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.930246Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.929847Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting native VLAN was changed with port: ",
+      "oldValue": "VLAN 1",
+      "newValue": "VLAN 100",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.929383Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T03:01:42.928602Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting native VLAN was changed with port: ",
+      "oldValue": "VLAN 1",
+      "newValue": "VLAN 100",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T02:58:50.268131Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 25",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T02:58:35.581847Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 25",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T02:58:21.930459Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 1 / 25",
+      "oldValue": "{\"Native VLAN\":1}",
+      "newValue": "{\"Native VLAN\":100}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-29T02:39:32.503093Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "via API",
+      "label": "Update bgp",
+      "oldValue": "{\"enabled\":true,\"asNumber\":65203,\"ibgpHoldTimer\":90,\"neighbors\":[{\"ip\":\"172.28.100.1\",\"remoteAsNumber\":65202,\"allowTransit\":false,\"ebgpHoldTimer\":90,\"ebgpMultihop\":1,\"sourceInterface\":\"wan2\",\"ttlSecurity\":{\"enabled\":false}}]}",
+      "newValue": "{\"enabled\":true,\"asNumber\":65203,\"ibgpHoldTimer\":90,\"neighbors\":[{\"ip\":\"198.19.0.65\",\"remoteAsNumber\":65202,\"allowTransit\":false,\"ebgpHoldTimer\":90,\"ebgpMultihop\":1,\"sourceInterface\":\"vlan200\",\"ttlSecurity\":{\"enabled\":false}}]}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-28T23:42:01.841984Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 14",
+      "oldValue": "{\"Native VLAN\":20}",
+      "newValue": "{\"Native VLAN\":1}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-28T21:13:11.531543Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": null,
+      "networkId": null,
+      "networkUrl": null,
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Administrators",
+      "label": "Create bulk action",
+      "oldValue": "",
+      "newValue": "[{\"id\":\"686235993220867788\",\"name\":\"William Chin\",\"email\":\"wchin@mflex.com\",\"authenticationMethod\":\"Email\",\"orgAccess\":\"full\",\"accountStatus\":\"unverified\",\"twoFactorAuthEnabled\":true,\"hasApiKey\":false,\"lastActive\":null,\"networks\":[],\"tags\":[]}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-27T21:11:28.456512Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 24",
+      "oldValue": "{\"Port\":\"enabled\",\"Port Profile\":\"Office Computer Port\"}",
+      "newValue": "{\"Port\":\"disabled\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-27T21:07:22.096026Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 21",
+      "oldValue": "{}",
+      "newValue": "{\"Port Profile\":\"Office Computer Port\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-27T00:14:01.713109Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Port Profile\":\"Office WiFi Trunk\"}",
+      "newValue": "{}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-26T23:57:12.326102Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Port Profile\":\"Office Computer Port\"}",
+      "newValue": "{\"Port Profile\":\"Office WiFi Trunk\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-26T20:48:20.103084Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 24",
+      "oldValue": "{\"Port Profile\":\"Office Management Access Port\"}",
+      "newValue": "{\"Port Profile\":\"Office Computer Port\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-26T20:06:42.345129Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 2 / 23",
+      "oldValue": "{\"Port Profile\":\"Office Printer Port\"}",
+      "newValue": "{\"Port Profile\":\"Office Computer Port\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.324107Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Prefix configs",
+      "oldValue": "",
+      "newValue": "[{\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan0\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}, {\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan1\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.323769Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Ipv6 enabled",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.323409Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Vpn mode",
+      "oldValue": "",
+      "newValue": "off",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.322899Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Id",
+      "oldValue": "",
+      "newValue": "21",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.322139Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Guid",
+      "oldValue": "",
+      "newValue": "21",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.320863Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN was created",
+      "oldValue": "",
+      "newValue": "",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.320179Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN uplink NAT Settings was changed",
+      "oldValue": "",
+      "newValue": "{\"uplink_1\"=>true, \"uplink_2\"=>true}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.319726Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN ID was changed",
+      "oldValue": "",
+      "newValue": "70",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.319245Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN MX IP was changed",
+      "oldValue": "",
+      "newValue": "172.28.12.1",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.318751Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN subnet was changed",
+      "oldValue": "",
+      "newValue": "172.28.12.0/23",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-20T19:47:25.317960Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN name was changed",
+      "oldValue": "",
+      "newValue": "Office Printers VLAN",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-15T23:17:11.341213Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting peer SGT capablility enabled with port: ",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-15T23:17:11.340575Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting native VLAN was changed with port: ",
+      "oldValue": "",
+      "newValue": "VLAN 1",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-15T23:17:11.339987Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per port VLAN setting type was changed with port: ",
+      "oldValue": "false",
+      "newValue": "true",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-15T23:17:11.339415Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting allowed VLANs was changed with port: ",
+      "oldValue": "",
+      "newValue": "[\"all\"]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-15T23:17:11.338641Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Per Port VLAN setting access VLAN was changed with port: ",
+      "oldValue": "686235993221225951",
+      "newValue": "686235993221670762",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.750922Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Prefix configs",
+      "oldValue": "",
+      "newValue": "[{\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan0\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}, {\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan1\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.750190Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Ipv6 enabled",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.749536Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Vpn mode",
+      "oldValue": "",
+      "newValue": "off",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.748672Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Id",
+      "oldValue": "",
+      "newValue": "20",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.747920Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Guid",
+      "oldValue": "",
+      "newValue": "20",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.746948Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN was created",
+      "oldValue": "",
+      "newValue": "",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.746417Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN uplink NAT Settings was changed",
+      "oldValue": "",
+      "newValue": "{\"uplink_1\"=>true, \"uplink_2\"=>true}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.745971Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN ID was changed",
+      "oldValue": "",
+      "newValue": "3",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.745146Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN MX IP was changed",
+      "oldValue": "",
+      "newValue": "192.168.0.1",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.744580Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN subnet was changed",
+      "oldValue": "",
+      "newValue": "192.168.0.0/24",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-13T19:32:19.743737Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN name was changed",
+      "oldValue": "",
+      "newValue": "Config VLAN2",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-08T02:53:40.971703Z",
+      "adminName": "Meraki Admin",
+      "adminEmail": null,
+      "adminId": null,
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Packet Capture",
+      "label": "Create capture",
+      "oldValue": "",
+      "newValue": "{\"captureId\":\"686235993236219985\",\"network\":{\"id\":\"L_686235993220607281\",\"name\":\"Aranda Tooling\"},\"devices\":[{\"name\":\"IDF 3\",\"serial\":\"Q4CF-QSCK-MCQD\"}],\"admin\":{\"id\":\"1648532\",\"name\":\"Meraki Support\"},\"client\":{\"id\":null,\"mac\":null},\"name\":\"Aranda Tooling - switch-IDF 3_IF-22\",\"startTs\":\"2026-01-08T02:53:40Z\",\"ports\":\"22\",\"status\":\"capturing\",\"errorMessage\":null,\"destination\":\"upload_to_cloud\",\"process\":\"manual\",\"details\":[],\"file\":{\"size\":null},\"duration\":120,\"notes\":\"\",\"filterExpression\":\"\",\"counts\":{\"packets\":{\"total\":null}},\"interface\":\"\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-08T02:53:31.103344Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 22",
+      "oldValue": "{\"Port\":\"disabled\"}",
+      "newValue": "{\"Port\":\"enabled\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-08T02:52:20.798825Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-s/n/2tUTabBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Switch ports",
+      "label": "IDF 3 / 22",
+      "oldValue": "{\"Port\":\"enabled\"}",
+      "newValue": "{\"Port\":\"disabled\"}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:23:38.945593Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Mis configured prefixes with ID: ",
+      "oldValue": "",
+      "newValue": "{}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:23:38.944348Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN ID was changed with ID: ",
+      "oldValue": "9",
+      "newValue": "2",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.724850Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Prefix configs",
+      "oldValue": "",
+      "newValue": "[{\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan0\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}, {\"is_auto_assigned\"=>true, \"is_disabled\"=>false, \"origin\"=>{\"type\"=>\"internet\", \"interfaces\"=>[\"wan1\"]}, \"prefix\"=>nil, \"router_ip\"=>nil}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.724085Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Ipv6 enabled",
+      "oldValue": "",
+      "newValue": "false",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.723689Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Vpn mode",
+      "oldValue": "",
+      "newValue": "off",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.723278Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Id",
+      "oldValue": "",
+      "newValue": "20",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.722889Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "Vlans Guid",
+      "oldValue": "",
+      "newValue": "20",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.722485Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN was created",
+      "oldValue": "",
+      "newValue": "",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.721990Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN uplink NAT Settings was changed",
+      "oldValue": "",
+      "newValue": "{\"uplink_1\"=>true, \"uplink_2\"=>true}",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.721565Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN ID was changed",
+      "oldValue": "",
+      "newValue": "9",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.721029Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN MX IP was changed",
+      "oldValue": "",
+      "newValue": "192.168.254.1",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.720593Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN subnet was changed",
+      "oldValue": "",
+      "newValue": "192.168.254.0/24",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-07T20:19:12.719847Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Addressing & VLANs",
+      "label": "VLAN name was changed",
+      "oldValue": "",
+      "newValue": "Config VLAN",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    },
+    {
+      "ts": "2026-01-06T18:53:09.127881Z",
+      "adminName": "Robby Boparai",
+      "adminEmail": "robbyb@us.dsbj.com",
+      "adminId": "1791761",
+      "networkName": "Aranda Tooling",
+      "networkId": "L_686235993220607281",
+      "networkUrl": "/Aranda-Tooling-a/n/hz6sNaBd/manage/usage/list",
+      "ssidName": null,
+      "ssidNumber": null,
+      "page": "Client VPN settings",
+      "label": "User's list",
+      "oldValue": "[]",
+      "newValue": "[{\"User description\":\"Amparo Batiste\",\"User email\":\"amparo.batiste@us.dsbj.com\",\"Account type\":\"guest\",\"User authorized\":true,\"Authorized by\":\"Robby Boparai robbyb@us.dsbj.com\",\"Expires at\":\"never\",\"User password\":\"password changed\"}]",
+      "client": {
+        "id": null,
+        "type": null
+      }
+    }
+  ]
+}

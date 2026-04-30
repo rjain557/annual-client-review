@@ -42,6 +42,7 @@ EXPECTED_SECTIONS = [
     "Executive Summary",
     "Network & Device Inventory",
     "Security Posture",
+    "Configuration Changes",
     "IDS/IPS & AMP Events",
     "Firewall & Network Activity",
     "Daily Trend",
@@ -89,16 +90,19 @@ def section_executive_summary(doc, payload: dict) -> None:
     cfg = payload["configuration"]
     sec = payload["security_events"]
     net = payload["network_events"]
+    chg = payload.get("config_changes") or {}
     blocked = (sec.get("by_blocked") or {}).get("blocked", 0) or 0
     alerted = (sec.get("by_blocked") or {}).get("alerted", 0) or 0
 
     # KPI strip
     brand.add_metric_card_row(doc, [
-        (fmt_int(cfg.get("network_count", 0)), "Networks", brand.CORE_BLUE),
-        (fmt_int(cfg.get("device_count", 0)),  "Devices",  brand.CORE_BLUE),
+        (fmt_int(cfg.get("network_count", 0)), "Networks",        brand.CORE_BLUE),
+        (fmt_int(cfg.get("device_count", 0)),  "Devices",         brand.CORE_BLUE),
         (fmt_int(sec.get("total", 0)),         "IDS/IPS events",
          status_color_for_security(sec.get("total", 0), blocked, alerted)),
         (fmt_int(net.get("total", 0)),         "Activity events", brand.TEAL),
+        (fmt_int(chg.get("total", 0)),         "Config changes",
+         brand.CORE_ORANGE if chg.get("total", 0) > 0 else brand.GREEN),
     ])
 
     # Status callout
@@ -204,6 +208,82 @@ def section_security_posture(doc, cfg: dict) -> None:
     # -> teal via "medium" match, "disabled" -> red.
     brand.styled_table(doc, headers, rows, col_widths=[1.8, 1.0, 0.8, 0.9, 1.0, 0.7, 0.7],
                        status_col=1)
+
+
+def section_config_changes(doc, chg: dict) -> None:
+    brand.add_section_header(doc, "Configuration Changes")
+
+    total = chg.get("total", 0)
+    n_admins = len(chg.get("by_admin") or [])
+    n_networks = len(chg.get("by_network") or [])
+
+    brand.add_metric_card_row(doc, [
+        (fmt_int(total),     "Total changes",      brand.CORE_BLUE if total == 0 else brand.CORE_ORANGE),
+        (fmt_int(n_admins),  "Admins active",      brand.CORE_BLUE),
+        (fmt_int(n_networks),"Networks affected",  brand.CORE_BLUE),
+    ])
+
+    if total == 0:
+        brand.add_callout_box(
+            doc,
+            "No configuration changes were recorded via the Meraki Dashboard "
+            "this month. The environment is stable and the documented baseline "
+            "is intact.",
+            accent_hex=brand.GREEN_HEX, bg_hex="EAF7EE",
+        )
+        return
+
+    brand.add_body(
+        doc,
+        f"{fmt_int(total)} Dashboard configuration changes were recorded "
+        f"across {fmt_int(n_networks)} network(s) by {fmt_int(n_admins)} "
+        f"administrator(s). The tables below identify who changed what and "
+        f"provide the full before/after detail for compliance review.",
+    )
+
+    if chg.get("by_admin"):
+        brand.add_body(doc, "Changes by administrator:", bold=True)
+        rows = [[e["admin"], fmt_int(e["count"])]
+                for e in (chg["by_admin"] or [])]
+        brand.styled_table(doc, ["Administrator", "Changes"], rows,
+                           col_widths=[4.5, 1.5])
+
+    if chg.get("by_network"):
+        brand.add_body(doc, "Changes by network:", bold=True)
+        rows = [[e["network"], fmt_int(e["count"])]
+                for e in (chg["by_network"] or [])]
+        brand.styled_table(doc, ["Network", "Changes"], rows,
+                           col_widths=[4.5, 1.5])
+
+    if chg.get("by_page"):
+        brand.add_body(doc, "Changes by configuration area:", bold=True)
+        rows = [[e["page"], fmt_int(e["count"])]
+                for e in (chg["by_page"] or [])]
+        brand.styled_table(doc, ["Configuration area", "Changes"], rows,
+                           col_widths=[4.5, 1.5])
+
+    recent = chg.get("recent") or []
+    if recent:
+        brand.add_body(doc, f"Change detail (most recent {len(recent)}):",
+                       bold=True)
+        rows = []
+        for c in recent:
+            ts_raw = c.get("ts") or ""
+            ts_short = ts_raw[:16].replace("T", " ") if ts_raw else "—"
+            admin = c.get("adminEmail") or c.get("adminName") or "—"
+            net = c.get("networkName") or c.get("networkId") or "—"
+            area = c.get("page") or "—"
+            label = c.get("label") or "—"
+            old_val = str(c.get("oldValue") or "—")[:60]
+            new_val = str(c.get("newValue") or "—")[:60]
+            rows.append([ts_short, admin, net, area, label,
+                         old_val, new_val])
+        brand.styled_table(
+            doc,
+            ["Timestamp", "Admin", "Network", "Area", "Label", "Old value", "New value"],
+            rows,
+            col_widths=[1.2, 1.4, 1.0, 0.9, 1.0, 1.25, 1.25],
+        )
 
 
 def section_security_events(doc, sec: dict) -> None:
@@ -348,6 +428,7 @@ def section_recommendations(doc, payload: dict) -> None:
 
     cfg = payload["configuration"]
     sec = payload["security_events"]
+    chg = payload.get("config_changes") or {}
 
     detect_only_networks = []
     no_amp_networks = []
@@ -394,6 +475,14 @@ def section_recommendations(doc, payload: dict) -> None:
             "is genuinely low-traffic. Consider running a controlled test "
             "(e.g., EICAR file download from an isolated workstation) to "
             "confirm the IDS/IPS pipeline end-to-end."
+        ))
+    if chg.get("total", 0) > 0:
+        recs.append((
+            "Review configuration changes: ",
+            f"{fmt_int(chg.get('total', 0))} Dashboard configuration change(s) "
+            "were recorded this period. See the Configuration Changes section "
+            "for full before/after detail. Verify each change was authorized "
+            "and documented in your change-management log.",
         ))
     if not recs:
         recs.append((
@@ -444,6 +533,7 @@ def build_report(payload: dict, out_path: Path) -> None:
     section_executive_summary(doc, payload)
     section_inventory(doc, payload["configuration"])
     section_security_posture(doc, payload["configuration"])
+    section_config_changes(doc, payload.get("config_changes") or {})
     section_security_events(doc, payload["security_events"])
     section_activity(doc, payload["network_events"])
     section_daily_trend(doc, payload["security_events"], payload["network_events"])

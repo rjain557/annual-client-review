@@ -1,6 +1,6 @@
 ---
 name: meraki-pull
-description: "Use when the user asks to pull Cisco Meraki data — IDS/IPS events, firewall activity logs, security events, configuration snapshots (firewall rules, VLANs, content filtering, traffic shaping, VPN, SSIDs, switch settings) — across all client organizations in the Technijian MSP Meraki dashboard. Handles auth from the OneDrive key vault, multi-org enumeration, license-gated 403 tolerance, and per-client folder output. Examples: \"pull meraki ids/ips for all clients\", \"daily meraki activity log refresh\", \"snapshot meraki firewall configuration\", \"refresh meraki data for VAF/BWH\"."
+description: "Use when the user asks to pull Cisco Meraki data — IDS/IPS events, firewall activity logs, security events, configuration snapshots (firewall rules, VLANs, content filtering, traffic shaping, VPN, SSIDs, switch settings), admin configuration change log (who changed what, before/after values), or versioned daily config backups — across all client organizations in the Technijian MSP Meraki dashboard. Handles auth from the OneDrive key vault, multi-org enumeration, license-gated 403 tolerance, and per-client folder output. Examples: \"pull meraki ids/ips for all clients\", \"daily meraki activity log refresh\", \"snapshot meraki firewall configuration\", \"pull meraki change log\", \"refresh meraki data for VAF/BWH\"."
 ---
 
 # Cisco Meraki Multi-Org Pull
@@ -37,11 +37,12 @@ the keys/meraki.md vault file (regex grabs the first 40-hex token under
 
 ```bash
 cd c:/VSCode/annual-client-review/annual-client-review-1/scripts/meraki
-python pull_all.py                        # last 24h events + full config snapshot
-python pull_all.py --days 7               # 7-day backfill for events
+python pull_all.py                        # last 24h events + config snapshot + change log
+python pull_all.py --days 7               # 7-day backfill for events and change log
 python pull_all.py --only VAF,BWH         # restrict by org slug
-python pull_all.py --skip-config          # events only
-python pull_all.py --skip-events          # snapshot only
+python pull_all.py --skip-config          # events + change log only (no snapshot)
+python pull_all.py --skip-events          # snapshot + change log only
+python pull_all.py --skip-change-log      # events + snapshot only (no change log)
 ```
 
 Per-component scripts can be run on their own:
@@ -50,7 +51,10 @@ Per-component scripts can be run on their own:
 python pull_security_events.py --days 7   # IDS/IPS + AMP, per-day files
 python pull_network_events.py             # firewall/VPN/DHCP activity log per network
 python pull_network_events.py --product-type wireless    # MR event log
-python pull_configuration.py              # full config snapshot, all orgs
+python pull_configuration.py              # full config snapshot + versioned history
+python pull_change_log.py                 # last 24h admin change log
+python pull_change_log.py --days 30       # backfill a full month
+python pull_change_log.py --since 2026-04-01 --until 2026-04-30
 ```
 
 ## Output structure
@@ -64,29 +68,25 @@ clients/<code>/meraki/
   org_meta.json
   networks.json
   devices.json
-  config_snapshot_at.json
+  config_snapshot_at.json           # latest snapshot metadata
   security_events/
-    2026-04-29.json                # daily IDS/IPS + AMP file
+    2026-04-29.json                 # daily IDS/IPS + AMP file
   network_events/
     <network-slug>/
-      2026-04-29.json              # firewall/VPN/DHCP activity log
-  networks/
+      2026-04-29.json               # firewall/VPN/DHCP activity log
+  networks/                         # latest config snapshot (overwritten daily)
     <network-slug>/
       meta.json
       firewall_l3.json firewall_l7.json firewall_inbound.json
-      firewall_cellular.json firewall_port_forwarding.json
-      firewall_1to1_nat.json firewall_1tomany_nat.json
-      security_intrusion.json      # IDS/IPS mode + ruleset
-      security_malware.json        # AMP config
-      content_filtering.json
-      traffic_shaping.json traffic_shaping_rules.json traffic_shaping_uplink_bw.json
-      vlans.json vpn_s2s.json static_routes.json
-      appliance_ports.json appliance_settings.json
-      wireless_ssids.json wireless_settings.json wireless_rf_profiles.json   # MR
-      switch_access_policies.json switch_qos_rules.json
-      switch_port_schedules.json switch_settings.json                         # MS
-      syslog_servers.json snmp.json alerts_settings.json
-      group_policies.json webhooks_http_servers.json
+      ...all 30 config endpoint files...
+  config_history/                   # versioned daily config backups
+    <YYYY-MM-DD>/
+      org_meta.json networks.json devices.json config_snapshot_at.json
+      networks/<network-slug>/<same 30 files as above>
+  change_log/                       # admin configuration change audit log
+    <YYYY-MM>.json                  # all Dashboard changes for that month
+                                    # fields: ts, adminName, adminEmail,
+                                    #   networkName, page, label, oldValue, newValue
   monthly/<YYYY-MM>.json            # aggregated summary (input to docx)
   reports/<Org Name> - Meraki Monthly Activity - <YYYY-MM>.docx
 
@@ -94,6 +94,7 @@ clients/_meraki_logs/
   security_events_pull_log.json
   network_events_pull_log.json
   configuration_pull_log.json
+  change_log_pull_log.json
   monthly_index.json
 ```
 
@@ -132,7 +133,12 @@ active device licenses. Skip silently; don't treat as auth failure.
 Pagination: org `security/events` uses Link `rel=next` headers; network
 `events` uses `pageEndAt` cursor (handled by `meraki_api.get_network_events`).
 
-### Configuration (point-in-time)
+### Configuration change audit log (time-bounded)
+| Endpoint | Purpose | Time params |
+|---|---|---|
+| `/organizations/{id}/configurationChanges` | **Admin change log** — who changed what via Dashboard/API/mobile; fields: `ts`, `adminName`, `adminEmail`, `networkName`, `page`, `label`, `oldValue`, `newValue` | `t0`, `t1` ISO **or** `timespan` seconds |
+
+### Configuration (point-in-time snapshot + versioned history)
 The endpoint sets are constants in `meraki_api.py`:
 - `APPLIANCE_CONFIG_ENDPOINTS` — 17 endpoints (firewall L3/L7/inbound/cellular,
   NAT 1:1 + 1:many, port forwards, IDS/IPS, AMP, content filtering, traffic
