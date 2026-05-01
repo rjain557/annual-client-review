@@ -1,0 +1,476 @@
+{
+  "run_at": "2026-05-01T17:38:28+00:00",
+  "run_date": "2026-01-20",
+  "window_start": "2026-01-19T13:00:00Z",
+  "window_end": "2026-01-20T13:00:00Z",
+  "lookback_hours": 24,
+  "partner_id": "c73e576d-f324-4d00-8834-8815bab742c9",
+  "tenants_total": 11,
+  "tenants_mapped": 9,
+  "tenants_unmapped": 1,
+  "tenants_ignored": 1,
+  "clients_pulled": 9,
+  "skipped_codes": [],
+  "totals": {
+    "firewalls": 9,
+    "firewalls_connected": 9,
+    "firewalls_suspended": 0,
+    "events_in_window": 0,
+    "alerts_total": 48,
+    "alerts_open": 48
+  },
+  "errors": [
+    {
+      "client": "JDH",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"11ae1b14-a8a6-42ef-af6b-b6e16bf88507\",\n    \"requestId\": \"4d3c2851-c87f-49b3-bff3-8b2ed0a40795\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "BWH",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"8b5e2b07-23d5-4d88-a020-0773371a5027\",\n    \"requestId\": \"e8808882-5444-4169-9a21-135f921df467\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "TALY",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"31b537f6-7e86-48ee-b111-030d81395c0d\",\n    \"requestId\": \"383885c3-86f1-481b-a9d9-adcb3e5757df\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "AFFG",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"c8e5ce0a-f89f-4f63-a279-c9636da8dd82\",\n    \"requestId\": \"caa5d30c-fc4b-44ff-91ca-a84dc53c79ce\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "KSS",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"9bd8140e-1e43-4e4f-8174-705cc26050a3\",\n    \"requestId\": \"0c902bb2-8cc8-4c29-b88a-327d792a2906\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "ANI",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"389e08db-b251-4397-9a29-11a27ae50d1f\",\n    \"requestId\": \"7196632e-dab5-4517-821f-2bb3fbb04bb5\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "VAF",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"f73000a9-32f0-4b5f-a7bf-ec4972c87663\",\n    \"requestId\": \"c08eae78-36e5-403d-91b0-f4fe516c4de7\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "ORX",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"df4e04dd-dc5f-443a-b7fe-7dc47a7a3780\",\n    \"requestId\": \"f10ce76e-78f2-4bca-b6f7-685b49bc6a21\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    },
+    {
+      "client": "B2I",
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"38067aa8-0581-4cb6-aada-77bef7008e5f\",\n    \"requestId\": \"9482607e-d65d-4101-a5fe-72ccbf269c46\",\n    \"message\": \"From date should fall within last"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "sophos_tenant_id": "13fe54af-2aef-4e6c-819c-9478e9b9e26c",
+      "sophos_tenant_name": "JDH Pacific",
+      "LocationCode": "JDH",
+      "Location_Name": "JDH Pacific",
+      "DirID": 5887,
+      "match_source": "name_exact",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 8,
+      "alerts_open": 8,
+      "alerts_by_severity": {
+        "high": 3,
+        "low": 5
+      },
+      "alerts_by_product": {
+        "firewall": 7,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"11ae1b14-a8a6-42ef-af6b-b6e16bf88507\",\n    \"requestId\": \"4d3c2851-c87f-49b3-bff3-8b2ed0a40795\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:22+00:00"
+    },
+    {
+      "sophos_tenant_id": "247a7250-de10-44e5-9b93-81a4b41e41c3",
+      "sophos_tenant_name": "Brandywine Homes",
+      "LocationCode": "BWH",
+      "Location_Name": "Brandywine Homes",
+      "DirID": 6245,
+      "match_source": "name_exact",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 3,
+      "alerts_open": 3,
+      "alerts_by_severity": {
+        "high": 1,
+        "low": 2
+      },
+      "alerts_by_product": {
+        "firewall": 2,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"8b5e2b07-23d5-4d88-a020-0773371a5027\",\n    \"requestId\": \"e8808882-5444-4169-9a21-135f921df467\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:22+00:00"
+    },
+    {
+      "sophos_tenant_id": "33a24334-3f98-4d7e-a87f-8e41258763b9",
+      "sophos_tenant_name": "Talley and Associates ",
+      "LocationCode": "TALY",
+      "Location_Name": "Talley & Associates",
+      "DirID": 7728,
+      "match_source": "name_exact",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "20.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 2,
+      "alerts_open": 2,
+      "alerts_by_severity": {
+        "high": 1,
+        "low": 1
+      },
+      "alerts_by_product": {
+        "firewall": 2
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"31b537f6-7e86-48ee-b111-030d81395c0d\",\n    \"requestId\": \"383885c3-86f1-481b-a9d9-adcb3e5757df\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:23+00:00"
+    },
+    {
+      "sophos_tenant_id": "79ef98f9-8530-4237-ade0-5cb97f846dea",
+      "sophos_tenant_name": "American Fundstars Financial Group LLC",
+      "LocationCode": "AFFG",
+      "Location_Name": "American Fundstars Financial Group LLC",
+      "DirID": 8141,
+      "match_source": "name_exact",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 0,
+      "firewalls_connected": 0,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {},
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 0,
+      "alerts_open": 0,
+      "alerts_by_severity": {},
+      "alerts_by_product": {},
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"c8e5ce0a-f89f-4f63-a279-c9636da8dd82\",\n    \"requestId\": \"caa5d30c-fc4b-44ff-91ca-a84dc53c79ce\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:24+00:00"
+    },
+    {
+      "sophos_tenant_id": "8564ef9e-333b-415d-bf3a-d0b269cc723a",
+      "sophos_tenant_name": "KSS",
+      "LocationCode": "KSS",
+      "Location_Name": "Kabuki Springs and Spa",
+      "DirID": 5110,
+      "match_source": "bare_code",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "21.5": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 12,
+      "alerts_open": 12,
+      "alerts_by_severity": {
+        "low": 8,
+        "high": 4
+      },
+      "alerts_by_product": {
+        "firewall": 12
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"9bd8140e-1e43-4e4f-8174-705cc26050a3\",\n    \"requestId\": \"0c902bb2-8cc8-4c29-b88a-327d792a2906\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:24+00:00"
+    },
+    {
+      "sophos_tenant_id": "b96a9bee-651b-469b-9b12-31e89991bae4",
+      "sophos_tenant_name": "ANI",
+      "LocationCode": "ANI",
+      "Location_Name": "Andersen Industries, Inc.",
+      "DirID": 13,
+      "match_source": "bare_code",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 7,
+      "alerts_open": 7,
+      "alerts_by_severity": {
+        "high": 2,
+        "low": 5
+      },
+      "alerts_by_product": {
+        "firewall": 6,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"389e08db-b251-4397-9a29-11a27ae50d1f\",\n    \"requestId\": \"7196632e-dab5-4517-821f-2bb3fbb04bb5\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:25+00:00"
+    },
+    {
+      "sophos_tenant_id": "bf8baf88-14a1-4712-9ba5-d72db4a538e2",
+      "sophos_tenant_name": "VAF",
+      "LocationCode": "VAF",
+      "Location_Name": "Via Auto Finance",
+      "DirID": 5941,
+      "match_source": "bare_code",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 7,
+      "alerts_open": 7,
+      "alerts_by_severity": {
+        "high": 3,
+        "low": 4
+      },
+      "alerts_by_product": {
+        "firewall": 6,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"f73000a9-32f0-4b5f-a7bf-ec4972c87663\",\n    \"requestId\": \"c08eae78-36e5-403d-91b0-f4fe516c4de7\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:25+00:00"
+    },
+    {
+      "sophos_tenant_id": "de552407-3492-410e-bea6-b78a77df265a",
+      "sophos_tenant_name": "OrthoXpress Distribution Inc.",
+      "LocationCode": "ORX",
+      "Location_Name": "Ortho Xpress",
+      "DirID": 108,
+      "match_source": "manual",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 2,
+      "firewalls_connected": 2,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1,
+        "21.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 7,
+      "alerts_open": 7,
+      "alerts_by_severity": {
+        "high": 3,
+        "low": 4
+      },
+      "alerts_by_product": {
+        "firewall": 6,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"df4e04dd-dc5f-443a-b7fe-7dc47a7a3780\",\n    \"requestId\": \"f10ce76e-78f2-4bca-b6f7-685b49bc6a21\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:26+00:00"
+    },
+    {
+      "sophos_tenant_id": "f6b7c7c0-2831-4314-9aa5-4d79b79d8d0f",
+      "sophos_tenant_name": "B2I",
+      "LocationCode": "B2I",
+      "Location_Name": "B2 Insurance",
+      "DirID": 19,
+      "match_source": "bare_code",
+      "dataRegion": "us01",
+      "window_start": "2026-01-19T13:00:00Z",
+      "window_end": "2026-01-20T13:00:00Z",
+      "firewalls_total": 1,
+      "firewalls_connected": 1,
+      "firewalls_suspended": 0,
+      "firewalls_by_firmware_major": {
+        "22.0": 1
+      },
+      "events_total": 0,
+      "events_by_group": {},
+      "events_by_type": {},
+      "events_by_severity": {},
+      "events_by_serial": {},
+      "alerts_total": 2,
+      "alerts_open": 2,
+      "alerts_by_severity": {
+        "high": 1,
+        "low": 1
+      },
+      "alerts_by_product": {
+        "firewall": 1,
+        "other": 1
+      },
+      "errors": [
+        {
+          "step": "events",
+          "status": 400,
+          "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"38067aa8-0581-4cb6-aada-77bef7008e5f\",\n    \"requestId\": \"9482607e-d65d-4101-a5fe-72ccbf269c46\",\n    \"message\": \"From date should fall within last"
+        }
+      ],
+      "dry_run": false,
+      "run_at": "2026-05-01T17:38:27+00:00"
+    }
+  ]
+}

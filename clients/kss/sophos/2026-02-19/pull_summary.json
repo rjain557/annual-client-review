@@ -1,0 +1,40 @@
+{
+  "sophos_tenant_id": "8564ef9e-333b-415d-bf3a-d0b269cc723a",
+  "sophos_tenant_name": "KSS",
+  "LocationCode": "KSS",
+  "Location_Name": "Kabuki Springs and Spa",
+  "DirID": 5110,
+  "match_source": "bare_code",
+  "dataRegion": "us01",
+  "window_start": "2026-02-18T13:00:00Z",
+  "window_end": "2026-02-19T13:00:00Z",
+  "firewalls_total": 1,
+  "firewalls_connected": 1,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "21.5": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 12,
+  "alerts_open": 12,
+  "alerts_by_severity": {
+    "low": 8,
+    "high": 4
+  },
+  "alerts_by_product": {
+    "firewall": 12
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"57d30df8-8512-453f-822b-738adee47db8\",\n    \"requestId\": \"09676620-eac7-4de0-a74c-3c691e22308c\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:42:08+00:00"
+}

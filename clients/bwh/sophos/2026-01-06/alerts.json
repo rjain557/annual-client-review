@@ -1,0 +1,86 @@
+[
+  {
+    "id": "e34ca5fd-9fb7-4725-ac3f-d7c1ebcade44",
+    "allowedActions": [
+      "acknowledge"
+    ],
+    "category": "connectivity",
+    "description": "Firewall has not contacted Sophos Central for the past 5 minutes",
+    "groupKey": "MTAsRXZlbnQ6OkZpcmV3YWxsOjpMb3N0Q29ubmVjdGlvblRvU29waG9zQ2VudHJhbCwxLA==",
+    "managedAgent": {
+      "id": "032902fe-3918-4f6f-8568-9abbff73bc26",
+      "type": "utm",
+      "name": "V010012FG8J8297"
+    },
+    "person": {},
+    "product": "firewall",
+    "raisedAt": "2026-02-19T08:27:03.764Z",
+    "severity": "high",
+    "tenant": {
+      "id": "247a7250-de10-44e5-9b93-81a4b41e41c3",
+      "name": "Brandywine Homes",
+      "dataRegion": "us01"
+    },
+    "type": "Event::Firewall::LostConnectionToSophosCentral",
+    "lastCorrelatedAt": "2026-02-19T08:27:03.700Z",
+    "updatedAt": "2026-02-19T08:27:03.764Z",
+    "eventCount": 1,
+    "status": "open"
+  },
+  {
+    "id": "a7a88a80-a4be-4475-96f7-00278486dd55",
+    "allowedActions": [
+      "acknowledge"
+    ],
+    "category": "connectivity",
+    "description": "Firewall connection to Sophos Central is restored",
+    "groupKey": "MTAsRXZlbnQ6OkZpcmV3YWxsOjpSZWNvbm5lY3RlZCwxLA==",
+    "managedAgent": {
+      "id": "032902fe-3918-4f6f-8568-9abbff73bc26",
+      "type": "utm",
+      "name": "V010012FG8J8297"
+    },
+    "person": {},
+    "product": "firewall",
+    "raisedAt": "2026-02-19T08:35:14.206Z",
+    "severity": "low",
+    "tenant": {
+      "id": "247a7250-de10-44e5-9b93-81a4b41e41c3",
+      "name": "Brandywine Homes",
+      "dataRegion": "us01"
+    },
+    "type": "Event::Firewall::Reconnected",
+    "lastCorrelatedAt": "2026-02-19T08:35:14.186Z",
+    "updatedAt": "2026-02-19T08:35:14.206Z",
+    "eventCount": 1,
+    "status": "open"
+  },
+  {
+    "id": "f850c1be-5767-4b71-b5e5-135c96f0ee01",
+    "allowedActions": [
+      "acknowledge"
+    ],
+    "category": "updating",
+    "description": "A firmware update has completed successfully, and the firewall is now ready to resume normal operation",
+    "groupKey": "MCxFdmVudDo6T3RoZXI6OkZpcmV3YWxsRmlybXdhcmVVcGRhdGVTdWNjZXNzZnVsbHlGaW5pc2hlZCwxLA==",
+    "managedAgent": {
+      "id": "032902fe-3918-4f6f-8568-9abbff73bc26",
+      "type": "utm",
+      "name": "V010012FG8J8297"
+    },
+    "person": {},
+    "product": "other",
+    "raisedAt": "2026-02-21T11:30:02.887Z",
+    "severity": "low",
+    "tenant": {
+      "id": "247a7250-de10-44e5-9b93-81a4b41e41c3",
+      "name": "Brandywine Homes",
+      "dataRegion": "us01"
+    },
+    "type": "Event::Other::FirewallFirmwareUpdateSuccessfullyFinished",
+    "lastCorrelatedAt": "2026-02-21T11:30:02.796Z",
+    "updatedAt": "2026-02-21T11:30:02.887Z",
+    "eventCount": 1,
+    "status": "open"
+  }
+]

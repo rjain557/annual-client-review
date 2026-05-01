@@ -1,0 +1,41 @@
+{
+  "sophos_tenant_id": "13fe54af-2aef-4e6c-819c-9478e9b9e26c",
+  "sophos_tenant_name": "JDH Pacific",
+  "LocationCode": "JDH",
+  "Location_Name": "JDH Pacific",
+  "DirID": 5887,
+  "match_source": "name_exact",
+  "dataRegion": "us01",
+  "window_start": "2026-03-27T13:00:00Z",
+  "window_end": "2026-03-28T13:00:00Z",
+  "firewalls_total": 1,
+  "firewalls_connected": 1,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "22.0": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 8,
+  "alerts_open": 8,
+  "alerts_by_severity": {
+    "high": 3,
+    "low": 5
+  },
+  "alerts_by_product": {
+    "firewall": 7,
+    "other": 1
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"16ecb08a-0737-4b09-b0f0-a3c7c2304727\",\n    \"requestId\": \"281b9626-1b4f-4fcf-bccd-fb3d29e3e038\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:46:41+00:00"
+}

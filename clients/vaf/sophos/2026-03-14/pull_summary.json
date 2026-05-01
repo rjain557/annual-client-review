@@ -1,0 +1,41 @@
+{
+  "sophos_tenant_id": "bf8baf88-14a1-4712-9ba5-d72db4a538e2",
+  "sophos_tenant_name": "VAF",
+  "LocationCode": "VAF",
+  "Location_Name": "Via Auto Finance",
+  "DirID": 5941,
+  "match_source": "bare_code",
+  "dataRegion": "us01",
+  "window_start": "2026-03-13T13:00:00Z",
+  "window_end": "2026-03-14T13:00:00Z",
+  "firewalls_total": 1,
+  "firewalls_connected": 1,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "22.0": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 7,
+  "alerts_open": 7,
+  "alerts_by_severity": {
+    "high": 3,
+    "low": 4
+  },
+  "alerts_by_product": {
+    "firewall": 6,
+    "other": 1
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"b2ab771e-92e2-453b-836e-00622db4e052\",\n    \"requestId\": \"52815cd5-2450-47e6-a53a-152127cdfbd5\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:45:07+00:00"
+}

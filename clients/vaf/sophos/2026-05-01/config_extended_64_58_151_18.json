@@ -1,0 +1,3436 @@
+{
+  "code": "vaf",
+  "hostname": "VAF-HQ-FW-01",
+  "wan_ip": "64.58.151.18",
+  "port": 4444,
+  "pulled_at": "2026-05-01T17:46:54.563784+00:00",
+  "sections": {
+    "interfaces": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "Interface": [
+        {
+          "IPv4Configuration": "Enable",
+          "IPv6Configuration": "Disable",
+          "Hardware": "PortA",
+          "Name": "PortA",
+          "InterfaceStatus": "ON",
+          "NetworkZone": "LAN",
+          "IPv4Assignment": "Static",
+          "IPv6Assignment": "",
+          "DHCPRapidCommit": "Disable",
+          "InterfaceSpeed": "Auto Negotiate",
+          "AutoNegotiation": "Enable",
+          "FEC": "Off",
+          "BreakoutMembers": "0",
+          "BreakoutSource": "",
+          "MTU": "1500",
+          "MSS": {
+            "OverrideMSS": "Disable",
+            "MSSValue": "1460"
+          },
+          "Status": "Connected, 10000 Mbps - Full Duplex, FEC off",
+          "MACAddress": "Default",
+          "IPAddress": "10.254.254.2",
+          "Netmask": "255.255.255.0"
+        },
+        {
+          "IPv4Configuration": "Enable",
+          "IPv6Configuration": "Disable",
+          "Hardware": "PortB",
+          "Name": "PortB",
+          "InterfaceStatus": "ON",
+          "NetworkZone": "WAN",
+          "IPv4Assignment": "Static",
+          "IPv6Assignment": "",
+          "DHCPRapidCommit": "Disable",
+          "InterfaceSpeed": "Auto Negotiate",
+          "AutoNegotiation": "Enable",
+          "FEC": "Off",
+          "BreakoutMembers": "0",
+          "BreakoutSource": "",
+          "MTU": "1500",
+          "MSS": {
+            "OverrideMSS": "Disable",
+            "MSSValue": "1460"
+          },
+          "Status": "Connected, 1000 Mbps - Full Duplex, FEC off",
+          "MACAddress": "Default",
+          "IPAddress": "64.58.151.18",
+          "Netmask": "255.255.255.248",
+          "GatewayName": "COX-Filber",
+          "GatewayIP": "64.58.151.17"
+        }
+      ]
+    },
+    "vlans": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "VLAN": {
+        "Status": "No. of records Zero."
+      }
+    },
+    "zones": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "Zone": [
+        {
+          "Name": "LAN",
+          "Type": "LAN",
+          "Description": "",
+          "ApplianceAccess": {
+            "AdminServices": {
+              "HTTPS": "Enable",
+              "SSH": "Enable"
+            },
+            "AuthenticationServices": {
+              "ClientAuthentication": "Enable",
+              "CaptivePortal": "Enable",
+              "RadiusSSO": "Enable",
+              "ChromebookSSO": "Enable"
+            },
+            "NetworkServices": {
+              "DNS": "Enable",
+              "Ping": "Enable"
+            },
+            "OtherServices": {
+              "WebProxy": "Enable",
+              "UserPortal": "Enable",
+              "WirelessProtection": "Enable",
+              "SMTPRelay": "Enable",
+              "SNMP": "Enable"
+            },
+            "VPNServices": {
+              "SSLVPN": "Enable"
+            }
+          }
+        },
+        {
+          "Name": "WAN",
+          "Type": "WAN",
+          "Description": ""
+        },
+        {
+          "Name": "DMZ",
+          "Type": "DMZ",
+          "Description": "",
+          "ApplianceAccess": {
+            "OtherServices": {
+              "UserPortal": "Enable",
+              "SNMP": "Enable"
+            },
+            "VPNServices": {
+              "SSLVPN": "Enable"
+            }
+          }
+        },
+        {
+          "Name": "LOCAL",
+          "Type": "LOCAL",
+          "Description": ""
+        },
+        {
+          "Name": "VPN",
+          "Type": "VPN",
+          "Description": "",
+          "ApplianceAccess": {
+            "OtherServices": {
+              "SNMP": "Enable"
+            }
+          }
+        },
+        {
+          "Name": "Discover",
+          "Type": "Discover",
+          "Description": ""
+        },
+        {
+          "Name": "WiFi",
+          "Type": "LAN",
+          "Description": "",
+          "ApplianceAccess": {
+            "AdminServices": {
+              "HTTPS": "Enable",
+              "SSH": "Enable"
+            },
+            "AuthenticationServices": {
+              "ClientAuthentication": "Enable",
+              "CaptivePortal": "Enable",
+              "RadiusSSO": "Enable",
+              "ChromebookSSO": "Enable"
+            },
+            "NetworkServices": {
+              "DNS": "Enable",
+              "Ping": "Enable"
+            },
+            "OtherServices": {
+              "WebProxy": "Enable",
+              "UserPortal": "Enable",
+              "WirelessProtection": "Enable",
+              "SMTPRelay": "Enable",
+              "SNMP": "Enable"
+            },
+            "VPNServices": {
+              "SSLVPN": "Enable"
+            }
+          }
+        }
+      ]
+    },
+    "static_routes": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "UnicastRoute": {
+        "Status": "No. of records Zero."
+      }
+    },
+    "dhcp_server": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "DHCPServer": {
+        "Name": "GuestAccess_DHCP",
+        "Status": "1",
+        "Interface": "GuestAP",
+        "IPLease": {
+          "IP": "10.255.0.2-10.255.0.254"
+        },
+        "ConflictDetection": "Disable",
+        "LeaseForRelay": "Disable",
+        "SubnetMask": "255.255.255.0",
+        "DomainName": "",
+        "DefaultLeaseTime": "1440",
+        "MaxLeaseTime": "2880",
+        "UseApplianceDNSSettings": "Disable",
+        "PrimaryDNSServer": "10.255.0.1",
+        "SecondaryDNSServer": "",
+        "PrimaryWINSServer": "",
+        "SecondaryWINSServer": "",
+        "BootServer": "",
+        "BootFile": "",
+        "Gateway": "10.255.0.1",
+        "UseInterfaceIPasGateway": "UseInterfaceIPAsGateway"
+      }
+    },
+    "dns": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "DNS": {
+        "IPv4Settings": {
+          "ObtainDNSFrom": "Static",
+          "DNSIPList": {
+            "DNS1": "4.2.2.4",
+            "DNS2": "8.8.8.8",
+            "DNS3": ""
+          }
+        },
+        "IPv6Settings": {
+          "ObtainDNSFrom": "Static",
+          "DNSIPList": {
+            "DNS1": "",
+            "DNS2": "",
+            "DNS3": ""
+          }
+        },
+        "DNSQueryConfiguration": "ChooseServerBasedOnIncomingRequestsRecordType"
+      }
+    },
+    "firewall_rules": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "FirewallRule": [
+        {
+          "Name": "[example] Traffic to Internal Zones",
+          "Description": "A disabled Firewall rule with the destination zone as LAN, WiFi, VPN or DMZ . Such rules would be added to Traffic to Internal Zones group on the first match basis if user selects automatic grouping option.",
+          "IPFamily": "IPv4",
+          "Status": "Disable",
+          "Position": "Top",
+          "PolicyType": "User",
+          "UserPolicy": {
+            "Action": "Drop",
+            "LogTraffic": "Enable",
+            "DestinationZones": {
+              "Zone": [
+                "LAN",
+                "DMZ",
+                "WiFi",
+                "VPN"
+              ]
+            },
+            "Schedule": "All The Time",
+            "SkipLocalDestined": "Disable",
+            "MatchIdentity": "Enable",
+            "DataAccounting": "Disable",
+            "ShowCaptivePortal": "Enable"
+          }
+        },
+        {
+          "Name": "[example] Traffic to WAN",
+          "Description": "A disabled Firewall rule with the destination zone as WAN. Such rules would be added to Traffic to WAN group on the first match basis if user selects automatic grouping option.",
+          "IPFamily": "IPv4",
+          "Status": "Disable",
+          "Position": "After",
+          "PolicyType": "Network",
+          "After": {
+            "Name": "[example] Traffic to Internal Zones"
+          },
+          "NetworkPolicy": {
+            "Action": "Drop",
+            "LogTraffic": "Enable",
+            "SkipLocalDestined": "Disable",
+            "DestinationZones": {
+              "Zone": "WAN"
+            },
+            "Schedule": "All The Time"
+          }
+        },
+        {
+          "Name": "[example] Traffic to DMZ",
+          "Description": "A disabled Firewall rule with the destination zone as DMZ. Such rules would be added to Traffic to DMZ group on the first match basis if user selects automatic grouping option.",
+          "IPFamily": "IPv4",
+          "Status": "Disable",
+          "Position": "After",
+          "PolicyType": "User",
+          "After": {
+            "Name": "[example] Traffic to WAN"
+          },
+          "UserPolicy": {
+            "Action": "Drop",
+            "LogTraffic": "Enable",
+            "DestinationZones": {
+              "Zone": "DMZ"
+            },
+            "Schedule": "All The Time",
+            "SkipLocalDestined": "Disable",
+            "MatchIdentity": "Enable",
+            "DataAccounting": "Disable",
+            "ShowCaptivePortal": "Enable"
+          }
+        },
+        {
+          "Name": "Auto added firewall policy for MTA",
+          "Description": "This rule was added automatically by SFOS MTA. However you could edit this policy based on network requirement.",
+          "IPFamily": "IPv4",
+          "Status": "Enable",
+          "Position": "After",
+          "PolicyType": "Network",
+          "After": {
+            "Name": "[example] Traffic to DMZ"
+          },
+          "NetworkPolicy": {
+            "Action": "Accept",
+            "LogTraffic": "Disable",
+            "SkipLocalDestined": "Disable",
+            "Schedule": "All The Time",
+            "Services": {
+              "Service": [
+                "SMTP",
+                "SMTP(S)"
+              ]
+            },
+            "DSCPMarking": "-1",
+            "WebFilter": "None",
+            "WebCategoryBaseQoSPolicy": "",
+            "BlockQuickQuic": "Disable",
+            "ScanVirus": "Disable",
+            "ZeroDayProtection": "Disable",
+            "ProxyMode": "Disable",
+            "DecryptHTTPS": "Disable",
+            "ApplicationControl": "None",
+            "ApplicationBaseQoSPolicy": "",
+            "IntrusionPrevention": "None",
+            "TrafficShappingPolicy": "None",
+            "ScanSMTP": "Enable",
+            "ScanSMTPS": "Enable",
+            "ScanIMAP": "Disable",
+            "ScanIMAPS": "Disable",
+            "ScanPOP3": "Disable",
+            "ScanPOP3S": "Disable",
+            "ScanFTP": "Disable",
+            "SourceSecurityHeartbeat": "Disable",
+            "MinimumSourceHBPermitted": "No Restriction",
+            "DestSecurityHeartbeat": "Disable",
+            "MinimumDestinationHBPermitted": "No Restriction"
+          }
+        },
+        {
+          "Name": "#Default_Network_Policy",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "Status": "Enable",
+          "Position": "After",
+          "PolicyType": "Network",
+          "After": {
+            "Name": "Auto added firewall policy for MTA"
+          },
+          "NetworkPolicy": {
+            "Action": "Accept",
+            "LogTraffic": "Disable",
+            "SkipLocalDestined": "Disable",
+            "SourceZones": {
+              "Zone": "LAN"
+            },
+            "DestinationZones": {
+              "Zone": "WAN"
+            },
+            "Schedule": "All The Time",
+            "DSCPMarking": "-1",
+            "WebFilter": "None",
+            "WebCategoryBaseQoSPolicy": "",
+            "BlockQuickQuic": "Disable",
+            "ScanVirus": "Disable",
+            "ZeroDayProtection": "Disable",
+            "ProxyMode": "Disable",
+            "DecryptHTTPS": "Disable",
+            "ApplicationControl": "None",
+            "ApplicationBaseQoSPolicy": "",
+            "IntrusionPrevention": "None",
+            "TrafficShappingPolicy": "None",
+            "ScanSMTP": "Disable",
+            "ScanSMTPS": "Disable",
+            "ScanIMAP": "Disable",
+            "ScanIMAPS": "Disable",
+            "ScanPOP3": "Disable",
+            "ScanPOP3S": "Disable",
+            "ScanFTP": "Disable",
+            "SourceSecurityHeartbeat": "Disable",
+            "MinimumSourceHBPermitted": "No Restriction",
+            "DestSecurityHeartbeat": "Disable",
+            "MinimumDestinationHBPermitted": "No Restriction"
+          }
+        }
+      ]
+    },
+    "nat_rules": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "NATRule": [
+        {
+          "Name": "#NAT_Default_Network_Policy",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "Status": "Enable",
+          "Position": "Top",
+          "LinkedFirewallrule": "#Default_Network_Policy",
+          "TranslatedDestination": "Original",
+          "TranslatedService": "Original",
+          "OverrideInterfaceNATPolicy": "Disable",
+          "TranslatedSource": "MASQ"
+        },
+        {
+          "Name": "Auto added NAT rule for MTA",
+          "Description": "This rule was added automatically by SFOS MTA.",
+          "IPFamily": "IPv4",
+          "Status": "Enable",
+          "Position": "After",
+          "LinkedFirewallrule": "Auto added firewall policy for MTA",
+          "TranslatedDestination": "Original",
+          "TranslatedService": "Original",
+          "OverrideInterfaceNATPolicy": "Disable",
+          "After": {
+            "Name": "#NAT_Default_Network_Policy"
+          },
+          "TranslatedSource": "MASQ"
+        },
+        {
+          "Name": "Default SNAT IPv4",
+          "Description": "Auto created IPv4 SNAT MASQ rule for traffic from \"ANY\" inbound interface to WAN outbound interface. Updated automatically with WAN interface changes.",
+          "IPFamily": "IPv4",
+          "Status": "Enable",
+          "Position": "After",
+          "LinkedFirewallrule": "None",
+          "TranslatedDestination": "Original",
+          "TranslatedService": "Original",
+          "OutboundInterfaces": {
+            "Interface": "PortB"
+          },
+          "OverrideInterfaceNATPolicy": "Disable",
+          "After": {
+            "Name": "Auto added NAT rule for MTA"
+          },
+          "TranslatedSource": "MASQ"
+        }
+      ]
+    },
+    "ips_policy": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "IPSPolicy": [
+        {
+          "Name": "generalpolicy",
+          "Description": "A General Policy"
+        },
+        {
+          "Name": "lantowan_strict",
+          "Description": "A Strict policy for LAN to WAN Traffic"
+        },
+        {
+          "Name": "lantowan_general",
+          "Description": "A General policy for LAN to WAN Traffic"
+        },
+        {
+          "Name": "dmzpolicy",
+          "Description": "A General policy to scan traffic flowing to DMZ"
+        },
+        {
+          "Name": "WAN TO DMZ",
+          "Description": "A default IPS policy template to scan the traffic flowing from WAN to DMZ; Primarily intended to secure server(s) hosted in the DMZ"
+        },
+        {
+          "Name": "WAN TO LAN",
+          "Description": "A default IPS policy template to scan the traffic flowing from WAN to LAN; Primarily intended to secure server(s) hosted in the LAN"
+        },
+        {
+          "Name": "DMZ TO LAN",
+          "Description": "A default IPS policy template to scan the traffic flowing from DMZ to LAN; Primarily intended to secure server(s) hosted in the LAN zone"
+        },
+        {
+          "Name": "DMZ TO WAN",
+          "Description": "A default IPS policy template to scan the traffic flowing from DMZ to WAN; Primarily intended to secure the DMZ-based client(s)"
+        },
+        {
+          "Name": "LAN TO DMZ",
+          "Description": "A default IPS policy template to scan the traffic flowing from LAN to DMZ; Primarily intended to secure the LAN-based client(s) and DMZ-based server(s)"
+        },
+        {
+          "Name": "LAN TO WAN",
+          "Description": "A default IPS policy template to scan the traffic flowing from LAN to WAN; Primarily intended to secure LAN-based client(s)"
+        }
+      ]
+    },
+    "web_filter": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "WebFilterPolicy": [
+        {
+          "Name": "No Web Mail or Chat",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to web mail and online chat sites",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Web E-Mail",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Online Chat",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "No Web Mail",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to web mail sites",
+          "RuleList": {
+            "Rule": {
+              "CategoryList": {
+                "Category": {
+                  "ID": "Web E-Mail",
+                  "type": "WebCategory"
+                }
+              },
+              "HTTPAction": "Deny",
+              "HTTPSAction": "Deny",
+              "FollowHTTPAction": "1",
+              "ExceptionList": {
+                "FileTypeCategory": ""
+              },
+              "Schedule": "All The Time",
+              "PolicyRuleEnabled": "1",
+              "CCLRuleEnabled": "0"
+            }
+          }
+        },
+        {
+          "Name": "No Online Chat",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to online chat sites",
+          "RuleList": {
+            "Rule": {
+              "CategoryList": {
+                "Category": {
+                  "ID": "Online Chat",
+                  "type": "WebCategory"
+                }
+              },
+              "HTTPAction": "Deny",
+              "HTTPSAction": "Deny",
+              "FollowHTTPAction": "1",
+              "ExceptionList": {
+                "FileTypeCategory": ""
+              },
+              "Schedule": "All The Time",
+              "PolicyRuleEnabled": "1",
+              "CCLRuleEnabled": "0"
+            }
+          }
+        },
+        {
+          "Name": "No web uploads",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Restrict users from uploading content to any site",
+          "RuleList": {
+            "Rule": {
+              "CategoryList": {
+                "Category": {
+                  "ID": "HTTPUpload",
+                  "type": "DynamicCategory"
+                }
+              },
+              "HTTPAction": "Deny",
+              "HTTPSAction": "Deny",
+              "FollowHTTPAction": "1",
+              "ExceptionList": {
+                "FileTypeCategory": ""
+              },
+              "Schedule": "All The Time",
+              "PolicyRuleEnabled": "1",
+              "CCLRuleEnabled": "0"
+            }
+          }
+        },
+        {
+          "Name": "Default Workplace Policy",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to categories most commonly unwanted in professional environments",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Weapons",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Extreme",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Phishing & Fraud",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Militancy & Extremist",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Gambling",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Criminal Activity",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Pro-Suicide & Self-Harm",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Intellectual Piracy",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Marijuana",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Controlled substances",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Legal highs",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Hunting & Fishing",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Anonymizers",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Sexually Explicit",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Nudity",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "No Explicit Content",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to sexually explicit sites",
+          "RuleList": {
+            "Rule": {
+              "CategoryList": {
+                "Category": {
+                  "ID": "Sexually Explicit",
+                  "type": "WebCategory"
+                }
+              },
+              "HTTPAction": "Deny",
+              "HTTPSAction": "Deny",
+              "FollowHTTPAction": "1",
+              "ExceptionList": {
+                "FileTypeCategory": ""
+              },
+              "Schedule": "All The Time",
+              "PolicyRuleEnabled": "1",
+              "CCLRuleEnabled": "0"
+            }
+          }
+        },
+        {
+          "Name": "No Ads or Explicit Content",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to advertisements and sexually explicit sites",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Sexually Explicit",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Advertisements",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "No Games Ads or Explicit Content",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny access to games, advertisements, and sexually explicit sites",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Sexually Explicit",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Games",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Advertisements",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Default Policy",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "A typical starter policy with options suitable for many organizations",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Blocked URLs for Default Policy",
+                    "type": "URLGroup"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": [
+                    {
+                      "ID": "Risky Downloads",
+                      "type": "UserActivity"
+                    },
+                    {
+                      "ID": "Suspicious",
+                      "type": "UserActivity"
+                    }
+                  ]
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Nudity and Adult Content",
+                    "type": "UserActivity"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "0",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Not Suitable for the Office",
+                    "type": "UserActivity"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "0",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Bandwidth-heavy Browsing",
+                    "type": "UserActivity"
+                  }
+                },
+                "HTTPAction": "Warn",
+                "HTTPSAction": "Warn",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "0",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Unproductive Browsing",
+                    "type": "UserActivity"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "Work hours (5 Day week)",
+                "PolicyRuleEnabled": "0",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Not Suitable for Schools",
+                    "type": "UserActivity"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "0",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Allow All",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Unrestricted web access"
+        },
+        {
+          "Name": "Deny All",
+          "DefaultAction": "Deny",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "0",
+          "EnforceSafeSearch": "0",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "All user web activity will be blocked"
+        },
+        {
+          "Name": "CIPA Compliance",
+          "DefaultAction": "Allow",
+          "EnableReporting": "Enable",
+          "DownloadFileSizeRestriction": "0",
+          "DownloadFileSizeRestrictionEnabled": "0",
+          "GoogAppDomainList": "",
+          "GoogAppDomainListEnabled": "0",
+          "YoutubeFilterIsStrict": "0",
+          "YoutubeFilterEnabled": "1",
+          "EnforceSafeSearch": "1",
+          "EnforceImageLicensing": "0",
+          "XFFEnabled": "0",
+          "Office365TenantsList": "",
+          "Office365DirectoryId": "",
+          "Office365Enabled": "0",
+          "QuotaLimit": "60",
+          "Description": "Deny categories necessary for compliance with the Children's Internet Protection Act",
+          "RuleList": {
+            "Rule": [
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Extreme",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Weapons",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Anonymizers",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Swimwear & Lingerie",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Sexually Explicit",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Phishing & Fraud",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Nudity",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Militancy & Extremist",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Gambling",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Controlled substances",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Marijuana",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Intellectual Piracy",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Hunting & Fishing",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Legal highs",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Personals & Dating",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Social Networking",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Pro-Suicide & Self-Harm",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Criminal Activity",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Alcohol & Tobacco",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Sexually Explicit",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Intolerance & Hate",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Extreme",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Image Search",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Spam URLs",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Video hosting",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Plagiarism",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Live audio",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              },
+              {
+                "CategoryList": {
+                  "Category": {
+                    "ID": "Live video",
+                    "type": "WebCategory"
+                  }
+                },
+                "HTTPAction": "Deny",
+                "HTTPSAction": "Deny",
+                "FollowHTTPAction": "1",
+                "ExceptionList": {
+                  "FileTypeCategory": ""
+                },
+                "Schedule": "All The Time",
+                "PolicyRuleEnabled": "1",
+                "CCLRuleEnabled": "0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ssl_tls_inspection": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "SSLTLSInspectionRule": {
+        "Name": "Exclusions by website or category",
+        "IsDefault": "Yes",
+        "Description": "",
+        "Enable": "Yes",
+        "LogConnections": "Enable",
+        "MoveTo": {
+          "Name": "",
+          "OrderBy": "After"
+        },
+        "SourceZones": {
+          "Zone": "Any"
+        },
+        "SourceNetworks": {
+          "Network": "Any"
+        },
+        "Identity": {
+          "Members": "Anybody"
+        },
+        "DestinationZones": {
+          "Zone": "Any"
+        },
+        "DestinationNetworks": {
+          "Network": "Any"
+        },
+        "Services": {
+          "Service": "Any"
+        },
+        "Websites": {
+          "Activity": [
+            {
+              "Name": "Local TLS exclusion list",
+              "Type": "URL Group"
+            },
+            {
+              "Name": "Managed TLS exclusion list",
+              "Type": "URL Group"
+            }
+          ]
+        },
+        "DecryptAction": "Do not decrypt",
+        "DecryptionProfile": "Maximum compatibility"
+      }
+    },
+    "network_objects": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "IPHost": [
+        {
+          "Name": "##ALL_RW",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "##ALL_IPSEC_RW",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "##ALL_SSLVPN_RW",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "##ALL_RW6",
+          "Description": "",
+          "IPFamily": "IPv6",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "##ALL_SSLVPN_RW6",
+          "Description": "",
+          "IPFamily": "IPv6",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "##ALL_IPSEC_RW6",
+          "Description": "",
+          "IPFamily": "IPv6",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "SecurityHeartbeat_over_VPN",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IP",
+          "IPAddress": "52.5.76.173"
+        },
+        {
+          "Name": "Internet IPv4 (1-9)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "1.0.0.0",
+          "EndIPAddress": "9.255.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (11-126)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "11.0.0.0",
+          "EndIPAddress": "126.255.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (169-172)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "169.255.0.0",
+          "EndIPAddress": "172.15.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (192-192.88)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "192.0.3.0",
+          "EndIPAddress": "192.88.98.255"
+        },
+        {
+          "Name": "Internet IPv4 (192.88-192.167)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "192.88.100.0",
+          "EndIPAddress": "192.167.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (192.169-198.17)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "192.169.0.0",
+          "EndIPAddress": "198.17.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (198.20-198.51)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "198.20.0.0",
+          "EndIPAddress": "198.51.99.255"
+        },
+        {
+          "Name": "Internet IPv4 (198.51-203.0)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "198.51.101.0",
+          "EndIPAddress": "203.0.112.255"
+        },
+        {
+          "Name": "Internet IPv4 (203.0-223)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "203.0.114.1",
+          "EndIPAddress": "223.255.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (128-169)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "128.0.0.0",
+          "EndIPAddress": "169.253.255.255"
+        },
+        {
+          "Name": "Internet IPv4 (192-192.0)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "192.0.1.0",
+          "EndIPAddress": "192.0.1.255"
+        },
+        {
+          "Name": "Internet IPv4 (172-191)",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IPRange",
+          "HostGroupList": {
+            "HostGroup": "Internet IPv4 group"
+          },
+          "StartIPAddress": "172.32.0.0",
+          "EndIPAddress": "191.255.255.255"
+        },
+        {
+          "Name": "#PortB",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "#PortA",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "System Host"
+        },
+        {
+          "Name": "DC-Subnet-1",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "Network",
+          "IPAddress": "66.81.19.0",
+          "Subnet": "255.255.255.128"
+        },
+        {
+          "Name": "DC-Subnet-2",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "Network",
+          "IPAddress": "66.81.18.192",
+          "Subnet": "255.255.255.240"
+        },
+        {
+          "Name": "Technijian-HQ",
+          "Description": "",
+          "IPFamily": "IPv4",
+          "HostType": "IP",
+          "IPAddress": "64.58.160.218"
+        }
+      ]
+    },
+    "host_groups": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "IPHostGroup": {
+        "Name": "Internet IPv4 group",
+        "Description": "Unreserved public IP addresses",
+        "HostList": {
+          "Host": [
+            "Internet IPv4 (1-9)",
+            "Internet IPv4 (11-126)",
+            "Internet IPv4 (169-172)",
+            "Internet IPv4 (192-192.88)",
+            "Internet IPv4 (192.88-192.167)",
+            "Internet IPv4 (192.169-198.17)",
+            "Internet IPv4 (198.20-198.51)",
+            "Internet IPv4 (198.51-203.0)",
+            "Internet IPv4 (203.0-223)",
+            "Internet IPv4 (128-169)",
+            "Internet IPv4 (192-192.0)",
+            "Internet IPv4 (172-191)"
+          ]
+        },
+        "IPFamily": "IPv4"
+      }
+    },
+    "service_objects": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "Services": [
+        {
+          "Name": "AH",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "AH"
+            }
+          }
+        },
+        {
+          "Name": "AOL",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "5190:5194",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "BGP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "179",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "DHCP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "67:68",
+              "DestinationPort": "67:68",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "DNS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "53",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "53",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "ESP",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "ESP"
+            }
+          }
+        },
+        {
+          "Name": "FINGER",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "79",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "FTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "21",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "GOPHER",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "70",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "GRE",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "GRE"
+            }
+          }
+        },
+        {
+          "Name": "H323",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "1720",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "1503",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "1719",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "HTTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "80",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "HTTPS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "443",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "IKE",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "500",
+                "Protocol": "UDP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "4500",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "IMAP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "143",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "INFO_ADDRESS",
+          "Description": "",
+          "Type": "ICMP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPType": "Address Mask Request",
+              "ICMPCode": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "INFO_REQUEST",
+          "Description": "",
+          "Type": "ICMP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPType": "Information Request",
+              "ICMPCode": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "IRC",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "6660:6669",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "L2TP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "1701",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "1701",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "LDAP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "389",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "389",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "NFS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "111",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "2049",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "2049",
+                "Protocol": "UDP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "111",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "NNTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "119",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "NTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "123",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "123",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "OSPF",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "OSPFIGP"
+            }
+          }
+        },
+        {
+          "Name": "PC-Anywhere",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "5631",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "5632",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "PING",
+          "Description": "",
+          "Type": "ICMP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPType": "Echo",
+              "ICMPCode": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "POP3",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "110",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "PPTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "1723",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "QUAKE",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "27960",
+                "Protocol": "UDP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "27910",
+                "Protocol": "UDP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "27000",
+                "Protocol": "UDP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "26000",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "RAUDIO",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "7070",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "RIP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "520",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "RLOGIN",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "513",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "SAMBA",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "139",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "SIP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "5060",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "SIP-MSNmessenger",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "1863",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "SMTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "25",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "SNMP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "161:162",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "161:162",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "SSH",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "22",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "22",
+                "Protocol": "UDP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "SYSLOG",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "514",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "TALK",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "517:518",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "TCP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "1:65535",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "TELNET",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "23",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "TFTP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "69",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "TIMESTAMP",
+          "Description": "",
+          "Type": "ICMP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPType": "Timestamp",
+              "ICMPCode": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "UDP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "1:65535",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "UUCP",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "540",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "VDOLIVE",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "7000:7010",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "WAIS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "210",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "WINFRAME",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "1494",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "X-WINDOWS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "6000:6063",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "IGMP",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "IGMP"
+            }
+          }
+        },
+        {
+          "Name": "IPv6_Over_IPv4",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "IPv6"
+            }
+          }
+        },
+        {
+          "Name": "ICMP",
+          "Description": "",
+          "Type": "ICMP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPType": "Any Type",
+              "ICMPCode": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "PING6",
+          "Description": "",
+          "Type": "ICMPv6",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ICMPv6Type": "Echo Request",
+              "ICMPv6Code": "Any Code"
+            }
+          }
+        },
+        {
+          "Name": "ICMPv6",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "IPv6-ICMP"
+            }
+          }
+        },
+        {
+          "Name": "DHCP6",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "546:547",
+              "DestinationPort": "546:547",
+              "Protocol": "UDP"
+            }
+          }
+        },
+        {
+          "Name": "MLD",
+          "Description": "",
+          "Type": "ICMPv6",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "ICMPv6Type": "Multicast Listener Query",
+                "ICMPv6Code": "Any Code"
+              },
+              {
+                "ICMPv6Type": "Multicast Listener Report",
+                "ICMPv6Code": "Any Code"
+              },
+              {
+                "ICMPv6Type": "Multicast Listener Done",
+                "ICMPv6Code": "Any Code"
+              },
+              {
+                "ICMPv6Type": "Version 2 Multicast Listener Report",
+                "ICMPv6Code": "Any Code"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "PIM",
+          "Description": "",
+          "Type": "IP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "ProtocolName": "PIM"
+            }
+          }
+        },
+        {
+          "Name": "SMTP(S)",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": [
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "25",
+                "Protocol": "TCP"
+              },
+              {
+                "SourcePort": "1:65535",
+                "DestinationPort": "587",
+                "Protocol": "TCP"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "IMAPS",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "993",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "POP3S",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "995",
+              "Protocol": "TCP"
+            }
+          }
+        },
+        {
+          "Name": "SMTPS_465",
+          "Description": "",
+          "Type": "TCPorUDP",
+          "ServiceDetails": {
+            "ServiceDetail": {
+              "SourcePort": "1:65535",
+              "DestinationPort": "465",
+              "Protocol": "TCP"
+            }
+          }
+        }
+      ]
+    },
+    "service_groups": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "ServiceGroup": {
+        "Name": "PPTP_GROUP",
+        "Description": "TCP (1:65535) / (1723), IP Protocol No 47 (GRE)",
+        "ServiceList": {
+          "Service": [
+            "GRE",
+            "PPTP"
+          ]
+        }
+      }
+    },
+    "users": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "User": {
+        "Username": "technijian-api",
+        "Name": "Technijian API",
+        "Password": "",
+        "PasswordHash": "$sfos$7$0$d231SoXt-WP0oddXEnLwHb170DkVjqp50p0BlfMR0Xa12I_bk3822bW3UddvaxCvEVY0al7LbdPGwWLhRTP-dnPXT65zentYEYmKLNytBKN-Q0xgn87csXhbYXxy7pVmkOqCfswUEfG4mau5mvs93A~~GfeY8uUMl87rRCy6ilay8iUVRTvcJ3Cgq1awvruTvIg~",
+        "Description": "",
+        "UserType": "Administrator",
+        "EmailList": {
+          "EmailID": "support@technijian.com"
+        },
+        "Group": "Open Group",
+        "SurfingQuotaPolicy": "Unlimited Internet Access",
+        "AccessTimePolicy": "Allowed all the time",
+        "DataTransferPolicy": "",
+        "QoSPolicy": "",
+        "SSLVPNPolicy": "No Policy Applied",
+        "SSLVPNIPv4Address": "",
+        "SSLVPNIPv6Address": "",
+        "ClientlessPolicy": "No Policy Applied",
+        "Status": "Active",
+        "L2TP": "Disable",
+        "PPTP": "Disable",
+        "CISCO": "Disable",
+        "QuarantineDigest": "Disable",
+        "MACBinding": "Disable",
+        "LoginRestriction": "UserGroupNode",
+        "ScheduleForApplianceAccess": "All The Time",
+        "LoginRestrictionForAppliance": "AnyNode",
+        "IsEncryptCert": "Disable",
+        "SimultaneousLoginsGlobal": "Enable",
+        "Profile": "Technijian-ReadOnly"
+      }
+    },
+    "user_groups": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "UserGroup": {
+        "GroupDetail": [
+          {
+            "GroupType": "Normal",
+            "After": {
+              "Name": ""
+            },
+            "Name": "Open Group",
+            "QoSPolicy": "None",
+            "QuarantineDigest": "Disable",
+            "SSLVPNPolicy": "",
+            "ClientlessPolicy": "",
+            "SurfingQuotaPolicy": "Unlimited Internet Access",
+            "AccessTimePolicy": "Allowed all the time",
+            "DataTransferPolicy": "",
+            "MACBinding": "Disable",
+            "L2TP": "Disable",
+            "PPTP": "Disable",
+            "SophosConnectClient": "Disable",
+            "LoginRestriction": "AnyNode"
+          },
+          {
+            "GroupType": "Clienless",
+            "After": {
+              "Name": "Open Group"
+            },
+            "Name": "Clientless Open Group",
+            "QoSPolicy": "None",
+            "QuarantineDigest": "Disable"
+          },
+          {
+            "GroupType": "Normal",
+            "After": {
+              "Name": "Clientless Open Group"
+            },
+            "Name": "Guest Group",
+            "QoSPolicy": "None",
+            "QuarantineDigest": "Disable",
+            "SSLVPNPolicy": "",
+            "ClientlessPolicy": "",
+            "SurfingQuotaPolicy": "Unlimited Internet Access",
+            "AccessTimePolicy": "Allowed all the time",
+            "DataTransferPolicy": "",
+            "MACBinding": "Disable",
+            "L2TP": "Disable",
+            "PPTP": "Disable",
+            "SophosConnectClient": "Disable",
+            "LoginRestriction": "AnyNode"
+          }
+        ],
+        "GroupMembers": {
+          "GroupName": "Technijian API",
+          "UserName": "technijian-api"
+        }
+      }
+    },
+    "qos_policy": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "QoSPolicy": [
+        {
+          "Name": "Streaming Video - Limit to SD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Strict",
+          "Priority": "RealTime",
+          "Description": "Attaching the policy to applications restricts the bandwidth available to the defined SD video streaming limit.",
+          "UploadBandwidth": "70",
+          "DownloadBandwidth": "700",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Streaming Video - Limit to HD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Strict",
+          "Priority": "RealTime",
+          "Description": "Attaching the policy to applications restricts the bandwidth available to the defined HD video streaming limit.",
+          "UploadBandwidth": "180",
+          "DownloadBandwidth": "1800",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Streaming Video - Limit to Full HD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Strict",
+          "Priority": "RealTime",
+          "Description": "Attaching the policy to applications restricts the bandwidth available to the defined Full HD video streaming limit.",
+          "UploadBandwidth": "290",
+          "DownloadBandwidth": "2900",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Streaming Video - Guarantee SD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Committed",
+          "Priority": "RealTime",
+          "Description": "Attach the policy to applications to allocate guaranteed bandwidth that corresponds to SD video streaming requirement.",
+          "GuaranteedUploadBandwidth": "70",
+          "BurstableUploadBandwidth": "2560000",
+          "GuaranteedDownloadBandwidth": "700",
+          "BurstableDownloadBandwidth": "2560000",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Streaming Video - Guarantee HD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Committed",
+          "Priority": "RealTime",
+          "Description": "Attach the policy to applications to allocate guaranteed bandwidth that corresponds to HD video streaming requirement.",
+          "GuaranteedUploadBandwidth": "180",
+          "BurstableUploadBandwidth": "2560000",
+          "GuaranteedDownloadBandwidth": "1800",
+          "BurstableDownloadBandwidth": "2560000",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Streaming Video - Guarantee Full HD Quality",
+          "PolicyBasedOn": "Application",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Individual",
+          "PolicyType": "Committed",
+          "Priority": "RealTime",
+          "Description": "Attach the policy to applications to allocate guaranteed bandwidth that corresponds to Full HD video streaming requirement.",
+          "GuaranteedUploadBandwidth": "290",
+          "BurstableUploadBandwidth": "2560000",
+          "GuaranteedDownloadBandwidth": "2900",
+          "BurstableDownloadBandwidth": "2560000",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "VoIP Guarantee",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "RealTime",
+          "Description": "Attach the policy to the firewall rule to allocate guaranteed bandwidth that corresponds to VOIP traffic requirement.",
+          "GuaranteedBandwidth": "50",
+          "BurstableBandwidth": "2560000",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Extremely Limited User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attaching the policy to a user restricts bandwidth for the user to very low levels.",
+          "TotalBandwidth": "32",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Moderate Limited User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attaching the policy to a user restricts bandwidth for the user to moderate levels.",
+          "TotalBandwidth": "128",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Lightly Limited User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attach the policy to a user to lightly limit bandwidth available to the user.",
+          "TotalBandwidth": "512",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Extremely Limited Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attaching the policy to a firewall rule limits bandwidth available to very low levels.",
+          "TotalBandwidth": "128",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Moderate Limited Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attaching the policy to a firewall rule limits bandwidth available to moderate levels.",
+          "TotalBandwidth": "512",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Lightly Limited Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Strict",
+          "Priority": "Normal3",
+          "Description": "Attach the policy to lightly limit bandwidth available for the firewall rule traffic.",
+          "TotalBandwidth": "2048",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Low Guarantee User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to a user guarantees minimum bandwidth to the user even during network congestion.",
+          "GuaranteedBandwidth": "32",
+          "BurstableBandwidth": "128",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Moderate Guarantee User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to a user guarantees average speed to the user at all times.",
+          "GuaranteedBandwidth": "128",
+          "BurstableBandwidth": "512",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "High Guarantee User",
+          "PolicyBasedOn": "User",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to a user guarantees high bandwidth allocation to the user.",
+          "GuaranteedBandwidth": "512",
+          "BurstableBandwidth": "2048",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Low Guarantee Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to a firewall rule guarantees minimum bandwidth even during network congestion.",
+          "GuaranteedBandwidth": "128",
+          "BurstableBandwidth": "512",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "Moderate Guarantee Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to a firewall rule guarantees average speed at all times.",
+          "GuaranteedBandwidth": "512",
+          "BurstableBandwidth": "2048",
+          "SchedulebasedPolicyRuleList": ""
+        },
+        {
+          "Name": "High Guarantee Rule",
+          "PolicyBasedOn": "FirewallRule",
+          "BandwidthUsageType": "Individual",
+          "ImplementationOn": "Total",
+          "PolicyType": "Committed",
+          "Priority": "Normal3",
+          "Description": "Applying the policy to the firewall rule guarantees high bandwidth allocation.",
+          "GuaranteedBandwidth": "2048",
+          "BurstableBandwidth": "8192",
+          "SchedulebasedPolicyRuleList": ""
+        }
+      ]
+    },
+    "notifications": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "Notification": {
+        "SenderAddress": "support@technijian.com",
+        "NotificationServer": "0",
+        "AuthenticationRequired": "Disable",
+        "Port": "24",
+        "ConnectionSecurity": "",
+        "Password": "",
+        "MailServer": "127.0.0.1",
+        "Recepient": "hyaghoubi@technijian.com",
+        "Username": "",
+        "ManagementInterface": "",
+        "IPFamily": ""
+      }
+    },
+    "notification_list": {
+      "Login": {
+        "status": "Authentication Successful"
+      },
+      "Notificationlist": {
+        "SendEmail": "Disable",
+        "SendSnmp": "Disable",
+        "SignInEmail": "Disable",
+        "SignInSnmp": "Disable",
+        "TooManyLoginEmail": "Disable",
+        "TooManyLoginSnmp": "Disable",
+        "InterfaceEmail": "Disable",
+        "InterfaceSnmp": "Disable",
+        "ApplianceUnpluggedEmail": "Disable",
+        "ApplianceUnpluggedSnmp": "Disable",
+        "CriticalEmail": "Disable",
+        "CriticalSnmp": "Disable",
+        "MajorEmail": "Disable",
+        "MajorSnmp": "Disable",
+        "ModerateEmail": "Disable",
+        "ModerateSnmp": "Disable",
+        "MinorEmail": "Disable",
+        "MinorSnmp": "Disable",
+        "WarningEmail": "Disable",
+        "WarningSnmp": "Disable",
+        "AlertATPEmail": "Disable",
+        "AlertATPSnmp": "Disable",
+        "DropATPEmail": "Disable",
+        "DropATPSnmp": "Disable",
+        "ConfDiskExdEmail": "Disable",
+        "ConfDiskExdSnmp": "Disable",
+        "SigDiskExdEmail": "Disable",
+        "SigDiskExdSnmp": "Disable",
+        "ReportDiskExdEmail": "Disable",
+        "ReportDiskExdSnmp": "Disable",
+        "FirmwareReadyEmail": "Enable",
+        "FirmwareReadySnmp": "Enable",
+        "FirmwareInstalledEmail": "Disable",
+        "FirmwareInstalledSnmp": "Disable",
+        "FirmwareInstalledFailedEmail": "Disable",
+        "FirmwareInstalledFailedSnmp": "Disable",
+        "WebCatFailEmail": "Disable",
+        "WebCatFailSnmp": "Disable",
+        "IPSSigFailEmail": "Disable",
+        "IPSSigFailSnmp": "Disable",
+        "AVFailEmail": "Disable",
+        "AVFailSnmp": "Disable",
+        "SystemStartEmail": "Disable",
+        "SystemStartSnmp": "Disable",
+        "RedDownEmail": "Disable",
+        "RedDownSnmp": "Disable",
+        "RedUpgradeFailEmail": "Disable",
+        "RedUpgradeFailSnmp": "Disable",
+        "APOfflineEmail": "Disable",
+        "APOfflineSnmp": "Disable",
+        "APUpgradeFailEmail": "Disable",
+        "APUpgradeFailSnmp": "Disable",
+        "IPsecUPEmail": "Disable",
+        "IPsecUPSnmp": "Disable",
+        "IPsecDownEmail": "Disable",
+        "IPsecDownSnmp": "Disable",
+        "HighCpuEmail": "Disable",
+        "HighCpuSnmp": "Disable",
+        "GwUnrcblEmail": "Enable",
+        "GwUnrcblSnmp": "Disable",
+        "HttpVirusAlertEmail": "Disable",
+        "HttpVirusAlertSnmp": "Disable",
+        "FtpVirusAlertEmail": "Disable",
+        "FtpVirusAlertSnmp": "Disable",
+        "SmtpVirusAlertEmail": "Disable",
+        "SmtpVirusAlertSnmp": "Disable",
+        "Pop3VirusAlertEmail": "Disable",
+        "Pop3VirusAlertSnmp": "Disable",
+        "Imap4VirusAlertEmail": "Disable",
+        "Imap4VirusAlertSnmp": "Disable",
+        "IPSecFailoverFailbackEmail": "Disable",
+        "IPSecFailoverFailbackSnmp": "Disable",
+        "SSLVPNUPEmail": "Disable",
+        "SSLVPNUPSnmp": "Disable",
+        "SSLVPNDownEmail": "Disable",
+        "SSLVPNDownSnmp": "Disable",
+        "RedDeauthorizeEmail": "Enable",
+        "RedDeauthorizeSnmp": "Disable",
+        "RedUnlockCodeEmail": "Enable",
+        "RedUnlockCodeSnmp": "Disable",
+        "DnsUpEmail": "Disable",
+        "DnsUpSnmp": "Disable",
+        "DnsDownEmail": "Disable",
+        "DnsDownSnmp": "Disable",
+        "WebCatEmail": "Disable",
+        "WebCatSnmp": "Disable",
+        "AlertATRSrcInboundEmail": "Disable",
+        "AlertATRSrcInboundSnmp": "Disable",
+        "DropATRSrcInboundEmail": "Disable",
+        "DropATRSrcInboundSnmp": "Disable",
+        "AlertATRSrcOutboundEmail": "Disable",
+        "AlertATRSrcOutboundSnmp": "Disable",
+        "DropATRSrcOutboundEmail": "Disable",
+        "DropATRSrcOutboundSnmp": "Disable"
+      }
+    }
+  },
+  "errors": [],
+  "unsupported": [
+    "ApplicationFilter",
+    "IPSecConnection",
+    "SSLVPNClientPolicy"
+  ],
+  "sections_ok": 20,
+  "sections_total": 23
+}

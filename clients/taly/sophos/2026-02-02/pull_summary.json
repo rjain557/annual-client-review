@@ -1,0 +1,40 @@
+{
+  "sophos_tenant_id": "33a24334-3f98-4d7e-a87f-8e41258763b9",
+  "sophos_tenant_name": "Talley and Associates ",
+  "LocationCode": "TALY",
+  "Location_Name": "Talley & Associates",
+  "DirID": 7728,
+  "match_source": "name_exact",
+  "dataRegion": "us01",
+  "window_start": "2026-02-01T13:00:00Z",
+  "window_end": "2026-02-02T13:00:00Z",
+  "firewalls_total": 1,
+  "firewalls_connected": 1,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "20.0": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 2,
+  "alerts_open": 2,
+  "alerts_by_severity": {
+    "high": 1,
+    "low": 1
+  },
+  "alerts_by_product": {
+    "firewall": 2
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"9e77ac5a-6f52-45e4-a431-01f2348bba5c\",\n    \"requestId\": \"7aea79b6-68ab-4b9f-95a3-8bf769b3462c\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:39:54+00:00"
+}

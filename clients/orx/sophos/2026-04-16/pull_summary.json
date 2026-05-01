@@ -1,0 +1,42 @@
+{
+  "sophos_tenant_id": "de552407-3492-410e-bea6-b78a77df265a",
+  "sophos_tenant_name": "OrthoXpress Distribution Inc.",
+  "LocationCode": "ORX",
+  "Location_Name": "Ortho Xpress",
+  "DirID": 108,
+  "match_source": "manual",
+  "dataRegion": "us01",
+  "window_start": "2026-04-15T13:00:00Z",
+  "window_end": "2026-04-16T13:00:00Z",
+  "firewalls_total": 2,
+  "firewalls_connected": 2,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "22.0": 1,
+    "21.0": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 7,
+  "alerts_open": 7,
+  "alerts_by_severity": {
+    "high": 3,
+    "low": 4
+  },
+  "alerts_by_product": {
+    "firewall": 6,
+    "other": 1
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"c7551742-8eb1-499d-af25-176114ce73d6\",\n    \"requestId\": \"13a66387-01cd-41d7-a724-a8b24ffafde8\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:49:05+00:00"
+}

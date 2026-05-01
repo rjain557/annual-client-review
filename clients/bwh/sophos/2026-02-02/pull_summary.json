@@ -1,0 +1,41 @@
+{
+  "sophos_tenant_id": "247a7250-de10-44e5-9b93-81a4b41e41c3",
+  "sophos_tenant_name": "Brandywine Homes",
+  "LocationCode": "BWH",
+  "Location_Name": "Brandywine Homes",
+  "DirID": 6245,
+  "match_source": "name_exact",
+  "dataRegion": "us01",
+  "window_start": "2026-02-01T13:00:00Z",
+  "window_end": "2026-02-02T13:00:00Z",
+  "firewalls_total": 1,
+  "firewalls_connected": 1,
+  "firewalls_suspended": 0,
+  "firewalls_by_firmware_major": {
+    "22.0": 1
+  },
+  "events_total": 0,
+  "events_by_group": {},
+  "events_by_type": {},
+  "events_by_severity": {},
+  "events_by_serial": {},
+  "alerts_total": 3,
+  "alerts_open": 3,
+  "alerts_by_severity": {
+    "high": 1,
+    "low": 2
+  },
+  "alerts_by_product": {
+    "firewall": 2,
+    "other": 1
+  },
+  "errors": [
+    {
+      "step": "events",
+      "status": 400,
+      "body": "{\n    \"error\": \"invalidRequest\",\n    \"correlationId\": \"7f55d13c-cdad-40c6-bf7d-966659c57e09\",\n    \"requestId\": \"a6051c2c-9d6a-4719-9a28-196aa3977910\",\n    \"message\": \"From date should fall within last"
+    }
+  ],
+  "dry_run": false,
+  "run_at": "2026-05-01T17:39:53+00:00"
+}
