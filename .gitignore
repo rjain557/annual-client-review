@@ -47,6 +47,9 @@ technijian/umbrella-pull/debug-screenshots/
 # ScreenConnect Gemini analysis state — reproducible by re-running analyze_sessions_gemini.py
 technijian/screenconnect-pull/state/gemini_analysis_state.json
 
+# M365 sign-in logs — can exceed 100 MB; reproducible by re-running pull_m365_security.py
+**/signin_logs.json
+
 # Claude Code local-only state (not portable across workstations)
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
