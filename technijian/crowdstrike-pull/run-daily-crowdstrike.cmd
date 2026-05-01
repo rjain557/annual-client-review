@@ -10,8 +10,11 @@ REM  - tees stdout/stderr to technijian/crowdstrike-pull/state/run-<YYYY-MM-DD>.
 REM ---------------------------------------------------------------
 setlocal
 
-set "REPO=c:\vscode\annual-client-review\annual-client-review"
-set "PY=C:\Python314\python.exe"
+pushd "%~dp0..\.."
+set "REPO=%CD%"
+popd
+set "PY=py.exe"
+set "PYARGS=-3"
 set "SCRIPT=%REPO%\technijian\crowdstrike-pull\scripts\pull_crowdstrike_daily.py"
 set "STATE=%REPO%\technijian\crowdstrike-pull\state"
 
@@ -25,7 +28,7 @@ set PYTHONIOENCODING=utf-8
 
 cd /d "%REPO%"
 echo === %TS% crowdstrike daily pull start === >> "%LOG%"
-"%PY%" "%SCRIPT%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SCRIPT%" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo === %TS% crowdstrike daily pull end (exit %RC%) === >> "%LOG%"
 exit /b %RC%

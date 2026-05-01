@@ -83,7 +83,7 @@ def resolve_converter(override: Optional[str] = None) -> Path:
     raise FileNotFoundError(
         "ScreenConnect.RecordingConverter.exe not found. "
         "Install ScreenConnect on this host or pass --converter <path>. "
-        "See technijian/screenconnect-pull/workstation.md."
+        "See workstation.md §26 (ScreenConnect recording pipeline)."
     )
 
 
@@ -103,7 +103,7 @@ def resolve_ffmpeg(override: Optional[str] = None) -> Path:
         return Path(path)
     raise FileNotFoundError(
         "ffmpeg not found on PATH. Install via 'winget install Gyan.FFmpeg' "
-        "or pass --ffmpeg <path>. See technijian/screenconnect-pull/workstation.md."
+        "or pass --ffmpeg <path>. See workstation.md §26 (ScreenConnect recording pipeline)."
     )
 
 

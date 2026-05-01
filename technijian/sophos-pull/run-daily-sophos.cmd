@@ -11,8 +11,11 @@ REM  - tees stdout/stderr to technijian/sophos-pull/state/run-<YYYY-MM-DD>.log
 REM ---------------------------------------------------------------
 setlocal
 
-set "REPO=c:\vscode\annual-client-review\annual-client-review"
-set "PY=C:\Python314\python.exe"
+pushd "%~dp0..\.."
+set "REPO=%CD%"
+popd
+set "PY=py.exe"
+set "PYARGS=-3"
 set "SCRIPT=%REPO%\technijian\sophos-pull\scripts\pull_sophos_daily.py"
 set "SEEDER=%REPO%\technijian\sophos-pull\scripts\seed_tenant_map.py"
 set "STATE=%REPO%\technijian\sophos-pull\state"
@@ -26,9 +29,9 @@ set PYTHONIOENCODING=utf-8
 
 cd /d "%REPO%"
 echo === %TS% sophos daily pull start === >> "%LOG%"
-"%PY%" "%SCRIPT%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SCRIPT%" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo === %TS% sophos rsyslog tenant-map seed === >> "%LOG%"
-"%PY%" "%SEEDER%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SEEDER%" >> "%LOG%" 2>&1
 echo === %TS% sophos daily pull end (exit %RC%) === >> "%LOG%"
 exit /b %RC%

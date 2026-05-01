@@ -730,9 +730,14 @@ All tasks run as the **logged-in workstation user** (not SYSTEM). SYSTEM cannot 
 | `Technijian-MonthlyClientPull` | 1st of month 07:00 PT | `technijian\monthly-pull\run-monthly-pull.cmd` | `monthly-client-pull` | Active |
 | `Technijian Weekly Time-Entry Audit` | Weekly Friday 07:00 PT | `technijian\weekly-audit\run_weekly.bat` | `weekly-time-audit` | Active |
 | `Technijian-MonthlyScreenConnectPull` | Monthly 28th 20:00 | `technijian\screenconnect-pull\run-monthly-sc.cmd` | — | Active (interactive session required) |
-| `Technijian-DailySessionAnalysis` | Daily ~04:00 PT | `analyze_sessions_gemini.py` | `screenconnect-video-analysis` | Pending (Gemini key + MP4s needed) |
+| `Technijian-DailySessionAnalysis` | Daily ~04:00 PT | `analyze_sessions_gemini.py` | `screenconnect-video-analysis` | Pending (Gemini key + MP4**Stagger rationale:** 01:00 Huntress → 02:00 Umbrella → 03:00 CrowdStrike → 04:00 Teramind → 07:00 Monthly/Weekly. Avoids CP API and disk contention.
 
-**Stagger rationale:** 01:00 Huntress -> 02:00 Umbrella -> 03:00 CrowdStrike -> 04:00 Teramind -> 05:00 Meraki -> :15 Sophos hourly. Avoids CP API and disk contention.
+**Registration commands** are in [`workstation.md`](../workstation.md): monthly (§6), Huntress (§12), CrowdStrike (§18), Teramind (§23), ScreenConnect (§26.8), Meraki (§29), Umbrella (§46), Sophos (§54), Weekly audit (§64).
+
+**Settings for all tasks:**
+- "Run as soon as possible after a scheduled start is missed" — catches up after sleep/power-off.
+- "Run only when user is logged on" — required for tasks using OneDrive keyfiles.
+- SC recording task additionally requires interactive session for the GUI tool.
 
 ---
 
@@ -785,9 +790,7 @@ All tasks run as the **logged-in workstation user** (not SYSTEM). SYSTEM cannot 
 
 ### 12.2 ScreenConnect video analysis (Gemini)
 
-Blocked by: (1) Gemini API key not yet in `keys/gemini.md`; (2) MP4s need to be in OneDrive FileCabinet. Free tier: 1,500 req/day; initial ~2,576-session backfill ~2 days.
-
-### 12.3 Huntress SAT data
+Blocked by: (1) Gemini API key not yet in `keys/gemini.md`; (2) MP4s need to be in OneDrive FileCabinet. Free tier: 1,500 req/day; initial ~2,576-session backfi### 12.3 Huntress SAT data
 
 Huntress Managed Security Awareness Training has no v1 API endpoint as of 2026-04. SAT exports are manual.
 
@@ -811,9 +814,7 @@ Teramind is newly deployed. Add new clients to `DOMAIN_MAP` in `build_teramind_c
 
 TE-DC-MYRMM-SQL (10.100.13.11) credentials in `keys/myrmm-sql.md` are marked TODO — not yet wired.
 
-### 12.9 Sophos XGS on-box config API (PENDING)
-
-10 firewalls identified; all need whitelist of `64.58.160.218` on port 4444 (Administration > Device Access > WAN > HTTPS + API). After whitelist:
+### 12.9 Sophos XGS on-box config AP10 firewalls identified; all need whitelist of `64.58.160.218` on port 4444 (Administration > Device Access > WAN > HTTPS + API). After whitelist:
 1. Create `technijian-api` read-only user on each firewall
 2. Add credentials to `keys/sophos-fw-<CODE>.md`
 3. Run `scan_sophos_fw_api.py --pull --only <CODE>` to verify

@@ -10,8 +10,11 @@ REM  - tees stdout/stderr to technijian/huntress-pull/state/run-<YYYY-MM-DD>.log
 REM ---------------------------------------------------------------
 setlocal
 
-set "REPO=c:\vscode\annual-client-review\annual-client-review"
-set "PY=C:\Python314\python.exe"
+pushd "%~dp0..\.."
+set "REPO=%CD%"
+popd
+set "PY=py.exe"
+set "PYARGS=-3"
 set "SCRIPT=%REPO%\technijian\huntress-pull\scripts\pull_huntress_daily.py"
 set "STATE=%REPO%\technijian\huntress-pull\state"
 
@@ -25,7 +28,7 @@ set PYTHONIOENCODING=utf-8
 
 cd /d "%REPO%"
 echo === %TS% huntress daily pull start === >> "%LOG%"
-"%PY%" "%SCRIPT%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SCRIPT%" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo === %TS% huntress daily pull end (exit %RC%) === >> "%LOG%"
 exit /b %RC%

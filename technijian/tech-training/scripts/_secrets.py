@@ -3,7 +3,7 @@
 Resolution order:
   1. Environment variables: M365_TENANT_ID, M365_CLIENT_ID, M365_CLIENT_SECRET
   2. The user's key vault at:
-     C:\\Users\\rjain\\OneDrive - Technijian, Inc\\Documents\\VSCODE\\keys\\m365-graph.md
+     %USERPROFILE%\\OneDrive - Technijian, Inc\\Documents\\VSCODE\\keys\\m365-graph.md
      (parsed for `**App Client ID:**`, `**Tenant ID:**`, `**Client Secret:**`)
   3. ImportError if neither is available (do NOT fall back to a baked-in value)
 
@@ -14,7 +14,7 @@ import os
 import re
 from pathlib import Path
 
-KEY_FILE = Path(r"C:\Users\rjain\OneDrive - Technijian, Inc\Documents\VSCODE\keys\m365-graph.md")
+KEY_FILE = Path(os.path.expandvars(r"%USERPROFILE%\OneDrive - Technijian, Inc\Documents\VSCODE\keys\m365-graph.md"))
 DEFAULT_MAILBOX = "RJain@technijian.com"
 
 

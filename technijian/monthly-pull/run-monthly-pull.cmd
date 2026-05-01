@@ -10,8 +10,11 @@ REM  - tees stdout/stderr to technijian/monthly-pull/state/<YYYY-MM-DD>.log
 REM ---------------------------------------------------------------
 setlocal
 
-set "REPO=c:\vscode\annual-client-review\annual-client-review"
-set "PY=C:\Python314\python.exe"
+pushd "%~dp0..\.."
+set "REPO=%CD%"
+popd
+set "PY=py.exe"
+set "PYARGS=-3"
 set "SCRIPT=%REPO%\technijian\monthly-pull\scripts\pull_monthly.py"
 set "STATE=%REPO%\technijian\monthly-pull\state"
 
@@ -25,7 +28,7 @@ set PYTHONIOENCODING=utf-8
 
 cd /d "%REPO%"
 echo === %TS% monthly pull start === >> "%LOG%"
-"%PY%" "%SCRIPT%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SCRIPT%" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo === %TS% monthly pull end (exit %RC%) === >> "%LOG%"
 exit /b %RC%

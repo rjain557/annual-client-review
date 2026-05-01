@@ -15,8 +15,11 @@ REM  Logs to technijian/sophos-pull/state/run-<YYYY-MM-DD>.log (appended).
 REM ---------------------------------------------------------------
 setlocal
 
-set "REPO=c:\vscode\annual-client-review\annual-client-review"
-set "PY=C:\Python314\python.exe"
+pushd "%~dp0..\.."
+set "REPO=%CD%"
+popd
+set "PY=py.exe"
+set "PYARGS=-3"
 set "PULL=%REPO%\technijian\sophos-pull\scripts\pull_sophos_daily.py"
 set "SEED=%REPO%\technijian\sophos-pull\scripts\seed_tenant_map.py"
 set "ROUTE=%REPO%\technijian\sophos-pull\scripts\route_alerts.py"
@@ -42,16 +45,16 @@ cd /d "%REPO%"
 
 echo === %TS% %HM% sophos hourly start ROUTER_MODE=%ROUTER_MODE% === >> "%LOG%"
 
-"%PY%" "%PULL%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%PULL%" >> "%LOG%" 2>&1
 set "RC_PULL=%ERRORLEVEL%"
 
-"%PY%" "%SEED%" >> "%LOG%" 2>&1
+"%PY%" %PYARGS% "%SEED%" >> "%LOG%" 2>&1
 set "RC_SEED=%ERRORLEVEL%"
 
 if /I "%ROUTER_MODE%"=="apply" (
-  "%PY%" "%ROUTE%" --apply >> "%LOG%" 2>&1
+  "%PY%" %PYARGS% "%ROUTE%" --apply >> "%LOG%" 2>&1
 ) else (
-  "%PY%" "%ROUTE%" >> "%LOG%" 2>&1
+  "%PY%" %PYARGS% "%ROUTE%" >> "%LOG%" 2>&1
 )
 set "RC_ROUTE=%ERRORLEVEL%"
 

@@ -342,8 +342,7 @@ platform constraint — ScreenConnect does not retain event rows indefinitely.
 
 | File | Contents |
 | --- | --- |
-| `technijian/screenconnect-pull/workstation.md` | Full setup guide for any workstation |
-| `workstation.md` (repo root, §26–27) | Summary + scheduled task registration |
+| [`workstation.md`](../workstation.md) (repo root, §26–27) | Full setup guide + scheduled task registration |
 | `docs/screenconnect-recording-pipeline.md` | This specification |
 
 ---

@@ -279,7 +279,7 @@ the cycle folder IS committed for cross-cycle pattern detection.
 |---|---|
 | Skill | `~/.claude/skills/weekly-time-audit/SKILL.md` |
 | Worker | [`technijian/weekly-audit/scripts/`](technijian/weekly-audit/scripts/) |
-| Workstation setup | [`technijian/weekly-audit/workstation.md`](technijian/weekly-audit/workstation.md) |
+| Workstation setup | [`workstation.md`](workstation.md) (sections 51–59) |
 | Future-delete spec | [`technijian/weekly-audit/API-DELETE-ENDPOINT-SPEC.md`](technijian/weekly-audit/API-DELETE-ENDPOINT-SPEC.md) |
 | Vault page | `Knowledge/weekly-time-audit-skill.md` (in Obsidian vault) |
 
@@ -592,19 +592,13 @@ Production schedules live on a dedicated workstation. The dev box is for
 authoring scripts and committing changes only. See
 `memory/feedback_no_dev_box_schedules.md`.
 
-### 9.4 Workstation setup docs (currently fragmented)
+### 9.4 Workstation setup docs (consolidated)
 
-Three separate `workstation.md` files exist today:
-
-| File | Coverage |
-|---|---|
-| [`workstation.md`](workstation.md) (repo root) | mostly monthly-pull; partial Python install + CP creds; mentions weekly-audit but doesn't fully cover it |
-| [`technijian/weekly-audit/workstation.md`](technijian/weekly-audit/workstation.md) | full weekly-audit (Python, M365, schedule, monitoring, decommission) |
-| `technijian/huntress-pull/workstation.md` | huntress-pull setup |
-
-**Known gap (Section 13.1):** these should be unified into a single
-top-level `workstation.md` with per-skill subsections. Until then, follow
-the per-skill file when setting up that skill on the production workstation.
+All workstation setup lives in a single top-level [`workstation.md`](workstation.md)
+with per-skill subsections covering the monthly pull, Huntress, CrowdStrike,
+Teramind, ScreenConnect, Meraki, Umbrella, Sophos, and the weekly time-entry
+audit. Per-pipeline `workstation.md` files were merged into the root on
+2026-04-30.
 
 ---
 

@@ -112,7 +112,7 @@ def get_sc_db_path() -> str:
     raise RuntimeError(
         "ScreenConnect SQLite DB path not found. "
         "Set env var SC_DB_PATH, or add a '**DB Path:** ...' line to "
-        f"{kf}. See technijian/screenconnect-pull/workstation.md."
+        f"{kf}. See workstation.md §26 (ScreenConnect recording pipeline)."
     )
 
 
