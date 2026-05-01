@@ -23,5 +23,44 @@
       "Bash(PYTHONIOENCODING=utf-8 python scripts/clientportal/build_client_meta.py --only BIS,AAOC)",
       "Bash(git mv *)"
     ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File \"D:\\vscode\\annual-client-review\\annual-client-review\\.claude\\hooks\\retrieve.ps1\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File \"D:\\vscode\\annual-client-review\\annual-client-review\\.claude\\hooks\\consolidate.ps1\""
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File \"D:\\vscode\\annual-client-review\\annual-client-review\\.claude\\hooks\\preference-extract.ps1\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NonInteractive -File \"D:\\vscode\\annual-client-review\\annual-client-review\\.claude\\hooks\\health-check.ps1\""
+          }
+        ]
+      }
+    ]
   }
 }

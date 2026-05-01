@@ -176,6 +176,54 @@ To avoid contention, daily pulls are staggered:
 All scheduled tasks must run as the workstation user (`/ru "%USERNAME%"`),
 not SYSTEM — SYSTEM cannot read the OneDrive-synced keyvault.
 
+## Memory + Code Intelligence Stack
+
+The vault at `%USERPROFILE%/OneDrive - Technijian, Inc/Documents/obsidian/annual-client-review/`
+is now fully instrumented. All hooks are PowerShell (Node.js / Python not on dev box PATH).
+
+### Hooks (wired in `.claude/settings.json`)
+
+| Event | Hook | What it does |
+|---|---|---|
+| UserPromptSubmit | `retrieve.ps1` | Scores memory + Knowledge files by keyword overlap; injects top-6 as `<system-reminder>` block; increments `access_count` |
+| Stop | `consolidate.ps1` | Detects vault changes, appends CHANGELOG, commits with `[consolidate]` prefix |
+| Stop | `preference-extract.ps1` | Scans transcript for preference signals ("I prefer", "always", "never"); logs `preference_signal` to `.retrieval-log.jsonl` — does NOT auto-write |
+| SessionEnd | `health-check.ps1` | Rewrites `memory/HEALTH.md` with live metrics; commits with `[health]` prefix; prints review-overdue warnings |
+
+Hook files live at `.claude/hooks/` (all import `_lib.ps1` for shared vault path and helpers).
+
+### Slash commands
+
+| Command | Purpose |
+|---|---|
+| `/vault-status` | Dashboard: HEALTH.md + recent CHANGELOG + last 5 git commits |
+| `/cc-review` | Weekly review: new/updated topics, contradictions, volatility, prune candidates |
+| `/consolidate` | Manual on-demand save to vault with contradiction detection |
+| `/contradictions` | List + resolve all `CONTRADICTION detected` blocks |
+| `/volatility <topic> <level>` | Set stable / evolving / ephemeral on a topic file |
+| `/graduate` | Health check: GREEN/YELLOW/RED recommendation, refuses if review >30 days overdue |
+| `/sync` | Force-commit all dirty vault files + regenerate HEALTH.md |
+
+### Vault frontmatter schema (all `memory/*.md`)
+
+```yaml
+name, description, type, last_updated, volatility, access_count, last_accessed,
+confidence, aliases, sources
+```
+
+Volatility defaults: `feedback`/`reference`/`user` → `stable`; `project` → `evolving`.
+
+### Commit prefix conventions
+
+`[consolidate]` auto-save · `[reorg]` cc-review · `[health]` health-check ·
+`[manual]` user-driven · `[contradiction]` conflict detected · `[replaced]` conflict resolved
+
+### Auto-memory mirror
+
+Auto-memory at `~/.claude/projects/<slug>/memory/` is **disabled** as the canonical
+store. All durable knowledge goes directly to the vault. Use `/consolidate` to save.
+First weekly review due: **2026-05-07**.
+
 ## When extending the codebase
 
 1. Read this file first.
