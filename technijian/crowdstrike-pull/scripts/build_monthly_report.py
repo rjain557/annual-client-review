@@ -38,6 +38,11 @@ CLIENTS_ROOT = REPO / "clients"
 sys.path.insert(0, str(HERE.parent.parent / "huntress-pull" / "scripts"))
 import _brand as brand  # noqa: E402
 
+# Shared vendor-news helper (lives under technijian/shared/scripts/)
+SHARED_SCRIPTS = REPO / "technijian" / "shared" / "scripts"
+sys.path.insert(0, str(SHARED_SCRIPTS))
+import vendor_news  # noqa: E402
+
 from docx.shared import Pt, RGBColor  # noqa: E402
 from docx.enum.text import WD_ALIGN_PARAGRAPH  # noqa: E402
 
@@ -451,13 +456,13 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
                 doc,
                 ["Date", "Severity", "Alert Name", "Host", "Tactic", "Status"],
                 alert_rows,
-                col_widths=[0.9, 0.8, 1.8, 1.3, 1.3, 0.7],
+                col_widths=[0.9, 0.8, 1.7, 1.2, 1.2, 0.7],
                 status_col=1,
             )
             if alert_total > 40:
                 brand.add_body(
                     doc,
-                    f"Showing 40 of {alert_total} alerts. Full list available on request.",
+                    f"Showing 40 of {alert_total} alerts. Full list available on request — email support@technijian.com.",
                     size=10,
                 )
 
@@ -486,6 +491,14 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
     ]
     for prefix, body in bullets:
         brand.add_bullet(doc, body, bold_prefix=prefix)
+
+    # ── INDUSTRY NEWS & VENDOR INNOVATIONS ────────────────────────────────
+    doc.add_paragraph()
+    try:
+        year_int, month_int = (int(x) for x in data.month.split("-"))
+        vendor_news.render_section(doc, "crowdstrike", year_int, month_int, brand)
+    except Exception:
+        pass
 
     # ── RECOMMENDATIONS ────────────────────────────────────────────────────
     doc.add_paragraph()
@@ -544,9 +557,72 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
                 "been registered on the Technijian monitoring workstation. "
                 "Once registered, future reports will include full endpoint "
                 "inventory with sensor version, OS distribution, and "
-                "check-in age analysis. Contact your Technijian account "
-                "manager to schedule this one-time setup step.",
+                "check-in age analysis. Email support@technijian.com to "
+                "schedule this one-time setup step.",
             )
+
+    # ── HOW THIS PROTECTION WORKS ──────────────────────────────────────────
+    doc.add_paragraph()
+    brand.add_section_header(doc, "How This Protection Works")
+    brand.add_body(
+        doc,
+        "Your endpoints are protected by a layered security stack — "
+        "CrowdStrike Falcon and Huntress working alongside each other — "
+        "chosen and managed by Technijian as an MSP best-practice "
+        "configuration. Here's what each piece does and why we run both.",
+    )
+
+    brand.add_body(doc, "CrowdStrike Falcon: AI-driven EDR with the Falcon Overwatch SOC", bold=True, size=12, color=brand.DARK_CHARCOAL)
+    brand.add_body(
+        doc,
+        "CrowdStrike Falcon is the EDR (Endpoint Detection and Response) layer. "
+        "Falcon's behavioral AI inspects every process, network connection, "
+        "and file operation on your endpoints in real time and stops "
+        "identified threats before they can execute. On top of the AI, "
+        "CrowdStrike's Falcon Overwatch managed-threat-hunting team — the "
+        "same elite NOC that protects Fortune 500s and government agencies — "
+        "watches your environment 24×7 looking for the kind of slow, "
+        "low-and-slow adversary tradecraft that automated detection alone can "
+        "miss. Overwatch hunters reach out directly when they see something "
+        "that needs immediate action.",
+    )
+
+    brand.add_body(doc, "Huntress: managed detection & response with a 24×7 SOC", bold=True, size=12, color=brand.DARK_CHARCOAL)
+    brand.add_body(
+        doc,
+        "Huntress runs its own Security Operations Center staffed with threat "
+        "hunters who review every signal that fires on your endpoints around "
+        "the clock — not just nights and weekends, but 24×7×365. When the "
+        "Huntress agent flags suspicious behavior (persistence mechanisms, "
+        "process injection, credential abuse, known-bad files), the activity "
+        "is examined by Huntress threat hunters BEFORE it ever reaches "
+        "Technijian. False positives are filtered out at the source so that "
+        "what does reach our team is signal, not noise. When Huntress sees "
+        "something that needs attention, they coordinate response with "
+        "Technijian and provide guided remediation playbooks.",
+    )
+
+    brand.add_body(doc, "Why both? Defense in depth.", bold=True, size=12, color=brand.DARK_CHARCOAL)
+    brand.add_body(
+        doc,
+        "CrowdStrike and Huntress are deliberately complementary. CrowdStrike's "
+        "Falcon is industry-leading nation-state-grade EDR with the broadest "
+        "telemetry collection and the most mature threat-intel feed in the "
+        "market. Huntress is tuned for the SMB and mid-market threat "
+        "landscape — phishing-driven footholds, persistence tradecraft, "
+        "credential theft, and the kinds of attacks that target managed-"
+        "service customers. They use different detection styles, different "
+        "telemetry sources, and different threat-intelligence pipelines.",
+    )
+    brand.add_body(
+        doc,
+        "Running them together gives your endpoints two independent sets of "
+        "expert eyes — CrowdStrike's Overwatch team and Huntress's SOC — "
+        "both watching 24×7. If one platform misses something, the other is "
+        "extremely likely to catch it. This redundant, layered approach is "
+        "the configuration Technijian recommends as best-in-class endpoint "
+        "protection for clients who can't afford a security incident.",
+    )
 
     # ── ABOUT ──────────────────────────────────────────────────────────────
     doc.add_paragraph()

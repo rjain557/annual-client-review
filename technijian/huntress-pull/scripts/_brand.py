@@ -324,7 +324,7 @@ def render_cover(doc: _Document, *, title: str, subtitle: str, footer_note: str,
             r = cp.add_run("")
             r.font.size = Pt(3)
         else:
-            cell.width = Inches(2.6)
+            cell.width = Inches(2.45)
 
     doc.add_paragraph()
 

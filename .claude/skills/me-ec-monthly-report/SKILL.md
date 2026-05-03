@@ -46,28 +46,46 @@ clients/<slug>/me_ec/reports/<NAME> - ME EC Patch Activity - <YYYY-MM>.docx
 
 ## Sections in the report
 
-1. **Executive Summary** — KPI strip: patches installed, succeeded,
-   errored, machines patched. Plus a sentence-level summary for the
-   month with success rate and a callout if zero installs.
+The report is positively framed throughout — focus on what Technijian
+delivered, not on operational hiccups. Failed installs are NOT shown;
+they get tracked through CP tickets and surface as "Manual Installations
+by Technijian" once a tech closes the ticket.
+
+1. **Executive Summary** — KPI strip: patches deployed, machines
+   patched, critical patches deployed, hands-on remediations. Sentence-
+   level summary describing the month's automated + manual deployment
+   work.
 2. **Patch Window** — the client's Automated Patch Deployment (APD)
    tasks: name, status (RUNNING / SUSPENDED), template, time window,
-   day-of-week, week-of-month. Red callout if no APD task is
-   configured (4 customers as of 2026-05-03: AFFG, EBRMD, KES, RMG).
+   day-of-week, week-of-month. Teal/info callout if no APD task is
+   configured ("patches deployed on-demand by Technijian").
 3. **Per-Machine Summary** — one row per endpoint with total installed,
-   succeeded, errored, status (Pass / Errored).
+   succeeded, "errored" count, and a Pass/Errored status (errored count
+   shown for tech reference but framed neutrally).
 4. **Severity Breakdown** — Critical / Important / Moderate / Low
    counts and percentages.
 5. **Vendor Breakdown** — Microsoft / Adobe / etc. patch counts.
-6. **Patches Installed** — top 25 unique patches by endpoint count
-   (truncated for very large months; full data is in the SQL view).
-7. **Failed Installs** — every install with `ERROR_CODE > 0` this
-   month, with machine, patch, severity, error code, time. Green
-   callout if no failures.
-8. **About This Report** — provenance + contact note.
+6. **Automated Patch Deployments** — top 25 unique patches deployed by
+   the automated pipeline this month, ranked by endpoint reach.
+7. **Manual Installations by Technijian** — patches that techs
+   installed by hand after a CP ticket closed. Reads from
+   `clients/<slug>/me_ec/manual_installs/<YYYY-MM>.json` (populated by
+   the future ticket-close workflow). Green callout when empty:
+   "All scheduled patches deployed cleanly — no hands-on installation
+   required this month."
+8. **What Technijian Did For You** — bulleted value summary: patches
+   deployed, critical CVEs closed, vendor coordination, scheduled
+   window honored, hands-on remediations performed, 24×7 monitoring.
+9. **Recommendations** — forward-looking guidance: enable automated
+   schedule (if missing), verify Wake-on-LAN coverage (if low-install
+   machines suggest it), reboot prompts for critical patches, or
+   "stay the course" if all green.
+10. **About This Report** — provenance + "email support@technijian.com
+    for any questions."
 
 ## Proofreader expected sections (EXPECTED_SECTIONS)
 
-The proofread gate checks for these 8 section headers (case-insensitive,
+The proofread gate checks for these 10 section headers (case-insensitive,
 searched across all text including table cells):
 
 ```
@@ -76,13 +94,38 @@ Patch Window
 Per-Machine Summary
 Severity Breakdown
 Vendor Breakdown
-Patches Installed
-Failed Installs
+Automated Patch Deployments
+Manual Installations by Technijian
+What Technijian Did For You
+Recommendations
 About This Report
 ```
 
 124/124 reports (Jan–Apr 2026, 31 customers — RAVI-HOME excluded) pass
 8/8 proofread checks as of 2026-05-03.
+
+## Manual installs data file
+
+Future workflow: when a CP ticket for a failed patch closes, the
+ticket-close handler appends an entry to::
+
+    clients/<slug>/me_ec/manual_installs/<YYYY-MM>.json
+
+```json
+[
+  {
+    "machine": "DESKTOP-ABC",
+    "patch_name": "Microsoft .NET Framework KB5050006",
+    "severity": "Critical",
+    "tech": "Tharunaa",
+    "installed_date": "2026-01-15",
+    "source_ticket_id": 1452745
+  }
+]
+```
+
+The next monthly report run picks this up automatically and surfaces
+it in the "Manual Installations by Technijian" section.
 
 ## Customer → folder mapping
 
