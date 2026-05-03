@@ -13,15 +13,20 @@ permission step needed.
 
 ## Prerequisites
 
-- **One-time per client team**: a tech with Teams admin rights creates a
-  channel named exactly `Monthly Reports` on each client's team. The
-  Teams-Connector app does NOT have `Channel.Create` scope, so the
-  uploader will skip clients whose team is missing this channel.
 - **Teams team naming**: the team's `displayName` must equal the client
   code (e.g. `AAVA`, `BWH`). Special-case mappings live in
   `slug_to_team_name()` in `upload_monthly_reports.py` for the few
-  clients whose Teams name diverges from the client folder slug
-  (Technijian-MSP, Technijian-India, ISH-KSS).
+  clients whose Teams name diverges from the lowercased client folder
+  slug. As of 2026-05-03 the only confirmed overrides are
+  `technijian → "Technijian"` and `technijian-ind → "Tech India"`.
+  Other unmatched slugs (cbl, max, rfps, rmg, ish-kss) have no
+  corresponding team in the tenant — they're skipped with a
+  `team not found` message.
+- **The "Monthly Reports" channel auto-creates** if it doesn't already
+  exist. The Teams-Connector app's existing scopes
+  (`Group.Read.All` + `Sites.ReadWrite.All`) are sufficient to
+  `POST /teams/{id}/channels` for standard channels — verified
+  2026-05-03 by creating channels on 32 client teams in one pass.
 - **Generated reports**: monthly DOCX files must exist under each
   client's data-source subfolder. Run the per-source builders first
   (see ME EC, Huntress, CrowdStrike, Sophos, Meraki, Veeam VBR, Veeam
@@ -82,13 +87,28 @@ source to a glob pattern. Today it covers:
 Add new data sources by appending to the list — the skill auto-picks up
 files matching the new pattern.
 
+## Folder structure created on each team
+
+```
+Microsoft Teams: <CLIENT_CODE>
+└── Monthly Reports (channel)
+    ├── January-2026
+    │   ├── <CLIENT> - ME EC Patch Activity - 2026-01.docx
+    │   ├── <CLIENT> - Veeam VBR Monthly Backup - 2026-01.docx
+    │   └── ...
+    ├── February-2026
+    ├── March-2026
+    └── April-2026
+```
+
+All team members of the client's Teams team automatically have access
+to the channel and its folders — no per-channel permission step needed.
+
 ## Gotchas
 
-- **Channel not present** → uploader skips the client and logs the gap.
-  Email a tech to create `Monthly Reports` on that client's team.
 - **Team displayName mismatch** → client's team must match the lowercased
   client folder slug after applying `slug_to_team_name()`. Add overrides
-  for new exceptions.
+  for new exceptions when an MSP onboards a new client.
 - **SharePoint conflict resolution** → existing files with the same name
   are **replaced** (`@microsoft.graph.conflictBehavior=replace`). This
   keeps the link stable across re-runs.
@@ -96,3 +116,6 @@ files matching the new pattern.
   good for files under ~4 MB. Our DOCX reports are 70-100 KB, so this is
   fine. If we ever need >4 MB uploads, switch to the resumable upload
   session API.
+- **Channel-create semantics** → if the channel already exists Graph
+  returns 409, and the uploader silently re-finds it. Idempotent —
+  safe to re-run.

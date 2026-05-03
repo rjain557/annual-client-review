@@ -86,11 +86,11 @@ def find_reports_for_client(client_dir: Path, year: int, month: int) -> list[tup
 
 def slug_to_team_name(slug: str) -> str:
     """Convert ``aava`` to ``AAVA``. Special-cases for client teams whose
-    Teams displayName differs from the lowercased slug — extend as needed."""
+    Teams displayName differs from the lowercased slug — confirmed against
+    the live tenant 2026-05-03."""
     overrides = {
-        "technijian": "Technijian-MSP",
-        "technijian-ind": "Technijian-India",
-        "ish-kss": "ISH-KSS",
+        "technijian": "Technijian",
+        "technijian-ind": "Tech India",
     }
     return overrides.get(slug.lower(), slug.upper())
 
@@ -122,11 +122,15 @@ def upload_for_client(slug: str, year: int, month: int, *, dry_run: bool) -> dic
 
     channel = t.find_channel(team_id, CHANNEL_NAME)
     if channel is None:
-        result["skipped"] = (
-            f"channel '{CHANNEL_NAME}' missing on team '{team_name}' — "
-            f"please create it once (we don't have Channel.Create scope)"
-        )
-        return result
+        try:
+            channel = t.create_channel(
+                team_id, CHANNEL_NAME,
+                description="Technijian-generated monthly monitoring reports.",
+            )
+            result["channel_created"] = True
+        except Exception as exc:
+            result["skipped"] = f"could not create '{CHANNEL_NAME}' channel: {exc}"
+            return result
     channel_id = channel["id"]
 
     folder = t.get_channel_folder(team_id, channel_id)

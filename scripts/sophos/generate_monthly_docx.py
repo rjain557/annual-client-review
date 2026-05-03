@@ -33,6 +33,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SHARED    = REPO_ROOT / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
+import vendor_news  # noqa: E402
+import compliance_section  # noqa: E402
 
 PROOFREADER  = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
@@ -914,6 +916,16 @@ def build_report(payload: dict, out_path: Path) -> None:
     section_fw_events(doc, payload)
     section_daily_trend(doc, payload)
     section_what_technijian_did(doc, payload)
+    try:
+        ym = payload["month"]
+        year_int, month_int = (int(x) for x in ym.split("-"))
+        vendor_news.render_section(doc, "sophos", year_int, month_int, brand)
+    except Exception:
+        pass
+    try:
+        compliance_section.render_section(doc, payload["client_code"].lower(), brand)
+    except Exception:
+        pass
     section_recommendations(doc, payload)
     section_about(doc, payload)
 

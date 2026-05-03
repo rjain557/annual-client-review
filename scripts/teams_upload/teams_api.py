@@ -184,6 +184,33 @@ def upload_file_to_folder(drive_id: str, folder_item_id: str, local_path: Path, 
     return _put_bytes(url, local_path.read_bytes(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 
 
+def create_channel(team_id: str, channel_name: str, *, description: str = "") -> dict:
+    """Create a standard channel on the team. Idempotent — if a channel
+    with the same name already exists Graph returns 409 and we just
+    re-find it."""
+    payload = {
+        "displayName": channel_name,
+        "membershipType": "standard",
+    }
+    if description:
+        payload["description"] = description
+    r = requests.post(
+        f"{GRAPH}/teams/{team_id}/channels",
+        headers={
+            "Authorization": f"Bearer {get_token()}",
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=60,
+    )
+    if r.status_code == 409:
+        existing = find_channel(team_id, channel_name)
+        if existing:
+            return existing
+    r.raise_for_status()
+    return r.json()
+
+
 def list_team_members(team_id: str) -> list[dict]:
     """Return the team members. Used to confirm that the audience for the
     Monthly Reports channel is what we expect."""
