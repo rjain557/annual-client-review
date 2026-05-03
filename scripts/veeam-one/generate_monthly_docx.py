@@ -36,6 +36,8 @@ SHARED = REPO_ROOT / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 
+import vendor_news  # noqa: E402
+
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
 
@@ -43,7 +45,9 @@ EXPECTED_SECTIONS = [
     "Executive Summary",
     "Repository Capacity",
     "Business View Coverage",
+    "Recovery Posture",
     "What Technijian Did For You",
+    "Industry News & Vendor Innovations",
     "Recommendations",
     "About This Report",
 ]
@@ -198,6 +202,45 @@ def section_business_view(doc, summary: dict):
     )
 
 
+def section_recovery_posture(doc, summary: dict):
+    """Recovery runway view from the Veeam ONE perspective."""
+    brand.add_section_header(doc, "Recovery Posture")
+    repos = summary.get("repositories") or []
+    totals = summary.get("totals") or {}
+    runway = totals.get("runway_days_min")
+    used_pct = totals.get("used_percent")
+    immutable_count = sum(1 for r in repos if r.get("is_immutable"))
+
+    brand.add_body(
+        doc,
+        "Recovery posture is the combined picture of how much capacity "
+        "we have, how fast it's being consumed, and how resistant the "
+        "backup chain is to ransomware. Veeam ONE projects each of "
+        "these and surfaces alarms before they become incidents.",
+    )
+    rows = [
+        ["Repositories under monitoring",      fmt_int(len(repos))],
+        ["Capacity utilization",               f"{used_pct:.0f}%" if used_pct is not None else "—"],
+        ["Projected storage runway",           f"{int(runway)} days" if runway is not None else "—"],
+        ["Repositories with immutability",     f"{immutable_count}/{len(repos)}" if repos else "—"],
+    ]
+    brand.styled_table(
+        doc,
+        ["Recovery Metric", "Current State"],
+        rows,
+        col_widths=[3.5, 2.5],
+    )
+    if runway is not None and runway < 60:
+        brand.add_callout_box(
+            doc,
+            f"Projected runway is {int(runway)} days. Capacity expansion "
+            f"should be scheduled now to keep the runway from dropping "
+            f"below operational comfort.",
+            accent_hex=brand.CORE_ORANGE_HEX,
+            bg_hex="FEF3EE",
+        )
+
+
 def section_what_technijian_did(doc, customer: str, year: int, month: int, summary: dict):
     brand.add_section_header(doc, "What Technijian Did For You")
     repos = summary.get("repositories") or []
@@ -309,7 +352,9 @@ def build_report(client_dir: Path, customer: str, year: int, month: int, snapsho
     section_executive_summary(doc, customer, year, month, summary)
     section_repos(doc, summary.get("repositories") or [])
     section_business_view(doc, summary)
+    section_recovery_posture(doc, summary)
     section_what_technijian_did(doc, customer, year, month, summary)
+    vendor_news.render_section(doc, "veeam", year, month, brand)
     section_recommendations(doc, summary)
     section_about(doc, customer, year, month, summary)
 

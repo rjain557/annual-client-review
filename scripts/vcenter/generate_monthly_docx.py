@@ -41,6 +41,8 @@ SHARED = REPO_ROOT / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 
+import vendor_news  # noqa: E402
+
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
 
@@ -48,7 +50,9 @@ EXPECTED_SECTIONS = [
     "Executive Summary",
     "Virtual Machine Inventory",
     "Storage Capacity",
+    "VM Power & Right-Sizing",
     "What Technijian Did For You",
+    "Industry News & Vendor Innovations",
     "Recommendations",
     "About This Report",
 ]
@@ -214,6 +218,97 @@ def section_storage(doc, datastores: list[dict]):
     )
 
 
+def section_vm_rightsizing(doc, vms: list[dict]):
+    """Identify VMs that may be over-provisioned or candidates for
+    decommission. Findings are advisory — they help the client see
+    cost-saving opportunities Technijian's monitoring surfaces."""
+    brand.add_section_header(doc, "VM Power & Right-Sizing")
+    if not vms:
+        brand.add_body(doc, "No virtual machines reported in this snapshot.")
+        return
+
+    powered_off = []
+    for vm in vms:
+        state = (vm.get("power_state") or vm.get("powerState") or "").upper()
+        if "OFF" in state:
+            powered_off.append(vm)
+
+    # Over-allocated heuristic: VMs with >16 vCPU or >64GB RAM that are still
+    # powered on. Tunable per environment — these are conservative starting
+    # thresholds intended to flag candidates for review, not to declare
+    # them wasteful.
+    oversized = []
+    for vm in vms:
+        try:
+            cpus = int(vm.get("cpu_count") or vm.get("num_cpu") or vm.get("vcpu") or 0)
+            mem_mb = int(vm.get("memory_mb") or vm.get("memory_size_MB") or vm.get("memory") or 0)
+        except Exception:
+            continue
+        if cpus > 16 or mem_mb > 64 * 1024:
+            oversized.append((vm, cpus, mem_mb))
+
+    if not powered_off and not oversized:
+        brand.add_callout_box(
+            doc,
+            "All VMs in this snapshot are powered on and within typical "
+            "right-sizing thresholds (≤16 vCPU, ≤64 GB RAM). The fleet is "
+            "running lean.",
+            accent_hex=brand.GREEN_HEX,
+            bg_hex="E9F7EE",
+        )
+        return
+
+    brand.add_body(
+        doc,
+        "Technijian flags VMs that look like decommission or right-sizing "
+        "candidates. Review with your Technijian contact before changing "
+        "any of these — they're starting points, not directives.",
+    )
+
+    if powered_off:
+        brand.add_body(
+            doc,
+            "Powered-off VMs (potential decommission candidates)",
+            bold=True, size=12, color=brand.DARK_CHARCOAL,
+        )
+        rows = []
+        for vm in powered_off[:30]:
+            rows.append([
+                (vm.get("name") or "")[:40],
+                (vm.get("guest_os") or vm.get("os") or vm.get("guestFullName") or "—")[:35],
+                vm.get("cpu_count") or vm.get("num_cpu") or "—",
+                f"{int(vm.get('memory_mb') or 0)/1024:.0f} GB" if vm.get("memory_mb") else "—",
+            ])
+        brand.styled_table(
+            doc,
+            ["VM Name", "OS", "vCPU", "RAM"],
+            rows,
+            col_widths=[2.2, 2.2, 0.8, 1.2],
+        )
+
+    if oversized:
+        brand.add_body(
+            doc,
+            "Large allocations (review for right-sizing)",
+            bold=True, size=12, color=brand.DARK_CHARCOAL,
+        )
+        rows = []
+        for vm, cpus, mem_mb in oversized[:20]:
+            rows.append([
+                (vm.get("name") or "")[:40],
+                str(cpus),
+                f"{mem_mb/1024:.0f} GB",
+                "Review",
+            ])
+        brand.styled_table(
+            doc,
+            ["VM Name", "vCPU", "RAM", "Action"],
+            rows,
+            col_widths=[2.4, 0.8, 1.2, 2.0],
+            status_col=3,
+        )
+
+
 def section_what_technijian_did(doc, customer: str, year: int, month: int, summary: dict, vms: list, alerts: list):
     brand.add_section_header(doc, "What Technijian Did For You")
     vm_count = int(summary.get("vm_count") or 0)
@@ -333,7 +428,9 @@ def build_report(client_dir: Path, customer: str, year: int, month: int, snapsho
     section_executive_summary(doc, customer, year, month, summary, alerts)
     section_vm_inventory(doc, vms)
     section_storage(doc, datastores)
+    section_vm_rightsizing(doc, vms)
     section_what_technijian_did(doc, customer, year, month, summary, vms, alerts)
+    vendor_news.render_section(doc, "vmware", year, month, brand)
     section_recommendations(doc, datastores, alerts)
     section_about(doc, customer, year, month, summary)
 

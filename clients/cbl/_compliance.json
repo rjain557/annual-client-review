@@ -1,0 +1,17 @@
+{
+  "client_code": "CBL",
+  "client_name": "Chris Bank Law",
+  "primary_domain": null,
+  "industry": "Financial Services",
+  "industry_evidence": "Name indicates financial services / advisory / lending (match: 'Bank')",
+  "compliance_scope": [
+    "SOC 2",
+    "GLBA",
+    "PCI DSS"
+  ],
+  "compliance_rationale": "Financial-services clients handle non-public personal information (NPI) and payment data. GLBA Safeguards Rule requires a written information-security program. SOC 2 Type II is increasingly the de-facto standard for vendor diligence. PCI DSS applies wherever cards are accepted (including custodial fee processing).",
+  "data_sensitivity": "NPI / PCI",
+  "classified_at": "2026-05-02",
+  "classifier_version": "1",
+  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+}

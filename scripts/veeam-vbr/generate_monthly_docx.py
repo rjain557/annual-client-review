@@ -38,6 +38,8 @@ SHARED = REPO_ROOT / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 
+import vendor_news  # noqa: E402
+
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
 
@@ -46,7 +48,9 @@ EXPECTED_SECTIONS = [
     "Backup Jobs",
     "Repository Capacity",
     "Backup Activity",
+    "Recovery Posture",
     "What Technijian Did For You",
+    "Industry News & Vendor Innovations",
     "Recommendations",
     "About This Report",
 ]
@@ -275,6 +279,64 @@ def section_activity(doc, year: int, month: int, sessions: list, jobs: list):
         )
 
 
+def section_recovery_posture(doc, summary: dict, jobs: list, repos: list, sessions: list):
+    """RTO/RPO posture summary — when was the last clean recovery point
+    per job, how recoverable is the fleet today."""
+    brand.add_section_header(doc, "Recovery Posture")
+    last_success = summary.get("last_success_at") or summary.get("last_session_at")
+    last_session = summary.get("last_session_at")
+    last_success_str = (last_success or "").replace("T", " ")[:19] if last_success else "—"
+    last_session_str = (last_session or "").replace("T", " ")[:19] if last_session else "—"
+
+    immutable_count = sum(1 for r in repos if r.get("makeRecentBackupsImmutable"))
+    immutable_total = len(repos)
+
+    brand.add_body(
+        doc,
+        f"Recovery Point Objective (RPO) — the freshness of your most "
+        f"recent recoverable backup — and Recovery Time Objective (RTO) "
+        f"posture summary. These figures determine how much data and "
+        f"how much time you'd lose in a worst-case restore scenario.",
+    )
+    rows = [
+        ["Most recent successful backup",       last_success_str],
+        ["Most recent session of any kind",     last_session_str],
+        ["Configured backup jobs",              fmt_int(len(jobs))],
+        ["Repositories under management",       fmt_int(len(repos))],
+        ["Repositories with immutability on",   f"{immutable_count}/{immutable_total}" if immutable_total else "—"],
+        ["Backup sessions this period",         fmt_int(len(sessions))],
+    ]
+    brand.styled_table(
+        doc,
+        ["Recovery Metric", "Current State"],
+        rows,
+        col_widths=[3.5, 2.5],
+    )
+
+    if immutable_total and immutable_count == 0:
+        brand.add_callout_box(
+            doc,
+            "None of the listed repositories enforce immutable backup "
+            "retention today. Where the underlying storage supports it "
+            "(hardened Linux repository, object-lock S3, dedicated "
+            "appliance), enabling immutability adds ransomware-resilient "
+            "recovery for no incremental license cost. Email "
+            "support@technijian.com to scope this for your environment.",
+            accent_hex=brand.CORE_ORANGE_HEX,
+            bg_hex="FEF3EE",
+        )
+    elif immutable_count == immutable_total and immutable_total > 0:
+        brand.add_callout_box(
+            doc,
+            "All managed repositories enforce immutable backup retention. "
+            "Even a successful ransomware attack on the production "
+            "environment cannot delete the backup chain — recovery is "
+            "guaranteed.",
+            accent_hex=brand.GREEN_HEX,
+            bg_hex="E9F7EE",
+        )
+
+
 def section_what_technijian_did(doc, customer: str, year: int, month: int, jobs: list, sessions: list, repos: list):
     brand.add_section_header(doc, "What Technijian Did For You")
     job_count = len(jobs)
@@ -396,7 +458,9 @@ def build_report(client_dir: Path, customer: str, year: int, month: int, snapsho
     section_jobs(doc, jobs)
     section_repos(doc, repos)
     section_activity(doc, year, month, month_sessions, jobs)
+    section_recovery_posture(doc, summary, jobs, repos, month_sessions)
     section_what_technijian_did(doc, customer, year, month, jobs, month_sessions, repos)
+    vendor_news.render_section(doc, "veeam", year, month, brand)
     section_recommendations(doc, repos, month_sessions)
     section_about(doc, customer, year, month, summary)
 

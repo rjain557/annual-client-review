@@ -1,0 +1,17 @@
+{
+  "client_code": "AAVA",
+  "client_name": "Aventine at Aliso Viejo Apartments",
+  "primary_domain": "aventine-apartments.com",
+  "industry": "Real Estate / Property Management",
+  "industry_evidence": "Name indicates property management or real-estate operations (match: 'Apartment')",
+  "compliance_scope": [
+    "PCI DSS",
+    "Fair Housing Act",
+    "California CCPA"
+  ],
+  "compliance_rationale": "Property managers process resident payments (rent, deposits, fees), triggering PCI DSS scope. Fair Housing Act records, applicant/resident PII, and California CCPA obligations all apply. Some clients also process credit/background checks bringing FCRA into scope.",
+  "data_sensitivity": "PCI / Resident PII",
+  "classified_at": "2026-05-02",
+  "classifier_version": "1",
+  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+}

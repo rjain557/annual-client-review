@@ -1,0 +1,16 @@
+{
+  "client_code": "KSS",
+  "client_name": "Kabuki Springs and Spa",
+  "primary_domain": null,
+  "industry": "Hospitality",
+  "industry_evidence": "Name indicates hotel, spa, or hospitality operation (match: 'Spa')",
+  "compliance_scope": [
+    "PCI DSS",
+    "California CCPA"
+  ],
+  "compliance_rationale": "Hotels and spas process card-present and card-not-present transactions, putting them firmly in PCI DSS scope. Guest PII (passport scans, ID) drives CCPA and state breach-notification obligations.",
+  "data_sensitivity": "PCI / Guest PII",
+  "classified_at": "2026-05-02",
+  "classifier_version": "1",
+  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+}

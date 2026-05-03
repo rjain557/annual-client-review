@@ -43,6 +43,9 @@ SHARED = REPO_ROOT / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 
+import vendor_news  # noqa: E402
+import compliance_section  # noqa: E402
+
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
 
@@ -54,7 +57,10 @@ EXPECTED_SECTIONS = [
     "Vendor Breakdown",
     "Automated Patch Deployments",
     "Manual Installations by Technijian",
+    "Year-to-Date Patch Coverage",
     "What Technijian Did For You",
+    "Industry News & Vendor Innovations",
+    "Compliance Alignment",
     "Recommendations",
     "About This Report",
 ]
@@ -666,7 +672,77 @@ def load_manual_installs(slug: str, year: int, month: int) -> list[dict]:
         return []
 
 
-def build_report(customer: dict, slug: str, year: int, month: int, agg: dict, windows: list[dict], out_path: Path) -> None:
+def section_ytd_coverage(doc, conn, customer_id: int, year: int, month: int) -> None:
+    """Year-to-date patch deployment totals by month — running tally."""
+    brand.add_section_header(doc, "Year-to-Date Patch Coverage")
+    cur = conn.cursor()
+    cur.execute(
+        """
+        SELECT
+            DATEPART(MONTH, DATEADD(SECOND, ips.INSTALLED_TIME/1000, '1970-01-01')) AS m,
+            COUNT(*) AS installs,
+            COUNT(DISTINCT r.RESOURCE_ID) AS machines,
+            SUM(CASE WHEN p.SEVERITYID = 1 THEN 1 ELSE 0 END) AS critical
+        FROM InstallPatchStatus ips
+        JOIN Resource r ON r.RESOURCE_ID = ips.RESOURCE_ID
+        JOIN Patch p    ON p.PATCHID     = ips.PATCH_ID
+        WHERE r.CUSTOMER_ID = %d
+          AND r.IS_INACTIVE = 'False'
+          AND ips.INSTALLED_TIME >= %d
+          AND ips.INSTALLED_TIME <  %d
+        GROUP BY DATEPART(MONTH, DATEADD(SECOND, ips.INSTALLED_TIME/1000, '1970-01-01'))
+        ORDER BY m
+        """,
+        (customer_id, sql.EPOCH_2026_MS, month_window_ms(year, month)[1]),
+    )
+    rows_db = cur.fetchall()
+    by_month = {int(r["m"]): r for r in rows_db}
+    if not by_month:
+        brand.add_body(
+            doc,
+            "Year-to-date totals will populate as automated patch deployments "
+            "accumulate during the year.",
+        )
+        return
+    brand.add_body(
+        doc,
+        f"Cumulative {year} patch deployment totals through "
+        f"{month_label(year, month)}, month by month. The running totals "
+        f"show Technijian's protection compounding across the calendar year.",
+    )
+    rows = []
+    cum_installs = 0
+    cum_critical = 0
+    for m in range(1, month + 1):
+        rec = by_month.get(m)
+        n = int(rec["installs"]) if rec else 0
+        cum_installs += n
+        machines_n = int(rec["machines"]) if rec else 0
+        critical_n = int(rec["critical"]) if rec else 0
+        cum_critical += critical_n
+        rows.append([
+            calendar.month_name[m],
+            fmt_int(n),
+            fmt_int(critical_n),
+            fmt_int(machines_n),
+            fmt_int(cum_installs),
+        ])
+    brand.styled_table(
+        doc,
+        ["Month", "Patches Deployed", "Critical Patches", "Endpoints Patched", "YTD Total"],
+        rows,
+        col_widths=[1.2, 1.4, 1.2, 1.4, 1.0],
+    )
+    brand.add_body(
+        doc,
+        f"Through {month_label(year, month)}, Technijian has deployed "
+        f"{fmt_int(cum_installs)} patches year-to-date — including "
+        f"{fmt_int(cum_critical)} Critical-severity vulnerabilities closed.",
+        bold=True, color=brand.DARK_CHARCOAL,
+    )
+
+
+def build_report(customer: dict, slug: str, year: int, month: int, agg: dict, windows: list[dict], conn, out_path: Path) -> None:
     customer_name = customer["CUSTOMER_NAME"]
     manual = load_manual_installs(slug, year, month)
 
@@ -680,7 +756,10 @@ def build_report(customer: dict, slug: str, year: int, month: int, agg: dict, wi
     section_vendor(doc, agg)
     section_automated_patches(doc, agg)
     section_manual_installs(doc, manual)
+    section_ytd_coverage(doc, conn, int(customer["CUSTOMER_ID"]), year, month)
     section_what_technijian_did(doc, customer_name, year, month, agg, manual, windows)
+    vendor_news.render_section(doc, "manageengine", year, month, brand)
+    compliance_section.render_section(doc, slug, brand)
     section_recommendations(doc, customer_name, agg, windows)
     section_about(doc, customer_name, year, month)
 
@@ -779,7 +858,7 @@ def main() -> int:
                     c if c.isalnum() or c in " -_" else "_" for c in cust_name
                 )
                 out = reports_dir / f"{safe_label} - ME EC Patch Activity - {year:04d}-{month:02d}.docx"
-                build_report(customer, slug, year, month, agg, cust_windows, out)
+                build_report(customer, slug, year, month, agg, cust_windows, conn, out)
                 generated.append(out)
                 print(
                     f"  [{slug}] {year}-{month:02d} -> {out.relative_to(REPO_ROOT)} "
