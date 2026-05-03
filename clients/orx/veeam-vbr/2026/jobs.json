@@ -1,0 +1,840 @@
+[
+  {
+    "description": "Created by TE-DC-BK-VBR-01\\Administrator at 10/14/2025 10:57 AM.",
+    "isHighPriority": false,
+    "virtualMachines": {
+      "includes": [
+        {
+          "type": "Tag",
+          "hostName": "172.16.9.252",
+          "name": "ORX",
+          "objectId": "urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+          "urn": "vc:172.16.9.252;category:urn:vmomi:InventoryServiceCategory:3f44eb88-9095-49cd-b870-5c125ad08f14:GLOBAL;tag:urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+          "platform": "VMware",
+          "size": "8.1 TB"
+        }
+      ],
+      "excludes": {
+        "vms": [],
+        "disks": [
+          {
+            "disksToProcess": "AllDisks",
+            "vmObject": {
+              "type": "Tag",
+              "hostName": "172.16.9.252",
+              "name": "ORX",
+              "objectId": "urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+              "urn": "vc:172.16.9.252;category:urn:vmomi:InventoryServiceCategory:3f44eb88-9095-49cd-b870-5c125ad08f14:GLOBAL;tag:urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+              "platform": "VMware",
+              "size": "8.1 TB"
+            },
+            "disks": [],
+            "removeFromVMConfiguration": true
+          }
+        ],
+        "templates": {
+          "isEnabled": true,
+          "excludeFromIncremental": true
+        }
+      }
+    },
+    "storage": {
+      "backupRepositoryId": "bffba477-1239-41e9-bbbb-5b209aa3cd7e",
+      "backupProxies": {
+        "autoSelectEnabled": false,
+        "proxyIds": [
+          "18b661c1-d9dc-4233-90a0-7e7b10dc2d09"
+        ]
+      },
+      "retentionPolicy": {
+        "type": "Days",
+        "quantity": 14
+      },
+      "gfsPolicy": {
+        "isEnabled": false,
+        "weekly": {
+          "desiredTime": "sunday",
+          "isEnabled": false,
+          "keepForNumberOfWeeks": 1
+        },
+        "monthly": {
+          "desiredTime": "First",
+          "isEnabled": false,
+          "keepForNumberOfMonths": 1
+        },
+        "yearly": {
+          "desiredTime": "January",
+          "isEnabled": false,
+          "keepForNumberOfYears": 1
+        }
+      },
+      "advancedSettings": {
+        "backupModeType": "Incremental",
+        "synthenticFulls": {
+          "isEnabled": false,
+          "weekly": {
+            "isEnabled": true,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "monday",
+            "dayNumberInMonth": "First",
+            "isEnabled": false,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "activeFulls": {
+          "isEnabled": true,
+          "weekly": {
+            "isEnabled": true,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "monday",
+            "dayNumberInMonth": "First",
+            "isEnabled": false,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "backupHealth": {
+          "isEnabled": false,
+          "weekly": {
+            "isEnabled": false,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "saturday",
+            "dayNumberInMonth": "Last",
+            "isEnabled": true,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "fullBackupMaintenance": {
+          "RemoveData": {
+            "isEnabled": false,
+            "afterDays": 14
+          },
+          "defragmentAndCompact": {
+            "isEnabled": false,
+            "weekly": {
+              "isEnabled": false,
+              "days": [
+                "saturday"
+              ]
+            },
+            "monthly": {
+              "dayOfWeek": "saturday",
+              "dayNumberInMonth": "Last",
+              "isEnabled": true,
+              "dayOfMonths": 1,
+              "months": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ]
+            }
+          }
+        },
+        "storageData": {
+          "compressionLevel": "Optimal",
+          "storageOptimization": "LocalTarget",
+          "inlineDataDedupEnabled": true,
+          "excludeSwapFileBlocks": true,
+          "excludeDeletedFileBlocks": true,
+          "encryption": {
+            "encryptionType": "ByUserPassword",
+            "isEnabled": false
+          }
+        },
+        "notifications": {
+          "sendSNMPNotifications": false,
+          "emailNotifications": {
+            "isEnabled": false
+          },
+          "vmAttribute": {
+            "isEnabled": false,
+            "notes": "Notes",
+            "appendToExistingValue": true
+          }
+        },
+        "vSphere": {
+          "enableVMWareToolsQuiescence": false,
+          "changedBlockTracking": {
+            "isEnabled": true,
+            "enableCBTautomatically": true,
+            "resetCBTonActiveFull": true
+          }
+        },
+        "storageIntegration": {
+          "isEnabled": true,
+          "processedVmsLimitEnabled": false,
+          "processedVmsCount": 10,
+          "failoverToStandardBackup": false
+        },
+        "scripts": {
+          "periodicityType": "BackupSessions",
+          "preCommand": {
+            "isEnabled": false,
+            "command": ""
+          },
+          "postCommand": {
+            "isEnabled": false,
+            "command": ""
+          },
+          "runScriptEvery": 1,
+          "dayOfWeek": [
+            "saturday"
+          ]
+        }
+      }
+    },
+    "guestProcessing": {
+      "appAwareProcessing": {
+        "isEnabled": false
+      },
+      "guestFSIndexing": {
+        "isEnabled": false
+      },
+      "guestInteractionProxies": {
+        "autoSelectEnabled": true,
+        "proxyIds": []
+      },
+      "guestCredentials": {
+        "credentialsType": "Linux",
+        "credentialsId": "00000000-0000-0000-0000-000000000000"
+      }
+    },
+    "schedule": {
+      "runAutomatically": true,
+      "daily": {
+        "dailyKind": "Everyday",
+        "isEnabled": true,
+        "localTime": "22:30",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday"
+        ]
+      },
+      "monthly": {
+        "dayOfWeek": "saturday",
+        "dayNumberInMonth": "Fourth",
+        "isEnabled": false,
+        "localTime": "22:00",
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
+      "periodically": {
+        "periodicallyKind": "Hours",
+        "isEnabled": false,
+        "frequency": 1,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        },
+        "startTimeWithinAnHour": 0
+      },
+      "continuously": {
+        "isEnabled": false,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        }
+      },
+      "afterThisJob": {
+        "isEnabled": false
+      },
+      "retry": {
+        "isEnabled": true,
+        "retryCount": 3,
+        "awaitMinutes": 10
+      },
+      "backupWindow": {
+        "isEnabled": false,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        }
+      }
+    },
+    "type": "Backup",
+    "id": "f5895f5f-ee95-456f-919f-1fee7319656a",
+    "name": "bkp_ORX",
+    "isDisabled": false
+  },
+  {
+    "description": "Created by .\\Administrator at 4/7/2026 5:27 AM.",
+    "isHighPriority": false,
+    "virtualMachines": {
+      "includes": [
+        {
+          "type": "Tag",
+          "hostName": "172.16.9.252",
+          "name": "ORX",
+          "objectId": "urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+          "urn": "vc:172.16.9.252;category:urn:vmomi:InventoryServiceCategory:3f44eb88-9095-49cd-b870-5c125ad08f14:GLOBAL;tag:urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+          "platform": "VMware",
+          "size": "8.1 TB"
+        }
+      ],
+      "excludes": {
+        "vms": [],
+        "disks": [
+          {
+            "disksToProcess": "AllDisks",
+            "vmObject": {
+              "type": "Tag",
+              "hostName": "172.16.9.252",
+              "name": "ORX",
+              "objectId": "urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+              "urn": "vc:172.16.9.252;category:urn:vmomi:InventoryServiceCategory:3f44eb88-9095-49cd-b870-5c125ad08f14:GLOBAL;tag:urn:vmomi:InventoryServiceTag:4fda2f48-780f-4fa6-a752-ef5a831d98f4:GLOBAL",
+              "platform": "VMware",
+              "size": "8.1 TB"
+            },
+            "disks": [],
+            "removeFromVMConfiguration": true
+          }
+        ],
+        "templates": {
+          "isEnabled": true,
+          "excludeFromIncremental": true
+        }
+      }
+    },
+    "storage": {
+      "backupRepositoryId": "45dbe136-7967-4708-a496-9450cbe23376",
+      "backupProxies": {
+        "autoSelectEnabled": true,
+        "proxyIds": []
+      },
+      "retentionPolicy": {
+        "type": "Days",
+        "quantity": 7
+      },
+      "gfsPolicy": {
+        "isEnabled": false,
+        "weekly": {
+          "desiredTime": "sunday",
+          "isEnabled": false,
+          "keepForNumberOfWeeks": 1
+        },
+        "monthly": {
+          "desiredTime": "First",
+          "isEnabled": false,
+          "keepForNumberOfMonths": 1
+        },
+        "yearly": {
+          "desiredTime": "January",
+          "isEnabled": false,
+          "keepForNumberOfYears": 1
+        }
+      },
+      "advancedSettings": {
+        "backupModeType": "Incremental",
+        "synthenticFulls": {
+          "isEnabled": false,
+          "weekly": {
+            "isEnabled": true,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "monday",
+            "dayNumberInMonth": "First",
+            "isEnabled": false,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "activeFulls": {
+          "isEnabled": false,
+          "weekly": {
+            "isEnabled": true,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "monday",
+            "dayNumberInMonth": "First",
+            "isEnabled": false,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "backupHealth": {
+          "isEnabled": false,
+          "weekly": {
+            "isEnabled": false,
+            "days": [
+              "saturday"
+            ]
+          },
+          "monthly": {
+            "dayOfWeek": "saturday",
+            "dayNumberInMonth": "Last",
+            "isEnabled": true,
+            "dayOfMonths": 1,
+            "months": [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ]
+          }
+        },
+        "fullBackupMaintenance": {
+          "RemoveData": {
+            "isEnabled": false,
+            "afterDays": 14
+          },
+          "defragmentAndCompact": {
+            "isEnabled": false,
+            "weekly": {
+              "isEnabled": false,
+              "days": [
+                "saturday"
+              ]
+            },
+            "monthly": {
+              "dayOfWeek": "saturday",
+              "dayNumberInMonth": "Last",
+              "isEnabled": true,
+              "dayOfMonths": 1,
+              "months": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ]
+            }
+          }
+        },
+        "storageData": {
+          "compressionLevel": "Optimal",
+          "storageOptimization": "LocalTarget",
+          "inlineDataDedupEnabled": true,
+          "excludeSwapFileBlocks": true,
+          "excludeDeletedFileBlocks": true,
+          "encryption": {
+            "encryptionType": "ByUserPassword",
+            "isEnabled": false
+          }
+        },
+        "notifications": {
+          "sendSNMPNotifications": false,
+          "emailNotifications": {
+            "isEnabled": false
+          },
+          "vmAttribute": {
+            "isEnabled": false,
+            "notes": "Notes",
+            "appendToExistingValue": true
+          }
+        },
+        "vSphere": {
+          "enableVMWareToolsQuiescence": false,
+          "changedBlockTracking": {
+            "isEnabled": true,
+            "enableCBTautomatically": true,
+            "resetCBTonActiveFull": true
+          }
+        },
+        "storageIntegration": {
+          "isEnabled": true,
+          "processedVmsLimitEnabled": false,
+          "processedVmsCount": 10,
+          "failoverToStandardBackup": false
+        },
+        "scripts": {
+          "periodicityType": "BackupSessions",
+          "preCommand": {
+            "isEnabled": false,
+            "command": ""
+          },
+          "postCommand": {
+            "isEnabled": false,
+            "command": ""
+          },
+          "runScriptEvery": 1,
+          "dayOfWeek": [
+            "saturday"
+          ]
+        }
+      }
+    },
+    "guestProcessing": {
+      "appAwareProcessing": {
+        "isEnabled": false
+      },
+      "guestFSIndexing": {
+        "isEnabled": false
+      },
+      "guestInteractionProxies": {
+        "autoSelectEnabled": true,
+        "proxyIds": []
+      },
+      "guestCredentials": {
+        "credentialsType": "Linux",
+        "credentialsId": "00000000-0000-0000-0000-000000000000"
+      }
+    },
+    "schedule": {
+      "runAutomatically": true,
+      "daily": {
+        "dailyKind": "Everyday",
+        "isEnabled": true,
+        "localTime": "23:45",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday"
+        ]
+      },
+      "monthly": {
+        "dayOfWeek": "saturday",
+        "dayNumberInMonth": "Fourth",
+        "isEnabled": false,
+        "localTime": "22:00",
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
+      "periodically": {
+        "periodicallyKind": "Hours",
+        "isEnabled": false,
+        "frequency": 1,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        },
+        "startTimeWithinAnHour": 0
+      },
+      "continuously": {
+        "isEnabled": false,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        }
+      },
+      "afterThisJob": {
+        "isEnabled": false
+      },
+      "retry": {
+        "isEnabled": true,
+        "retryCount": 3,
+        "awaitMinutes": 10
+      },
+      "backupWindow": {
+        "isEnabled": false,
+        "backupWindow": {
+          "days": [
+            {
+              "day": "sunday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "monday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "tuesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "wednesday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "thursday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "friday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            },
+            {
+              "day": "saturday",
+              "hours": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+            }
+          ]
+        }
+      }
+    },
+    "type": "Backup",
+    "id": "0d0c3770-73e1-4dc4-ad1e-d83be7e1961a",
+    "name": "Bkp_ORX_IMT",
+    "isDisabled": false
+  }
+]

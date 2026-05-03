@@ -1,0 +1,32 @@
+{
+  "client_code": "orx",
+  "generated_at": "2026-05-02T12:52:29.149800",
+  "veeam_one_host": "TE-DC-VONE-01 (10.7.9.135)",
+  "snapshot_date": "2026-05-02",
+  "repositories": [
+    {
+      "name": "bkp_ORX",
+      "path": "nfs3://10.7.9.225:/bkp_ORX",
+      "capacity_human": "18.0 TB",
+      "free_human": "3.5 TB",
+      "out_of_space_in_days": 3,
+      "running_tasks": 0,
+      "max_concurrent_tasks": 16,
+      "is_immutable": false,
+      "state": "Ok"
+    }
+  ],
+  "totals": {
+    "capacity_human": "18.0 TB",
+    "free_human": "3.5 TB",
+    "used_percent": 80.8,
+    "runway_days_min": 3
+  },
+  "business_view_groups": [
+    {
+      "name": "DS-NBD1-ORX",
+      "category": "Datastore",
+      "object_type": "VSphereVm"
+    }
+  ]
+}

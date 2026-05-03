@@ -126,3 +126,20 @@ when text is written as utf-8 but a tool re-decodes as cp1252 (`Aâ€`,
   cards) are in the report.
 - **Min-kb default is 10**. For very simple reports (1-page memo), bump to
   `--min-kb 5` rather than 10.
+
+<!-- ticket-management-note: cp-ticket-management -->
+
+## Ticket management
+
+If this skill ever needs to open a CP ticket for an issue it detects
+(capacity warning, threshold breach, persistent failure), use the
+tracked wrapper from the **cp-ticket-management** skill —
+`cp_tickets.create_ticket_for_code_tracked(...)` in
+`scripts/clientportal/cp_tickets.py`. The central state file at
+`state/cp_tickets.json` deduplicates on `issue_key`
+(convention: `<source-skill>:<issue-type>:<resource-id>`) and
+`scripts/clientportal/ticket_monitor.py check` (daily 06:00 PT on the
+production workstation) sends 24h reminder emails to
+support@technijian.com for any open ticket. **Don't call
+`cp_tickets.create_ticket(...)` directly** — the raw call bypasses
+state and reminders.

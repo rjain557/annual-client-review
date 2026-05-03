@@ -1,0 +1,189 @@
+[
+  {
+    "id": "fc7a2ff3-ddc2-4666-af22-dd0398565358",
+    "name": "bkp_RFPS",
+    "type": "Backup",
+    "description": "Created by TE-DC-BK-VBR-01\\Administrator at 10/23/2025 11:01 AM.",
+    "isHighPriority": false,
+    "status": null,
+    "lastResult": null,
+    "lastRunStartTime": null,
+    "lastRunEndTime": null,
+    "nextRunStartTime": null,
+    "destinationRepository": null,
+    "objectsCount": null,
+    "backupSize": null,
+    "dataSize": null,
+    "objects": [
+      {
+        "type": "VirtualMachine",
+        "hostName": "172.16.9.252",
+        "name": "RFPS-DC-WORDP-2",
+        "objectId": "vm-2939",
+        "urn": "vc:172.16.9.252;datacenter:datacenter-3;folder:group-v1461;vm:vm-2939",
+        "platform": "VMware",
+        "size": "2.9 GB"
+      },
+      {
+        "type": "VirtualMachine",
+        "hostName": "172.16.9.252",
+        "name": "RFPS-DC-WORDP-1",
+        "objectId": "vm-51032",
+        "urn": "vc:172.16.9.252;datacenter:datacenter-3;folder:group-v1461;vm:vm-51032",
+        "platform": "VMware",
+        "size": "39.1 GB"
+      }
+    ],
+    "recentSessions": [
+      {
+        "id": "f3c2ce49-fec8-4e69-aa8a-67fe6ad65e76",
+        "creationTime": "2026-05-01T22:30:19.392976-07:00",
+        "endTime": "2026-05-01T22:32:25.376883-07:00",
+        "state": "Stopped",
+        "result": "Success",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "9ce8c5e8-0422-4450-9904-47385d8ab60e",
+        "creationTime": "2026-04-30T22:30:08.641233-07:00",
+        "endTime": "2026-04-30T22:33:24.842991-07:00",
+        "state": "Stopped",
+        "result": "Success",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "316e8188-6c98-41d6-8fa9-6793ff3b7dac",
+        "creationTime": "2026-04-29T22:30:21.967169-07:00",
+        "endTime": "2026-04-29T22:34:17.256879-07:00",
+        "state": "Stopped",
+        "result": "Success",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "c421970f-7cdc-4a52-bc8c-415286ccbad6",
+        "creationTime": "2026-04-28T22:30:20.108459-07:00",
+        "endTime": "2026-04-28T22:33:33.200203-07:00",
+        "state": "Stopped",
+        "result": "Success",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "5fb02936-9760-4b97-bf1a-c7284794c41f",
+        "creationTime": "2026-04-27T22:30:13.85088-07:00",
+        "endTime": "2026-04-27T22:55:05.513776-07:00",
+        "state": "Stopped",
+        "result": "Success",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      }
+    ]
+  },
+  {
+    "id": "da45685b-2b4a-4825-9273-2ac74fdeb3ac",
+    "name": "Bkp_RFPS_IMT",
+    "type": "Backup",
+    "description": "Created by .\\Administrator at 4/7/2026 7:34 AM.",
+    "isHighPriority": false,
+    "status": null,
+    "lastResult": null,
+    "lastRunStartTime": null,
+    "lastRunEndTime": null,
+    "nextRunStartTime": null,
+    "destinationRepository": null,
+    "objectsCount": null,
+    "backupSize": null,
+    "dataSize": null,
+    "objects": [
+      {
+        "type": "Tag",
+        "hostName": "172.16.9.252",
+        "name": "RFPS",
+        "objectId": "urn:vmomi:InventoryServiceTag:378860c5-5e6f-474e-9992-5171a5a9928a:GLOBAL",
+        "urn": "vc:172.16.9.252;category:urn:vmomi:InventoryServiceCategory:3f44eb88-9095-49cd-b870-5c125ad08f14:GLOBAL;tag:urn:vmomi:InventoryServiceTag:378860c5-5e6f-474e-9992-5171a5a9928a:GLOBAL",
+        "platform": "VMware",
+        "size": "42 GB"
+      }
+    ],
+    "recentSessions": [
+      {
+        "id": "838d081b-5dd4-4d39-b090-b5c6031c0067",
+        "creationTime": "2026-05-01T19:37:16.614677-07:00",
+        "endTime": "2026-05-01T19:39:22.668842-07:00",
+        "state": "Stopped",
+        "result": "Failed",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "4a55ecfb-c34c-4844-ac2b-3ab0840756c1",
+        "creationTime": "2026-05-01T19:25:01.080025-07:00",
+        "endTime": "2026-05-01T19:27:04.783265-07:00",
+        "state": "Stopped",
+        "result": "Failed",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "ee581a34-9459-47b8-b504-56a535fe69cb",
+        "creationTime": "2026-05-01T19:12:45.953341-07:00",
+        "endTime": "2026-05-01T19:14:52.739267-07:00",
+        "state": "Stopped",
+        "result": "Failed",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "33a5d651-1563-4745-aca6-8a670c22a24f",
+        "creationTime": "2026-05-01T19:00:27.107335-07:00",
+        "endTime": "2026-05-01T19:02:30.0009-07:00",
+        "state": "Stopped",
+        "result": "Failed",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      },
+      {
+        "id": "923f82aa-a307-4420-aa19-207c08cb495f",
+        "creationTime": "2026-04-30T19:37:08.196112-07:00",
+        "endTime": "2026-04-30T19:39:08.660218-07:00",
+        "state": "Stopped",
+        "result": "Failed",
+        "progressPercent": 100,
+        "processedObjects": null,
+        "totalSize": null,
+        "transferredSize": null,
+        "speedBps": null
+      }
+    ]
+  }
+]

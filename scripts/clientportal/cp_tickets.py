@@ -378,6 +378,75 @@ def create_ticket_for_code(location_code: str, *,
     )
 
 
+def create_ticket_for_code_tracked(location_code: str, *,
+                                   issue_key: str,
+                                   source_skill: str,
+                                   title: str,
+                                   description: str,
+                                   metadata: dict | None = None,
+                                   **kwargs) -> dict:
+    """State-aware wrapper around create_ticket_for_code().
+
+    Idempotent on `issue_key`: if a ticket for this issue_key already exists
+    in state/cp_tickets.json AND has not been resolved, returns the existing
+    ticket without calling the SP. Otherwise creates a new ticket and
+    records it in state.
+
+    Convention for issue_key:  "<source-skill>:<issue-type>:<resource-id>"
+       e.g. "veeam-365:repo-capacity:AFFG-O365"
+            "veeam-365:job-warning:ALG-O365"
+            "sophos:open-alerts:AAVA"
+            "mailstore:archive-jobs-failing:icmlending"
+
+    Returns dict with keys:
+        ticket_id     - int (new or existing)
+        skipped       - bool (True if existing ticket was returned)
+        state_entry   - dict from ticket_state
+        raw           - raw create_ticket() response (None if skipped)
+    """
+    # Lazy import: avoid circular dependency for callers that don't need state.
+    import sys as _sys
+    from pathlib import Path as _P
+    _sys.path.insert(0, str(_P(__file__).resolve().parent))
+    import ticket_state  # type: ignore
+
+    existing = ticket_state.get(issue_key)
+    if existing and not existing.get("resolved_at"):
+        return {
+            "ticket_id": existing["ticket_id"],
+            "skipped": True,
+            "state_entry": existing,
+            "raw": None,
+        }
+
+    # Pop our own kwargs that don't pass through to create_ticket
+    priority = kwargs.get("priority", DEFAULT_PRIORITY)
+    assign_to = kwargs.get("assign_to_dir_id", INDIA_SUPPORT_POD_DIRID)
+
+    res = create_ticket_for_code(
+        location_code,
+        title=title,
+        description=description,
+        **kwargs,
+    )
+    tid = res.get("ticket_id")
+    if not tid:
+        # Creation failed — return the raw response, don't touch state
+        return {"ticket_id": None, "skipped": False, "state_entry": None, "raw": res}
+
+    entry = ticket_state.add(
+        issue_key=issue_key,
+        ticket_id=int(tid),
+        client_code=location_code,
+        source_skill=source_skill,
+        title=title,
+        priority_id=int(priority) if isinstance(priority, int) else 1257,
+        assign_to_dir_id=int(assign_to) if isinstance(assign_to, int) else 205,
+        metadata=metadata or {},
+    )
+    return {"ticket_id": int(tid), "skipped": False, "state_entry": entry, "raw": res}
+
+
 __all__ = [
     "INDIA_SUPPORT_POD_DIRID",
     "INDIA_SUPPORT_POD_NAME",
@@ -396,6 +465,7 @@ __all__ = [
     "STATUSES_BY_NAME",
     "create_ticket",
     "create_ticket_for_code",
+    "create_ticket_for_code_tracked",
     "lookup_active_contract_id",
     "lookup_client_id_and_contract",
     "lookup_location_top_filter_by_dir_id",

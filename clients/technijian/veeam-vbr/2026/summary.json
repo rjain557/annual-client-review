@@ -1,0 +1,81 @@
+{
+  "client_code": "technijian",
+  "generated_at": "2026-05-02T19:51:44.763365+00:00",
+  "vbr_server": "TE-DC-BK-VBR-01",
+  "window": {
+    "since": "2026-01-01",
+    "until": "2026-05-02"
+  },
+  "jobs": [
+    {
+      "id": "6f27c1f8-c970-46a0-9576-410d9553a134",
+      "name": "bkp_TECH",
+      "type": "Backup",
+      "schedule_local_time": "23:00",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    },
+    {
+      "id": "226d573e-8436-4f7e-932e-1b36c8fd745e",
+      "name": "bkp_TECH-ARC",
+      "type": "Backup",
+      "schedule_local_time": "22:15",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    },
+    {
+      "id": "df3980ff-a1e7-47c5-a62d-51fc753947cf",
+      "name": "bkp_TECH-CP",
+      "type": "Backup",
+      "schedule_local_time": "20:00",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    },
+    {
+      "id": "a1e55961-3346-48ff-b039-a329877a970d",
+      "name": "bkp_TECH-HRZ",
+      "type": "Backup",
+      "schedule_local_time": "20:30",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    },
+    {
+      "id": "a5e00258-0fa9-45bc-90e5-7d41e00bd77f",
+      "name": "bkp_TECH-LAB",
+      "type": "Backup",
+      "schedule_local_time": "20:17",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    },
+    {
+      "id": "c333c25c-945b-4a9d-a6c6-433fdcd45071",
+      "name": "bkp_TECH-WP",
+      "type": "Backup",
+      "schedule_local_time": "21:00",
+      "destinationRepositoryId": "137c63a2-7a42-491b-acf9-5c8d044ff51c"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "137c63a2-7a42-491b-acf9-5c8d044ff51c",
+      "name": "bkp_TECH",
+      "type": "Nfs",
+      "path": "nfs3://10.7.9.230:/bkp_TECH",
+      "hostName": "Gateway",
+      "isOnline": true,
+      "capacityGB": 61440.0,
+      "freeGB": 27723.0,
+      "usedSpaceGB": 32144.4,
+      "freePercent": 45.1,
+      "makeRecentBackupsImmutable": null,
+      "immutabilityDays": null
+    }
+  ],
+  "session_count": 979,
+  "by_result": {
+    "Success": 727,
+    "Failed": 252
+  },
+  "last_session_at": "2026-05-02T12:00:17.688961-07:00",
+  "last_session_result": "Success",
+  "last_success_at": "2026-05-02T12:00:17.688961-07:00",
+  "last_failure_at": "2026-04-27T23:00:08.732799-07:00",
+  "last_failure_message": "Processing TE-DC-BK-365-01",
+  "total_transferred_bytes": 0,
+  "total_transferred_gb": 0.0
+}

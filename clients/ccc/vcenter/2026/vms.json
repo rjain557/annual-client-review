@@ -1,0 +1,653 @@
+{
+  "_meta": {
+    "vcenter": "172.16.9.252",
+    "pulled_at": "2026-05-02T19:50:19Z",
+    "api_version": "8.0.0.10200",
+    "count": 3
+  },
+  "items": [
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-1910",
+      "name": "CCC-DC-AD-02",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-CCC] CCC-DC-AD-02/CCC-DC-AD-02_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "CCC-DC-AD-02",
+          "instance_uuid": "50132e83-8d43-5ff5-6ab3-cd9c59ba8ad4",
+          "bios_uuid": "564d5141-f45a-cf66-d6dc-3690aa49474e"
+        },
+        "nvme_adapters": {},
+        "name": "CCC-DC-AD-02",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1192759621,
+              "distributed_port": "13",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1135"
+            },
+            "mac_address": "00:50:56:93:38:d2",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50132e83-8d43-5ff5-6ab3-cd9c59ba8ad4",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-CCC] CCC-DC-AD-02/CCC-DC-AD-02_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1192759621,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "13",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1135"
+          },
+          "mac_address": "00:50:56:93:38:d2",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.100.11",
+        "family": "WINDOWS",
+        "host_name": "CCC-DC-AD-01.culp.dp"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:38:d2",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.100.11",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.100.11"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-1912",
+      "name": "CCC-DC-SQL-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "CCC-DC-SQL-01",
+          "instance_uuid": "502a638c-5e6e-bead-f36e-dce0454504fb",
+          "bios_uuid": "564d6c5b-41d4-321e-342d-5d31b8a797ca"
+        },
+        "nvme_adapters": {},
+        "name": "CCC-DC-SQL-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1169184175,
+              "distributed_port": "12",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1135"
+            },
+            "mac_address": "00:50:56:aa:ae:b2",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "502a638c-5e6e-bead-f36e-dce0454504fb",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-CCC] CCC-DC-SQL-01/CCC-DC-SQL-01_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1169184175,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "12",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1135"
+          },
+          "mac_address": "00:50:56:aa:ae:b2",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.100.25",
+        "family": "WINDOWS",
+        "host_name": "CCC-DC-SQL-02.culp.dp"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:aa:ae:b2",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "LINKLAYER",
+                "ip_address": "fe80::c725:7adb:df05:dc1d",
+                "prefix_length": 64,
+                "state": "UNKNOWN"
+              },
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.100.25",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.100.11",
+              "4.2.2.2"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-50024",
+      "name": "CCC-DC-TSVDI-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-CCC] CCC-DC-TSVDI-01/CCC-DC-TSVDI-01_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "CCC-DC-TSVDI-01",
+          "instance_uuid": "502a8793-2f96-b4c9-e6b6-10ea09521b05",
+          "bios_uuid": "422a38b6-e76e-67ab-eedb-668cb536c982"
+        },
+        "nvme_adapters": {},
+        "name": "CCC-DC-TSVDI-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1214980251,
+              "distributed_port": "14",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1135"
+            },
+            "mac_address": "00:50:56:aa:63:24",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "502a8793-2f96-b4c9-e6b6-10ea09521b05",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-CCC] CCC-DC-TSVDI-01/CCC-DC-TSVDI-01_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1214980251,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "14",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1135"
+          },
+          "mac_address": "00:50:56:aa:63:24",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.100.15",
+        "family": "WINDOWS",
+        "host_name": "CCC-DC-TSVDI-01.culp.dp"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:aa:63:24",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.100.15",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.100.11",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    }
+  ]
+}

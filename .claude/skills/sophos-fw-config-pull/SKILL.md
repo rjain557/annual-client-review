@@ -124,3 +124,20 @@ All 10 firewalls need whitelist. Scanner IP: `64.58.160.218`
 - Auth is per-request (username + password in each XML envelope) — no session token
 - Config pull pulls ~10 sections per firewall; takes 5-15s per device depending on WAN latency
 - SFOS 18.5+ confirmed compatible; all 14 of Technijian's XGS devices are on SFOS 19.5-22.0
+
+<!-- ticket-management-note: cp-ticket-management -->
+
+## Ticket management
+
+If this skill ever needs to open a CP ticket for an issue it detects
+(capacity warning, threshold breach, persistent failure), use the
+tracked wrapper from the **cp-ticket-management** skill —
+`cp_tickets.create_ticket_for_code_tracked(...)` in
+`scripts/clientportal/cp_tickets.py`. The central state file at
+`state/cp_tickets.json` deduplicates on `issue_key`
+(convention: `<source-skill>:<issue-type>:<resource-id>`) and
+`scripts/clientportal/ticket_monitor.py check` (daily 06:00 PT on the
+production workstation) sends 24h reminder emails to
+support@technijian.com for any open ticket. **Don't call
+`cp_tickets.create_ticket(...)` directly** — the raw call bypasses
+state and reminders.

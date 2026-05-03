@@ -1,0 +1,337 @@
+{
+  "snapshot_date": "2026-05-02",
+  "pulled_at": "2026-05-02T19:07:33Z",
+  "env": {
+    "version": "25.3.1.23021",
+    "webClientVersion": "25.3.1.23021",
+    "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+    "licenseeName": "Technijian Inc.",
+    "licenseeID": 4446,
+    "serverName": "archive.technijian.com",
+    "userName": "admin",
+    "systemProperties": {
+      "processors": [
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+      ],
+      "totalPhysicalMemory": 8589398016,
+      "operatingSystem": "Microsoft Windows Server 2022 Standard"
+    }
+  },
+  "service_status": {
+    "environmentInfo": {
+      "version": "25.3.1.23021",
+      "webClientVersion": "25.3.1.23021",
+      "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+      "licenseeName": "Technijian Inc.",
+      "licenseeID": 4446,
+      "serverName": "archive.technijian.com",
+      "userName": "admin",
+      "systemProperties": {
+        "processors": [
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+        ],
+        "totalPhysicalMemory": 8589398016,
+        "operatingSystem": "Microsoft Windows Server 2022 Standard"
+      }
+    },
+    "serverInfos": [
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8473,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "clientAccessServer",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 8589398016,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8471,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "managementServer",
+        "active": true,
+        "systemProperties": null,
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "vmtechmss",
+        "port": 8472,
+        "serverCertificate": {
+          "thumbprint": "269FAE74147A3F86747F0C809A3568084E234F5F"
+        },
+        "serverType": "instanceHost",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 17178845184,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": 3,
+        "numberOfRunningInstances": 3
+      }
+    ],
+    "messages": [
+      {
+        "type": "information",
+        "text": "A new MailStore Service Provider Edition version (26.2.0.24007) is available.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "warning",
+        "text": "The SMTP settings are configured to use an unencrypted connection or the option \"Accept all certificates\" is enabled.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "error",
+        "text": "Instance orthoxpress on vmtechmss: One or more search indexes have to be rebuilt.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      }
+    ]
+  },
+  "client_code": "icml",
+  "instance": {
+    "instanceID": "icmlending",
+    "alias": "icm",
+    "displayName": "icmlending",
+    "instanceHost": "vmtechmss",
+    "startMode": "automatic",
+    "processID": 6652,
+    "status": "running",
+    "startStopError": null
+  },
+  "statistics": {
+    "totalSizeMB": 53376,
+    "databaseFileSizeMB": 760,
+    "contentFileSizeMB": 51832,
+    "indexFileSizeMB": 784,
+    "numberOfMessages": 632651
+  },
+  "live_stats": {
+    "processUniqueID": "3fae8074-3dab-4a15-aa92-ef04fe97794d",
+    "timestamp": 1777748855103,
+    "totalProcessorMilliseconds": 43687,
+    "totalIOReadBytes": 389983594,
+    "totalIOWriteBytes": 20418032,
+    "totalIOOtherBytes": 6548316,
+    "totalRemoteProcedureCalls": 80,
+    "totalMessagesArchived": 0,
+    "totalMessagesChecked": 0,
+    "currentPrivateMemoryBytes": 320114688
+  },
+  "stores": [
+    {
+      "id": 1,
+      "name": "2015-07",
+      "requestedState": "current",
+      "error": null,
+      "statisticsCount": 632651,
+      "statisticsSize": 55963513133,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\ICM\\Data\\2015-07",
+      "contentPath": "E:\\ICM\\Data\\2015-07\\Content",
+      "indexPath": "E:\\ICM\\Data\\2015-07"
+    }
+  ],
+  "users": [
+    {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "diane_icmlend",
+      "fullName": "Diane Terry",
+      "distinguishedName": "CN=diane_ICMLend,OU=ICMLend,OU=Hosting,DC=cloud,DC=technijian,DC=com",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jack_icmlend",
+      "fullName": "Jack Wlodkowski",
+      "distinguishedName": "CN=jack_ICMLend,OU=ICMLend,OU=Hosting,DC=cloud,DC=technijian,DC=com",
+      "mfaStatus": "Disabled"
+    }
+  ],
+  "user_info": {
+    "$archiveadmin": {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "authentication": "integrated",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "admin"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ]
+    },
+    "diane_icmlend": {
+      "userName": "diane_icmlend",
+      "fullName": "Diane Terry",
+      "distinguishedName": "CN=diane_ICMLend,OU=ICMLend,OU=Hosting,DC=cloud,DC=technijian,DC=com",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "diane@icmlending.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "diane_icmlend",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jack_icmlend": {
+      "userName": "jack_icmlend",
+      "fullName": "Jack Wlodkowski",
+      "distinguishedName": "CN=jack_ICMLend,OU=ICMLend,OU=Hosting,DC=cloud,DC=technijian,DC=com",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jack@icmlending.com",
+        "lydia@icmlending.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "admin"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ]
+    }
+  },
+  "folder_stats": [],
+  "jobs": [],
+  "profiles": [],
+  "credentials": [],
+  "configuration": {
+    "instance": {
+      "instanceID": "icmlending",
+      "alias": "icm",
+      "displayName": "icmlending",
+      "instanceHost": "vmtechmss",
+      "startMode": "automatic",
+      "baseDirectory": "E:\\ICM",
+      "debugLogEnabled": false,
+      "imapServerConnectionLogEnabled": false,
+      "vssWriterEnabled": true,
+      "vssWriterExcludeIndexes": false
+    },
+    "index": {
+      "attachmentExtensions": null,
+      "includeAttachmentsOfPDFs": false
+    },
+    "compliance": {
+      "legalHoldEnabled": false,
+      "logSuccessfulUserActivities": [
+        "ComplianceChangeSettings",
+        "CredentialsAdd",
+        "CredentialsChange",
+        "CredentialsDelete",
+        "ProfileChangeUserName",
+        "RecoverStoreFinish",
+        "RecoverStoreStart",
+        "RetentionPoliciesMessageDelete",
+        "RetentionPoliciesProcessStart",
+        "RetentionPoliciesUpdate",
+        "SessionLogin",
+        "SessionLogout",
+        "SessionUnlockWithMfaCode",
+        "UserAdd",
+        "UserAppPasswordAdd",
+        "UserAppPasswordDelete",
+        "UserDelete",
+        "UserDisableMFA",
+        "UserInitializeMFA",
+        "UserRename",
+        "UserSetArchiveAdminSetEnabled",
+        "UserSetFolderAccess",
+        "UserSetMappings",
+        "UserSetPassword",
+        "UserUpdate"
+      ]
+    },
+    "directory_services": {
+      "type": "activeDirectory",
+      "serverName": "10.100.240.69",
+      "protocol": "LDAP",
+      "authenticationType": "standardAuthentication",
+      "userName": "archiver@cloud.technijian.com",
+      "password": null,
+      "baseDN": "OU=ICMLend,OU=Hosting,DC=cloud,DC=technijian,DC=com",
+      "microsoftExchangeUsersOnly": true,
+      "enabledUsersOnly": true,
+      "usersVisibleInAddressListsOnly": true,
+      "groups": [
+        "ICM Archive Enabled"
+      ],
+      "userNameFormat": "samAccountName",
+      "authenticationProtocol": "networkAuthentication",
+      "openIdDiscoveryUrl": null,
+      "openIdClientID": null,
+      "openIdRedirectUrl": null,
+      "openIdForceAdfsLogin": false,
+      "deleteUsers": false
+    }
+  }
+}

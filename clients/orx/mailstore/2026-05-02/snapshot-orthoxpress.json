@@ -1,0 +1,5876 @@
+{
+  "snapshot_date": "2026-05-02",
+  "pulled_at": "2026-05-02T19:07:37Z",
+  "env": {
+    "version": "25.3.1.23021",
+    "webClientVersion": "25.3.1.23021",
+    "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+    "licenseeName": "Technijian Inc.",
+    "licenseeID": 4446,
+    "serverName": "archive.technijian.com",
+    "userName": "admin",
+    "systemProperties": {
+      "processors": [
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+      ],
+      "totalPhysicalMemory": 8589398016,
+      "operatingSystem": "Microsoft Windows Server 2022 Standard"
+    }
+  },
+  "service_status": {
+    "environmentInfo": {
+      "version": "25.3.1.23021",
+      "webClientVersion": "25.3.1.23021",
+      "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+      "licenseeName": "Technijian Inc.",
+      "licenseeID": 4446,
+      "serverName": "archive.technijian.com",
+      "userName": "admin",
+      "systemProperties": {
+        "processors": [
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+        ],
+        "totalPhysicalMemory": 8589398016,
+        "operatingSystem": "Microsoft Windows Server 2022 Standard"
+      }
+    },
+    "serverInfos": [
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8473,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "clientAccessServer",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 8589398016,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8471,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "managementServer",
+        "active": true,
+        "systemProperties": null,
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "vmtechmss",
+        "port": 8472,
+        "serverCertificate": {
+          "thumbprint": "269FAE74147A3F86747F0C809A3568084E234F5F"
+        },
+        "serverType": "instanceHost",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 17178845184,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": 3,
+        "numberOfRunningInstances": 3
+      }
+    ],
+    "messages": [
+      {
+        "type": "information",
+        "text": "A new MailStore Service Provider Edition version (26.2.0.24007) is available.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "warning",
+        "text": "The SMTP settings are configured to use an unencrypted connection or the option \"Accept all certificates\" is enabled.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "error",
+        "text": "Instance orthoxpress on vmtechmss: One or more search indexes have to be rebuilt.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      }
+    ]
+  },
+  "client_code": "orx",
+  "instance": {
+    "instanceID": "orthoxpress",
+    "alias": "oxp",
+    "displayName": "orthoxpress",
+    "instanceHost": "vmtechmss",
+    "startMode": "automatic",
+    "processID": 5092,
+    "status": "running",
+    "startStopError": null
+  },
+  "statistics": {
+    "totalSizeMB": 917522,
+    "databaseFileSizeMB": 16182,
+    "contentFileSizeMB": 881094,
+    "indexFileSizeMB": 20246,
+    "numberOfMessages": 12423896
+  },
+  "live_stats": {
+    "processUniqueID": "7d019ba8-b703-41bb-b3a4-87803379842b",
+    "timestamp": 1777748859517,
+    "totalProcessorMilliseconds": 555423609,
+    "totalIOReadBytes": 3382803688129,
+    "totalIOWriteBytes": 114295160929,
+    "totalIOOtherBytes": 2691520888,
+    "totalRemoteProcedureCalls": 30215,
+    "totalMessagesArchived": 35944,
+    "totalMessagesChecked": 194843282,
+    "currentPrivateMemoryBytes": 667754496
+  },
+  "stores": [
+    {
+      "id": 1,
+      "name": "DefaultFileGroup",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 190502,
+      "statisticsSize": 20618727722,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\DefaultFileGroup",
+      "contentPath": "E:\\OXP\\Data\\DefaultFileGroup\\Content",
+      "indexPath": "E:\\OXP\\Data\\DefaultFileGroup"
+    },
+    {
+      "id": 2,
+      "name": "2015-06",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 192400,
+      "statisticsSize": 15386249083,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2015-06",
+      "contentPath": "E:\\OXP\\Data\\2015-06\\Content",
+      "indexPath": "E:\\OXP\\Data\\2015-06"
+    },
+    {
+      "id": 3,
+      "name": "2015-12",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 190009,
+      "statisticsSize": 12827454234,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2015-12",
+      "contentPath": "E:\\OXP\\Data\\2015-12\\Content",
+      "indexPath": "E:\\OXP\\Data\\2015-12"
+    },
+    {
+      "id": 4,
+      "name": "2016-04",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 182701,
+      "statisticsSize": 12634586100,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2016-04",
+      "contentPath": "E:\\OXP\\Data\\2016-04\\Content",
+      "indexPath": "E:\\OXP\\Data\\2016-04"
+    },
+    {
+      "id": 5,
+      "name": "2016-09",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 269388,
+      "statisticsSize": 30496585937,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2016-09",
+      "contentPath": "E:\\OXP\\Data\\2016-09\\Content",
+      "indexPath": "E:\\OXP\\Data\\2016-09"
+    },
+    {
+      "id": 6,
+      "name": "2016-11",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 220362,
+      "statisticsSize": 23573689657,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2016-11",
+      "contentPath": "E:\\OXP\\Data\\2016-11\\Content",
+      "indexPath": "E:\\OXP\\Data\\2016-11"
+    },
+    {
+      "id": 7,
+      "name": "2017-03",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 235462,
+      "statisticsSize": 24936876558,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2017-03",
+      "contentPath": "E:\\OXP\\Data\\2017-03\\Content",
+      "indexPath": "E:\\OXP\\Data\\2017-03"
+    },
+    {
+      "id": 8,
+      "name": "2017-06",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 287093,
+      "statisticsSize": 27511732687,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2017-06",
+      "contentPath": "E:\\OXP\\Data\\2017-06\\Content",
+      "indexPath": "E:\\OXP\\Data\\2017-06\\Index"
+    },
+    {
+      "id": 9,
+      "name": "2017-09",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 260614,
+      "statisticsSize": 20476558652,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2017-09",
+      "contentPath": "E:\\OXP\\Data\\2017-09\\Content",
+      "indexPath": "E:\\OXP\\Data\\2017-09\\Index"
+    },
+    {
+      "id": 10,
+      "name": "2017-12",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 294166,
+      "statisticsSize": 24984734408,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2017-12",
+      "contentPath": "E:\\OXP\\Data\\2017-12\\Content",
+      "indexPath": "E:\\OXP\\Data\\2017-12\\Index"
+    },
+    {
+      "id": 11,
+      "name": "2018-04",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 304125,
+      "statisticsSize": 25631546663,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2018-04",
+      "contentPath": "E:\\OXP\\Data\\2018-04\\Content",
+      "indexPath": "E:\\OXP\\Data\\2018-04\\Index"
+    },
+    {
+      "id": 12,
+      "name": "2018-07",
+      "requestedState": "normal",
+      "error": null,
+      "statisticsCount": 269759,
+      "statisticsSize": 24328933212,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\OXP\\Data\\2018-07",
+      "contentPath": "E:\\OXP\\Data\\2018-07\\Content",
+      "indexPath": "E:\\OXP\\Data\\2018-07\\Index"
+    },
+    {
+      "id": 13,
+      "name": "2018-11",
+      "requestedState": "current",
+      "error": null,
+      "statisticsCount": 9527315,
+      "statisticsSize": 698529585005,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": true,
+      "databasePath": "E:\\OXP\\Data\\2018-11",
+      "contentPath": "E:\\OXP\\Data\\2018-11\\Content",
+      "indexPath": "E:\\OXP\\Data\\2018-11\\Index"
+    }
+  ],
+  "users": [
+    {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "abackey",
+      "fullName": "Al Backey",
+      "distinguishedName": "CN=Al Backey,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "acastillejo",
+      "fullName": "Adriana Castillejo",
+      "distinguishedName": "CN=Adriana Castillejo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "admin",
+      "fullName": "Mike Wells",
+      "distinguishedName": "CN=Mike Wells,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "akhullar",
+      "fullName": "Aman Khullar",
+      "distinguishedName": "CN=Aman Khullar,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "amartinez",
+      "fullName": "Ana Martinez",
+      "distinguishedName": "CN=Ana Martinez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "amedina",
+      "fullName": "Alma Medina",
+      "distinguishedName": "CN=Alma Medina,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "apreciado",
+      "fullName": "Alexandra Preciado",
+      "distinguishedName": "CN=Alexandra Preciado,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "authorizations1",
+      "fullName": "authorizations",
+      "distinguishedName": "CN=authorizations,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "aveasy",
+      "fullName": "Ashley Veasy",
+      "distinguishedName": "CN=Ashley Veasy,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "aviola",
+      "fullName": "Amber Viola",
+      "distinguishedName": "CN=Amber Viola,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bbrushett",
+      "fullName": "Brandi Brushett",
+      "distinguishedName": "CN=Brandi Brushett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bcamacho",
+      "fullName": "Bernard Camacho",
+      "distinguishedName": "CN=Bernard Camacho,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "billing",
+      "fullName": "billing",
+      "distinguishedName": "CN=billing,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bmccall",
+      "fullName": "Brandon McCall",
+      "distinguishedName": "CN=Brandon McCall,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bmorales",
+      "fullName": "Brittany Morales",
+      "distinguishedName": "CN=Brittany Morales,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bnavarro",
+      "fullName": "Bianca Navarro",
+      "distinguishedName": "CN=Bianca Navarro,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "booking",
+      "fullName": "Booking",
+      "distinguishedName": "CN=Booking,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "budolph",
+      "fullName": "Brendan Udolph",
+      "distinguishedName": "CN=Brendan Udolph,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "bvarner",
+      "fullName": "Brett Varner",
+      "distinguishedName": "CN=Brett Varner,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cancellations",
+      "fullName": "cancellations",
+      "distinguishedName": "CN=cancellations,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cbible",
+      "fullName": "Chad Bible",
+      "distinguishedName": "CN=Chad Bible,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "chall",
+      "fullName": "Christie Hall",
+      "distinguishedName": "CN=Christie Hall,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "chopkins",
+      "fullName": "Courtney Hopkins",
+      "distinguishedName": "CN=Courtney Hopkins,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "collections",
+      "fullName": "collections",
+      "distinguishedName": "CN=collections,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cshorty",
+      "fullName": "Charon Shorty",
+      "distinguishedName": "CN=Charon Shorty,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "csimons",
+      "fullName": "Cameron Simons",
+      "distinguishedName": "CN=Cameron Simons,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cstaten",
+      "fullName": "Clerie Staten",
+      "distinguishedName": "CN=Clerie Staten,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cszabo",
+      "fullName": "Chase Szabo",
+      "distinguishedName": "CN=Chase Szabo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cthurman",
+      "fullName": "Christopher Thurman",
+      "distinguishedName": "CN=Christopher Thurman,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "cwalker",
+      "fullName": "Charlene Walker",
+      "distinguishedName": "CN=Charlene Walker,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dayala",
+      "fullName": "Deborah Ayala",
+      "distinguishedName": "CN=Deborah Ayala,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dbarrios",
+      "fullName": "Desirae Barrios",
+      "distinguishedName": "CN=Desirae Barrios,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dbennett",
+      "fullName": "Devin Bennett",
+      "distinguishedName": "CN=Devin Bennett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dbowe",
+      "fullName": "Dawn Bowe",
+      "distinguishedName": "CN=Dawn Bowe,OU=OXP Contractors,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dking",
+      "fullName": "Darren King",
+      "distinguishedName": "CN=Darren King,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dlinares",
+      "fullName": "Denise Linares",
+      "distinguishedName": "CN=Denise Linares,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dmendez",
+      "fullName": "Derek Mendez",
+      "distinguishedName": "CN=Derek Mendez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dnguyen",
+      "fullName": "Dayton Nguyen",
+      "distinguishedName": "CN=Dayton Nguyen,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dsanchez",
+      "fullName": "Daisy Sanchez",
+      "distinguishedName": "CN=Daisy Sanchez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dshannon",
+      "fullName": "Dante Shannon",
+      "distinguishedName": "CN=Dante Shannon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dwhite",
+      "fullName": "Dave White",
+      "distinguishedName": "CN=Dave White,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "dzyber",
+      "fullName": "Dylan Zyber",
+      "distinguishedName": "CN=Dylan Zyber,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "egreen",
+      "fullName": "Erik Green",
+      "distinguishedName": "CN=Erik Green,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "eulloa",
+      "fullName": "Edmundo ulloa",
+      "distinguishedName": "CN=Edmundo ulloa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "events",
+      "fullName": "events",
+      "distinguishedName": "CN=events,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "eweber",
+      "fullName": "Elias Weber",
+      "distinguishedName": "CN=Elias Weber,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ggonzalez",
+      "fullName": "Giovanna Gonzalez",
+      "distinguishedName": "CN=Giovanna Gonzalez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "gloza",
+      "fullName": "Georgina Loza",
+      "distinguishedName": "CN=Georgina Loza,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "gmaestre",
+      "fullName": "Gretchen Maestre",
+      "distinguishedName": "CN=Gretchen Maestre,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "hgetz",
+      "fullName": "Haley Getz",
+      "distinguishedName": "CN=Haley Getz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "hospital",
+      "fullName": "Hospital Fax",
+      "distinguishedName": "CN=Hospital,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "hr",
+      "fullName": "HR",
+      "distinguishedName": "CN=HR,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "intake",
+      "fullName": "intake",
+      "distinguishedName": "CN=intake,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jalvarez",
+      "fullName": "Joeseph Alvarez",
+      "distinguishedName": "CN=Joeseph Alvarez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jantonio",
+      "fullName": "Jackie Antonio",
+      "distinguishedName": "CN=Jackie Antonio,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jberry",
+      "fullName": "Jamie Berry",
+      "distinguishedName": "CN=Jamie Berry,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jbyrne",
+      "fullName": "Jonny Byrne",
+      "distinguishedName": "CN=Jonny Byrne,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jekolb",
+      "fullName": "Jeff Kolb",
+      "distinguishedName": "CN=Jeff Kolb,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jhernandez",
+      "fullName": "Juan Hernandez",
+      "distinguishedName": "CN=Juan Hernandez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jkolb",
+      "fullName": "Jamie Kolb",
+      "distinguishedName": "CN=Jamie Kolb,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jmitchell",
+      "fullName": "Jennifer Mitchell",
+      "distinguishedName": "CN=Jennifer Mitchell,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jpierucci",
+      "fullName": "Jaden Pierucci",
+      "distinguishedName": "CN=Jaden Pierucci,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jquintana",
+      "fullName": "Jasmine Quintana",
+      "distinguishedName": "CN=Jasmine Quintana,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jrobles",
+      "fullName": "Jose Robles",
+      "distinguishedName": "CN=Jose Robles,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jrodriguez",
+      "fullName": "Jasmin Rodriguez",
+      "distinguishedName": "CN=Jasmin Rodriguez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jromadin",
+      "fullName": "Judyann Romadin",
+      "distinguishedName": "CN=Judyann Romadin,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jroque",
+      "fullName": "james Roque",
+      "distinguishedName": "CN=james Roque,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jsalamon",
+      "fullName": "Jeff Salamon",
+      "distinguishedName": "CN=Jeff Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jsalamonjr",
+      "fullName": "Jeffrey Salamon Falconerofredlands",
+      "distinguishedName": "CN=Jeffrey Salamon Falconerofredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jsampson",
+      "fullName": "Jameel Sampson",
+      "distinguishedName": "CN=Jameel Sampson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jtrujillo",
+      "fullName": "Jaqueline Trujillo",
+      "distinguishedName": "CN=Jaqueline Trujillo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jworkman",
+      "fullName": "Jennifer Workman",
+      "distinguishedName": "CN=Jennifer Workman,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "kbullan",
+      "fullName": "Kari Bullan",
+      "distinguishedName": "CN=Kari Bullan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "kevin.rodgers",
+      "fullName": "Kevin Rodgers Falconerofredlands",
+      "distinguishedName": "CN=Kevin Rodgers Falconerofredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "kjohnson",
+      "fullName": "Kevin Johnson",
+      "distinguishedName": "CN=Kevin Johnson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "kphan",
+      "fullName": "Kaley Phan",
+      "distinguishedName": "CN=Kaley Phan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "krodgers",
+      "fullName": "Kevin Rodgers",
+      "distinguishedName": "CN=Kevin Rodgers,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "kshedd",
+      "fullName": "Kris Shedd",
+      "distinguishedName": "CN=Kris Shedd,OU=OXP Contractors,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lbarnes",
+      "fullName": "Lara Barnes",
+      "distinguishedName": "CN=Lara Barnes,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lcooley",
+      "fullName": "Levi Cooley",
+      "distinguishedName": "CN=Levi cooley,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ldelafuente",
+      "fullName": "Lisa De La Fuente",
+      "distinguishedName": "CN=Lisa De La Fuente,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lhannah",
+      "fullName": "Lisa Hannah",
+      "distinguishedName": "CN=Lisa Hannah,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lherrera",
+      "fullName": "Larisa Herrera",
+      "distinguishedName": "CN=Larisa Herrera,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lmckinney",
+      "fullName": "Leaya McKinney",
+      "distinguishedName": "CN=Leaya McKinney,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lsalamon",
+      "fullName": "Lisa Salamon",
+      "distinguishedName": "CN=Lisa Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "lsirota",
+      "fullName": "Lynda Sirota",
+      "distinguishedName": "CN=Lynda Sirota,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "madams",
+      "fullName": "Marvella Adams",
+      "distinguishedName": "CN=Marvella Adams,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mawells",
+      "fullName": "Makayla Wells",
+      "distinguishedName": "CN=Makayla Wells,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mbarbosa",
+      "fullName": "Marcelo Barbosa",
+      "distinguishedName": "CN=Marcelo Barbosa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mbudnik",
+      "fullName": "Markarit Budnik",
+      "distinguishedName": "CN=Markarit Budnik,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mbyerly",
+      "fullName": "Makayla Byerly",
+      "distinguishedName": "CN=Makayla Byerly,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mcastillon",
+      "fullName": "Marie Castillon",
+      "distinguishedName": "CN=Marie Castillon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mconcepcion",
+      "fullName": "Melanie Concepcion",
+      "distinguishedName": "CN=Melanie Concepcion,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mdixon",
+      "fullName": "Milan Dixon",
+      "distinguishedName": "CN=Milan Dixon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mgalfayan",
+      "fullName": "Mary Galfayan",
+      "distinguishedName": "CN=Mary Galfayan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mholen",
+      "fullName": "Matthew Holen",
+      "distinguishedName": "CN=Matthew Holen,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mlayosa",
+      "fullName": "Maria Layosa",
+      "distinguishedName": "CN=Maria Layosa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mmartinez",
+      "fullName": "Moises Martinez",
+      "distinguishedName": "CN=Moises Martinez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mnelson",
+      "fullName": "Mariah Nelson",
+      "distinguishedName": "CN=Mariah Nelson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mpasquini",
+      "fullName": "Michelle Pasquini",
+      "distinguishedName": "CN=Michelle Pasquini,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mrivera",
+      "fullName": "Mariana Rivera",
+      "distinguishedName": "CN=Mariana Rivera,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mryan",
+      "fullName": "Makayla Ryan",
+      "distinguishedName": "CN=Makayla Ryan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "mwells",
+      "fullName": "Mike Wells",
+      "distinguishedName": "CN=Mike Wells,OU=Orthokinetix Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ncollins",
+      "fullName": "Nicole Collins",
+      "distinguishedName": "CN=Nicole Collins,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "nfigueroa",
+      "fullName": "Nichole Figueroa",
+      "distinguishedName": "CN=Nichole Figueroa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "nflores",
+      "fullName": "Nancy Flores",
+      "distinguishedName": "CN=Nancy Flores,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "npearson",
+      "fullName": "Nicole Pearson",
+      "distinguishedName": "CN=Nicole Pearson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "nzajicek",
+      "fullName": "Nick Zajicek",
+      "distinguishedName": "CN=Nick Zajicek,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "orders",
+      "fullName": "orders",
+      "distinguishedName": "CN=orders,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "oxp_support",
+      "fullName": "OXP Support",
+      "distinguishedName": "CN=OXP Support,OU=Security & Distribution Groups,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "pbickems",
+      "fullName": "Patrick Bickems",
+      "distinguishedName": "CN=Patrick Bickems,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "pjimenez",
+      "fullName": "Pete Jimenez",
+      "distinguishedName": "CN=Pete Jimenez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "purchasing",
+      "fullName": "Purchasing Orthoxpress",
+      "distinguishedName": "CN=Purchasing Orthoxpress,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rbrekke",
+      "fullName": "Rick Brekke",
+      "distinguishedName": "CN=Rick Brekke,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rbrown",
+      "fullName": "Robin Brown",
+      "distinguishedName": "CN=Robin Brown,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rcruz",
+      "fullName": "Rudy Cruz",
+      "distinguishedName": "CN=Rudy Cruz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "resumes",
+      "fullName": "Resumes",
+      "distinguishedName": "CN=Resumes,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "riv-copier",
+      "fullName": "riv copier",
+      "distinguishedName": "CN=riv copier,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rpalanca",
+      "fullName": "Reno Palanca",
+      "distinguishedName": "CN=Reno Palanca,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rrivas",
+      "fullName": "Ragina Rivas",
+      "distinguishedName": "CN=Ragina Rivas,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "rurias",
+      "fullName": "Ronnette Urias",
+      "distinguishedName": "CN=Ronnette Urias,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "salamonjeffrey",
+      "fullName": "Jeffrey Salamon",
+      "distinguishedName": "CN=Jeffrey Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sbarragan",
+      "fullName": "Samantha Barragan",
+      "distinguishedName": "CN=Samantha Barragan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sbelle",
+      "fullName": "Sherron Belle",
+      "distinguishedName": "CN=Sherron Belle,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sbradley",
+      "fullName": "Shayna Bradley",
+      "distinguishedName": "CN=Shayna Bradley,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sbrambila",
+      "fullName": "Salvador Brambila",
+      "distinguishedName": "CN=Salvador Brambila,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "scarlson",
+      "fullName": "Steven Carlson",
+      "distinguishedName": "CN=Steven Carlson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "shernandez",
+      "fullName": "Sergio Hernandez",
+      "distinguishedName": "CN=Sergio Hernandez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sjones",
+      "fullName": "Shantle Jones",
+      "distinguishedName": "CN=Shantle Jones,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "snb",
+      "fullName": "Stock and Bill Orders",
+      "distinguishedName": "CN=Stock and Bill Orders,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sperez",
+      "fullName": "Sidney Perez",
+      "distinguishedName": "CN=Sidney Perez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ssalamon",
+      "fullName": "Sara Salamon",
+      "distinguishedName": "CN=Sara Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "sscholl",
+      "fullName": "Stephanie Maginnis",
+      "distinguishedName": "CN=Stephanie Maginnis,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "tartan",
+      "fullName": "Tartan Fredlands",
+      "distinguishedName": "CN=Tartan Fredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "tleggett",
+      "fullName": "Tammy Leggett",
+      "distinguishedName": "CN=Tammy Leggett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "tlowe",
+      "fullName": "Todd Lowe",
+      "distinguishedName": "CN=Todd Lowe,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "tmandujano",
+      "fullName": "Tania Mandujano",
+      "distinguishedName": "CN=Tania Mandujano,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "tsmith",
+      "fullName": "Tamara Smith",
+      "distinguishedName": "CN=Tamara Smith,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ttorigiani",
+      "fullName": "Tyler Torigiani",
+      "distinguishedName": "CN=Tyler Torigiani,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "uploads",
+      "fullName": "uploads",
+      "distinguishedName": "CN=uploads,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "vascular",
+      "fullName": "vascular",
+      "distinguishedName": "CN=vascular,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "vestrada",
+      "fullName": "Valerie Estrada",
+      "distinguishedName": "CN=Valerie Estrada,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "vflores",
+      "fullName": "Vilila Flores",
+      "distinguishedName": "CN=Vilila Flores,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "vmorelos",
+      "fullName": "Valeria Morelos",
+      "distinguishedName": "CN=Valeria Morelos,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "vzapien",
+      "fullName": "Vanessa Zapien",
+      "distinguishedName": "CN=Vanessa Zapien,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "whegstad",
+      "fullName": "Whitney Hegstad",
+      "distinguishedName": "CN=Whitney Hegstad,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "wlopez",
+      "fullName": "Will Lopez",
+      "distinguishedName": "CN=Will Lopez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ygodinez",
+      "fullName": "Audrina Godinez",
+      "distinguishedName": "CN=Yesenia Godeniz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "ysanchez",
+      "fullName": "Yolanda Sanchez",
+      "distinguishedName": "CN=Yolanda Sanchez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "mfaStatus": "Disabled"
+    }
+  ],
+  "user_info": {
+    "$archiveadmin": {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "authentication": "integrated",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "admin"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ]
+    },
+    "abackey": {
+      "userName": "abackey",
+      "fullName": "Al Backey",
+      "distinguishedName": "CN=Al Backey,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "abackey@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "abackey",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "acastillejo": {
+      "userName": "acastillejo",
+      "fullName": "Adriana Castillejo",
+      "distinguishedName": "CN=Adriana Castillejo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "acastillejo@orthoxpress.com",
+        "acastillejo@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "acastillejo",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "admin": {
+      "userName": "admin",
+      "fullName": "Mike Wells",
+      "distinguishedName": "CN=Mike Wells,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "integrated",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mwells@orthoxpress.com",
+        "admin@orthokinetix.net"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "admin"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ]
+    },
+    "akhullar": {
+      "userName": "akhullar",
+      "fullName": "Aman Khullar",
+      "distinguishedName": "CN=Aman Khullar,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "akhullar@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "akhullar",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "amartinez": {
+      "userName": "amartinez",
+      "fullName": "Ana Martinez",
+      "distinguishedName": "CN=Ana Martinez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "amartinez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "amartinez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "amedina": {
+      "userName": "amedina",
+      "fullName": "Alma Medina",
+      "distinguishedName": "CN=Alma Medina,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "amedina@orthoxpress.com",
+        "amedina@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "amedina",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "apreciado": {
+      "userName": "apreciado",
+      "fullName": "Alexandra Preciado",
+      "distinguishedName": "CN=Alexandra Preciado,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "apreciado@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "apreciado",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "authorizations1": {
+      "userName": "authorizations1",
+      "fullName": "authorizations",
+      "distinguishedName": "CN=authorizations,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "authorizations@orthoxpress.com",
+        "authorizations@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "authorizations1",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "aveasy": {
+      "userName": "aveasy",
+      "fullName": "Ashley Veasy",
+      "distinguishedName": "CN=Ashley Veasy,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "aveasy@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "aveasy",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "aviola": {
+      "userName": "aviola",
+      "fullName": "Amber Viola",
+      "distinguishedName": "CN=Amber Viola,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "aviola@orthoxpress.com",
+        "aviola@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "aviola",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bbrushett": {
+      "userName": "bbrushett",
+      "fullName": "Brandi Brushett",
+      "distinguishedName": "CN=Brandi Brushett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bbrushett@orthoxpress.com",
+        "bbrushett@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bbrushett",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bcamacho": {
+      "userName": "bcamacho",
+      "fullName": "Bernard Camacho",
+      "distinguishedName": "CN=Bernard Camacho,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bcamacho@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bcamacho",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "billing": {
+      "userName": "billing",
+      "fullName": "billing",
+      "distinguishedName": "CN=billing,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "billing@orthoxpress.com",
+        "billing@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "billing",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bmccall": {
+      "userName": "bmccall",
+      "fullName": "Brandon McCall",
+      "distinguishedName": "CN=Brandon McCall,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bmccall@orthoxpress.com",
+        "bmccall@orx365.onmicrosoft.com",
+        "bmccall@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bmccall",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bmorales": {
+      "userName": "bmorales",
+      "fullName": "Brittany Morales",
+      "distinguishedName": "CN=Brittany Morales,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bmorales@orthoxpress.com",
+        "bmorales@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bmorales",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bnavarro": {
+      "userName": "bnavarro",
+      "fullName": "Bianca Navarro",
+      "distinguishedName": "CN=Bianca Navarro,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bnavarro@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bnavarro",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "booking": {
+      "userName": "booking",
+      "fullName": "Booking",
+      "distinguishedName": "CN=Booking,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "booking@falconerofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "booking",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "budolph": {
+      "userName": "budolph",
+      "fullName": "Brendan Udolph",
+      "distinguishedName": "CN=Brendan Udolph,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "budolph@orthoxpress.com",
+        "budolph@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "budolph",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "bvarner": {
+      "userName": "bvarner",
+      "fullName": "Brett Varner",
+      "distinguishedName": "CN=Brett Varner,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "bvarner@orthoxpress.com",
+        "bvarner@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "bvarner",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cancellations": {
+      "userName": "cancellations",
+      "fullName": "cancellations",
+      "distinguishedName": "CN=cancellations,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cancellations@orthoxpress.com",
+        "cancellations@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cancellations",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cbible": {
+      "userName": "cbible",
+      "fullName": "Chad Bible",
+      "distinguishedName": "CN=Chad Bible,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cbible@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cbible",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "chall": {
+      "userName": "chall",
+      "fullName": "Christie Hall",
+      "distinguishedName": "CN=Christie Hall,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "chall@orthoxpress.com",
+        "csmith@orthoxpress.com",
+        "chall@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "chall",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "chopkins": {
+      "userName": "chopkins",
+      "fullName": "Courtney Hopkins",
+      "distinguishedName": "CN=Courtney Hopkins,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "chopkins@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "chopkins",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "collections": {
+      "userName": "collections",
+      "fullName": "collections",
+      "distinguishedName": "CN=collections,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "collections@orthoxpress.com",
+        "collections@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "collections",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cshorty": {
+      "userName": "cshorty",
+      "fullName": "Charon Shorty",
+      "distinguishedName": "CN=Charon Shorty,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cshorty@orthoxpress.com",
+        "cshorty@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cshorty",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "csimons": {
+      "userName": "csimons",
+      "fullName": "Cameron Simons",
+      "distinguishedName": "CN=Cameron Simons,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "csimons@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "csimons",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cstaten": {
+      "userName": "cstaten",
+      "fullName": "Clerie Staten",
+      "distinguishedName": "CN=Clerie Staten,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cstaten@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cstaten",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cszabo": {
+      "userName": "cszabo",
+      "fullName": "Chase Szabo",
+      "distinguishedName": "CN=Chase Szabo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cszabo@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cszabo",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cthurman": {
+      "userName": "cthurman",
+      "fullName": "Christopher Thurman",
+      "distinguishedName": "CN=Christopher Thurman,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cthurman@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cthurman",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "cwalker": {
+      "userName": "cwalker",
+      "fullName": "Charlene Walker",
+      "distinguishedName": "CN=Charlene Walker,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "cwalker@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "cwalker",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dayala": {
+      "userName": "dayala",
+      "fullName": "Deborah Ayala",
+      "distinguishedName": "CN=Deborah Ayala,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dayala@orthoxpress.com",
+        "dayala@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dayala",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dbarrios": {
+      "userName": "dbarrios",
+      "fullName": "Desirae Barrios",
+      "distinguishedName": "CN=Desirae Barrios,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dbarrios@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dbarrios",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dbennett": {
+      "userName": "dbennett",
+      "fullName": "Devin Bennett",
+      "distinguishedName": "CN=Devin Bennett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dbennett@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dbennett",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dbowe": {
+      "userName": "dbowe",
+      "fullName": "Dawn Bowe",
+      "distinguishedName": "CN=Dawn Bowe,OU=OXP Contractors,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dbowe@orthoxpress.com",
+        "dbowe@orx365.mail.onmicrosoft.com",
+        "dawn@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dbowe",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dking": {
+      "userName": "dking",
+      "fullName": "Darren King",
+      "distinguishedName": "CN=Darren King,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dking@orthoxpress.com",
+        "dking@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dking",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dlinares": {
+      "userName": "dlinares",
+      "fullName": "Denise Linares",
+      "distinguishedName": "CN=Denise Linares,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dlinares@orthoxpress.com",
+        "dlinares@orx365.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dlinares",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dmendez": {
+      "userName": "dmendez",
+      "fullName": "Derek Mendez",
+      "distinguishedName": "CN=Derek Mendez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dmendez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dmendez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dnguyen": {
+      "userName": "dnguyen",
+      "fullName": "Dayton Nguyen",
+      "distinguishedName": "CN=Dayton Nguyen,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dnguyen@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dnguyen",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dsanchez": {
+      "userName": "dsanchez",
+      "fullName": "Daisy Sanchez",
+      "distinguishedName": "CN=Daisy Sanchez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dsanchez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dsanchez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dshannon": {
+      "userName": "dshannon",
+      "fullName": "Dante Shannon",
+      "distinguishedName": "CN=Dante Shannon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dshannon@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dshannon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dwhite": {
+      "userName": "dwhite",
+      "fullName": "Dave White",
+      "distinguishedName": "CN=Dave White,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dwhite@orthoxpress.com",
+        "dwhite@orx365.mail.onmicrosoft.com",
+        "jbenavides@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dwhite",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "dzyber": {
+      "userName": "dzyber",
+      "fullName": "Dylan Zyber",
+      "distinguishedName": "CN=Dylan Zyber,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "dzyber@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "dzyber",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "egreen": {
+      "userName": "egreen",
+      "fullName": "Erik Green",
+      "distinguishedName": "CN=Erik Green,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "egreen@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "egreen",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "eulloa": {
+      "userName": "eulloa",
+      "fullName": "Edmundo ulloa",
+      "distinguishedName": "CN=Edmundo ulloa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "eulloa@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "eulloa",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "events": {
+      "userName": "events",
+      "fullName": "events",
+      "distinguishedName": "CN=events,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "events@tartanofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "events",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "eweber": {
+      "userName": "eweber",
+      "fullName": "Elias Weber",
+      "distinguishedName": "CN=Elias Weber,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "eweber@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "eweber",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ggonzalez": {
+      "userName": "ggonzalez",
+      "fullName": "Giovanna Gonzalez",
+      "distinguishedName": "CN=Giovanna Gonzalez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ggonzalez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ggonzalez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "gloza": {
+      "userName": "gloza",
+      "fullName": "Georgina Loza",
+      "distinguishedName": "CN=Georgina Loza,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "gloza@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "gloza",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "gmaestre": {
+      "userName": "gmaestre",
+      "fullName": "Gretchen Maestre",
+      "distinguishedName": "CN=Gretchen Maestre,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "gmaestre@orthoxpress.com",
+        "gmaestre@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "gmaestre",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "hgetz": {
+      "userName": "hgetz",
+      "fullName": "Haley Getz",
+      "distinguishedName": "CN=Haley Getz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "hgetz@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "hgetz",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "hospital": {
+      "userName": "hospital",
+      "fullName": "Hospital Fax",
+      "distinguishedName": "CN=Hospital,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "hospitalfax@orthoxpress.com",
+        "hospitalfax@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "hospital",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "hr": {
+      "userName": "hr",
+      "fullName": "HR",
+      "distinguishedName": "CN=HR,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "hr@orthoxpress.com",
+        "hr@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "hr",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "intake": {
+      "userName": "intake",
+      "fullName": "intake",
+      "distinguishedName": "CN=intake,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "intake@orthoxpress.com",
+        "intake@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "intake",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jalvarez": {
+      "userName": "jalvarez",
+      "fullName": "Joeseph Alvarez",
+      "distinguishedName": "CN=Joeseph Alvarez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jalvarez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jalvarez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jantonio": {
+      "userName": "jantonio",
+      "fullName": "Jackie Antonio",
+      "distinguishedName": "CN=Jackie Antonio,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jantonio@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jantonio",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jberry": {
+      "userName": "jberry",
+      "fullName": "Jamie Berry",
+      "distinguishedName": "CN=Jamie Berry,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jberry@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jberry",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jbyrne": {
+      "userName": "jbyrne",
+      "fullName": "Jonny Byrne",
+      "distinguishedName": "CN=Jonny Byrne,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jbyrne@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jbyrne",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jekolb": {
+      "userName": "jekolb",
+      "fullName": "Jeff Kolb",
+      "distinguishedName": "CN=Jeff Kolb,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jekolb@orthoxpress.com",
+        "jekolb@orx365.mail.onmicrosoft.com",
+        "jeff.kolb@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jekolb",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jhernandez": {
+      "userName": "jhernandez",
+      "fullName": "Juan Hernandez",
+      "distinguishedName": "CN=Juan Hernandez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jhernandez@orthoxpress.com",
+        "jhernandez@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jhernandez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jkolb": {
+      "userName": "jkolb",
+      "fullName": "Jamie Kolb",
+      "distinguishedName": "CN=Jamie Kolb,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jkolb@orthoxpress.com",
+        "jkolb@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jkolb",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jmitchell": {
+      "userName": "jmitchell",
+      "fullName": "Jennifer Mitchell",
+      "distinguishedName": "CN=Jennifer Mitchell,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jmitchell@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jmitchell",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jpierucci": {
+      "userName": "jpierucci",
+      "fullName": "Jaden Pierucci",
+      "distinguishedName": "CN=Jaden Pierucci,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jpierucci@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jpierucci",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jquintana": {
+      "userName": "jquintana",
+      "fullName": "Jasmine Quintana",
+      "distinguishedName": "CN=Jasmine Quintana,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jquintana@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jquintana",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jrobles": {
+      "userName": "jrobles",
+      "fullName": "Jose Robles",
+      "distinguishedName": "CN=Jose Robles,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jrobles@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jrobles",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jrodriguez": {
+      "userName": "jrodriguez",
+      "fullName": "Jasmin Rodriguez",
+      "distinguishedName": "CN=Jasmin Rodriguez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jrodriguez@orthoxpress.com",
+        "jmedrano@orthoxpress.com",
+        "jmedrano@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jrodriguez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jromadin": {
+      "userName": "jromadin",
+      "fullName": "Judyann Romadin",
+      "distinguishedName": "CN=Judyann Romadin,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jromadin@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jromadin",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jroque": {
+      "userName": "jroque",
+      "fullName": "james Roque",
+      "distinguishedName": "CN=james Roque,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jroque@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jroque",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jsalamon": {
+      "userName": "jsalamon",
+      "fullName": "Jeff Salamon",
+      "distinguishedName": "CN=Jeff Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jsalamon@orthoxpress.com",
+        "jsalamon@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jsalamon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jsalamonjr": {
+      "userName": "jsalamonjr",
+      "fullName": "Jeffrey Salamon Falconerofredlands",
+      "distinguishedName": "CN=Jeffrey Salamon Falconerofredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jsalamonjr@falconerofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jsalamonjr",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jsampson": {
+      "userName": "jsampson",
+      "fullName": "Jameel Sampson",
+      "distinguishedName": "CN=Jameel Sampson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jsampson@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jsampson",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jtrujillo": {
+      "userName": "jtrujillo",
+      "fullName": "Jaqueline Trujillo",
+      "distinguishedName": "CN=Jaqueline Trujillo,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jtrujillo@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jtrujillo",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jworkman": {
+      "userName": "jworkman",
+      "fullName": "Jennifer Workman",
+      "distinguishedName": "CN=Jennifer Workman,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jworkman@orthoxpress.com",
+        "jworkman@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jworkman",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "kbullan": {
+      "userName": "kbullan",
+      "fullName": "Kari Bullan",
+      "distinguishedName": "CN=Kari Bullan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "kbullan@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "kbullan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "kevin.rodgers": {
+      "userName": "kevin.rodgers",
+      "fullName": "Kevin Rodgers Falconerofredlands",
+      "distinguishedName": "CN=Kevin Rodgers Falconerofredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "krodgers@falconerofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "kevin.rodgers",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "kjohnson": {
+      "userName": "kjohnson",
+      "fullName": "Kevin Johnson",
+      "distinguishedName": "CN=Kevin Johnson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "kjohnson@orthoxpress.com",
+        "kjohnson@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "kjohnson",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "kphan": {
+      "userName": "kphan",
+      "fullName": "Kaley Phan",
+      "distinguishedName": "CN=Kaley Phan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "kphan@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "kphan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "krodgers": {
+      "userName": "krodgers",
+      "fullName": "Kevin Rodgers",
+      "distinguishedName": "CN=Kevin Rodgers,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "krodgers@tartanofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "krodgers",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "kshedd": {
+      "userName": "kshedd",
+      "fullName": "Kris Shedd",
+      "distinguishedName": "CN=Kris Shedd,OU=OXP Contractors,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "kshedd@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "kshedd",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lbarnes": {
+      "userName": "lbarnes",
+      "fullName": "Lara Barnes",
+      "distinguishedName": "CN=Lara Barnes,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lbarnes@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lbarnes",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lcooley": {
+      "userName": "lcooley",
+      "fullName": "Levi Cooley",
+      "distinguishedName": "CN=Levi cooley,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lcooley@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lcooley",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ldelafuente": {
+      "userName": "ldelafuente",
+      "fullName": "Lisa De La Fuente",
+      "distinguishedName": "CN=Lisa De La Fuente,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ldelafuente@orthoxpress.com",
+        "lgalbraith@orthoxpress.com",
+        "lgalbraith@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ldelafuente",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lhannah": {
+      "userName": "lhannah",
+      "fullName": "Lisa Hannah",
+      "distinguishedName": "CN=Lisa Hannah,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lhannah@tartanofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lhannah",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lherrera": {
+      "userName": "lherrera",
+      "fullName": "Larisa Herrera",
+      "distinguishedName": "CN=Larisa Herrera,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lherrera@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lherrera",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lmckinney": {
+      "userName": "lmckinney",
+      "fullName": "Leaya McKinney",
+      "distinguishedName": "CN=Leaya McKinney,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lmckinney@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lmckinney",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lsalamon": {
+      "userName": "lsalamon",
+      "fullName": "Lisa Salamon",
+      "distinguishedName": "CN=Lisa Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lsalamon@orthoxpress.com",
+        "lsalamon@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lsalamon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "lsirota": {
+      "userName": "lsirota",
+      "fullName": "Lynda Sirota",
+      "distinguishedName": "CN=Lynda Sirota,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "lsirota@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "lsirota",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "madams": {
+      "userName": "madams",
+      "fullName": "Marvella Adams",
+      "distinguishedName": "CN=Marvella Adams,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "madams@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "madams",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mawells": {
+      "userName": "mawells",
+      "fullName": "Makayla Wells",
+      "distinguishedName": "CN=Makayla Wells,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mawells@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mawells",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mbarbosa": {
+      "userName": "mbarbosa",
+      "fullName": "Marcelo Barbosa",
+      "distinguishedName": "CN=Marcelo Barbosa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mbarbosa@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mbarbosa",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mbudnik": {
+      "userName": "mbudnik",
+      "fullName": "Markarit Budnik",
+      "distinguishedName": "CN=Markarit Budnik,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mbudnik@orthoxpress.com",
+        "mbudnik@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mbudnik",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mbyerly": {
+      "userName": "mbyerly",
+      "fullName": "Makayla Byerly",
+      "distinguishedName": "CN=Makayla Byerly,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mbyerly@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mbyerly",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mcastillon": {
+      "userName": "mcastillon",
+      "fullName": "Marie Castillon",
+      "distinguishedName": "CN=Marie Castillon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mcastillon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mconcepcion": {
+      "userName": "mconcepcion",
+      "fullName": "Melanie Concepcion",
+      "distinguishedName": "CN=Melanie Concepcion,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mconcepcion@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mconcepcion",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mdixon": {
+      "userName": "mdixon",
+      "fullName": "Milan Dixon",
+      "distinguishedName": "CN=Milan Dixon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mdixon@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mdixon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mgalfayan": {
+      "userName": "mgalfayan",
+      "fullName": "Mary Galfayan",
+      "distinguishedName": "CN=Mary Galfayan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mgalfayan@orthoxpress.com",
+        "mgalfayan@orx365.mail.onmicrosoft.com",
+        "jmartinez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mgalfayan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mholen": {
+      "userName": "mholen",
+      "fullName": "Matthew Holen",
+      "distinguishedName": "CN=Matthew Holen,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mholen",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mlayosa": {
+      "userName": "mlayosa",
+      "fullName": "Maria Layosa",
+      "distinguishedName": "CN=Maria Layosa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mlayosa@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mlayosa",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mmartinez": {
+      "userName": "mmartinez",
+      "fullName": "Moises Martinez",
+      "distinguishedName": "CN=Moises Martinez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mmartinez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mmartinez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mnelson": {
+      "userName": "mnelson",
+      "fullName": "Mariah Nelson",
+      "distinguishedName": "CN=Mariah Nelson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mnelson@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mnelson",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mpasquini": {
+      "userName": "mpasquini",
+      "fullName": "Michelle Pasquini",
+      "distinguishedName": "CN=Michelle Pasquini,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mpasquini@orthoxpress.com",
+        "mpasquini1970@orx365.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mpasquini",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mrivera": {
+      "userName": "mrivera",
+      "fullName": "Mariana Rivera",
+      "distinguishedName": "CN=Mariana Rivera,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mrivera@orthoxpress.com",
+        "mrivera@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mrivera",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mryan": {
+      "userName": "mryan",
+      "fullName": "Makayla Ryan",
+      "distinguishedName": "CN=Makayla Ryan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mryan@orthoxpress.com",
+        "mryan@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mryan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "mwells": {
+      "userName": "mwells",
+      "fullName": "Mike Wells",
+      "distinguishedName": "CN=Mike Wells,OU=Orthokinetix Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "mwells@orthoxpress.com",
+        "admin@orthokinetix.net",
+        "mwells@orx365.mail.onmicrosoft.com",
+        "service@orthokinetix.net",
+        "support@orthokinetix.net",
+        "mikew@orthokinetix.net",
+        "mikew@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "mwells",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ncollins": {
+      "userName": "ncollins",
+      "fullName": "Nicole Collins",
+      "distinguishedName": "CN=Nicole Collins,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ncollins@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ncollins",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "nfigueroa": {
+      "userName": "nfigueroa",
+      "fullName": "Nichole Figueroa",
+      "distinguishedName": "CN=Nichole Figueroa,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "nfigueroa@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "nfigueroa",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "nflores": {
+      "userName": "nflores",
+      "fullName": "Nancy Flores",
+      "distinguishedName": "CN=Nancy Flores,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "nflores@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "nflores",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "npearson": {
+      "userName": "npearson",
+      "fullName": "Nicole Pearson",
+      "distinguishedName": "CN=Nicole Pearson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "npearson@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "npearson",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "nzajicek": {
+      "userName": "nzajicek",
+      "fullName": "Nick Zajicek",
+      "distinguishedName": "CN=Nick Zajicek,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "nzajicek@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "nzajicek",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "orders": {
+      "userName": "orders",
+      "fullName": "orders",
+      "distinguishedName": "CN=orders,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "orders@orthoxpress.com",
+        "info@orthokinetix.net",
+        "info@orthoxpress.com",
+        "faxes@orthoxpress.com",
+        "newordersfax@orthoxpress.com",
+        "orders@orthokinetix.net",
+        "orders@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "orders",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "oxp_support": {
+      "userName": "oxp_support",
+      "fullName": "OXP Support",
+      "distinguishedName": "CN=OXP Support,OU=Security & Distribution Groups,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "oxp_support@orthoxpress.com",
+        "oxp_support@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "oxp_support",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "pbickems": {
+      "userName": "pbickems",
+      "fullName": "Patrick Bickems",
+      "distinguishedName": "CN=Patrick Bickems,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "pbickems@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "pbickems",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "pjimenez": {
+      "userName": "pjimenez",
+      "fullName": "Pete Jimenez",
+      "distinguishedName": "CN=Pete Jimenez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "pjimenez@orthoxpress.com",
+        "pjimenez@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "pjimenez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "purchasing": {
+      "userName": "purchasing",
+      "fullName": "Purchasing Orthoxpress",
+      "distinguishedName": "CN=Purchasing Orthoxpress,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "purchasing@orthoxpress.com",
+        "purchasing@orx365.mail.onmicrosoft.com",
+        "plevi@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "purchasing",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rbrekke": {
+      "userName": "rbrekke",
+      "fullName": "Rick Brekke",
+      "distinguishedName": "CN=Rick Brekke,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rbrekke@orthoxpress.com",
+        "rbrekke@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rbrekke",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rbrown": {
+      "userName": "rbrown",
+      "fullName": "Robin Brown",
+      "distinguishedName": "CN=Robin Brown,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rbrown@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rbrown",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rcruz": {
+      "userName": "rcruz",
+      "fullName": "Rudy Cruz",
+      "distinguishedName": "CN=Rudy Cruz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rcruz@orthoxpress.com",
+        "rcruz@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rcruz",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "resumes": {
+      "userName": "resumes",
+      "fullName": "Resumes",
+      "distinguishedName": "CN=Resumes,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "resumes@orthoxpress.com",
+        "resumes@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "resumes",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "riv-copier": {
+      "userName": "riv-copier",
+      "fullName": "riv copier",
+      "distinguishedName": "CN=riv copier,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "riv-copier@orthoxpress.com",
+        "riv-copier@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "riv-copier",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rpalanca": {
+      "userName": "rpalanca",
+      "fullName": "Reno Palanca",
+      "distinguishedName": "CN=Reno Palanca,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rpalanca@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rpalanca",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rrivas": {
+      "userName": "rrivas",
+      "fullName": "Ragina Rivas",
+      "distinguishedName": "CN=Ragina Rivas,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rrivas@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rrivas",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "rurias": {
+      "userName": "rurias",
+      "fullName": "Ronnette Urias",
+      "distinguishedName": "CN=Ronnette Urias,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "rurias@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "rurias",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "salamonjeffrey": {
+      "userName": "salamonjeffrey",
+      "fullName": "Jeffrey Salamon",
+      "distinguishedName": "CN=Jeffrey Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "salamonjeffrey@tartanofredlands.com",
+        "salamonjeffrey@orx365.onmicrosoft.com",
+        "salamonjeffrey@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "salamonjeffrey",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sbarragan": {
+      "userName": "sbarragan",
+      "fullName": "Samantha Barragan",
+      "distinguishedName": "CN=Samantha Barragan,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "sbarragan@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sbarragan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sbelle": {
+      "userName": "sbelle",
+      "fullName": "Sherron Belle",
+      "distinguishedName": "CN=Sherron Belle,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sbelle",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sbradley": {
+      "userName": "sbradley",
+      "fullName": "Shayna Bradley",
+      "distinguishedName": "CN=Shayna Bradley,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "sbradley@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sbradley",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sbrambila": {
+      "userName": "sbrambila",
+      "fullName": "Salvador Brambila",
+      "distinguishedName": "CN=Salvador Brambila,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "sbrambila@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sbrambila",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "scarlson": {
+      "userName": "scarlson",
+      "fullName": "Steven Carlson",
+      "distinguishedName": "CN=Steven Carlson,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "scarlson@orthoxpress.com",
+        "scarlson@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "scarlson",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "shernandez": {
+      "userName": "shernandez",
+      "fullName": "Sergio Hernandez",
+      "distinguishedName": "CN=Sergio Hernandez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "shernandez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "shernandez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sjones": {
+      "userName": "sjones",
+      "fullName": "Shantle Jones",
+      "distinguishedName": "CN=Shantle Jones,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "sjones@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sjones",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "snb": {
+      "userName": "snb",
+      "fullName": "Stock and Bill Orders",
+      "distinguishedName": "CN=Stock and Bill Orders,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "snb@orthoxpress.com",
+        "snb@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "snb",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sperez": {
+      "userName": "sperez",
+      "fullName": "Sidney Perez",
+      "distinguishedName": "CN=Sidney Perez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sperez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ssalamon": {
+      "userName": "ssalamon",
+      "fullName": "Sara Salamon",
+      "distinguishedName": "CN=Sara Salamon,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ssalamon@orthoxpress.com",
+        "ssalamon@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ssalamon",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "sscholl": {
+      "userName": "sscholl",
+      "fullName": "Stephanie Maginnis",
+      "distinguishedName": "CN=Stephanie Maginnis,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "smaginnis@orthoxpress.com",
+        "sscholl@orthoxpress.com",
+        "sscholl@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "sscholl",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "tartan": {
+      "userName": "tartan",
+      "fullName": "Tartan Fredlands",
+      "distinguishedName": "CN=Tartan Fredlands,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "tartan@tartanofredlands.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "tartan",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "tleggett": {
+      "userName": "tleggett",
+      "fullName": "Tammy Leggett",
+      "distinguishedName": "CN=Tammy Leggett,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "tleggett",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "tlowe": {
+      "userName": "tlowe",
+      "fullName": "Todd Lowe",
+      "distinguishedName": "CN=Todd Lowe,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "tlowe@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "tlowe",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "tmandujano": {
+      "userName": "tmandujano",
+      "fullName": "Tania Mandujano",
+      "distinguishedName": "CN=Tania Mandujano,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "tmandujano@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "tmandujano",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "tsmith": {
+      "userName": "tsmith",
+      "fullName": "Tamara Smith",
+      "distinguishedName": "CN=Tamara Smith,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "tsmith@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "tsmith",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ttorigiani": {
+      "userName": "ttorigiani",
+      "fullName": "Tyler Torigiani",
+      "distinguishedName": "CN=Tyler Torigiani,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ttorigiani@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ttorigiani",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "uploads": {
+      "userName": "uploads",
+      "fullName": "uploads",
+      "distinguishedName": "CN=uploads,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "uploads@orthoxpress.com",
+        "uploads@orx365.mail.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "uploads",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "vascular": {
+      "userName": "vascular",
+      "fullName": "vascular",
+      "distinguishedName": "CN=vascular,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "vascular@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "vascular",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "vestrada": {
+      "userName": "vestrada",
+      "fullName": "Valerie Estrada",
+      "distinguishedName": "CN=Valerie Estrada,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "vestrada@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "vestrada",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "vflores": {
+      "userName": "vflores",
+      "fullName": "Vilila Flores",
+      "distinguishedName": "CN=Vilila Flores,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "vflores@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "vflores",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "vmorelos": {
+      "userName": "vmorelos",
+      "fullName": "Valeria Morelos",
+      "distinguishedName": "CN=Valeria Morelos,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "vmorelos@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "vmorelos",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "vzapien": {
+      "userName": "vzapien",
+      "fullName": "Vanessa Zapien",
+      "distinguishedName": "CN=Vanessa Zapien,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "vzapien@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "vzapien",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "whegstad": {
+      "userName": "whegstad",
+      "fullName": "Whitney Hegstad",
+      "distinguishedName": "CN=Whitney Hegstad,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "whegstad@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "whegstad",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "wlopez": {
+      "userName": "wlopez",
+      "fullName": "Will Lopez",
+      "distinguishedName": "CN=Will Lopez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "wlopez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "wlopez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ygodinez": {
+      "userName": "ygodinez",
+      "fullName": "Audrina Godinez",
+      "distinguishedName": "CN=Yesenia Godeniz,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ygodinez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ygodinez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "ysanchez": {
+      "userName": "ysanchez",
+      "fullName": "Yolanda Sanchez",
+      "distinguishedName": "CN=Yolanda Sanchez,OU=OXP Users,OU=OXP,DC=oxp,DC=local",
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "ysanchez@orthoxpress.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "ysanchez",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    }
+  },
+  "folder_stats": [],
+  "jobs": [
+    {
+      "id": 1,
+      "name": "Process Retention Policies",
+      "action": "ProcessRetentionPolicies",
+      "owner": "admin",
+      "creationDateTimeUtc": "2019-03-19T10:42:40",
+      "lastStartDateTimeUtc": "2026-05-02T10:30:04",
+      "lastCompleteDateTimeUtc": "2026-05-02T10:30:04",
+      "nextStartDateTimeUtc": "2026-05-03T10:30:00",
+      "enabled": true,
+      "schedule": {
+        "timeZoneId": "Pacific Standard Time",
+        "time": "03:30:00"
+      }
+    }
+  ],
+  "profiles": [],
+  "credentials": [
+    {
+      "ID": 2,
+      "Type": "Office365_Modern",
+      "Description": "Microsoft 365",
+      "Settings": {
+        "ApplicationId": "013eebd8-8439-49bf-955d-4a75f1f25a72",
+        "TenantId": "9f0d3ee8-4412-48da-9b80-69badb68b429",
+        "CertificateThumbprint": "C667E196A22AD2B6B0E978DE78138AE2FEEEBE6C",
+        "CertificateExpirationDate": "2026-07-15T10:58:01Z"
+      }
+    }
+  ],
+  "configuration": {
+    "instance": {
+      "instanceID": "orthoxpress",
+      "alias": "oxp",
+      "displayName": "orthoxpress",
+      "instanceHost": "vmtechmss",
+      "startMode": "automatic",
+      "baseDirectory": "E:\\OXP",
+      "debugLogEnabled": false,
+      "imapServerConnectionLogEnabled": false,
+      "vssWriterEnabled": true,
+      "vssWriterExcludeIndexes": false
+    },
+    "index": {
+      "attachmentExtensions": null,
+      "includeAttachmentsOfPDFs": false
+    },
+    "compliance": {
+      "legalHoldEnabled": false,
+      "logSuccessfulUserActivities": [
+        "ComplianceChangeSettings",
+        "CredentialsAdd",
+        "CredentialsChange",
+        "CredentialsDelete",
+        "ProfileChangeUserName",
+        "RecoverStoreFinish",
+        "RecoverStoreStart",
+        "RetentionPoliciesMessageDelete",
+        "RetentionPoliciesProcessStart",
+        "RetentionPoliciesUpdate",
+        "SessionLogin",
+        "SessionLogout",
+        "SessionUnlockWithMfaCode",
+        "UserAdd",
+        "UserAppPasswordAdd",
+        "UserAppPasswordDelete",
+        "UserDelete",
+        "UserDisableMFA",
+        "UserInitializeMFA",
+        "UserRename",
+        "UserSetArchiveAdminSetEnabled",
+        "UserSetFolderAccess",
+        "UserSetMappings",
+        "UserSetPassword",
+        "UserUpdate"
+      ]
+    },
+    "directory_services": {
+      "type": "activeDirectory",
+      "serverName": "10.100.106.51",
+      "protocol": "LDAP",
+      "authenticationType": "standardAuthentication",
+      "userName": "oxp\\Archive-SA",
+      "password": null,
+      "baseDN": "OU=OXP,DC=oxp,DC=local",
+      "microsoftExchangeUsersOnly": false,
+      "enabledUsersOnly": true,
+      "usersVisibleInAddressListsOnly": false,
+      "groups": [
+        "MailStore Archive"
+      ],
+      "userNameFormat": "samAccountName",
+      "authenticationProtocol": "networkAuthentication",
+      "openIdDiscoveryUrl": null,
+      "openIdClientID": null,
+      "openIdRedirectUrl": null,
+      "openIdForceAdfsLogin": false,
+      "deleteUsers": true
+    }
+  }
+}

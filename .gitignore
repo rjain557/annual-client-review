@@ -12,6 +12,11 @@ venv/
 **/_sent-samples-raw.html
 **/signature-source.md
 
+# vCenter daily pull — master dump folder is recreated each run, only the
+# per-client split + accumulators are committed
+.work/
+scripts/vcenter/state/*.log
+
 # Weekly audit — large pulled XML/CSV reproducible from API; runtime state
 technijian/weekly-audit/*/raw/
 technijian/weekly-audit/state/

@@ -1,0 +1,32 @@
+{
+  "client_code": "css",
+  "generated_at": "2026-05-02T12:52:29.137289",
+  "veeam_one_host": "TE-DC-VONE-01 (10.7.9.135)",
+  "snapshot_date": "2026-05-02",
+  "repositories": [
+    {
+      "name": "bkp_CSS",
+      "path": "nfs3://10.7.9.230:/bkp_CSS",
+      "capacity_human": "1.0 TB",
+      "free_human": "888.1 GB",
+      "out_of_space_in_days": 160,
+      "running_tasks": 0,
+      "max_concurrent_tasks": 4,
+      "is_immutable": false,
+      "state": "Ok"
+    }
+  ],
+  "totals": {
+    "capacity_human": "1.0 TB",
+    "free_human": "888.1 GB",
+    "used_percent": 13.3,
+    "runway_days_min": 160
+  },
+  "business_view_groups": [
+    {
+      "name": "DS-NBD1-CSS",
+      "category": "Datastore",
+      "object_type": "VSphereVm"
+    }
+  ]
+}

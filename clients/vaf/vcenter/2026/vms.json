@@ -1,0 +1,2264 @@
+{
+  "_meta": {
+    "vcenter": "172.16.9.252",
+    "pulled_at": "2026-05-02T19:50:19Z",
+    "api_version": "8.0.0.10200",
+    "count": 10
+  },
+  "items": [
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-1930",
+      "name": "VAF-DC-SQL-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SQL-01/VAF-DC-SQL-01_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-SQL-01",
+          "instance_uuid": "50375919-9156-01e6-d091-1b0081d62d01",
+          "bios_uuid": "42371f8a-89b0-3bbe-c3f1-315be0b9e6de"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-SQL-01",
+        "nics": {
+          "4001": {
+            "start_connected": true,
+            "pci_slot_number": 256,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 2134493632,
+              "distributed_port": "20",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:b7:37:32",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 2",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "50375919-9156-01e6-d091-1b0081d62d01",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SQL-01/VAF-DC-SQL-01_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 256,
+          "backing": {
+            "connection_cookie": 2134493632,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "20",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:b7:37:32",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 2",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.52",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-SQL-01.vaf.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:b7:37:32",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.52",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4001",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 65536,
+      "vm": "vm-1936",
+      "name": "VAF-DC-TS-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 256,
+          "size_MiB": 65536,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 65536
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TS-01/VAF-DC-TS-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TS-01/VAF-DC-TS-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 8
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-TS-01",
+          "instance_uuid": "503774d6-6982-5ca0-07c8-f4af56f5e228",
+          "bios_uuid": "4237d5ac-e1df-c269-8b9f-ddcd4e697e9d"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-TS-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "backing": {
+              "connection_cookie": 629072777,
+              "distributed_port": "21",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:b7:84:f7",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "E1000E"
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "503774d6-6982-5ca0-07c8-f4af56f5e228",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TS-01/VAF-DC-TS-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TS-01/VAF-DC-TS-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 629072777,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "21",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:b7:84:f7",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "E1000E"
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.53",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-TS-01.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:b7:84:f7",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.53",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-20132",
+      "name": "VAF-DC-OPSPRB-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": true,
+            "backing": {
+              "iso_file": "[DS-NBD1-TECH] Install/SW_DVD9_Win_Server_STD_CORE_2022__64Bit_English_DC_STD_MLF_X22-74290.ISO",
+              "type": "ISO_FILE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-OPSPRB-01/VAF-DC-OPSPRB-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-OPSPRB-01",
+          "instance_uuid": "50135e6c-4765-fda0-6bec-62419f552e0a",
+          "bios_uuid": "42132574-3b20-adf8-11ad-dd2a45d92d2c"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-OPSPRB-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 681183627,
+              "distributed_port": "352",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:d9:5a",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50135e6c-4765-fda0-6bec-62419f552e0a",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-OPSPRB-01/VAF-DC-OPSPRB-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 681183627,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "352",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:d9:5a",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.62",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-OPSPRB.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:d9:5a",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.62",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.103.50",
+              "4.2.2.2"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2182",
+      "name": "VAF-DC-FS-02",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-02/VAF-DC-FS-02_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-02/VAF-DC-FS-02.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-FS-02",
+          "instance_uuid": "502a6802-72c8-1905-fe30-ee117a00b093",
+          "bios_uuid": "422a8467-5616-de26-7c7d-1dce4b605fc1"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-FS-02",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 730051539,
+              "distributed_port": "25",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:aa:2d:7f",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "502a6802-72c8-1905-fe30-ee117a00b093",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-02/VAF-DC-FS-02_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-02/VAF-DC-FS-02.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 730051539,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "25",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:aa:2d:7f",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.55",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-FS-02.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:aa:2d:7f",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.55",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 65536,
+      "vm": "vm-2689",
+      "name": "VAF-DC-TSVDI-GI",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 65536,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 65536
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TSVDI-GI/VAF-DC-TSVDI-GI_4.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TSVDI-GI/VAF-DC-TSVDI-GI.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 8
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-TSVDI-GI",
+          "instance_uuid": "502a07c8-12c3-de68-9235-b0a82939eee9",
+          "bios_uuid": "422a5188-9cc6-0c46-b1bf-50f2de868d8a"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-TSVDI-GI",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 864338891,
+              "distributed_port": "26",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:08:5c",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "502a07c8-12c3-de68-9235-b0a82939eee9",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TSVDI-GI/VAF-DC-TSVDI-GI_4.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-TSVDI-GI/VAF-DC-TSVDI-GI.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 864338891,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "26",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:08:5c",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.65",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-TSVDI-GI.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:08:5c",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.65",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.103.50",
+              "4.2.2.4"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-49234",
+      "name": "VAF-DC-AD-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01_5.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-AD-01",
+          "instance_uuid": "50185c68-dc4a-175b-c740-6f6b3d6e7ac5",
+          "bios_uuid": "4218f4bd-5219-77ce-ce60-53c86b029448"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-AD-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "backing": {
+              "connection_cookie": 1577214339,
+              "distributed_port": "22",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:98:b3:5f",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "E1000E"
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50185c68-dc4a-175b-c740-6f6b3d6e7ac5",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-AD-01/VAF-DC-AD-01_5.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1577214339,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "22",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:98:b3:5f",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "E1000E"
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.50",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-AD-01.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:98:b3:5f",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.50",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.103.50",
+              "4.2.2.2"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-50004",
+      "name": "VAF-DC-FS-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 1020054732800
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_7.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 542239621120
+          },
+          "2003": {
+            "scsi": {
+              "bus": 0,
+              "unit": 3
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 4",
+            "type": "SCSI",
+            "capacity": 644245094400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-FS-01",
+          "instance_uuid": "5013d395-e948-b312-f3ff-4c3157fe3bd4",
+          "bios_uuid": "423750ec-b8ab-3651-e2bd-9a28ee56a790"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-FS-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1547251698,
+              "distributed_port": "23",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:3a:88",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "5013d395-e948-b312-f3ff-4c3157fe3bd4",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 1020054732800
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_7.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 542239621120
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 3
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-FS-01/VAF-DC-FS-01_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 4",
+          "type": "SCSI",
+          "capacity": 644245094400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1547251698,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "23",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:3a:88",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.51",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-FS-01.VAF.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:3a:88",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.51",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-51013",
+      "name": "VAF-DC-SFTP-02",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SFTP-02/VAF-DC-SFTP-02.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SFTP-02/VAF-DC-SFTP-02_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-SFTP-02",
+          "instance_uuid": "5013867e-32a2-e2a4-1f8c-87c2e8f85936",
+          "bios_uuid": "421364d0-aeb3-a8d5-7691-8effa176e58b"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-SFTP-02",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 984828243,
+              "distributed_port": "24",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:4c:1d",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013867e-32a2-e2a4-1f8c-87c2e8f85936",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SFTP-02/VAF-DC-SFTP-02.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-SFTP-02/VAF-DC-SFTP-02_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 984828243,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "24",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:4c:1d",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.111",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-SFTP-02"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:4c:1d",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.111",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.1.103.50",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-51015",
+      "name": "VAF-DC-3CX-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-3CX-01/VAF-DC-3CX-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107555586048
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-VAF] VAF-DC-3CX-01/VAF-DC-3CX-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-3CX-01",
+          "instance_uuid": "5013e34d-a3d3-c36d-4ac6-7aa8fdfe0642",
+          "bios_uuid": "421327b2-6d4b-f9ef-fd13-875a241e0edb"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-3CX-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 372093872,
+              "distributed_port": "27",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:0c:39",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013e34d-a3d3-c36d-4ac6-7aa8fdfe0642",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-3CX-01/VAF-DC-3CX-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107555586048
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-VAF] VAF-DC-3CX-01/VAF-DC-3CX-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 372093872,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "27",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:0c:39",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.60",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-3CX-01"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:0c:39",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.60",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "4.2.2.2",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-54223",
+      "name": "VAF-DC-SFTP-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-TECH] VAF-DC-SFTP-01/VAF-DC-SFTP-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-TECH] VAF-DC-SFTP-01/VAF-DC-SFTP-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "VAF-DC-SFTP-01",
+          "instance_uuid": "5013eede-a5a4-4b4f-7da3-2f41007ab38e",
+          "bios_uuid": "4213dec1-5b82-408f-f951-637616d06033"
+        },
+        "nvme_adapters": {},
+        "name": "VAF-DC-SFTP-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 247003009,
+              "distributed_port": "353",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1136"
+            },
+            "mac_address": "00:50:56:93:7f:7f",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013eede-a5a4-4b4f-7da3-2f41007ab38e",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-TECH] VAF-DC-SFTP-01/VAF-DC-SFTP-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-TECH] VAF-DC-SFTP-01/VAF-DC-SFTP-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 247003009,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "353",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1136"
+          },
+          "mac_address": "00:50:56:93:7f:7f",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.103.112",
+        "family": "WINDOWS",
+        "host_name": "VAF-DC-SFTP-01"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:7f:7f",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.103.112",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.103.50",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    }
+  ]
+}

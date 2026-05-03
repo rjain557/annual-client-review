@@ -1,0 +1,15 @@
+{
+  "_doc": "Manual override file for veeam-vbr per-client fan-out. Resolution order: (1) explicit `manual` entry mapping <job_name OR job_id> -> <LocationCode>; (2) regex-extracted leading UPPERCASE token from the job name (e.g. 'BWH-DC01-Backup' -> bwh) matched against the live `clients/<code>/` directory list; (3) job lands in `_veeam_vbr/<date>/unmapped.json`. Add an `ignore` entry for jobs that should never produce a per-client folder (Technijian internal infra, lab/test, decommissioned). Use the job name (case-insensitive substring match on full name OR on the leading token) as the key. The resolver also checks job IDs verbatim.",
+  "manual": {
+    "bkp_TECH": "technijian",
+    "bkp_TECH-ARC": "technijian",
+    "bkp_TECH-CP": "technijian",
+    "bkp_TECH-HRZ": "technijian",
+    "bkp_TECH-LAB": "technijian",
+    "bkp_TECH-WP": "technijian"
+  },
+  "ignore": [
+  ],
+  "_ignore_notes": {
+  }
+}

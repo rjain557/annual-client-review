@@ -1,0 +1,54 @@
+{
+  "client_code": "rfps",
+  "generated_at": "2026-05-02T19:51:44.743325+00:00",
+  "vbr_server": "TE-DC-BK-VBR-01",
+  "window": {
+    "since": "2026-01-01",
+    "until": "2026-05-02"
+  },
+  "jobs": [
+    {
+      "id": "fc7a2ff3-ddc2-4666-af22-dd0398565358",
+      "name": "bkp_RFPS",
+      "type": "Backup",
+      "schedule_local_time": "22:30",
+      "destinationRepositoryId": "f11471de-a755-441e-8c95-2115b22c307a"
+    },
+    {
+      "id": "da45685b-2b4a-4825-9273-2ac74fdeb3ac",
+      "name": "Bkp_RFPS_IMT",
+      "type": "Backup",
+      "schedule_local_time": "19:00",
+      "destinationRepositoryId": "451a6104-efc6-41a1-9ebd-6504d67ed63f"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "f11471de-a755-441e-8c95-2115b22c307a",
+      "name": "bkp_RFPS",
+      "type": "Nfs",
+      "path": "nfs3://10.7.9.230:/bkp_RFPS",
+      "hostName": "Gateway",
+      "isOnline": true,
+      "capacityGB": 1024.0,
+      "freeGB": 997.7,
+      "usedSpaceGB": 26.0,
+      "freePercent": 97.4,
+      "makeRecentBackupsImmutable": null,
+      "immutabilityDays": null
+    }
+  ],
+  "session_count": 177,
+  "by_result": {
+    "Success": 105,
+    "Failed": 71,
+    "Warning": 1
+  },
+  "last_session_at": "2026-05-01T22:30:19.392976-07:00",
+  "last_session_result": "Success",
+  "last_success_at": "2026-05-01T22:30:19.392976-07:00",
+  "last_failure_at": "2026-05-01T19:37:16.614677-07:00",
+  "last_failure_message": "Cannot perform repository threshold check, failed to get space info: repository \"Bkp_RFPS_IMT\"",
+  "total_transferred_bytes": 0,
+  "total_transferred_gb": 0.0
+}

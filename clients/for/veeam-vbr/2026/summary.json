@@ -1,0 +1,53 @@
+{
+  "client_code": "for",
+  "generated_at": "2026-05-02T19:51:44.717297+00:00",
+  "vbr_server": "TE-DC-BK-VBR-01",
+  "window": {
+    "since": "2026-01-01",
+    "until": "2026-05-02"
+  },
+  "jobs": [
+    {
+      "id": "7798fe39-a8a8-411b-b5d1-d2536f3aeb08",
+      "name": "bkp_FOR",
+      "type": "Backup",
+      "schedule_local_time": "22:00",
+      "destinationRepositoryId": "5d006f74-fd16-44ac-a294-fa8ce411fd34"
+    },
+    {
+      "id": "91d03e32-a2bd-4724-8abd-cd76c4f55ce6",
+      "name": "Bkp_FOR_IMT",
+      "type": "Backup",
+      "schedule_local_time": "19:00",
+      "destinationRepositoryId": "65ee67e9-0c98-40ad-9f59-6103299b1045"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "5d006f74-fd16-44ac-a294-fa8ce411fd34",
+      "name": "bkp_FOR",
+      "type": "Nfs",
+      "path": "nfs3://10.7.9.230:/bkp_FOR",
+      "hostName": "Gateway (auto)",
+      "isOnline": true,
+      "capacityGB": 1024.0,
+      "freeGB": 993.2,
+      "usedSpaceGB": 29.6,
+      "freePercent": 97.0,
+      "makeRecentBackupsImmutable": null,
+      "immutabilityDays": null
+    }
+  ],
+  "session_count": 184,
+  "by_result": {
+    "Success": 103,
+    "Failed": 81
+  },
+  "last_session_at": "2026-05-01T22:00:23.979571-07:00",
+  "last_session_result": "Success",
+  "last_success_at": "2026-05-01T22:00:23.979571-07:00",
+  "last_failure_at": "2026-05-01T19:37:16.210691-07:00",
+  "last_failure_message": "Cannot perform repository threshold check, failed to get space info: repository \"Bkp_FOR_IMT\"",
+  "total_transferred_bytes": 0,
+  "total_transferred_gb": 0.0
+}

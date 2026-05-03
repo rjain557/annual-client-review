@@ -73,3 +73,20 @@ Run as:     %USERNAME%
 
 `subscribed_skus.json` (from this pull) + Pax8 cost data = Phase 1 margin audit.
 Add `clients/_m365_gdap_status.csv` to track GDAP approval per client.
+
+<!-- ticket-management-note: cp-ticket-management -->
+
+## Ticket management
+
+If this skill ever needs to open a CP ticket for an issue it detects
+(capacity warning, threshold breach, persistent failure), use the
+tracked wrapper from the **cp-ticket-management** skill —
+`cp_tickets.create_ticket_for_code_tracked(...)` in
+`scripts/clientportal/cp_tickets.py`. The central state file at
+`state/cp_tickets.json` deduplicates on `issue_key`
+(convention: `<source-skill>:<issue-type>:<resource-id>`) and
+`scripts/clientportal/ticket_monitor.py check` (daily 06:00 PT on the
+production workstation) sends 24h reminder emails to
+support@technijian.com for any open ticket. **Don't call
+`cp_tickets.create_ticket(...)` directly** — the raw call bypasses
+state and reminders.

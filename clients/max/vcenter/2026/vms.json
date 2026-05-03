@@ -1,0 +1,1064 @@
+{
+  "_meta": {
+    "vcenter": "172.16.9.252",
+    "pulled_at": "2026-05-02T19:50:19Z",
+    "api_version": "8.0.0.10200",
+    "count": 5
+  },
+  "items": [
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-1939",
+      "name": "MAX-DC-AD-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-AD-01/MAX-DC-AD-01_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "MAX-DC-AD-01",
+          "instance_uuid": "5018956b-69da-dbf8-f05d-3bff81c0bcf1",
+          "bios_uuid": "422a8c25-b670-9de5-5cfa-802b168f8254"
+        },
+        "nvme_adapters": {},
+        "name": "MAX-DC-AD-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 30379829,
+              "distributed_port": "224",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1383"
+            },
+            "mac_address": "00:50:56:98:a7:25",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5018956b-69da-dbf8-f05d-3bff81c0bcf1",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-AD-01/MAX-DC-AD-01_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 30379829,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "224",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1383"
+          },
+          "mac_address": "00:50:56:98:a7:25",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.101.12",
+        "family": "WINDOWS",
+        "host_name": "MAX-DC-AD-01.maxproleasing.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:98:a7:25",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.101.12",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.101.12",
+              "10.100.101.11"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-1945",
+      "name": "MAX-DC-VDI-001",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-001/MAX-DC-VDI-001_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-001/MAX-DC-VDI-001_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "MAX-DC-VDI-001",
+          "instance_uuid": "50138b8d-197a-1a9f-1417-5e73c697ad55",
+          "bios_uuid": "4213ce42-2b2a-08b8-8261-94ffb3a4eba1"
+        },
+        "nvme_adapters": {},
+        "name": "MAX-DC-VDI-001",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 263710062,
+              "distributed_port": "229",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1383"
+            },
+            "mac_address": "00:50:56:93:59:b5",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50138b8d-197a-1a9f-1417-5e73c697ad55",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-001/MAX-DC-VDI-001_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-001/MAX-DC-VDI-001_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 322122547200
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 263710062,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "229",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1383"
+          },
+          "mac_address": "00:50:56:93:59:b5",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.101.52",
+        "family": "WINDOWS",
+        "host_name": "MAX-DC-VDI-001.maxproleasing.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:59:b5",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.101.52",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.101.11",
+              "10.100.101.12"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "maxproleasing.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-51001",
+      "name": "MAX-DC-FS-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-FS-01/MAX-DC-FS-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-FS-01/MAX-DC-FS-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "MAX-DC-FS-01",
+          "instance_uuid": "502adf9c-7fe9-ad1e-fa63-e99f3ee0dde2",
+          "bios_uuid": "422a6502-c08b-1509-b801-53440649e227"
+        },
+        "nvme_adapters": {},
+        "name": "MAX-DC-FS-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 866821811,
+              "distributed_port": "225",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1383"
+            },
+            "mac_address": "00:50:56:aa:69:b5",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "502adf9c-7fe9-ad1e-fa63-e99f3ee0dde2",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-FS-01/MAX-DC-FS-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-FS-01/MAX-DC-FS-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 866821811,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "225",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1383"
+          },
+          "mac_address": "00:50:56:aa:69:b5",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.101.11",
+        "family": "WINDOWS",
+        "host_name": "AKT-DC-FS-01.maxproleasing.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:aa:69:b5",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.101.11",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.101.11",
+              "10.100.101.12"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-51002",
+      "name": "MAX-DC-VDI-GI",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-GI/MAX-DC-VDI-GI.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-GI/MAX-DC-VDI-GI_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "MAX-DC-VDI-GI",
+          "instance_uuid": "5013dc2a-efca-b0c5-71cf-874d637cff42",
+          "bios_uuid": "421330df-f7c9-4b40-9c9b-4d476718a61c"
+        },
+        "nvme_adapters": {},
+        "name": "MAX-DC-VDI-GI",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1745535241,
+              "distributed_port": "226",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1383"
+            },
+            "mac_address": "00:50:56:93:de:2c",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013dc2a-efca-b0c5-71cf-874d637cff42",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-GI/MAX-DC-VDI-GI_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-GI/MAX-DC-VDI-GI.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1745535241,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "226",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1383"
+          },
+          "mac_address": "00:50:56:93:de:2c",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.101.54",
+        "family": "WINDOWS",
+        "host_name": "MAX-DC-VDI-GI.maxproleasing.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:de:2c",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.101.54",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.101.11",
+              "10.100.101.12"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "maxproleasing.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-51436",
+      "name": "MAX-DC-VDI-002",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-002_1/MAX-DC-VDI-002_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-002_1/MAX-DC-VDI-002_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "MAX-DC-VDI-002",
+          "instance_uuid": "5013f849-2604-684c-82cc-93bb8892ea8e",
+          "bios_uuid": "42134897-f808-998b-6c9e-2e85dc7901fe"
+        },
+        "nvme_adapters": {},
+        "name": "MAX-DC-VDI-002",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 747127856,
+              "distributed_port": "227",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1383"
+            },
+            "mac_address": "00:50:56:93:9e:59",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013f849-2604-684c-82cc-93bb8892ea8e",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-002_1/MAX-DC-VDI-002_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-MAX] MAX-DC-VDI-002_1/MAX-DC-VDI-002_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 322122547200
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 747127856,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "227",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1383"
+          },
+          "mac_address": "00:50:56:93:9e:59",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.101.53",
+        "family": "WINDOWS",
+        "host_name": "MAX-DC-VDI-002.maxproleasing.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:9e:59",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.101.53",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.101.11",
+              "10.100.101.12"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "maxproleasing.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "client_code": "tor",
+  "generated_at": "2026-05-02T19:51:44.771838+00:00",
+  "vbr_server": "TE-DC-BK-VBR-01",
+  "window": {
+    "since": "2026-01-01",
+    "until": "2026-05-02"
+  },
+  "jobs": [
+    {
+      "id": "b795a06b-2ac2-4918-8e4a-89caf7fe8145",
+      "name": "bkp_TOR",
+      "type": "Backup",
+      "schedule_local_time": "19:00",
+      "destinationRepositoryId": "05855649-9e32-4dec-afb3-059d4f267d0b"
+    },
+    {
+      "id": "abbad35d-4121-4a20-a220-819c72a1e7b3",
+      "name": "Bkp_TOR_IMT",
+      "type": "Backup",
+      "schedule_local_time": "19:00",
+      "destinationRepositoryId": "aec6438b-f1cc-4ac9-91a4-0cf7d12c046d"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "05855649-9e32-4dec-afb3-059d4f267d0b",
+      "name": "bkp_TOR",
+      "type": "Nfs",
+      "path": "nfs3://10.7.9.230:/bkp_TOR",
+      "hostName": "Gateway (auto)",
+      "isOnline": true,
+      "capacityGB": 1024.0,
+      "freeGB": 986.4,
+      "usedSpaceGB": 37.4,
+      "freePercent": 96.3,
+      "makeRecentBackupsImmutable": null,
+      "immutabilityDays": null
+    }
+  ],
+  "session_count": 173,
+  "by_result": {
+    "Failed": 73,
+    "Success": 100
+  },
+  "last_session_at": "2026-05-01T19:37:11.19029-07:00",
+  "last_session_result": "Failed",
+  "last_success_at": "2026-05-01T19:00:27.148617-07:00",
+  "last_failure_at": "2026-05-01T19:37:11.19029-07:00",
+  "last_failure_message": "Cannot perform repository threshold check, failed to get space info: repository \"Bkp_TOR_IMT\"",
+  "total_transferred_bytes": 0,
+  "total_transferred_gb": 0.0
+}

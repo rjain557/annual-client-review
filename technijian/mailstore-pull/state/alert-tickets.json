@@ -1,0 +1,96 @@
+{
+  "Technijian::system_message::": {
+    "key": "Technijian::system_message::",
+    "client_code": "Technijian",
+    "alert_type": "system_message",
+    "title": "MailStore: server-wide configuration warnings",
+    "ticket_id": 1452674,
+    "created_at": "2026-05-02T19:56:59Z",
+    "dry_run": false,
+    "alerts": [
+      {
+        "alert_type": "system_message",
+        "severity": "warning",
+        "subject": "The SMTP settings are configured to use an unencrypted connection or the option \"Accept all certificates\" is enabled.",
+        "instance_id": null,
+        "client_code": "Technijian",
+        "extra": {}
+      },
+      {
+        "alert_type": "system_message",
+        "severity": "error",
+        "subject": "Instance orthoxpress on vmtechmss: One or more search indexes have to be rebuilt.",
+        "instance_id": null,
+        "client_code": "Technijian",
+        "extra": {}
+      }
+    ]
+  },
+  "orx::search_index_rebuild::orthoxpress": {
+    "key": "orx::search_index_rebuild::orthoxpress",
+    "client_code": "orx",
+    "alert_type": "search_index_rebuild",
+    "title": "MailStore: rebuild search indexes \u2014 orthoxpress",
+    "ticket_id": 1452675,
+    "created_at": "2026-05-02T19:56:59Z",
+    "dry_run": false,
+    "alerts": [
+      {
+        "alert_type": "search_index_rebuild",
+        "severity": "error",
+        "subject": "Store '2018-11' on orthoxpress search indexes need rebuild",
+        "instance_id": "orthoxpress",
+        "client_code": "orx",
+        "extra": {
+          "store_id": 13,
+          "store_name": "2018-11"
+        }
+      }
+    ]
+  },
+  "icml::archive_runs_failing::icm-realestate,icmlending": {
+    "key": "icml::archive_runs_failing::icm-realestate,icmlending",
+    "client_code": "icml",
+    "alert_type": "archive_runs_failing",
+    "title": "MailStore: archive jobs FAILING \u2014 icm-realestate, icmlending",
+    "ticket_id": 1452676,
+    "created_at": "2026-05-02T19:56:59Z",
+    "dry_run": false,
+    "alerts": [
+      {
+        "alert_type": "archive_runs_failing",
+        "severity": "error",
+        "subject": "Archive job on icmlending failing \u2014 713 of 713 runs failed in last 30 days",
+        "instance_id": "icmlending",
+        "client_code": "icml",
+        "extra": {
+          "total_runs": 713,
+          "failed": 713,
+          "succeeded": 0,
+          "completed_with_errors": 0,
+          "success_rate": 0.0,
+          "profile_name": "Exchange Mailboxes",
+          "machine_name": "VMTECHMSS",
+          "items_archived": 0
+        }
+      },
+      {
+        "alert_type": "archive_runs_failing",
+        "severity": "error",
+        "subject": "Archive job on icm-realestate failing \u2014 8657 of 8657 runs failed in last 30 days",
+        "instance_id": "icm-realestate",
+        "client_code": "icml",
+        "extra": {
+          "total_runs": 8657,
+          "failed": 8657,
+          "succeeded": 0,
+          "completed_with_errors": 0,
+          "success_rate": 0.0,
+          "profile_name": "Microsoft 365 Mailboxes",
+          "machine_name": "VMTECHMSS",
+          "items_archived": 0
+        }
+      }
+    ]
+  }
+}

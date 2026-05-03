@@ -1,0 +1,32 @@
+{
+  "client_code": "rfps",
+  "generated_at": "2026-05-02T12:52:29.153798",
+  "veeam_one_host": "TE-DC-VONE-01 (10.7.9.135)",
+  "snapshot_date": "2026-05-02",
+  "repositories": [
+    {
+      "name": "bkp_RFPS",
+      "path": "nfs3://10.7.9.230:/bkp_RFPS",
+      "capacity_human": "1.0 TB",
+      "free_human": "997.7 GB",
+      "out_of_space_in_days": 3652,
+      "running_tasks": 0,
+      "max_concurrent_tasks": 4,
+      "is_immutable": false,
+      "state": "Ok"
+    }
+  ],
+  "totals": {
+    "capacity_human": "1.0 TB",
+    "free_human": "997.7 GB",
+    "used_percent": 2.6,
+    "runway_days_min": 3652
+  },
+  "business_view_groups": [
+    {
+      "name": "DS-NBD1-RFPS",
+      "category": "Datastore",
+      "object_type": "VSphereVm"
+    }
+  ]
+}

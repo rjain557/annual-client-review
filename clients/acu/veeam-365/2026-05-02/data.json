@@ -1,0 +1,285 @@
+{
+  "id": "e3092228-1fb7-41a0-8fce-b8ff2ce08788",
+  "name": "ACU",
+  "displayName": "ACU",
+  "clientSlug": "acu",
+  "officeName": "segco.onmicrosoft.com",
+  "msid": "f46aeae4-8c63-4a52-9431-0a5a38cef4bf",
+  "type": "Office365",
+  "region": "Worldwide",
+  "services": {
+    "exchange": true,
+    "sharepoint": true,
+    "teams": true,
+    "teamsChats": true
+  },
+  "userCount": 23,
+  "onedriveCoveredUserCount": 7,
+  "totals": {
+    "usedSpaceBytes": 67044704256,
+    "localCacheUsedSpaceBytes": 0,
+    "objectStorageUsedSpaceBytes": 0
+  },
+  "repositories": [
+    {
+      "repositoryId": "e2fe4b1e-03f4-468f-9ead-1c50f5c8b29b",
+      "repositoryName": "ACU-O365",
+      "repositoryPath": "C:\\O365 Backups\\bkp_ACU-365",
+      "usedSpaceBytes": 67044704256,
+      "localCacheUsedSpaceBytes": 0,
+      "objectStorageUsedSpaceBytes": 0,
+      "capacityBytes": 5497539260416,
+      "freeSpaceBytes": 5428349431808
+    }
+  ],
+  "jobs": [
+    {
+      "id": "2ffde8c9-9aef-46d4-98c0-a5f0e215f745",
+      "name": "ACU-O365",
+      "backupType": "EntireOrganization",
+      "lastRun": "2026-05-02T13:02:18.0646275Z",
+      "nextRun": "2026-05-02T20:10:00Z",
+      "lastStatus": "Running",
+      "isEnabled": true,
+      "repositoryId": "e2fe4b1e-03f4-468f-9ead-1c50f5c8b29b"
+    }
+  ],
+  "jobBackupTypes": [
+    "EntireOrganization"
+  ],
+  "modules": {
+    "Exchange": {
+      "estimatedBytes": 36941836474,
+      "estimatedShare": 0.551,
+      "rpFlagCount": 6949,
+      "rpTotalCount": 6971
+    },
+    "OneDrive": {
+      "estimatedBytes": 16709585370,
+      "estimatedShare": 0.2492,
+      "rpFlagCount": 6915,
+      "rpTotalCount": 6971
+    },
+    "SharePoint": {
+      "estimatedBytes": 10050398766,
+      "estimatedShare": 0.1499,
+      "rpFlagCount": 6932,
+      "rpTotalCount": 6971
+    },
+    "Teams": {
+      "estimatedBytes": 3342883644,
+      "estimatedShare": 0.0499,
+      "rpFlagCount": 6917,
+      "rpTotalCount": 6971
+    }
+  },
+  "users": [
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:63b7cdb3-270e-4f05-bfc7-a3dabc586495:00000000-0000-0000-0000-000000000000",
+      "displayName": "Ann Jeansonne",
+      "email": "ajeansonne@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:3763b0e2-7c25-4444-8770-55c850fb4ee9:00000000-0000-0000-0000-000000000000",
+      "displayName": "Discovery Search Mailbox",
+      "email": "DiscoverySearchMailbox{D919BA05-46A6-415f-80AD-7E09334BB852}@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:83a64eb7-4ed9-491b-a691-c29f3e4ea359:00000000-0000-0000-0000-000000000000",
+      "displayName": "ASPNET",
+      "email": "ASPNET@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:83922c52-8c28-44c6-9864-14bfca603882:00000000-0000-0000-0000-000000000000",
+      "displayName": "CRM Reports",
+      "email": "crmreports@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:63748fbc-29b4-4dbe-b97e-479b04d35653:00000000-0000-0000-0000-000000000000",
+      "displayName": "Saca Admin",
+      "email": "sacaadmin@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:dcc74e85-13e4-4384-9886-811f8ee4e90f:00000000-0000-0000-0000-000000000000",
+      "displayName": "Microsoft.net",
+      "email": "Microsoft.net@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:07dce7e9-a209-460c-b12e-4848d98b269b:00000000-0000-0000-0000-000000000000",
+      "displayName": "Chase Hoover",
+      "email": "choover@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:ef4090d6-84e3-4176-895f-089d8d3bb6a6:00000000-0000-0000-0000-000000000000",
+      "displayName": "CRM Mail",
+      "email": "crmmail@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:88b50c10-467b-4ba5-b47a-58769656892c:00000000-0000-0000-0000-000000000000",
+      "displayName": "DCS_SERVER01",
+      "email": "DCS_SERVER01@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:bfd0a574-6167-4aff-b7c1-e843a5f189d6:00000000-0000-0000-0000-000000000000",
+      "displayName": "SEG CRM",
+      "email": "seg-crm@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:a418264f-9abc-4531-8795-5904e5d37566:00000000-0000-0000-0000-000000000000",
+      "displayName": "On-Premises Directory Synchronization Service Account",
+      "email": "Sync_SEG-CORP-DC-01_94f702cb69f4@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:3b5e6f1f-6cd0-453e-9190-5d21a6e7b799:00000000-0000-0000-0000-000000000000",
+      "displayName": "Zane Matton",
+      "email": "zmatton@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:19f23f76-28de-499a-a27b-8ab7321ef6bc:00000000-0000-0000-0000-000000000000",
+      "displayName": "AADSyncSched_94f70",
+      "email": "AADSyncSched_94f70@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:4f235599-7cb0-4b77-802a-ecdfce51121e:00000000-0000-0000-0000-000000000000",
+      "displayName": "Tenant Service Principal",
+      "email": "TenantServicePrincipal@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:9f364723-a901-4af2-be15-3c74fc4a84b4:00000000-0000-0000-0000-000000000000",
+      "displayName": "OpenDNS_Connector",
+      "email": "OpenDNS_Connector@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:7da808d2-d6ee-46a9-b858-ca30210a5b61:00000000-0000-0000-0000-000000000000",
+      "displayName": "Public-01",
+      "email": "G40fc4606af454e5a84e22161a8b275cb@segco.onmicrosoft.com",
+      "userType": "Public",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:ce23cfaa-2494-4d89-9376-85a27b29143f:00000000-0000-0000-0000-000000000000",
+      "displayName": "Sean Kennedy",
+      "email": "skennedy@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:8e6e61ee-1396-4589-81c3-781d6ebe9ffc:00000000-0000-0000-0000-000000000000",
+      "displayName": "onelogin",
+      "email": "onelogin@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:4f3cc2a5-c251-4268-8525-cbc666741115:00000000-0000-0000-0000-000000000000",
+      "displayName": "Technijian",
+      "email": "Technijianadmin@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:20b511ae-2117-48a1-92c6-e56fc7c01de2:00000000-0000-0000-0000-000000000000",
+      "displayName": "Amy Lowry",
+      "email": "alowry@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:5659f364-9bac-4f39-b869-99f82c8c44c6:00000000-0000-0000-0000-000000000000",
+      "displayName": "Chris Kramer",
+      "email": "ckramer@segco.onmicrosoft.com",
+      "userType": "User",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": true
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:c6ce75d1-2c1b-4ce5-9a21-eda5c3343e0b:00000000-0000-0000-0000-000000000000",
+      "displayName": "Michael Ellington - Archive",
+      "email": "mellingtonarchive@segco.onmicrosoft.com",
+      "userType": "Shared",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    },
+    {
+      "id": "segco.onmicrosoft.com:00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000:8c935c5c-c385-4d4d-ab98-c9dc9bbddce2:00000000-0000-0000-0000-000000000000",
+      "displayName": "Chris Kramer - Archive",
+      "email": "ckramerarchive@segco.onmicrosoft.com",
+      "userType": "Shared",
+      "locationType": "Cloud",
+      "hasMailbox": true,
+      "hasOneDrive": false
+    }
+  ]
+}

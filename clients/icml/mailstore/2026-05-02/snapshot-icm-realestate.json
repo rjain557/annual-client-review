@@ -1,0 +1,345 @@
+{
+  "snapshot_date": "2026-05-02",
+  "pulled_at": "2026-05-02T19:07:35Z",
+  "env": {
+    "version": "25.3.1.23021",
+    "webClientVersion": "25.3.1.23021",
+    "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+    "licenseeName": "Technijian Inc.",
+    "licenseeID": 4446,
+    "serverName": "archive.technijian.com",
+    "userName": "admin",
+    "systemProperties": {
+      "processors": [
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+        "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+      ],
+      "totalPhysicalMemory": 8589398016,
+      "operatingSystem": "Microsoft Windows Server 2022 Standard"
+    }
+  },
+  "service_status": {
+    "environmentInfo": {
+      "version": "25.3.1.23021",
+      "webClientVersion": "25.3.1.23021",
+      "copyright": "Copyright (c) 2005-2025 MailStore Software GmbH",
+      "licenseeName": "Technijian Inc.",
+      "licenseeID": 4446,
+      "serverName": "archive.technijian.com",
+      "userName": "admin",
+      "systemProperties": {
+        "processors": [
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+          "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+        ],
+        "totalPhysicalMemory": 8589398016,
+        "operatingSystem": "Microsoft Windows Server 2022 Standard"
+      }
+    },
+    "serverInfos": [
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8473,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "clientAccessServer",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 8589398016,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "archive.technijian.com",
+        "port": 8471,
+        "serverCertificate": {
+          "thumbprint": "76109C293FFBF6D07512183763C082B6EE899324"
+        },
+        "serverType": "managementServer",
+        "active": true,
+        "systemProperties": null,
+        "numberOfInstances": null,
+        "numberOfRunningInstances": null
+      },
+      {
+        "serverName": "vmtechmss",
+        "port": 8472,
+        "serverCertificate": {
+          "thumbprint": "269FAE74147A3F86747F0C809A3568084E234F5F"
+        },
+        "serverType": "instanceHost",
+        "active": true,
+        "systemProperties": {
+          "processors": [
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz",
+            "Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz"
+          ],
+          "totalPhysicalMemory": 17178845184,
+          "operatingSystem": "Microsoft Windows Server 2022 Standard"
+        },
+        "numberOfInstances": 3,
+        "numberOfRunningInstances": 3
+      }
+    ],
+    "messages": [
+      {
+        "type": "information",
+        "text": "A new MailStore Service Provider Edition version (26.2.0.24007) is available.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "warning",
+        "text": "The SMTP settings are configured to use an unencrypted connection or the option \"Accept all certificates\" is enabled.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      },
+      {
+        "type": "error",
+        "text": "Instance orthoxpress on vmtechmss: One or more search indexes have to be rebuilt.",
+        "isSubItem": false,
+        "tag": null,
+        "flags": null
+      }
+    ]
+  },
+  "client_code": "icml",
+  "instance": {
+    "instanceID": "icm-realestate",
+    "alias": "icmrealestate",
+    "displayName": "icml-realestate",
+    "instanceHost": "vmtechmss",
+    "startMode": "automatic",
+    "processID": 4500,
+    "status": "running",
+    "startStopError": null
+  },
+  "statistics": {
+    "totalSizeMB": 2454,
+    "databaseFileSizeMB": 90,
+    "contentFileSizeMB": 2288,
+    "indexFileSizeMB": 76,
+    "numberOfMessages": 49080
+  },
+  "live_stats": {
+    "processUniqueID": "76e48cb7-a57a-4fbf-897e-b231e14ddd89",
+    "timestamp": 1777748857223,
+    "totalProcessorMilliseconds": 186812,
+    "totalIOReadBytes": 16528008,
+    "totalIOWriteBytes": 139273210,
+    "totalIOOtherBytes": 25668767,
+    "totalRemoteProcedureCalls": 26,
+    "totalMessagesArchived": 0,
+    "totalMessagesChecked": 0,
+    "currentPrivateMemoryBytes": 330846208
+  },
+  "stores": [
+    {
+      "id": 1,
+      "name": "2018-02",
+      "requestedState": "current",
+      "error": null,
+      "statisticsCount": 49080,
+      "statisticsSize": 2538415312,
+      "needsUpgrade": false,
+      "searchIndexesNeedRebuild": false,
+      "databasePath": "E:\\ICML-RealEstate\\Data\\2018-02",
+      "contentPath": "E:\\ICML-RealEstate\\Data\\2018-02\\Content",
+      "indexPath": "E:\\ICML-RealEstate\\Data\\2018-02\\Index"
+    }
+  ],
+  "users": [
+    {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jack@icm-realestate.com",
+      "fullName": "Jack Wlodkowshi",
+      "distinguishedName": null,
+      "mfaStatus": "Disabled"
+    },
+    {
+      "userName": "jack@icmlending.com",
+      "fullName": "jack Wlodkowski",
+      "distinguishedName": null,
+      "mfaStatus": "Disabled"
+    }
+  ],
+  "user_info": {
+    "$archiveadmin": {
+      "userName": "$archiveadmin",
+      "fullName": null,
+      "distinguishedName": null,
+      "authentication": "integrated",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [],
+      "pop3UserNames": [],
+      "privileges": [
+        "admin"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ]
+    },
+    "jack@icm-realestate.com": {
+      "userName": "jack@icm-realestate.com",
+      "fullName": "Jack Wlodkowshi",
+      "distinguishedName": null,
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jack@icm-realestate.com",
+        "jack3669@icmlending.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jack@icm-realestate.com",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    },
+    "jack@icmlending.com": {
+      "userName": "jack@icmlending.com",
+      "fullName": "jack Wlodkowski",
+      "distinguishedName": null,
+      "authentication": "directoryServices",
+      "mfaStatus": "Disabled",
+      "emailAddresses": [
+        "jack@icmlending.com",
+        "jack@icmlending.onmicrosoft.com"
+      ],
+      "pop3UserNames": [],
+      "privileges": [
+        "login"
+      ],
+      "loginPrivileges": [
+        "windows",
+        "web",
+        "outlook",
+        "windowsCmd",
+        "imap",
+        "api"
+      ],
+      "privilegesOnFolders": [
+        {
+          "folder": "jack@icmlending.com",
+          "privileges": [
+            "read"
+          ]
+        }
+      ]
+    }
+  },
+  "folder_stats": [],
+  "jobs": [],
+  "profiles": [],
+  "credentials": [
+    {
+      "ID": 1,
+      "Type": "Office365_Modern",
+      "Description": "icm-realestate",
+      "Settings": {
+        "ApplicationId": "26ab6ec8-3cd7-4c81-a1c7-0e1413fd9868",
+        "TenantId": "10e98627-d927-45ce-838e-4f674721057b",
+        "CertificateThumbprint": "982778EB529DF15873A4652ED2F4C3D0458D751B",
+        "CertificateExpirationDate": "2025-03-21T18:03:21Z"
+      }
+    }
+  ],
+  "configuration": {
+    "instance": {
+      "instanceID": "icm-realestate",
+      "alias": "icmrealestate",
+      "displayName": "icml-realestate",
+      "instanceHost": "vmtechmss",
+      "startMode": "automatic",
+      "baseDirectory": "E:\\ICML-RealEstate",
+      "debugLogEnabled": false,
+      "imapServerConnectionLogEnabled": false,
+      "vssWriterEnabled": true,
+      "vssWriterExcludeIndexes": false
+    },
+    "index": {
+      "attachmentExtensions": null,
+      "includeAttachmentsOfPDFs": false
+    },
+    "compliance": {
+      "legalHoldEnabled": false,
+      "logSuccessfulUserActivities": [
+        "ComplianceChangeSettings",
+        "CredentialsAdd",
+        "CredentialsChange",
+        "CredentialsDelete",
+        "ProfileChangeUserName",
+        "RecoverStoreFinish",
+        "RecoverStoreStart",
+        "RetentionPoliciesMessageDelete",
+        "RetentionPoliciesProcessStart",
+        "RetentionPoliciesUpdate",
+        "SessionLogin",
+        "SessionLogout",
+        "SessionUnlockWithMfaCode",
+        "UserAdd",
+        "UserAppPasswordAdd",
+        "UserAppPasswordDelete",
+        "UserDelete",
+        "UserDisableMFA",
+        "UserInitializeMFA",
+        "UserRename",
+        "UserSetArchiveAdminSetEnabled",
+        "UserSetFolderAccess",
+        "UserSetMappings",
+        "UserSetPassword",
+        "UserUpdate"
+      ]
+    },
+    "directory_services": {
+      "type": "office365OpenIDConnect",
+      "credentialId": 1,
+      "licensedExchangeOnlineUsersOnly": true,
+      "enabledUsersOnly": false,
+      "groups": null,
+      "redirectUrl": "https://archive.technijian.com/icm-realestate/oidc/signin",
+      "deleteUsers": true
+    }
+  }
+}

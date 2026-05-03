@@ -293,6 +293,18 @@ Bearer token cached for ~1h via `cp_api.login()`.
 - **Sophos alert router** (`technijian/sophos-pull/scripts/route_alerts.py`)
   re-exports `create_ticket` from this canonical module — runs in REPORT
   mode by default and only writes tickets when invoked with `--apply`.
+- **MailStore SPE alerts** (`technijian/mailstore-pull/scripts/route_alerts.py`)
+  — opens remediation tickets for archive-job failures, index issues, SMTP
+  outages on the on-prem MailStore SPE. Confirmed working 2026-05-02
+  (tickets #1452674-1452676).
+- **Veeam VBR 2026 batch** (`scripts/veeam-vbr/file_2026_backup_tickets.py`
+  + `run_2026_tickets_authorized.py`) — auto-files capacity / IMT-repo /
+  RPC-timeout / vSphere-tag tickets per hosted client. 8 tickets filed live
+  2026-05-02 (#1452728-1452735). The `run_2026_tickets_authorized.py`
+  variant is a thin in-session wrapper used when the harness blocks the
+  pre-existing `file_2026_backup_tickets.py` for provenance reasons —
+  imports the curated `TICKETS` list and calls
+  `create_ticket_for_code` per ticket.
 - **Future:** Meraki anomaly tickets (per-org IDS spike, WAN dropouts),
   Huntress P1 incident handoff, CrowdStrike critical detection escalation.
   Each caller imports `cp_tickets.create_ticket` rather than re-implementing
@@ -330,3 +342,31 @@ Bearer token cached for ~1h via `cp_api.login()`.
 - `client-portal-pull` — read side (active clients, contracts, time entries, invoices)
 - `sophos-pull` — primary caller for client-billable alert tickets
 - `monthly-client-pull` — adjacent skill, snapshot only (does not create tickets)
+
+<!-- ticket-management-note: cp-ticket-management -->
+
+## Ticket management — migration to cp-ticket-management
+
+This skill currently opens CP tickets directly. State today:
+`(no state — bare SP wrapper)`.
+
+This is the underlying SP wrapper. New callers should use `cp_tickets.create_ticket_for_code_tracked(...)` from the tracked wrapper added 2026-05-02 — see [../cp-ticket-management/SKILL.md] for the convention. The raw `create_ticket(...)` / `create_ticket_for_code(...)` functions still exist for manual / one-off use.
+
+**Migration steps** (see ../cp-ticket-management/SKILL.md):
+
+1. Replace `cp_tickets.create_ticket(...)` /
+   `cp_tickets.create_ticket_for_code(...)` with
+   `cp_tickets.create_ticket_for_code_tracked(...)`.
+2. Pick a stable `issue_key` per unique issue
+   (convention: `cp-create-ticket:<issue-type>:<resource-id>`).
+3. Pass `source_skill="cp-create-ticket"`.
+4. Pass `metadata={...}` with the data points that justified the
+   ticket (counts, percentages, server names).
+5. Backfill any existing open tickets via
+   `ticket_state.backfill(...)` — template at
+   `scripts/veeam-365/_backfill_state.py`.
+
+After migration: the central monitor at
+`scripts/clientportal/ticket_monitor.py check` handles 24h reminders to
+support@technijian.com automatically. Retire this skill's local
+reminder loop / state file.

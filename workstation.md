@@ -2329,3 +2329,102 @@ To move the schedule to a different box:
 
 The repo and all per-cycle outputs follow git, so no data needs to be moved
 manually.
+
+## 69. VMware vCenter credentials + smoke test
+
+Credentials live in the OneDrive keyvault at
+`<OneDrive>\Documents\VSCODE\keys\vcenter.md`. Required fields: `Host`,
+`Username`, `Password`. Username is `administrator@vsphere.local`. Host is
+`172.16.9.252` on the management LAN — VPN required from off-site.
+
+Skill: `~/.claude/skills/vcenter-rest/`. Auto-discovered by Claude Code; no
+plugin install needed.
+
+Required Python packages:
+
+```cmd
+py -3 -m pip install requests urllib3 pyvmomi openpyxl
+```
+
+`pyvmomi` is the SOAP fallback used for per-LUN backing detail and historical
+performance queries — REST alone is not sufficient on vCenter 8.0.
+
+Smoke test (lists VM count + datastore count + active alarms):
+
+```cmd
+set PYTHONIOENCODING=utf-8
+py -3 "%USERPROFILE%\.claude\skills\vcenter-rest\scripts\vcenter_client.py"
+```
+
+Expected output: `vCenter version: ... 8.0.0.10200`, `VM count: 205`,
+`Datastore count: 25`, `Host count: 14`, `Active alarms: 0`. Numbers will drift
+as inventory changes.
+
+### Required vCenter advanced setting (one-time)
+
+The daily pull captures per-instance perf via the **5-minute** interval, which
+is the only interval where per-instance data is recorded by vCenter (all coarser
+intervals strip per-instance during rollup, regardless of their level). Set the
+5-min interval to **collection level 3** so `datastore.*`, per-vDisk, per-vNIC
+counters get retained for at least 24 hours.
+
+vSphere Client → vCenter Server → Configure → General → Statistics → Edit:
+
+| Interval | Recommended level | Reason |
+|---|---|---|
+| 5 minutes | **3** | Captures per-instance — required for daily pull aggregation |
+| 30 minutes | 1 (default) | We pull daily; coarser rollups not needed |
+| 2 hours | 1 (default) | Same |
+| Daily | 1 (default) | Same |
+
+Estimated DB impact on `/storage/seat`: **~500 MB – 2 GB sustained** for this
+install (200 VMs / 14 hosts / 25 datastores). Verify with `df -h /storage/seat`
+on the VCSA before/after the change.
+
+## 70. Schedule the daily vCenter pull
+
+The runner pulls inventory + 5-min perf, splits per client, and aggregates into
+per-client per-year accumulators (`vm_perf_daily.json` + `storage_perf_daily.json`)
+that grow one bucket per day. Designed to be idempotent — re-running on the same
+day overwrites that day's bucket.
+
+Run as the workstation user (must be logged on so OneDrive keyvault is mounted):
+
+```cmd
+schtasks /create ^
+  /tn "Technijian-DailyVCenterPull" ^
+  /tr "c:\vscode\annual-client-review\annual-client-review\scripts\vcenter\run-daily-vcenter.cmd" ^
+  /sc DAILY ^
+  /st 06:00 ^
+  /ru "%USERNAME%" ^
+  /f
+```
+
+Stagger: 1 AM Huntress → 2 AM Umbrella → 3 AM CrowdStrike → 4 AM Teramind →
+5 AM Meraki → **6 AM vCenter**. Stays out of the 7 AM monthly/weekly window.
+
+Verify / run on demand:
+
+```cmd
+schtasks /query /tn "Technijian-DailyVCenterPull" /v /fo LIST
+schtasks /run   /tn "Technijian-DailyVCenterPull"
+```
+
+Logs land at `scripts\vcenter\state\run-<YYYY-MM-DD>.log`. Per-client outputs
+under `clients\<code>\vcenter\<year>\`.
+
+Skip the LUN walk (much faster, ~30 s end-to-end if you also skip perf):
+
+```cmd
+py -3 scripts\vcenter\daily_run.py --skip-luns --skip-perf
+```
+
+Skip everything except inventory (use when troubleshooting):
+
+```cmd
+py -3 scripts\vcenter\daily_run.py --skip-luns --skip-perf --keep-master
+```
+
+`--keep-master` preserves the dated master dump under `.work/vcenter-<DATE>/`
+for inspection (default is to delete after the per-client split to keep disk
+usage flat). The `.work` folder is gitignored.

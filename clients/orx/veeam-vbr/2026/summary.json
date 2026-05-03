@@ -1,0 +1,54 @@
+{
+  "client_code": "orx",
+  "generated_at": "2026-05-02T19:51:44.733846+00:00",
+  "vbr_server": "TE-DC-BK-VBR-01",
+  "window": {
+    "since": "2026-01-01",
+    "until": "2026-05-02"
+  },
+  "jobs": [
+    {
+      "id": "f5895f5f-ee95-456f-919f-1fee7319656a",
+      "name": "bkp_ORX",
+      "type": "Backup",
+      "schedule_local_time": "22:30",
+      "destinationRepositoryId": "bffba477-1239-41e9-bbbb-5b209aa3cd7e"
+    },
+    {
+      "id": "0d0c3770-73e1-4dc4-ad1e-d83be7e1961a",
+      "name": "Bkp_ORX_IMT",
+      "type": "Backup",
+      "schedule_local_time": "23:45",
+      "destinationRepositoryId": "45dbe136-7967-4708-a496-9450cbe23376"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "bffba477-1239-41e9-bbbb-5b209aa3cd7e",
+      "name": "bkp_ORX",
+      "type": "Nfs",
+      "path": "nfs3://10.7.9.225:/bkp_ORX",
+      "hostName": "Gateway (auto)",
+      "isOnline": true,
+      "capacityGB": 18432.0,
+      "freeGB": 3546.9,
+      "usedSpaceGB": 14892.1,
+      "freePercent": 19.2,
+      "makeRecentBackupsImmutable": null,
+      "immutabilityDays": null
+    }
+  ],
+  "session_count": 292,
+  "by_result": {
+    "Failed": 198,
+    "Success": 88,
+    "Warning": 6
+  },
+  "last_session_at": "2026-05-02T00:19:39.959232-07:00",
+  "last_session_result": "Failed",
+  "last_success_at": "2026-05-01T22:30:19.507712-07:00",
+  "last_failure_at": "2026-05-02T00:19:39.959232-07:00",
+  "last_failure_message": "Cannot perform repository threshold check, failed to get space info: repository \"Bkp_ORX_IMT\"",
+  "total_transferred_bytes": 0,
+  "total_transferred_gb": 0.0
+}

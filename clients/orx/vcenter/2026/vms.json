@@ -1,0 +1,6246 @@
+{
+  "_meta": {
+    "vcenter": "172.16.9.252",
+    "pulled_at": "2026-05-02T19:50:19Z",
+    "api_version": "8.0.0.10200",
+    "count": 27
+  },
+  "items": [
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-14677",
+      "name": "ORX-DC-OPSPRB-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-OPSPRB-01/ORX-DC-OPSPRB-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-OPSPRB-01",
+          "instance_uuid": "5013e229-d6d0-941b-878b-a8842954dcb0",
+          "bios_uuid": "42136bd8-8f8f-9e89-ef70-1b23691fd109"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-OPSPRB-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1299130369,
+              "distributed_port": "232",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:e7:8c",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013e229-d6d0-941b-878b-a8842954dcb0",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-OPSPRB-01/ORX-DC-OPSPRB-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1299130369,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "232",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:e7:8c",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.131",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-OPSPRB.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:e7:8c",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.131",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.52",
+              "10.100.106.51"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-16541",
+      "name": "ORX-DC-VDI-003",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-003/ORX-DC-VDI-003_6-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-003/ORX-DC-VDI-003_5-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-003",
+          "instance_uuid": "5013c0a0-cbf3-95d4-1d35-a5f6b97ea018",
+          "bios_uuid": "4213b976-9637-9fbb-1eae-4bf521f01789"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-003",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1260032177,
+              "distributed_port": "46",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:45:ff",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013c0a0-cbf3-95d4-1d35-a5f6b97ea018",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-003/ORX-DC-VDI-003_6-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-003/ORX-DC-VDI-003_5-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1260032177,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "46",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:45:ff",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.126",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-003.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:45:ff",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.126",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-16542",
+      "name": "ORX-DC-VDI-004",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-004/ORX-DC-VDI-004_6-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-004/ORX-DC-VDI-004_5-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-004",
+          "instance_uuid": "5013426e-1d9d-a4bd-d13c-5cb78aff4ff9",
+          "bios_uuid": "4213365a-460a-4ef4-d8b5-d002c0eb6b67"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-004",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1260052457,
+              "distributed_port": "239",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:70:fd",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013426e-1d9d-a4bd-d13c-5cb78aff4ff9",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-004/ORX-DC-VDI-004_6-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-004/ORX-DC-VDI-004_5-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1260052457,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "239",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:70:fd",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.128",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-004.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:70:fd",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.128",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-16545",
+      "name": "ORX-DC-VDI-005",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-005/ORX-DC-VDI-005_6-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-005/ORX-DC-VDI-005_5-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-005",
+          "instance_uuid": "5013a6f2-b765-26dd-8f91-d0612882b286",
+          "bios_uuid": "4213dcf8-f71a-ae5f-547e-c8fd23b67559"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-005",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1269982190,
+              "distributed_port": "336",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:c5:5b",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013a6f2-b765-26dd-8f91-d0612882b286",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-005/ORX-DC-VDI-005_6-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-005/ORX-DC-VDI-005_5-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1269982190,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "336",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:c5:5b",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.138",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-005.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:c5:5b",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.138",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2134",
+      "name": "ORX-DC-AD-03",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-03/ORX-DC-AD-03_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-03/ORX-DC-AD-03.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 322122547200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-AD-03",
+          "instance_uuid": "5013dbe2-130f-2f03-0d5b-43664357b823",
+          "bios_uuid": "42371c76-b1b9-489c-e805-e3f2f9f598bd"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-AD-03",
+        "nics": {
+          "4001": {
+            "start_connected": true,
+            "pci_slot_number": 256,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 761377951,
+              "distributed_port": "235",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:d9:65",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 2",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "5013dbe2-130f-2f03-0d5b-43664357b823",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-03/ORX-DC-AD-03_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-03/ORX-DC-AD-03.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 322122547200
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 256,
+          "backing": {
+            "connection_cookie": 761377951,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "235",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:d9:65",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 2",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.51",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-AD-03.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:d9:65",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.51",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.52",
+              "10.100.106.51",
+              "1.1.1.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4001",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2146",
+      "name": "ORX-DC-AD-04",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-04/ORX-DC-AD-04_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-AD-04",
+          "instance_uuid": "502a9c58-57c7-3e4d-05ad-c7b05abc5db5",
+          "bios_uuid": "42375012-2036-0a61-2414-63a226c70a0c"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-AD-04",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1812927025,
+              "distributed_port": "44",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:aa:8a:e5",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "502a9c58-57c7-3e4d-05ad-c7b05abc5db5",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-AD-04/ORX-DC-AD-04_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1812927025,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "44",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:aa:8a:e5",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.52",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-AD-04.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:aa:8a:e5",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.52",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.52",
+              "10.100.106.51"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-2148",
+      "name": "ORX-DC-IIS1",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-IIS1/ORX-DC-IIS1_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-IIS1",
+          "instance_uuid": "5013f16a-c221-5070-2c97-3dac83e0e396",
+          "bios_uuid": "564d2562-e4a4-f960-8e34-9830aaca3750"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-IIS1",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 538230268,
+              "distributed_port": "165",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:59:a4",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013f16a-c221-5070-2c97-3dac83e0e396",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-IIS1/ORX-DC-IIS1_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 538230268,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "165",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:59:a4",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.75",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-IIS1.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:59:a4",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.75",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-2150",
+      "name": "ORX-DC-IIS2",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-IIS2/ORX-DC-IIS2_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-IIS2",
+          "instance_uuid": "50136441-bcd1-75dc-b851-c31951cbc53c",
+          "bios_uuid": "564d4699-8dd8-8cf7-480a-5168c17ddea2"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-IIS2",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 583304623,
+              "distributed_port": "55",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1140"
+            },
+            "mac_address": "00:50:56:93:2b:b8",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50136441-bcd1-75dc-b851-c31951cbc53c",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-IIS2/ORX-DC-IIS2_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 583304623,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "55",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1140"
+          },
+          "mac_address": "00:50:56:93:2b:b8",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.109.75",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-IIS2.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:2b:b8",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.109.75",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2152",
+      "name": "ORX-DC-TS-03",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-03/ORX-DC-TS-03.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-03/ORX-DC-TS-03_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-TS-03",
+          "instance_uuid": "50137611-b1e2-598e-e0dd-3edcf91d3f42",
+          "bios_uuid": "422a86c7-18ed-8f4d-bc31-d4f3118ce0ed"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-TS-03",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 864150443,
+              "distributed_port": "56",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1140"
+            },
+            "mac_address": "00:50:56:93:a5:84",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50137611-b1e2-598e-e0dd-3edcf91d3f42",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-03/ORX-DC-TS-03.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-03/ORX-DC-TS-03_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 864150443,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "56",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1140"
+          },
+          "mac_address": "00:50:56:93:a5:84",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.109.51",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-TS-03.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:a5:84",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.109.51",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-2154",
+      "name": "ORX-DC-TS-04",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 214748364800
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 8
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-TS-04",
+          "instance_uuid": "5013f5cc-fd4f-3731-d07e-bda002e43f11",
+          "bios_uuid": "422aa4f4-7505-02bb-f70e-aa1dccc2a403"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-TS-04",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "backing": {
+              "connection_cookie": 920655440,
+              "distributed_port": "164",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:a2:1c",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "E1000E"
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013f5cc-fd4f-3731-d07e-bda002e43f11",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 214748364800
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-TS-04/ORX-DC-TS-04_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 920655440,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "164",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:a2:1c",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "E1000E"
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.73",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-TS-04.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:a2:1c",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.73",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-2156",
+      "name": "ORX-DC-APP-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3002": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "ide": {
+              "master": true,
+              "primary": false
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-01/ORX-DC-APP-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 214748364800
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {
+          "8000": {
+            "start_connected": false,
+            "backing": {
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "Floppy drive 1",
+            "state": "NOT_CONNECTED"
+          }
+        },
+        "identity": {
+          "name": "ORX-DC-APP-01",
+          "instance_uuid": "5013adae-e05a-b511-9ca7-87adc9e42c54",
+          "bios_uuid": "564d31da-94d7-eec1-fea3-a99faf811a10"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-APP-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1473158673,
+              "distributed_port": "236",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:fa:4d",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_8_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "5013adae-e05a-b511-9ca7-87adc9e42c54",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-01/ORX-DC-APP-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 214748364800
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1473158673,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "236",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:fa:4d",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2016 or later (64-bit)",
+          "id": "vmsg.guestos.windows9Server64Guest.label"
+        },
+        "name": "WINDOWS_9_SERVER_64",
+        "ip_address": "10.100.106.53",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-APP-01.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:fa:4d",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.53",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2157",
+      "name": "ORX-DC-APP-04",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-04/ORX-DC-APP-04.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-04/ORX-DC-APP-04_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-APP-04",
+          "instance_uuid": "501387ff-3235-3843-b8b9-af188b944799",
+          "bios_uuid": "564d825f-e537-dca6-89a0-917093cba94b"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-APP-04",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1490113251,
+              "distributed_port": "237",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:63:61",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "501387ff-3235-3843-b8b9-af188b944799",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-04/ORX-DC-APP-04.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-APP-04/ORX-DC-APP-04_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1490113251,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "237",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:63:61",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.71",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-APP-04.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:63:61",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.71",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2160",
+      "name": "OXPTEST",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3002": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "ide": {
+              "master": true,
+              "primary": false
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_7.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 214748364800
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_5.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 21474836480
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_8.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 53687091200
+          },
+          "2003": {
+            "scsi": {
+              "bus": 0,
+              "unit": 3
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_6.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 4",
+            "type": "SCSI",
+            "capacity": 53687091200
+          },
+          "2004": {
+            "scsi": {
+              "bus": 0,
+              "unit": 4
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 5",
+            "type": "SCSI",
+            "capacity": 53687091200
+          },
+          "2005": {
+            "scsi": {
+              "bus": 0,
+              "unit": 5
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 7",
+            "type": "SCSI",
+            "capacity": 21474836480
+          },
+          "2006": {
+            "scsi": {
+              "bus": 0,
+              "unit": 6
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_4.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 6",
+            "type": "SCSI",
+            "capacity": 21474836480
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {
+          "8000": {
+            "start_connected": false,
+            "backing": {
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "Floppy drive 1",
+            "state": "NOT_CONNECTED"
+          }
+        },
+        "identity": {
+          "name": "OXPTEST",
+          "instance_uuid": "5013c252-428a-4a11-59c9-4c6880fdf886",
+          "bios_uuid": "4230a241-92d6-24a5-c9e7-32e4ac6d3e55"
+        },
+        "nvme_adapters": {},
+        "name": "OXPTEST",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 4129258,
+              "distributed_port": "47",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:ab:da",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_7_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "5013c252-428a-4a11-59c9-4c6880fdf886",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_7.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 214748364800
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_5.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 21474836480
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_8.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 53687091200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 3
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_6.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 4",
+          "type": "SCSI",
+          "capacity": 53687091200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 4
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 5",
+          "type": "SCSI",
+          "capacity": 53687091200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 6
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_4.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 6",
+          "type": "SCSI",
+          "capacity": 21474836480
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 5
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPTEST/OXPTEST_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 7",
+          "type": "SCSI",
+          "capacity": 21474836480
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 4129258,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "47",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:ab:da",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.66",
+        "family": "WINDOWS",
+        "host_name": "OXPTEST.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:ab:da",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.66",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 65536,
+      "vm": "vm-2349",
+      "name": "ORX-DC-SQL-02",
+      "power_state": "POWERED_ON",
+      "cpu_count": 32,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 256,
+          "size_MiB": 65536,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 65536
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 805306368000
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2003": {
+            "scsi": {
+              "bus": 0,
+              "unit": 3
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_4.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 4",
+            "type": "SCSI",
+            "capacity": 644245094400
+          },
+          "2004": {
+            "scsi": {
+              "bus": 0,
+              "unit": 4
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 5",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2005": {
+            "scsi": {
+              "bus": 0,
+              "unit": 5
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_5.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 6",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2006": {
+            "scsi": {
+              "bus": 0,
+              "unit": 6
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_6.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 7",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 32,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-SQL-02",
+          "instance_uuid": "50138c06-103f-f5fd-c1b2-dd3bc95497b0",
+          "bios_uuid": "422a365f-edc9-25ce-7917-4d8284bf1d29"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-SQL-02",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 772777897,
+              "distributed_port": "45",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:fe:22",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50138c06-103f-f5fd-c1b2-dd3bc95497b0",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 805306368000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 3
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_4.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 4",
+          "type": "SCSI",
+          "capacity": 644245094400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 4
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 5",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 5
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_5.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 6",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 6
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-02/ORX-DC-SQL-02_6.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 7",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 772777897,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "45",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:fe:22",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.72",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-SQL-02.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:fe:22",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.72",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 65536,
+      "vm": "vm-2351",
+      "name": "ORX-DC-SQL-03",
+      "power_state": "POWERED_ON",
+      "cpu_count": 32,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 256,
+          "size_MiB": 65536,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 65536
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 214748364800
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 1869169767424
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 32,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-SQL-03",
+          "instance_uuid": "501380f4-556d-0356-012d-9d3f2f47da52",
+          "bios_uuid": "422aae3b-c043-4027-e67c-3f918fb12bd0"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-SQL-03",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 921317540,
+              "distributed_port": "54",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1140"
+            },
+            "mac_address": "00:50:56:93:b3:35",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "501380f4-556d-0356-012d-9d3f2f47da52",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 214748364800
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 1869169767424
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-03/ORX-DC-SQL-03_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 921317540,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "54",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1140"
+          },
+          "mac_address": "00:50:56:93:b3:35",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.109.60",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-SQL-03.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:b3:35",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.109.60",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "127.0.0.1"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2353",
+      "name": "OXPLIVE",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3002": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "ide": {
+              "master": true,
+              "primary": false
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] OXPLIVE/OXPLIVE.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "OXPLIVE",
+          "instance_uuid": "5013dd06-31bd-7648-ae80-017497e0b618",
+          "bios_uuid": "421111f2-f607-5d4b-9cb7-a6a15a8b6dbd"
+        },
+        "nvme_adapters": {},
+        "name": "OXPLIVE",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1588882687,
+              "distributed_port": "51",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:99:92",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_8_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "5013dd06-31bd-7648-ae80-017497e0b618",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] OXPLIVE/OXPLIVE.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1588882687,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "51",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:99:92",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2016 or later (64-bit)",
+          "id": "vmsg.guestos.windows9Server64Guest.label"
+        },
+        "name": "WINDOWS_9_SERVER_64",
+        "ip_address": "10.100.106.65",
+        "family": "WINDOWS",
+        "host_name": "OXPLIVE.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:99:92",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.65",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52",
+              "10.100.104.11"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2355",
+      "name": "ORX-DC-FS-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 966367641600
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2003": {
+            "scsi": {
+              "bus": 0,
+              "unit": 3
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 4",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-FS-01",
+          "instance_uuid": "50133f1d-9205-da1d-fc1c-b5f166abebcc",
+          "bios_uuid": "564df370-974e-a79d-13d0-03650aea7610"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-FS-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 999357876,
+              "distributed_port": "166",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:57:20",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "50133f1d-9205-da1d-fc1c-b5f166abebcc",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 966367641600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 3
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-01/ORX-DC-FS-01_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 4",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 999357876,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "166",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:57:20",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.58",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-FS-01.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:57:20",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.58",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-2357",
+      "name": "ORX-DC-FS-02",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 161061273600
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_4.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2002": {
+            "scsi": {
+              "bus": 0,
+              "unit": 2
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 4",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2003": {
+            "scsi": {
+              "bus": 0,
+              "unit": 3
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 3",
+            "type": "SCSI",
+            "capacity": 536870912000
+          },
+          "2004": {
+            "scsi": {
+              "bus": 0,
+              "unit": 4
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 5",
+            "type": "SCSI",
+            "capacity": 805306368000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 33,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-FS-02",
+          "instance_uuid": "501351cf-2a5d-29d1-57ca-ff2fe3d5c7b1",
+          "bios_uuid": "4237d9af-5b0b-8561-fb8e-f08d9c55994c"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-FS-02",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1332141772,
+              "distributed_port": "238",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:69:52",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_14"
+        }
+      },
+      "host": "501351cf-2a5d-29d1-57ca-ff2fe3d5c7b1",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_4.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 161061273600
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 3
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 3",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 2
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 4",
+          "type": "SCSI",
+          "capacity": 536870912000
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 4
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-FS-02/ORX-DC-FS-02.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 5",
+          "type": "SCSI",
+          "capacity": 805306368000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1332141772,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "238",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:69:52",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.59",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-FS-02.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:69:52",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.59",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-2359",
+      "name": "ORX-DC-VDI-GI",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-GI/ORX-DC-VDI-GI-000002.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-GI/ORX-DC-VDI-GI_1-000002.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-GI",
+          "instance_uuid": "50134ea0-672d-9cbb-4f5a-07108fa84894",
+          "bios_uuid": "42137061-c6df-e1f2-80d1-49bd00fa9253"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-GI",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1009478060,
+              "distributed_port": "50",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:2b:6b",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50134ea0-672d-9cbb-4f5a-07108fa84894",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-GI/ORX-DC-VDI-GI-000002.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-GI/ORX-DC-VDI-GI_1-000002.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1009478060,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "50",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:2b:6b",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.139",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-GI.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:2b:6b",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.139",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-2367",
+      "name": "ORX-DC-VDI-002",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-002/ORX-DC-VDI-002_6-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-002/ORX-DC-VDI-002_5-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-002",
+          "instance_uuid": "5013c4c1-bb62-8a18-0009-b0f5549997cf",
+          "bios_uuid": "42135696-2f9d-5b5c-4430-ea03c23575ea"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-002",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1977344013,
+              "distributed_port": "233",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:ef:f9",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013c4c1-bb62-8a18-0009-b0f5549997cf",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-002/ORX-DC-VDI-002_6-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-002/ORX-DC-VDI-002_5-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1977344013,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "233",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:ef:f9",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.140",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-002.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:ef:f9",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.140",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-2368",
+      "name": "ORX-DC-VDI-001",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {},
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-001/ORX-DC-VDI-001_6-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 322122547200
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-001/ORX-DC-VDI-001_5-000001.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 4
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-VDI-001",
+          "instance_uuid": "50139738-0ed0-674f-4a12-1a543b1f2271",
+          "bios_uuid": "42135ba7-60f2-9fc8-6583-119c30b5469b"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-VDI-001",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1977393622,
+              "distributed_port": "234",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:00:95",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_9_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50139738-0ed0-674f-4a12-1a543b1f2271",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-001/ORX-DC-VDI-001_6-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 322122547200
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-VDI-001/ORX-DC-VDI-001_5-000001.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1977393622,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "234",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:00:95",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows 10 (64-bit)",
+          "id": "vmsg.guestos.windows9_64Guest.label"
+        },
+        "name": "WINDOWS_9_64",
+        "ip_address": "10.100.106.127",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-VDI-001.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:00:95",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "DHCP",
+                "ip_address": "10.100.106.127",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": true
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "oxp.local",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-26599",
+      "name": "JRMEDSVR01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3002": {
+            "start_connected": true,
+            "backing": {
+              "device_access_type": "EMULATION",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "ide": {
+              "master": true,
+              "primary": false
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] JRMEDSVR01/JRMEDSVR01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 999652585984
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "JRMEDSVR01",
+          "instance_uuid": "50139cab-5a58-2888-c933-72d8f11069a0",
+          "bios_uuid": "44454c4c-5100-104e-8053-c2c04f585231"
+        },
+        "nvme_adapters": {},
+        "name": "JRMEDSVR01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1470279196,
+              "distributed_port": "48",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:6b:b1",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {
+          "9000": {
+            "start_connected": false,
+            "backing": {
+              "pipe": "\\\\.\\pipe\\com_1",
+              "type": "PIPE_SERVER",
+              "no_rx_loss": false
+            },
+            "allow_guest_control": true,
+            "yield_on_poll": false,
+            "label": "Serial port 1",
+            "state": "NOT_CONNECTED"
+          }
+        },
+        "boot_devices": [
+          {
+            "type": "CDROM"
+          },
+          {
+            "disks": [
+              "2000"
+            ],
+            "type": "DISK"
+          }
+        ],
+        "guest_OS": "WINDOWS_7_SERVER_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50139cab-5a58-2888-c933-72d8f11069a0",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] JRMEDSVR01/JRMEDSVR01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 999652585984
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1470279196,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "48",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:6b:b1",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2008 R2 (64-bit)",
+          "id": "vmsg.guestos.windows7Server64Guest.label"
+        },
+        "name": "WINDOWS_7_SERVER_64",
+        "ip_address": "10.100.106.151",
+        "family": "WINDOWS",
+        "host_name": "JRMEDSVR01.jrmed.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:6b:b1",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.151",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.151",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-2685",
+      "name": "ORX-DC-SQL-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 8,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-01/ORX-DC-SQL-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107555586048
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-01/ORX-DC-SQL-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 8,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-SQL-01",
+          "instance_uuid": "5013cd2a-38c9-8929-a17d-08661f237fe8",
+          "bios_uuid": "42134533-d433-509c-4afa-8f64b4147b9f"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-SQL-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1718507843,
+              "distributed_port": "49",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:d5:27",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013cd2a-38c9-8929-a17d-08661f237fe8",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-01/ORX-DC-SQL-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107555586048
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SQL-01/ORX-DC-SQL-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1718507843,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "49",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:d5:27",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.55",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-SQL-01.oxp.local"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:d5:27",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.55",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-3554",
+      "name": "ORX-DC-CB-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3002": {
+            "start_connected": true,
+            "backing": {
+              "iso_file": "[DS-NBD1-ORX] ORX-DC-CB-01/_ovfenv-ORX-DC-CB-01.iso",
+              "type": "ISO_FILE"
+            },
+            "allow_guest_control": true,
+            "ide": {
+              "master": true,
+              "primary": false
+            },
+            "label": "CD/DVD drive 1",
+            "state": "CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-CB-01/ORX-DC-CB-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 53687091200
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "PVSCSI"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-CB-01",
+          "instance_uuid": "5013e971-3378-9f49-d344-82f869b64cc0",
+          "bios_uuid": "421324a9-2d8e-3c3f-520e-775ad0de4541"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-CB-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1754349568,
+              "distributed_port": "167",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:c5:ad",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "UBUNTU_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_10"
+        }
+      },
+      "host": "5013e971-3378-9f49-d344-82f869b64cc0",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-CB-01/ORX-DC-CB-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 53687091200
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1754349568,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "167",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:c5:ad",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Ubuntu Linux (64-bit)",
+          "id": "vmsg.guestos.ubuntu64Guest.label"
+        },
+        "name": "UBUNTU_64",
+        "ip_address": "10.100.106.251",
+        "family": "LINUX",
+        "host_name": "localhost"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:c5:ad",
+          "ip": {
+            "ip_addresses": [
+              {
+                "ip_address": "10.100.106.251",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              },
+              {
+                "ip_address": "fe80::250:56ff:fe93:c5ad",
+                "prefix_length": 64,
+                "state": "UNKNOWN"
+              }
+            ]
+          },
+          "nic": "4000"
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-35826",
+      "name": "ORX-DC-SFTP-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": true,
+            "backing": {
+              "iso_file": "[DS-NBD1-TECH] Install/SW_DVD9_Win_Server_STD_CORE_2022__64Bit_English_DC_STD_MLF_X22-74290.ISO",
+              "type": "ISO_FILE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SFTP-01/ORX-DC-SFTP-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          },
+          "2001": {
+            "scsi": {
+              "bus": 0,
+              "unit": 1
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SFTP-01/ORX-DC-SFTP-01_1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 2",
+            "type": "SCSI",
+            "capacity": 536870912000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-SFTP-01",
+          "instance_uuid": "50130d3f-da70-f84b-8ed2-9515e0db62c1",
+          "bios_uuid": "4213712e-c2a1-c14c-6c7a-d681c1a59fe1"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-SFTP-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1469875846,
+              "distributed_port": "169",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:32:18",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": false
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50130d3f-da70-f84b-8ed2-9515e0db62c1",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SFTP-01/ORX-DC-SFTP-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        },
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 1
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-SFTP-01/ORX-DC-SFTP-01_1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 2",
+          "type": "SCSI",
+          "capacity": 536870912000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1469875846,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "169",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:32:18",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": false
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.21",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-SFTP-01"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:32:18",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "LINKLAYER",
+                "ip_address": "fe80::51de:4e6f:3295:15eb",
+                "prefix_length": 64,
+                "state": "UNKNOWN"
+              },
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.21",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "10.100.106.52"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 8192,
+      "vm": "vm-51017",
+      "name": "ORX-DC-3CX-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 8192,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 8192
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-3CX-01_1/ORX-DC-3CX-01.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107555586048
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-3CX-01",
+          "instance_uuid": "5013d95e-16fd-7903-9a19-844e21b1036a",
+          "bios_uuid": "421300e8-5693-33aa-7238-319afbc3223f"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-3CX-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 431358971,
+              "distributed_port": "168",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:17:c3",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "5013d95e-16fd-7903-9a19-844e21b1036a",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-3CX-01_1/ORX-DC-3CX-01.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107555586048
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 431358971,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "168",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:17:c3",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.56",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-3CX-01"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:17:c3",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.56",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 16384,
+      "vm": "vm-55448",
+      "name": "ORX-DC-N8N-01",
+      "power_state": "POWERED_ON",
+      "cpu_count": 4,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "16000": {
+            "start_connected": false,
+            "backing": {
+              "iso_file": "[DS-NBD1-TECH] Install/SW_DVD9_Win_Server_STD_CORE_2022__64Bit_English_DC_STD_MLF_X22-74290.ISO",
+              "type": "ISO_FILE"
+            },
+            "allow_guest_control": true,
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "SATA",
+            "sata": {
+              "bus": 0,
+              "unit": 0
+            }
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 16384,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 16384
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-ORX] ORX-DC-N8N-01/ORX-DC-N8N-01_3.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 268435456000
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {
+          "15000": {
+            "bus": 0,
+            "pci_slot_number": 32,
+            "label": "SATA controller 0",
+            "type": "AHCI"
+          }
+        },
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 4,
+          "hot_add_enabled": false,
+          "cores_per_socket": 2
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "LSILOGICSAS"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "ORX-DC-N8N-01",
+          "instance_uuid": "50136ab3-2ce7-871b-c348-7c1b6960483d",
+          "bios_uuid": "4213e9ec-f174-a999-693e-d5ad4721a590"
+        },
+        "nvme_adapters": {},
+        "name": "ORX-DC-N8N-01",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "backing": {
+              "connection_cookie": 134740641,
+              "distributed_port": "170",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-1139"
+            },
+            "mac_address": "00:50:56:93:2f:a5",
+            "mac_type": "ASSIGNED",
+            "allow_guest_control": false,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "E1000E"
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "efi_legacy_boot": false,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "network_protocol": "IPV4",
+          "type": "EFI",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [],
+        "guest_OS": "WINDOWS_SERVER_2021",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "50136ab3-2ce7-871b-c348-7c1b6960483d",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-ORX] ORX-DC-N8N-01/ORX-DC-N8N-01_3.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 268435456000
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 134740641,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "170",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-1139"
+          },
+          "mac_address": "00:50:56:93:2f:a5",
+          "mac_type": "ASSIGNED",
+          "allow_guest_control": false,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "E1000E"
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Microsoft Windows Server 2022 (64-bit)",
+          "id": "vmsg.guestos.windows2019srvNext_64Guest.label"
+        },
+        "name": "WINDOWS_SERVER_2021",
+        "ip_address": "10.100.106.22",
+        "family": "WINDOWS",
+        "host_name": "ORX-DC-N8N-01"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:50:56:93:2f:a5",
+          "ip": {
+            "ip_addresses": [
+              {
+                "origin": "MANUAL",
+                "ip_address": "10.100.106.22",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              }
+            ],
+            "dhcp": {
+              "ipv6_enabled": false,
+              "ipv4_enabled": false
+            }
+          },
+          "dns": {
+            "ip_addresses": [
+              "10.100.106.51",
+              "8.8.8.8"
+            ],
+            "search_domains": []
+          },
+          "nic": "4000",
+          "dns_values": {
+            "domain_name": "",
+            "host_name": ""
+          }
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    }
+  ]
+}

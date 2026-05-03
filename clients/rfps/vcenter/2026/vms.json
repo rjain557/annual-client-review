@@ -1,0 +1,426 @@
+{
+  "_meta": {
+    "vcenter": "172.16.9.252",
+    "pulled_at": "2026-05-02T19:50:19Z",
+    "api_version": "8.0.0.10200",
+    "count": 2
+  },
+  "items": [
+    {
+      "memory_size_MiB": 1024,
+      "vm": "vm-2939",
+      "name": "RFPS-DC-WORDP-2",
+      "power_state": "POWERED_ON",
+      "cpu_count": 1,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": false,
+            "ide": {
+              "master": true,
+              "primary": true
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          },
+          "3001": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": false,
+            "ide": {
+              "master": false,
+              "primary": true
+            },
+            "label": "CD/DVD drive 2",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 0,
+          "size_MiB": 1024,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 1024
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-RFPS] RFPS-DC-WORDP-2/RFPS-DC-WORDP-2.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 10737418240
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 1,
+          "hot_add_enabled": false,
+          "cores_per_socket": 1
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "PVSCSI"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "RFPS-DC-WORDP-2",
+          "instance_uuid": "528bd0e5-3196-0fac-fba8-f40a5fb63cee",
+          "bios_uuid": "564dc8d7-78ed-8e4b-421f-5778a562af46"
+        },
+        "nvme_adapters": {},
+        "name": "RFPS-DC-WORDP-2",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 449064057,
+              "distributed_port": "384",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-30506"
+            },
+            "mac_address": "00:0c:29:62:af:46",
+            "mac_type": "GENERATED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [
+          {
+            "disks": [
+              "2000"
+            ],
+            "type": "DISK"
+          }
+        ],
+        "guest_OS": "DEBIAN_10_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "528bd0e5-3196-0fac-fba8-f40a5fb63cee",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-RFPS] RFPS-DC-WORDP-2/RFPS-DC-WORDP-2.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 10737418240
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 449064057,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "384",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-30506"
+          },
+          "mac_address": "00:0c:29:62:af:46",
+          "mac_type": "GENERATED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Debian GNU/Linux 11 (64-bit)",
+          "id": "vmsg.guestos.debian11_64Guest.label"
+        },
+        "name": "DEBIAN_11_64",
+        "ip_address": "10.100.254.42",
+        "family": "LINUX",
+        "host_name": "FPS-DC-WORDP-2"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:0c:29:62:af:46",
+          "ip": {
+            "ip_addresses": [
+              {
+                "ip_address": "10.100.254.42",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              },
+              {
+                "ip_address": "fe80::20c:29ff:fe62:af46",
+                "prefix_length": 64,
+                "state": "UNKNOWN"
+              }
+            ]
+          },
+          "nic": "4000"
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    },
+    {
+      "memory_size_MiB": 32768,
+      "vm": "vm-51032",
+      "name": "RFPS-DC-WORDP-1",
+      "power_state": "POWERED_ON",
+      "cpu_count": 16,
+      "detail": {
+        "instant_clone_frozen": false,
+        "cdroms": {
+          "3000": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": false,
+            "ide": {
+              "master": true,
+              "primary": true
+            },
+            "label": "CD/DVD drive 1",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          },
+          "3001": {
+            "start_connected": false,
+            "backing": {
+              "device_access_type": "PASSTHRU",
+              "type": "CLIENT_DEVICE"
+            },
+            "allow_guest_control": false,
+            "ide": {
+              "master": false,
+              "primary": true
+            },
+            "label": "CD/DVD drive 2",
+            "state": "NOT_CONNECTED",
+            "type": "IDE"
+          }
+        },
+        "memory": {
+          "hot_add_increment_size_MiB": 128,
+          "size_MiB": 32768,
+          "hot_add_enabled": false,
+          "hot_add_limit_MiB": 32768
+        },
+        "disks": {
+          "2000": {
+            "scsi": {
+              "bus": 0,
+              "unit": 0
+            },
+            "backing": {
+              "vmdk_file": "[DS-NBD1-RFPS] RFPS-DC-WORDP-1/RFPS-DC-WORDP-1.vmdk",
+              "type": "VMDK_FILE"
+            },
+            "label": "Hard disk 1",
+            "type": "SCSI",
+            "capacity": 107374182400
+          }
+        },
+        "parallel_ports": {},
+        "sata_adapters": {},
+        "cpu": {
+          "hot_remove_enabled": false,
+          "count": 16,
+          "hot_add_enabled": false,
+          "cores_per_socket": 8
+        },
+        "scsi_adapters": {
+          "1000": {
+            "pci_slot_number": 160,
+            "scsi": {
+              "bus": 0,
+              "unit": 7
+            },
+            "label": "SCSI controller 0",
+            "sharing": "NONE",
+            "type": "PVSCSI"
+          }
+        },
+        "power_state": "POWERED_ON",
+        "floppies": {},
+        "identity": {
+          "name": "RFPS-DC-WORDP-1",
+          "instance_uuid": "526dbe9d-b0d7-aefa-fd62-e647a1def69c",
+          "bios_uuid": "564dc620-1412-9b2d-f6e6-23e0d4730815"
+        },
+        "nvme_adapters": {},
+        "name": "RFPS-DC-WORDP-1",
+        "nics": {
+          "4000": {
+            "start_connected": true,
+            "pci_slot_number": 192,
+            "upt_v2_compatibility_enabled": false,
+            "backing": {
+              "connection_cookie": 1518647975,
+              "distributed_port": "468",
+              "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+              "type": "DISTRIBUTED_PORTGROUP",
+              "network": "dvportgroup-30505"
+            },
+            "mac_address": "00:0c:29:73:08:15",
+            "mac_type": "GENERATED",
+            "allow_guest_control": true,
+            "wake_on_lan_enabled": true,
+            "label": "Network adapter 1",
+            "state": "CONNECTED",
+            "type": "VMXNET3",
+            "upt_compatibility_enabled": true
+          }
+        },
+        "boot": {
+          "delay": 0,
+          "retry_delay": 10000,
+          "enter_setup_mode": false,
+          "type": "BIOS",
+          "retry": false
+        },
+        "serial_ports": {},
+        "boot_devices": [
+          {
+            "disks": [
+              "2000"
+            ],
+            "type": "DISK"
+          }
+        ],
+        "guest_OS": "DEBIAN_10_64",
+        "hardware": {
+          "upgrade_policy": "NEVER",
+          "upgrade_status": "NONE",
+          "version": "VMX_19"
+        }
+      },
+      "host": "526dbe9d-b0d7-aefa-fd62-e647a1def69c",
+      "disks": [
+        {
+          "scsi": {
+            "bus": 0,
+            "unit": 0
+          },
+          "backing": {
+            "vmdk_file": "[DS-NBD1-RFPS] RFPS-DC-WORDP-1/RFPS-DC-WORDP-1.vmdk",
+            "type": "VMDK_FILE"
+          },
+          "label": "Hard disk 1",
+          "type": "SCSI",
+          "capacity": 107374182400
+        }
+      ],
+      "nics": [
+        {
+          "start_connected": true,
+          "upt_v2_compatibility_enabled": false,
+          "pci_slot_number": 192,
+          "backing": {
+            "connection_cookie": 1518647975,
+            "distributed_switch_uuid": "50 13 9d f8 84 69 31 d4-39 ad a8 f1 23 35 31 31",
+            "distributed_port": "468",
+            "type": "DISTRIBUTED_PORTGROUP",
+            "network": "dvportgroup-30505"
+          },
+          "mac_address": "00:0c:29:73:08:15",
+          "mac_type": "GENERATED",
+          "allow_guest_control": true,
+          "wake_on_lan_enabled": true,
+          "label": "Network adapter 1",
+          "state": "CONNECTED",
+          "type": "VMXNET3",
+          "upt_compatibility_enabled": true
+        }
+      ],
+      "guest_identity": {
+        "full_name": {
+          "args": [],
+          "default_message": "Debian GNU/Linux 11 (64-bit)",
+          "id": "vmsg.guestos.debian11_64Guest.label"
+        },
+        "name": "DEBIAN_11_64",
+        "ip_address": "10.100.251.41",
+        "family": "LINUX",
+        "host_name": "FPS-DC-WORDP-1"
+      },
+      "guest_networking": [
+        {
+          "mac_address": "00:0c:29:73:08:15",
+          "ip": {
+            "ip_addresses": [
+              {
+                "ip_address": "10.100.251.41",
+                "prefix_length": 24,
+                "state": "PREFERRED"
+              },
+              {
+                "ip_address": "fe80::20c:29ff:fe73:815",
+                "prefix_length": 64,
+                "state": "UNKNOWN"
+              }
+            ]
+          },
+          "nic": "4000"
+        }
+      ],
+      "power": {
+        "state": "POWERED_ON"
+      }
+    }
+  ]
+}

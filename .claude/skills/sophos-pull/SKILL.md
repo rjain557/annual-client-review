@@ -186,3 +186,31 @@ use `billable=False`, but the Technijian tenant is in the ignore list anyway.
   silently. Check `state/alert-tickets.json` entries for `_creation_error`.
 - Reminder emails not arriving → check `_secrets.py` resolves M365 creds and
   the app registration still has `Mail.Send` application permission.
+
+<!-- ticket-management-note: cp-ticket-management -->
+
+## Ticket management — migration to cp-ticket-management
+
+This skill currently opens CP tickets directly. State today:
+`technijian/sophos-pull/state/alert-tickets.json`.
+
+`route_alerts.py` runs hourly and opens client-billable tickets to CHD : TS1. **Pending migration** to the central tracked wrapper. After migration its existing 24h reminder loop in `email_support.py` can retire (the central monitor covers reminders).
+
+**Migration steps** (see ../cp-ticket-management/SKILL.md):
+
+1. Replace `cp_tickets.create_ticket(...)` /
+   `cp_tickets.create_ticket_for_code(...)` with
+   `cp_tickets.create_ticket_for_code_tracked(...)`.
+2. Pick a stable `issue_key` per unique issue
+   (convention: `sophos-pull:<issue-type>:<resource-id>`).
+3. Pass `source_skill="sophos-pull"`.
+4. Pass `metadata={...}` with the data points that justified the
+   ticket (counts, percentages, server names).
+5. Backfill any existing open tickets via
+   `ticket_state.backfill(...)` — template at
+   `scripts/veeam-365/_backfill_state.py`.
+
+After migration: the central monitor at
+`scripts/clientportal/ticket_monitor.py check` handles 24h reminders to
+support@technijian.com automatically. Retire this skill's local
+reminder loop / state file.
