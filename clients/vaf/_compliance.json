@@ -2,15 +2,16 @@
   "client_code": "VAF",
   "client_name": "Via Auto Finance",
   "primary_domain": null,
-  "industry": "Automotive / Trucking",
-  "industry_evidence": "Name indicates automotive or trucking (match: 'Auto')",
+  "industry": "Automotive Finance",
+  "industry_evidence": "Via Auto Finance \u2014 auto-loan finance company",
   "compliance_scope": [
     "California CCPA",
-    "FTC Safeguards Rule (if dealer)"
+    "FTC Safeguards Rule (if dealer)",
+    "GLBA"
   ],
-  "compliance_rationale": "Auto dealers fall under the FTC Safeguards Rule for customer financial data; trucking falls under DOT regs. Both handle California-resident PII triggering CCPA obligations.",
-  "data_sensitivity": "Customer PII / Financial",
+  "compliance_rationale": "Auto-finance lenders are non-bank financial institutions under GLBA \u2014 full Safeguards Rule applies (16 CFR \u00a7314, including the 2023 enhanced security-program requirements). FTC Safeguards Rule layered on the same controls. PCI for any card processing on origination; CCPA for California-resident borrowers.",
+  "data_sensitivity": "Borrower NPI / Credit data",
   "classified_at": "2026-05-02",
-  "classifier_version": "1",
-  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+  "classifier_version": "1-manual",
+  "_note": "Manually overridden 2026-05-03 per client review."
 }

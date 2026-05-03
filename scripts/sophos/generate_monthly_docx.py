@@ -35,6 +35,7 @@ sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 import vendor_news  # noqa: E402
 import compliance_section  # noqa: E402
+import service_highlights  # noqa: E402
 
 PROOFREADER  = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
@@ -919,6 +920,7 @@ def build_report(payload: dict, out_path: Path) -> None:
     try:
         ym = payload["month"]
         year_int, month_int = (int(x) for x in ym.split("-"))
+        service_highlights.render_section(doc, payload["client_code"].lower(), year_int, month_int, "sophos", brand)
         vendor_news.render_section(doc, "sophos", year_int, month_int, brand)
     except Exception:
         pass

@@ -2,15 +2,16 @@
   "client_code": "JSD",
   "client_name": "Jerry Seiner Dealerships",
   "primary_domain": null,
-  "industry": "Automotive / Trucking",
-  "industry_evidence": "Name indicates automotive or trucking (match: 'Seiner')",
+  "industry": "Automotive / Dealership Finance",
+  "industry_evidence": "Jerry Seiner Dealerships \u2014 franchised dealers handle financing",
   "compliance_scope": [
     "California CCPA",
-    "FTC Safeguards Rule (if dealer)"
+    "FTC Safeguards Rule (if dealer)",
+    "GLBA"
   ],
-  "compliance_rationale": "Auto dealers fall under the FTC Safeguards Rule for customer financial data; trucking falls under DOT regs. Both handle California-resident PII triggering CCPA obligations.",
-  "data_sensitivity": "Customer PII / Financial",
+  "compliance_rationale": "Franchised dealers that originate F&I loans qualify as non-bank financial institutions under GLBA \u2014 full Safeguards Rule applies. FTC Safeguards Rule layered on the same controls. PCI for parts/service card payments; CCPA for California-resident PII.",
+  "data_sensitivity": "Customer NPI / Credit data",
   "classified_at": "2026-05-02",
-  "classifier_version": "1",
-  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+  "classifier_version": "1-manual",
+  "_note": "Manually overridden 2026-05-03 per client review."
 }

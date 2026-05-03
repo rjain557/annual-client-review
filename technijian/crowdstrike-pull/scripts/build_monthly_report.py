@@ -43,6 +43,7 @@ SHARED_SCRIPTS = REPO / "technijian" / "shared" / "scripts"
 sys.path.insert(0, str(SHARED_SCRIPTS))
 import vendor_news  # noqa: E402
 import compliance_section  # noqa: E402
+import service_highlights  # noqa: E402
 
 from docx.shared import Pt, RGBColor  # noqa: E402
 from docx.enum.text import WD_ALIGN_PARAGRAPH  # noqa: E402
@@ -492,6 +493,11 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
     ]
     for prefix, body in bullets:
         brand.add_bullet(doc, body, bold_prefix=prefix)
+    try:
+        year_int, month_int = (int(x) for x in data.month.split("-"))
+        service_highlights.render_section(doc, data.code.lower(), year_int, month_int, "crowdstrike", brand)
+    except Exception:
+        pass
 
     # ── INDUSTRY NEWS & VENDOR INNOVATIONS ────────────────────────────────
     doc.add_paragraph()

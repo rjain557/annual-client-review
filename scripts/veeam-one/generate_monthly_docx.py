@@ -37,6 +37,7 @@ sys.path.insert(0, str(SHARED))
 import _brand as brand  # noqa: E402
 
 import vendor_news  # noqa: E402
+import service_highlights  # noqa: E402
 
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
@@ -354,6 +355,10 @@ def build_report(client_dir: Path, customer: str, year: int, month: int, snapsho
     section_business_view(doc, summary)
     section_recovery_posture(doc, summary)
     section_what_technijian_did(doc, customer, year, month, summary)
+    try:
+        service_highlights.render_section(doc, client_dir.name, year, month, "veeam-one", brand)
+    except Exception:
+        pass
     vendor_news.render_section(doc, "veeam", year, month, brand)
     section_recommendations(doc, summary)
     section_about(doc, customer, year, month, summary)

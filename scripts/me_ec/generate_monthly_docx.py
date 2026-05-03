@@ -45,6 +45,7 @@ import _brand as brand  # noqa: E402
 
 import vendor_news  # noqa: E402
 import compliance_section  # noqa: E402
+import service_highlights  # noqa: E402
 
 PROOFREADER = SHARED / "proofread_docx.py"
 CLIENTS_ROOT = REPO_ROOT / "clients"
@@ -758,6 +759,10 @@ def build_report(customer: dict, slug: str, year: int, month: int, agg: dict, wi
     section_manual_installs(doc, manual)
     section_ytd_coverage(doc, conn, int(customer["CUSTOMER_ID"]), year, month)
     section_what_technijian_did(doc, customer_name, year, month, agg, manual, windows)
+    try:
+        service_highlights.render_section(doc, slug, year, month, "me-ec", brand)
+    except Exception:
+        pass
     vendor_news.render_section(doc, "manageengine", year, month, brand)
     compliance_section.render_section(doc, slug, brand)
     section_recommendations(doc, customer_name, agg, windows)

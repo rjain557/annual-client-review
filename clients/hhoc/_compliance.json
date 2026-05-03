@@ -2,16 +2,16 @@
   "client_code": "HHOC",
   "client_name": "Housing for Health OC",
   "primary_domain": "housingforhealthoc.org",
-  "industry": "Healthcare",
-  "industry_evidence": "Name indicates medical practice or healthcare provider (match: 'Health')",
+  "industry": "Non-profit / Housing Services",
+  "industry_evidence": "Housing for Health OC \u2014 homelessness-services nonprofit (not a healthcare provider)",
   "compliance_scope": [
-    "HIPAA",
-    "HITECH",
-    "California CMIA"
+    "California CCPA",
+    "Fair Housing Act",
+    "State charitable registration"
   ],
-  "compliance_rationale": "All endpoints handle Protected Health Information (PHI). HIPAA Security Rule (45 CFR \u00a7164.302-318) requires administrative, physical, and technical safeguards. The HITECH Act extends breach-notification and audit obligations. California CMIA (Civil Code \u00a756) adds state-specific patient confidentiality rules.",
-  "data_sensitivity": "PHI",
+  "compliance_rationale": "Nonprofit operating supportive-housing programs handles applicant/resident PII (under CCPA) and Fair Housing Act records. State charitable-registration security expectations apply to donor data. Some grant-funded programs may also have HIPAA scope if direct medical services are delivered \u2014 confirm per program before enabling HIPAA controls.",
+  "data_sensitivity": "Resident / donor PII",
   "classified_at": "2026-05-02",
-  "classifier_version": "1",
-  "_note": "Tech can edit this file; the classifier won't overwrite it on re-runs unless --overwrite is passed."
+  "classifier_version": "1-manual",
+  "_note": "Manually overridden 2026-05-03 per client review."
 }
