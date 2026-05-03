@@ -765,8 +765,7 @@ def section_about(doc, client: dict, data: dict) -> None:
             size=9, color=brand.BRAND_GREY)
 
     brand.add_body(doc,
-        "Questions about this report? Contact your Technijian account manager "
-        "or email support@technijian.com.",
+        "Questions about this report? Email support@technijian.com.",
         color=brand.BRAND_GREY)
 
 

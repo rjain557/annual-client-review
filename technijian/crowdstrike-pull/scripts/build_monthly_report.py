@@ -496,8 +496,8 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
             doc,
             "No Critical or High severity alerts fired this month. "
             "Continue operating under your current Falcon policy and "
-            "contact your Technijian account manager if you plan to add "
-            "or remove endpoints.",
+            "email support@technijian.com if you plan to add or remove "
+            "endpoints.",
         )
     else:
         if critical_high > 0:
@@ -525,9 +525,9 @@ def render_report(data: CsMonthData, out_path: Path) -> dict:
             )
             brand.add_body(
                 doc,
-                "Recommended action: work with your Technijian contact to "
-                "review each open Critical/High alert, confirm no further "
-                "attacker activity is present, and close or suppress "
+                "Recommended action: email support@technijian.com to review "
+                "each open Critical/High alert with our team, confirm no "
+                "further attacker activity is present, and close or suppress "
                 "confirmed false positives.",
             )
 

@@ -1,0 +1,31 @@
+[
+  {
+    "type": "feature",
+    "title": "AWS CloudTrail integration goes GA",
+    "summary": "Huntress's AWS CloudTrail log-source integration moved from early access to General Availability with an improved onboarding workflow.",
+    "why_it_matters": "Adds AWS account-level activity into the same MDR pipeline that watches Windows endpoints — same analyst team, same triage SLA, broader coverage.",
+    "date": "2026-01",
+    "source_url": "https://support.huntress.io/hc/en-us/articles/19223729361939-Huntress-Release-Notes-and-Agent-Version"
+  },
+  {
+    "type": "feature",
+    "title": "Linux agent gains Syslog collection",
+    "summary": "The Huntress Linux agent now ships native Syslog collection, expanding coverage beyond Windows endpoints.",
+    "why_it_matters": "Linux servers (web, app, file) can now contribute to the same threat-hunting telemetry as Windows endpoints — useful for hybrid fleets.",
+    "date": "2026-01",
+    "source_url": "https://support.huntress.io/hc/en-us/articles/19223729361939-Huntress-Release-Notes-and-Agent-Version"
+  },
+  {
+    "type": "feature",
+    "title": "Phishing & Security Awareness reports go GA",
+    "summary": "Standard phishing and learning reports moved into General Availability, with further enhancements planned through 2026.",
+    "why_it_matters": "Security Awareness Training results land in the same console as MDR and ITDR — single pane of glass for human-risk metrics."
+  },
+  {
+    "type": "case-study",
+    "title": "Huntress stops VMware ESXi zero-day attack chain",
+    "summary": "Huntress observed and stopped a multi-stage VMware ESXi attack that used VSOCK for backdoor communication to bypass traditional network monitoring. The activity was caught before it could progress to the ransomware deployment stage.",
+    "why_it_matters": "Demonstrates active threat-hunting catching sophisticated VM-escape tradecraft that signature-based tools miss — the kind of detection that justifies an MDR over plain antivirus.",
+    "source_url": "https://thehackernews.com/2026/01/chinese-linked-hackers-exploit-vmware.html"
+  }
+]

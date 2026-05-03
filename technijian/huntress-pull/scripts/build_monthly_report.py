@@ -404,7 +404,7 @@ def render_report(data: ClientMonthData, out_path: Path) -> dict:
                 brand.add_body(
                     doc,
                     f"Showing 50 of {len(data.incidents)} incidents. Full list "
-                    f"is available on request from your Technijian contact.",
+                    f"is available on request — email support@technijian.com.",
                     size=10,
                 )
 
@@ -461,7 +461,7 @@ def render_report(data: ClientMonthData, out_path: Path) -> dict:
                 status_col=3,
             )
             if len(stale) > 20:
-                brand.add_body(doc, f"... plus {len(stale) - 20} more. Full list available on request.",
+                brand.add_body(doc, f"... plus {len(stale) - 20} more. Full list available on request — email support@technijian.com.",
                                 size=10)
             brand.add_body(
                 doc,
@@ -491,13 +491,13 @@ def render_report(data: ClientMonthData, out_path: Path) -> dict:
                 status_col=1,
             )
             if len(attention) > 30:
-                brand.add_body(doc, f"... plus {len(attention) - 30} more. Full list available on request.",
+                brand.add_body(doc, f"... plus {len(attention) - 30} more. Full list available on request — email support@technijian.com.",
                                 size=10)
             brand.add_body(
                 doc,
-                "Recommended action: review the listed endpoints with your "
-                "Technijian contact to schedule remediation. Common fixes "
-                "include re-enabling Microsoft Defender, applying a missing "
+                "Email support@technijian.com to review the listed endpoints "
+                "with our team and schedule remediation. Common fixes include "
+                "re-enabling Microsoft Defender, applying a missing "
                 "Group Policy / Intune setting, or re-enabling Windows Firewall.",
             )
 

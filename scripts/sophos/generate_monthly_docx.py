@@ -894,7 +894,7 @@ def section_about(doc, payload: dict) -> None:
     brand.add_body(
         doc,
         "For questions about this report or to request a different reporting cadence, "
-        "contact your Technijian account manager or open a ticket via the Client Portal.",
+        "email support@technijian.com.",
     )
 
 

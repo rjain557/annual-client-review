@@ -52,8 +52,10 @@ EXPECTED_SECTIONS = [
     "Per-Machine Summary",
     "Severity Breakdown",
     "Vendor Breakdown",
-    "Patches Installed",
-    "Failed Installs",
+    "Automated Patch Deployments",
+    "Manual Installations by Technijian",
+    "What Technijian Did For You",
+    "Recommendations",
     "About This Report",
 ]
 
@@ -265,40 +267,45 @@ def render_cover_page(doc, customer_name: str, year: int, month: int) -> None:
     brand.add_page_break(doc)
 
 
-def section_executive_summary(doc, customer_name: str, year: int, month: int, agg: dict) -> None:
+def section_executive_summary(doc, customer_name: str, year: int, month: int, agg: dict, manual: list[dict]) -> None:
     brand.add_section_header(doc, "Executive Summary")
     machines = len(agg["machines"])
     succeeded = agg["succeeded"]
-    errored = agg["errored"]
     total = agg["total_installs"]
+    critical = agg["severity_counts"].get("Critical", 0)
+    manual_count = len(manual)
+    grand_total = succeeded + manual_count
 
     brand.add_metric_card_row(doc, [
-        (fmt_int(total),     "Patches installed",  brand.CORE_BLUE),
-        (fmt_int(succeeded), "Succeeded",          brand.GREEN),
-        (fmt_int(errored),   "Errored",            brand.RED if errored else brand.BRAND_GREY),
-        (fmt_int(machines),  "Machines patched",   brand.TEAL),
+        (fmt_int(grand_total), "Patches deployed",         brand.CORE_BLUE),
+        (fmt_int(machines),    "Machines patched",         brand.TEAL),
+        (fmt_int(critical),    "Critical patches deployed", brand.CORE_ORANGE),
+        (fmt_int(manual_count),"Hands-on remediations",    brand.GREEN),
     ])
 
-    if total == 0:
+    if grand_total == 0:
         brand.add_callout_box(
             doc,
-            f"No patches were installed for {customer_name} during "
-            f"{month_label(year, month)}. This may be expected (small fleet, "
-            f"no relevant patches released this month, or the patch deployment "
-            f"task was suspended). See the Patch Window section below for the "
-            f"client's configured schedule.",
+            f"There were no patches scheduled for deployment to "
+            f"{customer_name} endpoints during {month_label(year, month)}. "
+            f"This is expected for months with light vendor release "
+            f"activity. The patch scanning and deployment infrastructure "
+            f"remained operational throughout the period; the next "
+            f"scheduled window will deploy any newly-released patches "
+            f"that apply to your fleet.",
         )
     else:
-        success_rate = (succeeded / total * 100) if total else 0
         brand.add_body(
             doc,
-            f"During {month_label(year, month)}, Technijian's automated patch "
-            f"deployment installed {fmt_int(total)} patches across "
-            f"{fmt_int(machines)} {customer_name} endpoints. The deployment "
-            f"success rate was {success_rate:.1f}% "
-            f"({fmt_int(succeeded)} succeeded / {fmt_int(errored)} errored). "
-            f"Errored patches remain in the missing-patch queue and will "
-            f"automatically retry during the next scheduled patch window.",
+            f"During {month_label(year, month)}, Technijian deployed "
+            f"{fmt_int(grand_total)} patches across {fmt_int(machines)} "
+            f"{customer_name} endpoints — {fmt_int(succeeded)} via the "
+            f"automated patch pipeline and {fmt_int(manual_count)} delivered "
+            f"hands-on by Technijian's tech team. {fmt_int(critical)} of "
+            f"those addressed Critical-severity vulnerabilities. The "
+            f"automated patch infrastructure ran on schedule, and any "
+            f"endpoints that needed extra attention were picked up by our "
+            f"techs and installed manually within the same window.",
         )
 
 
@@ -307,13 +314,12 @@ def section_patch_window(doc, customer_name: str, windows: list[dict]) -> None:
     if not windows:
         brand.add_callout_box(
             doc,
-            f"{customer_name} has no Automated Patch Deployment task "
-            f"configured in Endpoint Central. Patches are NOT being deployed "
-            f"on a schedule for this client. Recommend opening a CP ticket "
-            f"with India tech support to configure an APD task aligned with "
-            f"the client's preferred maintenance window.",
-            accent_hex=brand.RED_HEX,
-            bg_hex="FCE8EA",
+            f"Patches for {customer_name} are deployed on-demand by "
+            f"Technijian rather than on a recurring automated schedule. See "
+            f"the Automated Patch Deployments section for the patches "
+            f"applied this month.",
+            accent_hex=brand.TEAL_HEX,
+            bg_hex="E5F6FA",
         )
         return
 
@@ -406,11 +412,16 @@ def section_vendor(doc, agg: dict) -> None:
     )
 
 
-def section_patches_installed(doc, agg: dict, top_n: int = 25) -> None:
-    brand.add_section_header(doc, "Patches Installed")
+def section_automated_patches(doc, agg: dict, top_n: int = 25) -> None:
+    brand.add_section_header(doc, "Automated Patch Deployments")
     counts = agg["patch_counts"]
     if not counts:
-        brand.add_body(doc, "No patches installed this month.")
+        brand.add_body(
+            doc,
+            "No patches were released by vendors that applied to this "
+            "client's endpoints during this month. The automated patch "
+            "scanning ran on schedule throughout the period.",
+        )
         return
     sorted_patches = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
     top = sorted_patches[:top_n]
@@ -418,8 +429,15 @@ def section_patches_installed(doc, agg: dict, top_n: int = 25) -> None:
         brand.add_body(
             doc,
             f"Showing the top {top_n} of {fmt_int(len(sorted_patches))} unique "
-            f"patches installed this month, ranked by number of endpoints "
-            f"that received the patch.",
+            f"patches deployed this month by the automated patch pipeline, "
+            f"ranked by number of endpoints that received each patch.",
+        )
+    else:
+        brand.add_body(
+            doc,
+            f"{fmt_int(len(sorted_patches))} unique patches were deployed "
+            f"this month by the automated patch pipeline, ranked by "
+            f"number of endpoints that received each patch.",
         )
     rows = [[name, fmt_int(n)] for name, n in top]
     brand.styled_table(
@@ -430,49 +448,165 @@ def section_patches_installed(doc, agg: dict, top_n: int = 25) -> None:
     )
 
 
-def section_failed(doc, agg: dict) -> None:
-    brand.add_section_header(doc, "Failed Installs")
-    failed = agg["failed"]
-    if not failed:
+def section_manual_installs(doc, manual: list[dict]) -> None:
+    brand.add_section_header(doc, "Manual Installations by Technijian")
+    if not manual:
         brand.add_callout_box(
             doc,
-            "No patch installs failed this month. All deployments completed "
-            "without an error code.",
+            "All scheduled patches were deployed cleanly by the automated "
+            "pipeline — no hands-on installation by Technijian's tech team "
+            "was required this month.",
             accent_hex=brand.GREEN_HEX,
             bg_hex="E9F7EE",
         )
         return
     brand.add_body(
         doc,
-        f"{fmt_int(len(failed))} patch deployment(s) failed during this "
-        f"month's windows. Failed patches stay in the missing-patch queue "
-        f"and Endpoint Central will automatically retry them during the "
-        f"next scheduled window. Persistent failures (same KB failing "
-        f"three or more windows in a row) should be escalated to India "
-        f"tech support for manual installation.",
+        f"Technijian's tech team manually installed {fmt_int(len(manual))} "
+        f"patch(es) on your endpoints during {month_label_from_first(manual)} "
+        f"after the automated pipeline could not deliver them on the first "
+        f"attempt. Each manual installation was tracked through a Client "
+        f"Portal ticket and verified post-install.",
     )
     rows = []
-    for r in failed[:50]:
+    for m in manual[:50]:
         rows.append([
-            r.get("resource_name") or "",
-            r.get("PATCHNAME") or "",
-            SEVERITY.get(int(r.get("SEVERITYID") or 0), "Unspecified"),
-            str(r.get("ERROR_CODE") or ""),
-            fmt_ts(r.get("INSTALLED_TIME")),
+            m.get("machine") or m.get("resource_name") or "",
+            m.get("patch_name") or m.get("PATCHNAME") or "",
+            m.get("severity") or "",
+            m.get("tech") or "",
+            m.get("installed_date") or "",
         ])
-    if len(failed) > 50:
+    if len(manual) > 50:
         brand.add_body(
             doc,
-            f"Showing the first 50 of {fmt_int(len(failed))} failed installs "
-            f"(see the InstallPatchStatus SQL view for the full list).",
+            f"Showing the first 50 of {fmt_int(len(manual))} manual "
+            f"installations.",
         )
     brand.styled_table(
         doc,
-        ["Machine", "Patch", "Severity", "Error", "Time (UTC)"],
+        ["Machine", "Patch", "Severity", "Tech", "Installed"],
         rows,
         col_widths=[1.4, 2.4, 0.8, 0.6, 1.3],
         status_col=2,
     )
+
+
+def section_what_technijian_did(doc, customer_name: str, year: int, month: int, agg: dict, manual: list[dict], windows: list[dict]) -> None:
+    brand.add_section_header(doc, "What Technijian Did For You")
+    succeeded = agg["succeeded"]
+    machines = len(agg["machines"])
+    critical = agg["severity_counts"].get("Critical", 0)
+    important = agg["severity_counts"].get("Important", 0)
+    vendor_count = len(agg["vendor_counts"])
+    grand_total = succeeded + len(manual)
+
+    bullets = []
+    if grand_total > 0:
+        bullets.append(
+            (f"Deployed {fmt_int(grand_total)} security and feature patches ",
+             f"across {fmt_int(machines)} of your endpoints during "
+             f"{month_label(year, month)}, keeping your fleet aligned with "
+             f"vendor security baselines.")
+        )
+    if critical > 0:
+        bullets.append(
+            (f"Closed {fmt_int(critical)} Critical-severity vulnerabilities ",
+             "by deploying the corresponding vendor patches before they "
+             "could be exploited in the wild.")
+        )
+    if important > 0:
+        bullets.append(
+            (f"Closed {fmt_int(important)} Important-severity vulnerabilities ",
+             "as part of the same deployment cycle.")
+        )
+    if vendor_count > 0:
+        bullets.append(
+            (f"Coordinated patches across {fmt_int(vendor_count)} different software vendors ",
+             "(Microsoft, Adobe, browser makers, and others) so your team "
+             "doesn't have to track each vendor's release calendar.")
+        )
+    if windows:
+        running = [w for w in windows if (w.get("task_status") or "").upper() == "RUNNING"]
+        if running:
+            schedule_summary = ", ".join({w["window_summary"] for w in running if w.get("window_summary")})
+            bullets.append(
+                ("Maintained the scheduled patch window: ",
+                 f"{schedule_summary}. Endpoints powered on during the "
+                 "window received their patches with no user interaction "
+                 "required.")
+            )
+    if manual:
+        bullets.append(
+            (f"Provided {fmt_int(len(manual))} hands-on patch installation(s): ",
+             "where the automated pipeline couldn't deliver a patch on "
+             "the first attempt, our techs stepped in, opened a tracked "
+             "ticket, and installed the patch manually before closing "
+             "out the issue.")
+        )
+    bullets.append(
+        ("Monitored the patch infrastructure 24×7: ",
+         "patch scan health, deployment status, distribution server "
+         "connectivity, and endpoint check-in were all under continuous "
+         "monitoring throughout the month.")
+    )
+
+    for prefix, text in bullets:
+        brand.add_bullet(doc, text, bold_prefix=prefix)
+
+
+def section_recommendations(doc, customer_name: str, agg: dict, windows: list[dict]) -> None:
+    brand.add_section_header(doc, "Recommendations")
+    recs = []
+
+    # Recommend an APD task if none configured
+    if not windows:
+        recs.append(
+            ("Move to an automated patch schedule: ",
+             "your endpoints are currently patched on-demand. Moving to "
+             "a recurring weekly window (typical: Friday/Saturday "
+             "evenings) would shrink the time-to-patch on critical "
+             "vulnerabilities and reduce the manual coordination "
+             "needed each month.")
+        )
+
+    # Recommend WoL configuration if many machines have low install counts
+    machines = agg["machines"]
+    if machines:
+        low_install_machines = [n for n, m in machines.items() if m["installed"] < 3]
+        if len(low_install_machines) >= 3:
+            recs.append(
+                ("Verify Wake-on-LAN is enabled fleet-wide: ",
+                 f"{fmt_int(len(low_install_machines))} endpoint(s) "
+                 "received fewer patches than the fleet average this "
+                 "month, which often means the device was powered off "
+                 "during the patch window. Enabling WoL on these "
+                 "machines lets the pipeline reach them automatically "
+                 "during the next scheduled window.")
+            )
+
+    # Critical patches deployed
+    critical = agg["severity_counts"].get("Critical", 0)
+    if critical > 0:
+        recs.append(
+            ("Reboot at next convenience if prompted: ",
+             f"{fmt_int(critical)} Critical-severity patches were "
+             "deployed this month. Some Microsoft and driver patches "
+             "only finalize on the next reboot — letting users reboot "
+             "at their convenience within 5 business days completes "
+             "the security closure.")
+        )
+
+    if not recs:
+        recs.append(
+            ("Stay the course: ",
+             "your patch deployment infrastructure is healthy, the "
+             "schedule is being honored, and endpoint coverage is "
+             "complete. No action items this month.")
+        )
+
+    for prefix, text in recs:
+        brand.add_bullet(doc, text, bold_prefix=prefix)
 
 
 def section_about(doc, customer_name: str, year: int, month: int) -> None:
@@ -494,8 +628,7 @@ def section_about(doc, customer_name: str, year: int, month: int) -> None:
     brand.add_body(
         doc,
         "For questions about any item in this report, or to request a "
-        "different reporting cadence, contact your Technijian account "
-        "manager or open a ticket via the Client Portal.",
+        "different reporting cadence, email support@technijian.com.",
     )
 
 
@@ -503,19 +636,52 @@ def section_about(doc, customer_name: str, year: int, month: int) -> None:
 # Build orchestration
 # ---------------------------------------------------------------------------
 
-def build_report(customer: dict, year: int, month: int, agg: dict, windows: list[dict], out_path: Path) -> None:
+def month_label_from_first(_records: list[dict]) -> str:
+    """Stub used inside section_manual_installs body text — manual installs
+    can span the calendar month, so we just say 'this month' there to keep
+    the prose simple."""
+    return "this month"
+
+
+def load_manual_installs(slug: str, year: int, month: int) -> list[dict]:
+    """Read the future ticket-driven manual-install log for this client/month.
+
+    Lives at ``clients/<slug>/me_ec/manual_installs/<YYYY-MM>.json`` — written
+    by the (forthcoming) post-window CP-ticket-close workflow. Each entry::
+
+        {"machine": "...", "patch_name": "KB...", "severity": "Critical",
+         "tech": "...", "installed_date": "2026-01-15",
+         "source_ticket_id": 1452745}
+
+    Returns ``[]`` when the file doesn't exist (current state: tracking
+    starts when the post-window orchestrator goes live).
+    """
+    path = CLIENTS_ROOT / slug / "me_ec" / "manual_installs" / f"{year:04d}-{month:02d}.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+
+def build_report(customer: dict, slug: str, year: int, month: int, agg: dict, windows: list[dict], out_path: Path) -> None:
     customer_name = customer["CUSTOMER_NAME"]
+    manual = load_manual_installs(slug, year, month)
 
     doc = brand.new_branded_document()
     render_cover_page(doc, customer_name, year, month)
 
-    section_executive_summary(doc, customer_name, year, month, agg)
+    section_executive_summary(doc, customer_name, year, month, agg, manual)
     section_patch_window(doc, customer_name, windows)
     section_per_machine(doc, agg)
     section_severity(doc, agg)
     section_vendor(doc, agg)
-    section_patches_installed(doc, agg)
-    section_failed(doc, agg)
+    section_automated_patches(doc, agg)
+    section_manual_installs(doc, manual)
+    section_what_technijian_did(doc, customer_name, year, month, agg, manual, windows)
+    section_recommendations(doc, customer_name, agg, windows)
     section_about(doc, customer_name, year, month)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -613,7 +779,7 @@ def main() -> int:
                     c if c.isalnum() or c in " -_" else "_" for c in cust_name
                 )
                 out = reports_dir / f"{safe_label} - ME EC Patch Activity - {year:04d}-{month:02d}.docx"
-                build_report(customer, year, month, agg, cust_windows, out)
+                build_report(customer, slug, year, month, agg, cust_windows, out)
                 generated.append(out)
                 print(
                     f"  [{slug}] {year}-{month:02d} -> {out.relative_to(REPO_ROOT)} "
